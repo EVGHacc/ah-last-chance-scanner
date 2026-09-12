@@ -1,7 +1,7 @@
 {
   "date": "2026-09-12",
-  "scheduledSlot": "20:32",
-  "checkedAt": "2026-09-12T20:32:54.816551+02:00",
+  "scheduledSlot": "20:43",
+  "checkedAt": "2026-09-12T20:43:04.341896+02:00",
   "status": "OK",
   "authMode": "user-refresh",
   "categories": [
@@ -653,11 +653,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 194,
+      "totalBargainItems": 192,
       "meatItems": 6,
       "meat70Items": 6,
       "meat70Stock": 34.0,
-      "bakeryItems": 50,
+      "bakeryItems": 48,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -838,7 +838,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 14,
+          "stock": 12,
           "priceWas": "0.99",
           "priceNow": "0.74",
           "markdownExpirationDate": "2026-09-12"
@@ -1204,18 +1204,6 @@
           "markdownExpirationDate": "2026-09-12"
         },
         {
-          "productId": 577444,
-          "title": "AH Worstenbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.29",
-          "priceNow": "1.10",
-          "markdownExpirationDate": "2026-09-12"
-        },
-        {
           "productId": 590397,
           "title": "AH Kipnuggetbroodje",
           "brand": "AH",
@@ -1261,18 +1249,6 @@
           "stock": 1,
           "priceWas": "0.99",
           "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-12"
-        },
-        {
-          "productId": 411164,
-          "title": "AH Kaas uienbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.39",
-          "priceNow": "1.18",
           "markdownExpirationDate": "2026-09-12"
         },
         {
