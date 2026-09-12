@@ -15,12 +15,13 @@ concurrency:
 jobs:
   watchdog:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
 
@@ -47,7 +48,7 @@ jobs:
                   stores=o.get('stores') or []
                   fetched={int(s['storeId']) for s in stores if s.get('fetched') is True}
                   checks={
-                      'fresh': age <= 7,
+                      'fresh': age <= 6,
                       'valid': o.get('valid') is True,
                       'status': o.get('status') in ('OK','OK_ZERO_ROWS'),
                       'auth': o.get('authMode') == 'user-refresh',
