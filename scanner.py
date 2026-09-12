@@ -5,8 +5,9 @@ from zoneinfo import ZoneInfo
 
 STORES=[(1463,'AH Blekersvaartweg'),(1348,'AH Zandvoortselaan'),(1135,'AH Casablancastraat')]
 BASE='https://api.ah.nl'
-HEADERS={'User-Agent':'Appie/9.28 (iPhone17,3; iPhone; CPU OS 26_1 like Mac OS X)','x-client-name':'appie','x-client-version':'9.28','x-application':'AHWEBSHOP','Accept':'application/json','Content-Type':'application/json'}
-QUERY='''query BargainItems($storeId: String!) { bargainItems(storeId: $storeId) { product { id title brand salesUnitSize } categoryTitle markdown { markdownExpirationDate markdownPercentage } stock bargainPrice { priceWas priceNow } } }'''
+CLIENT_ID='appie-ios'
+HEADERS={'User-Agent':'Appie/9.28 (iPhone17,3; iPhone; CPU OS 26_1 like Mac OS X)','x-client-name':CLIENT_ID,'x-client-version':'9.28','x-application':'AHWEBSHOP','Accept':'application/json','Content-Type':'application/json'}
+QUERY='''query BargainItems($storeId: String!) { bargainItems(storeId: $storeId) { product { id title brand salesUnitSize } categoryTitle markdown { markdownType markdownExpirationDate markdownPercentage } stock bargainPrice { priceWas priceNow } } }'''
 
 def post(path,body,token=None):
     h=dict(HEADERS)
@@ -17,7 +18,7 @@ def post(path,body,token=None):
     except urllib.error.HTTPError as e: return e.code,{'error':e.read().decode(errors='replace')[:300]}
 
 def token():
-    s,d=post('/mobile-auth/v1/auth/token/anonymous',{'clientId':'appie'})
+    s,d=post('/mobile-auth/v1/auth/token/anonymous',{'clientId':CLIENT_ID})
     if s!=200 or not d.get('access_token'): raise RuntimeError(f'ANON AUTH HTTP {s}: {d}')
     return d['access_token']
 
@@ -42,4 +43,6 @@ def main():
     with open(path,'a') as f: f.write(json.dumps(obs,ensure_ascii=False)+'\n')
     with open('data/latest.json','w') as f: json.dump(obs,f,ensure_ascii=False,indent=2)
     print(json.dumps(obs,ensure_ascii=False))
+    if obs['status'] != 'OK':
+        raise SystemExit(2)
 if __name__=='__main__': main()
