@@ -47,11 +47,13 @@ jobs:
           PY
 
       - name: Scan all three stores
+        id: scan
         if: steps.window.outputs.run == 'true' || github.event_name == 'workflow_dispatch' || github.event_name == 'push'
+        continue-on-error: true
         run: python scanner.py
 
       - name: Commit measurement
-        if: steps.window.outputs.run == 'true' || github.event_name == 'workflow_dispatch' || github.event_name == 'push'
+        if: always() && (steps.window.outputs.run == 'true' || github.event_name == 'workflow_dispatch' || github.event_name == 'push')
         shell: bash
         run: |
           git config user.name 'ah-scanner-bot'
@@ -64,3 +66,9 @@ jobs:
           git commit -m "AH scan $(TZ=Europe/Amsterdam date '+%Y-%m-%d %H:%M')"
           git pull --rebase origin main
           git push origin HEAD:main
+
+      - name: Fail workflow when scan failed
+        if: always() && steps.scan.outcome == 'failure'
+        run: |
+          echo 'Scanner returned an incomplete/failed measurement. See data/latest.json and job log.'
+          exit 1
