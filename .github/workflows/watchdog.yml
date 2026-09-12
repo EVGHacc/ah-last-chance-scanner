@@ -1,0 +1,114 @@
+name: AH Scanner watchdog
+
+on:
+  schedule:
+    - cron: '1,16,31,46 15-20 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/watchdog.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ah-last-chance-scanner
+  cancel-in-progress: false
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check measurement freshness
+        id: freshness
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          now = datetime.now(ZoneInfo('Europe/Amsterdam'))
+          minutes = now.hour * 60 + now.minute
+          in_window = 17 * 60 + 30 <= minutes <= 22 * 60 + 30
+          stale = False
+          reason = 'outside scan window'
+          age_minutes = None
+
+          if in_window:
+              try:
+                  with open('data/latest.json', encoding='utf-8') as f:
+                      obs = json.load(f)
+                  checked = datetime.fromisoformat(obs['checkedAt'])
+                  if checked.tzinfo is None:
+                      checked = checked.replace(tzinfo=ZoneInfo('Europe/Amsterdam'))
+                  age_minutes = (now - checked.astimezone(ZoneInfo('Europe/Amsterdam'))).total_seconds() / 60
+                  stale = age_minutes > 10
+                  reason = f'latest measurement age={age_minutes:.1f} minutes'
+              except Exception as exc:
+                  stale = True
+                  reason = f'latest measurement unreadable/missing: {exc}'
+
+          print(f'{now.isoformat()} in_window={in_window} stale={stale} {reason}')
+          out = os.environ['GITHUB_OUTPUT']
+          with open(out, 'a') as f:
+              f.write(f'in_window={str(in_window).lower()}\n')
+              f.write(f'stale={str(stale).lower()}\n')
+              f.write(f'reason={reason}\n')
+          PY
+
+      - name: Recovery scan
+        id: recovery
+        if: steps.freshness.outputs.in_window == 'true' && steps.freshness.outputs.stale == 'true'
+        env:
+          AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
+        run: python scanner.py
+
+      - name: Persist recovery measurement
+        if: steps.recovery.outcome == 'success'
+        shell: bash
+        run: |
+          git config user.name 'ah-scanner-watchdog'
+          git config user.email 'actions@users.noreply.github.com'
+          cp data/latest.json /tmp/latest.json
+          DATE=$(python -c "import json; print(json.load(open('/tmp/latest.json'))['date'])")
+          python - <<'PY'
+          import json
+          obs=json.load(open('/tmp/latest.json'))
+          with open('/tmp/observation.jsonl','w') as f:
+              f.write(json.dumps(obs,ensure_ascii=False)+'\n')
+          PY
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p data
+            cat /tmp/observation.jsonl >> "data/${DATE}.jsonl"
+            cp /tmp/latest.json data/latest.json
+            git add data/
+            if git diff --cached --quiet; then
+              echo 'Recovery produced no new data changes'
+              exit 0
+            fi
+            git commit -m "AH watchdog recovery $(TZ=Europe/Amsterdam date '+%Y-%m-%d %H:%M')"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push race on attempt ${attempt}; retrying"
+          done
+          echo 'Could not persist recovery measurement after 3 attempts'
+          exit 1
+
+      - name: Report healthy scanner
+        if: steps.freshness.outputs.in_window == 'true' && steps.freshness.outputs.stale == 'false'
+        run: echo "Scanner healthy - ${{ steps.freshness.outputs.reason }}"
