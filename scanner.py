@@ -103,8 +103,10 @@ def main():
     fetched=sum(1 for x in stores if x['fetched'])
     status=('OK_ZERO_ROWS' if sum(x['meatItems'] for x in stores)==0 else 'OK') if fetched==3 else ('FAILED' if fetched==0 else 'INCOMPLETE')
     completed=datetime.now(TZ)
-    valid=status in ('OK','OK_ZERO_ROWS') and auth_mode=='user-refresh' and canonical_delay<=240
-    obs={'schemaVersion':4,'date':date,'weekday':canonical.strftime('%A'),'scheduledSlot':slot,'scheduledAt':canonical.isoformat(),'rawScheduledSlot':raw_scheduled.strftime('%H:%M'),'rawScheduledAt':raw_scheduled.isoformat(),'startedAt':started.isoformat(),'completedAt':completed.isoformat(),'checkedAt':completed.isoformat(),'delaySeconds':canonical_delay,'rawDelaySeconds':raw_delay,'status':status,'valid':valid,'official1925':slot=='19:25','authMode':auth_mode,'categories':['Vlees','Bakkerij'],'stores':stores}
+    # Raw observations are judged against their own trigger time. Canonical timing
+    # quality is enforced separately by scripts/persist.py for exact 5-minute runs.
+    valid=status in ('OK','OK_ZERO_ROWS') and auth_mode=='user-refresh' and raw_delay<=240
+    obs={'schemaVersion':4,'date':date,'weekday':canonical.strftime('%A'),'scheduledSlot':slot,'scheduledAt':canonical.isoformat(),'rawScheduledSlot':raw_scheduled.strftime('%H:%M'),'rawScheduledAt':raw_scheduled.isoformat(),'startedAt':started.isoformat(),'completedAt':completed.isoformat(),'checkedAt':completed.isoformat(),'delaySeconds':canonical_delay,'rawDelaySeconds':raw_delay,'status':status,'valid':valid,'official1925':slot=='19:25' and raw_scheduled.strftime('%H:%M')=='19:25','authMode':auth_mode,'categories':['Vlees','Bakkerij'],'stores':stores}
     os.makedirs('data',exist_ok=True)
     with open('data/latest.json','w',encoding='utf-8') as f: json.dump(obs,f,ensure_ascii=False,indent=2)
     print(json.dumps(obs,ensure_ascii=False))
