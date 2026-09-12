@@ -1,7 +1,7 @@
 {
   "date": "2026-09-12",
-  "scheduledSlot": "21:16",
-  "checkedAt": "2026-09-12T21:16:51.285322+02:00",
+  "scheduledSlot": "21:30",
+  "checkedAt": "2026-09-12T21:30:54.224394+02:00",
   "status": "OK",
   "authMode": "user-refresh",
   "categories": [
@@ -641,11 +641,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 192,
+      "totalBargainItems": 191,
       "meatItems": 6,
       "meat70Items": 6,
       "meat70Stock": 34.0,
-      "bakeryItems": 48,
+      "bakeryItems": 47,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -1108,18 +1108,6 @@
           "markdownExpirationDate": "2026-09-12"
         },
         {
-          "productId": 574950,
-          "title": "AH Pizza donut jalapeño cheddar",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.39",
-          "priceNow": "1.04",
-          "markdownExpirationDate": "2026-09-12"
-        },
-        {
           "productId": 590397,
           "title": "AH Kipnuggetbroodje",
           "brand": "AH",
@@ -1382,7 +1370,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 40,
-          "stock": 8,
+          "stock": 6,
           "priceWas": "0.89",
           "priceNow": "0.53",
           "markdownExpirationDate": "2026-09-12"
