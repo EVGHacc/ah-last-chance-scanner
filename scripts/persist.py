@@ -21,7 +21,14 @@ def valid_obs(o):
     return True
 
 
-def better(candidate, current):
+def exact_canonical_obs(o):
+    """A canonical point must have been triggered at that exact 5-minute boundary."""
+    if not valid_obs(o): return False
+    slot=o.get('scheduledSlot')
+    return slot in SLOTS and o.get('rawScheduledSlot')==slot
+
+
+def better(candidate,current):
     if current is None: return True
     c_delay=int(candidate.get('delaySeconds',999999))
     p_delay=int(current.get('delaySeconds',999999))
@@ -46,7 +53,7 @@ def main():
             try: o=json.loads(line)
             except Exception: continue
             slot=o.get('scheduledSlot')
-            if o.get('date')==date and slot in SLOTS and valid_obs(o) and better(o,by_slot.get(slot)):
+            if o.get('date')==date and exact_canonical_obs(o) and better(o,by_slot.get(slot)):
                 by_slot[slot]=o
     observations=[by_slot[s] for s in SLOTS if s in by_slot]
     missing=[s for s in SLOTS if s not in by_slot]
@@ -58,10 +65,10 @@ def main():
             'authRequired':'user-refresh',
             'canonicalCadenceMinutes':5,
             'rawCadenceMinutes':3,
-            'canonicalSelection':'lowest delaySeconds, then earliest checkedAt'
+            'canonicalSelection':'exact rawScheduledSlot equals scheduledSlot; lowest delaySeconds then earliest checkedAt'
         }
     }
     Path('data/today.json').write_text(json.dumps(out,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
-    print(f'persisted {date}: canonical {len(observations)}/61')
+    print(f'persisted {date}: exact canonical {len(observations)}/61')
 
 if __name__=='__main__': main()
