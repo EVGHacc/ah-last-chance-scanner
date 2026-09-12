@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import json, sys
+import json
 from pathlib import Path
 
 START=17*60+30
@@ -21,6 +21,14 @@ def valid_obs(o):
     return True
 
 
+def better(candidate, current):
+    if current is None: return True
+    c_delay=int(candidate.get('delaySeconds',999999))
+    p_delay=int(current.get('delaySeconds',999999))
+    if c_delay!=p_delay: return c_delay<p_delay
+    return str(candidate.get('checkedAt',''))<str(current.get('checkedAt',''))
+
+
 def main():
     latest_path=Path('data/latest.json')
     if not latest_path.exists(): raise SystemExit('data/latest.json ontbreekt')
@@ -38,16 +46,20 @@ def main():
             try: o=json.loads(line)
             except Exception: continue
             slot=o.get('scheduledSlot')
-            if o.get('date')==date and slot in SLOTS and valid_obs(o):
-                prev=by_slot.get(slot)
-                if prev is None or str(o.get('checkedAt',''))>str(prev.get('checkedAt','')):
-                    by_slot[slot]=o
+            if o.get('date')==date and slot in SLOTS and valid_obs(o) and better(o,by_slot.get(slot)):
+                by_slot[slot]=o
     observations=[by_slot[s] for s in SLOTS if s in by_slot]
     missing=[s for s in SLOTS if s not in by_slot]
     out={
         'date':date,'expectedSlots':61,'presentSlots':len(observations),'missingSlots':missing,
         'observations':observations,
-        '_source':{'scanner':'authenticated GitHub scanner','authRequired':'user-refresh','canonicalCadenceMinutes':5,'rawCadenceMinutes':3}
+        '_source':{
+            'scanner':'authenticated GitHub scanner',
+            'authRequired':'user-refresh',
+            'canonicalCadenceMinutes':5,
+            'rawCadenceMinutes':3,
+            'canonicalSelection':'lowest delaySeconds, then earliest checkedAt'
+        }
     }
     Path('data/today.json').write_text(json.dumps(out,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
     print(f'persisted {date}: canonical {len(observations)}/61')
