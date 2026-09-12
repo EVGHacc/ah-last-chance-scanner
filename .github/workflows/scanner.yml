@@ -1,43 +1,66 @@
 name: AH Laatste Kans scanner
+
 on:
   schedule:
     - cron: '*/5 15-20 * * *'
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/scanner.yml'
+      - 'scanner.py'
+
 permissions:
   contents: write
+
 concurrency:
   group: ah-last-chance-scanner
   cancel-in-progress: false
+
 jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
       - name: Check Amsterdam scan window
         id: window
+        shell: bash
         run: |
           python - <<'PY'
           from datetime import datetime
           from zoneinfo import ZoneInfo
           import os
-          n=datetime.now(ZoneInfo('Europe/Amsterdam'))
-          m=n.hour*60+n.minute
-          ok=17*60+30 <= m <= 22*60+30
-          with open(os.environ['GITHUB_OUTPUT'],'a') as f: f.write(f'run={str(ok).lower()}\n')
-          print(n.isoformat(), 'scan=',ok)
+          n = datetime.now(ZoneInfo('Europe/Amsterdam'))
+          m = n.hour * 60 + n.minute
+          ok = 17 * 60 + 30 <= m <= 22 * 60 + 30
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write(f'run={str(ok).lower()}\n')
+          print(n.isoformat(), 'scan=', ok)
           PY
+
       - name: Scan all three stores
-        if: steps.window.outputs.run == 'true' || github.event_name == 'workflow_dispatch'
+        if: steps.window.outputs.run == 'true' || github.event_name == 'workflow_dispatch' || github.event_name == 'push'
         run: python scanner.py
+
       - name: Commit measurement
-        if: steps.window.outputs.run == 'true' || github.event_name == 'workflow_dispatch'
+        if: steps.window.outputs.run == 'true' || github.event_name == 'workflow_dispatch' || github.event_name == 'push'
+        shell: bash
         run: |
           git config user.name 'ah-scanner-bot'
           git config user.email 'actions@users.noreply.github.com'
           git add data/
-          git diff --cached --quiet && exit 0
+          if git diff --cached --quiet; then
+            echo 'No data changes to commit'
+            exit 0
+          fi
           git commit -m "AH scan $(TZ=Europe/Amsterdam date '+%Y-%m-%d %H:%M')"
-          git push
+          git pull --rebase origin main
+          git push origin HEAD:main
