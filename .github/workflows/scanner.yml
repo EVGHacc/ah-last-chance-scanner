@@ -60,14 +60,41 @@ jobs:
         run: |
           git config user.name 'ah-scanner-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data/
-          if git diff --cached --quiet; then
-            echo 'No data changes to commit'
+
+          if [ ! -f data/latest.json ]; then
+            echo 'No measurement produced'
             exit 0
           fi
-          git commit -m "AH scan $(TZ=Europe/Amsterdam date '+%Y-%m-%d %H:%M')"
-          git pull --rebase origin main
-          git push origin HEAD:main
+
+          cp data/latest.json /tmp/latest.json
+          DATE=$(python -c "import json; print(json.load(open('/tmp/latest.json'))['date'])")
+          python - "$DATE" <<'PY'
+          import json, sys
+          date=sys.argv[1]
+          obs=json.load(open('/tmp/latest.json'))
+          with open('/tmp/observation.jsonl','w') as f:
+              f.write(json.dumps(obs,ensure_ascii=False)+'\n')
+          PY
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p data
+            cat /tmp/observation.jsonl >> "data/${DATE}.jsonl"
+            cp /tmp/latest.json data/latest.json
+            git add data/
+            if git diff --cached --quiet; then
+              echo 'No data changes to commit'
+              exit 0
+            fi
+            git commit -m "AH scan $(TZ=Europe/Amsterdam date '+%Y-%m-%d %H:%M')"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push race on attempt ${attempt}; retrying on latest main"
+          done
+          echo 'Could not persist measurement after 3 attempts'
+          exit 1
 
       - name: Fail workflow when scan failed
         if: always() && steps.scan.outcome == 'failure'
