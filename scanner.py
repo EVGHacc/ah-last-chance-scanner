@@ -1,3 +1,4 @@
+# AH Laatste Kans scanner
 import json, os, urllib.request, urllib.error
 from datetime import datetime
 from zoneinfo import ZoneInfo
