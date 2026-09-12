@@ -2,7 +2,7 @@ name: AH Laatste Kans scanner
 
 on:
   schedule:
-    - cron: '*/5 15-21 * * *'
+    - cron: '*/3 15-20 * * *'
   workflow_dispatch:
   push:
     branches:
