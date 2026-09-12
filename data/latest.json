@@ -1,8 +1,16 @@
 {
+  "schemaVersion": 3,
   "date": "2026-09-12",
-  "scheduledSlot": "22:30",
-  "checkedAt": "2026-09-12T22:30:12.075793+02:00",
+  "weekday": "Saturday",
+  "scheduledSlot": "23:35",
+  "scheduledAt": "2026-09-12T23:35:00+02:00",
+  "startedAt": "2026-09-12T23:35:25.256205+02:00",
+  "completedAt": "2026-09-12T23:35:29.043518+02:00",
+  "checkedAt": "2026-09-12T23:35:29.043518+02:00",
+  "delaySeconds": 25,
   "status": "OK",
+  "valid": true,
+  "official1925": false,
   "authMode": "user-refresh",
   "categories": [
     "Vlees",
