@@ -30,22 +30,26 @@ def token():
     print('AUTH_MODE=anonymous')
     return d['access_token'],'anonymous'
 
+def make_items(rows, category):
+    selected=[x for x in rows if str(x.get('categoryTitle','')).strip().lower()==category.lower()]
+    items=[]
+    for x in selected:
+        m=x.get('markdown') or {}; p=x.get('product') or {}; bp=x.get('bargainPrice') or {}
+        items.append({'productId':p.get('id'),'title':p.get('title',''),'brand':p.get('brand',''),'size':p.get('salesUnitSize',''),'category':str(x.get('categoryTitle','')),'discountPct':m.get('markdownPercentage',0) or 0,'stock':x.get('stock',0) or 0,'priceWas':bp.get('priceWas'),'priceNow':bp.get('priceNow'),'markdownExpirationDate':m.get('markdownExpirationDate')})
+    return items
+
 def main():
     now=datetime.now(ZoneInfo('Europe/Amsterdam')); slot=now.strftime('%H:%M'); date=now.strftime('%Y-%m-%d')
     t,auth_mode=token(); stores=[]
     for sid,name in STORES:
         s,d=post('/graphql',{'query':QUERY,'variables':{'storeId':str(sid)}},t)
         if s!=200 or d.get('errors'):
-            stores.append({'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'items':[],'error':f'HTTP {s}: {d}'[:350]}); continue
+            stores.append({'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,'bakery70Items':0,'bakery70Stock':0,'items':[],'bakery':[],'error':f'HTTP {s}: {d}'[:350]}); continue
         rows=d.get('data',{}).get('bargainItems') or []
-        meat=[x for x in rows if str(x.get('categoryTitle','')).strip().lower()=='vlees']
-        items=[]
-        for x in meat:
-            m=x.get('markdown') or {}; p=x.get('product') or {}; bp=x.get('bargainPrice') or {}
-            items.append({'productId':p.get('id'),'title':p.get('title',''),'brand':p.get('brand',''),'size':p.get('salesUnitSize',''),'discountPct':m.get('markdownPercentage',0) or 0,'stock':x.get('stock',0) or 0,'priceWas':bp.get('priceWas'),'priceNow':bp.get('priceNow'),'markdownExpirationDate':m.get('markdownExpirationDate')})
-        m70=[x for x in items if float(x['discountPct'])>=70]
-        stores.append({'storeId':sid,'store':name,'fetched':True,'totalBargainItems':len(rows),'meatItems':len(items),'meat70Items':len(m70),'meat70Stock':sum(float(x['stock']) for x in m70),'items':items})
-    obs={'date':date,'scheduledSlot':slot,'checkedAt':now.isoformat(),'status':'OK' if all(x['fetched'] for x in stores) else 'INCOMPLETE','authMode':auth_mode,'stores':stores}
+        meat=make_items(rows,'Vlees'); bakery=make_items(rows,'Bakkerij')
+        m70=[x for x in meat if float(x['discountPct'])>=70]; b70=[x for x in bakery if float(x['discountPct'])>=70]
+        stores.append({'storeId':sid,'store':name,'fetched':True,'totalBargainItems':len(rows),'meatItems':len(meat),'meat70Items':len(m70),'meat70Stock':sum(float(x['stock']) for x in m70),'bakeryItems':len(bakery),'bakery70Items':len(b70),'bakery70Stock':sum(float(x['stock']) for x in b70),'items':meat,'bakery':bakery})
+    obs={'date':date,'scheduledSlot':slot,'checkedAt':now.isoformat(),'status':'OK' if all(x['fetched'] for x in stores) else 'INCOMPLETE','authMode':auth_mode,'categories':['Vlees','Bakkerij'],'stores':stores}
     os.makedirs('data',exist_ok=True)
     path=f'data/{date}.jsonl'
     with open(path,'a') as f: f.write(json.dumps(obs,ensure_ascii=False)+'\n')
