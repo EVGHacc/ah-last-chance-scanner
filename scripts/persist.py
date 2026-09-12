@@ -13,7 +13,10 @@ def valid_obs(o):
     if not isinstance(o,dict): return False
     if o.get('authMode')!='user-refresh': return False
     if o.get('status') not in VALID_STATUS or o.get('valid') is not True: return False
-    if int(o.get('delaySeconds',999999))>240: return False
+    # Raw cadence quality is measured from the actual trigger. Fall back to the
+    # legacy delay field only for older exact observations.
+    raw_delay=int(o.get('rawDelaySeconds',o.get('delaySeconds',999999)))
+    if raw_delay>240: return False
     stores=o.get('stores') or []
     fetched={int(s.get('storeId')) for s in stores if s.get('fetched') is True and s.get('storeId') is not None}
     if fetched!=STORE_IDS: return False
@@ -25,7 +28,8 @@ def exact_canonical_obs(o):
     """A canonical point must have been triggered at that exact 5-minute boundary."""
     if not valid_obs(o): return False
     slot=o.get('scheduledSlot')
-    return slot in SLOTS and o.get('rawScheduledSlot')==slot
+    if slot not in SLOTS or o.get('rawScheduledSlot')!=slot: return False
+    return int(o.get('delaySeconds',999999))<=240
 
 
 def better(candidate,current):
@@ -65,7 +69,7 @@ def main():
             'authRequired':'user-refresh',
             'canonicalCadenceMinutes':5,
             'rawCadenceMinutes':3,
-            'canonicalSelection':'exact rawScheduledSlot equals scheduledSlot; lowest delaySeconds then earliest checkedAt'
+            'canonicalSelection':'exact rawScheduledSlot equals scheduledSlot; canonical delaySeconds <=240; lowest delay then earliest checkedAt'
         }
     }
     Path('data/today.json').write_text(json.dumps(out,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
