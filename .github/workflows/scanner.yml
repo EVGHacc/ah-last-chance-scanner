@@ -2,7 +2,7 @@ name: AH Laatste Kans scanner
 
 on:
   schedule:
-    - cron: '*/3 15-20 * * *'
+    - cron: '*/5 15-21 * * *'
   workflow_dispatch:
   push:
     branches:
@@ -40,7 +40,8 @@ jobs:
           import os
           n = datetime.now(ZoneInfo('Europe/Amsterdam'))
           m = n.hour * 60 + n.minute
-          ok = 17 * 60 + 30 <= m <= 22 * 60 + 30
+          # Allow up to four minutes GitHub scheduling delay for the final 22:30 slot.
+          ok = 17 * 60 + 30 <= m <= 22 * 60 + 34
           with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
               f.write(f'run={str(ok).lower()}\n')
           print(n.isoformat(), 'scan=', ok)
@@ -82,6 +83,30 @@ jobs:
             mkdir -p data
             cat /tmp/observation.jsonl >> "data/${DATE}.jsonl"
             cp /tmp/latest.json data/latest.json
+
+            python - "$DATE" <<'PY'
+          import json, sys
+          date=sys.argv[1]
+          start=17*60+30; end=22*60+30
+          slots=[f'{m//60:02d}:{m%60:02d}' for m in range(start,end+1,5)]
+          latest={}
+          path=f'data/{date}.jsonl'
+          try:
+              with open(path) as f:
+                  for line in f:
+                      try: o=json.loads(line)
+                      except Exception: continue
+                      s=o.get('scheduledSlot')
+                      if o.get('date')==date and s in slots:
+                          latest[s]=o
+          except FileNotFoundError:
+              pass
+          observations=[latest[s] for s in slots if s in latest]
+          missing=[s for s in slots if s not in latest]
+          out={'date':date,'expectedSlots':61,'presentSlots':len(observations),'missingSlots':missing,'observations':observations,'_source':{'scanner':'authenticated GitHub scanner','authRequired':'user-refresh'}}
+          with open('data/today.json','w') as f: json.dump(out,f,ensure_ascii=False,separators=(',',':'))
+          PY
+
             git add data/
             if git diff --cached --quiet; then
               echo 'No data changes to commit'
