@@ -1,5 +1,5 @@
 # AH Laatste Kans scanner
-import json, os, urllib.request, urllib.error
+import json, os, time, urllib.request, urllib.error
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -11,22 +11,38 @@ HEADERS={'User-Agent':'Appie/9.28 (iPhone17,3; iPhone; CPU OS 26_1 like Mac OS X
 QUERY='''query BargainItems($storeId: String!) { bargainItems(storeId: $storeId) { product { id title brand salesUnitSize } categoryTitle markdown { markdownType markdownExpirationDate markdownPercentage } stock bargainPrice { priceWas priceNow } } }'''
 START=17*60+30
 END=22*60+30
+TRANSIENT_HTTP={429,500,502,503,504}
 
 
-def post(path,body,token=None):
+def post(path,body,token=None,attempts=2):
     h=dict(HEADERS)
     if token: h['Authorization']='Bearer '+token
-    req=urllib.request.Request(BASE+path,data=json.dumps(body).encode(),headers=h,method='POST')
-    try:
-        with urllib.request.urlopen(req,timeout=20) as r: return r.status,json.loads(r.read())
-    except urllib.error.HTTPError as e:
-        return e.code,{'error':e.read().decode(errors='replace')[:300]}
+    payload=json.dumps(body).encode()
+    last_status=0
+    last_data={'error':'request failed'}
+    for attempt in range(1,attempts+1):
+        req=urllib.request.Request(BASE+path,data=payload,headers=h,method='POST')
+        try:
+            with urllib.request.urlopen(req,timeout=20) as r:
+                return r.status,json.loads(r.read())
+        except urllib.error.HTTPError as e:
+            last_status=e.code
+            last_data={'error':e.read().decode(errors='replace')[:300]}
+            if e.code not in TRANSIENT_HTTP or attempt==attempts:
+                return last_status,last_data
+        except (urllib.error.URLError,TimeoutError,OSError) as e:
+            last_status=0
+            last_data={'error':f'{type(e).__name__}: {e}'[:300]}
+            if attempt==attempts:
+                return last_status,last_data
+        time.sleep(attempt)
+    return last_status,last_data
 
 
 def token():
     refresh=os.getenv('AH_REFRESH_TOKEN','').strip()
     if not refresh: raise RuntimeError('AH_REFRESH_TOKEN ontbreekt; anonymous fallback is uitgeschakeld')
-    s,d=post('/mobile-auth/v1/auth/token/refresh',{'clientId':CLIENT_ID,'refreshToken':refresh})
+    s,d=post('/mobile-auth/v1/auth/token/refresh',{'clientId':CLIENT_ID,'refreshToken':refresh},attempts=3)
     if s==200 and d.get('access_token'): return d['access_token'],'user-refresh'
     raise RuntimeError(f'USER_REFRESH_FAILED HTTP {s}: {str(d)[:180]}')
 
@@ -57,6 +73,19 @@ def canonical_slot(scheduled):
     return canonical,canonical.strftime('%H:%M')
 
 
+def fetch_store(sid,name,access):
+    status=0; data={}
+    for attempt in range(1,3):
+        status,data=post('/graphql',{'query':QUERY,'variables':{'storeId':str(sid)}},access,attempts=2)
+        if status==200 and not data.get('errors'):
+            rows=(data.get('data') or {}).get('bargainItems') or []
+            meat=make_items(rows,'Vlees'); bakery=make_items(rows,'Bakkerij')
+            m70=[x for x in meat if float(x['discountPct'])>=70]; b70=[x for x in bakery if float(x['discountPct'])>=70]
+            return {'storeId':sid,'store':name,'fetched':True,'totalBargainItems':len(rows),'meatItems':len(meat),'meat70Items':len(m70),'meat70Stock':sum(float(x['stock']) for x in m70),'bakeryItems':len(bakery),'bakery70Items':len(b70),'bakery70Stock':sum(float(x['stock']) for x in b70),'items':meat,'bakery':bakery}
+        if attempt<2: time.sleep(1)
+    return {'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,'bakery70Items':0,'bakery70Stock':0,'items':[],'bakery':[],'error':f'HTTP {status}: {data}'[:350]}
+
+
 def main():
     started=datetime.now(TZ)
     raw_scheduled=parse_raw_schedule(started)
@@ -65,18 +94,11 @@ def main():
     raw_delay=max(0,int((started-raw_scheduled).total_seconds()))
     canonical_delay=max(0,int((started-canonical).total_seconds()))
     stores=[]
+    auth_mode='user-refresh-failed'
     try:
         access,auth_mode=token()
-        for sid,name in STORES:
-            s,d=post('/graphql',{'query':QUERY,'variables':{'storeId':str(sid)}},access)
-            if s!=200 or d.get('errors'):
-                stores.append({'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,'bakery70Items':0,'bakery70Stock':0,'items':[],'bakery':[],'error':f'HTTP {s}: {d}'[:350]}); continue
-            rows=d.get('data',{}).get('bargainItems') or []
-            meat=make_items(rows,'Vlees'); bakery=make_items(rows,'Bakkerij')
-            m70=[x for x in meat if float(x['discountPct'])>=70]; b70=[x for x in bakery if float(x['discountPct'])>=70]
-            stores.append({'storeId':sid,'store':name,'fetched':True,'totalBargainItems':len(rows),'meatItems':len(meat),'meat70Items':len(m70),'meat70Stock':sum(float(x['stock']) for x in m70),'bakeryItems':len(bakery),'bakery70Items':len(b70),'bakery70Stock':sum(float(x['stock']) for x in b70),'items':meat,'bakery':bakery})
+        stores=[fetch_store(sid,name,access) for sid,name in STORES]
     except Exception as e:
-        auth_mode='user-refresh'
         stores=[{'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,'bakery70Items':0,'bakery70Stock':0,'items':[],'bakery':[],'error':str(e)[:350]} for sid,name in STORES]
     fetched=sum(1 for x in stores if x['fetched'])
     status=('OK_ZERO_ROWS' if sum(x['meatItems'] for x in stores)==0 else 'OK') if fetched==3 else ('FAILED' if fetched==0 else 'INCOMPLETE')
