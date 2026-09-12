@@ -50,6 +50,8 @@ jobs:
         id: scan
         if: steps.window.outputs.run == 'true' || github.event_name == 'workflow_dispatch' || github.event_name == 'push'
         continue-on-error: true
+        env:
+          AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
         run: python scanner.py
 
       - name: Commit measurement
