@@ -28,7 +28,7 @@ def main():
     for sid,name in STORES:
         s,d=post('/graphql',{'query':QUERY,'variables':{'storeId':str(sid)}},t)
         if s!=200 or d.get('errors'):
-            stores.append({'storeId':sid,'store':name,'fetched':False,'error':f'HTTP {s}: {d}'[:350]}); continue
+            stores.append({'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'items':[],'error':f'HTTP {s}: {d}'[:350]}); continue
         rows=d.get('data',{}).get('bargainItems') or []
         meat=[x for x in rows if str(x.get('categoryTitle','')).strip().lower()=='vlees']
         items=[]
