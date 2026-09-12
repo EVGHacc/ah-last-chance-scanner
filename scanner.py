@@ -1,8 +1,9 @@
 # AH Laatste Kans scanner
 import json, os, urllib.request, urllib.error
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
+TZ=ZoneInfo('Europe/Amsterdam')
 STORES=[(1463,'AH Blekersvaartweg'),(1348,'AH Zandvoortselaan'),(1135,'AH Casablancastraat')]
 BASE='https://api.ah.nl'
 CLIENT_ID='appie-ios'
@@ -24,11 +25,8 @@ def token():
         if s==200 and d.get('access_token'):
             print('AUTH_MODE=user-refresh')
             return d['access_token'],'user-refresh'
-        print(f'USER_REFRESH_FAILED HTTP {s}: {str(d)[:180]}')
-    s,d=post('/mobile-auth/v1/auth/token/anonymous',{'clientId':CLIENT_ID})
-    if s!=200 or not d.get('access_token'): raise RuntimeError(f'ANON AUTH HTTP {s}: {d}')
-    print('AUTH_MODE=anonymous')
-    return d['access_token'],'anonymous'
+        raise RuntimeError(f'USER_REFRESH_FAILED HTTP {s}: {str(d)[:180]}')
+    raise RuntimeError('AH_REFRESH_TOKEN ontbreekt; anonymous fallback is bewust uitgeschakeld')
 
 def make_items(rows, category):
     selected=[x for x in rows if str(x.get('categoryTitle','')).strip().lower()==category.lower()]
@@ -38,22 +36,41 @@ def make_items(rows, category):
         items.append({'productId':p.get('id'),'title':p.get('title',''),'brand':p.get('brand',''),'size':p.get('salesUnitSize',''),'category':str(x.get('categoryTitle','')),'discountPct':m.get('markdownPercentage',0) or 0,'stock':x.get('stock',0) or 0,'priceWas':bp.get('priceWas'),'priceNow':bp.get('priceNow'),'markdownExpirationDate':m.get('markdownExpirationDate')})
     return items
 
+def slot_info(now):
+    minute=(now.minute//5)*5
+    scheduled=now.replace(minute=minute,second=0,microsecond=0)
+    delay=max(0,int((now-scheduled).total_seconds()))
+    return scheduled, scheduled.strftime('%H:%M'), delay
+
 def main():
-    now=datetime.now(ZoneInfo('Europe/Amsterdam')); slot=now.strftime('%H:%M'); date=now.strftime('%Y-%m-%d')
-    t,auth_mode=token(); stores=[]
-    for sid,name in STORES:
-        s,d=post('/graphql',{'query':QUERY,'variables':{'storeId':str(sid)}},t)
-        if s!=200 or d.get('errors'):
-            stores.append({'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,'bakery70Items':0,'bakery70Stock':0,'items':[],'bakery':[],'error':f'HTTP {s}: {d}'[:350]}); continue
-        rows=d.get('data',{}).get('bargainItems') or []
-        meat=make_items(rows,'Vlees'); bakery=make_items(rows,'Bakkerij')
-        m70=[x for x in meat if float(x['discountPct'])>=70]; b70=[x for x in bakery if float(x['discountPct'])>=70]
-        stores.append({'storeId':sid,'store':name,'fetched':True,'totalBargainItems':len(rows),'meatItems':len(meat),'meat70Items':len(m70),'meat70Stock':sum(float(x['stock']) for x in m70),'bakeryItems':len(bakery),'bakery70Items':len(b70),'bakery70Stock':sum(float(x['stock']) for x in b70),'items':meat,'bakery':bakery})
-    obs={'date':date,'scheduledSlot':slot,'checkedAt':now.isoformat(),'status':'OK' if all(x['fetched'] for x in stores) else 'INCOMPLETE','authMode':auth_mode,'categories':['Vlees','Bakkerij'],'stores':stores}
+    started=datetime.now(TZ)
+    scheduled,slot,delay=slot_info(started)
+    date=scheduled.strftime('%Y-%m-%d')
+    stores=[]
+    try:
+        t,auth_mode=token()
+        for sid,name in STORES:
+            s,d=post('/graphql',{'query':QUERY,'variables':{'storeId':str(sid)}},t)
+            if s!=200 or d.get('errors'):
+                stores.append({'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,'bakery70Items':0,'bakery70Stock':0,'items':[],'bakery':[],'error':f'HTTP {s}: {d}'[:350]}); continue
+            rows=d.get('data',{}).get('bargainItems') or []
+            meat=make_items(rows,'Vlees'); bakery=make_items(rows,'Bakkerij')
+            m70=[x for x in meat if float(x['discountPct'])>=70]; b70=[x for x in bakery if float(x['discountPct'])>=70]
+            stores.append({'storeId':sid,'store':name,'fetched':True,'totalBargainItems':len(rows),'meatItems':len(meat),'meat70Items':len(m70),'meat70Stock':sum(float(x['stock']) for x in m70),'bakeryItems':len(bakery),'bakery70Items':len(b70),'bakery70Stock':sum(float(x['stock']) for x in b70),'items':meat,'bakery':bakery})
+    except Exception as e:
+        auth_mode='user-refresh'
+        stores=[{'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,'bakery70Items':0,'bakery70Stock':0,'items':[],'bakery':[],'error':str(e)[:350]} for sid,name in STORES]
+    fetched=sum(1 for x in stores if x['fetched'])
+    if fetched==3: status='OK_ZERO_ROWS' if sum(x['meatItems'] for x in stores)==0 else 'OK'
+    elif fetched==0: status='FAILED'
+    else: status='INCOMPLETE'
+    completed=datetime.now(TZ)
+    valid=status in ('OK','OK_ZERO_ROWS') and auth_mode=='user-refresh' and delay<=240
+    obs={'schemaVersion':3,'date':date,'weekday':scheduled.strftime('%A'),'scheduledSlot':slot,'scheduledAt':scheduled.isoformat(),'startedAt':started.isoformat(),'completedAt':completed.isoformat(),'checkedAt':completed.isoformat(),'delaySeconds':delay,'status':status,'valid':valid,'official1925':slot=='19:25','authMode':auth_mode,'categories':['Vlees','Bakkerij'],'stores':stores}
     os.makedirs('data',exist_ok=True)
     path=f'data/{date}.jsonl'
     with open(path,'a') as f: f.write(json.dumps(obs,ensure_ascii=False)+'\n')
     with open('data/latest.json','w') as f: json.dump(obs,f,ensure_ascii=False,indent=2)
     print(json.dumps(obs,ensure_ascii=False))
-    if obs['status'] != 'OK': raise SystemExit(2)
+    if not valid: raise SystemExit(2)
 if __name__=='__main__': main()
