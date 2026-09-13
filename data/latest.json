@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-13",
   "weekday": "Sunday",
-  "scheduledSlot": "17:51",
-  "scheduledAt": "2026-09-13T17:51:00+02:00",
-  "rawScheduledSlot": "17:51",
-  "rawScheduledAt": "2026-09-13T17:51:00+02:00",
-  "startedAt": "2026-09-13T17:51:00.055038+02:00",
-  "completedAt": "2026-09-13T17:51:03.743612+02:00",
-  "checkedAt": "2026-09-13T17:51:03.743612+02:00",
+  "scheduledSlot": "17:54",
+  "scheduledAt": "2026-09-13T17:54:00+02:00",
+  "rawScheduledSlot": "17:54",
+  "rawScheduledAt": "2026-09-13T17:54:00+02:00",
+  "startedAt": "2026-09-13T17:54:00.053269+02:00",
+  "completedAt": "2026-09-13T17:54:03.385205+02:00",
+  "checkedAt": "2026-09-13T17:54:03.385205+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -24,7 +24,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 219,
+      "totalBargainItems": 218,
       "meatItems": 11,
       "meat70Items": 1,
       "meat70Stock": 3.0,
@@ -724,11 +724,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 227,
+      "totalBargainItems": 226,
       "meatItems": 7,
       "meat70Items": 1,
       "meat70Stock": 10.0,
-      "bakeryItems": 53,
+      "bakeryItems": 52,
       "bakery70Items": 1,
       "bakery70Stock": 4.0,
       "items": [
@@ -1167,18 +1167,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 125035,
-          "title": "AH Les pains boulogne heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "2.39",
-          "priceNow": "2.03",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
           "productId": 230726,
           "title": "AH Maple pecan vlechtbrood",
           "brand": "AH",
@@ -1251,6 +1239,18 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
+          "productId": 125035,
+          "title": "AH Les pains boulogne heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "2.39",
+          "priceNow": "2.03",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
           "productId": 230720,
           "title": "AH Frikandelbroodje",
           "brand": "AH",
@@ -1272,18 +1272,6 @@
           "stock": 2,
           "priceWas": "2.29",
           "priceNow": "1.95",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
-          "productId": 487301,
-          "title": "AH Rond volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "1.89",
-          "priceNow": "1.61",
           "markdownExpirationDate": "2026-09-13"
         },
         {
@@ -1735,18 +1723,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 487301,
-          "title": "AH Rond volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "1.89",
-          "priceNow": "1.61",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
           "productId": 230715,
           "title": "AH Italiaanse bol wit",
           "brand": "AH",
@@ -1780,6 +1756,18 @@
           "stock": 3,
           "priceWas": "0.99",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
+          "productId": 487301,
+          "title": "AH Rond volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 3,
+          "priceWas": "1.89",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-09-13"
         },
         {
