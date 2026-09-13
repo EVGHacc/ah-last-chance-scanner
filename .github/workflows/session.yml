@@ -2,11 +2,11 @@ name: AH supervised evening session
 
 on:
   schedule:
-    # One entry matches 17:15 Amsterdam in CEST, the other in CET.
-    # The gate uses the scheduled cron expression plus today's UTC offset, so a
-    # delayed GitHub start cannot accidentally suppress the correct session.
-    - cron: '15 15 * * *'
-    - cron: '15 16 * * *'
+    # One entry matches 17:00 Amsterdam in CEST, the other in CET.
+    # Starting 30 minutes before the first point gives GitHub scheduler delay
+    # headroom without changing any intended measurement timestamp.
+    - cron: '0 15 * * *'
+    - cron: '0 16 * * *'
   workflow_dispatch:
 
 permissions:
@@ -19,7 +19,7 @@ concurrency:
 jobs:
   session:
     runs-on: ubuntu-latest
-    timeout-minutes: 330
+    timeout-minutes: 350
     steps:
       - name: Gate scheduled session to the correct Amsterdam occurrence
         id: gate
@@ -39,7 +39,7 @@ jobs:
           now=datetime.now(ZoneInfo('Europe/Amsterdam'))
           offset_hours=int(now.utcoffset().total_seconds()//3600)
           expected_utc_hour=17-offset_hours
-          expected=f'15 {expected_utc_hour} * * *'
+          expected=f'0 {expected_utc_hour} * * *'
           actual=os.environ.get('EVENT_SCHEDULE','')
           run=actual==expected
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:
