@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-13",
   "weekday": "Sunday",
-  "scheduledSlot": "17:54",
-  "scheduledAt": "2026-09-13T17:54:00+02:00",
-  "rawScheduledSlot": "17:54",
-  "rawScheduledAt": "2026-09-13T17:54:00+02:00",
-  "startedAt": "2026-09-13T17:54:00.053269+02:00",
-  "completedAt": "2026-09-13T17:54:03.385205+02:00",
-  "checkedAt": "2026-09-13T17:54:03.385205+02:00",
+  "scheduledSlot": "17:55",
+  "scheduledAt": "2026-09-13T17:55:00+02:00",
+  "rawScheduledSlot": "17:55",
+  "rawScheduledAt": "2026-09-13T17:55:00+02:00",
+  "startedAt": "2026-09-13T17:55:00.054101+02:00",
+  "completedAt": "2026-09-13T17:55:03.373302+02:00",
+  "checkedAt": "2026-09-13T17:55:03.373302+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -335,18 +335,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 230859,
-          "title": "AH Kaas croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 8,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
           "productId": 231924,
           "title": "AH Chocoladebroodje",
           "brand": "AH",
@@ -356,6 +344,18 @@
           "stock": 7,
           "priceWas": "0.59",
           "priceNow": "0.50",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
+          "productId": 230859,
+          "title": "AH Kaas croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 7,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
           "markdownExpirationDate": "2026-09-13"
         },
         {
