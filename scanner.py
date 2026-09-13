@@ -1,6 +1,6 @@
 # AH Laatste Kans scanner
 import json, os, time, urllib.request, urllib.error
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
 TZ=ZoneInfo('Europe/Amsterdam')
@@ -56,14 +56,22 @@ def make_items(rows,category):
     return out
 
 
+def intended_minute(mins):
+    if not (START<=mins<=END): return False
+    return (mins-START)%3==0 or (mins-START)%5==0
+
+
 def parse_raw_schedule(started):
     raw=os.getenv('SCHEDULED_AT','').strip()
     if raw:
         scheduled=datetime.fromisoformat(raw.replace('Z','+00:00')).astimezone(TZ)
     else:
         scheduled=started.replace(second=0,microsecond=0)
+    scheduled=scheduled.replace(second=0,microsecond=0)
     mins=scheduled.hour*60+scheduled.minute
     if not (START<=mins<=END): raise RuntimeError(f'scheduled time buiten scanvenster: {scheduled.isoformat()}')
+    if not intended_minute(mins): raise RuntimeError(f'scheduled time is geen 3- of 5-minuten meetpunt: {scheduled.isoformat()}')
+    if scheduled-started > timedelta(seconds=30): raise RuntimeError(f'scheduled time ligt in de toekomst: {scheduled.isoformat()}')
     return scheduled
 
 
@@ -103,8 +111,6 @@ def main():
     fetched=sum(1 for x in stores if x['fetched'])
     status=('OK_ZERO_ROWS' if sum(x['meatItems'] for x in stores)==0 else 'OK') if fetched==3 else ('FAILED' if fetched==0 else 'INCOMPLETE')
     completed=datetime.now(TZ)
-    # Raw observations are judged against their own trigger time. Canonical timing
-    # quality is enforced separately by scripts/persist.py for exact 5-minute runs.
     valid=status in ('OK','OK_ZERO_ROWS') and auth_mode=='user-refresh' and raw_delay<=240
     obs={'schemaVersion':4,'date':date,'weekday':canonical.strftime('%A'),'scheduledSlot':slot,'scheduledAt':canonical.isoformat(),'rawScheduledSlot':raw_scheduled.strftime('%H:%M'),'rawScheduledAt':raw_scheduled.isoformat(),'startedAt':started.isoformat(),'completedAt':completed.isoformat(),'checkedAt':completed.isoformat(),'delaySeconds':canonical_delay,'rawDelaySeconds':raw_delay,'status':status,'valid':valid,'official1925':slot=='19:25' and raw_scheduled.strftime('%H:%M')=='19:25','authMode':auth_mode,'categories':['Vlees','Bakkerij'],'stores':stores}
     os.makedirs('data',exist_ok=True)
