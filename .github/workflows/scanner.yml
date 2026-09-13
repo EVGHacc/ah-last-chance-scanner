@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       scheduled_at:
-        description: 'ISO timestamp of the intended raw scan trigger'
+        description: 'ISO timestamp of the intended scan trigger'
         required: true
         type: string
 
@@ -59,6 +59,10 @@ jobs:
           print(target.isoformat(), 'raw=',raw,'canonical=',canonical,'already_seen=',seen)
           PY
 
+      - name: Compile production code
+        if: steps.guard.outputs.skip != 'true'
+        run: python -m py_compile scanner.py scripts/persist.py scripts/publish.py
+
       - name: Scan all three stores
         id: scan
         if: steps.guard.outputs.skip != 'true'
@@ -68,30 +72,13 @@ jobs:
           SCHEDULED_AT: ${{ inputs.scheduled_at }}
         run: python scanner.py
 
-      - name: Persist valid measurement and rebuild canonical 5-minute series
+      - name: Publish valid measurement atomically
         if: steps.scan.outcome == 'success'
         shell: bash
         run: |
           git config user.name 'ah-scanner-bot'
           git config user.email 'actions@users.noreply.github.com'
-          cp data/latest.json /tmp/latest.json
-          for attempt in 1 2 3; do
-            git fetch origin main
-            git reset --hard origin/main
-            mkdir -p data
-            cp /tmp/latest.json data/latest.json
-            python scripts/persist.py
-            git add data/
-            if git diff --cached --quiet; then
-              echo 'No data changes to commit'
-              exit 0
-            fi
-            git commit -m "AH scan $(TZ=Europe/Amsterdam date '+%Y-%m-%d %H:%M')"
-            if git push origin HEAD:main; then exit 0; fi
-            echo "Push race on attempt ${attempt}; retrying"
-          done
-          echo 'Could not persist measurement after 3 attempts'
-          exit 1
+          python scripts/publish.py
 
       - name: Fail workflow when scan failed
         if: steps.scan.outcome == 'failure'
