@@ -9,27 +9,26 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  actions: write
 
 concurrency:
-  group: ah-last-chance-scanner
-  cancel-in-progress: false
+  group: ah-last-chance-watchdog
+  cancel-in-progress: true
 
 jobs:
   watchdog:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 3
     steps:
       - uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
 
       - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
 
-      - name: Compile watchdog and scanner
-        run: python -m py_compile scanner.py scripts/persist.py scripts/watchdog_targets.py
+      - name: Compile watchdog logic
+        run: python -m py_compile scripts/watchdog_targets.py scripts/persist.py scanner.py
 
       - name: Find every missing intended point still recoverable honestly
         id: health
@@ -44,44 +43,15 @@ jobs:
             echo "No recoverable missing points."
           fi
 
-      - name: Recover missing points with authenticated scans
-        id: recovery
+      - name: Dispatch authoritative authenticated scanner for missing points
         if: steps.health.outputs.targets != '0'
         shell: bash
         env:
-          AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           while IFS= read -r scheduled_at; do
             [ -z "$scheduled_at" ] && continue
-            echo "Recovering exact point $scheduled_at"
-            SCHEDULED_AT="$scheduled_at" python scanner.py
-            python scripts/persist.py
+            echo "Dispatching recovery for $scheduled_at"
+            gh workflow run scanner.yml --ref main -f scheduled_at="$scheduled_at"
           done < /tmp/targets.txt
-
-      - name: Persist recovery batch
-        if: steps.recovery.outcome == 'success'
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name 'ah-scanner-watchdog'
-          git config user.email 'actions@users.noreply.github.com'
-          git add data/
-          if git diff --cached --quiet; then
-            echo 'No recovery changes to commit'
-            exit 0
-          fi
-          git commit -m "AH watchdog authenticated recovery $(TZ=Europe/Amsterdam date '+%Y-%m-%d %H:%M')"
-          for attempt in 1 2 3; do
-            if git push origin HEAD:main; then exit 0; fi
-            echo "Push race on attempt ${attempt}; rebasing"
-            git pull --rebase origin main
-          done
-          echo 'Could not persist watchdog recovery after 3 attempts'
-          exit 1
-
-      - name: Fail if authenticated recovery failed
-        if: steps.recovery.outcome == 'failure'
-        run: |
-          echo 'Watchdog found recoverable missing scan points, but authenticated recovery failed.'
-          exit 1
