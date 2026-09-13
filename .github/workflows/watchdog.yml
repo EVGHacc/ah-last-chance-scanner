@@ -25,52 +25,65 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Validate scanner health
+      - name: Find latest intended scan point and validate persistence
         id: health
         shell: bash
         run: |
           python - <<'PY'
           import json, os
-          from datetime import datetime
+          from datetime import datetime, timedelta
           from zoneinfo import ZoneInfo
 
           tz=ZoneInfo('Europe/Amsterdam')
           now=datetime.now(tz)
-          minutes=now.hour*60+now.minute
-          in_window=17*60+30 <= minutes <= 22*60+30
-          unhealthy=False
-          reason='outside scan window'
-          if in_window:
+          start=17*60+30
+          end=22*60+30
+          raw={m for m in range(start,end+1) if (m-start)%3==0}
+          canonical={m for m in range(start,end+1) if (m-start)%5==0}
+          due=sorted(raw|canonical)
+          minute=now.hour*60+now.minute
+          candidates=[m for m in due if m<=minute]
+          target=candidates[-1] if candidates else None
+          in_window=start <= minute <= end+4
+          needs_recovery=False
+          reason='outside scan window or before first due point'
+          scheduled_at=''
+
+          if in_window and target is not None:
+              target_dt=now.replace(hour=target//60,minute=target%60,second=0,microsecond=0)
+              age=(now-target_dt).total_seconds()
+              slot=f'{target//60:02d}:{target%60:02d}'
+              scheduled_at=target_dt.isoformat()
+              raw_due=target in raw
+              canonical_due=target in canonical
+              seen=False
               try:
-                  o=json.load(open('data/latest.json',encoding='utf-8'))
-                  checked=datetime.fromisoformat(o['checkedAt']).astimezone(tz)
-                  age=(now-checked).total_seconds()/60
-                  stores=o.get('stores') or []
-                  fetched={int(s['storeId']) for s in stores if s.get('fetched') is True}
-                  checks={
-                      'fresh': age <= 6,
-                      'valid': o.get('valid') is True,
-                      'status': o.get('status') in ('OK','OK_ZERO_ROWS'),
-                      'auth': o.get('authMode') == 'user-refresh',
-                      'stores': fetched == {1463,1348,1135},
-                      'vlees': 'Vlees' in (o.get('categories') or []),
-                  }
-                  unhealthy=not all(checks.values())
-                  reason=f"age={age:.1f}m checks={checks}"
-              except Exception as exc:
-                  unhealthy=True
-                  reason=f'latest unreadable/missing: {exc}'
-          print(now.isoformat(), 'in_window=',in_window,'unhealthy=',unhealthy,reason)
+                  status=json.load(open('data/status.json',encoding='utf-8'))
+                  if status.get('date')==now.strftime('%Y-%m-%d'):
+                      raw_ok=(not raw_due) or slot in (status.get('rawSeen') or [])
+                      canonical_ok=(not canonical_due) or slot in (status.get('canonicalSeen') or [])
+                      seen=raw_ok and canonical_ok
+              except Exception:
+                  seen=False
+              if seen:
+                  reason=f'{slot} already persisted (raw={raw_due}, canonical={canonical_due})'
+              elif 0 <= age <= 240:
+                  needs_recovery=True
+                  reason=f'{slot} missing; age={age:.0f}s, recovery still within 240s validity budget'
+              else:
+                  reason=f'{slot} missing but age={age:.0f}s exceeds honest recovery window; not fabricating'
+
+          print(now.isoformat(), 'in_window=',in_window,'needs_recovery=',needs_recovery,reason)
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:
               f.write(f'in_window={str(in_window).lower()}\n')
-              f.write(f'unhealthy={str(unhealthy).lower()}\n')
+              f.write(f'needs_recovery={str(needs_recovery).lower()}\n')
+              f.write(f'scheduled_at={scheduled_at}\n')
               f.write(f'reason={reason}\n')
-              f.write(f'scheduled_at={now.replace(second=0,microsecond=0).isoformat()}\n')
           PY
 
-      - name: Recovery scan
+      - name: Recovery scan for exact missing point
         id: recovery
-        if: steps.health.outputs.in_window == 'true' && steps.health.outputs.unhealthy == 'true'
+        if: steps.health.outputs.needs_recovery == 'true'
         continue-on-error: true
         env:
           AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
@@ -92,7 +105,7 @@ jobs:
             python scripts/persist.py
             git add data/
             if git diff --cached --quiet; then exit 0; fi
-            git commit -m "AH watchdog recovery $(TZ=Europe/Amsterdam date '+%Y-%m-%d %H:%M')"
+            git commit -m "AH watchdog exact recovery $(TZ=Europe/Amsterdam date '+%Y-%m-%d %H:%M')"
             if git push origin HEAD:main; then exit 0; fi
           done
           exit 1
@@ -100,5 +113,6 @@ jobs:
       - name: Fail if recovery failed
         if: steps.recovery.outcome == 'failure'
         run: |
-          echo "Watchdog detected unhealthy scanner and authenticated recovery failed."
+          echo "Watchdog detected a missing intended scan point and authenticated recovery failed."
+          echo "${{ steps.health.outputs.reason }}"
           exit 1
