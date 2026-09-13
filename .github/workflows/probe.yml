@@ -3,8 +3,6 @@ name: AH Scanner live probe
 on:
   workflow_dispatch:
   schedule:
-    # Covers 12:18 Europe/Amsterdam in both CEST and CET; the first step gates
-    # the non-matching UTC occurrence.
     - cron: '18 10,11 * * *'
   push:
     branches: [main]
@@ -23,6 +21,7 @@ on:
 
 permissions:
   contents: read
+  actions: write
 
 jobs:
   probe:
@@ -62,3 +61,9 @@ jobs:
         env:
           AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
         run: python probe.py
+
+      - name: Verify watchdog can dispatch a workflow
+        if: steps.gate.outputs.run == 'true' && github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run dispatch-smoke.yml --ref main
