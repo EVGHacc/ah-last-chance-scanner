@@ -12,9 +12,13 @@ on:
       - 'scanner.py'
       - 'probe.py'
       - 'scripts/persist.py'
+      - 'scripts/publish.py'
+      - 'scripts/session.py'
       - 'scripts/selftest.py'
       - 'scripts/watchdog_targets.py'
       - '.github/workflows/probe.yml'
+      - '.github/workflows/scanner.yml'
+      - '.github/workflows/session.yml'
       - '.github/workflows/watchdog.yml'
 
 permissions:
@@ -45,11 +49,11 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Compile scanner code
+      - name: Compile scanner stack
         if: steps.gate.outputs.run == 'true'
-        run: python -m py_compile scanner.py probe.py scripts/persist.py scripts/selftest.py scripts/watchdog_targets.py
+        run: python -m py_compile scanner.py probe.py scripts/persist.py scripts/publish.py scripts/session.py scripts/selftest.py scripts/watchdog_targets.py
 
-      - name: Test cadence, persistence and watchdog invariants
+      - name: Test cadence, persistence, session and watchdog invariants
         if: steps.gate.outputs.run == 'true'
         run: python scripts/selftest.py
 
