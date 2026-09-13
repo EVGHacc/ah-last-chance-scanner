@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-13",
   "weekday": "Sunday",
-  "scheduledSlot": "18:54",
-  "scheduledAt": "2026-09-13T18:54:00+02:00",
-  "rawScheduledSlot": "18:54",
-  "rawScheduledAt": "2026-09-13T18:54:00+02:00",
-  "startedAt": "2026-09-13T18:54:00.052859+02:00",
-  "completedAt": "2026-09-13T18:54:09.923404+02:00",
-  "checkedAt": "2026-09-13T18:54:09.923404+02:00",
+  "scheduledSlot": "18:55",
+  "scheduledAt": "2026-09-13T18:55:00+02:00",
+  "rawScheduledSlot": "18:55",
+  "rawScheduledAt": "2026-09-13T18:55:00+02:00",
+  "startedAt": "2026-09-13T18:55:00.053506+02:00",
+  "completedAt": "2026-09-13T18:55:03.404492+02:00",
+  "checkedAt": "2026-09-13T18:55:03.404492+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1627,18 +1627,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 590095,
-          "title": "AH Liefde & Passie Rozijn pistache",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
           "productId": 523680,
           "title": "AH Frikandelbroodje vegan",
           "brand": "AH",
@@ -1648,6 +1636,18 @@
           "stock": 2,
           "priceWas": "1.19",
           "priceNow": "0.89",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
+          "productId": 590095,
+          "title": "AH Liefde & Passie Rozijn pistache",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-13"
         },
         {
