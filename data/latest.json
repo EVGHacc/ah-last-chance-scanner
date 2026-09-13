@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-13",
   "weekday": "Sunday",
-  "scheduledSlot": "18:27",
-  "scheduledAt": "2026-09-13T18:27:00+02:00",
-  "rawScheduledSlot": "18:27",
-  "rawScheduledAt": "2026-09-13T18:27:00+02:00",
-  "startedAt": "2026-09-13T18:27:00.054586+02:00",
-  "completedAt": "2026-09-13T18:27:03.247226+02:00",
-  "checkedAt": "2026-09-13T18:27:03.247226+02:00",
+  "scheduledSlot": "18:30",
+  "scheduledAt": "2026-09-13T18:30:00+02:00",
+  "rawScheduledSlot": "18:30",
+  "rawScheduledAt": "2026-09-13T18:30:00+02:00",
+  "startedAt": "2026-09-13T18:30:00.053229+02:00",
+  "completedAt": "2026-09-13T18:30:03.954829+02:00",
+  "checkedAt": "2026-09-13T18:30:03.954829+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -467,18 +467,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 230718,
-          "title": "AH Pistolet wit",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 8,
-          "priceWas": "0.29",
-          "priceNow": "0.25",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
           "productId": 606046,
           "title": "AH Turks broodje",
           "brand": "AH",
@@ -488,6 +476,18 @@
           "stock": 6,
           "priceWas": "0.99",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
+          "productId": 230718,
+          "title": "AH Pistolet wit",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 6,
+          "priceWas": "0.29",
+          "priceNow": "0.25",
           "markdownExpirationDate": "2026-09-13"
         },
         {
@@ -909,7 +909,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 15,
+          "stock": 13,
           "priceWas": "0.99",
           "priceNow": "0.74",
           "markdownExpirationDate": "2026-09-13"
@@ -1011,18 +1011,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 451137,
-          "title": "AH Focaccia mozzarella",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "1.19",
-          "priceNow": "0.89",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
           "productId": 523680,
           "title": "AH Frikandelbroodje vegan",
           "brand": "AH",
@@ -1056,6 +1044,18 @@
           "stock": 3,
           "priceWas": "0.59",
           "priceNow": "0.44",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
+          "productId": 451137,
+          "title": "AH Focaccia mozzarella",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "1.19",
+          "priceNow": "0.89",
           "markdownExpirationDate": "2026-09-13"
         },
         {
@@ -1227,18 +1227,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 515766,
-          "title": "AH Kaasstengel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 5,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
           "productId": 468259,
           "title": "AH Kaneelbroodje",
           "brand": "AH",
@@ -1272,6 +1260,18 @@
           "stock": 4,
           "priceWas": "0.59",
           "priceNow": "0.50",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
+          "productId": 515766,
+          "title": "AH Kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 4,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
           "markdownExpirationDate": "2026-09-13"
         },
         {
