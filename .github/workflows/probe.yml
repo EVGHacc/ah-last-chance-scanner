@@ -3,7 +3,8 @@ name: AH Scanner live probe
 on:
   workflow_dispatch:
   schedule:
-    - cron: '18 10,11 * * *'
+    - cron: '18 10 * * *'
+    - cron: '18 11 * * *'
   push:
     branches: [main]
     paths:
@@ -21,24 +22,36 @@ on:
 
 permissions:
   contents: read
-  actions: write
 
 jobs:
   probe:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - name: Gate scheduled probe to Amsterdam noon hour
+      - name: Gate scheduled probe to correct Amsterdam occurrence
         id: gate
         shell: bash
         env:
           EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
         run: |
-          if [ "$EVENT_NAME" != "schedule" ] || [ "$(TZ=Europe/Amsterdam date '+%H')" = "12" ]; then
+          if [ "$EVENT_NAME" != "schedule" ]; then
             echo 'run=true' >> "$GITHUB_OUTPUT"
-          else
-            echo 'run=false' >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+          python - <<'PY'
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          now=datetime.now(ZoneInfo('Europe/Amsterdam'))
+          offset_hours=int(now.utcoffset().total_seconds()//3600)
+          expected=f'18 {12-offset_hours} * * *'
+          actual=os.environ.get('EVENT_SCHEDULE','')
+          run=actual==expected
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write(f'run={str(run).lower()}\n')
+          print('Amsterdam offset=',offset_hours,'expected=',expected,'actual=',actual,'run=',run)
+          PY
 
       - uses: actions/checkout@v7
         if: steps.gate.outputs.run == 'true'
@@ -61,9 +74,3 @@ jobs:
         env:
           AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
         run: python probe.py
-
-      - name: Verify watchdog can dispatch a workflow
-        if: steps.gate.outputs.run == 'true' && github.event_name == 'push'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh workflow run dispatch-smoke.yml --ref main
