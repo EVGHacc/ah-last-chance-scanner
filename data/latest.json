@@ -2,18 +2,18 @@
   "schemaVersion": 5,
   "date": "2026-09-13",
   "weekday": "Sunday",
-  "scheduledSlot": "19:25",
-  "scheduledAt": "2026-09-13T19:25:00+02:00",
-  "rawScheduledSlot": "19:25",
-  "rawScheduledAt": "2026-09-13T19:25:00+02:00",
-  "startedAt": "2026-09-13T19:25:00.053053+02:00",
-  "completedAt": "2026-09-13T19:25:03.265853+02:00",
-  "checkedAt": "2026-09-13T19:25:03.265853+02:00",
+  "scheduledSlot": "19:27",
+  "scheduledAt": "2026-09-13T19:27:00+02:00",
+  "rawScheduledSlot": "19:27",
+  "rawScheduledAt": "2026-09-13T19:27:00+02:00",
+  "startedAt": "2026-09-13T19:27:00.052947+02:00",
+  "completedAt": "2026-09-13T19:27:03.418795+02:00",
+  "checkedAt": "2026-09-13T19:27:03.418795+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
   "valid": true,
-  "official1925": true,
+  "official1925": false,
   "authMode": "user-refresh",
   "categories": [
     "Vlees",
@@ -24,7 +24,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 204,
+      "totalBargainItems": 203,
       "meatItems": 10,
       "meat70Items": 2,
       "meat70Stock": 4.0,
@@ -795,18 +795,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 440472,
-          "title": "AH Kaas ruitbroodje wit",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 11,
-          "priceWas": "0.49",
-          "priceNow": "0.29",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
           "productId": 230738,
           "title": "AH Koffiebroodje",
           "brand": "AH",
@@ -816,6 +804,18 @@
           "stock": 7,
           "priceWas": "0.69",
           "priceNow": "0.41",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
+          "productId": 440472,
+          "title": "AH Kaas ruitbroodje wit",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 7,
+          "priceWas": "0.49",
+          "priceNow": "0.29",
           "markdownExpirationDate": "2026-09-13"
         },
         {
@@ -1343,7 +1343,7 @@
       "totalBargainItems": 219,
       "meatItems": 9,
       "meat70Items": 6,
-      "meat70Stock": 11.0,
+      "meat70Stock": 10.0,
       "bakeryItems": 33,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
@@ -1355,7 +1355,7 @@
           "size": "400 g",
           "category": "Vlees",
           "discountPct": 70,
-          "stock": 4,
+          "stock": 3,
           "priceWas": "5.99",
           "priceNow": "1.80",
           "markdownExpirationDate": "2026-09-13"
@@ -1675,18 +1675,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 487301,
-          "title": "AH Rond volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "1.89",
-          "priceNow": "1.42",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
           "productId": 606074,
           "title": "AH Pistache croissant",
           "brand": "AH",
@@ -1708,6 +1696,18 @@
           "stock": 1,
           "priceWas": "1.09",
           "priceNow": "0.82",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
+          "productId": 487301,
+          "title": "AH Rond volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "1.42",
           "markdownExpirationDate": "2026-09-13"
         },
         {
