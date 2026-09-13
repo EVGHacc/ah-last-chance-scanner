@@ -8,6 +8,7 @@ on:
       - 'scanner.py'
       - 'probe.py'
       - 'scripts/persist.py'
+      - 'scripts/selftest.py'
       - '.github/workflows/probe.yml'
 
 permissions:
@@ -23,7 +24,9 @@ jobs:
         with:
           python-version: '3.12'
       - name: Compile scanner code
-        run: python -m py_compile scanner.py probe.py scripts/persist.py
+        run: python -m py_compile scanner.py probe.py scripts/persist.py scripts/selftest.py
+      - name: Test cadence and persistence invariants
+        run: python scripts/selftest.py
       - name: Live authenticated AH probe
         env:
           AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
