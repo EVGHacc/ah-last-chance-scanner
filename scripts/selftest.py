@@ -2,9 +2,16 @@
 import importlib.util
 from pathlib import Path
 
-spec=importlib.util.spec_from_file_location('persist',Path(__file__).with_name('persist.py'))
-persist=importlib.util.module_from_spec(spec)
-spec.loader.exec_module(persist)
+BASE=Path(__file__).parent
+
+def load(name, filename):
+    spec=importlib.util.spec_from_file_location(name,BASE/filename)
+    module=importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+persist=load('persist','persist.py')
+watchdog=load('watchdog_targets','watchdog_targets.py')
 
 
 def store(store_id):
@@ -31,4 +38,14 @@ assert not persist.valid_obs(obs(status='INCOMPLETE'))
 assert persist.exact_canonical_obs(obs())
 assert not persist.exact_canonical_obs(obs(raw_slot='17:33',canonical_slot='17:30'))
 assert not persist.exact_canonical_obs(obs(canonical_delay=241))
-print('scanner persistence self-test: PASS')
+
+# Every intended point must be either raw 3-minute, exact canonical 5-minute, or both.
+due=[m for m in range(watchdog.START,watchdog.END+1) if watchdog.raw_due(m) or watchdog.canonical_due(m)]
+assert len(due)==141, len(due)
+# The two watchdog cron offsets (minute % 5 == 0 or 2) reach every intended point
+# no later than two minutes afterward, leaving ample room inside the 240s validity budget.
+for minute in due:
+    candidates=[w for w in range(minute,minute+3) if w%5 in (0,2)]
+    assert candidates, f'watchdog has no <=2m recovery for {minute//60:02d}:{minute%60:02d}'
+
+print('scanner persistence/watchdog self-test: PASS')
