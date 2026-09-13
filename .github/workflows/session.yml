@@ -1,0 +1,57 @@
+name: AH supervised evening session
+
+on:
+  schedule:
+    # Start 15 minutes before 17:30 Amsterdam in CEST/CET; local-time gate
+    # below discards the non-matching UTC occurrence.
+    - cron: '15 15,16 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ah-last-chance-session
+  cancel-in-progress: false
+
+jobs:
+  session:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - name: Gate scheduled session to 17:xx Europe/Amsterdam
+        id: gate
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [ "$EVENT_NAME" != "schedule" ] || [ "$(TZ=Europe/Amsterdam date '+%H')" = "17" ]; then
+            echo 'run=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'run=false' >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v7
+        if: steps.gate.outputs.run == 'true'
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v7
+        if: steps.gate.outputs.run == 'true'
+        with:
+          python-version: '3.12'
+
+      - name: Compile and test production logic
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          python -m py_compile scanner.py scripts/persist.py scripts/publish.py scripts/session.py scripts/watchdog_targets.py
+          python scripts/selftest.py
+
+      - name: Run supervised scan session
+        if: steps.gate.outputs.run == 'true'
+        env:
+          AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
+        run: |
+          git config user.name 'ah-session-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          python scripts/session.py
