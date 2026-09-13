@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-13",
   "weekday": "Sunday",
-  "scheduledSlot": "19:33",
-  "scheduledAt": "2026-09-13T19:33:00+02:00",
-  "rawScheduledSlot": "19:33",
-  "rawScheduledAt": "2026-09-13T19:33:00+02:00",
-  "startedAt": "2026-09-13T19:33:00.052992+02:00",
-  "completedAt": "2026-09-13T19:33:03.578480+02:00",
-  "checkedAt": "2026-09-13T19:33:03.578480+02:00",
+  "scheduledSlot": "19:35",
+  "scheduledAt": "2026-09-13T19:35:00+02:00",
+  "rawScheduledSlot": "19:35",
+  "rawScheduledAt": "2026-09-13T19:35:00+02:00",
+  "startedAt": "2026-09-13T19:35:00.054215+02:00",
+  "completedAt": "2026-09-13T19:35:03.523940+02:00",
+  "checkedAt": "2026-09-13T19:35:03.523940+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -568,13 +568,13 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 217,
+      "totalBargainItems": 214,
       "meatItems": 6,
       "meat70Items": 6,
       "meat70Stock": 20.0,
       "bakeryItems": 47,
       "bakery70Items": 2,
-      "bakery70Stock": 8.0,
+      "bakery70Stock": 7.0,
       "items": [
         {
           "productId": 533085,
@@ -669,7 +669,7 @@
           "size": "2 stuks",
           "category": "Bakkerij",
           "discountPct": 70,
-          "stock": 4,
+          "stock": 3,
           "priceWas": "2.69",
           "priceNow": "0.81",
           "markdownExpirationDate": "2026-09-13"
@@ -1327,18 +1327,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 584032,
-          "title": "AH Rond wit sesam heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "1.89",
-          "priceNow": "1.13",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
           "productId": 606777,
           "title": "AH Borek kip gyros",
           "brand": "AH",
@@ -1348,6 +1336,18 @@
           "stock": 3,
           "priceWas": "1.19",
           "priceNow": "0.71",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
+          "productId": 584032,
+          "title": "AH Rond wit sesam heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "1.89",
+          "priceNow": "1.13",
           "markdownExpirationDate": "2026-09-13"
         },
         {
