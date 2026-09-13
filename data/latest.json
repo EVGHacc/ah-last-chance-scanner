@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-13",
   "weekday": "Sunday",
-  "scheduledSlot": "18:05",
-  "scheduledAt": "2026-09-13T18:05:00+02:00",
-  "rawScheduledSlot": "18:05",
-  "rawScheduledAt": "2026-09-13T18:05:00+02:00",
-  "startedAt": "2026-09-13T18:05:00.053439+02:00",
-  "completedAt": "2026-09-13T18:05:09.944375+02:00",
-  "checkedAt": "2026-09-13T18:05:09.944375+02:00",
+  "scheduledSlot": "18:06",
+  "scheduledAt": "2026-09-13T18:06:00+02:00",
+  "rawScheduledSlot": "18:06",
+  "rawScheduledAt": "2026-09-13T18:06:00+02:00",
+  "startedAt": "2026-09-13T18:06:00.052859+02:00",
+  "completedAt": "2026-09-13T18:06:03.345251+02:00",
+  "checkedAt": "2026-09-13T18:06:03.345251+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -724,8 +724,8 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 225,
-      "meatItems": 7,
+      "totalBargainItems": 224,
+      "meatItems": 6,
       "meat70Items": 3,
       "meat70Stock": 12.0,
       "bakeryItems": 52,
@@ -790,18 +790,6 @@
           "stock": 1,
           "priceWas": "10.99",
           "priceNow": "6.59",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
-          "productId": 187593,
-          "title": "AH Greenfields Beefburger jalapeno 2 stuks",
-          "brand": "AH Greenfields",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "4.99",
-          "priceNow": "2.99",
           "markdownExpirationDate": "2026-09-13"
         },
         {
@@ -1759,18 +1747,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 487301,
-          "title": "AH Rond volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "1.89",
-          "priceNow": "1.61",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
           "productId": 365995,
           "title": "AH Luxe roomboter croissant",
           "brand": "AH",
@@ -1852,6 +1828,18 @@
           "stock": 2,
           "priceWas": "1.19",
           "priceNow": "1.01",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
+          "productId": 487301,
+          "title": "AH Rond volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "1.89",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-09-13"
         },
         {
