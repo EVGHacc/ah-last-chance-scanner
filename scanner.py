@@ -81,16 +81,16 @@ def canonical_slot(scheduled):
     return canonical,canonical.strftime('%H:%M')
 
 
-def fetch_store(sid,name,access):
+def fetch_store(sid,name,access,attempts=4):
     status=0; data={}
-    for attempt in range(1,3):
+    for attempt in range(1,attempts+1):
         status,data=post('/graphql',{'query':QUERY,'variables':{'storeId':str(sid)}},access,attempts=2)
         if status==200 and not data.get('errors'):
             rows=(data.get('data') or {}).get('bargainItems') or []
             meat=make_items(rows,'Vlees'); bakery=make_items(rows,'Bakkerij')
             m70=[x for x in meat if float(x['discountPct'])>=70]; b70=[x for x in bakery if float(x['discountPct'])>=70]
             return {'storeId':sid,'store':name,'fetched':True,'totalBargainItems':len(rows),'meatItems':len(meat),'meat70Items':len(m70),'meat70Stock':sum(float(x['stock']) for x in m70),'bakeryItems':len(bakery),'bakery70Items':len(b70),'bakery70Stock':sum(float(x['stock']) for x in b70),'items':meat,'bakery':bakery}
-        if attempt<2: time.sleep(1)
+        if attempt<attempts: time.sleep(min(4,2**(attempt-1)))
     return {'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,'bakery70Items':0,'bakery70Stock':0,'items':[],'bakery':[],'error':f'HTTP {status}: {data}'[:350]}
 
 
