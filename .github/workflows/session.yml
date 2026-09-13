@@ -2,9 +2,11 @@ name: AH supervised evening session
 
 on:
   schedule:
-    # Start 15 minutes before 17:30 Amsterdam in CEST/CET; local-time gate
-    # below discards the non-matching UTC occurrence.
-    - cron: '15 15,16 * * *'
+    # One entry matches 17:15 Amsterdam in CEST, the other in CET.
+    # The gate uses the scheduled cron expression plus today's UTC offset, so a
+    # delayed GitHub start cannot accidentally suppress the correct session.
+    - cron: '15 15 * * *'
+    - cron: '15 16 * * *'
   workflow_dispatch:
 
 permissions:
@@ -19,17 +21,31 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 330
     steps:
-      - name: Gate scheduled session to 17:xx Europe/Amsterdam
+      - name: Gate scheduled session to the correct Amsterdam occurrence
         id: gate
         shell: bash
         env:
           EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
         run: |
-          if [ "$EVENT_NAME" != "schedule" ] || [ "$(TZ=Europe/Amsterdam date '+%H')" = "17" ]; then
+          if [ "$EVENT_NAME" != "schedule" ]; then
             echo 'run=true' >> "$GITHUB_OUTPUT"
-          else
-            echo 'run=false' >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+          python - <<'PY'
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          now=datetime.now(ZoneInfo('Europe/Amsterdam'))
+          offset_hours=int(now.utcoffset().total_seconds()//3600)
+          expected_utc_hour=17-offset_hours
+          expected=f'15 {expected_utc_hour} * * *'
+          actual=os.environ.get('EVENT_SCHEDULE','')
+          run=actual==expected
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write(f'run={str(run).lower()}\n')
+          print('Amsterdam offset=',offset_hours,'expected=',expected,'actual=',actual,'run=',run)
+          PY
 
       - uses: actions/checkout@v7
         if: steps.gate.outputs.run == 'true'
