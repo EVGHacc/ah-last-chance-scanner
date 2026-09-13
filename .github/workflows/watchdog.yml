@@ -2,7 +2,10 @@ name: AH Scanner watchdog
 
 on:
   schedule:
-    - cron: '*/5 15-21 * * *'
+    # Two staggered 5-minute schedules give a check every 2-3 minutes while
+    # respecting GitHub's minimum 5-minute interval per cron expression.
+    - cron: '0-55/5 15-21 * * *'
+    - cron: '2-57/5 15-21 * * *'
   workflow_dispatch:
 
 permissions:
@@ -25,94 +28,60 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Find latest intended scan point and validate persistence
+      - name: Compile watchdog and scanner
+        run: python -m py_compile scanner.py scripts/persist.py scripts/watchdog_targets.py
+
+      - name: Find every missing intended point still recoverable honestly
         id: health
         shell: bash
         run: |
-          python - <<'PY'
-          import json, os
-          from datetime import datetime, timedelta
-          from zoneinfo import ZoneInfo
+          python scripts/watchdog_targets.py > /tmp/targets.txt
+          echo "targets=$(wc -l < /tmp/targets.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+          if [ -s /tmp/targets.txt ]; then
+            echo "Recoverable missing points:"
+            cat /tmp/targets.txt
+          else
+            echo "No recoverable missing points."
+          fi
 
-          tz=ZoneInfo('Europe/Amsterdam')
-          now=datetime.now(tz)
-          start=17*60+30
-          end=22*60+30
-          raw={m for m in range(start,end+1) if (m-start)%3==0}
-          canonical={m for m in range(start,end+1) if (m-start)%5==0}
-          due=sorted(raw|canonical)
-          minute=now.hour*60+now.minute
-          candidates=[m for m in due if m<=minute]
-          target=candidates[-1] if candidates else None
-          in_window=start <= minute <= end+4
-          needs_recovery=False
-          reason='outside scan window or before first due point'
-          scheduled_at=''
-
-          if in_window and target is not None:
-              target_dt=now.replace(hour=target//60,minute=target%60,second=0,microsecond=0)
-              age=(now-target_dt).total_seconds()
-              slot=f'{target//60:02d}:{target%60:02d}'
-              scheduled_at=target_dt.isoformat()
-              raw_due=target in raw
-              canonical_due=target in canonical
-              seen=False
-              try:
-                  status=json.load(open('data/status.json',encoding='utf-8'))
-                  if status.get('date')==now.strftime('%Y-%m-%d'):
-                      raw_ok=(not raw_due) or slot in (status.get('rawSeen') or [])
-                      canonical_ok=(not canonical_due) or slot in (status.get('canonicalSeen') or [])
-                      seen=raw_ok and canonical_ok
-              except Exception:
-                  seen=False
-              if seen:
-                  reason=f'{slot} already persisted (raw={raw_due}, canonical={canonical_due})'
-              elif 0 <= age <= 240:
-                  needs_recovery=True
-                  reason=f'{slot} missing; age={age:.0f}s, recovery still within 240s validity budget'
-              else:
-                  reason=f'{slot} missing but age={age:.0f}s exceeds honest recovery window; not fabricating'
-
-          print(now.isoformat(), 'in_window=',in_window,'needs_recovery=',needs_recovery,reason)
-          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
-              f.write(f'in_window={str(in_window).lower()}\n')
-              f.write(f'needs_recovery={str(needs_recovery).lower()}\n')
-              f.write(f'scheduled_at={scheduled_at}\n')
-              f.write(f'reason={reason}\n')
-          PY
-
-      - name: Recovery scan for exact missing point
+      - name: Recover missing points with authenticated scans
         id: recovery
-        if: steps.health.outputs.needs_recovery == 'true'
-        continue-on-error: true
+        if: steps.health.outputs.targets != '0'
+        shell: bash
         env:
           AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
-          SCHEDULED_AT: ${{ steps.health.outputs.scheduled_at }}
-        run: python scanner.py
+        run: |
+          set -euo pipefail
+          while IFS= read -r scheduled_at; do
+            [ -z "$scheduled_at" ] && continue
+            echo "Recovering exact point $scheduled_at"
+            SCHEDULED_AT="$scheduled_at" python scanner.py
+            python scripts/persist.py
+          done < /tmp/targets.txt
 
-      - name: Persist recovery
+      - name: Persist recovery batch
         if: steps.recovery.outcome == 'success'
         shell: bash
         run: |
+          set -euo pipefail
           git config user.name 'ah-scanner-watchdog'
           git config user.email 'actions@users.noreply.github.com'
-          cp data/latest.json /tmp/latest.json
+          git add data/
+          if git diff --cached --quiet; then
+            echo 'No recovery changes to commit'
+            exit 0
+          fi
+          git commit -m "AH watchdog authenticated recovery $(TZ=Europe/Amsterdam date '+%Y-%m-%d %H:%M')"
           for attempt in 1 2 3; do
-            git fetch origin main
-            git reset --hard origin/main
-            mkdir -p data
-            cp /tmp/latest.json data/latest.json
-            python scripts/persist.py
-            git add data/
-            if git diff --cached --quiet; then exit 0; fi
-            git commit -m "AH watchdog exact recovery $(TZ=Europe/Amsterdam date '+%Y-%m-%d %H:%M')"
             if git push origin HEAD:main; then exit 0; fi
+            echo "Push race on attempt ${attempt}; rebasing"
+            git pull --rebase origin main
           done
+          echo 'Could not persist watchdog recovery after 3 attempts'
           exit 1
 
-      - name: Fail if recovery failed
+      - name: Fail if authenticated recovery failed
         if: steps.recovery.outcome == 'failure'
         run: |
-          echo "Watchdog detected a missing intended scan point and authenticated recovery failed."
-          echo "${{ steps.health.outputs.reason }}"
+          echo 'Watchdog found recoverable missing scan points, but authenticated recovery failed.'
           exit 1
