@@ -2,6 +2,10 @@ name: AH Scanner live probe
 
 on:
   workflow_dispatch:
+  schedule:
+    # Covers 12:18 Europe/Amsterdam in both CEST and CET; the first step gates
+    # the non-matching UTC occurrence.
+    - cron: '18 10,11 * * *'
   push:
     branches: [main]
     paths:
@@ -9,7 +13,9 @@ on:
       - 'probe.py'
       - 'scripts/persist.py'
       - 'scripts/selftest.py'
+      - 'scripts/watchdog_targets.py'
       - '.github/workflows/probe.yml'
+      - '.github/workflows/watchdog.yml'
 
 permissions:
   contents: read
@@ -19,15 +25,36 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
+      - name: Gate scheduled probe to Amsterdam noon hour
+        id: gate
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [ "$EVENT_NAME" != "schedule" ] || [ "$(TZ=Europe/Amsterdam date '+%H')" = "12" ]; then
+            echo 'run=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'run=false' >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v7
+        if: steps.gate.outputs.run == 'true'
+
       - uses: actions/setup-python@v7
+        if: steps.gate.outputs.run == 'true'
         with:
           python-version: '3.12'
+
       - name: Compile scanner code
-        run: python -m py_compile scanner.py probe.py scripts/persist.py scripts/selftest.py
-      - name: Test cadence and persistence invariants
+        if: steps.gate.outputs.run == 'true'
+        run: python -m py_compile scanner.py probe.py scripts/persist.py scripts/selftest.py scripts/watchdog_targets.py
+
+      - name: Test cadence, persistence and watchdog invariants
+        if: steps.gate.outputs.run == 'true'
         run: python scripts/selftest.py
+
       - name: Live authenticated AH probe
+        if: steps.gate.outputs.run == 'true'
         env:
           AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
         run: python probe.py
