@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-13",
   "weekday": "Sunday",
-  "scheduledSlot": "18:51",
-  "scheduledAt": "2026-09-13T18:51:00+02:00",
-  "rawScheduledSlot": "18:51",
-  "rawScheduledAt": "2026-09-13T18:51:00+02:00",
-  "startedAt": "2026-09-13T18:51:00.052261+02:00",
-  "completedAt": "2026-09-13T18:51:03.396644+02:00",
-  "checkedAt": "2026-09-13T18:51:03.396644+02:00",
+  "scheduledSlot": "18:54",
+  "scheduledAt": "2026-09-13T18:54:00+02:00",
+  "rawScheduledSlot": "18:54",
+  "rawScheduledAt": "2026-09-13T18:54:00+02:00",
+  "startedAt": "2026-09-13T18:54:00.052859+02:00",
+  "completedAt": "2026-09-13T18:54:09.923404+02:00",
+  "checkedAt": "2026-09-13T18:54:09.923404+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -323,18 +323,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 537022,
-          "title": "AH Pizzabroodje kaas-groente",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.09",
-          "priceNow": "0.82",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
           "productId": 168183,
           "title": "AH Tijger volkoren heel",
           "brand": "AH",
@@ -392,6 +380,18 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
+          "productId": 537022,
+          "title": "AH Pizzabroodje kaas-groente",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.09",
+          "priceNow": "0.82",
           "markdownExpirationDate": "2026-09-13"
         },
         {
@@ -1245,7 +1245,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
-          "stock": 4,
+          "stock": 3,
           "priceWas": "0.99",
           "priceNow": "0.84",
           "markdownExpirationDate": "2026-09-13"
@@ -1400,7 +1400,7 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 215,
+      "totalBargainItems": 216,
       "meatItems": 9,
       "meat70Items": 5,
       "meat70Stock": 12.0,
@@ -1675,18 +1675,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 168184,
-          "title": "AH Tijger wit heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "1.99",
-          "priceNow": "1.69",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
           "productId": 515766,
           "title": "AH Kaasstengel",
           "brand": "AH",
@@ -1768,6 +1756,18 @@
           "stock": 2,
           "priceWas": "0.69",
           "priceNow": "0.59",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
+          "productId": 168184,
+          "title": "AH Tijger wit heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "1.99",
+          "priceNow": "1.69",
           "markdownExpirationDate": "2026-09-13"
         },
         {
