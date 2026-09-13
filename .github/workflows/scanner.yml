@@ -28,8 +28,40 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Skip point already persisted successfully
+        id: guard
+        shell: bash
+        env:
+          SCHEDULED_AT: ${{ inputs.scheduled_at }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          target=datetime.fromisoformat(os.environ['SCHEDULED_AT'].replace('Z','+00:00')).astimezone(ZoneInfo('Europe/Amsterdam'))
+          minute=target.hour*60+target.minute
+          start=17*60+30; end=22*60+30
+          raw=start<=minute<=end and (minute-start)%3==0
+          canonical=start<=minute<=end and (minute-start)%5==0
+          slot=target.strftime('%H:%M')
+          seen=False
+          try:
+              s=json.loads(Path('data/status.json').read_text(encoding='utf-8'))
+              if s.get('date')==target.strftime('%Y-%m-%d'):
+                  seen=((not raw or slot in (s.get('rawSeen') or [])) and
+                        (not canonical or slot in (s.get('canonicalSeen') or [])))
+          except Exception:
+              pass
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write(f'skip={str(seen).lower()}\n')
+          print(target.isoformat(), 'raw=',raw,'canonical=',canonical,'already_seen=',seen)
+          PY
+
       - name: Scan all three stores
         id: scan
+        if: steps.guard.outputs.skip != 'true'
         continue-on-error: true
         env:
           AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
