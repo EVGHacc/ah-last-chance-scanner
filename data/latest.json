@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-13",
   "weekday": "Sunday",
-  "scheduledSlot": "17:40",
-  "scheduledAt": "2026-09-13T17:40:00+02:00",
-  "rawScheduledSlot": "17:40",
-  "rawScheduledAt": "2026-09-13T17:40:00+02:00",
-  "startedAt": "2026-09-13T17:40:00.055531+02:00",
-  "completedAt": "2026-09-13T17:40:03.523079+02:00",
-  "checkedAt": "2026-09-13T17:40:03.523079+02:00",
+  "scheduledSlot": "17:42",
+  "scheduledAt": "2026-09-13T17:42:00+02:00",
+  "rawScheduledSlot": "17:42",
+  "rawScheduledAt": "2026-09-13T17:42:00+02:00",
+  "startedAt": "2026-09-13T17:42:00.053244+02:00",
+  "completedAt": "2026-09-13T17:42:03.439369+02:00",
+  "checkedAt": "2026-09-13T17:42:03.439369+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -45,18 +45,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 598620,
-          "title": "AH Filetlapjes à la minute naturel",
-          "brand": "AH",
-          "size": "ca. 350 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "4.11",
-          "priceNow": "3.08",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
           "productId": 597943,
           "title": "AH Gehaktballetjes Italiaans gekruid",
           "brand": "AH",
@@ -90,6 +78,18 @@
           "stock": 2,
           "priceWas": "4.50",
           "priceNow": "3.38",
+          "markdownExpirationDate": "2026-09-14"
+        },
+        {
+          "productId": 598620,
+          "title": "AH Filetlapjes à la minute naturel",
+          "brand": "AH",
+          "size": "ca. 350 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "4.11",
+          "priceNow": "3.08",
           "markdownExpirationDate": "2026-09-14"
         },
         {
@@ -208,8 +208,8 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 184,
-      "meatItems": 9,
+      "totalBargainItems": 183,
+      "meatItems": 8,
       "meat70Items": 1,
       "meat70Stock": 10.0,
       "bakeryItems": 7,
@@ -226,18 +226,6 @@
           "stock": 7,
           "priceWas": "3.59",
           "priceNow": "2.15",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
-          "productId": 589124,
-          "title": "AH Scharrel kipdijfiletblokjes",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "3.99",
-          "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-13"
         },
         {
