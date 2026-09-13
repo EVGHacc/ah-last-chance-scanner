@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-13",
   "weekday": "Sunday",
-  "scheduledSlot": "18:30",
-  "scheduledAt": "2026-09-13T18:30:00+02:00",
-  "rawScheduledSlot": "18:30",
-  "rawScheduledAt": "2026-09-13T18:30:00+02:00",
-  "startedAt": "2026-09-13T18:30:00.053229+02:00",
-  "completedAt": "2026-09-13T18:30:03.954829+02:00",
-  "checkedAt": "2026-09-13T18:30:03.954829+02:00",
+  "scheduledSlot": "18:33",
+  "scheduledAt": "2026-09-13T18:33:00+02:00",
+  "rawScheduledSlot": "18:33",
+  "rawScheduledAt": "2026-09-13T18:33:00+02:00",
+  "startedAt": "2026-09-13T18:33:00.053314+02:00",
+  "completedAt": "2026-09-13T18:33:03.477655+02:00",
+  "checkedAt": "2026-09-13T18:33:03.477655+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -29,8 +29,8 @@
       "meat70Items": 1,
       "meat70Stock": 3.0,
       "bakeryItems": 48,
-      "bakery70Items": 1,
-      "bakery70Stock": 1.0,
+      "bakery70Items": 2,
+      "bakery70Stock": 2.0,
       "items": [
         {
           "productId": 168686,
@@ -167,6 +167,18 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
+          "productId": 199770,
+          "title": "AH Saucijzenbroodjes",
+          "brand": "AH",
+          "size": "4 stuks",
+          "category": "Bakkerij",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.49",
+          "priceNow": "0.45",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
           "productId": 523679,
           "title": "AH Pastel de nata",
           "brand": "AH",
@@ -200,18 +212,6 @@
           "stock": 1,
           "priceWas": "1.99",
           "priceNow": "1.19",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
-          "productId": 199770,
-          "title": "AH Saucijzenbroodjes",
-          "brand": "AH",
-          "size": "4 stuks",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "1.49",
-          "priceNow": "0.89",
           "markdownExpirationDate": "2026-09-13"
         },
         {
@@ -395,18 +395,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 590095,
-          "title": "AH Liefde & Passie Rozijn pistache",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
           "productId": 451137,
           "title": "AH Focaccia mozzarella",
           "brand": "AH",
@@ -428,6 +416,18 @@
           "stock": 2,
           "priceWas": "1.39",
           "priceNow": "1.04",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
+          "productId": 590095,
+          "title": "AH Liefde & Passie Rozijn pistache",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-13"
         },
         {
@@ -515,18 +515,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 606492,
-          "title": "AH Liefde & Passie Biologisch desem pistolet meerzaden",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "1.09",
-          "priceNow": "0.93",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
           "productId": 230715,
           "title": "AH Italiaanse bol wit",
           "brand": "AH",
@@ -584,6 +572,18 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
+          "productId": 606492,
+          "title": "AH Liefde & Passie Biologisch desem pistolet meerzaden",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "1.09",
+          "priceNow": "0.93",
           "markdownExpirationDate": "2026-09-13"
         },
         {
@@ -736,11 +736,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 222,
+      "totalBargainItems": 217,
       "meatItems": 6,
       "meat70Items": 4,
       "meat70Stock": 18.0,
-      "bakeryItems": 51,
+      "bakeryItems": 50,
       "bakery70Items": 2,
       "bakery70Stock": 8.0,
       "items": [
@@ -927,18 +927,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 577447,
-          "title": "AH Everything bol",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 7,
-          "priceWas": "0.79",
-          "priceNow": "0.59",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
           "productId": 230738,
           "title": "AH Koffiebroodje",
           "brand": "AH",
@@ -960,6 +948,18 @@
           "stock": 7,
           "priceWas": "1.19",
           "priceNow": "0.89",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
+          "productId": 577447,
+          "title": "AH Everything bol",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 6,
+          "priceWas": "0.79",
+          "priceNow": "0.59",
           "markdownExpirationDate": "2026-09-13"
         },
         {
@@ -1059,30 +1059,6 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 230844,
-          "title": "AH Liefde & Passie Petit cereales",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.89",
-          "priceNow": "1.42",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
-          "productId": 606049,
-          "title": "AH Liefde & Passie Desem pistolet volkoren",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-09-13"
-        },
-        {
           "productId": 606103,
           "title": "AH Kip grillworst snack",
           "brand": "AH",
@@ -1119,15 +1095,15 @@
           "markdownExpirationDate": "2026-09-13"
         },
         {
-          "productId": 574950,
-          "title": "AH Pizza donut jalapeño cheddar",
-          "brand": "AH",
+          "productId": 230844,
+          "title": "AH Liefde & Passie Petit cereales",
+          "brand": "AH Liefde & Passie",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.39",
-          "priceNow": "1.04",
+          "stock": 2,
+          "priceWas": "1.89",
+          "priceNow": "1.42",
           "markdownExpirationDate": "2026-09-13"
         },
         {
@@ -1140,6 +1116,18 @@
           "stock": 1,
           "priceWas": "1.49",
           "priceNow": "1.12",
+          "markdownExpirationDate": "2026-09-13"
+        },
+        {
+          "productId": 606049,
+          "title": "AH Liefde & Passie Desem pistolet volkoren",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-09-13"
         },
         {
