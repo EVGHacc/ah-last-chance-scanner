@@ -4,28 +4,41 @@ Publieke authenticated runner voor de AH Laatste Kans-scanner. Gevoelige configu
 
 ## Architectuur
 
-- Cloudflare Worker is de primaire klok: raw scans worden iedere 3 minuten tussen 17:30 en 22:30 Europe/Amsterdam gedispatcht.
-- Aanvullende Cloudflare-triggers vullen alleen de exacte vijfminutengrenzen aan die niet samenvallen met de 3-minutenreeks, zodat alle 61 canonical momenten exact kunnen worden gemeten.
+- De primaire scheduler is één supervised GitHub Actions-sessie die circa 17:15 Europe/Amsterdam start en tot na 22:30 actief blijft.
+- Binnen die sessie worden raw metingen exact iedere 3 minuten uitgevoerd van 17:30 t/m 22:30: 101 meetpunten.
+- Aanvullende exacte vijfminutenpunten worden alleen uitgevoerd waar die niet al met de 3-minutenreeks samenvallen. De union bevat 141 scans en levert een afzonderlijke canonical reeks van 61 exacte vijfminutenmetingen.
 - GitHub Actions benadert AH uitsluitend met `AH_REFRESH_TOKEN`; anonymous auth is uitgeschakeld.
-- `scanner.py` bewaart zowel de echte trigger (`rawScheduledAt`/`rawScheduledSlot`) als de bijbehorende canonical vijfminutenslot.
+- `scanner.py` bewaart het exacte bedoelde meetpunt in `scheduledAt`/`scheduledSlot` én `rawScheduledAt`/`rawScheduledSlot`; er wordt niets naar een ander tijdslot afgerond.
+- `scripts/publish.py` is de enige persistence-/pushroute. Hij reset bij een pushrace naar de actuele `main`, past de meting opnieuw toe en probeert maximaal drie keer.
 - `scripts/persist.py` accepteert alleen `user-refresh`, `valid=true`, status `OK`/`OK_ZERO_ROWS`, alle drie winkels fetched en categorie exact `Vlees`.
-- `data/YYYY-MM-DD.jsonl` bewaart alle geldige raw metingen, inclusief de aanvullende exact-canonical triggers.
-- `data/today.json` is de canonical 61-slot reeks (17:30–22:30). Een canonical observatie telt alleen als `rawScheduledSlot` exact gelijk is aan `scheduledSlot`; ontbrekende slots blijven ontbrekend en worden nooit gefabriceerd.
+- `data/YYYY-MM-DD.jsonl` bewaart alle geldige metingen. `data/today.json` bevat uitsluitend de 61 exact gemeten canonical vijfminutenpunten; ontbrekende slots blijven ontbrekend.
 
 ## Zelfherstel
 
-De scanner heeft twee onafhankelijke herstelpaden:
+De scanner heeft twee herstelmechanismen binnen dezelfde publieke repository:
 
-1. Cloudflare controleert twee minuten na ieder bedoeld meetpunt of het resultaat geldig is opgeslagen. Een ontbrekende, stale, anonymous, `FAILED` of `INCOMPLETE` meting wordt opnieuw als authenticated scan voor het oorspronkelijke tijdstip gedispatcht zolang de 240-secondenvaliditeit nog haalbaar is.
-2. GitHub heeft daarnaast twee staggered watchdog-crons. Iedere afzonderlijke cron loopt niet vaker dan elke vijf minuten, maar samen controleren ze iedere 2–3 minuten. `scripts/watchdog_targets.py` vindt **alle** ontbrekende 3- en 5-minutenmeetpunten die nog eerlijk binnen de validiteitsmarge kunnen worden hersteld en scant die oudste-eerst. Daardoor blijft herstel mogelijk wanneer de Cloudflare-dispatcher tijdelijk niet werkt.
+1. De supervised sessie blijft gedurende het volledige avondvenster actief en voert elk bedoeld meetpunt zelf uit. Een tijdelijke API-fout wordt al binnen `scanner.py` met beperkte retries opgevangen; een ongeldige meting wordt niet gepubliceerd.
+2. Een onafhankelijke watchdog gebruikt twee staggered vijfminutencrons en controleert daardoor iedere 2–3 minuten welke 3- of 5-minutenmeetpunten nog ontbreken en nog eerlijk binnen de 240-secondenmarge kunnen worden hersteld. De watchdog voert zelf geen alternatieve scannerlogica uit, maar dispatcht altijd dezelfde `scanner.yml` met het oorspronkelijke tijdstip.
 
-Scanner- en watchdogworkflows delen één concurrencygroep en de dispatch-workflow controleert eerst of een meetpunt al geldig is opgeslagen. Dubbele calls door race conditions worden daarmee zoveel mogelijk voorkomen.
+De watchdog heeft een eigen concurrencygroep. Herstelscans landen in de normale scanner-concurrencygroep, zodat één authoritative scanpad behouden blijft. `scanner.yml` controleert vóór uitvoering of het punt inmiddels al geldig is opgeslagen.
+
+## Cloudflare
+
+Cloudflare is alleen nog een stateless relay voor de openbare, gevalideerde scannerdata. Cloudflare:
+
+- benadert AH nooit rechtstreeks;
+- bevat geen GitHub-token en dispatcht geen workflows;
+- heeft geen Cron Trigger nodig;
+- relayeert `/health`, `/probe`, `/data/today`, `/slot` en `/official-1925` vanuit deze repository.
+
+Daarmee is de eerdere breekbare Cloudflare→GitHub dispatchverbinding volledig uit het productiepad verwijderd.
 
 ## Diagnostiek
 
-- Een zero-persistence live probe compileert de scanner, test cadence/persistence/watchdog-invarianten en controleert live `user-refresh`, alle drie winkels en categorie `Vlees` zonder productiedata te overschrijven.
-- De probe heeft zowel een Cloudflare-trigger als een onafhankelijke GitHub schedule rond 12:18 Europe/Amsterdam; de GitHub-variant dekt CET en CEST af en gate op het lokale middaguur.
-- De probe gebruikt dezelfde token- en store-retrylogica als de productiescanner.
+- `probe.py` is een zero-persistence live probe en gebruikt exact dezelfde token- en store-fetchlogica als productie.
+- De probe compileert alle productiecode, draait `scripts/selftest.py` en controleert vervolgens live `user-refresh`, alle drie winkels en categorie `Vlees` zonder productiedata te overschrijven.
+- `scripts/selftest.py` verifieert 101 raw punten, 61 canonical punten, de 141-punts union, persistence-validatie en watchdogdekking.
+- De probe draait onafhankelijk rond 12:18 Europe/Amsterdam en wordt ook uitgevoerd na wijzigingen aan scanner-, sessie-, persistence- of watchdogcode.
 
 ## Winkels
 
@@ -35,6 +48,8 @@ Scanner- en watchdogworkflows delen één concurrencygroep en de dispatch-workfl
 
 Alleen `categoryTitle == Vlees` telt als vlees; `Vleeswaren` valt erbuiten.
 
-## Kosten
+## Kosten en duurzaamheid
 
-Deze repository is publiek en gebruikt alleen standaard GitHub-hosted runners. GitHub Actions-minuten voor standaard runners in publieke repositories zijn niet factureerbaar. Er worden geen larger runners gebruikt en er worden geen artifacts/caches voor de AH-scanner bewaard. De private `FolderDeal`-repository voert geen AH-scans via GitHub Actions uit.
+Deze repository is publiek en gebruikt uitsluitend standaard GitHub-hosted runners. Er zijn geen larger runners, artifacts of betaalde externe schedulers nodig. De private `FolderDeal`-repository voert geen AH-scans via GitHub Actions uit. Cloudflare doet alleen on-demand relaywerk en heeft geen cronverbruik voor de scanner meer.
+
+De supervised sessie blijft ruim onder de maximale looptijd van één GitHub-hosted job: circa 5 uur en 15 minuten gepland tegenover een workflow-timeout van 330 minuten.
