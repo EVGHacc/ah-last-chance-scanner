@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-14",
   "weekday": "Monday",
-  "scheduledSlot": "19:48",
-  "scheduledAt": "2026-09-14T19:48:00+02:00",
-  "rawScheduledSlot": "19:48",
-  "rawScheduledAt": "2026-09-14T19:48:00+02:00",
-  "startedAt": "2026-09-14T19:48:00.044473+02:00",
-  "completedAt": "2026-09-14T19:48:04.442084+02:00",
-  "checkedAt": "2026-09-14T19:48:04.442084+02:00",
+  "scheduledSlot": "19:50",
+  "scheduledAt": "2026-09-14T19:50:00+02:00",
+  "rawScheduledSlot": "19:50",
+  "rawScheduledAt": "2026-09-14T19:50:00+02:00",
+  "startedAt": "2026-09-14T19:50:00.045226+02:00",
+  "completedAt": "2026-09-14T19:50:03.304807+02:00",
+  "checkedAt": "2026-09-14T19:50:03.304807+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,11 +25,11 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 146,
+      "totalBargainItems": 178,
       "meatItems": 9,
       "meat70Items": 7,
       "meat70Stock": 11.0,
-      "bakeryItems": 46,
+      "bakeryItems": 48,
       "bakery70Items": 2,
       "bakery70Stock": 3.0,
       "items": [
@@ -432,18 +432,6 @@
           "markdownExpirationDate": "2026-09-14"
         },
         {
-          "productId": 590399,
-          "title": "AH Broodje burger augurk tomatensaus",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "1.49",
-          "priceNow": "1.27",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
           "productId": 168183,
           "title": "AH Tijger volkoren heel",
           "brand": "AH",
@@ -552,6 +540,18 @@
           "markdownExpirationDate": "2026-09-14"
         },
         {
+          "productId": 577444,
+          "title": "AH Worstenbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "1.29",
+          "priceNow": "1.10",
+          "markdownExpirationDate": "2026-09-14"
+        },
+        {
           "productId": 590096,
           "title": "AH Liefde & Passie Biologisch OerDesem blond",
           "brand": "AH Liefde & Passie",
@@ -561,6 +561,18 @@
           "stock": 1,
           "priceWas": "3.29",
           "priceNow": "2.80",
+          "markdownExpirationDate": "2026-09-14"
+        },
+        {
+          "productId": 590399,
+          "title": "AH Broodje burger augurk tomatensaus",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "1.49",
+          "priceNow": "1.27",
           "markdownExpirationDate": "2026-09-14"
         },
         {
@@ -694,6 +706,18 @@
           "priceWas": "1.39",
           "priceNow": "1.18",
           "markdownExpirationDate": "2026-09-14"
+        },
+        {
+          "productId": 588080,
+          "title": "AH Stevige crackers waldkorn",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
+          "markdownExpirationDate": "2026-09-19"
         }
       ]
     },
