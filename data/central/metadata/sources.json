@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "centralRepository": "EVGHacc/ah-last-chance-scanner",
+  "policy": "All analyses start here. Current production data live in data/YYYY-MM-DD.jsonl. Legacy FolderDeal data are immutable provenance and are indexed here; migrated subsets live under data/central/raw/historical.",
+  "sources": [
+    {
+      "id": "current-scanner-v5",
+      "repository": "EVGHacc/ah-last-chance-scanner",
+      "path": "data/YYYY-MM-DD.jsonl",
+      "from": "2026-09-12",
+      "regime": "scanner-v5/legacy-transition",
+      "authoritative": true
+    },
+    {
+      "id": "legacy-daily-counts",
+      "repository": "EVGHacc/FolderDeal",
+      "path": "ah-last-chance/data/daily_counts.csv",
+      "sha": "cbe40633d24df2f8be8f6ae00d73d79792849b28",
+      "centralCopy": "data/central/raw/historical/daily_counts.csv",
+      "from": "2026-08-27",
+      "regime": "legacy-loose/official-1925",
+      "authoritative": false,
+      "copied": true
+    },
+    {
+      "id": "legacy-product-observations",
+      "repository": "EVGHacc/FolderDeal",
+      "path": "ah-last-chance/data/discount_observations.csv",
+      "sha": "9e295dd93164954d35dae542317895823ad01548",
+      "regime": "legacy-observer",
+      "authoritative": false,
+      "copied": false,
+      "reason": "Large private-source file retained as immutable provenance; use source until a repository-scoped transfer credential is available."
+    },
+    {
+      "id": "legacy-scan-runs",
+      "repository": "EVGHacc/FolderDeal",
+      "path": "ah-last-chance/data/scan_runs.csv",
+      "sha": "ff8361e66b57327c41cabc47cf44ecabb2b1dc5e",
+      "regime": "legacy-observer",
+      "authoritative": false,
+      "copied": false
+    },
+    {
+      "id": "legacy-raw-scans",
+      "repository": "EVGHacc/FolderDeal",
+      "path": "ah-last-chance/data/raw_scans/YYYY-MM-DD/*.json",
+      "treeSha": "508c303fa1a08875696cd82ad29eeae7128f7c66",
+      "from": "2026-08-27",
+      "regime": "legacy-mixed",
+      "authoritative": true,
+      "copied": false,
+      "note": "Immutable historical per-scan archive."
+    }
+  ]
+}
