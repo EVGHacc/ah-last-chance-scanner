@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 import importlib.util
+import os
+import tempfile
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 BASE=Path(__file__).parent
+ROOT=BASE.parent
 
-def load(name, filename):
-    spec=importlib.util.spec_from_file_location(name,BASE/filename)
+def load(name, filename, root=BASE):
+    spec=importlib.util.spec_from_file_location(name,root/filename)
     module=importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
@@ -15,6 +18,7 @@ def load(name, filename):
 persist=load('persist','persist.py')
 watchdog=load('watchdog_targets','watchdog_targets.py')
 session=load('session','session.py')
+scanner=load('scanner','scanner.py',ROOT)
 
 
 def store(store_id):
@@ -41,11 +45,9 @@ assert persist.exact_canonical_obs(obs())
 assert not persist.exact_canonical_obs(obs(raw_slot='17:33',canonical_slot='17:30'))
 assert not persist.exact_canonical_obs(obs(canonical_delay=241))
 
-# Every intended point must be either raw 3-minute, exact canonical 5-minute, or both.
 due=[m for m in range(watchdog.START,watchdog.END+1) if watchdog.raw_due(m) or watchdog.canonical_due(m)]
 assert len(due)==141, len(due)
 
-# The supervised session must cover the same 141-point union, including both endpoints.
 test_day=datetime(2026,9,13,12,0,tzinfo=ZoneInfo('Europe/Amsterdam'))
 points=session.points_for(test_day)
 assert len(points)==141, len(points)
@@ -54,15 +56,39 @@ assert points[-1].strftime('%H:%M')=='22:30'
 assert sum(1 for p in points if (p.hour*60+p.minute-session.START)%3==0)==101
 assert sum(1 for p in points if (p.hour*60+p.minute-session.START)%5==0)==61
 
-# Recovery must begin early enough to leave at least 60 seconds inside the
-# hard <=240 second validity budget.
 assert watchdog.MIN_AGE_SECONDS <= 45
 assert watchdog.MAX_AGE_SECONDS <= 180
-
-# The three staggered watchdog schedules (minute % 5 == 0, 2 or 4) offer a
-# recovery trigger at every intended point or no later than one minute after it.
 for minute in due:
     candidates=[w for w in range(minute,minute+2) if w%5 in (0,2,4)]
     assert candidates, f'watchdog has no <=1m recovery for {minute//60:02d}:{minute%60:02d}'
 
-print('scanner/session/persistence/watchdog self-test: PASS')
+# Access-token reuse: first call refreshes, later calls reuse persisted state.
+with tempfile.TemporaryDirectory() as td:
+    old_state=os.environ.get('AH_TOKEN_STATE_FILE')
+    old_refresh=os.environ.get('AH_REFRESH_TOKEN')
+    os.environ['AH_TOKEN_STATE_FILE']=str(Path(td)/'auth.json')
+    os.environ['AH_REFRESH_TOKEN']='unit-refresh'
+    calls=[]
+    original_post=scanner.post
+    def fake_post(path,body,token=None,attempts=2):
+        calls.append(path)
+        return 200,{'access_token':'unit-access','expires_in':3600}
+    scanner.post=fake_post
+    try:
+        a1,m1=scanner.token(); s1=scanner.LAST_AUTH_SOURCE
+        a2,m2=scanner.token(); s2=scanner.LAST_AUTH_SOURCE
+        assert a1==a2=='unit-access'
+        assert m1==m2=='user-refresh'
+        assert s1=='refresh' and s2=='cache', (s1,s2)
+        assert calls==['/mobile-auth/v1/auth/token/refresh'], calls
+        state=Path(os.environ['AH_TOKEN_STATE_FILE'])
+        assert state.exists()
+        assert (state.stat().st_mode & 0o777)==0o600
+    finally:
+        scanner.post=original_post
+        if old_state is None: os.environ.pop('AH_TOKEN_STATE_FILE',None)
+        else: os.environ['AH_TOKEN_STATE_FILE']=old_state
+        if old_refresh is None: os.environ.pop('AH_REFRESH_TOKEN',None)
+        else: os.environ['AH_REFRESH_TOKEN']=old_refresh
+
+print('scanner/session/persistence/watchdog/token-reuse self-test: PASS')
