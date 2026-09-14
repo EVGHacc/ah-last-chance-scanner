@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-14",
   "weekday": "Monday",
-  "scheduledSlot": "20:21",
-  "scheduledAt": "2026-09-14T20:21:00+02:00",
-  "rawScheduledSlot": "20:21",
-  "rawScheduledAt": "2026-09-14T20:21:00+02:00",
-  "startedAt": "2026-09-14T20:21:00.045028+02:00",
-  "completedAt": "2026-09-14T20:21:03.649344+02:00",
-  "checkedAt": "2026-09-14T20:21:03.649344+02:00",
+  "scheduledSlot": "20:24",
+  "scheduledAt": "2026-09-14T20:24:00+02:00",
+  "rawScheduledSlot": "20:24",
+  "rawScheduledAt": "2026-09-14T20:24:00+02:00",
+  "startedAt": "2026-09-14T20:24:00.044319+02:00",
+  "completedAt": "2026-09-14T20:24:03.301487+02:00",
+  "checkedAt": "2026-09-14T20:24:03.301487+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -26,7 +26,7 @@
       "store": "AH Blekersvaartweg",
       "fetched": true,
       "totalBargainItems": 209,
-      "meatItems": 23,
+      "meatItems": 22,
       "meat70Items": 7,
       "meat70Stock": 11.0,
       "bakeryItems": 47,
@@ -202,18 +202,6 @@
           "markdownExpirationDate": "2026-09-15"
         },
         {
-          "productId": 582033,
-          "title": "AH Scharrel kip gyros",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "5.79",
-          "priceNow": "4.34",
-          "markdownExpirationDate": "2026-09-15"
-        },
-        {
           "productId": 612615,
           "title": "AH BBQ scharrel kipshaslick",
           "brand": "AH",
@@ -384,20 +372,20 @@
           "markdownExpirationDate": "2026-09-14"
         },
         {
-          "productId": 230842,
-          "title": "AH Liefde & Passie Spelt",
+          "productId": 417146,
+          "title": "AH Liefde & Passie OerDesem San Francisco",
           "brand": "AH Liefde & Passie",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 9,
+          "stock": 8,
           "priceWas": "3.19",
           "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-14"
         },
         {
-          "productId": 417146,
-          "title": "AH Liefde & Passie OerDesem San Francisco",
+          "productId": 230842,
+          "title": "AH Liefde & Passie Spelt",
           "brand": "AH Liefde & Passie",
           "size": "per stuk",
           "category": "Bakkerij",
@@ -1425,10 +1413,10 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 212,
-      "meatItems": 11,
-      "meat70Items": 10,
-      "meat70Stock": 12.0,
+      "totalBargainItems": 202,
+      "meatItems": 8,
+      "meat70Items": 7,
+      "meat70Stock": 8.0,
       "bakeryItems": 44,
       "bakery70Items": 0,
       "bakery70Stock": 0,
@@ -1443,18 +1431,6 @@
           "stock": 2,
           "priceWas": "5.25",
           "priceNow": "1.58",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
-          "productId": 238946,
-          "title": "AH Rundersoepballetjes",
-          "brand": "AH",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.55",
-          "priceNow": "1.07",
           "markdownExpirationDate": "2026-09-14"
         },
         {
@@ -1506,18 +1482,6 @@
           "markdownExpirationDate": "2026-09-14"
         },
         {
-          "productId": 531893,
-          "title": "AH Scharrel gerookte kipfiletflakes",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "3.69",
-          "priceNow": "1.11",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
           "productId": 531887,
           "title": "AH Kalkoenfilet schnitzel",
           "brand": "AH",
@@ -1527,18 +1491,6 @@
           "stock": 1,
           "priceWas": "4.99",
           "priceNow": "1.50",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
-          "productId": 531834,
-          "title": "AH Scharrel kipfilet à la minute paprika",
-          "brand": "AH",
-          "size": "ca. 325 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "5.99",
-          "priceNow": "1.80",
           "markdownExpirationDate": "2026-09-14"
         },
         {
@@ -1916,18 +1868,6 @@
           "markdownExpirationDate": "2026-09-14"
         },
         {
-          "productId": 231924,
-          "title": "AH Chocoladebroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "0.59",
-          "priceNow": "0.50",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
           "productId": 230704,
           "title": "AH Kaasbroodje",
           "brand": "AH",
@@ -1937,6 +1877,18 @@
           "stock": 3,
           "priceWas": "0.99",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-09-14"
+        },
+        {
+          "productId": 231924,
+          "title": "AH Chocoladebroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 3,
+          "priceWas": "0.59",
+          "priceNow": "0.50",
           "markdownExpirationDate": "2026-09-14"
         },
         {
