@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-14",
   "weekday": "Monday",
-  "scheduledSlot": "19:42",
-  "scheduledAt": "2026-09-14T19:42:00+02:00",
-  "rawScheduledSlot": "19:42",
-  "rawScheduledAt": "2026-09-14T19:42:00+02:00",
-  "startedAt": "2026-09-14T19:42:00.044827+02:00",
-  "completedAt": "2026-09-14T19:42:03.193220+02:00",
-  "checkedAt": "2026-09-14T19:42:03.193220+02:00",
+  "scheduledSlot": "19:45",
+  "scheduledAt": "2026-09-14T19:45:00+02:00",
+  "rawScheduledSlot": "19:45",
+  "rawScheduledAt": "2026-09-14T19:45:00+02:00",
+  "startedAt": "2026-09-14T19:45:00.044768+02:00",
+  "completedAt": "2026-09-14T19:45:05.282204+02:00",
+  "checkedAt": "2026-09-14T19:45:05.282204+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,11 +25,11 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 120,
-      "meatItems": 9,
-      "meat70Items": 7,
-      "meat70Stock": 11.0,
-      "bakeryItems": 1,
+      "totalBargainItems": 36,
+      "meatItems": 6,
+      "meat70Items": 4,
+      "meat70Stock": 8.0,
+      "bakeryItems": 0,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -55,42 +55,6 @@
           "stock": 2,
           "priceWas": "4.50",
           "priceNow": "1.35",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
-          "productId": 598620,
-          "title": "AH Filetlapjes à la minute naturel",
-          "brand": "AH",
-          "size": "ca. 350 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.11",
-          "priceNow": "1.23",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
-          "productId": 436749,
-          "title": "AH Biologisch Rundertartaar",
-          "brand": "AH Biologisch",
-          "size": "300 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.49",
-          "priceNow": "1.95",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
-          "productId": 436917,
-          "title": "AH Kipgehakt naturel",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "3.99",
-          "priceNow": "1.20",
           "markdownExpirationDate": "2026-09-14"
         },
         {
@@ -142,26 +106,13 @@
           "markdownExpirationDate": "2026-09-17"
         }
       ],
-      "bakery": [
-        {
-          "productId": 588080,
-          "title": "AH Stevige crackers waldkorn",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.99",
-          "priceNow": "1.49",
-          "markdownExpirationDate": "2026-09-19"
-        }
-      ]
+      "bakery": []
     },
     {
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 171,
+      "totalBargainItems": 170,
       "meatItems": 9,
       "meat70Items": 8,
       "meat70Stock": 33.0,
