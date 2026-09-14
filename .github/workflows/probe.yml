@@ -69,8 +69,10 @@ jobs:
         if: steps.gate.outputs.run == 'true'
         run: python scripts/selftest.py
 
+      # Important: do not consume/rotate a user refresh token from automated
+      # schedule or push probes. A live authenticated probe is manual only.
       - name: Live authenticated AH probe
-        if: steps.gate.outputs.run == 'true'
+        if: github.event_name == 'workflow_dispatch' && steps.gate.outputs.run == 'true'
         env:
           AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
         run: python probe.py
