@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-14",
   "weekday": "Monday",
-  "scheduledSlot": "21:10",
-  "scheduledAt": "2026-09-14T21:10:00+02:00",
-  "rawScheduledSlot": "21:10",
-  "rawScheduledAt": "2026-09-14T21:10:00+02:00",
-  "startedAt": "2026-09-14T21:10:00.044887+02:00",
-  "completedAt": "2026-09-14T21:10:03.240308+02:00",
-  "checkedAt": "2026-09-14T21:10:03.240308+02:00",
+  "scheduledSlot": "21:12",
+  "scheduledAt": "2026-09-14T21:12:00+02:00",
+  "rawScheduledSlot": "21:12",
+  "rawScheduledAt": "2026-09-14T21:12:00+02:00",
+  "startedAt": "2026-09-14T21:12:00.044474+02:00",
+  "completedAt": "2026-09-14T21:12:03.419953+02:00",
+  "checkedAt": "2026-09-14T21:12:03.419953+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -360,18 +360,6 @@
           "markdownExpirationDate": "2026-09-14"
         },
         {
-          "productId": 561013,
-          "title": "AH Liefde & Passie Meergranen",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "2.89",
-          "priceNow": "2.17",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
           "productId": 125035,
           "title": "AH Les pains boulogne heel",
           "brand": "AH",
@@ -393,6 +381,18 @@
           "stock": 4,
           "priceWas": "1.19",
           "priceNow": "0.89",
+          "markdownExpirationDate": "2026-09-14"
+        },
+        {
+          "productId": 561013,
+          "title": "AH Liefde & Passie Meergranen",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "2.89",
+          "priceNow": "2.17",
           "markdownExpirationDate": "2026-09-14"
         },
         {
@@ -809,11 +809,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 191,
+      "totalBargainItems": 190,
       "meatItems": 5,
       "meat70Items": 4,
       "meat70Stock": 14.0,
-      "bakeryItems": 36,
+      "bakeryItems": 35,
       "bakery70Items": 2,
       "bakery70Stock": 2.0,
       "items": [
@@ -1117,18 +1117,6 @@
           "stock": 2,
           "priceWas": "2.69",
           "priceNow": "2.02",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
-          "productId": 578301,
-          "title": "AH Liefde & Passie OerDesem zonne rogge",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-14"
         },
         {
