@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-14",
   "weekday": "Monday",
-  "scheduledSlot": "17:40",
-  "scheduledAt": "2026-09-14T17:40:00+02:00",
-  "rawScheduledSlot": "17:40",
-  "rawScheduledAt": "2026-09-14T17:40:00+02:00",
-  "startedAt": "2026-09-14T17:40:00.043979+02:00",
-  "completedAt": "2026-09-14T17:40:04.375918+02:00",
-  "checkedAt": "2026-09-14T17:40:04.375918+02:00",
+  "scheduledSlot": "17:42",
+  "scheduledAt": "2026-09-14T17:42:00+02:00",
+  "rawScheduledSlot": "17:42",
+  "rawScheduledAt": "2026-09-14T17:42:00+02:00",
+  "startedAt": "2026-09-14T17:42:00.045513+02:00",
+  "completedAt": "2026-09-14T17:42:04.417775+02:00",
+  "checkedAt": "2026-09-14T17:42:04.417775+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -173,13 +173,13 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 188,
-      "meatItems": 12,
+      "totalBargainItems": 115,
+      "meatItems": 10,
       "meat70Items": 1,
       "meat70Stock": 8.0,
-      "bakeryItems": 5,
-      "bakery70Items": 2,
-      "bakery70Stock": 2.0,
+      "bakeryItems": 3,
+      "bakery70Items": 0,
+      "bakery70Stock": 0,
       "items": [
         {
           "productId": 531827,
@@ -203,18 +203,6 @@
           "stock": 5,
           "priceWas": "2.29",
           "priceNow": "1.37",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
-          "productId": 571284,
-          "title": "AH BBQ hamburger spicy",
-          "brand": "AH",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "3.99",
-          "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-14"
         },
         {
@@ -302,18 +290,6 @@
           "markdownExpirationDate": "2026-09-14"
         },
         {
-          "productId": 574230,
-          "title": "AH BBQ worst Zaanlander jalapeño",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 4,
-          "priceWas": "4.50",
-          "priceNow": "2.70",
-          "markdownExpirationDate": "2026-09-15"
-        },
-        {
           "productId": 200106,
           "title": "Unox Extra magere rookworst magnetron",
           "brand": "Unox",
@@ -327,30 +303,6 @@
         }
       ],
       "bakery": [
-        {
-          "productId": 578706,
-          "title": "AH Eierkoeken volkoren",
-          "brand": "AH",
-          "size": "360 g",
-          "category": "Bakkerij",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "1.49",
-          "priceNow": "0.45",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
-          "productId": 603845,
-          "title": "AH Stevige crackers proteïne sesamzaad",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Bakkerij",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.19",
-          "priceNow": "0.66",
-          "markdownExpirationDate": "2026-09-14"
-        },
         {
           "productId": 473738,
           "title": "AH Eierkoeken",
