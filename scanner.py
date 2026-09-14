@@ -1,6 +1,7 @@
 # AH Laatste Kans scanner
-import json, os, time, urllib.request, urllib.error
+import base64, json, os, time, urllib.request, urllib.error
 from datetime import datetime, timedelta
+from pathlib import Path
 from zoneinfo import ZoneInfo
 
 TZ=ZoneInfo('Europe/Amsterdam')
@@ -12,6 +13,9 @@ QUERY='''query BargainItems($storeId: String!) { bargainItems(storeId: $storeId)
 START=17*60+30
 END=22*60+30
 TRANSIENT_HTTP={429,500,502,503,504}
+TOKEN_SAFETY_SECONDS=120
+DEFAULT_TOKEN_STATE='/tmp/ah-last-chance-auth-state.json'
+LAST_AUTH_SOURCE='none'
 
 
 def post(path,body,token=None,attempts=2):
@@ -39,11 +43,60 @@ def post(path,body,token=None,attempts=2):
     return last_status,last_data
 
 
+def _state_path():
+    return Path(os.getenv('AH_TOKEN_STATE_FILE',DEFAULT_TOKEN_STATE))
+
+
+def _jwt_expiry(token):
+    try:
+        part=token.split('.')[1]
+        part+= '='*((4-len(part)%4)%4)
+        payload=json.loads(base64.urlsafe_b64decode(part.encode()).decode())
+        return int(payload.get('exp') or 0)
+    except Exception:
+        return 0
+
+
+def _load_state():
+    try:
+        data=json.loads(_state_path().read_text(encoding='utf-8'))
+        return data if isinstance(data,dict) else {}
+    except Exception:
+        return {}
+
+
+def _save_state(access,expires_at,refresh=''):
+    path=_state_path()
+    path.parent.mkdir(parents=True,exist_ok=True)
+    tmp=path.with_suffix(path.suffix+'.tmp')
+    tmp.write_text(json.dumps({'accessToken':access,'accessExpiresAt':int(expires_at),'refreshToken':refresh}),encoding='utf-8')
+    os.chmod(tmp,0o600)
+    tmp.replace(path)
+    os.chmod(path,0o600)
+
+
 def token():
-    refresh=os.getenv('AH_REFRESH_TOKEN','').strip()
-    if not refresh: raise RuntimeError('AH_REFRESH_TOKEN ontbreekt; anonymous fallback is uitgeschakeld')
+    global LAST_AUTH_SOURCE
+    now=int(time.time())
+    state=_load_state()
+    cached=str(state.get('accessToken') or '')
+    cached_exp=int(state.get('accessExpiresAt') or 0)
+    if cached and cached_exp>now+TOKEN_SAFETY_SECONDS:
+        LAST_AUTH_SOURCE='cache'
+        return cached,'user-refresh'
+
+    configured=os.getenv('AH_REFRESH_TOKEN','').strip()
+    refresh=str(state.get('refreshToken') or '').strip() or configured
+    if not refresh:
+        raise RuntimeError('AH_REFRESH_TOKEN ontbreekt; anonymous fallback is uitgeschakeld')
     s,d=post('/mobile-auth/v1/auth/token/refresh',{'clientId':CLIENT_ID,'refreshToken':refresh},attempts=3)
-    if s==200 and d.get('access_token'): return d['access_token'],'user-refresh'
+    if s==200 and d.get('access_token'):
+        access=d['access_token']
+        exp=_jwt_expiry(access) or now+int(d.get('expires_in') or 600)
+        rotated=str(d.get('refresh_token') or '').strip()
+        _save_state(access,exp,rotated or refresh)
+        LAST_AUTH_SOURCE='refresh'
+        return access,'user-refresh'
     raise RuntimeError(f'USER_REFRESH_FAILED HTTP {s}: {str(d)[:180]}')
 
 
@@ -96,8 +149,10 @@ def main():
     delay=max(0,int((started-scheduled).total_seconds()))
     stores=[]
     auth_mode='user-refresh-failed'
+    auth_source='none'
     try:
         access,auth_mode=token()
+        auth_source=LAST_AUTH_SOURCE
         stores=[fetch_store(sid,name,access) for sid,name in STORES]
     except Exception as e:
         stores=[{'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,'bakery70Items':0,'bakery70Stock':0,'items':[],'bakery':[],'error':str(e)[:350]} for sid,name in STORES]
@@ -105,7 +160,7 @@ def main():
     status=('OK_ZERO_ROWS' if sum(x['meatItems'] for x in stores)==0 else 'OK') if fetched==3 else ('FAILED' if fetched==0 else 'INCOMPLETE')
     completed=datetime.now(TZ)
     valid=status in ('OK','OK_ZERO_ROWS') and auth_mode=='user-refresh' and delay<=240
-    obs={'schemaVersion':5,'date':date,'weekday':scheduled.strftime('%A'),'scheduledSlot':slot,'scheduledAt':scheduled.isoformat(),'rawScheduledSlot':slot,'rawScheduledAt':scheduled.isoformat(),'startedAt':started.isoformat(),'completedAt':completed.isoformat(),'checkedAt':completed.isoformat(),'delaySeconds':delay,'rawDelaySeconds':delay,'status':status,'valid':valid,'official1925':slot=='19:25','authMode':auth_mode,'categories':['Vlees','Bakkerij'],'stores':stores}
+    obs={'schemaVersion':5,'date':date,'weekday':scheduled.strftime('%A'),'scheduledSlot':slot,'scheduledAt':scheduled.isoformat(),'rawScheduledSlot':slot,'rawScheduledAt':scheduled.isoformat(),'startedAt':started.isoformat(),'completedAt':completed.isoformat(),'checkedAt':completed.isoformat(),'delaySeconds':delay,'rawDelaySeconds':delay,'status':status,'valid':valid,'official1925':slot=='19:25','authMode':auth_mode,'authTokenSource':auth_source,'categories':['Vlees','Bakkerij'],'stores':stores}
     os.makedirs('data',exist_ok=True)
     with open('data/latest.json','w',encoding='utf-8') as f: json.dump(obs,f,ensure_ascii=False,indent=2)
     print(json.dumps(obs,ensure_ascii=False))
