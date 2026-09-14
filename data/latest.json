@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-14",
   "weekday": "Monday",
-  "scheduledSlot": "21:42",
-  "scheduledAt": "2026-09-14T21:42:00+02:00",
-  "rawScheduledSlot": "21:42",
-  "rawScheduledAt": "2026-09-14T21:42:00+02:00",
-  "startedAt": "2026-09-14T21:42:00.044365+02:00",
-  "completedAt": "2026-09-14T21:42:03.212980+02:00",
-  "checkedAt": "2026-09-14T21:42:03.212980+02:00",
+  "scheduledSlot": "21:45",
+  "scheduledAt": "2026-09-14T21:45:00+02:00",
+  "rawScheduledSlot": "21:45",
+  "rawScheduledAt": "2026-09-14T21:45:00+02:00",
+  "startedAt": "2026-09-14T21:45:00.043897+02:00",
+  "completedAt": "2026-09-14T21:45:03.485580+02:00",
+  "checkedAt": "2026-09-14T21:45:03.485580+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -856,18 +856,6 @@
           "markdownExpirationDate": "2026-09-14"
         },
         {
-          "productId": 231537,
-          "title": "AH Les pains bastille half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "1.29",
-          "priceNow": "0.77",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
           "productId": 590095,
           "title": "AH Liefde & Passie Rozijn pistache",
           "brand": "AH Liefde & Passie",
@@ -913,6 +901,18 @@
           "stock": 2,
           "priceWas": "2.39",
           "priceNow": "1.43",
+          "markdownExpirationDate": "2026-09-14"
+        },
+        {
+          "productId": 231537,
+          "title": "AH Les pains bastille half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "1.29",
+          "priceNow": "0.77",
           "markdownExpirationDate": "2026-09-14"
         },
         {
