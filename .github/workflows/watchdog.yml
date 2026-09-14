@@ -2,35 +2,40 @@ name: AH Scanner watchdog
 
 on:
   schedule:
-    # Two staggered 5-minute schedules give a check every 2-3 minutes while
+    # Three staggered 5-minute schedules give a check every 1-2 minutes while
     # respecting GitHub's minimum 5-minute interval per cron expression.
     - cron: '0-55/5 15-21 * * *'
     - cron: '2-57/5 15-21 * * *'
+    - cron: '4-59/5 15-21 * * *'
   workflow_dispatch:
 
 permissions:
-  contents: read
-  actions: write
+  contents: write
 
 concurrency:
   group: ah-last-chance-watchdog
-  cancel-in-progress: true
+  # Never cancel a recovery run merely because GitHub delivered two cron events
+  # together. A cancelled watchdog was one of the failure modes on 2026-09-13.
+  cancel-in-progress: false
 
 jobs:
   watchdog:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
 
-      - name: Compile watchdog logic
-        run: python -m py_compile scripts/watchdog_targets.py scripts/persist.py scanner.py
+      - name: Compile watchdog and production logic
+        run: |
+          python -m py_compile scanner.py scripts/persist.py scripts/publish.py scripts/watchdog_targets.py
 
-      - name: Find every missing intended point still recoverable honestly
+      - name: Find every missing intended point still honestly recoverable
         id: health
         shell: bash
         run: |
@@ -43,15 +48,28 @@ jobs:
             echo "No recoverable missing points."
           fi
 
-      - name: Dispatch authoritative authenticated scanner for missing points
+      - name: Recover missing points directly and verify publication
         if: steps.health.outputs.targets != '0'
         shell: bash
         env:
-          GH_TOKEN: ${{ github.token }}
+          AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
         run: |
           set -euo pipefail
+          git config user.name 'ah-watchdog-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          failed=0
           while IFS= read -r scheduled_at; do
             [ -z "$scheduled_at" ] && continue
-            echo "Dispatching recovery for $scheduled_at"
-            gh workflow run scanner.yml --ref main -f scheduled_at="$scheduled_at"
+            echo "Recovering $scheduled_at directly"
+            export SCHEDULED_AT="$scheduled_at"
+            if python scanner.py && python scripts/publish.py; then
+              echo "Recovered and published $scheduled_at"
+            else
+              echo "Recovery failed for $scheduled_at"
+              failed=1
+            fi
           done < /tmp/targets.txt
+          if [ "$failed" -ne 0 ]; then
+            echo 'At least one recoverable point failed; watchdog must be visibly red.'
+            exit 1
+          fi
