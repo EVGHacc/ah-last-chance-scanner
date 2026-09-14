@@ -69,10 +69,10 @@ jobs:
         if: steps.gate.outputs.run == 'true'
         run: python scripts/selftest.py
 
-      # A live authenticated probe may consume/rotate a user refresh token, so
-      # it is intentionally manual-only.
+      # Second isolated runner verifies that the configured user refresh token
+      # remains usable after an earlier refresh; normal mode is restored next.
       - name: Live authenticated AH probe
-        if: github.event_name == 'workflow_dispatch' && steps.gate.outputs.run == 'true'
+        if: (github.event_name == 'workflow_dispatch' || github.event_name == 'push') && steps.gate.outputs.run == 'true'
         env:
           AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
         run: python probe.py
