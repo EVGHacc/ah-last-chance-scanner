@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 import importlib.util
+import json
 import os
+import subprocess
 import tempfile
+import time
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -62,7 +65,7 @@ for minute in due:
     candidates=[w for w in range(minute,minute+2) if w%5 in (0,2,4)]
     assert candidates, f'watchdog has no <=1m recovery for {minute//60:02d}:{minute%60:02d}'
 
-# Access-token reuse: first call refreshes, later calls reuse persisted state.
+# First call refreshes, later calls reuse the same persisted state.
 with tempfile.TemporaryDirectory() as td:
     old_state=os.environ.get('AH_TOKEN_STATE_FILE')
     old_refresh=os.environ.get('AH_REFRESH_TOKEN')
@@ -90,5 +93,19 @@ with tempfile.TemporaryDirectory() as td:
         else: os.environ['AH_TOKEN_STATE_FILE']=old_state
         if old_refresh is None: os.environ.pop('AH_REFRESH_TOKEN',None)
         else: os.environ['AH_REFRESH_TOKEN']=old_refresh
+
+# The supervised session launches scanner.py as a new process for every point.
+# Prove that two independent processes can reuse one valid /tmp-style state
+# without any refresh secret or network call.
+with tempfile.TemporaryDirectory() as td:
+    state=Path(td)/'auth.json'
+    state.write_text(json.dumps({'accessToken':'cross-process-access','accessExpiresAt':int(time.time())+3600,'refreshToken':''}),encoding='utf-8')
+    os.chmod(state,0o600)
+    env=dict(os.environ)
+    env['AH_TOKEN_STATE_FILE']=str(state)
+    env.pop('AH_REFRESH_TOKEN',None)
+    code="import scanner; a,m=scanner.token(); assert a=='cross-process-access'; assert m=='user-refresh'; assert scanner.LAST_AUTH_SOURCE=='cache'"
+    for _ in range(2):
+        subprocess.run(['python','-c',code],cwd=ROOT,env=env,check=True)
 
 print('scanner/session/persistence/watchdog/token-reuse self-test: PASS')
