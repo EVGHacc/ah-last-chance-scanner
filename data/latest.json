@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-14",
   "weekday": "Monday",
-  "scheduledSlot": "20:03",
-  "scheduledAt": "2026-09-14T20:03:00+02:00",
-  "rawScheduledSlot": "20:03",
-  "rawScheduledAt": "2026-09-14T20:03:00+02:00",
-  "startedAt": "2026-09-14T20:03:00.045042+02:00",
-  "completedAt": "2026-09-14T20:03:03.531091+02:00",
-  "checkedAt": "2026-09-14T20:03:03.531091+02:00",
+  "scheduledSlot": "20:05",
+  "scheduledAt": "2026-09-14T20:05:00+02:00",
+  "rawScheduledSlot": "20:05",
+  "rawScheduledAt": "2026-09-14T20:05:00+02:00",
+  "startedAt": "2026-09-14T20:05:00.044482+02:00",
+  "completedAt": "2026-09-14T20:05:04.180811+02:00",
+  "checkedAt": "2026-09-14T20:05:04.180811+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,11 +25,11 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 144,
-      "meatItems": 21,
-      "meat70Items": 6,
-      "meat70Stock": 10.0,
-      "bakeryItems": 41,
+      "totalBargainItems": 196,
+      "meatItems": 23,
+      "meat70Items": 7,
+      "meat70Stock": 11.0,
+      "bakeryItems": 47,
       "bakery70Items": 2,
       "bakery70Stock": 3.0,
       "items": [
@@ -55,6 +55,18 @@
           "stock": 2,
           "priceWas": "4.50",
           "priceNow": "1.35",
+          "markdownExpirationDate": "2026-09-14"
+        },
+        {
+          "productId": 598620,
+          "title": "AH Filetlapjes à la minute naturel",
+          "brand": "AH",
+          "size": "ca. 350 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.11",
+          "priceNow": "1.23",
           "markdownExpirationDate": "2026-09-14"
         },
         {
@@ -185,6 +197,18 @@
           "category": "Vlees",
           "discountPct": 25,
           "stock": 2,
+          "priceWas": "5.79",
+          "priceNow": "4.34",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 582033,
+          "title": "AH Scharrel kip gyros",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
           "priceWas": "5.79",
           "priceNow": "4.34",
           "markdownExpirationDate": "2026-09-15"
@@ -432,6 +456,18 @@
           "markdownExpirationDate": "2026-09-14"
         },
         {
+          "productId": 590095,
+          "title": "AH Liefde & Passie Rozijn pistache",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
+          "markdownExpirationDate": "2026-09-14"
+        },
+        {
           "productId": 561021,
           "title": "AH Vloer waldkorn heel",
           "brand": "AH",
@@ -537,6 +573,18 @@
           "stock": 5,
           "priceWas": "1.89",
           "priceNow": "1.61",
+          "markdownExpirationDate": "2026-09-14"
+        },
+        {
+          "productId": 230710,
+          "title": "AH Ham kaas croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 4,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
           "markdownExpirationDate": "2026-09-14"
         },
         {
@@ -660,6 +708,42 @@
           "markdownExpirationDate": "2026-09-14"
         },
         {
+          "productId": 577444,
+          "title": "AH Worstenbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "1.29",
+          "priceNow": "1.10",
+          "markdownExpirationDate": "2026-09-14"
+        },
+        {
+          "productId": 590096,
+          "title": "AH Liefde & Passie Biologisch OerDesem blond",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "3.29",
+          "priceNow": "2.80",
+          "markdownExpirationDate": "2026-09-14"
+        },
+        {
+          "productId": 590399,
+          "title": "AH Broodje burger augurk tomatensaus",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "1.49",
+          "priceNow": "1.27",
+          "markdownExpirationDate": "2026-09-14"
+        },
+        {
           "productId": 606049,
           "title": "AH Liefde & Passie Desem pistolet volkoren",
           "brand": "AH Liefde & Passie",
@@ -778,6 +862,18 @@
           "priceWas": "1.39",
           "priceNow": "1.18",
           "markdownExpirationDate": "2026-09-14"
+        },
+        {
+          "productId": 588080,
+          "title": "AH Stevige crackers waldkorn",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
+          "markdownExpirationDate": "2026-09-19"
         }
       ]
     },
@@ -1329,10 +1425,10 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 213,
-      "meatItems": 12,
-      "meat70Items": 11,
-      "meat70Stock": 13.0,
+      "totalBargainItems": 212,
+      "meatItems": 11,
+      "meat70Items": 10,
+      "meat70Stock": 12.0,
       "bakeryItems": 44,
       "bakery70Items": 0,
       "bakery70Stock": 0,
@@ -1431,18 +1527,6 @@
           "stock": 1,
           "priceWas": "4.99",
           "priceNow": "1.50",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
-          "productId": 210608,
-          "title": "AH Shoarma",
-          "brand": "AH",
-          "size": "850 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "7.09",
-          "priceNow": "2.13",
           "markdownExpirationDate": "2026-09-14"
         },
         {
