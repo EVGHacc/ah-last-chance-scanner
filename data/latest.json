@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-14",
   "weekday": "Monday",
-  "scheduledSlot": "21:45",
-  "scheduledAt": "2026-09-14T21:45:00+02:00",
-  "rawScheduledSlot": "21:45",
-  "rawScheduledAt": "2026-09-14T21:45:00+02:00",
-  "startedAt": "2026-09-14T21:45:00.043897+02:00",
-  "completedAt": "2026-09-14T21:45:03.485580+02:00",
-  "checkedAt": "2026-09-14T21:45:03.485580+02:00",
+  "scheduledSlot": "21:48",
+  "scheduledAt": "2026-09-14T21:48:00+02:00",
+  "rawScheduledSlot": "21:48",
+  "rawScheduledAt": "2026-09-14T21:48:00+02:00",
+  "startedAt": "2026-09-14T21:48:00.043991+02:00",
+  "completedAt": "2026-09-14T21:48:03.667919+02:00",
+  "checkedAt": "2026-09-14T21:48:03.667919+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -408,18 +408,6 @@
           "markdownExpirationDate": "2026-09-14"
         },
         {
-          "productId": 561013,
-          "title": "AH Liefde & Passie Meergranen",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "2.89",
-          "priceNow": "2.17",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
           "productId": 168183,
           "title": "AH Tijger volkoren heel",
           "brand": "AH",
@@ -465,6 +453,18 @@
           "stock": 2,
           "priceWas": "3.19",
           "priceNow": "2.39",
+          "markdownExpirationDate": "2026-09-14"
+        },
+        {
+          "productId": 561013,
+          "title": "AH Liefde & Passie Meergranen",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "2.89",
+          "priceNow": "2.17",
           "markdownExpirationDate": "2026-09-14"
         },
         {
@@ -1209,11 +1209,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 192,
+      "totalBargainItems": 191,
       "meatItems": 3,
       "meat70Items": 3,
       "meat70Stock": 3.0,
-      "bakeryItems": 43,
+      "bakeryItems": 42,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -1313,18 +1313,6 @@
           "stock": 4,
           "priceWas": "1.89",
           "priceNow": "1.13",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
-          "productId": 603533,
-          "title": "AH Kip mango snack",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "1.49",
-          "priceNow": "0.89",
           "markdownExpirationDate": "2026-09-14"
         },
         {
