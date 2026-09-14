@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 import json
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo('Europe/Amsterdam')
 START = 17 * 60 + 30
 END = 22 * 60 + 30
-MIN_AGE_SECONDS = 45
-MAX_AGE_SECONDS = 195
+# Give the primary session a little time to publish, then recover while there is
+# still enough room to complete inside the scanner's hard <=240s validity bound.
+MIN_AGE_SECONDS = 35
+MAX_AGE_SECONDS = 180
 
 
 def raw_due(minute_of_day: int) -> bool:
@@ -50,7 +52,7 @@ def main():
         if not complete:
             targets.append(target.isoformat())
 
-    # Oldest first: this preserves the most time-sensitive still-honest recovery point.
+    # Oldest first; direct recovery below leaves enough time for a valid <=240s scan.
     for target in targets:
         print(target)
 
