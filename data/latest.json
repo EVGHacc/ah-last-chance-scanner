@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-14",
   "weekday": "Monday",
-  "scheduledSlot": "19:54",
-  "scheduledAt": "2026-09-14T19:54:00+02:00",
-  "rawScheduledSlot": "19:54",
-  "rawScheduledAt": "2026-09-14T19:54:00+02:00",
-  "startedAt": "2026-09-14T19:54:00.045490+02:00",
-  "completedAt": "2026-09-14T19:54:03.262182+02:00",
-  "checkedAt": "2026-09-14T19:54:03.262182+02:00",
+  "scheduledSlot": "19:55",
+  "scheduledAt": "2026-09-14T19:55:00+02:00",
+  "rawScheduledSlot": "19:55",
+  "rawScheduledAt": "2026-09-14T19:55:00+02:00",
+  "startedAt": "2026-09-14T19:55:00.045621+02:00",
+  "completedAt": "2026-09-14T19:55:03.051385+02:00",
+  "checkedAt": "2026-09-14T19:55:03.051385+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,8 +25,8 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 181,
-      "meatItems": 11,
+      "totalBargainItems": 183,
+      "meatItems": 13,
       "meat70Items": 7,
       "meat70Stock": 11.0,
       "bakeryItems": 47,
@@ -118,6 +118,18 @@
           "markdownExpirationDate": "2026-09-15"
         },
         {
+          "productId": 561329,
+          "title": "AH Slagersgehaktbal gepaneerd",
+          "brand": "AH",
+          "size": "8 stuks",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "9.99",
+          "priceNow": "5.99",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
           "productId": 426434,
           "title": "AH Excellent BBQ varkenshaasspies Indonesian",
           "brand": "AH Excellent",
@@ -139,6 +151,18 @@
           "stock": 1,
           "priceWas": "5.25",
           "priceNow": "3.94",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 495643,
+          "title": "AH Gehaktschnitzel hongaarse stijl",
+          "brand": "AH",
+          "size": "4 stuks",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.79",
+          "priceNow": "2.84",
           "markdownExpirationDate": "2026-09-15"
         },
         {
@@ -1305,11 +1329,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 213,
-      "meatItems": 12,
-      "meat70Items": 11,
-      "meat70Stock": 13.0,
-      "bakeryItems": 44,
+      "totalBargainItems": 166,
+      "meatItems": 11,
+      "meat70Items": 10,
+      "meat70Stock": 12.0,
+      "bakeryItems": 38,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -1335,18 +1359,6 @@
           "stock": 2,
           "priceWas": "3.55",
           "priceNow": "1.07",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
-          "productId": 589122,
-          "title": "AH Kipfilethaasjes",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "3.99",
-          "priceNow": "1.20",
           "markdownExpirationDate": "2026-09-14"
         },
         {
@@ -1640,18 +1652,6 @@
           "markdownExpirationDate": "2026-09-14"
         },
         {
-          "productId": 590399,
-          "title": "AH Broodje burger augurk tomatensaus",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "1.49",
-          "priceNow": "1.12",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
           "productId": 410181,
           "title": "AH Kip paprikabroodje",
           "brand": "AH",
@@ -1661,18 +1661,6 @@
           "stock": 2,
           "priceWas": "1.99",
           "priceNow": "1.49",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
-          "productId": 577444,
-          "title": "AH Worstenbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.29",
-          "priceNow": "0.97",
           "markdownExpirationDate": "2026-09-14"
         },
         {
@@ -1796,30 +1784,6 @@
           "markdownExpirationDate": "2026-09-14"
         },
         {
-          "productId": 230704,
-          "title": "AH Kaasbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
-          "productId": 577447,
-          "title": "AH Everything bol",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.79",
-          "priceNow": "0.67",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
           "productId": 515766,
           "title": "AH Kaasstengel",
           "brand": "AH",
@@ -1853,18 +1817,6 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
-          "productId": 590397,
-          "title": "AH Kipnuggetbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.39",
-          "priceNow": "1.18",
           "markdownExpirationDate": "2026-09-14"
         },
         {
@@ -1962,18 +1914,6 @@
           "priceWas": "1.99",
           "priceNow": "1.19",
           "markdownExpirationDate": "2026-09-20"
-        },
-        {
-          "productId": 578706,
-          "title": "AH Eierkoeken volkoren",
-          "brand": "AH",
-          "size": "360 g",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.49",
-          "priceNow": "1.12",
-          "markdownExpirationDate": "2026-09-21"
         },
         {
           "productId": 606848,
