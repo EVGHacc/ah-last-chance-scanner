@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-14",
   "weekday": "Monday",
-  "scheduledSlot": "21:48",
-  "scheduledAt": "2026-09-14T21:48:00+02:00",
-  "rawScheduledSlot": "21:48",
-  "rawScheduledAt": "2026-09-14T21:48:00+02:00",
-  "startedAt": "2026-09-14T21:48:00.043991+02:00",
-  "completedAt": "2026-09-14T21:48:03.667919+02:00",
-  "checkedAt": "2026-09-14T21:48:03.667919+02:00",
+  "scheduledSlot": "21:50",
+  "scheduledAt": "2026-09-14T21:50:00+02:00",
+  "rawScheduledSlot": "21:50",
+  "rawScheduledAt": "2026-09-14T21:50:00+02:00",
+  "startedAt": "2026-09-14T21:50:00.044388+02:00",
+  "completedAt": "2026-09-14T21:50:03.784107+02:00",
+  "checkedAt": "2026-09-14T21:50:03.784107+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -456,18 +456,6 @@
           "markdownExpirationDate": "2026-09-14"
         },
         {
-          "productId": 561013,
-          "title": "AH Liefde & Passie Meergranen",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "2.89",
-          "priceNow": "2.17",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
           "productId": 231537,
           "title": "AH Les pains bastille half",
           "brand": "AH",
@@ -549,6 +537,18 @@
           "stock": 1,
           "priceWas": "1.49",
           "priceNow": "1.12",
+          "markdownExpirationDate": "2026-09-14"
+        },
+        {
+          "productId": 561013,
+          "title": "AH Liefde & Passie Meergranen",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.89",
+          "priceNow": "2.17",
           "markdownExpirationDate": "2026-09-14"
         },
         {
