@@ -54,10 +54,15 @@ assert points[-1].strftime('%H:%M')=='22:30'
 assert sum(1 for p in points if (p.hour*60+p.minute-session.START)%3==0)==101
 assert sum(1 for p in points if (p.hour*60+p.minute-session.START)%5==0)==61
 
-# The two watchdog cron offsets (minute % 5 == 0 or 2) reach every intended point
-# no later than two minutes afterward, leaving room inside the 240s validity budget.
+# Recovery must begin early enough to leave at least 60 seconds inside the
+# hard <=240 second validity budget.
+assert watchdog.MIN_AGE_SECONDS <= 45
+assert watchdog.MAX_AGE_SECONDS <= 180
+
+# The three staggered watchdog schedules (minute % 5 == 0, 2 or 4) offer a
+# recovery trigger at every intended point or no later than one minute after it.
 for minute in due:
-    candidates=[w for w in range(minute,minute+3) if w%5 in (0,2)]
-    assert candidates, f'watchdog has no <=2m recovery for {minute//60:02d}:{minute%60:02d}'
+    candidates=[w for w in range(minute,minute+2) if w%5 in (0,2,4)]
+    assert candidates, f'watchdog has no <=1m recovery for {minute//60:02d}:{minute%60:02d}'
 
 print('scanner/session/persistence/watchdog self-test: PASS')
