@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-14",
   "weekday": "Monday",
-  "scheduledSlot": "20:50",
-  "scheduledAt": "2026-09-14T20:50:00+02:00",
-  "rawScheduledSlot": "20:50",
-  "rawScheduledAt": "2026-09-14T20:50:00+02:00",
-  "startedAt": "2026-09-14T20:50:00.046112+02:00",
-  "completedAt": "2026-09-14T20:50:03.488534+02:00",
-  "checkedAt": "2026-09-14T20:50:03.488534+02:00",
+  "scheduledSlot": "20:51",
+  "scheduledAt": "2026-09-14T20:51:00+02:00",
+  "rawScheduledSlot": "20:51",
+  "rawScheduledAt": "2026-09-14T20:51:00+02:00",
+  "startedAt": "2026-09-14T20:51:00.043810+02:00",
+  "completedAt": "2026-09-14T20:51:03.242304+02:00",
+  "checkedAt": "2026-09-14T20:51:03.242304+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -324,18 +324,6 @@
           "markdownExpirationDate": "2026-09-14"
         },
         {
-          "productId": 230842,
-          "title": "AH Liefde & Passie Spelt",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 8,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-14"
-        },
-        {
           "productId": 606050,
           "title": "AH Liefde & Passie Desem pistolet mais pompoen",
           "brand": "AH Liefde & Passie",
@@ -345,6 +333,18 @@
           "stock": 7,
           "priceWas": "0.99",
           "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-14"
+        },
+        {
+          "productId": 230842,
+          "title": "AH Liefde & Passie Spelt",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 7,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-14"
         },
         {
