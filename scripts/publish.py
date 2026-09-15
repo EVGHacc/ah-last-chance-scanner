@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import json
+import os
 import subprocess
 from pathlib import Path
+from scripts.auth_state import seal_state_text
 
 
 def run(*args, check=True):
@@ -16,11 +18,16 @@ def main():
     date=obs.get('date','unknown')
     slot=obs.get('rawScheduledSlot') or obs.get('scheduledSlot') or 'unknown'
 
+    root_secret=os.getenv('AH_REFRESH_TOKEN','').strip()
+    sealed_text=seal_state_text(root_secret) if root_secret else ''
+
     for attempt in range(1,4):
         run('git','fetch','origin','main')
         run('git','reset','--hard','origin/main')
         Path('data').mkdir(exist_ok=True)
         latest_path.write_text(latest_text,encoding='utf-8')
+        if sealed_text:
+            Path('data/auth_state.enc').write_text(sealed_text,encoding='utf-8')
         run('python','scripts/persist.py')
         run('git','add','data/')
         if run('git','diff','--cached','--quiet',check=False).returncode==0:
@@ -29,7 +36,7 @@ def main():
         run('git','commit','-m',f'AH scan {date} {slot}')
         pushed=run('git','push','origin','HEAD:main',check=False)
         if pushed.returncode==0:
-            print(f'Published authenticated AH scan {date} {slot}')
+            print(f'Published authenticated AH scan {date} {slot} and encrypted auth state')
             return
         print(f'Push race on attempt {attempt}; retrying from origin/main')
 
