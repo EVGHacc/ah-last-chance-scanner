@@ -1,0 +1,44 @@
+name: AH recovery session now
+
+on:
+  push:
+    paths:
+      - '.github/workflows/recover-session-now.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ah-recovery-session-20260915
+  cancel-in-progress: false
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 270
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Install auth-state dependency
+        run: python -m pip install --disable-pip-version-check --quiet cryptography
+
+      - name: Verify production stack
+        run: |
+          python -m py_compile scanner.py scripts/auth_state.py scripts/persist.py scripts/publish.py scripts/session.py scripts/watchdog_targets.py
+          python scripts/auth_state.py
+          python scripts/selftest.py
+
+      - name: Continue today's supervised session with fresh secret
+        env:
+          AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
+        run: |
+          git config user.name 'ah-recovery-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          python scripts/session.py
