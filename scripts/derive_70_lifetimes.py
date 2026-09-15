@@ -54,6 +54,15 @@ def valid_obs(o):
     return fetched == STORE_IDS
 
 
+def obs_rank(o):
+    """Prefer the least-delayed observation for one intended raw timestamp; break ties by earliest completion."""
+    try:
+        delay = int(o.get("rawDelaySeconds", o.get("delaySeconds", 999999)))
+    except Exception:
+        delay = 999999
+    return delay, str(o.get("checkedAt") or "")
+
+
 def horizon_rate(rows, horizon):
     eligible = [
         r for r in rows
@@ -89,19 +98,17 @@ def make_summary(rows):
 
 
 def summarize(episodes):
-    out = {store: make_summary([r for r in episodes if str(r.get("store_id")) == store]) for store in sorted(STORE_IDS)}
+    out = {
+        store: make_summary([r for r in episodes if str(r.get("store_id")) == store])
+        for store in sorted(STORE_IDS)
+    }
     out["all"] = make_summary(episodes)
     return out
 
 
 def current_episodes():
-    presence = defaultdict(set)
-    scan_times = defaultdict(set)
-    product_names = {}
-    stock_at = {}
-    discount_at = {}
-    coverage = defaultdict(lambda: {store: 0 for store in sorted(STORE_IDS)})
-
+    # First select exactly one best valid observation for each intended raw timestamp.
+    selected = {}
     current_files = sorted(DATA.glob("2026-*.jsonl"))
     for path in current_files:
         with path.open(encoding="utf-8") as f:
@@ -113,36 +120,50 @@ def current_episodes():
                 if not valid_obs(o):
                     continue
                 date = str(o.get("date") or "")
-                if not date:
+                scheduled = o.get("rawScheduledAt") or o.get("scheduledAt") or o.get("checkedAt")
+                if not date or not scheduled:
                     continue
                 try:
-                    ts = parse_dt(o.get("rawScheduledAt") or o.get("scheduledAt") or o.get("checkedAt"))
+                    ts = parse_dt(scheduled)
                 except Exception:
                     continue
-                for s in o.get("stores") or []:
-                    store = str(s.get("storeId") or "")
-                    if store not in STORE_IDS or s.get("fetched") is not True:
-                        continue
-                    scan_times[(date, store)].add(ts)
-                    coverage[date][store] += 1
-                    key_scan = (date, store, ts)
-                    for item in s.get("items") or []:
-                        if str(item.get("category") or "").strip() != "Vlees":
-                            continue
-                        product = str(item.get("productId") or "")
-                        if not product:
-                            continue
-                        presence[key_scan].add(product)
-                        product_names[(date, store, product)] = item.get("title") or ""
-                        key = (date, store, product, ts)
-                        try:
-                            stock_at[key] = float(item.get("stock")) if item.get("stock") is not None else None
-                        except Exception:
-                            stock_at[key] = None
-                        try:
-                            discount_at[key] = float(item.get("discountPct") or 0)
-                        except Exception:
-                            discount_at[key] = 0.0
+                key = (date, ts)
+                previous = selected.get(key)
+                if previous is None or obs_rank(o) < obs_rank(previous):
+                    selected[key] = o
+
+    presence = defaultdict(set)
+    scan_times = defaultdict(set)
+    product_names = {}
+    stock_at = {}
+    discount_at = {}
+    coverage = defaultdict(lambda: {store: 0 for store in sorted(STORE_IDS)})
+
+    for (date, ts), o in sorted(selected.items()):
+        for s in o.get("stores") or []:
+            store = str(s.get("storeId") or "")
+            if store not in STORE_IDS or s.get("fetched") is not True:
+                continue
+            scan_times[(date, store)].add(ts)
+            coverage[date][store] += 1
+            key_scan = (date, store, ts)
+            for item in s.get("items") or []:
+                if str(item.get("category") or "").strip() != "Vlees":
+                    continue
+                product = str(item.get("productId") or "")
+                if not product:
+                    continue
+                presence[key_scan].add(product)
+                product_names[(date, store, product)] = item.get("title") or ""
+                key = (date, store, product, ts)
+                try:
+                    stock_at[key] = float(item.get("stock")) if item.get("stock") is not None else None
+                except Exception:
+                    stock_at[key] = None
+                try:
+                    discount_at[key] = float(item.get("discountPct") or 0)
+                except Exception:
+                    discount_at[key] = 0.0
 
     episodes = []
     keys = set((d, s, p) for (d, s, p, _t) in discount_at)
@@ -166,7 +187,11 @@ def current_episodes():
             "stock_at_70": stock_at.get((date, store, product, t0)),
         }
         if not later:
-            episodes.append({**base, "event": False, "minutes": None, "last_followup": t0.isoformat(), "followup_minutes": 0.0, "reason": "no_later_valid_scan"})
+            episodes.append({
+                **base, "event": False, "minutes": None,
+                "last_followup": t0.isoformat(), "followup_minutes": 0.0,
+                "reason": "no_later_valid_scan"
+            })
             continue
 
         disappeared = None
@@ -202,12 +227,12 @@ def current_episodes():
         date: {"valid_scans_by_store": dict(stores)}
         for date, stores in sorted(coverage.items())
     }
-    return episodes, coverage_out, [p.name for p in current_files]
+    return episodes, coverage_out, [p.name for p in current_files], len(selected)
 
 
 def main():
     CENTRAL.mkdir(parents=True, exist_ok=True)
-    current, current_coverage, files = current_episodes()
+    current, current_coverage, files, selected_count = current_episodes()
     current_payload = {
         "generated_at": datetime.now().astimezone().isoformat(),
         "method": {
@@ -216,9 +241,11 @@ def main():
             "interpretation": "persistent disappearance is a depletion proxy; it may be sale, staff removal or an inventory/API effect and is not proof of sale",
             "censoring": "products still present at the last valid scan are right-censored",
             "validity": "user-refresh, valid=true, status OK/OK_ZERO_ROWS, delay<=240s, all three stores fetched, category exact Vlees",
+            "deduplication": "one best observation per intended raw timestamp; lowest delay then earliest checkedAt",
         },
         "coverage": current_coverage,
         "source_files": files,
+        "selected_raw_observations": selected_count,
         "summary": summarize(current),
         "episodes": current,
     }
@@ -242,7 +269,10 @@ def main():
             str(row.get("first70")), str(row.get("source")),
         )
         dedup[key] = row
-    combined = sorted(dedup.values(), key=lambda r: (str(r.get("date")), str(r.get("store_id")), str(r.get("first70")), str(r.get("product_id"))))
+    combined = sorted(
+        dedup.values(),
+        key=lambda r: (str(r.get("date")), str(r.get("store_id")), str(r.get("first70")), str(r.get("product_id")))
+    )
 
     combined_payload = {
         "generated_at": datetime.now().astimezone().isoformat(),
@@ -251,7 +281,7 @@ def main():
             "interpretation": "not proof of sale; possible sale, staff removal or inventory/API effect",
             "censoring": "right-censored episodes are retained and excluded from event-only mean/median",
             "historical_scope": "product-level observer scans only; counts-only official backfills excluded",
-            "current_scope": "valid scanner-v5 raw observations",
+            "current_scope": "valid scanner-v5 raw observations, deduplicated per intended timestamp",
         },
         "historical_loaded": HISTORICAL.exists(),
         "historical_meta": historical_meta,
@@ -263,6 +293,7 @@ def main():
         "historical_loaded": HISTORICAL.exists(),
         "historical_episodes": len(historical),
         "current_episodes": len(current),
+        "selected_raw_observations": selected_count,
         "combined_episodes": len(combined),
         "summary": combined_payload["summary"],
     }, ensure_ascii=False, indent=2))
