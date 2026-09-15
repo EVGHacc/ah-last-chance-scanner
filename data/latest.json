@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-15",
   "weekday": "Tuesday",
-  "scheduledSlot": "21:30",
-  "scheduledAt": "2026-09-15T21:30:00+02:00",
-  "rawScheduledSlot": "21:30",
-  "rawScheduledAt": "2026-09-15T21:30:00+02:00",
-  "startedAt": "2026-09-15T21:30:00.041626+02:00",
-  "completedAt": "2026-09-15T21:30:03.619361+02:00",
-  "checkedAt": "2026-09-15T21:30:03.619361+02:00",
+  "scheduledSlot": "21:33",
+  "scheduledAt": "2026-09-15T21:33:00+02:00",
+  "rawScheduledSlot": "21:33",
+  "rawScheduledAt": "2026-09-15T21:33:00+02:00",
+  "startedAt": "2026-09-15T21:33:00.044646+02:00",
+  "completedAt": "2026-09-15T21:33:03.204230+02:00",
+  "checkedAt": "2026-09-15T21:33:03.204230+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -449,7 +449,7 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 205,
+      "totalBargainItems": 204,
       "meatItems": 7,
       "meat70Items": 3,
       "meat70Stock": 10.0,
@@ -945,15 +945,52 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 72,
-      "meatItems": 0,
-      "meat70Items": 0,
-      "meat70Stock": 0,
-      "bakeryItems": 23,
+      "totalBargainItems": 212,
+      "meatItems": 1,
+      "meat70Items": 1,
+      "meat70Stock": 1.0,
+      "bakeryItems": 50,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "items": [],
+      "items": [
+        {
+          "productId": 511753,
+          "title": "AH Kipblokjes",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
+          "markdownExpirationDate": "2026-09-16"
+        }
+      ],
       "bakery": [
+        {
+          "productId": 230710,
+          "title": "AH Ham kaas croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 14,
+          "priceWas": "0.99",
+          "priceNow": "0.59",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 230731,
+          "title": "AH Triangel meergranen bruin",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 10,
+          "priceWas": "0.69",
+          "priceNow": "0.41",
+          "markdownExpirationDate": "2026-09-15"
+        },
         {
           "productId": 523679,
           "title": "AH Pastel de nata",
@@ -964,6 +1001,30 @@
           "stock": 10,
           "priceWas": "0.59",
           "priceNow": "0.35",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 590399,
+          "title": "AH Broodje burger augurk tomatensaus",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 5,
+          "priceWas": "1.49",
+          "priceNow": "0.89",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 606074,
+          "title": "AH Pistache croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 4,
+          "priceWas": "1.29",
+          "priceNow": "0.77",
           "markdownExpirationDate": "2026-09-15"
         },
         {
@@ -979,6 +1040,18 @@
           "markdownExpirationDate": "2026-09-15"
         },
         {
+          "productId": 603533,
+          "title": "AH Kip mango snack",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 3,
+          "priceWas": "1.49",
+          "priceNow": "0.89",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
           "productId": 410181,
           "title": "AH Kip paprikabroodje",
           "brand": "AH",
@@ -988,6 +1061,30 @@
           "stock": 3,
           "priceWas": "1.99",
           "priceNow": "1.19",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 606073,
+          "title": "AH Kruidenkaas snack",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "0.89",
+          "priceNow": "0.53",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 125034,
+          "title": "AH Les pains Boulogne half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "1.29",
+          "priceNow": "0.77",
           "markdownExpirationDate": "2026-09-15"
         },
         {
@@ -1003,6 +1100,54 @@
           "markdownExpirationDate": "2026-09-15"
         },
         {
+          "productId": 230724,
+          "title": "AH Saucijzenbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 7,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 230738,
+          "title": "AH Koffiebroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 7,
+          "priceWas": "0.69",
+          "priceNow": "0.52",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 230704,
+          "title": "AH Kaasbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 5,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 590397,
+          "title": "AH Kipnuggetbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 5,
+          "priceWas": "1.39",
+          "priceNow": "1.04",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
           "productId": 230859,
           "title": "AH Kaas croissant",
           "brand": "AH",
@@ -1015,6 +1160,42 @@
           "markdownExpirationDate": "2026-09-15"
         },
         {
+          "productId": 577447,
+          "title": "AH Everything bol",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "0.79",
+          "priceNow": "0.59",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 606050,
+          "title": "AH Liefde & Passie Desem pistolet mais pompoen",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 561013,
+          "title": "AH Liefde & Passie Meergranen",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "2.89",
+          "priceNow": "2.17",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
           "productId": 425912,
           "title": "AH Focaccia pepperoni",
           "brand": "AH",
@@ -1022,6 +1203,30 @@
           "category": "Bakkerij",
           "discountPct": 25,
           "stock": 3,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 597345,
+          "title": "AH Pretzel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.59",
+          "priceNow": "0.44",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 606494,
+          "title": "AH Focaccia brie rozemarijn",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
           "priceWas": "1.49",
           "priceNow": "1.12",
           "markdownExpirationDate": "2026-09-15"
@@ -1060,6 +1265,66 @@
           "stock": 2,
           "priceWas": "2.69",
           "priceNow": "2.02",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 606491,
+          "title": "AH Taco snack",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.89",
+          "priceNow": "0.67",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 606492,
+          "title": "AH Liefde & Passie Biologisch desem pistolet meerzaden",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.09",
+          "priceNow": "0.82",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 606103,
+          "title": "AH Kip grillworst snack",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 606777,
+          "title": "AH Borek kip gyros",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.19",
+          "priceNow": "0.89",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 231533,
+          "title": "AH Tijger volkoren half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.09",
+          "priceNow": "0.82",
           "markdownExpirationDate": "2026-09-15"
         },
         {
@@ -1135,6 +1400,18 @@
           "markdownExpirationDate": "2026-09-15"
         },
         {
+          "productId": 230718,
+          "title": "AH Pistolet wit",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 7,
+          "priceWas": "0.29",
+          "priceNow": "0.25",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
           "productId": 231924,
           "title": "AH Chocoladebroodje",
           "brand": "AH",
@@ -1147,6 +1424,18 @@
           "markdownExpirationDate": "2026-09-15"
         },
         {
+          "productId": 606048,
+          "title": "AH Liefde & Passie Desem pistolet wit",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 4,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
           "productId": 515766,
           "title": "AH Kaasstengel",
           "brand": "AH",
@@ -1156,6 +1445,30 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 606047,
+          "title": "AH Pistolet volkoren",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.29",
+          "priceNow": "0.25",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 468259,
+          "title": "AH Kaneelbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.59",
+          "priceNow": "0.50",
           "markdownExpirationDate": "2026-09-15"
         },
         {
@@ -1229,6 +1542,30 @@
           "priceWas": "1.99",
           "priceNow": "1.49",
           "markdownExpirationDate": "2026-09-20"
+        },
+        {
+          "productId": 578706,
+          "title": "AH Eierkoeken volkoren",
+          "brand": "AH",
+          "size": "360 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
+          "markdownExpirationDate": "2026-09-21"
+        },
+        {
+          "productId": 606848,
+          "title": "Tilda Chili naanbrood",
+          "brand": "Tilda",
+          "size": "300 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "3.35",
+          "priceNow": "2.51",
+          "markdownExpirationDate": "2026-09-27"
         }
       ]
     }
