@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-15",
   "weekday": "Tuesday",
-  "scheduledSlot": "20:10",
-  "scheduledAt": "2026-09-15T20:10:00+02:00",
-  "rawScheduledSlot": "20:10",
-  "rawScheduledAt": "2026-09-15T20:10:00+02:00",
-  "startedAt": "2026-09-15T20:10:00.040250+02:00",
-  "completedAt": "2026-09-15T20:10:03.256580+02:00",
-  "checkedAt": "2026-09-15T20:10:03.256580+02:00",
+  "scheduledSlot": "20:12",
+  "scheduledAt": "2026-09-15T20:12:00+02:00",
+  "rawScheduledSlot": "20:12",
+  "rawScheduledAt": "2026-09-15T20:12:00+02:00",
+  "startedAt": "2026-09-15T20:12:00.044491+02:00",
+  "completedAt": "2026-09-15T20:12:03.650833+02:00",
+  "checkedAt": "2026-09-15T20:12:03.650833+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1376,18 +1376,6 @@
           "markdownExpirationDate": "2026-09-15"
         },
         {
-          "productId": 231924,
-          "title": "AH Chocoladebroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 6,
-          "priceWas": "0.59",
-          "priceNow": "0.50",
-          "markdownExpirationDate": "2026-09-15"
-        },
-        {
           "productId": 230704,
           "title": "AH Kaasbroodje",
           "brand": "AH",
@@ -1397,6 +1385,18 @@
           "stock": 5,
           "priceWas": "0.99",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-09-15"
+        },
+        {
+          "productId": 231924,
+          "title": "AH Chocoladebroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 5,
+          "priceWas": "0.59",
+          "priceNow": "0.50",
           "markdownExpirationDate": "2026-09-15"
         },
         {
