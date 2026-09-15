@@ -1,0 +1,69 @@
+name: Derive 70% lifetimes
+
+on:
+  push:
+    paths:
+      - 'scripts/derive_70_lifetimes.py'
+      - '.github/workflows/derive-70-lifetimes.yml'
+  schedule:
+    - cron: '45 21 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: derive-70-lifetimes
+  cancel-in-progress: false
+
+jobs:
+  derive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout scanner repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch validated historical observer metrics
+        run: |
+          mkdir -p data/central/derived
+          curl --fail --silent --show-error --location \
+            --retry 3 --retry-delay 2 \
+            'https://ah-last-chance-probe.evghacc.workers.dev/analysis/70-lifetimes-historical' \
+            -o data/central/derived/historical_70_lifetimes.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('data/central/derived/historical_70_lifetimes.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert isinstance(d.get('episodes'), list), 'historical episodes missing'
+          assert isinstance(d.get('summary'), dict), 'historical summary missing'
+          assert d.get('method', {}).get('category') == 'Vlees', 'historical category is not exact Vlees'
+          print(f"historical episodes: {len(d['episodes'])}")
+          PY
+
+      - name: Derive current and combined metrics
+        run: python scripts/derive_70_lifetimes.py
+
+      - name: Commit derived metrics
+        run: |
+          git config user.name 'ah-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add \
+            data/central/derived/historical_70_lifetimes.json \
+            data/central/derived/current_70_lifetimes.json \
+            data/central/derived/combined_70_lifetimes.json
+          if git diff --cached --quiet; then
+            echo 'No derived metric changes'
+            exit 0
+          fi
+          git commit -m 'Update 70% lifetime metrics'
+          git pull --rebase origin main
+          git push origin HEAD:main
