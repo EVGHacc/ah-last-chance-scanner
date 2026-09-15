@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T05:20:43.191858+00:00",
+  "generated_at": "2026-09-15T21:48:58.466398+00:00",
   "method": {
     "scope": "valid scanner-v5 raw observations",
     "event": "first later valid store scan where a >=70% product is absent and never reappears that day",
@@ -29,133 +29,141 @@
         "1348": 141,
         "1463": 141
       }
+    },
+    "2026-09-15": {
+      "valid_scans_by_store": {
+        "1135": 93,
+        "1348": 93,
+        "1463": 93
+      }
     }
   },
   "source_files": [
     "2026-09-12.jsonl",
     "2026-09-13.jsonl",
-    "2026-09-14.jsonl"
+    "2026-09-14.jsonl",
+    "2026-09-15.jsonl"
   ],
-  "selected_raw_observations": 206,
+  "selected_raw_observations": 299,
   "summary": {
     "1135": {
-      "episodes_70": 23,
-      "confirmed_persistent_disappearances": 15,
-      "right_censored": 8,
-      "event_rate_pct": 65.2,
-      "mean_minutes_events_only": 86.7,
+      "episodes_70": 30,
+      "confirmed_persistent_disappearances": 21,
+      "right_censored": 9,
+      "event_rate_pct": 70.0,
+      "mean_minutes_events_only": 78.9,
       "median_minutes_events_only": 81.0,
-      "p25_minutes_events_only": 49.0,
-      "p75_minutes_events_only": 115.5,
+      "p25_minutes_events_only": 22.0,
+      "p75_minutes_events_only": 123.0,
       "gone_within_15m": {
-        "eligible": 21,
-        "gone": 1,
-        "pct": 4.8
-      },
-      "gone_within_30m": {
-        "eligible": 21,
-        "gone": 3,
+        "eligible": 28,
+        "gone": 4,
         "pct": 14.3
       },
+      "gone_within_30m": {
+        "eligible": 28,
+        "gone": 6,
+        "pct": 21.4
+      },
       "gone_within_60m": {
-        "eligible": 20,
-        "gone": 4,
-        "pct": 20.0
+        "eligible": 27,
+        "gone": 7,
+        "pct": 25.9
       },
       "gone_within_90m": {
-        "eligible": 20,
-        "gone": 11,
-        "pct": 55.0
+        "eligible": 27,
+        "gone": 14,
+        "pct": 51.9
       }
     },
     "1348": {
-      "episodes_70": 22,
-      "confirmed_persistent_disappearances": 8,
-      "right_censored": 14,
-      "event_rate_pct": 36.4,
-      "mean_minutes_events_only": 52.1,
-      "median_minutes_events_only": 36.0,
-      "p25_minutes_events_only": 13.5,
-      "p75_minutes_events_only": 90.8,
+      "episodes_70": 33,
+      "confirmed_persistent_disappearances": 16,
+      "right_censored": 17,
+      "event_rate_pct": 48.5,
+      "mean_minutes_events_only": 56.6,
+      "median_minutes_events_only": 54.0,
+      "p25_minutes_events_only": 44.2,
+      "p75_minutes_events_only": 75.0,
       "gone_within_15m": {
-        "eligible": 15,
+        "eligible": 26,
         "gone": 4,
-        "pct": 26.7
+        "pct": 15.4
       },
       "gone_within_30m": {
-        "eligible": 15,
+        "eligible": 26,
         "gone": 4,
-        "pct": 26.7
+        "pct": 15.4
       },
       "gone_within_60m": {
-        "eligible": 15,
-        "gone": 5,
-        "pct": 33.3
+        "eligible": 26,
+        "gone": 10,
+        "pct": 38.5
       },
       "gone_within_90m": {
-        "eligible": 14,
-        "gone": 6,
-        "pct": 42.9
+        "eligible": 25,
+        "gone": 14,
+        "pct": 56.0
       }
     },
     "1463": {
-      "episodes_70": 13,
-      "confirmed_persistent_disappearances": 5,
+      "episodes_70": 17,
+      "confirmed_persistent_disappearances": 9,
       "right_censored": 8,
-      "event_rate_pct": 38.5,
-      "mean_minutes_events_only": 84.0,
+      "event_rate_pct": 52.9,
+      "mean_minutes_events_only": 68.2,
       "median_minutes_events_only": 75.0,
-      "p25_minutes_events_only": 75.0,
+      "p25_minutes_events_only": 60.0,
       "p75_minutes_events_only": 75.0,
       "gone_within_15m": {
-        "eligible": 9,
-        "gone": 0,
-        "pct": 0.0
+        "eligible": 13,
+        "gone": 1,
+        "pct": 7.7
       },
       "gone_within_30m": {
-        "eligible": 8,
-        "gone": 0,
-        "pct": 0.0
+        "eligible": 12,
+        "gone": 1,
+        "pct": 8.3
       },
       "gone_within_60m": {
-        "eligible": 8,
-        "gone": 0,
-        "pct": 0.0
+        "eligible": 12,
+        "gone": 3,
+        "pct": 25.0
       },
       "gone_within_90m": {
-        "eligible": 8,
-        "gone": 4,
-        "pct": 50.0
+        "eligible": 12,
+        "gone": 8,
+        "pct": 66.7
       }
     },
     "all": {
-      "episodes_70": 58,
-      "confirmed_persistent_disappearances": 28,
-      "right_censored": 30,
-      "event_rate_pct": 48.3,
-      "mean_minutes_events_only": 76.3,
-      "median_minutes_events_only": 75.0,
-      "p25_minutes_events_only": 32.5,
-      "p75_minutes_events_only": 90.8,
+      "episodes_70": 80,
+      "confirmed_persistent_disappearances": 46,
+      "right_censored": 34,
+      "event_rate_pct": 57.5,
+      "mean_minutes_events_only": 69.0,
+      "median_minutes_events_only": 67.0,
+      "p25_minutes_events_only": 40.2,
+      "p75_minutes_events_only": 90.0,
       "gone_within_15m": {
-        "eligible": 45,
-        "gone": 5,
-        "pct": 11.1
+        "eligible": 67,
+        "gone": 9,
+        "pct": 13.4
       },
       "gone_within_30m": {
-        "eligible": 44,
-        "gone": 7,
-        "pct": 15.9
+        "eligible": 66,
+        "gone": 11,
+        "pct": 16.7
       },
       "gone_within_60m": {
-        "eligible": 43,
-        "gone": 9,
-        "pct": 20.9
+        "eligible": 65,
+        "gone": 20,
+        "pct": 30.8
       },
       "gone_within_90m": {
-        "eligible": 42,
-        "gone": 21,
-        "pct": 50.0
+        "eligible": 64,
+        "gone": 36,
+        "pct": 56.2
       }
     }
   },
@@ -998,6 +1006,332 @@
       "minutes": 75.0,
       "last_followup": "2026-09-14T22:30:00+02:00",
       "followup_minutes": 192.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1135",
+      "product_id": "212142",
+      "product": "AH Gyros",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:12:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T20:45:00+02:00",
+      "minutes": 93.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 198.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1135",
+      "product_id": "426434",
+      "product": "AH Excellent BBQ varkenshaasspies Indonesian",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:12:00+02:00",
+      "stock_at_70": 2.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T19:15:00+02:00",
+      "minutes": 3.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 198.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1135",
+      "product_id": "511753",
+      "product": "AH Kipblokjes",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:12:00+02:00",
+      "stock_at_70": 1.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 198.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1135",
+      "product_id": "531854",
+      "product": "AH Scharrel kipfilethaasjes sweet chili",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:12:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T21:15:00+02:00",
+      "minutes": 123.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 198.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1135",
+      "product_id": "594932",
+      "product": "AH Braadworst minder vet 2 stuks",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:12:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T21:15:00+02:00",
+      "minutes": 123.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 198.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1135",
+      "product_id": "603420",
+      "product": "AH Gevulde gehaktballen met satesmaak",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:12:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T19:15:00+02:00",
+      "minutes": 3.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 198.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1135",
+      "product_id": "612615",
+      "product": "AH BBQ scharrel kipshaslick",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:12:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T19:24:00+02:00",
+      "minutes": 12.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 198.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1348",
+      "product_id": "200106",
+      "product": "Unox Extra magere rookworst magnetron",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:12:00+02:00",
+      "stock_at_70": 8.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 198.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1348",
+      "product_id": "238946",
+      "product": "AH Rundersoepballetjes",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:33:00+02:00",
+      "stock_at_70": 2.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T20:27:00+02:00",
+      "minutes": 54.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 177.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1348",
+      "product_id": "457507",
+      "product": "AH BBQ tomahawk sweet & smokey",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:12:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T20:20:00+02:00",
+      "minutes": 68.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 198.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1348",
+      "product_id": "531828",
+      "product": "AH Scharrel kipfilet stukjes roerbak",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:33:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T20:27:00+02:00",
+      "minutes": 54.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 177.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1348",
+      "product_id": "531878",
+      "product": "AH Scharrel kipdrumsticks",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:33:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T20:27:00+02:00",
+      "minutes": 54.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 177.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1348",
+      "product_id": "531883",
+      "product": "AH Scharrel kipkluifjes",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:33:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T20:27:00+02:00",
+      "minutes": 54.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 177.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1348",
+      "product_id": "561331",
+      "product": "AH Gemengd gehakt",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:33:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T20:27:00+02:00",
+      "minutes": 54.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 177.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1348",
+      "product_id": "574230",
+      "product": "AH BBQ worst Zaanlander jalapeño",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:12:00+02:00",
+      "stock_at_70": 4.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T20:27:00+02:00",
+      "minutes": 75.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 198.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1348",
+      "product_id": "610028",
+      "product": "AH BBQ procureur steak black garlic",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:12:00+02:00",
+      "stock_at_70": 3.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 198.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1348",
+      "product_id": "612612",
+      "product": "AH BBQ scharrel kipsaté grootverpakking",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:54:00+02:00",
+      "stock_at_70": 1.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 156.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1348",
+      "product_id": "612615",
+      "product": "AH BBQ scharrel kipshaslick",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:12:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T20:27:00+02:00",
+      "minutes": 75.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 198.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1463",
+      "product_id": "426434",
+      "product": "AH Excellent BBQ varkenshaasspies Indonesian",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:12:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T20:05:00+02:00",
+      "minutes": 53.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 198.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1463",
+      "product_id": "531878",
+      "product": "AH Scharrel kipdrumsticks",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:18:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T20:18:00+02:00",
+      "minutes": 60.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 192.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1463",
+      "product_id": "531883",
+      "product": "AH Scharrel kipkluifjes",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T20:03:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T20:18:00+02:00",
+      "minutes": 15.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 147.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-15",
+      "store_id": "1463",
+      "product_id": "603421",
+      "product": "AH Gevulde gehaktballen met stroganoffsaus",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-15T19:12:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-15T20:18:00+02:00",
+      "minutes": 66.0,
+      "last_followup": "2026-09-15T22:30:00+02:00",
+      "followup_minutes": 198.0,
       "reason": "persistent_absence_proxy_not_proof_of_sale"
     }
   ]
