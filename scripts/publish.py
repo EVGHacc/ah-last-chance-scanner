@@ -3,7 +3,7 @@ import json
 import os
 import subprocess
 from pathlib import Path
-from scripts.auth_state import seal_state_text
+from auth_state import seal_state_text
 
 
 def run(*args, check=True):
