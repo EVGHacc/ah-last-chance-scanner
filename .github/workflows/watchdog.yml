@@ -2,26 +2,22 @@ name: AH Scanner watchdog
 
 on:
   schedule:
-    # Three staggered 5-minute schedules give a check every 1-2 minutes while
-    # respecting GitHub's minimum 5-minute interval per cron expression.
     - cron: '0-55/5 15-21 * * *'
     - cron: '2-57/5 15-21 * * *'
     - cron: '4-59/5 15-21 * * *'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: ah-last-chance-watchdog
-  # Never cancel a recovery run merely because GitHub delivered two cron events
-  # together. A cancelled watchdog was one of the failure modes on 2026-09-13.
   cancel-in-progress: false
 
 jobs:
   watchdog:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v7
         with:
@@ -31,45 +27,27 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Compile watchdog and production logic
-        run: |
-          python -m py_compile scanner.py scripts/persist.py scripts/publish.py scripts/watchdog_targets.py
+      - name: Compile watchdog logic
+        run: python -m py_compile scripts/watchdog_targets.py
 
-      - name: Find every missing intended point still honestly recoverable
+      - name: Check for missing intended points
         id: health
         shell: bash
         run: |
           python scripts/watchdog_targets.py > /tmp/targets.txt
           echo "targets=$(wc -l < /tmp/targets.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
           if [ -s /tmp/targets.txt ]; then
-            echo "Recoverable missing points:"
+            echo "Recoverable missing points detected:"
             cat /tmp/targets.txt
           else
             echo "No recoverable missing points."
           fi
 
-      - name: Recover missing points directly and verify publication
+      - name: Mark missing points visibly without consuming AH refresh token
         if: steps.health.outputs.targets != '0'
         shell: bash
-        env:
-          AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
         run: |
-          set -euo pipefail
-          git config user.name 'ah-watchdog-bot'
-          git config user.email 'actions@users.noreply.github.com'
-          failed=0
-          while IFS= read -r scheduled_at; do
-            [ -z "$scheduled_at" ] && continue
-            echo "Recovering $scheduled_at directly"
-            export SCHEDULED_AT="$scheduled_at"
-            if python scanner.py && python scripts/publish.py; then
-              echo "Recovered and published $scheduled_at"
-            else
-              echo "Recovery failed for $scheduled_at"
-              failed=1
-            fi
-          done < /tmp/targets.txt
-          if [ "$failed" -ne 0 ]; then
-            echo 'At least one recoverable point failed; watchdog must be visibly red.'
-            exit 1
-          fi
+          echo 'Missing recoverable scanner points detected.'
+          echo 'The watchdog is observation-only so a separate job cannot rotate and lose the AH refresh token.'
+          echo 'The supervised evening session is the sole automatic AH refresh-token consumer.'
+          exit 1
