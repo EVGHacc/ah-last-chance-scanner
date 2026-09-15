@@ -3,6 +3,7 @@ import importlib.util
 import json
 import os
 import subprocess
+import sys
 import tempfile
 import time
 from datetime import datetime
@@ -11,6 +12,9 @@ from zoneinfo import ZoneInfo
 
 BASE=Path(__file__).parent
 ROOT=BASE.parent
+if str(ROOT) not in sys.path:
+    sys.path.insert(0,str(ROOT))
+
 
 def load(name, filename, root=BASE):
     spec=importlib.util.spec_from_file_location(name,root/filename)
@@ -22,6 +26,7 @@ persist=load('persist','persist.py')
 watchdog=load('watchdog_targets','watchdog_targets.py')
 session=load('session','session.py')
 scanner=load('scanner','scanner.py',ROOT)
+auth_state=load('auth_state','auth_state.py')
 
 
 def store(store_id):
@@ -65,17 +70,17 @@ for minute in due:
     candidates=[w for w in range(minute,minute+2) if w%5 in (0,2,4)]
     assert candidates, f'watchdog has no <=1m recovery for {minute//60:02d}:{minute%60:02d}'
 
-# First call refreshes, later calls reuse the same persisted state.
+# First call refreshes and stores the rotated refresh token; later calls reuse access cache.
 with tempfile.TemporaryDirectory() as td:
     old_state=os.environ.get('AH_TOKEN_STATE_FILE')
     old_refresh=os.environ.get('AH_REFRESH_TOKEN')
     os.environ['AH_TOKEN_STATE_FILE']=str(Path(td)/'auth.json')
-    os.environ['AH_REFRESH_TOKEN']='unit-refresh'
+    os.environ['AH_REFRESH_TOKEN']='unit-root-refresh'
     calls=[]
     original_post=scanner.post
     def fake_post(path,body,token=None,attempts=2):
-        calls.append(path)
-        return 200,{'access_token':'unit-access','expires_in':3600}
+        calls.append((path,body.get('refreshToken')))
+        return 200,{'access_token':'unit-access','expires_in':3600,'refresh_token':'unit-rotated-refresh'}
     scanner.post=fake_post
     try:
         a1,m1=scanner.token(); s1=scanner.LAST_AUTH_SOURCE
@@ -83,10 +88,18 @@ with tempfile.TemporaryDirectory() as td:
         assert a1==a2=='unit-access'
         assert m1==m2=='user-refresh'
         assert s1=='refresh' and s2=='cache', (s1,s2)
-        assert calls==['/mobile-auth/v1/auth/token/refresh'], calls
+        assert calls==[('/mobile-auth/v1/auth/token/refresh','unit-root-refresh')], calls
         state=Path(os.environ['AH_TOKEN_STATE_FILE'])
-        assert state.exists()
+        saved=json.loads(state.read_text(encoding='utf-8'))
+        assert saved['refreshToken']=='unit-rotated-refresh'
         assert (state.stat().st_mode & 0o777)==0o600
+
+        # Seal the rotated token, delete local state, and prove a fresh process/session can restore it.
+        sealed=Path(td)/'sealed.enc'
+        sealed.write_text(auth_state.seal_state_text('unit-root-refresh'),encoding='utf-8')
+        state.unlink()
+        restored=auth_state.restore_state('unit-root-refresh',sealed)
+        assert restored['refreshToken']=='unit-rotated-refresh'
     finally:
         scanner.post=original_post
         if old_state is None: os.environ.pop('AH_TOKEN_STATE_FILE',None)
@@ -108,4 +121,4 @@ with tempfile.TemporaryDirectory() as td:
     for _ in range(2):
         subprocess.run(['python','-c',code],cwd=ROOT,env=env,check=True)
 
-print('scanner/session/persistence/watchdog/token-reuse self-test: PASS')
+print('scanner/session/persistence/watchdog/token-rotation self-test: PASS')
