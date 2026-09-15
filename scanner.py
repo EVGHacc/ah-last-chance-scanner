@@ -3,6 +3,7 @@ import base64, json, os, time, urllib.request, urllib.error
 from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
+from scripts.auth_state import restore_state
 
 TZ=ZoneInfo('Europe/Amsterdam')
 STORES=[(1463,'AH Blekersvaartweg'),(1348,'AH Zandvoortselaan'),(1135,'AH Casablancastraat')]
@@ -58,11 +59,17 @@ def _jwt_expiry(token):
 
 
 def _load_state():
+    path=_state_path()
     try:
-        data=json.loads(_state_path().read_text(encoding='utf-8'))
-        return data if isinstance(data,dict) else {}
+        data=json.loads(path.read_text(encoding='utf-8'))
+        if isinstance(data,dict):
+            return data
     except Exception:
+        pass
+    configured=os.getenv('AH_REFRESH_TOKEN','').strip()
+    if not configured:
         return {}
+    return restore_state(configured)
 
 
 def _save_state(access,expires_at,refresh=''):
