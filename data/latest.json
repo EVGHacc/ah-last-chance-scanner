@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-16",
   "weekday": "Wednesday",
-  "scheduledSlot": "20:42",
-  "scheduledAt": "2026-09-16T20:42:00+02:00",
-  "rawScheduledSlot": "20:42",
-  "rawScheduledAt": "2026-09-16T20:42:00+02:00",
-  "startedAt": "2026-09-16T20:42:00.065335+02:00",
-  "completedAt": "2026-09-16T20:42:03.307710+02:00",
-  "checkedAt": "2026-09-16T20:42:03.307710+02:00",
+  "scheduledSlot": "20:45",
+  "scheduledAt": "2026-09-16T20:45:00+02:00",
+  "rawScheduledSlot": "20:45",
+  "rawScheduledAt": "2026-09-16T20:45:00+02:00",
+  "startedAt": "2026-09-16T20:45:00.066161+02:00",
+  "completedAt": "2026-09-16T20:45:03.620091+02:00",
+  "checkedAt": "2026-09-16T20:45:03.620091+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -844,18 +844,6 @@
           "markdownExpirationDate": "2026-09-16"
         },
         {
-          "productId": 459347,
-          "title": "AH Tijgerbol wit",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 8,
-          "priceWas": "0.35",
-          "priceNow": "0.26",
-          "markdownExpirationDate": "2026-09-16"
-        },
-        {
           "productId": 230845,
           "title": "AH Liefde & Passie Petit beurre",
           "brand": "AH Liefde & Passie",
@@ -865,6 +853,18 @@
           "stock": 7,
           "priceWas": "1.89",
           "priceNow": "1.42",
+          "markdownExpirationDate": "2026-09-16"
+        },
+        {
+          "productId": 459347,
+          "title": "AH Tijgerbol wit",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 6,
+          "priceWas": "0.35",
+          "priceNow": "0.26",
           "markdownExpirationDate": "2026-09-16"
         },
         {
@@ -1305,11 +1305,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 213,
+      "totalBargainItems": 212,
       "meatItems": 8,
       "meat70Items": 8,
       "meat70Stock": 13.0,
-      "bakeryItems": 37,
+      "bakeryItems": 36,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "items": [
@@ -1673,18 +1673,6 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-16"
-        },
-        {
-          "productId": 230718,
-          "title": "AH Pistolet wit",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.29",
-          "priceNow": "0.25",
           "markdownExpirationDate": "2026-09-16"
         },
         {
