@@ -1,7 +1,12 @@
-name: AH Scanner selftest
+name: AH Scanner live probe
 
 on:
   workflow_dispatch:
+  schedule:
+    # Multiple schedule opportunities avoid relying on one best-effort GitHub cron event.
+    # The gate allows exactly the Amsterdam midday window; zero persistence remains in probe.py.
+    - cron: '18,28,38,48 10 * * *'
+    - cron: '18,28,38,48 11 * * *'
   push:
     branches: [main]
     paths:
@@ -23,23 +28,61 @@ permissions:
   contents: read
 
 jobs:
-  selftest:
+  probe:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
+      - name: Gate scheduled probe to Amsterdam midday window
+        id: gate
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          if [ "$EVENT_NAME" != "schedule" ]; then
+            echo 'run=true' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          python - <<'PY'
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          now=datetime.now(ZoneInfo('Europe/Amsterdam'))
+          actual=os.environ.get('EVENT_SCHEDULE','')
+          # Only the UTC hour corresponding to 12:xx Amsterdam is accepted.
+          offset_hours=int(now.utcoffset().total_seconds()//3600)
+          expected_hour=12-offset_hours
+          valid_schedules={f'18,28,38,48 {expected_hour} * * *'}
+          run=actual in valid_schedules and now.hour == 12
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write(f'run={str(run).lower()}\n')
+          print('Amsterdam=',now.isoformat(),'expected_hour=',expected_hour,'actual=',actual,'run=',run)
+          PY
+
       - uses: actions/checkout@v7
+        if: steps.gate.outputs.run == 'true'
 
       - uses: actions/setup-python@v7
+        if: steps.gate.outputs.run == 'true'
         with:
           python-version: '3.12'
 
       - name: Install auth-state crypto dependency
+        if: steps.gate.outputs.run == 'true'
         run: python -m pip install --disable-pip-version-check --quiet cryptography
 
       - name: Compile scanner stack
+        if: steps.gate.outputs.run == 'true'
         run: python -m py_compile scanner.py probe.py scripts/auth_state.py scripts/recover_ah_auth.py scripts/persist.py scripts/publish.py scripts/session.py scripts/selftest.py scripts/watchdog_targets.py
 
       - name: Test cadence, persistence, encrypted auth state and watchdog invariants
+        if: steps.gate.outputs.run == 'true'
         run: |
           python scripts/auth_state.py
           python scripts/selftest.py
+
+      - name: Live authenticated AH probe
+        if: steps.gate.outputs.run == 'true'
+        env:
+          AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
+        run: python probe.py
