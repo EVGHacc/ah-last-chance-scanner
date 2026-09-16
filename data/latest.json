@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-16",
   "weekday": "Wednesday",
-  "scheduledSlot": "20:27",
-  "scheduledAt": "2026-09-16T20:27:00+02:00",
-  "rawScheduledSlot": "20:27",
-  "rawScheduledAt": "2026-09-16T20:27:00+02:00",
-  "startedAt": "2026-09-16T20:27:00.066138+02:00",
-  "completedAt": "2026-09-16T20:27:03.686438+02:00",
-  "checkedAt": "2026-09-16T20:27:03.686438+02:00",
+  "scheduledSlot": "20:30",
+  "scheduledAt": "2026-09-16T20:30:00+02:00",
+  "rawScheduledSlot": "20:30",
+  "rawScheduledAt": "2026-09-16T20:30:00+02:00",
+  "startedAt": "2026-09-16T20:30:00.065466+02:00",
+  "completedAt": "2026-09-16T20:30:03.211163+02:00",
+  "checkedAt": "2026-09-16T20:30:03.211163+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1228,18 +1228,6 @@
           "markdownExpirationDate": "2026-09-16"
         },
         {
-          "productId": 537022,
-          "title": "AH Pizzabroodje kaas-groente",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "1.09",
-          "priceNow": "0.93",
-          "markdownExpirationDate": "2026-09-16"
-        },
-        {
           "productId": 230704,
           "title": "AH Kaasbroodje",
           "brand": "AH",
@@ -1273,6 +1261,18 @@
           "stock": 1,
           "priceWas": "2.89",
           "priceNow": "2.46",
+          "markdownExpirationDate": "2026-09-16"
+        },
+        {
+          "productId": 537022,
+          "title": "AH Pizzabroodje kaas-groente",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "1.09",
+          "priceNow": "0.93",
           "markdownExpirationDate": "2026-09-16"
         },
         {
