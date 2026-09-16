@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-16",
   "weekday": "Wednesday",
-  "scheduledSlot": "20:18",
-  "scheduledAt": "2026-09-16T20:18:00+02:00",
-  "rawScheduledSlot": "20:18",
-  "rawScheduledAt": "2026-09-16T20:18:00+02:00",
-  "startedAt": "2026-09-16T20:18:00.065721+02:00",
-  "completedAt": "2026-09-16T20:18:03.126891+02:00",
-  "checkedAt": "2026-09-16T20:18:03.126891+02:00",
+  "scheduledSlot": "20:20",
+  "scheduledAt": "2026-09-16T20:20:00+02:00",
+  "rawScheduledSlot": "20:20",
+  "rawScheduledAt": "2026-09-16T20:20:00+02:00",
+  "startedAt": "2026-09-16T20:20:00.068361+02:00",
+  "completedAt": "2026-09-16T20:20:03.307226+02:00",
+  "checkedAt": "2026-09-16T20:20:03.307226+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,8 +25,8 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 215,
-      "meatItems": 9,
+      "totalBargainItems": 216,
+      "meatItems": 10,
       "meat70Items": 6,
       "meat70Stock": 13.0,
       "bakeryItems": 43,
@@ -115,6 +115,18 @@
           "stock": 4,
           "priceWas": "4.39",
           "priceNow": "3.29",
+          "markdownExpirationDate": "2026-09-17"
+        },
+        {
+          "productId": 169422,
+          "title": "AH Varkensbraadworst 2st",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "2.29",
+          "priceNow": "1.72",
           "markdownExpirationDate": "2026-09-17"
         },
         {
@@ -300,18 +312,6 @@
           "markdownExpirationDate": "2026-09-16"
         },
         {
-          "productId": 561013,
-          "title": "AH Liefde & Passie Meergranen",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "2.89",
-          "priceNow": "2.17",
-          "markdownExpirationDate": "2026-09-16"
-        },
-        {
           "productId": 417146,
           "title": "AH Liefde & Passie OerDesem San Francisco",
           "brand": "AH Liefde & Passie",
@@ -345,6 +345,18 @@
           "stock": 1,
           "priceWas": "1.29",
           "priceNow": "0.97",
+          "markdownExpirationDate": "2026-09-16"
+        },
+        {
+          "productId": 561013,
+          "title": "AH Liefde & Passie Meergranen",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.89",
+          "priceNow": "2.17",
           "markdownExpirationDate": "2026-09-16"
         },
         {
@@ -868,18 +880,6 @@
           "markdownExpirationDate": "2026-09-16"
         },
         {
-          "productId": 606048,
-          "title": "AH Liefde & Passie Desem pistolet wit",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-09-16"
-        },
-        {
           "productId": 606103,
           "title": "AH Kip grillworst snack",
           "brand": "AH",
@@ -961,6 +961,18 @@
           "stock": 3,
           "priceWas": "3.19",
           "priceNow": "2.39",
+          "markdownExpirationDate": "2026-09-16"
+        },
+        {
+          "productId": 606048,
+          "title": "AH Liefde & Passie Desem pistolet wit",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-09-16"
         },
         {
