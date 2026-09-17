@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-17",
   "weekday": "Thursday",
-  "scheduledSlot": "21:30",
-  "scheduledAt": "2026-09-17T21:30:00+02:00",
-  "rawScheduledSlot": "21:30",
-  "rawScheduledAt": "2026-09-17T21:30:00+02:00",
-  "startedAt": "2026-09-17T21:30:00.345302+02:00",
-  "completedAt": "2026-09-17T21:30:03.757259+02:00",
-  "checkedAt": "2026-09-17T21:30:03.757259+02:00",
+  "scheduledSlot": "21:33",
+  "scheduledAt": "2026-09-17T21:33:00+02:00",
+  "rawScheduledSlot": "21:33",
+  "rawScheduledAt": "2026-09-17T21:33:00+02:00",
+  "startedAt": "2026-09-17T21:33:00.320230+02:00",
+  "completedAt": "2026-09-17T21:33:03.883290+02:00",
+  "checkedAt": "2026-09-17T21:33:03.883290+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -228,18 +228,6 @@
           "markdownExpirationDate": "2026-09-17"
         },
         {
-          "productId": 417147,
-          "title": "AH Vloerbrood meergranen heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
-          "markdownExpirationDate": "2026-09-17"
-        },
-        {
           "productId": 537022,
           "title": "AH Pizzabroodje kaas-groente",
           "brand": "AH",
@@ -249,6 +237,18 @@
           "stock": 3,
           "priceWas": "1.09",
           "priceNow": "0.82",
+          "markdownExpirationDate": "2026-09-17"
+        },
+        {
+          "productId": 417147,
+          "title": "AH Vloerbrood meergranen heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
           "markdownExpirationDate": "2026-09-17"
         },
         {
@@ -509,8 +509,8 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 230,
-      "meatItems": 13,
+      "totalBargainItems": 229,
+      "meatItems": 12,
       "meat70Items": 7,
       "meat70Stock": 18.0,
       "bakeryItems": 47,
@@ -611,18 +611,6 @@
           "stock": 5,
           "priceWas": "4.50",
           "priceNow": "2.70",
-          "markdownExpirationDate": "2026-09-18"
-        },
-        {
-          "productId": 483912,
-          "title": "AH Greenfields Beefburger bacon 2 stuks",
-          "brand": "AH Greenfields",
-          "size": "250 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "4.99",
-          "priceNow": "2.99",
           "markdownExpirationDate": "2026-09-18"
         },
         {
