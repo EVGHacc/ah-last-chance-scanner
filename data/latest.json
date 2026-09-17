@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-17",
   "weekday": "Thursday",
-  "scheduledSlot": "17:42",
-  "scheduledAt": "2026-09-17T17:42:00+02:00",
-  "rawScheduledSlot": "17:42",
-  "rawScheduledAt": "2026-09-17T17:42:00+02:00",
-  "startedAt": "2026-09-17T17:42:00.358429+02:00",
-  "completedAt": "2026-09-17T17:42:06.034916+02:00",
-  "checkedAt": "2026-09-17T17:42:06.034916+02:00",
+  "scheduledSlot": "17:45",
+  "scheduledAt": "2026-09-17T17:45:00+02:00",
+  "rawScheduledSlot": "17:45",
+  "rawScheduledAt": "2026-09-17T17:45:00+02:00",
+  "startedAt": "2026-09-17T17:45:00.330471+02:00",
+  "completedAt": "2026-09-17T17:45:03.485787+02:00",
+  "checkedAt": "2026-09-17T17:45:03.485787+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -146,18 +146,6 @@
           "markdownExpirationDate": "2026-09-17"
         },
         {
-          "productId": 187583,
-          "title": "AH Duitse biefstuk",
-          "brand": "AH",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "4.75",
-          "priceNow": "2.85",
-          "markdownExpirationDate": "2026-09-17"
-        },
-        {
           "productId": 4044,
           "title": "AH Varkenshaas",
           "brand": "AH",
@@ -227,6 +215,18 @@
           "stock": 1,
           "priceWas": "4.49",
           "priceNow": "2.69",
+          "markdownExpirationDate": "2026-09-17"
+        },
+        {
+          "productId": 187583,
+          "title": "AH Duitse biefstuk",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "4.75",
+          "priceNow": "2.85",
           "markdownExpirationDate": "2026-09-17"
         },
         {
