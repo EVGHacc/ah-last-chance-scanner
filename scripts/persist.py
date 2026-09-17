@@ -38,6 +38,29 @@ def better(candidate,current):
     return str(candidate.get('checkedAt',''))<str(current.get('checkedAt',''))
 
 
+def compact_obs(o):
+    """Keep today.json small enough for normal GitHub Contents/API readers.
+
+    The raw JSONL remains the lossless source.  today.json is the authoritative
+    canonical Vlees view and intentionally excludes Bakery payloads and fields
+    that are not needed to validate/analyse canonical timing.
+    """
+    keep=('schemaVersion','date','weekday','scheduledSlot','scheduledAt',
+          'rawScheduledSlot','rawScheduledAt','checkedAt','delaySeconds',
+          'rawDelaySeconds','status','valid','official1925','authMode')
+    c={k:o.get(k) for k in keep if k in o}
+    c['categories']=['Vlees']
+    c['stores']=[]
+    for s in o.get('stores') or []:
+        cs={k:s.get(k) for k in ('storeId','store','fetched','meatItems','meat70Items','meat70Stock') if k in s}
+        cs['items']=[
+            {k:i.get(k) for k in ('productId','title','brand','size','category','discountPct','stock','priceWas','priceNow','markdownExpirationDate') if k in i}
+            for i in (s.get('items') or []) if i.get('category')=='Vlees'
+        ]
+        c['stores'].append(cs)
+    return c
+
+
 def main():
     latest_path=Path('data/latest.json')
     if not latest_path.exists(): raise SystemExit('data/latest.json ontbreekt')
@@ -65,7 +88,7 @@ def main():
             if exact_canonical_obs(o) and better(o,canonical_by_slot.get(slot)):
                 canonical_by_slot[slot]=o
 
-    observations=[canonical_by_slot[s] for s in SLOTS if s in canonical_by_slot]
+    observations=[compact_obs(canonical_by_slot[s]) for s in SLOTS if s in canonical_by_slot]
     missing=[s for s in SLOTS if s not in canonical_by_slot]
     out={
         'date':date,'expectedSlots':61,'presentSlots':len(observations),'missingSlots':missing,
@@ -75,6 +98,7 @@ def main():
             'authRequired':'user-refresh',
             'canonicalCadenceMinutes':5,
             'rawCadenceMinutes':3,
+            'scope':'canonical Vlees view; lossless raw observations remain in data/YYYY-MM-DD.jsonl',
             'canonicalSelection':'exact rawScheduledSlot equals scheduledSlot; canonical delaySeconds <=240; lowest delay then earliest checkedAt'
         }
     }
