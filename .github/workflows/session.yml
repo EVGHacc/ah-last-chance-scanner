@@ -2,9 +2,6 @@ name: AH supervised evening session
 
 on:
   schedule:
-    # One entry matches 17:00 Amsterdam in CEST, the other in CET.
-    # Starting 30 minutes before the first point gives GitHub scheduler delay
-    # headroom without changing any intended measurement timestamp.
     - cron: '0 15 * * *'
     - cron: '0 16 * * *'
   workflow_dispatch:
@@ -21,53 +18,42 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 350
     steps:
-      - name: Gate scheduled session to the correct Amsterdam occurrence
+      - name: Gate to 17:00 Amsterdam
         id: gate
         shell: bash
         env:
           EVENT_NAME: ${{ github.event_name }}
           EVENT_SCHEDULE: ${{ github.event.schedule }}
         run: |
-          if [ "$EVENT_NAME" != "schedule" ]; then
-            echo 'run=true' >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
+          if [ "$EVENT_NAME" != "schedule" ]; then echo 'run=true' >> "$GITHUB_OUTPUT"; exit 0; fi
           python - <<'PY'
           import os
           from datetime import datetime
           from zoneinfo import ZoneInfo
           now=datetime.now(ZoneInfo('Europe/Amsterdam'))
-          offset_hours=int(now.utcoffset().total_seconds()//3600)
-          expected_utc_hour=17-offset_hours
-          expected=f'0 {expected_utc_hour} * * *'
-          actual=os.environ.get('EVENT_SCHEDULE','')
-          run=actual==expected
-          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
-              f.write(f'run={str(run).lower()}\n')
-          print('Amsterdam offset=',offset_hours,'expected=',expected,'actual=',actual,'run=',run)
+          expected=f"0 {17-int(now.utcoffset().total_seconds()//3600)} * * *"
+          run=os.environ.get('EVENT_SCHEDULE','')==expected
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f: f.write(f'run={str(run).lower()}\n')
+          print('Amsterdam=',now.isoformat(),'expected=',expected,'run=',run)
           PY
 
       - uses: actions/checkout@v7
         if: steps.gate.outputs.run == 'true'
         with:
           fetch-depth: 0
-
       - uses: actions/setup-python@v7
         if: steps.gate.outputs.run == 'true'
         with:
           python-version: '3.12'
-
-      - name: Install auth-state crypto dependency
+      - name: Install auth-state dependency
         if: steps.gate.outputs.run == 'true'
         run: python -m pip install --disable-pip-version-check --quiet cryptography
-
-      - name: Compile and test production logic
+      - name: Test production stack
         if: steps.gate.outputs.run == 'true'
         run: |
-          python -m py_compile scanner.py scripts/auth_state.py scripts/persist.py scripts/publish.py scripts/session.py scripts/watchdog_targets.py
+          python -m py_compile scanner.py scripts/auth_state.py scripts/persist.py scripts/publish.py scripts/session.py scripts/selftest.py
           python scripts/auth_state.py
           python scripts/selftest.py
-
       - name: Run supervised scan session
         if: steps.gate.outputs.run == 'true'
         env:
