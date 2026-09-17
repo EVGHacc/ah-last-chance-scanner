@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-17",
   "weekday": "Thursday",
-  "scheduledSlot": "19:48",
-  "scheduledAt": "2026-09-17T19:48:00+02:00",
-  "rawScheduledSlot": "19:48",
-  "rawScheduledAt": "2026-09-17T19:48:00+02:00",
-  "startedAt": "2026-09-17T19:48:00.349617+02:00",
-  "completedAt": "2026-09-17T19:48:03.755481+02:00",
-  "checkedAt": "2026-09-17T19:48:03.755481+02:00",
+  "scheduledSlot": "19:50",
+  "scheduledAt": "2026-09-17T19:50:00+02:00",
+  "rawScheduledSlot": "19:50",
+  "rawScheduledAt": "2026-09-17T19:50:00+02:00",
+  "startedAt": "2026-09-17T19:50:00.330565+02:00",
+  "completedAt": "2026-09-17T19:50:04.327163+02:00",
+  "checkedAt": "2026-09-17T19:50:04.327163+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -581,11 +581,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 239,
-      "meatItems": 15,
+      "totalBargainItems": 233,
+      "meatItems": 14,
       "meat70Items": 8,
       "meat70Stock": 20.0,
-      "bakeryItems": 49,
+      "bakeryItems": 48,
       "bakery70Items": 2,
       "bakery70Stock": 2.0,
       "items": [
@@ -683,18 +683,6 @@
           "stock": 1,
           "priceWas": "4.49",
           "priceNow": "1.35",
-          "markdownExpirationDate": "2026-09-17"
-        },
-        {
-          "productId": 187583,
-          "title": "AH Duitse biefstuk",
-          "brand": "AH",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "4.75",
-          "priceNow": "2.85",
           "markdownExpirationDate": "2026-09-17"
         },
         {
@@ -1144,18 +1132,6 @@
           "markdownExpirationDate": "2026-09-17"
         },
         {
-          "productId": 590096,
-          "title": "AH Liefde & Passie Biologisch OerDesem blond",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "3.29",
-          "priceNow": "2.80",
-          "markdownExpirationDate": "2026-09-17"
-        },
-        {
           "productId": 468259,
           "title": "AH Kaneelbroodje",
           "brand": "AH",
@@ -1228,6 +1204,18 @@
           "markdownExpirationDate": "2026-09-17"
         },
         {
+          "productId": 590096,
+          "title": "AH Liefde & Passie Biologisch OerDesem blond",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "3.29",
+          "priceNow": "2.80",
+          "markdownExpirationDate": "2026-09-17"
+        },
+        {
           "productId": 606048,
           "title": "AH Liefde & Passie Desem pistolet wit",
           "brand": "AH Liefde & Passie",
@@ -1297,18 +1285,6 @@
           "stock": 1,
           "priceWas": "0.69",
           "priceNow": "0.59",
-          "markdownExpirationDate": "2026-09-17"
-        },
-        {
-          "productId": 230842,
-          "title": "AH Liefde & Passie Spelt",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "3.19",
-          "priceNow": "2.71",
           "markdownExpirationDate": "2026-09-17"
         },
         {
@@ -1532,18 +1508,6 @@
           "markdownExpirationDate": "2026-09-17"
         },
         {
-          "productId": 544584,
-          "title": "AH Liefde & Passie OerDesem Spelt boekweit",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-17"
-        },
-        {
           "productId": 230786,
           "title": "AH Les pains triomphe heel",
           "brand": "AH",
@@ -1553,6 +1517,18 @@
           "stock": 5,
           "priceWas": "2.39",
           "priceNow": "1.79",
+          "markdownExpirationDate": "2026-09-17"
+        },
+        {
+          "productId": 544584,
+          "title": "AH Liefde & Passie OerDesem Spelt boekweit",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-17"
         },
         {
