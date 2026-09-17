@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-17",
   "weekday": "Thursday",
-  "scheduledSlot": "20:40",
-  "scheduledAt": "2026-09-17T20:40:00+02:00",
-  "rawScheduledSlot": "20:40",
-  "rawScheduledAt": "2026-09-17T20:40:00+02:00",
-  "startedAt": "2026-09-17T20:40:00.334302+02:00",
-  "completedAt": "2026-09-17T20:40:03.520157+02:00",
-  "checkedAt": "2026-09-17T20:40:03.520157+02:00",
+  "scheduledSlot": "20:42",
+  "scheduledAt": "2026-09-17T20:42:00+02:00",
+  "rawScheduledSlot": "20:42",
+  "rawScheduledAt": "2026-09-17T20:42:00+02:00",
+  "startedAt": "2026-09-17T20:42:00.348626+02:00",
+  "completedAt": "2026-09-17T20:42:04.460153+02:00",
+  "checkedAt": "2026-09-17T20:42:04.460153+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -348,18 +348,6 @@
           "markdownExpirationDate": "2026-09-17"
         },
         {
-          "productId": 230844,
-          "title": "AH Liefde & Passie Petit cereales",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "1.89",
-          "priceNow": "1.61",
-          "markdownExpirationDate": "2026-09-17"
-        },
-        {
           "productId": 230859,
           "title": "AH Kaas croissant",
           "brand": "AH",
@@ -405,6 +393,18 @@
           "stock": 2,
           "priceWas": "1.19",
           "priceNow": "1.01",
+          "markdownExpirationDate": "2026-09-17"
+        },
+        {
+          "productId": 230844,
+          "title": "AH Liefde & Passie Petit cereales",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "1.89",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-09-17"
         },
         {
