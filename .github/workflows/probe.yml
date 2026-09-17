@@ -16,7 +16,6 @@ on:
       - 'scripts/session.py'
       - 'scripts/selftest.py'
       - '.github/workflows/probe.yml'
-      - '.github/workflows/scanner.yml'
       - '.github/workflows/session.yml'
 
 permissions:
@@ -45,7 +44,6 @@ jobs:
           with open(os.environ['GITHUB_OUTPUT'],'a') as f: f.write(f'run={str(run).lower()}\n')
           print('Amsterdam=',now.isoformat(),'expected=',expected,'run=',run)
           PY
-
       - uses: actions/checkout@v7
         if: steps.gate.outputs.run == 'true'
       - uses: actions/setup-python@v7
