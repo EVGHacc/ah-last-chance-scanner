@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-17",
   "weekday": "Thursday",
-  "scheduledSlot": "20:09",
-  "scheduledAt": "2026-09-17T20:09:00+02:00",
-  "rawScheduledSlot": "20:09",
-  "rawScheduledAt": "2026-09-17T20:09:00+02:00",
-  "startedAt": "2026-09-17T20:09:00.316404+02:00",
-  "completedAt": "2026-09-17T20:09:04.764285+02:00",
-  "checkedAt": "2026-09-17T20:09:04.764285+02:00",
+  "scheduledSlot": "20:10",
+  "scheduledAt": "2026-09-17T20:10:00+02:00",
+  "rawScheduledSlot": "20:10",
+  "rawScheduledAt": "2026-09-17T20:10:00+02:00",
+  "startedAt": "2026-09-17T20:10:00.494971+02:00",
+  "completedAt": "2026-09-17T20:10:05.573371+02:00",
+  "checkedAt": "2026-09-17T20:10:05.573371+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1664,18 +1664,6 @@
           "markdownExpirationDate": "2026-09-17"
         },
         {
-          "productId": 168184,
-          "title": "AH Tijger wit heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "1.99",
-          "priceNow": "1.69",
-          "markdownExpirationDate": "2026-09-17"
-        },
-        {
           "productId": 362217,
           "title": "AH Speltbol",
           "brand": "AH",
@@ -1709,6 +1697,18 @@
           "stock": 3,
           "priceWas": "0.35",
           "priceNow": "0.30",
+          "markdownExpirationDate": "2026-09-17"
+        },
+        {
+          "productId": 168184,
+          "title": "AH Tijger wit heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 3,
+          "priceWas": "1.99",
+          "priceNow": "1.69",
           "markdownExpirationDate": "2026-09-17"
         },
         {
