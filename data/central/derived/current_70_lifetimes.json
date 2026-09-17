@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T06:15:42.423631+00:00",
+  "generated_at": "2026-09-17T21:48:21.085268+00:00",
   "method": {
     "scope": "valid scanner-v5 raw observations",
     "event": "first later valid store scan where a >=70% product is absent and never reappears that day",
@@ -43,6 +43,13 @@
         "1348": 141,
         "1463": 141
       }
+    },
+    "2026-09-17": {
+      "valid_scans_by_store": {
+        "1135": 141,
+        "1348": 141,
+        "1463": 141
+      }
     }
   },
   "source_files": [
@@ -50,68 +57,69 @@
     "2026-09-13.jsonl",
     "2026-09-14.jsonl",
     "2026-09-15.jsonl",
-    "2026-09-16.jsonl"
+    "2026-09-16.jsonl",
+    "2026-09-17.jsonl"
   ],
-  "selected_raw_observations": 440,
+  "selected_raw_observations": 581,
   "summary": {
     "1135": {
-      "episodes_70": 39,
-      "confirmed_persistent_disappearances": 26,
-      "right_censored": 13,
-      "event_rate_pct": 66.7,
-      "mean_minutes_events_only": 94.5,
-      "median_minutes_events_only": 90.0,
-      "p25_minutes_events_only": 36.2,
-      "p75_minutes_events_only": 141.0,
+      "episodes_70": 49,
+      "confirmed_persistent_disappearances": 34,
+      "right_censored": 15,
+      "event_rate_pct": 69.4,
+      "mean_minutes_events_only": 102.4,
+      "median_minutes_events_only": 94.5,
+      "p25_minutes_events_only": 43.2,
+      "p75_minutes_events_only": 152.2,
       "gone_within_15m": {
-        "eligible": 37,
+        "eligible": 47,
         "gone": 4,
-        "pct": 10.8
+        "pct": 8.5
       },
       "gone_within_30m": {
-        "eligible": 37,
-        "gone": 6,
-        "pct": 16.2
+        "eligible": 47,
+        "gone": 7,
+        "pct": 14.9
       },
       "gone_within_60m": {
-        "eligible": 36,
-        "gone": 8,
-        "pct": 22.2
+        "eligible": 46,
+        "gone": 9,
+        "pct": 19.6
       },
       "gone_within_90m": {
-        "eligible": 36,
-        "gone": 15,
-        "pct": 41.7
+        "eligible": 46,
+        "gone": 16,
+        "pct": 34.8
       }
     },
     "1348": {
-      "episodes_70": 36,
-      "confirmed_persistent_disappearances": 17,
-      "right_censored": 19,
-      "event_rate_pct": 47.2,
-      "mean_minutes_events_only": 54.1,
+      "episodes_70": 45,
+      "confirmed_persistent_disappearances": 19,
+      "right_censored": 26,
+      "event_rate_pct": 42.2,
+      "mean_minutes_events_only": 53.8,
       "median_minutes_events_only": 54.0,
       "p25_minutes_events_only": 15.0,
       "p75_minutes_events_only": 75.0,
       "gone_within_15m": {
-        "eligible": 29,
-        "gone": 5,
-        "pct": 17.2
+        "eligible": 38,
+        "gone": 6,
+        "pct": 15.8
       },
       "gone_within_30m": {
-        "eligible": 29,
-        "gone": 5,
-        "pct": 17.2
+        "eligible": 38,
+        "gone": 6,
+        "pct": 15.8
       },
       "gone_within_60m": {
-        "eligible": 29,
-        "gone": 11,
-        "pct": 37.9
+        "eligible": 38,
+        "gone": 12,
+        "pct": 31.6
       },
       "gone_within_90m": {
-        "eligible": 28,
-        "gone": 15,
-        "pct": 53.6
+        "eligible": 37,
+        "gone": 16,
+        "pct": 43.2
       }
     },
     "1463": {
@@ -145,33 +153,33 @@
       }
     },
     "all": {
-      "episodes_70": 98,
-      "confirmed_persistent_disappearances": 55,
-      "right_censored": 43,
-      "event_rate_pct": 56.1,
-      "mean_minutes_events_only": 78.5,
+      "episodes_70": 117,
+      "confirmed_persistent_disappearances": 65,
+      "right_censored": 52,
+      "event_rate_pct": 55.6,
+      "mean_minutes_events_only": 83.7,
       "median_minutes_events_only": 75.0,
-      "p25_minutes_events_only": 45.0,
-      "p75_minutes_events_only": 106.5,
+      "p25_minutes_events_only": 53.0,
+      "p75_minutes_events_only": 123.0,
       "gone_within_15m": {
-        "eligible": 85,
-        "gone": 10,
-        "pct": 11.8
+        "eligible": 104,
+        "gone": 11,
+        "pct": 10.6
       },
       "gone_within_30m": {
-        "eligible": 84,
-        "gone": 12,
-        "pct": 14.3
+        "eligible": 103,
+        "gone": 14,
+        "pct": 13.6
       },
       "gone_within_60m": {
-        "eligible": 83,
-        "gone": 22,
-        "pct": 26.5
+        "eligible": 102,
+        "gone": 24,
+        "pct": 23.5
       },
       "gone_within_90m": {
-        "eligible": 82,
-        "gone": 39,
-        "pct": 47.6
+        "eligible": 101,
+        "gone": 41,
+        "pct": 40.6
       }
     }
   },
@@ -1602,6 +1610,282 @@
       "last_followup": "2026-09-16T22:30:00+02:00",
       "followup_minutes": 237.0,
       "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1135",
+      "product_id": "187580",
+      "product": "AH Gehakt cordon bleu",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T19:03:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-17T21:39:00+02:00",
+      "minutes": 156.0,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 207.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1135",
+      "product_id": "192050",
+      "product": "AH Greenfields Rundergehakt",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T19:03:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-17T20:39:00+02:00",
+      "minutes": 96.0,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 207.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1135",
+      "product_id": "199778",
+      "product": "AH Gehaktballetjes Hollands 12 stuks",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T19:03:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-17T19:21:00+02:00",
+      "minutes": 18.0,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 207.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1135",
+      "product_id": "238946",
+      "product": "AH Rundersoepballetjes",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T18:18:00+02:00",
+      "stock_at_70": 5.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 252.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1135",
+      "product_id": "4044",
+      "product": "AH Varkenshaas",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T19:03:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-17T21:20:00+02:00",
+      "minutes": 137.0,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 207.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1135",
+      "product_id": "425633",
+      "product": "AH Varkensribeye naturel",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T19:03:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-17T21:20:00+02:00",
+      "minutes": 137.0,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 207.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1135",
+      "product_id": "436877",
+      "product": "AH Biologisch Rundergehakt balletjes",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T19:03:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-17T20:39:00+02:00",
+      "minutes": 96.0,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 207.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1135",
+      "product_id": "598621",
+      "product": "AH Filetlapjes à la minute gemarineerd",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T18:18:00+02:00",
+      "stock_at_70": 2.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-17T21:20:00+02:00",
+      "minutes": 182.0,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 252.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1135",
+      "product_id": "603421",
+      "product": "AH Gevulde gehaktballen met stroganoffsaus",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T18:18:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-17T21:39:00+02:00",
+      "minutes": 201.0,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 252.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1135",
+      "product_id": "610029",
+      "product": "AH BBQ partyburger",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T18:18:00+02:00",
+      "stock_at_70": 3.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 252.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1348",
+      "product_id": "187580",
+      "product": "AH Gehakt cordon bleu",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T18:33:00+02:00",
+      "stock_at_70": 6.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 237.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1348",
+      "product_id": "187605",
+      "product": "AH Schnitzel Hongaarse stijl 2 stuks",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T18:33:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-17T18:42:00+02:00",
+      "minutes": 9.0,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 237.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1348",
+      "product_id": "4044",
+      "product": "AH Varkenshaas",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T18:33:00+02:00",
+      "stock_at_70": 2.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 237.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1348",
+      "product_id": "474380",
+      "product": "AH Gehaktbal met ui en jus",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T18:33:00+02:00",
+      "stock_at_70": 1.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 237.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1348",
+      "product_id": "603421",
+      "product": "AH Gevulde gehaktballen met stroganoffsaus",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T18:33:00+02:00",
+      "stock_at_70": 1.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 237.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1348",
+      "product_id": "610029",
+      "product": "AH BBQ partyburger",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T18:33:00+02:00",
+      "stock_at_70": 4.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 237.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1348",
+      "product_id": "610036",
+      "product": "AH BBQ entrecote steak smoked paprika",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T18:33:00+02:00",
+      "stock_at_70": 4.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 237.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1348",
+      "product_id": "612614",
+      "product": "AH BBQ scharrel kipsatéspies",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T18:33:00+02:00",
+      "stock_at_70": 2.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 237.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-17",
+      "store_id": "1348",
+      "product_id": "612617",
+      "product": "AH BBQ scharrel kipfilethaasjes aan spies",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-17T18:33:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-17T20:06:00+02:00",
+      "minutes": 93.0,
+      "last_followup": "2026-09-17T22:30:00+02:00",
+      "followup_minutes": 237.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
     }
   ]
 }
