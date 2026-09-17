@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-17",
   "weekday": "Thursday",
-  "scheduledSlot": "21:00",
-  "scheduledAt": "2026-09-17T21:00:00+02:00",
-  "rawScheduledSlot": "21:00",
-  "rawScheduledAt": "2026-09-17T21:00:00+02:00",
-  "startedAt": "2026-09-17T21:00:00.358323+02:00",
-  "completedAt": "2026-09-17T21:00:03.800437+02:00",
-  "checkedAt": "2026-09-17T21:00:03.800437+02:00",
+  "scheduledSlot": "21:03",
+  "scheduledAt": "2026-09-17T21:03:00+02:00",
+  "rawScheduledSlot": "21:03",
+  "rawScheduledAt": "2026-09-17T21:03:00+02:00",
+  "startedAt": "2026-09-17T21:03:00.374388+02:00",
+  "completedAt": "2026-09-17T21:03:03.860179+02:00",
+  "checkedAt": "2026-09-17T21:03:03.860179+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -210,7 +210,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 10,
+          "stock": 9,
           "priceWas": "3.19",
           "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-17"
@@ -533,11 +533,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 173,
-      "meatItems": 11,
-      "meat70Items": 6,
-      "meat70Stock": 16.0,
-      "bakeryItems": 41,
+      "totalBargainItems": 230,
+      "meatItems": 13,
+      "meat70Items": 7,
+      "meat70Stock": 18.0,
+      "bakeryItems": 47,
       "bakery70Items": 2,
       "bakery70Stock": 2.0,
       "items": [
@@ -575,6 +575,18 @@
           "stock": 4,
           "priceWas": "4.99",
           "priceNow": "1.50",
+          "markdownExpirationDate": "2026-09-17"
+        },
+        {
+          "productId": 4044,
+          "title": "AH Varkenshaas",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
           "markdownExpirationDate": "2026-09-17"
         },
         {
@@ -659,6 +671,18 @@
           "stock": 5,
           "priceWas": "4.99",
           "priceNow": "3.74",
+          "markdownExpirationDate": "2026-09-18"
+        },
+        {
+          "productId": 4041,
+          "title": "AH Schouderkarbonade",
+          "brand": "AH",
+          "size": "ca. 427 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "4.59",
+          "priceNow": "3.44",
           "markdownExpirationDate": "2026-09-18"
         },
         {
@@ -772,6 +796,18 @@
           "markdownExpirationDate": "2026-09-17"
         },
         {
+          "productId": 230710,
+          "title": "AH Ham kaas croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 5,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-17"
+        },
+        {
           "productId": 417148,
           "title": "AH Vloerbrood volkoren heel",
           "brand": "AH",
@@ -820,6 +856,18 @@
           "markdownExpirationDate": "2026-09-17"
         },
         {
+          "productId": 590095,
+          "title": "AH Liefde & Passie Rozijn pistache",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
+          "markdownExpirationDate": "2026-09-17"
+        },
+        {
           "productId": 606049,
           "title": "AH Liefde & Passie Desem pistolet volkoren",
           "brand": "AH Liefde & Passie",
@@ -865,6 +913,30 @@
           "stock": 2,
           "priceWas": "2.29",
           "priceNow": "1.72",
+          "markdownExpirationDate": "2026-09-17"
+        },
+        {
+          "productId": 590397,
+          "title": "AH Kipnuggetbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.39",
+          "priceNow": "1.04",
+          "markdownExpirationDate": "2026-09-17"
+        },
+        {
+          "productId": 595350,
+          "title": "AH Biologisch Batard volkoren zonnepit heel",
+          "brand": "AH Biologisch",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
           "markdownExpirationDate": "2026-09-17"
         },
         {
@@ -937,6 +1009,18 @@
           "stock": 7,
           "priceWas": "0.35",
           "priceNow": "0.30",
+          "markdownExpirationDate": "2026-09-17"
+        },
+        {
+          "productId": 230704,
+          "title": "AH Kaasbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 4,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
           "markdownExpirationDate": "2026-09-17"
         },
         {
@@ -1048,6 +1132,30 @@
           "markdownExpirationDate": "2026-09-17"
         },
         {
+          "productId": 574950,
+          "title": "AH Pizza donut jalapeño cheddar",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "1.39",
+          "priceNow": "1.18",
+          "markdownExpirationDate": "2026-09-17"
+        },
+        {
+          "productId": 590096,
+          "title": "AH Liefde & Passie Biologisch OerDesem blond",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "3.29",
+          "priceNow": "2.80",
+          "markdownExpirationDate": "2026-09-17"
+        },
+        {
           "productId": 606048,
           "title": "AH Liefde & Passie Desem pistolet wit",
           "brand": "AH Liefde & Passie",
@@ -1069,18 +1177,6 @@
           "stock": 1,
           "priceWas": "1.49",
           "priceNow": "1.27",
-          "markdownExpirationDate": "2026-09-17"
-        },
-        {
-          "productId": 125034,
-          "title": "AH Les pains Boulogne half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.29",
-          "priceNow": "1.10",
           "markdownExpirationDate": "2026-09-17"
         },
         {
