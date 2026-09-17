@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-17",
   "weekday": "Thursday",
-  "scheduledSlot": "20:30",
-  "scheduledAt": "2026-09-17T20:30:00+02:00",
-  "rawScheduledSlot": "20:30",
-  "rawScheduledAt": "2026-09-17T20:30:00+02:00",
-  "startedAt": "2026-09-17T20:30:00.341753+02:00",
-  "completedAt": "2026-09-17T20:30:03.478069+02:00",
-  "checkedAt": "2026-09-17T20:30:03.478069+02:00",
+  "scheduledSlot": "20:33",
+  "scheduledAt": "2026-09-17T20:33:00+02:00",
+  "rawScheduledSlot": "20:33",
+  "rawScheduledAt": "2026-09-17T20:33:00+02:00",
+  "startedAt": "2026-09-17T20:33:00.388636+02:00",
+  "completedAt": "2026-09-17T20:33:04.307051+02:00",
+  "checkedAt": "2026-09-17T20:33:04.307051+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,11 +25,11 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 196,
+      "totalBargainItems": 194,
       "meatItems": 13,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 30,
+      "bakeryItems": 29,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -393,18 +393,6 @@
           "stock": 2,
           "priceWas": "1.29",
           "priceNow": "1.10",
-          "markdownExpirationDate": "2026-09-17"
-        },
-        {
-          "productId": 417148,
-          "title": "AH Vloerbrood volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "2.69",
-          "priceNow": "2.29",
           "markdownExpirationDate": "2026-09-17"
         },
         {
@@ -1688,30 +1676,6 @@
           "markdownExpirationDate": "2026-09-17"
         },
         {
-          "productId": 168184,
-          "title": "AH Tijger wit heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "1.99",
-          "priceNow": "1.69",
-          "markdownExpirationDate": "2026-09-17"
-        },
-        {
-          "productId": 231924,
-          "title": "AH Chocoladebroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "0.59",
-          "priceNow": "0.50",
-          "markdownExpirationDate": "2026-09-17"
-        },
-        {
           "productId": 365995,
           "title": "AH Luxe roomboter croissant",
           "brand": "AH",
@@ -1772,6 +1736,18 @@
           "markdownExpirationDate": "2026-09-17"
         },
         {
+          "productId": 168184,
+          "title": "AH Tijger wit heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "1.99",
+          "priceNow": "1.69",
+          "markdownExpirationDate": "2026-09-17"
+        },
+        {
           "productId": 231537,
           "title": "AH Les pains bastille half",
           "brand": "AH",
@@ -1781,6 +1757,18 @@
           "stock": 2,
           "priceWas": "1.29",
           "priceNow": "1.10",
+          "markdownExpirationDate": "2026-09-17"
+        },
+        {
+          "productId": 231924,
+          "title": "AH Chocoladebroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "0.59",
+          "priceNow": "0.50",
           "markdownExpirationDate": "2026-09-17"
         },
         {
