@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T21:48:21.085268+00:00",
+  "generated_at": "2026-09-18T21:48:20.530976+00:00",
   "method": {
     "scope": "valid scanner-v5 raw observations",
     "event": "first later valid store scan where a >=70% product is absent and never reappears that day",
@@ -50,6 +50,13 @@
         "1348": 141,
         "1463": 141
       }
+    },
+    "2026-09-18": {
+      "valid_scans_by_store": {
+        "1135": 141,
+        "1348": 141,
+        "1463": 141
+      }
     }
   },
   "source_files": [
@@ -58,9 +65,10 @@
     "2026-09-14.jsonl",
     "2026-09-15.jsonl",
     "2026-09-16.jsonl",
-    "2026-09-17.jsonl"
+    "2026-09-17.jsonl",
+    "2026-09-18.jsonl"
   ],
-  "selected_raw_observations": 581,
+  "selected_raw_observations": 722,
   "summary": {
     "1135": {
       "episodes_70": 49,
