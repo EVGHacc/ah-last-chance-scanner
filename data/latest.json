@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-18",
   "weekday": "Friday",
-  "scheduledSlot": "19:27",
-  "scheduledAt": "2026-09-18T19:27:00+02:00",
-  "rawScheduledSlot": "19:27",
-  "rawScheduledAt": "2026-09-18T19:27:00+02:00",
-  "startedAt": "2026-09-18T19:27:00.379618+02:00",
-  "completedAt": "2026-09-18T19:27:03.587043+02:00",
-  "checkedAt": "2026-09-18T19:27:03.587043+02:00",
+  "scheduledSlot": "19:30",
+  "scheduledAt": "2026-09-18T19:30:00+02:00",
+  "rawScheduledSlot": "19:30",
+  "rawScheduledAt": "2026-09-18T19:30:00+02:00",
+  "startedAt": "2026-09-18T19:30:00.362558+02:00",
+  "completedAt": "2026-09-18T19:30:03.528012+02:00",
+  "checkedAt": "2026-09-18T19:30:03.528012+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -225,11 +225,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 127,
+      "totalBargainItems": 189,
       "meatItems": 4,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 4,
+      "bakeryItems": 7,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "items": [
@@ -308,6 +308,18 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
+          "productId": 580665,
+          "title": "AH Libanees brood",
+          "brand": "AH",
+          "size": "5 stuks",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 7,
+          "priceWas": "1.99",
+          "priceNow": "1.19",
+          "markdownExpirationDate": "2026-09-21"
+        },
+        {
           "productId": 226137,
           "title": "AH Turks brood",
           "brand": "AH",
@@ -330,6 +342,30 @@
           "priceWas": "2.99",
           "priceNow": "0.90",
           "markdownExpirationDate": "2026-09-23"
+        },
+        {
+          "productId": 582212,
+          "title": "AH Gevouwen flatbread harissa",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.95",
+          "priceNow": "1.46",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 606848,
+          "title": "Tilda Chili naanbrood",
+          "brand": "Tilda",
+          "size": "300 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "3.35",
+          "priceNow": "2.51",
+          "markdownExpirationDate": "2026-09-27"
         }
       ]
     }
