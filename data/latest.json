@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-18",
   "weekday": "Friday",
-  "scheduledSlot": "20:50",
-  "scheduledAt": "2026-09-18T20:50:00+02:00",
-  "rawScheduledSlot": "20:50",
-  "rawScheduledAt": "2026-09-18T20:50:00+02:00",
-  "startedAt": "2026-09-18T20:50:00.325473+02:00",
-  "completedAt": "2026-09-18T20:50:03.376379+02:00",
-  "checkedAt": "2026-09-18T20:50:03.376379+02:00",
+  "scheduledSlot": "20:51",
+  "scheduledAt": "2026-09-18T20:51:00+02:00",
+  "rawScheduledSlot": "20:51",
+  "rawScheduledAt": "2026-09-18T20:51:00+02:00",
+  "startedAt": "2026-09-18T20:51:00.318357+02:00",
+  "completedAt": "2026-09-18T20:51:03.638474+02:00",
+  "checkedAt": "2026-09-18T20:51:03.638474+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 200,
+      "totalBargainItems": 201,
       "meatItems": 7,
       "meat70Items": 0,
       "meat70Stock": 0,
@@ -748,18 +748,6 @@
           "markdownExpirationDate": "2026-09-18"
         },
         {
-          "productId": 466494,
-          "title": "AH Meerzaden croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "0.79",
-          "priceNow": "0.59",
-          "markdownExpirationDate": "2026-09-18"
-        },
-        {
           "productId": 577447,
           "title": "AH Everything bol",
           "brand": "AH",
@@ -853,6 +841,18 @@
           "stock": 3,
           "priceWas": "1.99",
           "priceNow": "1.49",
+          "markdownExpirationDate": "2026-09-18"
+        },
+        {
+          "productId": 466494,
+          "title": "AH Meerzaden croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "0.79",
+          "priceNow": "0.59",
           "markdownExpirationDate": "2026-09-18"
         },
         {
@@ -1149,11 +1149,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 239,
+      "totalBargainItems": 211,
       "meatItems": 4,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 45,
+      "bakeryItems": 40,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "items": [
@@ -1229,18 +1229,6 @@
           "stock": 17,
           "priceWas": "0.99",
           "priceNow": "0.74",
-          "markdownExpirationDate": "2026-09-18"
-        },
-        {
-          "productId": 577447,
-          "title": "AH Everything bol",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 7,
-          "priceWas": "0.79",
-          "priceNow": "0.59",
           "markdownExpirationDate": "2026-09-18"
         },
         {
@@ -1397,18 +1385,6 @@
           "stock": 2,
           "priceWas": "1.45",
           "priceNow": "1.09",
-          "markdownExpirationDate": "2026-09-18"
-        },
-        {
-          "productId": 578301,
-          "title": "AH Liefde & Passie OerDesem zonne rogge",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-18"
         },
         {
@@ -1592,18 +1568,6 @@
           "markdownExpirationDate": "2026-09-18"
         },
         {
-          "productId": 574950,
-          "title": "AH Pizza donut jalapeño cheddar",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.39",
-          "priceNow": "1.18",
-          "markdownExpirationDate": "2026-09-18"
-        },
-        {
           "productId": 230704,
           "title": "AH Kaasbroodje",
           "brand": "AH",
@@ -1688,18 +1652,6 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
-          "productId": 580665,
-          "title": "AH Libanees brood",
-          "brand": "AH",
-          "size": "5 stuks",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 7,
-          "priceWas": "1.99",
-          "priceNow": "1.19",
-          "markdownExpirationDate": "2026-09-21"
-        },
-        {
           "productId": 226137,
           "title": "AH Turks brood",
           "brand": "AH",
@@ -1722,18 +1674,6 @@
           "priceWas": "2.99",
           "priceNow": "0.90",
           "markdownExpirationDate": "2026-09-23"
-        },
-        {
-          "productId": 582212,
-          "title": "AH Gevouwen flatbread harissa",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "1.95",
-          "priceNow": "1.46",
-          "markdownExpirationDate": "2026-09-24"
         },
         {
           "productId": 606848,
