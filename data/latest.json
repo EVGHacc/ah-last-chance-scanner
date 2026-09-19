@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-19",
   "weekday": "Saturday",
-  "scheduledSlot": "19:55",
-  "scheduledAt": "2026-09-19T19:55:00+02:00",
-  "rawScheduledSlot": "19:55",
-  "rawScheduledAt": "2026-09-19T19:55:00+02:00",
-  "startedAt": "2026-09-19T19:55:00.375958+02:00",
-  "completedAt": "2026-09-19T19:55:02.954099+02:00",
-  "checkedAt": "2026-09-19T19:55:02.954099+02:00",
+  "scheduledSlot": "19:57",
+  "scheduledAt": "2026-09-19T19:57:00+02:00",
+  "rawScheduledSlot": "19:57",
+  "rawScheduledAt": "2026-09-19T19:57:00+02:00",
+  "startedAt": "2026-09-19T19:57:00.491936+02:00",
+  "completedAt": "2026-09-19T19:57:03.344335+02:00",
+  "checkedAt": "2026-09-19T19:57:03.344335+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -348,18 +348,6 @@
           "markdownExpirationDate": "2026-09-19"
         },
         {
-          "productId": 230845,
-          "title": "AH Liefde & Passie Petit beurre",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "1.89",
-          "priceNow": "1.61",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
           "productId": 365995,
           "title": "AH Luxe roomboter croissant",
           "brand": "AH",
@@ -501,6 +489,18 @@
           "stock": 1,
           "priceWas": "2.39",
           "priceNow": "2.03",
+          "markdownExpirationDate": "2026-09-19"
+        },
+        {
+          "productId": 230845,
+          "title": "AH Liefde & Passie Petit beurre",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-09-19"
         },
         {
