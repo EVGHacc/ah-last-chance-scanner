@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T21:48:20.530976+00:00",
+  "generated_at": "2026-09-19T21:48:32.291277+00:00",
   "method": {
     "scope": "valid scanner-v5 raw observations",
     "event": "first later valid store scan where a >=70% product is absent and never reappears that day",
@@ -57,6 +57,13 @@
         "1348": 141,
         "1463": 141
       }
+    },
+    "2026-09-19": {
+      "valid_scans_by_store": {
+        "1135": 141,
+        "1348": 141,
+        "1463": 141
+      }
     }
   },
   "source_files": [
@@ -66,9 +73,10 @@
     "2026-09-15.jsonl",
     "2026-09-16.jsonl",
     "2026-09-17.jsonl",
-    "2026-09-18.jsonl"
+    "2026-09-18.jsonl",
+    "2026-09-19.jsonl"
   ],
-  "selected_raw_observations": 722,
+  "selected_raw_observations": 863,
   "summary": {
     "1135": {
       "episodes_70": 49,
@@ -131,63 +139,63 @@
       }
     },
     "1463": {
-      "episodes_70": 23,
-      "confirmed_persistent_disappearances": 12,
-      "right_censored": 11,
-      "event_rate_pct": 52.2,
-      "mean_minutes_events_only": 78.4,
+      "episodes_70": 26,
+      "confirmed_persistent_disappearances": 14,
+      "right_censored": 12,
+      "event_rate_pct": 53.8,
+      "mean_minutes_events_only": 71.9,
       "median_minutes_events_only": 75.0,
-      "p25_minutes_events_only": 64.5,
-      "p75_minutes_events_only": 88.5,
+      "p25_minutes_events_only": 54.8,
+      "p75_minutes_events_only": 77.2,
       "gone_within_15m": {
-        "eligible": 19,
+        "eligible": 22,
         "gone": 1,
-        "pct": 5.3
+        "pct": 4.5
       },
       "gone_within_30m": {
-        "eligible": 18,
-        "gone": 1,
-        "pct": 5.6
+        "eligible": 21,
+        "gone": 2,
+        "pct": 9.5
       },
       "gone_within_60m": {
-        "eligible": 18,
-        "gone": 3,
-        "pct": 16.7
+        "eligible": 21,
+        "gone": 5,
+        "pct": 23.8
       },
       "gone_within_90m": {
-        "eligible": 18,
-        "gone": 9,
-        "pct": 50.0
+        "eligible": 21,
+        "gone": 11,
+        "pct": 52.4
       }
     },
     "all": {
-      "episodes_70": 117,
-      "confirmed_persistent_disappearances": 65,
-      "right_censored": 52,
-      "event_rate_pct": 55.6,
-      "mean_minutes_events_only": 83.7,
+      "episodes_70": 120,
+      "confirmed_persistent_disappearances": 67,
+      "right_censored": 53,
+      "event_rate_pct": 55.8,
+      "mean_minutes_events_only": 82.2,
       "median_minutes_events_only": 75.0,
-      "p25_minutes_events_only": 53.0,
+      "p25_minutes_events_only": 39.5,
       "p75_minutes_events_only": 123.0,
       "gone_within_15m": {
-        "eligible": 104,
+        "eligible": 107,
         "gone": 11,
-        "pct": 10.6
+        "pct": 10.3
       },
       "gone_within_30m": {
-        "eligible": 103,
-        "gone": 14,
-        "pct": 13.6
+        "eligible": 106,
+        "gone": 15,
+        "pct": 14.2
       },
       "gone_within_60m": {
-        "eligible": 102,
-        "gone": 24,
-        "pct": 23.5
+        "eligible": 105,
+        "gone": 26,
+        "pct": 24.8
       },
       "gone_within_90m": {
-        "eligible": 101,
-        "gone": 41,
-        "pct": 40.6
+        "eligible": 104,
+        "gone": 43,
+        "pct": 41.3
       }
     }
   },
@@ -1894,6 +1902,50 @@
       "last_followup": "2026-09-17T22:30:00+02:00",
       "followup_minutes": 237.0,
       "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-19",
+      "store_id": "1463",
+      "product_id": "487398",
+      "product": "AH Lamsfilet",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-19T20:45:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-19T21:27:00+02:00",
+      "minutes": 42.0,
+      "last_followup": "2026-09-19T22:30:00+02:00",
+      "followup_minutes": 105.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-19",
+      "store_id": "1463",
+      "product_id": "571296",
+      "product": "AH Runder-kipchipolata",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-19T21:03:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-19T21:27:00+02:00",
+      "minutes": 24.0,
+      "last_followup": "2026-09-19T22:30:00+02:00",
+      "followup_minutes": 87.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-19",
+      "store_id": "1463",
+      "product_id": "591476",
+      "product": "AH BBQ cote du porc Mexicaanse stijl",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-19T20:50:00+02:00",
+      "stock_at_70": 1.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-19T22:30:00+02:00",
+      "followup_minutes": 100.0,
+      "reason": "still_present_at_last_valid_scan"
     }
   ]
 }
