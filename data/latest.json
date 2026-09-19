@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-19",
   "weekday": "Saturday",
-  "scheduledSlot": "21:06",
-  "scheduledAt": "2026-09-19T21:06:00+02:00",
-  "rawScheduledSlot": "21:06",
-  "rawScheduledAt": "2026-09-19T21:06:00+02:00",
-  "startedAt": "2026-09-19T21:06:00.384319+02:00",
-  "completedAt": "2026-09-19T21:06:03.092345+02:00",
-  "checkedAt": "2026-09-19T21:06:03.092345+02:00",
+  "scheduledSlot": "21:09",
+  "scheduledAt": "2026-09-19T21:09:00+02:00",
+  "rawScheduledSlot": "21:09",
+  "rawScheduledAt": "2026-09-19T21:09:00+02:00",
+  "startedAt": "2026-09-19T21:09:00.410993+02:00",
+  "completedAt": "2026-09-19T21:09:03.240891+02:00",
+  "checkedAt": "2026-09-19T21:09:03.240891+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,8 +25,8 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 230,
-      "meatItems": 28,
+      "totalBargainItems": 234,
+      "meatItems": 32,
       "meat70Items": 3,
       "meat70Stock": 3.0,
       "bakeryItems": 34,
@@ -140,6 +140,18 @@
           "priceWas": "7.49",
           "priceNow": "4.21",
           "markdownExpirationDate": "2026-09-19"
+        },
+        {
+          "productId": 4041,
+          "title": "AH Schouderkarbonade",
+          "brand": "AH",
+          "size": "ca. 427 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 10,
+          "priceWas": "4.59",
+          "priceNow": "3.44",
+          "markdownExpirationDate": "2026-09-20"
         },
         {
           "productId": 436749,
@@ -320,6 +332,42 @@
           "priceWas": "12.99",
           "priceNow": "9.74",
           "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 474380,
+          "title": "AH Gehaktbal met ui en jus",
+          "brand": "AH",
+          "size": "262 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "4.49",
+          "priceNow": "3.37",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 238948,
+          "title": "AH Nasi bami vlees",
+          "brand": "AH",
+          "size": "ca. 350 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "4.04",
+          "priceNow": "3.03",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 4046,
+          "title": "AH Filetlap 2 stuks",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.49",
+          "priceNow": "2.62",
+          "markdownExpirationDate": "2026-09-26"
         },
         {
           "productId": 495643,
@@ -785,11 +833,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 194,
-      "meatItems": 4,
+      "totalBargainItems": 182,
+      "meatItems": 3,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 42,
+      "bakeryItems": 38,
       "bakery70Items": 1,
       "bakery70Stock": 4.0,
       "items": [
@@ -818,18 +866,6 @@
           "markdownExpirationDate": "2026-09-19"
         },
         {
-          "productId": 531849,
-          "title": "AH Scharrel kip kebab",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "5.79",
-          "priceNow": "4.34",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
           "productId": 229797,
           "title": "AH Gelderse rookworst",
           "brand": "AH",
@@ -853,18 +889,6 @@
           "stock": 4,
           "priceWas": "1.19",
           "priceNow": "0.36",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
-          "productId": 417144,
-          "title": "AH Vloerbrood wit heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "2.69",
-          "priceNow": "1.61",
           "markdownExpirationDate": "2026-09-19"
         },
         {
@@ -1204,30 +1228,6 @@
           "markdownExpirationDate": "2026-09-19"
         },
         {
-          "productId": 606049,
-          "title": "AH Liefde & Passie Desem pistolet volkoren",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
-          "productId": 606047,
-          "title": "AH Pistolet volkoren",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.29",
-          "priceNow": "0.25",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
           "productId": 230715,
           "title": "AH Italiaanse bol wit",
           "brand": "AH",
@@ -1297,18 +1297,6 @@
           "stock": 1,
           "priceWas": "0.99",
           "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
-          "productId": 417146,
-          "title": "AH Liefde & Passie OerDesem San Francisco",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "3.19",
-          "priceNow": "2.71",
           "markdownExpirationDate": "2026-09-19"
         },
         {
