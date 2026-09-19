@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-19",
   "weekday": "Saturday",
-  "scheduledSlot": "20:57",
-  "scheduledAt": "2026-09-19T20:57:00+02:00",
-  "rawScheduledSlot": "20:57",
-  "rawScheduledAt": "2026-09-19T20:57:00+02:00",
-  "startedAt": "2026-09-19T20:57:00.389143+02:00",
-  "completedAt": "2026-09-19T20:57:03.021043+02:00",
-  "checkedAt": "2026-09-19T20:57:03.021043+02:00",
+  "scheduledSlot": "21:00",
+  "scheduledAt": "2026-09-19T21:00:00+02:00",
+  "rawScheduledSlot": "21:00",
+  "rawScheduledAt": "2026-09-19T21:00:00+02:00",
+  "startedAt": "2026-09-19T21:00:00.460577+02:00",
+  "completedAt": "2026-09-19T21:00:03.334949+02:00",
+  "checkedAt": "2026-09-19T21:00:03.334949+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,8 +25,8 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 221,
-      "meatItems": 19,
+      "totalBargainItems": 224,
+      "meatItems": 22,
       "meat70Items": 2,
       "meat70Stock": 2.0,
       "bakeryItems": 34,
@@ -178,6 +178,18 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
+          "productId": 610035,
+          "title": "AH BBQ hamburger voorgegaard",
+          "brand": "AH",
+          "size": "320 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 6,
+          "priceWas": "4.49",
+          "priceNow": "3.37",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
           "productId": 457507,
           "title": "AH BBQ tomahawk sweet & smokey",
           "brand": "AH",
@@ -202,6 +214,18 @@
           "markdownExpirationDate": "2026-09-22"
         },
         {
+          "productId": 478109,
+          "title": "AH BBQ varkenshaasspies",
+          "brand": "AH",
+          "size": "ca. 225 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "5.49",
+          "priceNow": "4.12",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
           "productId": 412448,
           "title": "AH BBQ worst tuinkruiden",
           "brand": "AH",
@@ -212,6 +236,18 @@
           "priceWas": "4.50",
           "priceNow": "3.38",
           "markdownExpirationDate": "2026-09-23"
+        },
+        {
+          "productId": 187594,
+          "title": "AH Greenfields Beefburger naturel 2 stuks",
+          "brand": "AH Greenfields",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "4.99",
+          "priceNow": "3.74",
+          "markdownExpirationDate": "2026-09-24"
         },
         {
           "productId": 121630,
