@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-19",
   "weekday": "Saturday",
-  "scheduledSlot": "21:50",
-  "scheduledAt": "2026-09-19T21:50:00+02:00",
-  "rawScheduledSlot": "21:50",
-  "rawScheduledAt": "2026-09-19T21:50:00+02:00",
-  "startedAt": "2026-09-19T21:50:00.389301+02:00",
-  "completedAt": "2026-09-19T21:50:03.547325+02:00",
-  "checkedAt": "2026-09-19T21:50:03.547325+02:00",
+  "scheduledSlot": "21:51",
+  "scheduledAt": "2026-09-19T21:51:00+02:00",
+  "rawScheduledSlot": "21:51",
+  "rawScheduledAt": "2026-09-19T21:51:00+02:00",
+  "startedAt": "2026-09-19T21:51:00.438861+02:00",
+  "completedAt": "2026-09-19T21:51:04.626245+02:00",
+  "checkedAt": "2026-09-19T21:51:04.626245+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1353,11 +1353,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 211,
+      "totalBargainItems": 204,
       "meatItems": 4,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 46,
+      "bakeryItems": 39,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -1412,18 +1412,6 @@
       ],
       "bakery": [
         {
-          "productId": 231536,
-          "title": "AH Tijger wit half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 8,
-          "priceWas": "1.09",
-          "priceNow": "0.65",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
           "productId": 231533,
           "title": "AH Tijger volkoren half",
           "brand": "AH",
@@ -1457,30 +1445,6 @@
           "stock": 4,
           "priceWas": "1.45",
           "priceNow": "0.87",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
-          "productId": 590095,
-          "title": "AH Liefde & Passie Rozijn pistache",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "3.19",
-          "priceNow": "1.91",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
-          "productId": 168184,
-          "title": "AH Tijger wit heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "1.99",
-          "priceNow": "1.19",
           "markdownExpirationDate": "2026-09-19"
         },
         {
@@ -1520,15 +1484,15 @@
           "markdownExpirationDate": "2026-09-19"
         },
         {
-          "productId": 417147,
-          "title": "AH Vloerbrood meergranen heel",
+          "productId": 231536,
+          "title": "AH Tijger wit half",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 40,
-          "stock": 1,
-          "priceWas": "2.69",
-          "priceNow": "1.61",
+          "stock": 2,
+          "priceWas": "1.09",
+          "priceNow": "0.65",
           "markdownExpirationDate": "2026-09-19"
         },
         {
@@ -1562,33 +1526,9 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 7,
+          "stock": 6,
           "priceWas": "0.35",
           "priceNow": "0.26",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
-          "productId": 577447,
-          "title": "AH Everything bol",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 6,
-          "priceWas": "0.79",
-          "priceNow": "0.59",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
-          "productId": 125035,
-          "title": "AH Les pains boulogne heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 6,
-          "priceWas": "2.39",
-          "priceNow": "1.79",
           "markdownExpirationDate": "2026-09-19"
         },
         {
@@ -1616,18 +1556,6 @@
           "markdownExpirationDate": "2026-09-19"
         },
         {
-          "productId": 230724,
-          "title": "AH Saucijzenbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
           "productId": 230731,
           "title": "AH Triangel meergranen bruin",
           "brand": "AH",
@@ -1652,18 +1580,6 @@
           "markdownExpirationDate": "2026-09-19"
         },
         {
-          "productId": 362217,
-          "title": "AH Speltbol",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "0.59",
-          "priceNow": "0.44",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
           "productId": 487304,
           "title": "AH Liefde & Passie OerDesem pompoen",
           "brand": "AH Liefde & Passie",
@@ -1673,6 +1589,18 @@
           "stock": 3,
           "priceWas": "3.19",
           "priceNow": "2.39",
+          "markdownExpirationDate": "2026-09-19"
+        },
+        {
+          "productId": 362217,
+          "title": "AH Speltbol",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "0.59",
+          "priceNow": "0.44",
           "markdownExpirationDate": "2026-09-19"
         },
         {
@@ -1697,6 +1625,18 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-19"
+        },
+        {
+          "productId": 125035,
+          "title": "AH Les pains boulogne heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "2.39",
+          "priceNow": "1.79",
           "markdownExpirationDate": "2026-09-19"
         },
         {
@@ -1745,18 +1685,6 @@
           "stock": 2,
           "priceWas": "0.59",
           "priceNow": "0.44",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
-          "productId": 603533,
-          "title": "AH Kip mango snack",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.49",
-          "priceNow": "1.12",
           "markdownExpirationDate": "2026-09-19"
         },
         {
@@ -1814,21 +1742,9 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
-          "stock": 5,
+          "stock": 4,
           "priceWas": "0.99",
           "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
-          "productId": 606047,
-          "title": "AH Pistolet volkoren",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.29",
-          "priceNow": "0.25",
           "markdownExpirationDate": "2026-09-19"
         },
         {
