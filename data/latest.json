@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-19",
   "weekday": "Saturday",
-  "scheduledSlot": "20:36",
-  "scheduledAt": "2026-09-19T20:36:00+02:00",
-  "rawScheduledSlot": "20:36",
-  "rawScheduledAt": "2026-09-19T20:36:00+02:00",
-  "startedAt": "2026-09-19T20:36:00.315568+02:00",
-  "completedAt": "2026-09-19T20:36:03.048834+02:00",
-  "checkedAt": "2026-09-19T20:36:03.048834+02:00",
+  "scheduledSlot": "20:39",
+  "scheduledAt": "2026-09-19T20:39:00+02:00",
+  "rawScheduledSlot": "20:39",
+  "rawScheduledAt": "2026-09-19T20:39:00+02:00",
+  "startedAt": "2026-09-19T20:39:00.493403+02:00",
+  "completedAt": "2026-09-19T20:39:03.197445+02:00",
+  "checkedAt": "2026-09-19T20:39:03.197445+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -533,11 +533,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 195,
+      "totalBargainItems": 194,
       "meatItems": 4,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 43,
+      "bakeryItems": 42,
       "bakery70Items": 1,
       "bakery70Stock": 4.0,
       "items": [
@@ -688,18 +688,6 @@
           "markdownExpirationDate": "2026-09-19"
         },
         {
-          "productId": 606492,
-          "title": "AH Liefde & Passie Biologisch desem pistolet meerzaden",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.09",
-          "priceNow": "0.82",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
           "productId": 606494,
           "title": "AH Focaccia brie rozemarijn",
           "brand": "AH",
@@ -781,6 +769,18 @@
           "stock": 2,
           "priceWas": "1.45",
           "priceNow": "1.09",
+          "markdownExpirationDate": "2026-09-19"
+        },
+        {
+          "productId": 606492,
+          "title": "AH Liefde & Passie Biologisch desem pistolet meerzaden",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.09",
+          "priceNow": "0.82",
           "markdownExpirationDate": "2026-09-19"
         },
         {
@@ -1072,18 +1072,6 @@
           "markdownExpirationDate": "2026-09-19"
         },
         {
-          "productId": 230845,
-          "title": "AH Liefde & Passie Petit beurre",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.89",
-          "priceNow": "1.61",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
           "productId": 230859,
           "title": "AH Kaas croissant",
           "brand": "AH",
@@ -1292,18 +1280,6 @@
           "markdownExpirationDate": "2026-09-19"
         },
         {
-          "productId": 168184,
-          "title": "AH Tijger wit heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "1.99",
-          "priceNow": "1.49",
-          "markdownExpirationDate": "2026-09-19"
-        },
-        {
           "productId": 252839,
           "title": "AH Vloerbrood meergranen half",
           "brand": "AH",
@@ -1337,6 +1313,18 @@
           "stock": 4,
           "priceWas": "0.59",
           "priceNow": "0.44",
+          "markdownExpirationDate": "2026-09-19"
+        },
+        {
+          "productId": 168184,
+          "title": "AH Tijger wit heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
           "markdownExpirationDate": "2026-09-19"
         },
         {
