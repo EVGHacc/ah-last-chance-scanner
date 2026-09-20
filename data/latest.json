@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-20",
   "weekday": "Sunday",
-  "scheduledSlot": "19:36",
-  "scheduledAt": "2026-09-20T19:36:00+02:00",
-  "rawScheduledSlot": "19:36",
-  "rawScheduledAt": "2026-09-20T19:36:00+02:00",
-  "startedAt": "2026-09-20T19:36:00.381888+02:00",
-  "completedAt": "2026-09-20T19:36:03.677853+02:00",
-  "checkedAt": "2026-09-20T19:36:03.677853+02:00",
+  "scheduledSlot": "19:39",
+  "scheduledAt": "2026-09-20T19:39:00+02:00",
+  "rawScheduledSlot": "19:39",
+  "rawScheduledAt": "2026-09-20T19:39:00+02:00",
+  "startedAt": "2026-09-20T19:39:00.445928+02:00",
+  "completedAt": "2026-09-20T19:39:03.982415+02:00",
+  "checkedAt": "2026-09-20T19:39:03.982415+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 226,
+      "totalBargainItems": 227,
       "meatItems": 14,
       "meat70Items": 0,
       "meat70Stock": 0,
@@ -958,21 +958,9 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 40,
-          "stock": 4,
+          "stock": 3,
           "priceWas": "1.39",
           "priceNow": "0.83",
-          "markdownExpirationDate": "2026-09-20"
-        },
-        {
-          "productId": 606103,
-          "title": "AH Kip grillworst snack",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 4,
-          "priceWas": "1.49",
-          "priceNow": "0.89",
           "markdownExpirationDate": "2026-09-20"
         },
         {
@@ -985,6 +973,18 @@
           "stock": 3,
           "priceWas": "0.99",
           "priceNow": "0.59",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
+          "productId": 606103,
+          "title": "AH Kip grillworst snack",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 3,
+          "priceWas": "1.49",
+          "priceNow": "0.89",
           "markdownExpirationDate": "2026-09-20"
         },
         {
@@ -1024,18 +1024,6 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
-          "productId": 523680,
-          "title": "AH Frikandelbroodje vegan",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "1.19",
-          "priceNow": "0.71",
-          "markdownExpirationDate": "2026-09-20"
-        },
-        {
           "productId": 606074,
           "title": "AH Pistache croissant",
           "brand": "AH",
@@ -1045,6 +1033,18 @@
           "stock": 2,
           "priceWas": "1.29",
           "priceNow": "0.77",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
+          "productId": 523680,
+          "title": "AH Frikandelbroodje vegan",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "1.19",
+          "priceNow": "0.71",
           "markdownExpirationDate": "2026-09-20"
         },
         {
