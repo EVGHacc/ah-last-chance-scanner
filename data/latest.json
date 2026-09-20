@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-20",
   "weekday": "Sunday",
-  "scheduledSlot": "21:42",
-  "scheduledAt": "2026-09-20T21:42:00+02:00",
-  "rawScheduledSlot": "21:42",
-  "rawScheduledAt": "2026-09-20T21:42:00+02:00",
-  "startedAt": "2026-09-20T21:42:00.381204+02:00",
-  "completedAt": "2026-09-20T21:42:05.049767+02:00",
-  "checkedAt": "2026-09-20T21:42:05.049767+02:00",
+  "scheduledSlot": "21:45",
+  "scheduledAt": "2026-09-20T21:45:00+02:00",
+  "rawScheduledSlot": "21:45",
+  "rawScheduledAt": "2026-09-20T21:45:00+02:00",
+  "startedAt": "2026-09-20T21:45:00.379117+02:00",
+  "completedAt": "2026-09-20T21:45:03.397737+02:00",
+  "checkedAt": "2026-09-20T21:45:03.397737+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,11 +25,11 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 196,
+      "totalBargainItems": 226,
       "meatItems": 13,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 37,
+      "bakeryItems": 43,
       "bakery70Items": 1,
       "bakery70Stock": 2.0,
       "items": [
@@ -240,6 +240,18 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
+          "productId": 230704,
+          "title": "AH Kaasbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.59",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
           "productId": 606074,
           "title": "AH Pistache croissant",
           "brand": "AH",
@@ -372,6 +384,18 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
+          "productId": 577444,
+          "title": "AH Worstenbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.29",
+          "priceNow": "0.97",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
           "productId": 606492,
           "title": "AH Liefde & Passie Biologisch desem pistolet meerzaden",
           "brand": "AH Liefde & Passie",
@@ -441,6 +465,18 @@
           "stock": 2,
           "priceWas": "2.69",
           "priceNow": "2.02",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
+          "productId": 571174,
+          "title": "AH Jalapeño kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-09-20"
         },
         {
@@ -528,6 +564,18 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
+          "productId": 577447,
+          "title": "AH Everything bol",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.79",
+          "priceNow": "0.67",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
           "productId": 606048,
           "title": "AH Liefde & Passie Desem pistolet wit",
           "brand": "AH Liefde & Passie",
@@ -600,6 +648,18 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
+          "productId": 580174,
+          "title": "Koopmans Brood uit de pan Italiaans",
+          "brand": "Koopmans",
+          "size": "400 g",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 4,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 589024,
           "title": "Dr. Oetker Kwarktaart eigen fruit bakmix",
           "brand": "Dr. Oetker",
@@ -633,6 +693,18 @@
           "stock": 10,
           "priceWas": "1.99",
           "priceNow": "1.49",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 583877,
+          "title": "AH Bakfeest versierset dino",
+          "brand": "AH",
+          "size": "12 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 5,
+          "priceWas": "2.99",
+          "priceNow": "2.24",
           "markdownExpirationDate": "2026-10-11"
         }
       ]
