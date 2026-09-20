@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-20",
   "weekday": "Sunday",
-  "scheduledSlot": "18:36",
-  "scheduledAt": "2026-09-20T18:36:00+02:00",
-  "rawScheduledSlot": "18:36",
-  "rawScheduledAt": "2026-09-20T18:36:00+02:00",
-  "startedAt": "2026-09-20T18:36:00.388543+02:00",
-  "completedAt": "2026-09-20T18:36:03.317180+02:00",
-  "checkedAt": "2026-09-20T18:36:03.317180+02:00",
+  "scheduledSlot": "18:39",
+  "scheduledAt": "2026-09-20T18:39:00+02:00",
+  "rawScheduledSlot": "18:39",
+  "rawScheduledAt": "2026-09-20T18:39:00+02:00",
+  "startedAt": "2026-09-20T18:39:00.393653+02:00",
+  "completedAt": "2026-09-20T18:39:03.548013+02:00",
+  "checkedAt": "2026-09-20T18:39:03.548013+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -732,18 +732,6 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
-          "productId": 230842,
-          "title": "AH Liefde & Passie Spelt",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "3.19",
-          "priceNow": "2.71",
-          "markdownExpirationDate": "2026-09-20"
-        },
-        {
           "productId": 578301,
           "title": "AH Liefde & Passie OerDesem zonne rogge",
           "brand": "AH Liefde & Passie",
@@ -849,6 +837,18 @@
           "stock": 1,
           "priceWas": "2.39",
           "priceNow": "2.03",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
+          "productId": 230842,
+          "title": "AH Liefde & Passie Spelt",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "3.19",
+          "priceNow": "2.71",
           "markdownExpirationDate": "2026-09-20"
         },
         {
@@ -1509,11 +1509,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 238,
+      "totalBargainItems": 236,
       "meatItems": 3,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 43,
+      "bakeryItems": 42,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -1760,18 +1760,6 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
-          "productId": 468259,
-          "title": "AH Kaneelbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.59",
-          "priceNow": "0.50",
-          "markdownExpirationDate": "2026-09-20"
-        },
-        {
           "productId": 537022,
           "title": "AH Pizzabroodje kaas-groente",
           "brand": "AH",
@@ -1844,15 +1832,15 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
-          "productId": 561013,
-          "title": "AH Liefde & Passie Meergranen",
-          "brand": "AH Liefde & Passie",
+          "productId": 468259,
+          "title": "AH Kaneelbroodje",
+          "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
           "stock": 1,
-          "priceWas": "2.89",
-          "priceNow": "2.46",
+          "priceWas": "0.59",
+          "priceNow": "0.50",
           "markdownExpirationDate": "2026-09-20"
         },
         {
