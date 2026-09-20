@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-20",
   "weekday": "Sunday",
-  "scheduledSlot": "17:57",
-  "scheduledAt": "2026-09-20T17:57:00+02:00",
-  "rawScheduledSlot": "17:57",
-  "rawScheduledAt": "2026-09-20T17:57:00+02:00",
-  "startedAt": "2026-09-20T17:57:00.412639+02:00",
-  "completedAt": "2026-09-20T17:57:05.231280+02:00",
-  "checkedAt": "2026-09-20T17:57:05.231280+02:00",
+  "scheduledSlot": "18:00",
+  "scheduledAt": "2026-09-20T18:00:00+02:00",
+  "rawScheduledSlot": "18:00",
+  "rawScheduledAt": "2026-09-20T18:00:00+02:00",
+  "startedAt": "2026-09-20T18:00:00.378866+02:00",
+  "completedAt": "2026-09-20T18:00:04.084144+02:00",
+  "checkedAt": "2026-09-20T18:00:04.084144+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -941,7 +941,7 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 225,
+      "totalBargainItems": 224,
       "meatItems": 9,
       "meat70Items": 0,
       "meat70Stock": 0,
@@ -1252,18 +1252,6 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
-          "productId": 468259,
-          "title": "AH Kaneelbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "0.59",
-          "priceNow": "0.50",
-          "markdownExpirationDate": "2026-09-20"
-        },
-        {
           "productId": 561021,
           "title": "AH Vloer waldkorn heel",
           "brand": "AH",
@@ -1333,6 +1321,18 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
+          "productId": 468259,
+          "title": "AH Kaneelbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "0.59",
+          "priceNow": "0.50",
           "markdownExpirationDate": "2026-09-20"
         },
         {
@@ -1652,18 +1652,6 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
-          "productId": 606073,
-          "title": "AH Kruidenkaas snack",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "0.89",
-          "priceNow": "0.67",
-          "markdownExpirationDate": "2026-09-20"
-        },
-        {
           "productId": 595350,
           "title": "AH Biologisch Batard volkoren zonnepit heel",
           "brand": "AH Biologisch",
@@ -1673,6 +1661,18 @@
           "stock": 1,
           "priceWas": "2.69",
           "priceNow": "2.02",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
+          "productId": 606073,
+          "title": "AH Kruidenkaas snack",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.89",
+          "priceNow": "0.67",
           "markdownExpirationDate": "2026-09-20"
         },
         {
