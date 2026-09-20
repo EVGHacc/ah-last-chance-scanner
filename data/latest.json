@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-20",
   "weekday": "Sunday",
-  "scheduledSlot": "17:42",
-  "scheduledAt": "2026-09-20T17:42:00+02:00",
-  "rawScheduledSlot": "17:42",
-  "rawScheduledAt": "2026-09-20T17:42:00+02:00",
-  "startedAt": "2026-09-20T17:42:00.383698+02:00",
-  "completedAt": "2026-09-20T17:42:06.576604+02:00",
-  "checkedAt": "2026-09-20T17:42:06.576604+02:00",
+  "scheduledSlot": "17:45",
+  "scheduledAt": "2026-09-20T17:45:00+02:00",
+  "rawScheduledSlot": "17:45",
+  "rawScheduledAt": "2026-09-20T17:45:00+02:00",
+  "startedAt": "2026-09-20T17:45:00.399709+02:00",
+  "completedAt": "2026-09-20T17:45:03.361801+02:00",
+  "checkedAt": "2026-09-20T17:45:03.361801+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,11 +25,11 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 134,
-      "meatItems": 16,
+      "totalBargainItems": 172,
+      "meatItems": 18,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 3,
+      "bakeryItems": 6,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -46,6 +46,18 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
+          "productId": 591476,
+          "title": "AH BBQ cote du porc Mexicaanse stijl",
+          "brand": "AH",
+          "size": "ca. 360 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "5.99",
+          "priceNow": "4.49",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
           "productId": 436749,
           "title": "AH Biologisch Rundertartaar",
           "brand": "AH Biologisch",
@@ -55,6 +67,18 @@
           "stock": 2,
           "priceWas": "6.49",
           "priceNow": "4.87",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
+          "productId": 571284,
+          "title": "AH BBQ hamburger spicy",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "2.99",
           "markdownExpirationDate": "2026-09-20"
         },
         {
@@ -240,6 +264,30 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
+          "productId": 580174,
+          "title": "Koopmans Brood uit de pan Italiaans",
+          "brand": "Koopmans",
+          "size": "400 g",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 5,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 589024,
+          "title": "Dr. Oetker Kwarktaart eigen fruit bakmix",
+          "brand": "Dr. Oetker",
+          "size": "210 g",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 4,
+          "priceWas": "3.29",
+          "priceNow": "1.97",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 370644,
           "title": "Dr. Oetker Mug cake stracciatella",
           "brand": "Dr. Oetker",
@@ -262,6 +310,18 @@
           "priceWas": "1.99",
           "priceNow": "1.49",
           "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 583877,
+          "title": "AH Bakfeest versierset dino",
+          "brand": "AH",
+          "size": "12 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 5,
+          "priceWas": "2.99",
+          "priceNow": "2.24",
+          "markdownExpirationDate": "2026-10-11"
         }
       ]
     },
@@ -269,7 +329,7 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 188,
+      "totalBargainItems": 187,
       "meatItems": 9,
       "meat70Items": 0,
       "meat70Stock": 0,
@@ -453,7 +513,7 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 212,
+      "totalBargainItems": 211,
       "meatItems": 3,
       "meat70Items": 0,
       "meat70Stock": 0,
