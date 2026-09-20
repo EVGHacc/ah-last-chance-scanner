@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-20",
   "weekday": "Sunday",
-  "scheduledSlot": "18:24",
-  "scheduledAt": "2026-09-20T18:24:00+02:00",
-  "rawScheduledSlot": "18:24",
-  "rawScheduledAt": "2026-09-20T18:24:00+02:00",
-  "startedAt": "2026-09-20T18:24:00.396295+02:00",
-  "completedAt": "2026-09-20T18:24:04.524030+02:00",
-  "checkedAt": "2026-09-20T18:24:04.524030+02:00",
+  "scheduledSlot": "18:25",
+  "scheduledAt": "2026-09-20T18:25:00+02:00",
+  "rawScheduledSlot": "18:25",
+  "rawScheduledAt": "2026-09-20T18:25:00+02:00",
+  "startedAt": "2026-09-20T18:25:00.398384+02:00",
+  "completedAt": "2026-09-20T18:25:03.587802+02:00",
+  "checkedAt": "2026-09-20T18:25:03.587802+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -636,18 +636,6 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
-          "productId": 230842,
-          "title": "AH Liefde & Passie Spelt",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "3.19",
-          "priceNow": "2.71",
-          "markdownExpirationDate": "2026-09-20"
-        },
-        {
           "productId": 577444,
           "title": "AH Worstenbroodje",
           "brand": "AH",
@@ -705,6 +693,18 @@
           "stock": 2,
           "priceWas": "2.69",
           "priceNow": "2.29",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
+          "productId": 230842,
+          "title": "AH Liefde & Passie Spelt",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "3.19",
+          "priceNow": "2.71",
           "markdownExpirationDate": "2026-09-20"
         },
         {
@@ -1509,11 +1509,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 239,
+      "totalBargainItems": 204,
       "meatItems": 3,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 43,
+      "bakeryItems": 37,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -1796,42 +1796,6 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
-          "productId": 577447,
-          "title": "AH Everything bol",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.79",
-          "priceNow": "0.67",
-          "markdownExpirationDate": "2026-09-20"
-        },
-        {
-          "productId": 577444,
-          "title": "AH Worstenbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.29",
-          "priceNow": "1.10",
-          "markdownExpirationDate": "2026-09-20"
-        },
-        {
-          "productId": 230704,
-          "title": "AH Kaasbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-20"
-        },
-        {
           "productId": 606492,
           "title": "AH Liefde & Passie Biologisch desem pistolet meerzaden",
           "brand": "AH Liefde & Passie",
@@ -1952,18 +1916,6 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
-          "productId": 580665,
-          "title": "AH Libanees brood",
-          "brand": "AH",
-          "size": "5 stuks",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 7,
-          "priceWas": "1.99",
-          "priceNow": "1.19",
-          "markdownExpirationDate": "2026-09-21"
-        },
-        {
           "productId": 226137,
           "title": "AH Turks brood",
           "brand": "AH",
@@ -2012,18 +1964,6 @@
           "markdownExpirationDate": "2026-09-27"
         },
         {
-          "productId": 583877,
-          "title": "AH Bakfeest versierset dino",
-          "brand": "AH",
-          "size": "12 g",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 12,
-          "priceWas": "2.99",
-          "priceNow": "1.79",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 370644,
           "title": "Dr. Oetker Mug cake stracciatella",
           "brand": "Dr. Oetker",
@@ -2045,18 +1985,6 @@
           "stock": 8,
           "priceWas": "1.69",
           "priceNow": "1.01",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 580174,
-          "title": "Koopmans Brood uit de pan Italiaans",
-          "brand": "Koopmans",
-          "size": "400 g",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 4,
-          "priceWas": "2.69",
-          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-11"
         },
         {
