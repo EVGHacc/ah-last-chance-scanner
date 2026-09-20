@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-20",
   "weekday": "Sunday",
-  "scheduledSlot": "20:57",
-  "scheduledAt": "2026-09-20T20:57:00+02:00",
-  "rawScheduledSlot": "20:57",
-  "rawScheduledAt": "2026-09-20T20:57:00+02:00",
-  "startedAt": "2026-09-20T20:57:00.389039+02:00",
-  "completedAt": "2026-09-20T20:57:03.604815+02:00",
-  "checkedAt": "2026-09-20T20:57:03.604815+02:00",
+  "scheduledSlot": "21:00",
+  "scheduledAt": "2026-09-20T21:00:00+02:00",
+  "rawScheduledSlot": "21:00",
+  "rawScheduledAt": "2026-09-20T21:00:00+02:00",
+  "startedAt": "2026-09-20T21:00:00.404256+02:00",
+  "completedAt": "2026-09-20T21:00:03.818773+02:00",
+  "checkedAt": "2026-09-20T21:00:03.818773+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,14 +25,26 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 178,
-      "meatItems": 12,
+      "totalBargainItems": 226,
+      "meatItems": 13,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 33,
+      "bakeryItems": 43,
       "bakery70Items": 1,
       "bakery70Stock": 2.0,
       "items": [
+        {
+          "productId": 591476,
+          "title": "AH BBQ cote du porc Mexicaanse stijl",
+          "brand": "AH",
+          "size": "ca. 360 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "5.99",
+          "priceNow": "4.49",
+          "markdownExpirationDate": "2026-09-20"
+        },
         {
           "productId": 612606,
           "title": "AH BBQ kipburger",
@@ -228,6 +240,18 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
+          "productId": 230704,
+          "title": "AH Kaasbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.59",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
           "productId": 606074,
           "title": "AH Pistache croissant",
           "brand": "AH",
@@ -261,6 +285,18 @@
           "stock": 1,
           "priceWas": "1.99",
           "priceNow": "1.19",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
+          "productId": 590096,
+          "title": "AH Liefde & Passie Biologisch OerDesem blond",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 9,
+          "priceWas": "3.29",
+          "priceNow": "2.47",
           "markdownExpirationDate": "2026-09-20"
         },
         {
@@ -348,6 +384,18 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
+          "productId": 577444,
+          "title": "AH Worstenbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.29",
+          "priceNow": "0.97",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
           "productId": 606492,
           "title": "AH Liefde & Passie Biologisch desem pistolet meerzaden",
           "brand": "AH Liefde & Passie",
@@ -420,6 +468,42 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
+          "productId": 571174,
+          "title": "AH Jalapeño kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
+          "productId": 590095,
+          "title": "AH Liefde & Passie Rozijn pistache",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
+          "productId": 590397,
+          "title": "AH Kipnuggetbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.39",
+          "priceNow": "1.04",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
           "productId": 168183,
           "title": "AH Tijger volkoren heel",
           "brand": "AH",
@@ -477,6 +561,18 @@
           "stock": 2,
           "priceWas": "0.59",
           "priceNow": "0.50",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
+          "productId": 577447,
+          "title": "AH Everything bol",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.79",
+          "priceNow": "0.67",
           "markdownExpirationDate": "2026-09-20"
         },
         {
@@ -552,6 +648,30 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
+          "productId": 580174,
+          "title": "Koopmans Brood uit de pan Italiaans",
+          "brand": "Koopmans",
+          "size": "400 g",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 4,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 589024,
+          "title": "Dr. Oetker Kwarktaart eigen fruit bakmix",
+          "brand": "Dr. Oetker",
+          "size": "210 g",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 4,
+          "priceWas": "3.29",
+          "priceNow": "1.97",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 370644,
           "title": "Dr. Oetker Mug cake stracciatella",
           "brand": "Dr. Oetker",
@@ -574,6 +694,18 @@
           "priceWas": "1.99",
           "priceNow": "1.49",
           "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 583877,
+          "title": "AH Bakfeest versierset dino",
+          "brand": "AH",
+          "size": "12 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 5,
+          "priceWas": "2.99",
+          "priceNow": "2.24",
+          "markdownExpirationDate": "2026-10-11"
         }
       ]
     },
@@ -581,11 +713,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 190,
+      "totalBargainItems": 210,
       "meatItems": 7,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 32,
+      "bakeryItems": 36,
       "bakery70Items": 1,
       "bakery70Stock": 4.0,
       "items": [
@@ -868,6 +1000,18 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
+          "productId": 577447,
+          "title": "AH Everything bol",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.79",
+          "priceNow": "0.59",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
           "productId": 230704,
           "title": "AH Kaasbroodje",
           "brand": "AH",
@@ -937,6 +1081,30 @@
           "stock": 2,
           "priceWas": "2.69",
           "priceNow": "2.02",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
+          "productId": 571174,
+          "title": "AH Jalapeño kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
+          "productId": 574950,
+          "title": "AH Pizza donut jalapeño cheddar",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.39",
+          "priceNow": "1.04",
           "markdownExpirationDate": "2026-09-20"
         },
         {
@@ -1033,6 +1201,18 @@
           "stock": 14,
           "priceWas": "1.69",
           "priceNow": "1.01",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 580174,
+          "title": "Koopmans Brood uit de pan Italiaans",
+          "brand": "Koopmans",
+          "size": "400 g",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 7,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-11"
         },
         {
