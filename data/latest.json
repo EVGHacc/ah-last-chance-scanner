@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-20",
   "weekday": "Sunday",
-  "scheduledSlot": "18:27",
-  "scheduledAt": "2026-09-20T18:27:00+02:00",
-  "rawScheduledSlot": "18:27",
-  "rawScheduledAt": "2026-09-20T18:27:00+02:00",
-  "startedAt": "2026-09-20T18:27:00.380870+02:00",
-  "completedAt": "2026-09-20T18:27:04.153768+02:00",
-  "checkedAt": "2026-09-20T18:27:04.153768+02:00",
+  "scheduledSlot": "18:30",
+  "scheduledAt": "2026-09-20T18:30:00+02:00",
+  "rawScheduledSlot": "18:30",
+  "rawScheduledAt": "2026-09-20T18:30:00+02:00",
+  "startedAt": "2026-09-20T18:30:00.411030+02:00",
+  "completedAt": "2026-09-20T18:30:03.888601+02:00",
+  "checkedAt": "2026-09-20T18:30:03.888601+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -444,18 +444,6 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
-          "productId": 590095,
-          "title": "AH Liefde & Passie Rozijn pistache",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-20"
-        },
-        {
           "productId": 451137,
           "title": "AH Focaccia mozzarella",
           "brand": "AH",
@@ -501,6 +489,18 @@
           "stock": 3,
           "priceWas": "1.19",
           "priceNow": "0.89",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
+          "productId": 590095,
+          "title": "AH Liefde & Passie Rozijn pistache",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-20"
         },
         {
