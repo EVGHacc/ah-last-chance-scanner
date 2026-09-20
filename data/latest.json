@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-20",
   "weekday": "Sunday",
-  "scheduledSlot": "18:30",
-  "scheduledAt": "2026-09-20T18:30:00+02:00",
-  "rawScheduledSlot": "18:30",
-  "rawScheduledAt": "2026-09-20T18:30:00+02:00",
-  "startedAt": "2026-09-20T18:30:00.411030+02:00",
-  "completedAt": "2026-09-20T18:30:03.888601+02:00",
-  "checkedAt": "2026-09-20T18:30:03.888601+02:00",
+  "scheduledSlot": "18:33",
+  "scheduledAt": "2026-09-20T18:33:00+02:00",
+  "rawScheduledSlot": "18:33",
+  "rawScheduledAt": "2026-09-20T18:33:00+02:00",
+  "startedAt": "2026-09-20T18:33:00.406465+02:00",
+  "completedAt": "2026-09-20T18:33:04.169472+02:00",
+  "checkedAt": "2026-09-20T18:33:04.169472+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -408,18 +408,6 @@
           "markdownExpirationDate": "2026-09-20"
         },
         {
-          "productId": 168183,
-          "title": "AH Tijger volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "1.99",
-          "priceNow": "1.49",
-          "markdownExpirationDate": "2026-09-20"
-        },
-        {
           "productId": 231537,
           "title": "AH Les pains bastille half",
           "brand": "AH",
@@ -441,6 +429,18 @@
           "stock": 4,
           "priceWas": "1.19",
           "priceNow": "0.89",
+          "markdownExpirationDate": "2026-09-20"
+        },
+        {
+          "productId": 168183,
+          "title": "AH Tijger volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
           "markdownExpirationDate": "2026-09-20"
         },
         {
