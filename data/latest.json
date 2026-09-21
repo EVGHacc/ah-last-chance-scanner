@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-21",
   "weekday": "Monday",
-  "scheduledSlot": "20:10",
-  "scheduledAt": "2026-09-21T20:10:00+02:00",
-  "rawScheduledSlot": "20:10",
-  "rawScheduledAt": "2026-09-21T20:10:00+02:00",
-  "startedAt": "2026-09-21T20:10:00.455147+02:00",
-  "completedAt": "2026-09-21T20:10:03.265577+02:00",
-  "checkedAt": "2026-09-21T20:10:03.265577+02:00",
+  "scheduledSlot": "20:12",
+  "scheduledAt": "2026-09-21T20:12:00+02:00",
+  "rawScheduledSlot": "20:12",
+  "rawScheduledAt": "2026-09-21T20:12:00+02:00",
+  "startedAt": "2026-09-21T20:12:00.420742+02:00",
+  "completedAt": "2026-09-21T20:12:03.336291+02:00",
+  "checkedAt": "2026-09-21T20:12:03.336291+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -348,9 +348,9 @@
           "markdownExpirationDate": "2026-09-21"
         },
         {
-          "productId": 595350,
-          "title": "AH Biologisch Batard volkoren zonnepit heel",
-          "brand": "AH Biologisch",
+          "productId": 417148,
+          "title": "AH Vloerbrood volkoren heel",
+          "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
@@ -360,13 +360,13 @@
           "markdownExpirationDate": "2026-09-21"
         },
         {
-          "productId": 417148,
-          "title": "AH Vloerbrood volkoren heel",
-          "brand": "AH",
+          "productId": 595350,
+          "title": "AH Biologisch Batard volkoren zonnepit heel",
+          "brand": "AH Biologisch",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 2,
+          "stock": 1,
           "priceWas": "2.69",
           "priceNow": "2.02",
           "markdownExpirationDate": "2026-09-21"
@@ -489,18 +489,6 @@
           "stock": 3,
           "priceWas": "2.39",
           "priceNow": "2.03",
-          "markdownExpirationDate": "2026-09-21"
-        },
-        {
-          "productId": 365995,
-          "title": "AH Luxe roomboter croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "1.19",
-          "priceNow": "1.01",
           "markdownExpirationDate": "2026-09-21"
         },
         {
@@ -717,6 +705,18 @@
           "stock": 1,
           "priceWas": "0.99",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-09-21"
+        },
+        {
+          "productId": 365995,
+          "title": "AH Luxe roomboter croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "1.19",
+          "priceNow": "1.01",
           "markdownExpirationDate": "2026-09-21"
         },
         {
@@ -1293,7 +1293,7 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 233,
+      "totalBargainItems": 232,
       "meatItems": 2,
       "meat70Items": 1,
       "meat70Stock": 1.0,
