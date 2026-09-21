@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-21",
   "weekday": "Monday",
-  "scheduledSlot": "21:00",
-  "scheduledAt": "2026-09-21T21:00:00+02:00",
-  "rawScheduledSlot": "21:00",
-  "rawScheduledAt": "2026-09-21T21:00:00+02:00",
-  "startedAt": "2026-09-21T21:00:00.493281+02:00",
-  "completedAt": "2026-09-21T21:00:03.458464+02:00",
-  "checkedAt": "2026-09-21T21:00:03.458464+02:00",
+  "scheduledSlot": "21:03",
+  "scheduledAt": "2026-09-21T21:03:00+02:00",
+  "rawScheduledSlot": "21:03",
+  "rawScheduledAt": "2026-09-21T21:03:00+02:00",
+  "startedAt": "2026-09-21T21:03:00.426051+02:00",
+  "completedAt": "2026-09-21T21:03:03.374883+02:00",
+  "checkedAt": "2026-09-21T21:03:03.374883+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -348,6 +348,18 @@
           "markdownExpirationDate": "2026-09-21"
         },
         {
+          "productId": 182711,
+          "title": "AH Les pains bastille heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "2.39",
+          "priceNow": "1.79",
+          "markdownExpirationDate": "2026-09-21"
+        },
+        {
           "productId": 561021,
           "title": "AH Vloer waldkorn heel",
           "brand": "AH",
@@ -504,6 +516,18 @@
           "markdownExpirationDate": "2026-09-21"
         },
         {
+          "productId": 417147,
+          "title": "AH Vloerbrood meergranen heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
+          "markdownExpirationDate": "2026-09-21"
+        },
+        {
           "productId": 487301,
           "title": "AH Rond volkoren heel",
           "brand": "AH",
@@ -525,18 +549,6 @@
           "stock": 5,
           "priceWas": "0.99",
           "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-21"
-        },
-        {
-          "productId": 182711,
-          "title": "AH Les pains bastille heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "2.39",
-          "priceNow": "2.03",
           "markdownExpirationDate": "2026-09-21"
         },
         {
@@ -621,18 +633,6 @@
           "stock": 1,
           "priceWas": "3.19",
           "priceNow": "2.71",
-          "markdownExpirationDate": "2026-09-21"
-        },
-        {
-          "productId": 417147,
-          "title": "AH Vloerbrood meergranen heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "2.69",
-          "priceNow": "2.29",
           "markdownExpirationDate": "2026-09-21"
         },
         {
@@ -880,6 +880,42 @@
           "markdownExpirationDate": "2026-09-21"
         },
         {
+          "productId": 417144,
+          "title": "AH Vloerbrood wit heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
+          "markdownExpirationDate": "2026-09-21"
+        },
+        {
+          "productId": 487301,
+          "title": "AH Rond volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "1.89",
+          "priceNow": "1.13",
+          "markdownExpirationDate": "2026-09-21"
+        },
+        {
+          "productId": 230786,
+          "title": "AH Les pains triomphe heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "2.39",
+          "priceNow": "1.43",
+          "markdownExpirationDate": "2026-09-21"
+        },
+        {
           "productId": 230734,
           "title": "Ah kaiserbroodjes wit nat",
           "brand": "AH",
@@ -976,18 +1012,6 @@
           "markdownExpirationDate": "2026-09-21"
         },
         {
-          "productId": 417144,
-          "title": "AH Vloerbrood wit heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
-          "markdownExpirationDate": "2026-09-21"
-        },
-        {
           "productId": 252839,
           "title": "AH Vloerbrood meergranen half",
           "brand": "AH",
@@ -997,18 +1021,6 @@
           "stock": 2,
           "priceWas": "1.45",
           "priceNow": "1.09",
-          "markdownExpirationDate": "2026-09-21"
-        },
-        {
-          "productId": 487301,
-          "title": "AH Rond volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "1.89",
-          "priceNow": "1.42",
           "markdownExpirationDate": "2026-09-21"
         },
         {
@@ -1057,18 +1069,6 @@
           "stock": 1,
           "priceWas": "0.89",
           "priceNow": "0.67",
-          "markdownExpirationDate": "2026-09-21"
-        },
-        {
-          "productId": 230786,
-          "title": "AH Les pains triomphe heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "2.39",
-          "priceNow": "1.79",
           "markdownExpirationDate": "2026-09-21"
         },
         {
@@ -1293,7 +1293,7 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 241,
+      "totalBargainItems": 242,
       "meatItems": 1,
       "meat70Items": 0,
       "meat70Stock": 0,
