@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-21",
   "weekday": "Monday",
-  "scheduledSlot": "20:21",
-  "scheduledAt": "2026-09-21T20:21:00+02:00",
-  "rawScheduledSlot": "20:21",
-  "rawScheduledAt": "2026-09-21T20:21:00+02:00",
-  "startedAt": "2026-09-21T20:21:00.463284+02:00",
-  "completedAt": "2026-09-21T20:21:03.550059+02:00",
-  "checkedAt": "2026-09-21T20:21:03.550059+02:00",
+  "scheduledSlot": "20:24",
+  "scheduledAt": "2026-09-21T20:24:00+02:00",
+  "rawScheduledSlot": "20:24",
+  "rawScheduledAt": "2026-09-21T20:24:00+02:00",
+  "startedAt": "2026-09-21T20:24:00.417931+02:00",
+  "completedAt": "2026-09-21T20:24:03.582666+02:00",
+  "checkedAt": "2026-09-21T20:24:03.582666+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -786,7 +786,7 @@
           "size": "60 g",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 20,
+          "stock": 18,
           "priceWas": "1.59",
           "priceNow": "1.19",
           "markdownExpirationDate": "2026-10-11"
@@ -904,18 +904,6 @@
           "markdownExpirationDate": "2026-09-21"
         },
         {
-          "productId": 230720,
-          "title": "AH Frikandelbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-09-21"
-        },
-        {
           "productId": 451137,
           "title": "AH Focaccia mozzarella",
           "brand": "AH",
@@ -937,6 +925,18 @@
           "stock": 3,
           "priceWas": "1.49",
           "priceNow": "1.12",
+          "markdownExpirationDate": "2026-09-21"
+        },
+        {
+          "productId": 230720,
+          "title": "AH Frikandelbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-09-21"
         },
         {
