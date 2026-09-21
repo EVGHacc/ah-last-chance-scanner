@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-21",
   "weekday": "Monday",
-  "scheduledSlot": "21:30",
-  "scheduledAt": "2026-09-21T21:30:00+02:00",
-  "rawScheduledSlot": "21:30",
-  "rawScheduledAt": "2026-09-21T21:30:00+02:00",
-  "startedAt": "2026-09-21T21:30:00.480929+02:00",
-  "completedAt": "2026-09-21T21:30:04.255379+02:00",
-  "checkedAt": "2026-09-21T21:30:04.255379+02:00",
+  "scheduledSlot": "21:33",
+  "scheduledAt": "2026-09-21T21:33:00+02:00",
+  "rawScheduledSlot": "21:33",
+  "rawScheduledAt": "2026-09-21T21:33:00+02:00",
+  "startedAt": "2026-09-21T21:33:00.470585+02:00",
+  "completedAt": "2026-09-21T21:33:04.036271+02:00",
+  "checkedAt": "2026-09-21T21:33:04.036271+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,11 +25,11 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 175,
-      "meatItems": 10,
+      "totalBargainItems": 225,
+      "meatItems": 11,
       "meat70Items": 2,
       "meat70Stock": 2.0,
-      "bakeryItems": 44,
+      "bakeryItems": 50,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -67,6 +67,18 @@
           "stock": 4,
           "priceWas": "4.49",
           "priceNow": "3.37",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 3986,
+          "title": "AH Speklap",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "3.39",
+          "priceNow": "2.54",
           "markdownExpirationDate": "2026-09-22"
         },
         {
@@ -165,6 +177,30 @@
           "stock": 6,
           "priceWas": "1.45",
           "priceNow": "0.87",
+          "markdownExpirationDate": "2026-09-21"
+        },
+        {
+          "productId": 577444,
+          "title": "AH Worstenbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 5,
+          "priceWas": "1.29",
+          "priceNow": "0.77",
+          "markdownExpirationDate": "2026-09-21"
+        },
+        {
+          "productId": 578301,
+          "title": "AH Liefde & Passie OerDesem zonne rogge",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 3,
+          "priceWas": "3.19",
+          "priceNow": "1.91",
           "markdownExpirationDate": "2026-09-21"
         },
         {
@@ -360,6 +396,18 @@
           "markdownExpirationDate": "2026-09-21"
         },
         {
+          "productId": 590399,
+          "title": "AH Broodje burger augurk tomatensaus",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
+          "markdownExpirationDate": "2026-09-21"
+        },
+        {
           "productId": 606049,
           "title": "AH Liefde & Passie Desem pistolet volkoren",
           "brand": "AH Liefde & Passie",
@@ -417,6 +465,30 @@
           "stock": 2,
           "priceWas": "0.59",
           "priceNow": "0.44",
+          "markdownExpirationDate": "2026-09-21"
+        },
+        {
+          "productId": 590397,
+          "title": "AH Kipnuggetbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.39",
+          "priceNow": "1.04",
+          "markdownExpirationDate": "2026-09-21"
+        },
+        {
+          "productId": 595350,
+          "title": "AH Biologisch Batard volkoren zonnepit heel",
+          "brand": "AH Biologisch",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
           "markdownExpirationDate": "2026-09-21"
         },
         {
@@ -657,6 +729,18 @@
           "stock": 6,
           "priceWas": "4.19",
           "priceNow": "2.51",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 580174,
+          "title": "Koopmans Brood uit de pan Italiaans",
+          "brand": "Koopmans",
+          "size": "400 g",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 4,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-11"
         },
         {
