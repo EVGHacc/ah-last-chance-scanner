@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T21:48:24.019293+00:00",
+  "generated_at": "2026-09-21T21:48:32.621177+00:00",
   "method": {
     "scope": "valid scanner-v5 raw observations",
     "event": "first later valid store scan where a >=70% product is absent and never reappears that day",
@@ -71,6 +71,13 @@
         "1348": 141,
         "1463": 141
       }
+    },
+    "2026-09-21": {
+      "valid_scans_by_store": {
+        "1135": 141,
+        "1348": 141,
+        "1463": 141
+      }
     }
   },
   "source_files": [
@@ -82,128 +89,129 @@
     "2026-09-17.jsonl",
     "2026-09-18.jsonl",
     "2026-09-19.jsonl",
-    "2026-09-20.jsonl"
+    "2026-09-20.jsonl",
+    "2026-09-21.jsonl"
   ],
-  "selected_raw_observations": 1004,
+  "selected_raw_observations": 1145,
   "summary": {
     "1135": {
-      "episodes_70": 49,
-      "confirmed_persistent_disappearances": 34,
+      "episodes_70": 50,
+      "confirmed_persistent_disappearances": 35,
       "right_censored": 15,
-      "event_rate_pct": 69.4,
-      "mean_minutes_events_only": 102.4,
-      "median_minutes_events_only": 94.5,
-      "p25_minutes_events_only": 43.2,
-      "p75_minutes_events_only": 152.2,
+      "event_rate_pct": 70.0,
+      "mean_minutes_events_only": 102.3,
+      "median_minutes_events_only": 96.0,
+      "p25_minutes_events_only": 49.5,
+      "p75_minutes_events_only": 148.5,
       "gone_within_15m": {
-        "eligible": 47,
+        "eligible": 48,
         "gone": 4,
-        "pct": 8.5
+        "pct": 8.3
       },
       "gone_within_30m": {
-        "eligible": 47,
+        "eligible": 48,
         "gone": 7,
-        "pct": 14.9
+        "pct": 14.6
       },
       "gone_within_60m": {
-        "eligible": 46,
+        "eligible": 47,
         "gone": 9,
-        "pct": 19.6
+        "pct": 19.1
       },
       "gone_within_90m": {
-        "eligible": 46,
+        "eligible": 47,
         "gone": 16,
-        "pct": 34.8
+        "pct": 34.0
       }
     },
     "1348": {
-      "episodes_70": 45,
-      "confirmed_persistent_disappearances": 19,
+      "episodes_70": 48,
+      "confirmed_persistent_disappearances": 22,
       "right_censored": 26,
-      "event_rate_pct": 42.2,
-      "mean_minutes_events_only": 53.8,
+      "event_rate_pct": 45.8,
+      "mean_minutes_events_only": 54.5,
       "median_minutes_events_only": 54.0,
       "p25_minutes_events_only": 15.0,
       "p75_minutes_events_only": 75.0,
       "gone_within_15m": {
-        "eligible": 38,
-        "gone": 6,
-        "pct": 15.8
+        "eligible": 41,
+        "gone": 7,
+        "pct": 17.1
       },
       "gone_within_30m": {
-        "eligible": 38,
-        "gone": 6,
-        "pct": 15.8
+        "eligible": 41,
+        "gone": 7,
+        "pct": 17.1
       },
       "gone_within_60m": {
-        "eligible": 38,
-        "gone": 12,
-        "pct": 31.6
+        "eligible": 41,
+        "gone": 14,
+        "pct": 34.1
       },
       "gone_within_90m": {
-        "eligible": 37,
-        "gone": 16,
-        "pct": 43.2
+        "eligible": 40,
+        "gone": 18,
+        "pct": 45.0
       }
     },
     "1463": {
-      "episodes_70": 26,
-      "confirmed_persistent_disappearances": 14,
-      "right_censored": 12,
-      "event_rate_pct": 53.8,
-      "mean_minutes_events_only": 71.9,
+      "episodes_70": 29,
+      "confirmed_persistent_disappearances": 15,
+      "right_censored": 14,
+      "event_rate_pct": 51.7,
+      "mean_minutes_events_only": 69.9,
       "median_minutes_events_only": 75.0,
-      "p25_minutes_events_only": 54.8,
-      "p75_minutes_events_only": 77.2,
+      "p25_minutes_events_only": 47.5,
+      "p75_minutes_events_only": 76.5,
       "gone_within_15m": {
-        "eligible": 22,
+        "eligible": 25,
         "gone": 1,
-        "pct": 4.5
+        "pct": 4.0
       },
       "gone_within_30m": {
-        "eligible": 21,
+        "eligible": 24,
         "gone": 2,
-        "pct": 9.5
+        "pct": 8.3
       },
       "gone_within_60m": {
-        "eligible": 21,
-        "gone": 5,
-        "pct": 23.8
+        "eligible": 24,
+        "gone": 6,
+        "pct": 25.0
       },
       "gone_within_90m": {
-        "eligible": 21,
-        "gone": 11,
-        "pct": 52.4
+        "eligible": 24,
+        "gone": 12,
+        "pct": 50.0
       }
     },
     "all": {
-      "episodes_70": 120,
-      "confirmed_persistent_disappearances": 67,
-      "right_censored": 53,
-      "event_rate_pct": 55.8,
-      "mean_minutes_events_only": 82.2,
+      "episodes_70": 127,
+      "confirmed_persistent_disappearances": 72,
+      "right_censored": 55,
+      "event_rate_pct": 56.7,
+      "mean_minutes_events_only": 81.0,
       "median_minutes_events_only": 75.0,
-      "p25_minutes_events_only": 39.5,
+      "p25_minutes_events_only": 36.8,
       "p75_minutes_events_only": 123.0,
       "gone_within_15m": {
-        "eligible": 107,
-        "gone": 11,
-        "pct": 10.3
+        "eligible": 114,
+        "gone": 12,
+        "pct": 10.5
       },
       "gone_within_30m": {
-        "eligible": 106,
-        "gone": 15,
+        "eligible": 113,
+        "gone": 16,
         "pct": 14.2
       },
       "gone_within_60m": {
-        "eligible": 105,
-        "gone": 26,
-        "pct": 24.8
+        "eligible": 112,
+        "gone": 29,
+        "pct": 25.9
       },
       "gone_within_90m": {
-        "eligible": 104,
-        "gone": 43,
-        "pct": 41.3
+        "eligible": 111,
+        "gone": 46,
+        "pct": 41.4
       }
     }
   },
@@ -1953,6 +1961,109 @@
       "minutes": null,
       "last_followup": "2026-09-19T22:30:00+02:00",
       "followup_minutes": 100.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-21",
+      "store_id": "1135",
+      "product_id": "531883",
+      "product": "AH Scharrel kipkluifjes",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-21T19:18:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-21T21:00:00+02:00",
+      "minutes": 102.0,
+      "last_followup": "2026-09-21T22:30:00+02:00",
+      "followup_minutes": 192.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-21",
+      "store_id": "1348",
+      "product_id": "211749",
+      "product": "AH Biologisch Kippenvleugels",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-21T19:03:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-21T19:35:00+02:00",
+      "minutes": 32.0,
+      "last_followup": "2026-09-21T22:30:00+02:00",
+      "followup_minutes": 207.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-21",
+      "store_id": "1348",
+      "product_id": "232208",
+      "product": "AH Varkenshaas",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-21T19:03:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-21T19:15:00+02:00",
+      "minutes": 12.0,
+      "last_followup": "2026-09-21T22:30:00+02:00",
+      "followup_minutes": 207.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-21",
+      "store_id": "1348",
+      "product_id": "533085",
+      "product": "AH Scharrel kipburger 2 stuks",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-21T19:03:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-21T21:15:00+02:00",
+      "minutes": 132.0,
+      "last_followup": "2026-09-21T22:30:00+02:00",
+      "followup_minutes": 207.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-21",
+      "store_id": "1463",
+      "product_id": "477571",
+      "product": "AH Scharrel gebraden kipfilet caesar",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-21T19:03:00+02:00",
+      "stock_at_70": 1.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-21T22:30:00+02:00",
+      "followup_minutes": 207.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-21",
+      "store_id": "1463",
+      "product_id": "531859",
+      "product": "AH Scharrel kippenvleugels",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-21T19:03:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-21T19:45:00+02:00",
+      "minutes": 42.0,
+      "last_followup": "2026-09-21T22:30:00+02:00",
+      "followup_minutes": 207.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-21",
+      "store_id": "1463",
+      "product_id": "612606",
+      "product": "AH BBQ kipburger",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-21T19:03:00+02:00",
+      "stock_at_70": 1.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-21T22:30:00+02:00",
+      "followup_minutes": 207.0,
       "reason": "still_present_at_last_valid_scan"
     }
   ]
