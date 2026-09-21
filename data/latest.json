@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-21",
   "weekday": "Monday",
-  "scheduledSlot": "20:18",
-  "scheduledAt": "2026-09-21T20:18:00+02:00",
-  "rawScheduledSlot": "20:18",
-  "rawScheduledAt": "2026-09-21T20:18:00+02:00",
-  "startedAt": "2026-09-21T20:18:00.440061+02:00",
-  "completedAt": "2026-09-21T20:18:03.442255+02:00",
-  "checkedAt": "2026-09-21T20:18:03.442255+02:00",
+  "scheduledSlot": "20:20",
+  "scheduledAt": "2026-09-21T20:20:00+02:00",
+  "rawScheduledSlot": "20:20",
+  "rawScheduledAt": "2026-09-21T20:20:00+02:00",
+  "startedAt": "2026-09-21T20:20:00.445952+02:00",
+  "completedAt": "2026-09-21T20:20:06.172594+02:00",
+  "checkedAt": "2026-09-21T20:20:06.172594+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1436,18 +1436,6 @@
           "markdownExpirationDate": "2026-09-21"
         },
         {
-          "productId": 561013,
-          "title": "AH Liefde & Passie Meergranen",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "2.89",
-          "priceNow": "2.17",
-          "markdownExpirationDate": "2026-09-21"
-        },
-        {
           "productId": 241458,
           "title": "AH Vloerbrood wit half",
           "brand": "AH",
@@ -1505,6 +1493,18 @@
           "stock": 1,
           "priceWas": "1.29",
           "priceNow": "0.97",
+          "markdownExpirationDate": "2026-09-21"
+        },
+        {
+          "productId": 561013,
+          "title": "AH Liefde & Passie Meergranen",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.89",
+          "priceNow": "2.17",
           "markdownExpirationDate": "2026-09-21"
         },
         {
