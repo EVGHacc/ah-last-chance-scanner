@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-21",
   "weekday": "Monday",
-  "scheduledSlot": "20:54",
-  "scheduledAt": "2026-09-21T20:54:00+02:00",
-  "rawScheduledSlot": "20:54",
-  "rawScheduledAt": "2026-09-21T20:54:00+02:00",
-  "startedAt": "2026-09-21T20:54:00.466622+02:00",
-  "completedAt": "2026-09-21T20:54:03.647249+02:00",
-  "checkedAt": "2026-09-21T20:54:03.647249+02:00",
+  "scheduledSlot": "20:55",
+  "scheduledAt": "2026-09-21T20:55:00+02:00",
+  "rawScheduledSlot": "20:55",
+  "rawScheduledAt": "2026-09-21T20:55:00+02:00",
+  "startedAt": "2026-09-21T20:55:00.455845+02:00",
+  "completedAt": "2026-09-21T20:55:03.531529+02:00",
+  "checkedAt": "2026-09-21T20:55:03.531529+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -276,18 +276,6 @@
           "markdownExpirationDate": "2026-09-21"
         },
         {
-          "productId": 230842,
-          "title": "AH Liefde & Passie Spelt",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-21"
-        },
-        {
           "productId": 277519,
           "title": "AH Vloerbrood volkoren half",
           "brand": "AH",
@@ -302,6 +290,18 @@
         {
           "productId": 487305,
           "title": "AH Liefde & Passie Spelt volkoren brood",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
+          "markdownExpirationDate": "2026-09-21"
+        },
+        {
+          "productId": 230842,
+          "title": "AH Liefde & Passie Spelt",
           "brand": "AH Liefde & Passie",
           "size": "per stuk",
           "category": "Bakkerij",
@@ -1293,7 +1293,7 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 238,
+      "totalBargainItems": 239,
       "meatItems": 2,
       "meat70Items": 1,
       "meat70Stock": 1.0,
@@ -1424,18 +1424,6 @@
           "markdownExpirationDate": "2026-09-21"
         },
         {
-          "productId": 230786,
-          "title": "AH Les pains triomphe heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "2.39",
-          "priceNow": "1.79",
-          "markdownExpirationDate": "2026-09-21"
-        },
-        {
           "productId": 241458,
           "title": "AH Vloerbrood wit half",
           "brand": "AH",
@@ -1457,6 +1445,18 @@
           "stock": 2,
           "priceWas": "1.45",
           "priceNow": "1.09",
+          "markdownExpirationDate": "2026-09-21"
+        },
+        {
+          "productId": 230786,
+          "title": "AH Les pains triomphe heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "2.39",
+          "priceNow": "1.79",
           "markdownExpirationDate": "2026-09-21"
         },
         {
