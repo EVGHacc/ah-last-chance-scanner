@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-22",
   "weekday": "Tuesday",
-  "scheduledSlot": "20:18",
-  "scheduledAt": "2026-09-22T20:18:00+02:00",
-  "rawScheduledSlot": "20:18",
-  "rawScheduledAt": "2026-09-22T20:18:00+02:00",
-  "startedAt": "2026-09-22T20:18:00.335941+02:00",
-  "completedAt": "2026-09-22T20:18:03.509061+02:00",
-  "checkedAt": "2026-09-22T20:18:03.509061+02:00",
+  "scheduledSlot": "20:20",
+  "scheduledAt": "2026-09-22T20:20:00+02:00",
+  "rawScheduledSlot": "20:20",
+  "rawScheduledAt": "2026-09-22T20:20:00+02:00",
+  "startedAt": "2026-09-22T20:20:00.553646+02:00",
+  "completedAt": "2026-09-22T20:20:03.700118+02:00",
+  "checkedAt": "2026-09-22T20:20:03.700118+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -771,18 +771,6 @@
           "markdownExpirationDate": "2026-09-22"
         },
         {
-          "productId": 561020,
-          "title": "AH Vloer waldkorn half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "1.45",
-          "priceNow": "1.09",
-          "markdownExpirationDate": "2026-09-22"
-        },
-        {
           "productId": 606777,
           "title": "AH Borek kip gyros",
           "brand": "AH",
@@ -804,6 +792,18 @@
           "stock": 2,
           "priceWas": "2.39",
           "priceNow": "1.79",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 561020,
+          "title": "AH Vloer waldkorn half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.45",
+          "priceNow": "1.09",
           "markdownExpirationDate": "2026-09-22"
         },
         {
