@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-22",
   "weekday": "Tuesday",
-  "scheduledSlot": "19:50",
-  "scheduledAt": "2026-09-22T19:50:00+02:00",
-  "rawScheduledSlot": "19:50",
-  "rawScheduledAt": "2026-09-22T19:50:00+02:00",
-  "startedAt": "2026-09-22T19:50:00.339572+02:00",
-  "completedAt": "2026-09-22T19:50:03.114879+02:00",
-  "checkedAt": "2026-09-22T19:50:03.114879+02:00",
+  "scheduledSlot": "19:51",
+  "scheduledAt": "2026-09-22T19:51:00+02:00",
+  "rawScheduledSlot": "19:51",
+  "rawScheduledAt": "2026-09-22T19:51:00+02:00",
+  "startedAt": "2026-09-22T19:51:00.366605+02:00",
+  "completedAt": "2026-09-22T19:51:03.621273+02:00",
+  "checkedAt": "2026-09-22T19:51:03.621273+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 224,
+      "totalBargainItems": 225,
       "meatItems": 3,
       "meat70Items": 2,
       "meat70Stock": 3.0,
@@ -1220,11 +1220,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 170,
-      "meatItems": 4,
-      "meat70Items": 4,
-      "meat70Stock": 6.0,
-      "bakeryItems": 37,
+      "totalBargainItems": 243,
+      "meatItems": 6,
+      "meat70Items": 5,
+      "meat70Stock": 7.0,
+      "bakeryItems": 48,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "items": [
@@ -1238,6 +1238,18 @@
           "stock": 3,
           "priceWas": "9.29",
           "priceNow": "2.79",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 569380,
+          "title": "Cucina Kipshoarma",
+          "brand": "Cucina",
+          "size": "ca. 400 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "14.98",
+          "priceNow": "4.49",
           "markdownExpirationDate": "2026-09-22"
         },
         {
@@ -1275,6 +1287,18 @@
           "priceWas": "5.07",
           "priceNow": "1.52",
           "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 454769,
+          "title": "AH Scharrel kipreepjes Italiaans gebraden",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "3.99",
+          "priceNow": "2.99",
+          "markdownExpirationDate": "2026-09-25"
         }
       ],
       "bakery": [
@@ -1288,6 +1312,18 @@
           "stock": 1,
           "priceWas": "2.99",
           "priceNow": "0.90",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 595350,
+          "title": "AH Biologisch Batard volkoren zonnepit heel",
+          "brand": "AH Biologisch",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-09-22"
         },
         {
@@ -1312,6 +1348,30 @@
           "stock": 6,
           "priceWas": "0.99",
           "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 590397,
+          "title": "AH Kipnuggetbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 5,
+          "priceWas": "1.39",
+          "priceNow": "1.04",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 590399,
+          "title": "AH Broodje burger augurk tomatensaus",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
           "markdownExpirationDate": "2026-09-22"
         },
         {
@@ -1372,6 +1432,18 @@
           "stock": 3,
           "priceWas": "1.99",
           "priceNow": "1.49",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 584032,
+          "title": "AH Rond wit sesam heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "1.42",
           "markdownExpirationDate": "2026-09-22"
         },
         {
@@ -1514,6 +1586,30 @@
           "category": "Bakkerij",
           "discountPct": 15,
           "stock": 2,
+          "priceWas": "0.59",
+          "priceNow": "0.50",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 571174,
+          "title": "AH Jalapeño kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 597345,
+          "title": "AH Pretzel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
           "priceWas": "0.59",
           "priceNow": "0.50",
           "markdownExpirationDate": "2026-09-22"
@@ -1675,6 +1771,42 @@
           "markdownExpirationDate": "2026-09-27"
         },
         {
+          "productId": 591790,
+          "title": "AH Peshwari naanbrood",
+          "brand": "AH",
+          "size": "250 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
+          "markdownExpirationDate": "2026-09-27"
+        },
+        {
+          "productId": 578706,
+          "title": "AH Eierkoeken volkoren",
+          "brand": "AH",
+          "size": "360 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
+          "productId": 578973,
+          "title": "AH Gevouwen flatbread naturel",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
           "productId": 370644,
           "title": "Dr. Oetker Mug cake stracciatella",
           "brand": "Dr. Oetker",
@@ -1708,6 +1840,30 @@
           "stock": 4,
           "priceWas": "4.19",
           "priceNow": "2.51",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 580174,
+          "title": "Koopmans Brood uit de pan Italiaans",
+          "brand": "Koopmans",
+          "size": "400 g",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 589024,
+          "title": "Dr. Oetker Kwarktaart eigen fruit bakmix",
+          "brand": "Dr. Oetker",
+          "size": "210 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "3.29",
+          "priceNow": "2.47",
           "markdownExpirationDate": "2026-10-11"
         },
         {
