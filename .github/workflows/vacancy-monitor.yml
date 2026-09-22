@@ -1,4 +1,4 @@
-name: Vacancy Monitor 94
+name: Vacancy Monitor 95
 
 on:
   schedule:
@@ -15,7 +15,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: vacancy-monitor-94
+  group: vacancy-monitor-95
   cancel-in-progress: false
 
 jobs:
@@ -33,7 +33,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r vacancy-monitor/requirements.txt
           python -m playwright install --with-deps chromium
-      - name: Scan all 94 organisations
+      - name: Scan all 95 organisations
         env:
           VACANCY_TIMEOUT: "10"
           VACANCY_WORKERS: "16"
@@ -47,8 +47,8 @@ jobs:
           if not p.exists():
               raise SystemExit("latest.json missing")
           d=json.loads(p.read_text())
-          assert d["total_expected"] == 94
-          assert d["total_classified"] == 94
+          assert d["total_expected"] == 95
+          assert d["total_classified"] == 95
           assert d["complete"] is True
           print(json.dumps({
             "run_date": d["run_date"],

@@ -45,7 +45,7 @@ def load_registry():
             r["seed_urls"]=[x for x in (r.get("seed_urls") or "").split(";") if x]
             r["allowed_domains"]=[x for x in (r.get("allowed_domains") or "").split(";") if x]
             r["no_public_hint"]=r["no_public_hint"]=="1"; out.append(r)
-    if len(out)!=94: raise RuntimeError(f"registry count {len(out)} != 94")
+    if len(out)!=95: raise RuntimeError(f"registry count {len(out)} != 95")
     return out
 
 def fetch(u,method="http"):
@@ -172,8 +172,8 @@ def main():
     for r in rs:
         for j in r["jobs"]:
             if j.get("apply_live"): jobs.append({**j,"organisation":r["name"],"kind":r["kind"],"is_new":j["url"] not in old})
-    ok=94-counts["technical_failure"]
-    payload={"schema_version":1,"run_date":nldate(),"started_at":started,"completed_at":iso(),"total_expected":94,"total_classified":len(rs),"complete":len(rs)==94,"coverage_percent":round(100*len(rs)/94,1),"successful_control_count":ok,"successful_control_percent":round(100*ok/94,1),"counts":counts,"counts_by_kind":bykind,"technical_failures":[{"name":r["name"],"kind":r["kind"],"error":r["error"],"routes_tried":r["routes_tried"]} for r in rs if r["status"]=="technical_failure"],"live_relevant_jobs":jobs,"organisations":rs}
+    ok=95-counts["technical_failure"]
+    payload={"schema_version":1,"run_date":nldate(),"started_at":started,"completed_at":iso(),"total_expected":95,"total_classified":len(rs),"complete":len(rs)==95,"coverage_percent":round(100*len(rs)/95,1),"successful_control_count":ok,"successful_control_percent":round(100*ok/95,1),"counts":counts,"counts_by_kind":bykind,"technical_failures":[{"name":r["name"],"kind":r["kind"],"error":r["error"],"routes_tried":r["routes_tried"]} for r in rs if r["status"]=="technical_failure"],"live_relevant_jobs":jobs,"organisations":rs}
     text=json.dumps(payload,ensure_ascii=False,indent=2); latest.write_text(text); (DATA/f'{payload["run_date"]}.json').write_text(text)
     print(json.dumps({"complete":payload["complete"],"coverage":payload["coverage_percent"],"successful_control":payload["successful_control_percent"],"counts":counts,"live_relevant_jobs":len(jobs),"technical_failure_names":[x["name"] for x in payload["technical_failures"]]},ensure_ascii=False,indent=2))
 
