@@ -2,20 +2,20 @@
   "schemaVersion": 5,
   "date": "2026-09-22",
   "weekday": "Tuesday",
-  "scheduledSlot": "17:30",
-  "scheduledAt": "2026-09-22T17:30:00+02:00",
-  "rawScheduledSlot": "17:30",
-  "rawScheduledAt": "2026-09-22T17:30:00+02:00",
-  "startedAt": "2026-09-22T17:30:00.509901+02:00",
-  "completedAt": "2026-09-22T17:30:03.631112+02:00",
-  "checkedAt": "2026-09-22T17:30:03.631112+02:00",
+  "scheduledSlot": "17:33",
+  "scheduledAt": "2026-09-22T17:33:00+02:00",
+  "rawScheduledSlot": "17:33",
+  "rawScheduledAt": "2026-09-22T17:33:00+02:00",
+  "startedAt": "2026-09-22T17:33:00.348408+02:00",
+  "completedAt": "2026-09-22T17:33:03.191128+02:00",
+  "checkedAt": "2026-09-22T17:33:03.191128+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
   "valid": true,
   "official1925": false,
   "authMode": "user-refresh",
-  "authTokenSource": "refresh",
+  "authTokenSource": "cache",
   "categories": [
     "Vlees",
     "Bakkerij"
@@ -34,6 +34,18 @@
       "bakery70Stock": 0,
       "items": [
         {
+          "productId": 477571,
+          "title": "AH Scharrel gebraden kipfilet caesar",
+          "brand": "AH",
+          "size": "ca. 150 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "3.79",
+          "priceNow": "2.27",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
           "productId": 3986,
           "title": "AH Speklap",
           "brand": "AH",
@@ -43,18 +55,6 @@
           "stock": 1,
           "priceWas": "3.39",
           "priceNow": "2.03",
-          "markdownExpirationDate": "2026-09-22"
-        },
-        {
-          "productId": 477571,
-          "title": "AH Scharrel gebraden kipfilet caesar",
-          "brand": "AH",
-          "size": "ca. 150 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "3.79",
-          "priceNow": "2.84",
           "markdownExpirationDate": "2026-09-22"
         }
       ],
@@ -189,10 +189,10 @@
           "brand": "AH",
           "size": "200 g",
           "category": "Bakkerij",
-          "discountPct": 25,
+          "discountPct": 40,
           "stock": 1,
           "priceWas": "1.89",
-          "priceNow": "1.42",
+          "priceNow": "1.13",
           "markdownExpirationDate": "2026-09-23"
         },
         {
@@ -373,10 +373,10 @@
           "brand": "AH",
           "size": "4 stuks",
           "category": "Bakkerij",
-          "discountPct": 25,
+          "discountPct": 40,
           "stock": 5,
           "priceWas": "2.99",
-          "priceNow": "2.24",
+          "priceNow": "1.79",
           "markdownExpirationDate": "2026-09-22"
         },
         {
