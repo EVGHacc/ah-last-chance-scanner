@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-22",
   "weekday": "Tuesday",
-  "scheduledSlot": "21:35",
-  "scheduledAt": "2026-09-22T21:35:00+02:00",
-  "rawScheduledSlot": "21:35",
-  "rawScheduledAt": "2026-09-22T21:35:00+02:00",
-  "startedAt": "2026-09-22T21:35:00.416373+02:00",
-  "completedAt": "2026-09-22T21:35:03.666135+02:00",
-  "checkedAt": "2026-09-22T21:35:03.666135+02:00",
+  "scheduledSlot": "21:36",
+  "scheduledAt": "2026-09-22T21:36:00+02:00",
+  "rawScheduledSlot": "21:36",
+  "rawScheduledAt": "2026-09-22T21:36:00+02:00",
+  "startedAt": "2026-09-22T21:36:00.360435+02:00",
+  "completedAt": "2026-09-22T21:36:03.299841+02:00",
+  "checkedAt": "2026-09-22T21:36:03.299841+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1531,18 +1531,6 @@
           "markdownExpirationDate": "2026-09-22"
         },
         {
-          "productId": 230859,
-          "title": "AH Kaas croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-22"
-        },
-        {
           "productId": 606048,
           "title": "AH Liefde & Passie Desem pistolet wit",
           "brand": "AH Liefde & Passie",
@@ -1636,6 +1624,18 @@
           "stock": 1,
           "priceWas": "1.19",
           "priceNow": "1.01",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 230859,
+          "title": "AH Kaas croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
           "markdownExpirationDate": "2026-09-22"
         },
         {
