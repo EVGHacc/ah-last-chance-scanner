@@ -1,0 +1,72 @@
+name: Vacancy Monitor 94
+
+on:
+  schedule:
+    - cron: "30 5 * * 1-5"
+  workflow_dispatch:
+  push:
+    paths:
+      - "vacancy-monitor/registry.tsv"
+      - "vacancy-monitor/scanner.py"
+      - "vacancy-monitor/requirements.txt"
+      - ".github/workflows/vacancy-monitor.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vacancy-monitor-94
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install scanner dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r vacancy-monitor/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Scan all 94 organisations
+        env:
+          VACANCY_TIMEOUT: "10"
+          VACANCY_WORKERS: "16"
+        run: python vacancy-monitor/scanner.py
+      - name: Validate snapshot
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("vacancy-monitor/data/latest.json")
+          if not p.exists():
+              raise SystemExit("latest.json missing")
+          d=json.loads(p.read_text())
+          assert d["total_expected"] == 94
+          assert d["total_classified"] == 94
+          assert d["complete"] is True
+          print(json.dumps({
+            "run_date": d["run_date"],
+            "coverage": d["coverage_percent"],
+            "successful_control": d["successful_control_percent"],
+            "counts": d["counts"],
+            "technical_failures": [x["name"] for x in d["technical_failures"]],
+            "live_relevant_jobs": len(d["live_relevant_jobs"])
+          }, ensure_ascii=False, indent=2))
+          PY
+      - name: Persist daily snapshot
+        run: |
+          git config user.name "vacancy-monitor-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add vacancy-monitor/data
+          if git diff --cached --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "Vacancy monitor snapshot $(date -u +%F)"
+            git push
+          fi
