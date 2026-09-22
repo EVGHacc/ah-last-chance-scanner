@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-22",
   "weekday": "Tuesday",
-  "scheduledSlot": "20:00",
-  "scheduledAt": "2026-09-22T20:00:00+02:00",
-  "rawScheduledSlot": "20:00",
-  "rawScheduledAt": "2026-09-22T20:00:00+02:00",
-  "startedAt": "2026-09-22T20:00:00.360425+02:00",
-  "completedAt": "2026-09-22T20:00:03.570372+02:00",
-  "checkedAt": "2026-09-22T20:00:03.570372+02:00",
+  "scheduledSlot": "20:03",
+  "scheduledAt": "2026-09-22T20:03:00+02:00",
+  "rawScheduledSlot": "20:03",
+  "rawScheduledAt": "2026-09-22T20:03:00+02:00",
+  "startedAt": "2026-09-22T20:03:00.319976+02:00",
+  "completedAt": "2026-09-22T20:03:03.382901+02:00",
+  "checkedAt": "2026-09-22T20:03:03.382901+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 235,
+      "totalBargainItems": 236,
       "meatItems": 3,
       "meat70Items": 2,
       "meat70Stock": 3.0,
@@ -81,6 +81,18 @@
           "stock": 5,
           "priceWas": "1.29",
           "priceNow": "0.77",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 584032,
+          "title": "AH Rond wit sesam heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "1.89",
+          "priceNow": "1.13",
           "markdownExpirationDate": "2026-09-22"
         },
         {
@@ -201,18 +213,6 @@
           "stock": 3,
           "priceWas": "1.39",
           "priceNow": "1.04",
-          "markdownExpirationDate": "2026-09-22"
-        },
-        {
-          "productId": 584032,
-          "title": "AH Rond wit sesam heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "1.89",
-          "priceNow": "1.42",
           "markdownExpirationDate": "2026-09-22"
         },
         {
@@ -617,7 +617,7 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 211,
+      "totalBargainItems": 210,
       "meatItems": 0,
       "meat70Items": 0,
       "meat70Stock": 0,
@@ -759,18 +759,6 @@
           "markdownExpirationDate": "2026-09-22"
         },
         {
-          "productId": 230842,
-          "title": "AH Liefde & Passie Spelt",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-22"
-        },
-        {
           "productId": 578301,
           "title": "AH Liefde & Passie OerDesem zonne rogge",
           "brand": "AH Liefde & Passie",
@@ -816,6 +804,30 @@
           "stock": 1,
           "priceWas": "1.89",
           "priceNow": "1.42",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 230786,
+          "title": "AH Les pains triomphe heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.39",
+          "priceNow": "1.79",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 230842,
+          "title": "AH Liefde & Passie Spelt",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-22"
         },
         {
@@ -1056,18 +1068,6 @@
           "stock": 1,
           "priceWas": "0.79",
           "priceNow": "0.67",
-          "markdownExpirationDate": "2026-09-22"
-        },
-        {
-          "productId": 230786,
-          "title": "AH Les pains triomphe heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "2.39",
-          "priceNow": "2.03",
           "markdownExpirationDate": "2026-09-22"
         },
         {
