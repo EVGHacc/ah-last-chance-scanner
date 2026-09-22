@@ -42,8 +42,8 @@ def load_registry():
     out=[]
     with open(ROOT/"registry.tsv",encoding="utf-8") as f:
         for r in csv.DictReader(f,delimiter="\t"):
-            r["seed_urls"]=[x for x in r["seed_urls"].split(";") if x]
-            r["allowed_domains"]=[x for x in r["allowed_domains"].split(";") if x]
+            r["seed_urls"]=[x for x in (r.get("seed_urls") or "").split(";") if x]
+            r["allowed_domains"]=[x for x in (r.get("allowed_domains") or "").split(";") if x]
             r["no_public_hint"]=r["no_public_hint"]=="1"; out.append(r)
     if len(out)!=94: raise RuntimeError(f"registry count {len(out)} != 94")
     return out
