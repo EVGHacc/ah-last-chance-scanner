@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T21:48:32.621177+00:00",
+  "generated_at": "2026-09-22T21:50:00.253517+00:00",
   "method": {
     "scope": "valid scanner-v5 raw observations",
     "event": "first later valid store scan where a >=70% product is absent and never reappears that day",
@@ -78,6 +78,13 @@
         "1348": 141,
         "1463": 141
       }
+    },
+    "2026-09-22": {
+      "valid_scans_by_store": {
+        "1135": 141,
+        "1348": 141,
+        "1463": 141
+      }
     }
   },
   "source_files": [
@@ -90,38 +97,39 @@
     "2026-09-18.jsonl",
     "2026-09-19.jsonl",
     "2026-09-20.jsonl",
-    "2026-09-21.jsonl"
+    "2026-09-21.jsonl",
+    "2026-09-22.jsonl"
   ],
-  "selected_raw_observations": 1145,
+  "selected_raw_observations": 1286,
   "summary": {
     "1135": {
-      "episodes_70": 50,
-      "confirmed_persistent_disappearances": 35,
-      "right_censored": 15,
-      "event_rate_pct": 70.0,
-      "mean_minutes_events_only": 102.3,
+      "episodes_70": 55,
+      "confirmed_persistent_disappearances": 36,
+      "right_censored": 19,
+      "event_rate_pct": 65.5,
+      "mean_minutes_events_only": 104.4,
       "median_minutes_events_only": 96.0,
-      "p25_minutes_events_only": 49.5,
-      "p75_minutes_events_only": 148.5,
+      "p25_minutes_events_only": 55.8,
+      "p75_minutes_events_only": 160.5,
       "gone_within_15m": {
-        "eligible": 48,
+        "eligible": 53,
         "gone": 4,
-        "pct": 8.3
+        "pct": 7.5
       },
       "gone_within_30m": {
-        "eligible": 48,
+        "eligible": 53,
         "gone": 7,
-        "pct": 14.6
+        "pct": 13.2
       },
       "gone_within_60m": {
-        "eligible": 47,
+        "eligible": 52,
         "gone": 9,
-        "pct": 19.1
+        "pct": 17.3
       },
       "gone_within_90m": {
-        "eligible": 47,
+        "eligible": 52,
         "gone": 16,
-        "pct": 34.0
+        "pct": 30.8
       }
     },
     "1348": {
@@ -155,63 +163,63 @@
       }
     },
     "1463": {
-      "episodes_70": 29,
-      "confirmed_persistent_disappearances": 15,
-      "right_censored": 14,
-      "event_rate_pct": 51.7,
-      "mean_minutes_events_only": 69.9,
+      "episodes_70": 31,
+      "confirmed_persistent_disappearances": 16,
+      "right_censored": 15,
+      "event_rate_pct": 51.6,
+      "mean_minutes_events_only": 75.3,
       "median_minutes_events_only": 75.0,
-      "p25_minutes_events_only": 47.5,
-      "p75_minutes_events_only": 76.5,
+      "p25_minutes_events_only": 50.2,
+      "p75_minutes_events_only": 88.5,
       "gone_within_15m": {
-        "eligible": 25,
+        "eligible": 27,
         "gone": 1,
-        "pct": 4.0
+        "pct": 3.7
       },
       "gone_within_30m": {
-        "eligible": 24,
+        "eligible": 26,
         "gone": 2,
-        "pct": 8.3
+        "pct": 7.7
       },
       "gone_within_60m": {
-        "eligible": 24,
+        "eligible": 26,
         "gone": 6,
-        "pct": 25.0
+        "pct": 23.1
       },
       "gone_within_90m": {
-        "eligible": 24,
+        "eligible": 26,
         "gone": 12,
-        "pct": 50.0
+        "pct": 46.2
       }
     },
     "all": {
-      "episodes_70": 127,
-      "confirmed_persistent_disappearances": 72,
-      "right_censored": 55,
-      "event_rate_pct": 56.7,
-      "mean_minutes_events_only": 81.0,
+      "episodes_70": 134,
+      "confirmed_persistent_disappearances": 74,
+      "right_censored": 60,
+      "event_rate_pct": 55.2,
+      "mean_minutes_events_only": 83.3,
       "median_minutes_events_only": 75.0,
-      "p25_minutes_events_only": 36.8,
+      "p25_minutes_events_only": 38.2,
       "p75_minutes_events_only": 123.0,
       "gone_within_15m": {
-        "eligible": 114,
+        "eligible": 121,
         "gone": 12,
-        "pct": 10.5
+        "pct": 9.9
       },
       "gone_within_30m": {
-        "eligible": 113,
+        "eligible": 120,
         "gone": 16,
-        "pct": 14.2
+        "pct": 13.3
       },
       "gone_within_60m": {
-        "eligible": 112,
+        "eligible": 119,
         "gone": 29,
-        "pct": 25.9
+        "pct": 24.4
       },
       "gone_within_90m": {
-        "eligible": 111,
+        "eligible": 118,
         "gone": 46,
-        "pct": 41.4
+        "pct": 39.0
       }
     }
   },
@@ -2063,6 +2071,106 @@
       "event": false,
       "minutes": null,
       "last_followup": "2026-09-21T22:30:00+02:00",
+      "followup_minutes": 207.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-22",
+      "store_id": "1135",
+      "product_id": "123833",
+      "product": "AH Biefstuk 2 stuks",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-22T18:18:00+02:00",
+      "stock_at_70": 5.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-22T21:15:00+02:00",
+      "minutes": 177.0,
+      "last_followup": "2026-09-22T22:30:00+02:00",
+      "followup_minutes": 252.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-22",
+      "store_id": "1135",
+      "product_id": "123836",
+      "product": "AH Kogelbiefstuk",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-22T19:03:00+02:00",
+      "stock_at_70": 1.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-22T22:30:00+02:00",
+      "followup_minutes": 207.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-22",
+      "store_id": "1135",
+      "product_id": "139457",
+      "product": "AH Excellent Biefstuk",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-22T17:30:00+02:00",
+      "stock_at_70": 2.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-22T22:30:00+02:00",
+      "followup_minutes": 300.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-22",
+      "store_id": "1135",
+      "product_id": "524858",
+      "product": "AH Varkenshaas culinair naturel",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-22T19:03:00+02:00",
+      "stock_at_70": 1.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-22T22:30:00+02:00",
+      "followup_minutes": 207.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-22",
+      "store_id": "1135",
+      "product_id": "569380",
+      "product": "Cucina Kipshoarma",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-22T19:48:00+02:00",
+      "stock_at_70": 1.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-22T22:30:00+02:00",
+      "followup_minutes": 162.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-22",
+      "store_id": "1463",
+      "product_id": "3986",
+      "product": "AH Speklap",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-22T19:18:00+02:00",
+      "stock_at_70": 1.0,
+      "event": true,
+      "first_persistent_absence": "2026-09-22T21:54:00+02:00",
+      "minutes": 156.0,
+      "last_followup": "2026-09-22T22:30:00+02:00",
+      "followup_minutes": 192.0,
+      "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-22",
+      "store_id": "1463",
+      "product_id": "477571",
+      "product": "AH Scharrel gebraden kipfilet caesar",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-22T19:03:00+02:00",
+      "stock_at_70": 2.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-22T22:30:00+02:00",
       "followup_minutes": 207.0,
       "reason": "still_present_at_last_valid_scan"
     }
