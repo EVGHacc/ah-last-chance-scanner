@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-22",
   "weekday": "Tuesday",
-  "scheduledSlot": "19:54",
-  "scheduledAt": "2026-09-22T19:54:00+02:00",
-  "rawScheduledSlot": "19:54",
-  "rawScheduledAt": "2026-09-22T19:54:00+02:00",
-  "startedAt": "2026-09-22T19:54:00.331897+02:00",
-  "completedAt": "2026-09-22T19:54:03.339792+02:00",
-  "checkedAt": "2026-09-22T19:54:03.339792+02:00",
+  "scheduledSlot": "19:55",
+  "scheduledAt": "2026-09-22T19:55:00+02:00",
+  "rawScheduledSlot": "19:55",
+  "rawScheduledAt": "2026-09-22T19:55:00+02:00",
+  "startedAt": "2026-09-22T19:55:00.313779+02:00",
+  "completedAt": "2026-09-22T19:55:03.700863+02:00",
+  "checkedAt": "2026-09-22T19:55:03.700863+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 229,
+      "totalBargainItems": 230,
       "meatItems": 3,
       "meat70Items": 2,
       "meat70Stock": 3.0,
@@ -699,18 +699,6 @@
           "markdownExpirationDate": "2026-09-22"
         },
         {
-          "productId": 578301,
-          "title": "AH Liefde & Passie OerDesem zonne rogge",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-22"
-        },
-        {
           "productId": 590399,
           "title": "AH Broodje burger augurk tomatensaus",
           "brand": "AH",
@@ -778,6 +766,18 @@
           "category": "Bakkerij",
           "discountPct": 25,
           "stock": 2,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 578301,
+          "title": "AH Liefde & Passie OerDesem zonne rogge",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
           "priceWas": "3.19",
           "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-22"
@@ -927,18 +927,6 @@
           "markdownExpirationDate": "2026-09-22"
         },
         {
-          "productId": 362217,
-          "title": "AH Speltbol",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.59",
-          "priceNow": "0.50",
-          "markdownExpirationDate": "2026-09-22"
-        },
-        {
           "productId": 577444,
           "title": "AH Worstenbroodje",
           "brand": "AH",
@@ -1080,6 +1068,18 @@
           "stock": 1,
           "priceWas": "2.39",
           "priceNow": "2.03",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 362217,
+          "title": "AH Speltbol",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.59",
+          "priceNow": "0.50",
           "markdownExpirationDate": "2026-09-22"
         },
         {
