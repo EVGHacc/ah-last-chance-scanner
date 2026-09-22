@@ -14,7 +14,7 @@ H={"User-Agent":UA,"Accept-Language":"en-GB,en;q=0.9,nl;q=0.8"}
 TIMEOUT=int(os.getenv("VACANCY_TIMEOUT","12")); WORKERS=int(os.getenv("VACANCY_WORKERS","12"))
 ATS=("myworkdayjobs.com","workday.com","oraclecloud.com","greenhouse.io","lever.co","teamtailor.com","recruitee.com","ashbyhq.com","breezy.hr","smartrecruiters.com","successfactors.com","eightfold.ai","icims.com")
 CAREER=re.compile(r"(job|career|vacanc|position|opportunit|werken.?bij|open.?roles)",re.I)
-REL=re.compile(r"(compliance|risk|audit|aml|financial.?crime|sanction|governance|regulatory|controls?|assurance|mlro|cco|cro|responsible.?ai|trust.?safety)",re.I)
+REL=re.compile(r"(compliance|risk|audit|aml|financial.?crime|sanction|governance|regulatory|controls?|assurance|\\bmlro\\b|\\bcco\\b|\\bcro\\b|responsible.?ai|trust.?safety)",re.I)\nJOBURL=re.compile(r"(/job(?:s)?/|/vacanc|/position|/career|/opportunit|job[_-]|vacature|search-jobs)",re.I)
 SENIOR=re.compile(r"(head|director|executive.?director|senior.?manager|lead|chief|vice.?president|\\bvp\\b|principal|partner)",re.I)
 APPLY=re.compile(r"(apply.?now|\\bapply\\b|solliciteer|submit.?application|start.?application)",re.I)
 CLOSED=re.compile(r"(no.?longer.?available|position.?has.?been.?filled|vacature.?is.?gesloten|job.?is.?closed|applications?.?closed|expired)",re.I)
@@ -86,7 +86,7 @@ def extract_jobs(f,o):
     s=BeautifulSoup(f["html"],"html.parser"); out=[]
     for a in s.find_all("a",href=True):
         title=a.get_text(" ",strip=True); u=norm(urljoin(f["final"],a["href"]))
-        if 4<=len(title)<=180 and u.startswith("http") and allowed(u,o) and REL.search(title+" "+u) and (SENIOR.search(title+" "+u) or REL.search(title)):
+        if 4<=len(title)<=180 and u.startswith("http") and allowed(u,o) and JOBURL.search(u) and REL.search(title+" "+u) and (SENIOR.search(title) or re.search(r"\\b(mlro|cco|cro|risk manager|compliance manager|sanctions counsel|regulatory counsel)\\b", title, re.I)):
             out.append({"title":title,"url":u})
     d={}
     for j in out: d[(j["title"].lower(),j["url"])]=j
