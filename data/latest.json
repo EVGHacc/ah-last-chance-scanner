@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-22",
   "weekday": "Tuesday",
-  "scheduledSlot": "20:45",
-  "scheduledAt": "2026-09-22T20:45:00+02:00",
-  "rawScheduledSlot": "20:45",
-  "rawScheduledAt": "2026-09-22T20:45:00+02:00",
-  "startedAt": "2026-09-22T20:45:00.353307+02:00",
-  "completedAt": "2026-09-22T20:45:03.785036+02:00",
-  "checkedAt": "2026-09-22T20:45:03.785036+02:00",
+  "scheduledSlot": "20:48",
+  "scheduledAt": "2026-09-22T20:48:00+02:00",
+  "rawScheduledSlot": "20:48",
+  "rawScheduledAt": "2026-09-22T20:48:00+02:00",
+  "startedAt": "2026-09-22T20:48:00.355808+02:00",
+  "completedAt": "2026-09-22T20:48:03.720700+02:00",
+  "checkedAt": "2026-09-22T20:48:03.720700+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 237,
+      "totalBargainItems": 235,
       "meatItems": 3,
       "meat70Items": 2,
       "meat70Stock": 3.0,
@@ -1155,18 +1155,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 550411,
-          "title": "AH Kokossnippers",
-          "brand": "AH",
-          "size": "60 g",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "1.99",
-          "priceNow": "1.49",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 561865,
           "title": "Koopmans Plaatcake appelkruimel",
           "brand": "Koopmans",
@@ -1176,6 +1164,18 @@
           "stock": 3,
           "priceWas": "3.29",
           "priceNow": "2.47",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 550411,
+          "title": "AH Kokossnippers",
+          "brand": "AH",
+          "size": "60 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
           "markdownExpirationDate": "2026-10-11"
         }
       ]
