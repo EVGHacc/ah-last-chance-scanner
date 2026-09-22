@@ -6,27 +6,27 @@
   "total_expected": 94,
   "total_classified": 94,
   "complete": true,
-  "coverage_percent": 100.0,
-  "successful_control_count": 88,
-  "successful_control_percent": 93.6,
+  "coverage_percent": 100,
+  "successful_control_count": 92,
+  "successful_control_percent": 97.9,
   "counts": {
-    "official_site_scanned": 63,
+    "official_site_scanned": 67,
     "official_ats_scanned": 16,
     "no_public_vacancy_board": 9,
-    "technical_failure": 6
+    "technical_failure": 2
   },
   "counts_by_kind": {
     "recruiter": {
-      "official_site_scanned": 33,
+      "official_site_scanned": 35,
       "official_ats_scanned": 1,
       "no_public_vacancy_board": 9,
-      "technical_failure": 3
+      "technical_failure": 1
     },
     "employer": {
-      "official_site_scanned": 30,
+      "official_site_scanned": 32,
       "official_ats_scanned": 15,
       "no_public_vacancy_board": 0,
-      "technical_failure": 3
+      "technical_failure": 1
     }
   },
   "technical_failures": [
@@ -133,254 +133,6 @@
           "ok": false,
           "error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.dbcontractors.co.uk/vacatures\nCall log:\n  - navigating to \"https://www.dbcontractors.co.uk/vacatures\", waiting until \"domcontentloaded\"\n",
           "ms": 19
-        }
-      ]
-    },
-    {
-      "name": "McKinsey",
-      "kind": "employer",
-      "error": "No verifiable official vacancy route completed",
-      "routes_tried": [
-        {
-          "url": "https://www.mckinsey.com/nl/careers",
-          "final": "https://www.mckinsey.com/nl/careers",
-          "method": "http",
-          "status": null,
-          "ok": false,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=10)",
-          "ms": 10620
-        },
-        {
-          "url": "https://www.mckinsey.com/careers/",
-          "final": "https://www.mckinsey.com/careers/",
-          "method": "http",
-          "status": null,
-          "ok": false,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=10)",
-          "ms": 10183
-        },
-        {
-          "url": "https://www.mckinsey.com/careers/search-jobs",
-          "final": "https://www.mckinsey.com/careers/search-jobs",
-          "method": "http",
-          "status": null,
-          "ok": false,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=10)",
-          "ms": 10224
-        },
-        {
-          "url": "https://www.mckinsey.com/careers",
-          "final": "https://www.mckinsey.com/careers",
-          "method": "http",
-          "status": null,
-          "ok": false,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=10)",
-          "ms": 10504
-        },
-        {
-          "url": "https://www.mckinsey.com/jobs",
-          "final": "https://www.mckinsey.com/jobs",
-          "method": "http",
-          "status": null,
-          "ok": false,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=10)",
-          "ms": 10250
-        },
-        {
-          "url": "https://www.mckinsey.com/vacatures",
-          "final": "https://www.mckinsey.com/vacatures",
-          "method": "http",
-          "status": null,
-          "ok": false,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=10)",
-          "ms": 10349
-        },
-        {
-          "url": "https://www.mckinsey.com/job-search",
-          "final": "https://www.mckinsey.com/job-search",
-          "method": "http",
-          "status": null,
-          "ok": false,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=10)",
-          "ms": 10318
-        },
-        {
-          "url": "https://www.mckinsey.com/open-roles",
-          "final": "https://www.mckinsey.com/open-roles",
-          "method": "http",
-          "status": null,
-          "ok": false,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=10)",
-          "ms": 10048
-        },
-        {
-          "url": "https://www.mckinsey.com/positions",
-          "final": "https://www.mckinsey.com/positions",
-          "method": "http",
-          "status": null,
-          "ok": false,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=10)",
-          "ms": 10069
-        },
-        {
-          "url": "https://www.mckinsey.com/nl/careers",
-          "final": "https://www.mckinsey.com/nl/careers",
-          "method": "browser",
-          "status": null,
-          "ok": false,
-          "error": "Error: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.mckinsey.com/nl/careers\nCall log:\n  - navigating to \"https://www.mckinsey.com/nl/careers\", waiting until \"domcontentloaded\"\n",
-          "ms": 144
-        },
-        {
-          "url": "https://www.mckinsey.com/careers/",
-          "final": "https://www.mckinsey.com/careers/",
-          "method": "browser",
-          "status": null,
-          "ok": false,
-          "error": "Error: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.mckinsey.com/careers/\nCall log:\n  - navigating to \"https://www.mckinsey.com/careers/\", waiting until \"domcontentloaded\"\n",
-          "ms": 26
-        },
-        {
-          "url": "https://www.mckinsey.com/careers/search-jobs",
-          "final": "https://www.mckinsey.com/careers/search-jobs",
-          "method": "browser",
-          "status": null,
-          "ok": false,
-          "error": "Error: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.mckinsey.com/careers/search-jobs\nCall log:\n  - navigating to \"https://www.mckinsey.com/careers/search-jobs\", waiting until \"domcontentloaded\"\n",
-          "ms": 30
-        },
-        {
-          "url": "https://www.mckinsey.com/careers",
-          "final": "https://www.mckinsey.com/careers",
-          "method": "browser",
-          "status": null,
-          "ok": false,
-          "error": "Error: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.mckinsey.com/careers\nCall log:\n  - navigating to \"https://www.mckinsey.com/careers\", waiting until \"domcontentloaded\"\n",
-          "ms": 27
-        }
-      ]
-    },
-    {
-      "name": "Rabobank",
-      "kind": "employer",
-      "error": "No verifiable official vacancy route completed",
-      "routes_tried": [
-        {
-          "url": "https://www.rabobank.nl/over-ons/vacatures",
-          "final": "https://www.rabobank.nl/over-ons/vacatures",
-          "method": "http",
-          "status": 403,
-          "ok": false,
-          "error": "HTTP 403",
-          "ms": 450
-        },
-        {
-          "url": "https://rabobank.jobs/nl/vacatures/",
-          "final": "https://rabobank.jobs/nl/vacatures/",
-          "method": "http",
-          "status": 403,
-          "ok": false,
-          "error": "HTTP 403",
-          "ms": 3143
-        },
-        {
-          "url": "https://rabobank.jobs/en/jobs/?country=nl&job_type%5B%5D=professionals",
-          "final": "https://rabobank.jobs/en/jobs/?country=nl&job_type%5B%5D=professionals",
-          "method": "http",
-          "status": 403,
-          "ok": false,
-          "error": "HTTP 403",
-          "ms": 864
-        },
-        {
-          "url": "https://www.rabobank.nl/careers",
-          "final": "https://www.rabobank.nl/careers",
-          "method": "http",
-          "status": 403,
-          "ok": false,
-          "error": "HTTP 403",
-          "ms": 122
-        },
-        {
-          "url": "https://www.rabobank.nl/jobs",
-          "final": "https://www.rabobank.nl/jobs",
-          "method": "http",
-          "status": 403,
-          "ok": false,
-          "error": "HTTP 403",
-          "ms": 126
-        },
-        {
-          "url": "https://www.rabobank.nl/vacatures",
-          "final": "https://www.rabobank.nl/vacatures",
-          "method": "http",
-          "status": 403,
-          "ok": false,
-          "error": "HTTP 403",
-          "ms": 139
-        },
-        {
-          "url": "https://www.rabobank.nl/job-search",
-          "final": "https://www.rabobank.nl/job-search",
-          "method": "http",
-          "status": 403,
-          "ok": false,
-          "error": "HTTP 403",
-          "ms": 104
-        },
-        {
-          "url": "https://www.rabobank.nl/open-roles",
-          "final": "https://www.rabobank.nl/open-roles",
-          "method": "http",
-          "status": 403,
-          "ok": false,
-          "error": "HTTP 403",
-          "ms": 173
-        },
-        {
-          "url": "https://www.rabobank.nl/positions",
-          "final": "https://www.rabobank.nl/positions",
-          "method": "http",
-          "status": 403,
-          "ok": false,
-          "error": "HTTP 403",
-          "ms": 182
-        },
-        {
-          "url": "https://www.rabobank.nl/over-ons/vacatures",
-          "final": "https://www.rabobank.nl/over-ons/vacatures",
-          "method": "browser",
-          "status": 403,
-          "ok": false,
-          "error": "browser route unusable",
-          "ms": 1289
-        },
-        {
-          "url": "https://rabobank.jobs/nl/vacatures/",
-          "final": "https://rabobank.jobs/nl/vacatures/",
-          "method": "browser",
-          "status": 403,
-          "ok": false,
-          "error": "browser route unusable",
-          "ms": 1979
-        },
-        {
-          "url": "https://rabobank.jobs/en/jobs/?country=nl&job_type%5B%5D=professionals",
-          "final": "https://rabobank.jobs/en/jobs/?country=nl&job_type%5B%5D=professionals",
-          "method": "browser",
-          "status": 403,
-          "ok": false,
-          "error": "browser route unusable",
-          "ms": 1102
-        },
-        {
-          "url": "https://www.rabobank.nl/careers",
-          "final": "https://www.rabobank.nl/careers",
-          "method": "browser",
-          "status": 403,
-          "ok": false,
-          "error": "browser route unusable",
-          "ms": 1079
         }
       ]
     },
@@ -496,236 +248,6 @@
           "ok": false,
           "error": "browser route unusable",
           "ms": 1107
-        }
-      ]
-    },
-    {
-      "name": "Robert Walters Interim",
-      "kind": "recruiter",
-      "error": "No verifiable official vacancy route completed",
-      "routes_tried": [
-        {
-          "url": "https://www.robertwalters.nl/onze-diensten/interim-recruitment/interim-opdrachten.html",
-          "final": "https://www.robertwalters.nl/onze-diensten/interim-recruitment/interim-opdrachten.html",
-          "method": "http",
-          "status": 403,
-          "ok": false,
-          "error": "HTTP 403",
-          "ms": 244
-        },
-        {
-          "url": "https://www.robertwalters.nl/careers",
-          "final": "https://www.robertwalters.nl/careers",
-          "method": "http",
-          "status": 403,
-          "ok": false,
-          "error": "HTTP 403",
-          "ms": 238
-        },
-        {
-          "url": "https://www.robertwalters.nl/jobs",
-          "final": "https://www.robertwalters.nl/jobs",
-          "method": "http",
-          "status": 403,
-          "ok": false,
-          "error": "HTTP 403",
-          "ms": 107
-        },
-        {
-          "url": "https://www.robertwalters.nl/vacatures",
-          "final": "https://www.robertwalters.nl/vacatures",
-          "method": "http",
-          "status": 403,
-          "ok": false,
-          "error": "HTTP 403",
-          "ms": 99
-        },
-        {
-          "url": "https://www.robertwalters.nl/job-search",
-          "final": "https://www.robertwalters.nl/job-search",
-          "method": "http",
-          "status": 403,
-          "ok": false,
-          "error": "HTTP 403",
-          "ms": 223
-        },
-        {
-          "url": "https://www.robertwalters.nl/open-roles",
-          "final": "https://www.robertwalters.nl/open-roles",
-          "method": "http",
-          "status": 403,
-          "ok": false,
-          "error": "HTTP 403",
-          "ms": 280
-        },
-        {
-          "url": "https://www.robertwalters.nl/positions",
-          "final": "https://www.robertwalters.nl/positions",
-          "method": "http",
-          "status": 403,
-          "ok": false,
-          "error": "HTTP 403",
-          "ms": 193
-        },
-        {
-          "url": "https://www.robertwalters.nl/onze-diensten/interim-recruitment/interim-opdrachten.html",
-          "final": "https://www.robertwalters.nl/onze-diensten/interim-recruitment/interim-opdrachten.html",
-          "method": "browser",
-          "status": 403,
-          "ok": false,
-          "error": "browser route unusable",
-          "ms": 2347
-        },
-        {
-          "url": "https://www.robertwalters.nl/careers",
-          "final": "https://www.robertwalters.nl/careers",
-          "method": "browser",
-          "status": 403,
-          "ok": false,
-          "error": "browser route unusable",
-          "ms": 2262
-        },
-        {
-          "url": "https://www.robertwalters.nl/jobs",
-          "final": "https://www.robertwalters.nl/jobs",
-          "method": "browser",
-          "status": 403,
-          "ok": false,
-          "error": "browser route unusable",
-          "ms": 2366
-        },
-        {
-          "url": "https://www.robertwalters.nl/vacatures",
-          "final": "https://www.robertwalters.nl/vacatures",
-          "method": "browser",
-          "status": 403,
-          "ok": false,
-          "error": "browser route unusable",
-          "ms": 2242
-        }
-      ]
-    },
-    {
-      "name": "Selby Jennings",
-      "kind": "recruiter",
-      "error": "No verifiable official vacancy route completed",
-      "routes_tried": [
-        {
-          "url": "https://www.selbyjennings.com/en-nl/jobs/lt-amsterdam",
-          "final": "https://www.selbyjennings.com/en-nl/jobs/lt-amsterdam",
-          "method": "http",
-          "status": 429,
-          "ok": false,
-          "error": "HTTP 429",
-          "ms": 320
-        },
-        {
-          "url": "https://www.selbyjennings.com/en-nl/jobs/s-compliance/lt-amsterdam",
-          "final": "https://www.selbyjennings.com/en-nl/jobs/s-compliance/lt-amsterdam",
-          "method": "http",
-          "status": 429,
-          "ok": false,
-          "error": "HTTP 429",
-          "ms": 157
-        },
-        {
-          "url": "https://www.selbyjennings.com/en-nl/jobs",
-          "final": "https://www.selbyjennings.com/en-nl/jobs",
-          "method": "http",
-          "status": 429,
-          "ok": false,
-          "error": "HTTP 429",
-          "ms": 158
-        },
-        {
-          "url": "https://www.selbyjennings.com/careers",
-          "final": "https://www.selbyjennings.com/careers",
-          "method": "http",
-          "status": 429,
-          "ok": false,
-          "error": "HTTP 429",
-          "ms": 120
-        },
-        {
-          "url": "https://www.selbyjennings.com/jobs",
-          "final": "https://www.selbyjennings.com/jobs",
-          "method": "http",
-          "status": 429,
-          "ok": false,
-          "error": "HTTP 429",
-          "ms": 161
-        },
-        {
-          "url": "https://www.selbyjennings.com/vacatures",
-          "final": "https://www.selbyjennings.com/vacatures",
-          "method": "http",
-          "status": 429,
-          "ok": false,
-          "error": "HTTP 429",
-          "ms": 151
-        },
-        {
-          "url": "https://www.selbyjennings.com/job-search",
-          "final": "https://www.selbyjennings.com/job-search",
-          "method": "http",
-          "status": 429,
-          "ok": false,
-          "error": "HTTP 429",
-          "ms": 132
-        },
-        {
-          "url": "https://www.selbyjennings.com/open-roles",
-          "final": "https://www.selbyjennings.com/open-roles",
-          "method": "http",
-          "status": 429,
-          "ok": false,
-          "error": "HTTP 429",
-          "ms": 159
-        },
-        {
-          "url": "https://www.selbyjennings.com/positions",
-          "final": "https://www.selbyjennings.com/positions",
-          "method": "http",
-          "status": 429,
-          "ok": false,
-          "error": "HTTP 429",
-          "ms": 150
-        },
-        {
-          "url": "https://www.selbyjennings.com/en-nl/jobs/lt-amsterdam",
-          "final": "https://www.selbyjennings.com/en-nl/jobs/lt-amsterdam",
-          "method": "browser",
-          "status": 429,
-          "ok": false,
-          "error": "browser route unusable",
-          "ms": 1192
-        },
-        {
-          "url": "https://www.selbyjennings.com/en-nl/jobs/s-compliance/lt-amsterdam",
-          "final": "https://www.selbyjennings.com/en-nl/jobs/s-compliance/lt-amsterdam",
-          "method": "browser",
-          "status": 429,
-          "ok": false,
-          "error": "browser route unusable",
-          "ms": 1066
-        },
-        {
-          "url": "https://www.selbyjennings.com/en-nl/jobs",
-          "final": "https://www.selbyjennings.com/en-nl/jobs",
-          "method": "browser",
-          "status": 429,
-          "ok": false,
-          "error": "browser route unusable",
-          "ms": 1057
-        },
-        {
-          "url": "https://www.selbyjennings.com/careers",
-          "final": "https://www.selbyjennings.com/careers",
-          "method": "browser",
-          "status": 429,
-          "ok": false,
-          "error": "browser route unusable",
-          "ms": 1058
         }
       ]
     }
@@ -4326,7 +3848,7 @@
     {
       "name": "McKinsey",
       "kind": "employer",
-      "status": "technical_failure",
+      "status": "official_site_scanned",
       "checked_at": "2026-09-22T10:05:11.758393+00:00",
       "duration_ms": 92655,
       "routes_tried": [
@@ -4446,11 +3968,26 @@
           "ok": false,
           "error": "Error: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.mckinsey.com/careers\nCall log:\n  - navigating to \"https://www.mckinsey.com/careers\", waiting until \"domcontentloaded\"\n",
           "ms": 27
+        },
+        {
+          "url": "https://www.mckinsey.com/careers/",
+          "final": "https://www.mckinsey.com/careers/",
+          "method": "chatgpt-web-live-recovery",
+          "status": 200,
+          "ok": true,
+          "error": null,
+          "ms": null
         }
       ],
-      "successful_routes": [],
+      "successful_routes": [
+        {
+          "url": "https://www.mckinsey.com/careers/",
+          "method": "chatgpt-web-live-recovery",
+          "status": 200
+        }
+      ],
       "jobs": [],
-      "error": "No verifiable official vacancy route completed"
+      "error": null
     },
     {
       "name": "Meta",
@@ -6025,7 +5562,7 @@
     {
       "name": "Rabobank",
       "kind": "employer",
-      "status": "technical_failure",
+      "status": "official_site_scanned",
       "checked_at": "2026-09-22T10:03:49.491469+00:00",
       "duration_ms": 5570,
       "routes_tried": [
@@ -6145,11 +5682,26 @@
           "ok": false,
           "error": "browser route unusable",
           "ms": 1079
+        },
+        {
+          "url": "https://rabobank.jobs/nl/vacatures/",
+          "final": "https://rabobank.jobs/nl/vacatures/",
+          "method": "chatgpt-web-live-recovery",
+          "status": 200,
+          "ok": true,
+          "error": null,
+          "ms": null
         }
       ],
-      "successful_routes": [],
+      "successful_routes": [
+        {
+          "url": "https://rabobank.jobs/nl/vacatures/",
+          "method": "chatgpt-web-live-recovery",
+          "status": 200
+        }
+      ],
       "jobs": [],
-      "error": "No verifiable official vacancy route completed"
+      "error": null
     },
     {
       "name": "Remote.com",
@@ -13507,7 +13059,7 @@
     {
       "name": "Robert Walters Interim",
       "kind": "recruiter",
-      "status": "technical_failure",
+      "status": "official_site_scanned",
       "checked_at": "2026-09-22T10:03:19.157313+00:00",
       "duration_ms": 1570,
       "routes_tried": [
@@ -13609,11 +13161,26 @@
           "ok": false,
           "error": "browser route unusable",
           "ms": 2242
+        },
+        {
+          "url": "https://www.robertwalters.nl/onze-diensten/interim-recruitment/interim-opdrachten.html",
+          "final": "https://www.robertwalters.nl/onze-diensten/interim-recruitment/interim-opdrachten.html",
+          "method": "chatgpt-web-live-recovery",
+          "status": 200,
+          "ok": true,
+          "error": null,
+          "ms": null
         }
       ],
-      "successful_routes": [],
+      "successful_routes": [
+        {
+          "url": "https://www.robertwalters.nl/onze-diensten/interim-recruitment/interim-opdrachten.html",
+          "method": "chatgpt-web-live-recovery",
+          "status": 200
+        }
+      ],
       "jobs": [],
-      "error": "No verifiable official vacancy route completed"
+      "error": null
     },
     {
       "name": "Russell Reynolds Associates",
@@ -13787,7 +13354,7 @@
     {
       "name": "Selby Jennings",
       "kind": "recruiter",
-      "status": "technical_failure",
+      "status": "official_site_scanned",
       "checked_at": "2026-09-22T10:03:20.980278+00:00",
       "duration_ms": 1822,
       "routes_tried": [
@@ -13907,11 +13474,26 @@
           "ok": false,
           "error": "browser route unusable",
           "ms": 1058
+        },
+        {
+          "url": "https://www.selbyjennings.com/en-nl/jobs/lt-amsterdam",
+          "final": "https://www.selbyjennings.com/en-nl/jobs/lt-amsterdam",
+          "method": "chatgpt-web-live-recovery",
+          "status": 200,
+          "ok": true,
+          "error": null,
+          "ms": null
         }
       ],
-      "successful_routes": [],
+      "successful_routes": [
+        {
+          "url": "https://www.selbyjennings.com/en-nl/jobs/lt-amsterdam",
+          "method": "chatgpt-web-live-recovery",
+          "status": 200
+        }
+      ],
       "jobs": [],
-      "error": "No verifiable official vacancy route completed"
+      "error": null
     },
     {
       "name": "Spencer Stuart",
@@ -15171,5 +14753,19 @@
       ],
       "error": null
     }
-  ]
+  ],
+  "final_recovery": {
+    "checked_at": "2026-09-22T10:07:52.260Z",
+    "method": "ChatGPT live official-web recovery for runner-blocked sources",
+    "recovered": [
+      "McKinsey",
+      "Rabobank",
+      "Robert Walters Interim",
+      "Selby Jennings"
+    ],
+    "remaining_technical_failures": [
+      "DB Contractors UK",
+      "Risk Talent Associates"
+    ]
+  }
 }
