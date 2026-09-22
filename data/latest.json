@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-22",
   "weekday": "Tuesday",
-  "scheduledSlot": "21:03",
-  "scheduledAt": "2026-09-22T21:03:00+02:00",
-  "rawScheduledSlot": "21:03",
-  "rawScheduledAt": "2026-09-22T21:03:00+02:00",
-  "startedAt": "2026-09-22T21:03:00.343736+02:00",
-  "completedAt": "2026-09-22T21:03:04.226047+02:00",
-  "checkedAt": "2026-09-22T21:03:04.226047+02:00",
+  "scheduledSlot": "21:05",
+  "scheduledAt": "2026-09-22T21:05:00+02:00",
+  "rawScheduledSlot": "21:05",
+  "rawScheduledAt": "2026-09-22T21:05:00+02:00",
+  "startedAt": "2026-09-22T21:05:00.342728+02:00",
+  "completedAt": "2026-09-22T21:05:03.618103+02:00",
+  "checkedAt": "2026-09-22T21:05:03.618103+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -228,18 +228,6 @@
           "markdownExpirationDate": "2026-09-22"
         },
         {
-          "productId": 230842,
-          "title": "AH Liefde & Passie Spelt",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-22"
-        },
-        {
           "productId": 365995,
           "title": "AH Luxe roomboter croissant",
           "brand": "AH",
@@ -297,6 +285,18 @@
           "stock": 2,
           "priceWas": "2.69",
           "priceNow": "2.02",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 230842,
+          "title": "AH Liefde & Passie Spelt",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-22"
         },
         {
@@ -699,18 +699,6 @@
           "markdownExpirationDate": "2026-09-22"
         },
         {
-          "productId": 577447,
-          "title": "AH Everything bol",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "0.79",
-          "priceNow": "0.59",
-          "markdownExpirationDate": "2026-09-22"
-        },
-        {
           "productId": 606103,
           "title": "AH Kip grillworst snack",
           "brand": "AH",
@@ -732,6 +720,18 @@
           "stock": 4,
           "priceWas": "0.99",
           "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 577447,
+          "title": "AH Everything bol",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "0.79",
+          "priceNow": "0.59",
           "markdownExpirationDate": "2026-09-22"
         },
         {
