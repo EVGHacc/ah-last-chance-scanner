@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-22",
   "weekday": "Tuesday",
-  "scheduledSlot": "20:48",
-  "scheduledAt": "2026-09-22T20:48:00+02:00",
-  "rawScheduledSlot": "20:48",
-  "rawScheduledAt": "2026-09-22T20:48:00+02:00",
-  "startedAt": "2026-09-22T20:48:00.355808+02:00",
-  "completedAt": "2026-09-22T20:48:03.720700+02:00",
-  "checkedAt": "2026-09-22T20:48:03.720700+02:00",
+  "scheduledSlot": "20:50",
+  "scheduledAt": "2026-09-22T20:50:00+02:00",
+  "rawScheduledSlot": "20:50",
+  "rawScheduledAt": "2026-09-22T20:50:00+02:00",
+  "startedAt": "2026-09-22T20:50:00.330733+02:00",
+  "completedAt": "2026-09-22T20:50:04.208186+02:00",
+  "checkedAt": "2026-09-22T20:50:04.208186+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -180,18 +180,6 @@
           "markdownExpirationDate": "2026-09-22"
         },
         {
-          "productId": 577444,
-          "title": "AH Worstenbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "1.29",
-          "priceNow": "0.97",
-          "markdownExpirationDate": "2026-09-22"
-        },
-        {
           "productId": 417144,
           "title": "AH Vloerbrood wit heel",
           "brand": "AH",
@@ -201,6 +189,18 @@
           "stock": 4,
           "priceWas": "2.69",
           "priceNow": "2.02",
+          "markdownExpirationDate": "2026-09-22"
+        },
+        {
+          "productId": 577444,
+          "title": "AH Worstenbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "1.29",
+          "priceNow": "0.97",
           "markdownExpirationDate": "2026-09-22"
         },
         {
