@@ -1,0 +1,33 @@
+import unittest
+
+from scanner import REL, SENIOR, extract_jobs, listing_evidence
+
+
+ORG = {"official_domain": "example.com", "allowed_domains": []}
+
+
+def page(body):
+    return {"html": body, "final": "https://example.com/careers/jobs"}
+
+
+class ScannerTests(unittest.TestCase):
+    def test_role_boundaries_and_seniority(self):
+        self.assertIsNotNone(REL.search("Group MLRO"))
+        self.assertIsNotNone(SENIOR.search("VP Business Control"))
+        self.assertIsNotNone(REL.search("Business Resilience Officer"))
+
+    def test_job_cards_and_structured_posting(self):
+        html = '''<a href="/jobs/123">Director Financial Crime</a>
+        <script type="application/ld+json">{"@type":"JobPosting","title":"Head of Internal Audit","url":"https://example.com/opportunities/456"}</script>'''
+        jobs = extract_jobs(page(html), ORG)
+        self.assertEqual({j["title"] for j in jobs}, {"Director Financial Crime", "Head of Internal Audit"})
+
+    def test_listing_is_partial_when_next_page_exists(self):
+        html = '<a href="/jobs/123">Director Financial Crime</a><a href="?page=2">Next</a>'
+        evidence = listing_evidence(page(html), ORG)
+        self.assertEqual(evidence["job_link_count"], 1)
+        self.assertTrue(evidence["pagination_seen"])
+
+
+if __name__ == "__main__":
+    unittest.main()
