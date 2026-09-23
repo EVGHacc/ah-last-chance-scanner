@@ -167,7 +167,7 @@ def scan(o):
     return {"name":o["name"],"kind":o["kind"],"status":st,"vacancy_coverage":coverage,"listing_evidence":evidence,"checked_at":iso(),"duration_ms":int((time.monotonic()-t)*1000),"routes_tried":tried[-18:],"successful_routes":[{"url":f["final"],"method":f["method"],"status":f["status"]} for f in success[:6]],"jobs":jobs,"error":None if st!="technical_failure" else "No verifiable official vacancy route completed","_org":o}
 
 def browser_retry(rs):
-    bad=[r for r in rs if r["status"]=="technical_failure"]
+    bad=[r for r in rs if r["status"]=="technical_failure" or r["vacancy_coverage"]=="unproven"]
     if not bad:return
     try: from playwright.sync_api import sync_playwright
     except Exception:return
@@ -175,20 +175,28 @@ def browser_retry(rs):
         b=p.chromium.launch(headless=True); c=b.new_context(user_agent=UA,locale="en-GB")
         for r in bad:
             o=r["_org"]
-            for u in candidates(o)[:4]:
+            unresolved=r["status"]=="technical_failure"
+            # Dynamic listings are common. Render the best available listing once,
+            # without spending the whole run opening generic corporate pages.
+            likely=sorted(r["listing_evidence"],key=lambda x:(0 if re.search(r"(search-results|listing-page|/vacatures|/jobs|openings)",x["url"],re.I) else 1,-x["job_link_count"]))
+            urls=candidates(o)[:4] if unresolved else [likely[0]["url"] if likely else o["seed_urls"][0]]
+            for u in urls:
                 pg=c.new_page(); t=time.monotonic()
                 try:
-                    resp=pg.goto(u,wait_until="domcontentloaded",timeout=12000); pg.wait_for_timeout(1000)
+                    resp=pg.goto(u,wait_until="domcontentloaded",timeout=10000); pg.wait_for_timeout(1200)
                     txt=pg.locator("body").inner_text(timeout=3000); final=pg.url; sc=resp.status if resp else None
                     ok=bool(sc and sc<400 and len(txt)>300 and allowed(final,o))
                     r["routes_tried"].append({"url":u,"final":final,"method":"browser","status":sc,"ok":ok,"error":None if ok else "browser route unusable","ms":int((time.monotonic()-t)*1000)})
                     if ok:
                         html=pg.content(); f={"ok":True,"url":u,"final":final,"status":sc,"html":html,"text":txt,"method":"browser","error":None,"ms":0}
-                        r["jobs"]=validate_jobs(extract_jobs(f,o))
-                        r["listing_evidence"]=[listing_evidence(f,o)]
-                        r["vacancy_coverage"]="partial" if r["listing_evidence"][0]["job_link_count"] else ("not_applicable_unverified" if o["no_public_hint"] else "unproven")
-                        r["status"]="no_public_vacancy_board" if o["no_public_hint"] and not r["jobs"] else ("official_ats_scanned" if isats(final) else "official_site_scanned")
-                        r["successful_routes"]=[{"url":final,"method":"browser","status":sc}]; r["error"]=None; break
+                        fresh=extract_jobs(f,o)
+                        if fresh: r["jobs"]=validate_jobs(fresh)
+                        r["listing_evidence"].append(listing_evidence(f,o))
+                        if any(e["job_link_count"] for e in r["listing_evidence"]): r["vacancy_coverage"]="partial"
+                        if unresolved:
+                            r["status"]="no_public_vacancy_board" if o["no_public_hint"] and not r["jobs"] else ("official_ats_scanned" if isats(final) else "official_site_scanned")
+                            r["error"]=None
+                        r["successful_routes"].append({"url":final,"method":"browser","status":sc}); break
                 except Exception as e:
                     r["routes_tried"].append({"url":u,"final":u,"method":"browser","status":None,"ok":False,"error":f"{type(e).__name__}: {e}","ms":int((time.monotonic()-t)*1000)})
                 finally: pg.close()
