@@ -14,10 +14,11 @@ H={"User-Agent":UA,"Accept-Language":"en-GB,en;q=0.9,nl;q=0.8"}
 TIMEOUT=int(os.getenv("VACANCY_TIMEOUT","12")); WORKERS=int(os.getenv("VACANCY_WORKERS","12"))
 ATS=("myworkdayjobs.com","workday.com","oraclecloud.com","greenhouse.io","lever.co","teamtailor.com","recruitee.com","ashbyhq.com","breezy.hr","smartrecruiters.com","successfactors.com","eightfold.ai","icims.com")
 CAREER=re.compile(r"(job|career|vacanc|position|opportunit|werken.?bij|open.?roles)",re.I)
-REL=re.compile(r"(compliance|risk|audit|aml|financial.?crime|sanction|governance|regulatory|controls?|assurance|\\bmlro\\b|\\bcco\\b|\\bcro\\b|responsible.?ai|trust.?safety)",re.I)
-JOBURL=re.compile(r"(/job(?:s)?/|/vacanc|/position|/career|/opportunit|job[_-]|vacature|search-jobs)",re.I)
-SENIOR=re.compile(r"(head|director|executive.?director|senior.?manager|lead|chief|vice.?president|\\bvp\\b|principal|partner)",re.I)
-APPLY=re.compile(r"(apply.?now|\\bapply\\b|solliciteer|submit.?application|start.?application)",re.I)
+REL=re.compile(r"(compliance|risk|audit|aml|financial.?crime|sanction|governance|regulatory|controls?|assurance|\bmlro\b|\bcco\b|\bcro\b|responsible.?ai|trust.?safety|resilien|business.?control|integrity|fraud|financieel.?economische.?criminaliteit|witwassen)",re.I)
+JOBURL=re.compile(r"(/job(?:s)?/|/vacanc|/position|/career|/opportunit|job[_-]|vacature|search-jobs|/offre-de-emploi/|/stellenangebot/)",re.I)
+SENIOR=re.compile(r"(head|director|executive.?director|senior.?manager|lead|chief|vice.?president|\bvp\b|principal|partner|manager|hoofd|directeur|global|regional|strateg|expert)",re.I)
+APPLY=re.compile(r"(apply.?now|\bapply\b|solliciteer|submit.?application|start.?application)",re.I)
+PAGING=re.compile(r"(next|volgende|suivant|weiter|load more|toon meer|show more|page [2-9])",re.I)
 CLOSED=re.compile(r"(no.?longer.?available|position.?has.?been.?filled|vacature.?is.?gesloten|job.?is.?closed|applications?.?closed|expired)",re.I)
 COMMON=("/careers","/jobs","/vacatures","/job-search","/open-roles","/positions")
 
@@ -70,7 +71,10 @@ def links(f,o):
         u=norm(urljoin(f["final"],a["href"])); lab=a.get_text(" ",strip=True)
         if u.startswith("http") and allowed(u,o) and (isats(u) or CAREER.search(lab+" "+u)):
             z.append(u)
-    return list(dict.fromkeys(z))[:15]
+    # Listing/search pages first. A careers blog must not exhaust the crawl budget.
+    z=list(dict.fromkeys(z))
+    z.sort(key=lambda u:(0 if re.search(r"(search|vacanc|jobs|openings|positions|listing)",u,re.I) else 1,u))
+    return z[:25]
 
 def search_official(o):
     u="https://html.duckduckgo.com/html/?q="+quote_plus(f'site:{o["official_domain"]} "{o["name"]}" jobs careers vacancies')
@@ -82,20 +86,48 @@ def search_official(o):
         if u.startswith("http") and allowed(u,o): out.append(u)
     return list(dict.fromkeys(out))[:6]
 
+def listing_evidence(f,o):
+    """Evidence of a populated listing, never a claim that its inventory is complete."""
+    s=BeautifulSoup(f["html"],"html.parser")
+    links=[]
+    for a in s.find_all("a",href=True):
+        u=norm(urljoin(f["final"],a["href"]))
+        title=a.get_text(" ",strip=True)
+        if 4<=len(title)<=180 and allowed(u,o) and JOBURL.search(u) and not PAGING.search(title):
+            if not re.search(r"(search|filter|login|privacy|cookie|alert|subscribe|blog|article)",u,re.I):
+                links.append(u)
+    pagination=bool(s.find(attrs={"rel":"next"}) or any(PAGING.search(a.get_text(" ",strip=True)) for a in s.find_all("a",href=True)))
+    return {"url":f["final"],"job_link_count":len(set(links)),"pagination_seen":pagination}
+
 def extract_jobs(f,o):
     if not f["html"]: return []
     s=BeautifulSoup(f["html"],"html.parser"); out=[]
     for a in s.find_all("a",href=True):
         title=a.get_text(" ",strip=True); u=norm(urljoin(f["final"],a["href"]))
-        if 4<=len(title)<=180 and u.startswith("http") and allowed(u,o) and JOBURL.search(u) and REL.search(title+" "+u) and (SENIOR.search(title) or re.search(r"\\b(mlro|cco|cro|risk manager|compliance manager|sanctions counsel|regulatory counsel)\\b", title, re.I)):
+        if 4<=len(title)<=180 and u.startswith("http") and allowed(u,o) and JOBURL.search(u) and REL.search(title+" "+u) and (SENIOR.search(title) or re.search(r"\b(mlro|cco|cro|sanctions counsel|regulatory counsel)\b", title, re.I)):
             out.append({"title":title,"url":u})
+    # Some job boards render cards through scripts but expose schema.org data.
+    for tag in s.select('script[type="application/ld+json"]'):
+        try: payload=json.loads(tag.string or tag.get_text())
+        except (ValueError,TypeError): continue
+        stack=[payload]
+        while stack:
+            item=stack.pop()
+            if isinstance(item,list): stack.extend(item); continue
+            if not isinstance(item,dict): continue
+            stack.extend(v for v in item.values() if isinstance(v,(dict,list)))
+            types=item.get("@type",[]); types=[types] if isinstance(types,str) else types
+            if "JobPosting" not in types: continue
+            title=item.get("title",""); u=urljoin(f["final"],item.get("url","") or "")
+            if isinstance(title,str) and isinstance(u,str) and allowed(u,o) and REL.search(title) and SENIOR.search(title):
+                out.append({"title":title,"url":u})
     d={}
     for j in out: d[(j["title"].lower(),j["url"])]=j
-    return list(d.values())[:20]
+    return list(d.values())[:100]
 
 def validate_jobs(js):
     out=[]
-    for j in js[:15]:
+    for j in js[:50]:
         f=fetch(j["url"],"job-live-check"); text=f["text"]
         live=f["ok"] and (j["title"].lower()[:24] in text.lower() or len(j["title"])<12)
         j.update({"url":f["final"],"live":live,"apply_live":bool(live and APPLY.search(text) and not CLOSED.search(text)),"http_status":f["status"],"checked_at":iso()}); out.append(j)
@@ -103,7 +135,7 @@ def validate_jobs(js):
 
 def scan(o):
     t=time.monotonic(); tried=[]; success=[]; q=candidates(o); seen=set()
-    while q and len(seen)<14:
+    while q and len(seen)<24:
         u=q.pop(0)
         if u in seen: continue
         seen.add(u); f=fetch(u)
@@ -111,7 +143,7 @@ def scan(o):
         if f["ok"] and allowed(f["final"],o):
             success.append(f)
             for x in links(f,o):
-                if x not in seen: q.insert(0,x)
+                if x not in seen and x not in q: q.append(x)
     if not success:
         for u in search_official(o):
             f=fetch(u,"search-discovered-official")
@@ -119,13 +151,18 @@ def scan(o):
             if f["ok"] and allowed(f["final"],o): success.append(f); break
     js=[]; [js.extend(extract_jobs(f,o)) for f in success]
     jobs=validate_jobs(list({(j["title"].lower(),j["url"]):j for j in js}.values()))
+    evidence=[listing_evidence(f,o) for f in success]
     if success:
         if o["no_public_hint"] and not jobs: st="no_public_vacancy_board"
         elif any(isats(f["final"]) for f in success): st="official_ats_scanned"
         elif any(CAREER.search(f["final"]+" "+f["text"][:12000]) for f in success): st="official_site_scanned"
         else: st="no_public_vacancy_board" if o["no_public_hint"] else "technical_failure"
     else: st="technical_failure"
-    return {"name":o["name"],"kind":o["kind"],"status":st,"checked_at":iso(),"duration_ms":int((time.monotonic()-t)*1000),"routes_tried":tried[-18:],"successful_routes":[{"url":f["final"],"method":f["method"],"status":f["status"]} for f in success[:6]],"jobs":jobs,"error":None if st!="technical_failure" else "No verifiable official vacancy route completed","_org":o}
+    # A 200 response, a careers landing page, and a manually tagged lack of a board
+    # cannot establish complete vacancy coverage.  Keep this separate from reachability.
+    listing=[e for e in evidence if e["job_link_count"]]
+    coverage="partial" if listing else ("not_applicable_unverified" if o["no_public_hint"] else "unproven")
+    return {"name":o["name"],"kind":o["kind"],"status":st,"vacancy_coverage":coverage,"listing_evidence":evidence,"checked_at":iso(),"duration_ms":int((time.monotonic()-t)*1000),"routes_tried":tried[-18:],"successful_routes":[{"url":f["final"],"method":f["method"],"status":f["status"]} for f in success[:6]],"jobs":jobs,"error":None if st!="technical_failure" else "No verifiable official vacancy route completed","_org":o}
 
 def browser_retry(rs):
     bad=[r for r in rs if r["status"]=="technical_failure"]
@@ -146,6 +183,8 @@ def browser_retry(rs):
                     if ok:
                         html=pg.content(); f={"ok":True,"url":u,"final":final,"status":sc,"html":html,"text":txt,"method":"browser","error":None,"ms":0}
                         r["jobs"]=validate_jobs(extract_jobs(f,o))
+                        r["listing_evidence"]=[listing_evidence(f,o)]
+                        r["vacancy_coverage"]="partial" if r["listing_evidence"][0]["job_link_count"] else ("not_applicable_unverified" if o["no_public_hint"] else "unproven")
                         r["status"]="no_public_vacancy_board" if o["no_public_hint"] and not r["jobs"] else ("official_ats_scanned" if isats(final) else "official_site_scanned")
                         r["successful_routes"]=[{"url":final,"method":"browser","status":sc}]; r["error"]=None; break
                 except Exception as e:
@@ -173,7 +212,8 @@ def main():
         for j in r["jobs"]:
             if j.get("apply_live"): jobs.append({**j,"organisation":r["name"],"kind":r["kind"],"is_new":j["url"] not in old})
     ok=105-counts["technical_failure"]
-    payload={"schema_version":1,"run_date":nldate(),"started_at":started,"completed_at":iso(),"total_expected":105,"total_classified":len(rs),"complete":len(rs)==105,"coverage_percent":round(100*len(rs)/105,1),"successful_control_count":ok,"successful_control_percent":round(100*ok/105,1),"counts":counts,"counts_by_kind":bykind,"technical_failures":[{"name":r["name"],"kind":r["kind"],"error":r["error"],"routes_tried":r["routes_tried"]} for r in rs if r["status"]=="technical_failure"],"live_relevant_jobs":jobs,"organisations":rs}
+    coverage_counts={k:sum(r["vacancy_coverage"]==k for r in rs) for k in ("verified_complete","partial","unproven","not_applicable_unverified")}
+    payload={"schema_version":2,"run_date":nldate(),"started_at":started,"completed_at":iso(),"total_expected":105,"total_classified":len(rs),"complete":len(rs)==105,"coverage_percent":round(100*len(rs)/105,1),"successful_control_count":ok,"successful_control_percent":round(100*ok/105,1),"vacancy_coverage_counts":coverage_counts,"counts":counts,"counts_by_kind":bykind,"technical_failures":[{"name":r["name"],"kind":r["kind"],"error":r["error"],"routes_tried":r["routes_tried"]} for r in rs if r["status"]=="technical_failure"],"live_relevant_jobs":jobs,"organisations":rs}
     text=json.dumps(payload,ensure_ascii=False,indent=2); latest.write_text(text); (DATA/f'{payload["run_date"]}.json').write_text(text)
     print(json.dumps({"complete":payload["complete"],"coverage":payload["coverage_percent"],"successful_control":payload["successful_control_percent"],"counts":counts,"live_relevant_jobs":len(jobs),"technical_failure_names":[x["name"] for x in payload["technical_failures"]]},ensure_ascii=False,indent=2))
 
