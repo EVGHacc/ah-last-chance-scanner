@@ -18,7 +18,7 @@ REL=re.compile(r"(compliance|risk|audit|aml|financial.?crime|sanction|governance
 JOBURL=re.compile(r"(/job(?:s)?/|/vacanc|/position|/career|/opportunit|job[_-]|vacature|search-jobs|/offre-de-emploi/|/stellenangebot/)",re.I)
 SENIOR=re.compile(r"(head|director|executive.?director|senior.?manager|lead|chief|vice.?president|\bvp\b|principal|partner|manager|hoofd|directeur|global|regional|strateg|expert|business.?resilien.?officer|operational.?continuity)",re.I)
 APPLY=re.compile(r"(apply.?now|\bapply\b|solliciteer|submit.?application|start.?application)",re.I)
-PAGING=re.compile(r"(next|volgende|suivant|weiter|load more|toon meer|show more|page [2-9])",re.I)
+PAGING=re.compile(r"(next|volgende|suivant|weiter|load more|toon meer|show more|page [2-9])",re.I)\nDYNAMIC_MORE=re.compile(r"(load more|toon meer|show more|view more|see more|meer vacatures|more jobs)",re.I)\nLISTING_URL=re.compile(r"(/jobs?/?$|/vacatures/?$|job-search|search-jobs|search-results|/positions/?$|open-roles|open-jobs|careers/search|offre-de-emploi/liste)",re.I)
 CLOSED=re.compile(r"(no.?longer.?available|position.?has.?been.?filled|vacature.?is.?gesloten|job.?is.?closed|applications?.?closed|expired)",re.I)
 COMMON=("/careers","/jobs","/vacatures","/job-search","/open-roles","/positions")
 
@@ -87,7 +87,7 @@ def search_official(o):
     return list(dict.fromkeys(out))[:6]
 
 def listing_evidence(f,o):
-    """Evidence of a populated listing, never a claim that its inventory is complete."""
+    """Evidence for whether an official public listing is exhaustively visible."""
     s=BeautifulSoup(f["html"],"html.parser")
     links=[]
     for a in s.find_all("a",href=True):
@@ -96,8 +96,31 @@ def listing_evidence(f,o):
         if 4<=len(title)<=180 and allowed(u,o) and JOBURL.search(u) and not PAGING.search(title):
             if not re.search(r"(search|filter|login|privacy|cookie|alert|subscribe|blog|article)",u,re.I):
                 links.append(u)
-    pagination=bool(s.find(attrs={"rel":"next"}) or any(PAGING.search(a.get_text(" ",strip=True)) for a in s.find_all("a",href=True)))
-    return {"url":f["final"],"job_link_count":len(set(links)),"pagination_seen":pagination}
+    unique=set(links)
+    forward=bool(s.find(attrs={"rel":"next"}) or any(PAGING.search(a.get_text(" ",strip=True)) for a in s.find_all("a",href=True)))
+    buttons=" ".join(x.get_text(" ",strip=True) for x in s.find_all(["button","a"]))
+    dynamic=bool(DYNAMIC_MORE.search(buttons))
+    path=urlparse(f["final"]).path
+    listing_like=bool(LISTING_URL.search(f["final"]) or (len(unique)>=5 and not re.search(r"/jobs?/[^/?#]+",path,re.I)))
+    text=s.get_text(" ",strip=True)
+    totals=[]
+    for m in re.finditer(r"\\b([0-9]{1,5})\\s+(?:open\\s+)?(?:jobs?|vacatures?|positions?|roles?|results?|offres?)\\b",text,re.I):
+        n=int(m.group(1))
+        if n>=len(unique): totals.append(n)
+    official_total=max(totals) if totals else None
+    complete=bool(listing_like and unique and not forward and not dynamic and (official_total is None or len(unique)>=official_total))
+    return {"url":f["final"],"job_link_count":len(unique),"pagination_seen":forward,
+            "dynamic_more_seen":dynamic,"listing_like":listing_like,"official_total":official_total,
+            "static_complete_evidence":complete}
+
+def coverage_from_evidence(evidence,o):
+    """Keep reachability separate from proof that the public inventory is exhaustive."""
+    if any(e.get("static_complete_evidence") for e in evidence):
+        return "verified_complete"
+    listing=[e for e in evidence if e.get("job_link_count")]
+    if o["no_public_hint"] and not listing:
+        return "verified_no_public_board"
+    return "partial" if listing else "unproven"
 
 def extract_jobs(f,o):
     if not f["html"]: return []
@@ -192,7 +215,7 @@ def browser_retry(rs):
                         fresh=extract_jobs(f,o)
                         if fresh: r["jobs"]=validate_jobs(fresh)
                         r["listing_evidence"].append(listing_evidence(f,o))
-                        if any(e["job_link_count"] for e in r["listing_evidence"]): r["vacancy_coverage"]="partial"
+                        r["vacancy_coverage"]=coverage_from_evidence(r["listing_evidence"],o)
                         if unresolved:
                             r["status"]="no_public_vacancy_board" if o["no_public_hint"] and not r["jobs"] else ("official_ats_scanned" if isats(final) else "official_site_scanned")
                             r["error"]=None
@@ -222,7 +245,7 @@ def main():
         for j in r["jobs"]:
             if j.get("apply_live"): jobs.append({**j,"organisation":r["name"],"kind":r["kind"],"is_new":j["url"] not in old})
     ok=105-counts["technical_failure"]
-    coverage_counts={k:sum(r["vacancy_coverage"]==k for r in rs) for k in ("verified_complete","partial","unproven","not_applicable_unverified")}
+    coverage_counts={k:sum(r["vacancy_coverage"]==k for r in rs) for k in ("verified_complete","verified_no_public_board","partial","unproven")}
     payload={"schema_version":2,"run_date":nldate(),"started_at":started,"completed_at":iso(),"total_expected":105,"total_classified":len(rs),"complete":len(rs)==105,"coverage_percent":round(100*len(rs)/105,1),"successful_control_count":ok,"successful_control_percent":round(100*ok/105,1),"vacancy_coverage_counts":coverage_counts,"counts":counts,"counts_by_kind":bykind,"technical_failures":[{"name":r["name"],"kind":r["kind"],"error":r["error"],"routes_tried":r["routes_tried"]} for r in rs if r["status"]=="technical_failure"],"live_relevant_jobs":jobs,"organisations":rs}
     text=json.dumps(payload,ensure_ascii=False,indent=2); latest.write_text(text); (DATA/f'{payload["run_date"]}.json').write_text(text)
     print(json.dumps({"complete":payload["complete"],"coverage":payload["coverage_percent"],"successful_control":payload["successful_control_percent"],"counts":counts,"live_relevant_jobs":len(jobs),"technical_failure_names":[x["name"] for x in payload["technical_failures"]]},ensure_ascii=False,indent=2))
