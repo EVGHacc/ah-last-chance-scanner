@@ -106,29 +106,43 @@ def api_inventory(o):
     return None
 
 def static_inventory(o):
-    """Prove completeness for small official boards exposing every public role on one terminal listing."""
+    """Exhaust small official boards, including explicit ?page=N pagination, before proving completeness."""
     c=STATIC_BOARDS.get(o["name"])
     if not c: return None
     try:
-        rr=requests.get(c["url"],headers=H,timeout=TIMEOUT,allow_redirects=True); rr.raise_for_status()
-        soup=BeautifulSoup(rr.text,"html.parser"); jobs={}; rx=re.compile(c["href"],re.I)
-        for a in soup.find_all("a",href=True):
-            u=norm(urljoin(rr.url,a["href"]))
-            if not rx.search(urlparse(u).path): continue
-            title=a.get_text(" ",strip=True)
-            if not title or re.fullmatch(r"(lees meer|read more|bekijk vacature|view job|more)",title,re.I):
-                box=a.find_parent(["article","li","section","div"])
-                if box:
-                    h=box.find(["h1","h2","h3","h4","h5"])
-                    if h: title=h.get_text(" ",strip=True)
-            if not title or len(title)<4:
-                slug=urlparse(u).path.rstrip("/").split("/")[-1]
-                title=re.sub(r"[-_]+"," ",slug).strip().title()
-            jobs[u]={"title":title,"url":u}
-        labels=" ".join(x.get_text(" ",strip=True) for x in soup.find_all(["a","button"]))
-        forward=bool(soup.find("a",attrs={"rel":lambda v:v and "next" in str(v).lower()}) or PAGING.search(labels) or DYNAMIC_MORE.search(labels))
-        return {"complete":bool(jobs and not forward),"official_total":len(jobs),"jobs":list(jobs.values()),"source":rr.url,
-                "error":None if jobs else "No vacancy links found"}
+        queue=[c["url"]]; seen=set(); jobs={}; rx=re.compile(c["href"],re.I); source=c["url"]; terminal=True
+        while queue and len(seen)<25:
+            page=queue.pop(0)
+            if page in seen: continue
+            seen.add(page)
+            rr=requests.get(page,headers=H,timeout=TIMEOUT,allow_redirects=True); rr.raise_for_status(); source=rr.url
+            soup=BeautifulSoup(rr.text,"html.parser")
+            for a in soup.find_all("a",href=True):
+                u=norm(urljoin(rr.url,a["href"]))
+                if rx.search(urlparse(u).path):
+                    title=a.get_text(" ",strip=True)
+                    if not title or re.fullmatch(r"(lees meer|read more|bekijk vacature|view vacancy|view job|more)",title,re.I):
+                        box=a.find_parent(["article","li","section","div"])
+                        if box:
+                            h=box.find(["h1","h2","h3","h4","h5"])
+                            if h: title=h.get_text(" ",strip=True)
+                    if not title or len(title)<4:
+                        slug=urlparse(u).path.rstrip("/").split("/")[-1]
+                        title=re.sub(r"[-_]+"," ",slug).strip().title()
+                    jobs[u]={"title":title,"url":u}
+                pp=urlparse(u); q=parse_qs(pp.query)
+                if hostname(u)==hostname(rr.url) and q.get("page") and u not in seen and u not in queue:
+                    queue.append(u)
+            nxt=soup.find("a",attrs={"rel":lambda v:v and "next" in str(v).lower()})
+            if nxt and nxt.get("href"):
+                u=norm(urljoin(rr.url,nxt["href"]))
+                if allowed(u,o) and u not in seen and u not in queue: queue.append(u)
+            labels=" ".join(x.get_text(" ",strip=True) for x in soup.find_all(["a","button"]))
+            if DYNAMIC_MORE.search(labels):
+                terminal=False
+        if queue: terminal=False
+        return {"complete":bool(jobs and terminal),"official_total":len(jobs),"jobs":list(jobs.values()),"source":source,
+                "pages":len(seen),"error":None if jobs else "No vacancy links found"}
     except Exception as e:
         return {"complete":False,"official_total":None,"jobs":[],"source":c["url"],"error":f"{type(e).__name__}: {e}"}
 
