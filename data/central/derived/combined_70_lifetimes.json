@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T21:50:00.256946+00:00",
+  "generated_at": "2026-09-23T21:48:57.744496+00:00",
   "method": {
     "event": "persistent disappearance proxy after first >=70% observation",
     "interpretation": "not proof of sale; possible sale, staff removal or inventory/API effect",
@@ -27,23 +27,23 @@
   },
   "summary": {
     "1135": {
-      "episodes_70": 162,
+      "episodes_70": 163,
       "confirmed_persistent_disappearances": 87,
-      "right_censored": 75,
-      "event_rate_pct": 53.7,
+      "right_censored": 76,
+      "event_rate_pct": 53.4,
       "mean_minutes_events_only": 87.0,
       "median_minutes_events_only": 70.0,
       "p25_minutes_events_only": 35.0,
       "p75_minutes_events_only": 138.5,
       "gone_within_15m": {
-        "eligible": 159,
+        "eligible": 160,
         "gone": 13,
-        "pct": 8.2
+        "pct": 8.1
       },
       "gone_within_30m": {
-        "eligible": 159,
+        "eligible": 160,
         "gone": 20,
-        "pct": 12.6
+        "pct": 12.5
       },
       "gone_within_60m": {
         "eligible": 158,
@@ -57,18 +57,18 @@
       }
     },
     "1348": {
-      "episodes_70": 134,
+      "episodes_70": 135,
       "confirmed_persistent_disappearances": 53,
-      "right_censored": 81,
-      "event_rate_pct": 39.6,
+      "right_censored": 82,
+      "event_rate_pct": 39.3,
       "mean_minutes_events_only": 61.4,
       "median_minutes_events_only": 54.0,
       "p25_minutes_events_only": 20.0,
       "p75_minutes_events_only": 90.0,
       "gone_within_15m": {
-        "eligible": 126,
+        "eligible": 127,
         "gone": 12,
-        "pct": 9.5
+        "pct": 9.4
       },
       "gone_within_30m": {
         "eligible": 126,
@@ -117,23 +117,23 @@
       }
     },
     "all": {
-      "episodes_70": 373,
+      "episodes_70": 375,
       "confirmed_persistent_disappearances": 189,
-      "right_censored": 184,
-      "event_rate_pct": 50.7,
+      "right_censored": 186,
+      "event_rate_pct": 50.4,
       "mean_minutes_events_only": 71.4,
       "median_minutes_events_only": 60.0,
       "p25_minutes_events_only": 25.0,
       "p75_minutes_events_only": 100.0,
       "gone_within_15m": {
-        "eligible": 356,
+        "eligible": 358,
         "gone": 31,
         "pct": 8.7
       },
       "gone_within_30m": {
-        "eligible": 355,
+        "eligible": 356,
         "gone": 55,
-        "pct": 15.5
+        "pct": 15.4
       },
       "gone_within_60m": {
         "eligible": 352,
@@ -5558,6 +5558,34 @@
       "last_followup": "2026-09-22T22:30:00+02:00",
       "followup_minutes": 192.0,
       "reason": "persistent_absence_proxy_not_proof_of_sale"
+    },
+    {
+      "date": "2026-09-23",
+      "store_id": "1135",
+      "product_id": "412503",
+      "product": "AH BBQ spareribs zoet",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-23T18:18:00+02:00",
+      "stock_at_70": 1.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-23T18:57:00+02:00",
+      "followup_minutes": 39.0,
+      "reason": "still_present_at_last_valid_scan"
+    },
+    {
+      "date": "2026-09-23",
+      "store_id": "1348",
+      "product_id": "232421",
+      "product": "AH Speklap",
+      "source": "current-scanner-v5",
+      "first70": "2026-09-23T18:33:00+02:00",
+      "stock_at_70": 2.0,
+      "event": false,
+      "minutes": null,
+      "last_followup": "2026-09-23T18:57:00+02:00",
+      "followup_minutes": 24.0,
+      "reason": "still_present_at_last_valid_scan"
     }
   ]
 }
