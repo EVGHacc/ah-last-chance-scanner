@@ -1,6 +1,6 @@
 import unittest
 
-from scanner import REL, SENIOR, extract_jobs, listing_evidence
+from scanner import REL, SENIOR, extract_jobs, listing_evidence, coverage_from_evidence
 
 
 ORG = {"official_domain": "example.com", "allowed_domains": []}
@@ -29,6 +29,17 @@ class ScannerTests(unittest.TestCase):
         evidence = listing_evidence(page(html), ORG)
         self.assertEqual(evidence["job_link_count"], 1)
         self.assertTrue(evidence["pagination_seen"])
+        self.assertFalse(evidence["static_complete_evidence"])
+
+    def test_static_listing_can_prove_complete_inventory(self):
+        html = ''.join(f'<a href="/jobs/{i}">Director Risk {i}</a>' for i in range(1,6))
+        evidence = listing_evidence(page(html), ORG)
+        self.assertTrue(evidence["static_complete_evidence"])
+        self.assertEqual(coverage_from_evidence([evidence], {**ORG,"no_public_hint":False}), "verified_complete")
+
+    def test_verified_no_public_board_is_distinct(self):
+        evidence = listing_evidence(page("<p>Executive search mandates are confidential.</p>"), ORG)
+        self.assertEqual(coverage_from_evidence([evidence], {**ORG,"no_public_hint":True}), "verified_no_public_board")
 
 
 if __name__ == "__main__":
