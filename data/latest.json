@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-23",
   "weekday": "Wednesday",
-  "scheduledSlot": "20:57",
-  "scheduledAt": "2026-09-23T20:57:00+02:00",
-  "rawScheduledSlot": "20:57",
-  "rawScheduledAt": "2026-09-23T20:57:00+02:00",
-  "startedAt": "2026-09-23T20:57:00.260316+02:00",
-  "completedAt": "2026-09-23T20:57:04.790203+02:00",
-  "checkedAt": "2026-09-23T20:57:04.790203+02:00",
+  "scheduledSlot": "21:00",
+  "scheduledAt": "2026-09-23T21:00:00+02:00",
+  "rawScheduledSlot": "21:00",
+  "rawScheduledAt": "2026-09-23T21:00:00+02:00",
+  "startedAt": "2026-09-23T21:00:00.335171+02:00",
+  "completedAt": "2026-09-23T21:00:05.359380+02:00",
+  "checkedAt": "2026-09-23T21:00:05.359380+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1352,18 +1352,6 @@
           "markdownExpirationDate": "2026-09-23"
         },
         {
-          "productId": 410181,
-          "title": "AH Kip paprikabroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.99",
-          "priceNow": "1.49",
-          "markdownExpirationDate": "2026-09-23"
-        },
-        {
           "productId": 590397,
           "title": "AH Kipnuggetbroodje",
           "brand": "AH",
@@ -1421,6 +1409,18 @@
           "stock": 2,
           "priceWas": "1.29",
           "priceNow": "0.97",
+          "markdownExpirationDate": "2026-09-23"
+        },
+        {
+          "productId": 410181,
+          "title": "AH Kip paprikabroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
           "markdownExpirationDate": "2026-09-23"
         },
         {
@@ -2297,7 +2297,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 208,
+      "totalBargainItems": 211,
       "meatItems": 5,
       "meat70Items": 2,
       "meat70Stock": 4.0,
@@ -2728,18 +2728,6 @@
           "markdownExpirationDate": "2026-09-23"
         },
         {
-          "productId": 487305,
-          "title": "AH Liefde & Passie Spelt volkoren brood",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "3.19",
-          "priceNow": "2.71",
-          "markdownExpirationDate": "2026-09-23"
-        },
-        {
           "productId": 230786,
           "title": "AH Les pains triomphe heel",
           "brand": "AH",
@@ -2802,6 +2790,18 @@
         {
           "productId": 487304,
           "title": "AH Liefde & Passie OerDesem pompoen",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "3.19",
+          "priceNow": "2.71",
+          "markdownExpirationDate": "2026-09-23"
+        },
+        {
+          "productId": 487305,
+          "title": "AH Liefde & Passie Spelt volkoren brood",
           "brand": "AH Liefde & Passie",
           "size": "per stuk",
           "category": "Bakkerij",
