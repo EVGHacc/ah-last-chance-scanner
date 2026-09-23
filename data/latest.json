@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-23",
   "weekday": "Wednesday",
-  "scheduledSlot": "20:30",
-  "scheduledAt": "2026-09-23T20:30:00+02:00",
-  "rawScheduledSlot": "20:30",
-  "rawScheduledAt": "2026-09-23T20:30:00+02:00",
-  "startedAt": "2026-09-23T20:30:00.280485+02:00",
-  "completedAt": "2026-09-23T20:30:05.845736+02:00",
-  "checkedAt": "2026-09-23T20:30:05.845736+02:00",
+  "scheduledSlot": "20:33",
+  "scheduledAt": "2026-09-23T20:33:00+02:00",
+  "rawScheduledSlot": "20:33",
+  "rawScheduledAt": "2026-09-23T20:33:00+02:00",
+  "startedAt": "2026-09-23T20:33:00.282663+02:00",
+  "completedAt": "2026-09-23T20:33:05.402190+02:00",
+  "checkedAt": "2026-09-23T20:33:05.402190+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1878,7 +1878,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 8,
+          "stock": 7,
           "priceWas": "2.69",
           "priceNow": "2.02",
           "markdownExpirationDate": "2026-09-23"
@@ -2524,18 +2524,6 @@
           "markdownExpirationDate": "2026-09-23"
         },
         {
-          "productId": 182711,
-          "title": "AH Les pains bastille heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "2.39",
-          "priceNow": "1.79",
-          "markdownExpirationDate": "2026-09-23"
-        },
-        {
           "productId": 606492,
           "title": "AH Liefde & Passie Biologisch desem pistolet meerzaden",
           "brand": "AH Liefde & Passie",
@@ -2557,6 +2545,18 @@
           "stock": 4,
           "priceWas": "0.89",
           "priceNow": "0.67",
+          "markdownExpirationDate": "2026-09-23"
+        },
+        {
+          "productId": 182711,
+          "title": "AH Les pains bastille heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "2.39",
+          "priceNow": "1.79",
           "markdownExpirationDate": "2026-09-23"
         },
         {
