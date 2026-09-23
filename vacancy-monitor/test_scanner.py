@@ -15,6 +15,8 @@ class ScannerTests(unittest.TestCase):
         self.assertIsNotNone(REL.search("Group MLRO"))
         self.assertIsNotNone(SENIOR.search("VP Business Control"))
         self.assertIsNotNone(REL.search("Business Resilience Officer"))
+        self.assertIsNotNone(SENIOR.search("Business Resilience Officer – Operational Continuity"))
+        self.assertIsNotNone(REL.search("Head of Financial Intelligence"))
 
     def test_job_cards_and_structured_posting(self):
         html = '''<a href="/jobs/123">Director Financial Crime</a>
