@@ -6,7 +6,7 @@ from zoneinfo import ZoneInfo
 from scripts.auth_state import restore_state
 
 TZ=ZoneInfo('Europe/Amsterdam')
-STORES=[(1463,'AH Blekersvaartweg'),(1348,'AH Zandvoortselaan'),(1135,'AH Casablancastraat')]
+STORES=[(1463,'AH Blekersvaartweg'),(1348,'AH Zandvoortselaan'),(1135,'AH Casablancastraat'),(4046,'AH Clothildestraat'),(8728,'AH Westergracht')]
 BASE='https://api.ah.nl'
 CLIENT_ID='appie-ios'
 HEADERS={'User-Agent':'Appie/9.28 (iPhone17,3; iPhone; CPU OS 26_1 like Mac OS X)','x-client-name':CLIENT_ID,'x-client-version':'9.28','x-application':'AHWEBSHOP','Accept':'application/json','Content-Type':'application/json'}
@@ -164,7 +164,7 @@ def main():
     except Exception as e:
         stores=[{'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,'bakery70Items':0,'bakery70Stock':0,'items':[],'bakery':[],'error':str(e)[:350]} for sid,name in STORES]
     fetched=sum(1 for x in stores if x['fetched'])
-    status=('OK_ZERO_ROWS' if sum(x['meatItems'] for x in stores)==0 else 'OK') if fetched==3 else ('FAILED' if fetched==0 else 'INCOMPLETE')
+    status=('OK_ZERO_ROWS' if sum(x['meatItems'] for x in stores)==0 else 'OK') if fetched==len(STORES) else ('FAILED' if fetched==0 else 'INCOMPLETE')
     completed=datetime.now(TZ)
     valid=status in ('OK','OK_ZERO_ROWS') and auth_mode=='user-refresh' and delay<=240
     obs={'schemaVersion':5,'date':date,'weekday':scheduled.strftime('%A'),'scheduledSlot':slot,'scheduledAt':scheduled.isoformat(),'rawScheduledSlot':slot,'rawScheduledAt':scheduled.isoformat(),'startedAt':started.isoformat(),'completedAt':completed.isoformat(),'checkedAt':completed.isoformat(),'delaySeconds':delay,'rawDelaySeconds':delay,'status':status,'valid':valid,'official1925':slot=='19:25','authMode':auth_mode,'authTokenSource':auth_source,'categories':['Vlees','Bakkerij'],'stores':stores}
