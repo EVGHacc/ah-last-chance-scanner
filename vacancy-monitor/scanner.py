@@ -394,8 +394,13 @@ def main():
     payload={"schema_version":3,"run_date":nldate(),"started_at":started,"completed_at":iso(),"total_expected":105,"total_classified":len(rs),"complete":len(rs)==105,"coverage_percent":round(100*len(rs)/105,1),"successful_control_count":ok,"successful_control_percent":round(100*ok/105,1),"vacancy_coverage_counts":coverage_counts,"match_audit":{"candidate_count":audit_total,"matched_count":audit_matched,"recall_percent":match_recall},"counts":counts,"counts_by_kind":bykind,"technical_failures":[{"name":r["name"],"kind":r["kind"],"error":r["error"],"routes_tried":r["routes_tried"]} for r in rs if r["status"]=="technical_failure"],"live_relevant_jobs":jobs,"organisations":rs}
     text=json.dumps(payload,ensure_ascii=False,indent=2); latest.write_text(text); (DATA/f'{payload["run_date"]}.json').write_text(text)
     incomplete=[{"name":r["name"],"kind":r["kind"],"coverage":r["vacancy_coverage"],"status":r["status"]} for r in target if r["vacancy_coverage"] not in ("verified_complete","verified_no_public_board")]
+    missed_examples=[]
+    for rr in audit_scope:
+        for jj in rr.get("match_audit",{}).get("missed",[]):
+            missed_examples.append({"organisation":rr["name"],"title":jj["title"],"url":jj["url"]})
     summary={"run_date":payload["run_date"],"target_expected":103,"target_proven":len(proven),"vacancy_coverage_percent":vacancy_percent,
-             "match_audit":{"candidate_count":audit_total,"matched_count":audit_matched,"recall_percent":match_recall},
+             "match_audit":{"candidate_count":audit_total,"matched_count":audit_matched,"recall_percent":match_recall,
+                            "missed_count":audit_total-audit_matched,"missed_examples":missed_examples[:100]},
              "incomplete":incomplete,"technical_failures":[x["name"] for x in payload["technical_failures"]]}
     (DATA/"coverage-summary.json").write_text(json.dumps(summary,ensure_ascii=False,indent=2))
     print(json.dumps({"complete":payload["complete"],"coverage":payload["coverage_percent"],"successful_control":payload["successful_control_percent"],
