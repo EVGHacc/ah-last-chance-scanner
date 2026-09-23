@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-23",
   "weekday": "Wednesday",
-  "scheduledSlot": "20:03",
-  "scheduledAt": "2026-09-23T20:03:00+02:00",
-  "rawScheduledSlot": "20:03",
-  "rawScheduledAt": "2026-09-23T20:03:00+02:00",
-  "startedAt": "2026-09-23T20:03:00.351563+02:00",
-  "completedAt": "2026-09-23T20:03:04.939674+02:00",
-  "checkedAt": "2026-09-23T20:03:04.939674+02:00",
+  "scheduledSlot": "20:05",
+  "scheduledAt": "2026-09-23T20:05:00+02:00",
+  "rawScheduledSlot": "20:05",
+  "rawScheduledAt": "2026-09-23T20:05:00+02:00",
+  "startedAt": "2026-09-23T20:05:00.268329+02:00",
+  "completedAt": "2026-09-23T20:05:04.794346+02:00",
+  "checkedAt": "2026-09-23T20:05:04.794346+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 219,
+      "totalBargainItems": 224,
       "meatItems": 3,
       "meat70Items": 1,
       "meat70Stock": 1.0,
@@ -120,18 +120,6 @@
           "markdownExpirationDate": "2026-09-23"
         },
         {
-          "productId": 590399,
-          "title": "AH Broodje burger augurk tomatensaus",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "1.49",
-          "priceNow": "1.12",
-          "markdownExpirationDate": "2026-09-23"
-        },
-        {
           "productId": 417148,
           "title": "AH Vloerbrood volkoren heel",
           "brand": "AH",
@@ -213,6 +201,18 @@
           "stock": 3,
           "priceWas": "1.99",
           "priceNow": "1.49",
+          "markdownExpirationDate": "2026-09-23"
+        },
+        {
+          "productId": 590399,
+          "title": "AH Broodje burger augurk tomatensaus",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
           "markdownExpirationDate": "2026-09-23"
         },
         {
@@ -1364,18 +1364,6 @@
           "markdownExpirationDate": "2026-09-23"
         },
         {
-          "productId": 606092,
-          "title": "AH Empanada Samosa",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.29",
-          "priceNow": "0.97",
-          "markdownExpirationDate": "2026-09-23"
-        },
-        {
           "productId": 410181,
           "title": "AH Kip paprikabroodje",
           "brand": "AH",
@@ -1385,6 +1373,18 @@
           "stock": 3,
           "priceWas": "1.99",
           "priceNow": "1.49",
+          "markdownExpirationDate": "2026-09-23"
+        },
+        {
+          "productId": 606092,
+          "title": "AH Empanada Samosa",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.29",
+          "priceNow": "0.97",
           "markdownExpirationDate": "2026-09-23"
         },
         {
@@ -1789,14 +1789,26 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 174,
+      "totalBargainItems": 172,
       "meatItems": 3,
-      "meat70Items": 1,
-      "meat70Stock": 1.0,
+      "meat70Items": 2,
+      "meat70Stock": 2.0,
       "bakeryItems": 43,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
+        {
+          "productId": 183170,
+          "title": "AH Bacon reepjes",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
+          "markdownExpirationDate": "2026-09-23"
+        },
         {
           "productId": 531882,
           "title": "AH Scharrel kipborrelhapjes gemarineerd",
@@ -1807,18 +1819,6 @@
           "stock": 1,
           "priceWas": "7.49",
           "priceNow": "2.25",
-          "markdownExpirationDate": "2026-09-23"
-        },
-        {
-          "productId": 183170,
-          "title": "AH Bacon reepjes",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "3.99",
-          "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-23"
         },
         {
@@ -2148,18 +2148,6 @@
           "markdownExpirationDate": "2026-09-23"
         },
         {
-          "productId": 230787,
-          "title": "AH Les pains triomphe half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "1.29",
-          "priceNow": "1.10",
-          "markdownExpirationDate": "2026-09-23"
-        },
-        {
           "productId": 577447,
           "title": "AH Everything bol",
           "brand": "AH",
@@ -2253,6 +2241,18 @@
           "stock": 2,
           "priceWas": "1.89",
           "priceNow": "1.61",
+          "markdownExpirationDate": "2026-09-23"
+        },
+        {
+          "productId": 230787,
+          "title": "AH Les pains triomphe half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "1.29",
+          "priceNow": "1.10",
           "markdownExpirationDate": "2026-09-23"
         },
         {
@@ -2357,7 +2357,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 216,
+      "totalBargainItems": 215,
       "meatItems": 6,
       "meat70Items": 2,
       "meat70Stock": 4.0,
