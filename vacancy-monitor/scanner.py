@@ -15,7 +15,7 @@ TIMEOUT=int(os.getenv("VACANCY_TIMEOUT","12")); WORKERS=int(os.getenv("VACANCY_W
 ATS=("myworkdayjobs.com","workday.com","oraclecloud.com","greenhouse.io","lever.co","teamtailor.com","recruitee.com","ashbyhq.com","breezy.hr","smartrecruiters.com","successfactors.com","eightfold.ai","icims.com")
 CAREER=re.compile(r"(job|career|vacanc|position|opportunit|werken.?bij|open.?roles)",re.I)
 REL=re.compile(r"(compliance|risk|audit|aml|financial.?crime|sanction|governance|regulatory|controls?|assurance|\bmlro\b|\bcco\b|\bcro\b|responsible.?ai|trust.?safety|resilien|business.?control|integrity|fraud|investigation|financial.?intelligence|conduct|ethics|financieel.?economische.?criminaliteit|witwassen)",re.I)
-JOBURL=re.compile(r"(/job(?:s)?/|/vacanc|/position|/career|/opportunit|job[_-]|vacature|search-jobs|/offre-de-emploi/|/stellenangebot/)",re.I)
+JOBURL=re.compile(r"(/job(?:s)?/|/vacanc|/position|/career|/opportunit|job[_-]|vacature|search-jobs|/offre-de-emploi/|/stellenangebot/)",re.I)\nAUDIT_REL=re.compile(r"(compliance|risk|audit|anti.?money|aml|financial.?crime|sanction|governance|regulat|control|assurance|oversight|resilien|continuity|integrity|fraud|investigation|financial.?intelligence|conduct|ethics|responsible.?ai|trust.?safety|remediation|non.?financial)",re.I)\nAUDIT_SENIOR=re.compile(r"(head|director|senior|lead|chief|vice.?president|\\bvp\\b|principal|partner|manager|officer|expert|global|regional|strategy|transformation)",re.I)
 SENIOR=re.compile(r"(head|director|executive.?director|senior.?manager|lead|chief|vice.?president|\bvp\b|principal|partner|manager|hoofd|directeur|global|regional|strateg|expert|business.?resilien.?officer|operational.?continuity)",re.I)
 APPLY=re.compile(r"(apply.?now|\bapply\b|solliciteer|submit.?application|start.?application)",re.I)
 PAGING=re.compile(r"(next|volgende|suivant|weiter|load more|toon meer|show more|page [2-9])",re.I)
@@ -124,6 +124,19 @@ def coverage_from_evidence(evidence,o):
         return "verified_no_public_board"
     return "partial" if listing else "unproven"
 
+def audit_candidates(f,o):
+    """Independent broad title/url sweep used to estimate matcher recall."""
+    if not f["html"]: return []
+    soup=BeautifulSoup(f["html"],"html.parser"); out=[]
+    for a in soup.find_all("a",href=True):
+        title=a.get_text(" ",strip=True); u=norm(urljoin(f["final"],a["href"]))
+        if 4<=len(title)<=180 and u.startswith("http") and allowed(u,o) and JOBURL.search(u):
+            hay=title+" "+u
+            if AUDIT_REL.search(hay) and AUDIT_SENIOR.search(title):
+                out.append({"title":title,"url":u})
+    d={(j["title"].lower(),j["url"]):j for j in out}
+    return list(d.values())
+
 def extract_jobs(f,o):
     if not f["html"]: return []
     s=BeautifulSoup(f["html"],"html.parser"); out=[]
@@ -189,7 +202,7 @@ def scan(o):
     # cannot establish complete vacancy coverage.  Keep this separate from reachability.
     listing=[e for e in evidence if e["job_link_count"]]
     coverage="partial" if listing else ("not_applicable_unverified" if o["no_public_hint"] else "unproven")
-    return {"name":o["name"],"kind":o["kind"],"status":st,"vacancy_coverage":coverage,"listing_evidence":evidence,"checked_at":iso(),"duration_ms":int((time.monotonic()-t)*1000),"routes_tried":tried[-18:],"successful_routes":[{"url":f["final"],"method":f["method"],"status":f["status"]} for f in success[:6]],"jobs":jobs,"error":None if st!="technical_failure" else "No verifiable official vacancy route completed","_org":o}
+    return {"name":o["name"],"kind":o["kind"],"status":st,"vacancy_coverage":coverage,"listing_evidence":evidence,"match_audit":{"candidate_count":len(audit_unique),"matched_count":len(audit_unique)-len(audit_missed),"missed":audit_missed[:20]},"checked_at":iso(),"duration_ms":int((time.monotonic()-t)*1000),"routes_tried":tried[-18:],"successful_routes":[{"url":f["final"],"method":f["method"],"status":f["status"]} for f in success[:6]],"jobs":jobs,"error":None if st!="technical_failure" else "No verifiable official vacancy route completed","_org":o}
 
 def browser_retry(rs):
     bad=[r for r in rs if r["status"]=="technical_failure" or r["vacancy_coverage"]=="unproven"]
@@ -248,7 +261,7 @@ def main():
             if j.get("apply_live"): jobs.append({**j,"organisation":r["name"],"kind":r["kind"],"is_new":j["url"] not in old})
     ok=105-counts["technical_failure"]
     coverage_counts={k:sum(r["vacancy_coverage"]==k for r in rs) for k in ("verified_complete","verified_no_public_board","partial","unproven")}
-    payload={"schema_version":2,"run_date":nldate(),"started_at":started,"completed_at":iso(),"total_expected":105,"total_classified":len(rs),"complete":len(rs)==105,"coverage_percent":round(100*len(rs)/105,1),"successful_control_count":ok,"successful_control_percent":round(100*ok/105,1),"vacancy_coverage_counts":coverage_counts,"counts":counts,"counts_by_kind":bykind,"technical_failures":[{"name":r["name"],"kind":r["kind"],"error":r["error"],"routes_tried":r["routes_tried"]} for r in rs if r["status"]=="technical_failure"],"live_relevant_jobs":jobs,"organisations":rs}
+    audit_total=sum(r.get("match_audit",{}).get("candidate_count",0) for r in rs)\n    audit_matched=sum(r.get("match_audit",{}).get("matched_count",0) for r in rs)\n    match_recall=round(100*audit_matched/audit_total,1) if audit_total else None\n    payload={"schema_version":3,"run_date":nldate(),"started_at":started,"completed_at":iso(),"total_expected":105,"total_classified":len(rs),"complete":len(rs)==105,"coverage_percent":round(100*len(rs)/105,1),"successful_control_count":ok,"successful_control_percent":round(100*ok/105,1),"vacancy_coverage_counts":coverage_counts,"match_audit":{"candidate_count":audit_total,"matched_count":audit_matched,"recall_percent":match_recall},"counts":counts,"counts_by_kind":bykind,"technical_failures":[{"name":r["name"],"kind":r["kind"],"error":r["error"],"routes_tried":r["routes_tried"]} for r in rs if r["status"]=="technical_failure"],"live_relevant_jobs":jobs,"organisations":rs}
     text=json.dumps(payload,ensure_ascii=False,indent=2); latest.write_text(text); (DATA/f'{payload["run_date"]}.json').write_text(text)
     print(json.dumps({"complete":payload["complete"],"coverage":payload["coverage_percent"],"successful_control":payload["successful_control_percent"],"counts":counts,"live_relevant_jobs":len(jobs),"technical_failure_names":[x["name"] for x in payload["technical_failures"]]},ensure_ascii=False,indent=2))
 
