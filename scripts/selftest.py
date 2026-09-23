@@ -32,7 +32,7 @@ def obs(raw_slot='17:30',canonical_slot='17:30',raw_delay=10,canonical_delay=10,
     return {'date':'2026-09-13','scheduledSlot':canonical_slot,'rawScheduledSlot':raw_slot,
             'rawDelaySeconds':raw_delay,'delaySeconds':canonical_delay,'authMode':auth,
             'status':status,'valid':valid,'categories':['Vlees','Bakkerij'],
-            'stores':[store(1463),store(1348),store(1135)],'checkedAt':'2026-09-13T17:30:10+02:00'}
+            'stores':[store(1463),store(1348),store(1135),store(4046),store(8728)],'checkedAt':'2026-09-13T17:30:10+02:00'}
 
 assert len(persist.RAW_SLOTS)==101 and persist.RAW_SLOTS[0]=='17:30' and persist.RAW_SLOTS[-1]=='22:30'
 assert len(persist.SLOTS)==61 and persist.SLOTS[0]=='17:30' and persist.SLOTS[-1]=='22:30'
