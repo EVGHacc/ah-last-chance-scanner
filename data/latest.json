@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-23",
   "weekday": "Wednesday",
-  "scheduledSlot": "20:09",
-  "scheduledAt": "2026-09-23T20:09:00+02:00",
-  "rawScheduledSlot": "20:09",
-  "rawScheduledAt": "2026-09-23T20:09:00+02:00",
-  "startedAt": "2026-09-23T20:09:00.295478+02:00",
-  "completedAt": "2026-09-23T20:09:05.850263+02:00",
-  "checkedAt": "2026-09-23T20:09:05.850263+02:00",
+  "scheduledSlot": "20:10",
+  "scheduledAt": "2026-09-23T20:10:00+02:00",
+  "rawScheduledSlot": "20:10",
+  "rawScheduledAt": "2026-09-23T20:10:00+02:00",
+  "startedAt": "2026-09-23T20:10:00.265643+02:00",
+  "completedAt": "2026-09-23T20:10:07.270438+02:00",
+  "checkedAt": "2026-09-23T20:10:07.270438+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -988,18 +988,6 @@
           "markdownExpirationDate": "2026-09-23"
         },
         {
-          "productId": 230718,
-          "title": "AH Pistolet wit",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "0.29",
-          "priceNow": "0.25",
-          "markdownExpirationDate": "2026-09-23"
-        },
-        {
           "productId": 515766,
           "title": "AH Kaasstengel",
           "brand": "AH",
@@ -1069,6 +1057,18 @@
           "stock": 2,
           "priceWas": "1.19",
           "priceNow": "1.01",
+          "markdownExpirationDate": "2026-09-23"
+        },
+        {
+          "productId": 230718,
+          "title": "AH Pistolet wit",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "0.29",
+          "priceNow": "0.25",
           "markdownExpirationDate": "2026-09-23"
         },
         {
@@ -2345,8 +2345,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 212,
-      "meatItems": 6,
+      "totalBargainItems": 211,
+      "meatItems": 5,
       "meat70Items": 2,
       "meat70Stock": 4.0,
       "bakeryItems": 42,
@@ -2411,18 +2411,6 @@
           "stock": 1,
           "priceWas": "4.99",
           "priceNow": "1.87",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
-          "productId": 238929,
-          "title": "AH Biologisch Speklap",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "4.78",
-          "priceNow": "3.59",
           "markdownExpirationDate": "2026-09-24"
         }
       ],
