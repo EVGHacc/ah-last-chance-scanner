@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-23",
   "weekday": "Wednesday",
-  "scheduledSlot": "20:05",
-  "scheduledAt": "2026-09-23T20:05:00+02:00",
-  "rawScheduledSlot": "20:05",
-  "rawScheduledAt": "2026-09-23T20:05:00+02:00",
-  "startedAt": "2026-09-23T20:05:00.268329+02:00",
-  "completedAt": "2026-09-23T20:05:04.794346+02:00",
-  "checkedAt": "2026-09-23T20:05:04.794346+02:00",
+  "scheduledSlot": "20:06",
+  "scheduledAt": "2026-09-23T20:06:00+02:00",
+  "rawScheduledSlot": "20:06",
+  "rawScheduledAt": "2026-09-23T20:06:00+02:00",
+  "startedAt": "2026-09-23T20:06:00.266591+02:00",
+  "completedAt": "2026-09-23T20:06:05.071922+02:00",
+  "checkedAt": "2026-09-23T20:06:05.071922+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -868,18 +868,6 @@
           "markdownExpirationDate": "2026-09-23"
         },
         {
-          "productId": 544584,
-          "title": "AH Liefde & Passie OerDesem Spelt boekweit",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-23"
-        },
-        {
           "productId": 590399,
           "title": "AH Broodje burger augurk tomatensaus",
           "brand": "AH",
@@ -913,6 +901,18 @@
           "stock": 2,
           "priceWas": "2.39",
           "priceNow": "1.79",
+          "markdownExpirationDate": "2026-09-23"
+        },
+        {
+          "productId": 544584,
+          "title": "AH Liefde & Passie OerDesem Spelt boekweit",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-23"
         },
         {
@@ -1293,11 +1293,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 247,
+      "totalBargainItems": 246,
       "meatItems": 2,
       "meat70Items": 1,
       "meat70Stock": 1.0,
-      "bakeryItems": 38,
+      "bakeryItems": 37,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "items": [
@@ -1553,18 +1553,6 @@
           "stock": 1,
           "priceWas": "0.89",
           "priceNow": "0.76",
-          "markdownExpirationDate": "2026-09-23"
-        },
-        {
-          "productId": 125035,
-          "title": "AH Les pains boulogne heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "2.39",
-          "priceNow": "2.03",
           "markdownExpirationDate": "2026-09-23"
         },
         {
@@ -2244,18 +2232,6 @@
           "markdownExpirationDate": "2026-09-23"
         },
         {
-          "productId": 230787,
-          "title": "AH Les pains triomphe half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "1.29",
-          "priceNow": "1.10",
-          "markdownExpirationDate": "2026-09-23"
-        },
-        {
           "productId": 230786,
           "title": "AH Les pains triomphe heel",
           "brand": "AH",
@@ -2316,6 +2292,18 @@
           "markdownExpirationDate": "2026-09-23"
         },
         {
+          "productId": 230787,
+          "title": "AH Les pains triomphe half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "1.29",
+          "priceNow": "1.10",
+          "markdownExpirationDate": "2026-09-23"
+        },
+        {
           "productId": 411164,
           "title": "AH Kaas uienbroodje",
           "brand": "AH",
@@ -2357,7 +2345,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 215,
+      "totalBargainItems": 213,
       "meatItems": 6,
       "meat70Items": 2,
       "meat70Stock": 4.0,
@@ -2500,18 +2488,6 @@
           "markdownExpirationDate": "2026-09-23"
         },
         {
-          "productId": 595350,
-          "title": "AH Biologisch Batard volkoren zonnepit heel",
-          "brand": "AH Biologisch",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
-          "markdownExpirationDate": "2026-09-23"
-        },
-        {
           "productId": 252839,
           "title": "AH Vloerbrood meergranen half",
           "brand": "AH",
@@ -2533,6 +2509,18 @@
           "stock": 4,
           "priceWas": "1.45",
           "priceNow": "1.09",
+          "markdownExpirationDate": "2026-09-23"
+        },
+        {
+          "productId": 595350,
+          "title": "AH Biologisch Batard volkoren zonnepit heel",
+          "brand": "AH Biologisch",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
           "markdownExpirationDate": "2026-09-23"
         },
         {
