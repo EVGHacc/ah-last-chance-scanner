@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-23",
   "weekday": "Wednesday",
-  "scheduledSlot": "21:45",
-  "scheduledAt": "2026-09-23T21:45:00+02:00",
-  "rawScheduledSlot": "21:45",
-  "rawScheduledAt": "2026-09-23T21:45:00+02:00",
-  "startedAt": "2026-09-23T21:45:00.267727+02:00",
-  "completedAt": "2026-09-23T21:45:04.993323+02:00",
-  "checkedAt": "2026-09-23T21:45:04.993323+02:00",
+  "scheduledSlot": "21:48",
+  "scheduledAt": "2026-09-23T21:48:00+02:00",
+  "rawScheduledSlot": "21:48",
+  "rawScheduledAt": "2026-09-23T21:48:00+02:00",
+  "startedAt": "2026-09-23T21:48:00.273828+02:00",
+  "completedAt": "2026-09-23T21:48:04.612450+02:00",
+  "checkedAt": "2026-09-23T21:48:04.612450+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2188,18 +2188,6 @@
           "markdownExpirationDate": "2026-09-23"
         },
         {
-          "productId": 182711,
-          "title": "AH Les pains bastille heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "2.39",
-          "priceNow": "1.79",
-          "markdownExpirationDate": "2026-09-23"
-        },
-        {
           "productId": 277519,
           "title": "AH Vloerbrood volkoren half",
           "brand": "AH",
@@ -2245,6 +2233,18 @@
           "stock": 3,
           "priceWas": "0.69",
           "priceNow": "0.52",
+          "markdownExpirationDate": "2026-09-23"
+        },
+        {
+          "productId": 182711,
+          "title": "AH Les pains bastille heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "2.39",
+          "priceNow": "1.79",
           "markdownExpirationDate": "2026-09-23"
         },
         {
