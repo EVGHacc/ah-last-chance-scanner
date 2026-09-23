@@ -1,0 +1,93 @@
+{
+  "run_date": "2026-09-23",
+  "target_expected": 103,
+  "target_proven": 91,
+  "vacancy_coverage_percent": 88.3,
+  "match_audit": {
+    "candidate_count": 178,
+    "matched_count": 143,
+    "recall_percent": 80.3
+  },
+  "incomplete": [
+    {
+      "name": "McKinsey",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "technical_failure"
+    },
+    {
+      "name": "Morgan Stanley",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
+    },
+    {
+      "name": "Rabobank",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "technical_failure"
+    },
+    {
+      "name": "Thunes",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "ARC",
+      "kind": "recruiter",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "CPI",
+      "kind": "recruiter",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Global FinTech Talent",
+      "kind": "recruiter",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Lime Search",
+      "kind": "recruiter",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "PaymentGenes",
+      "kind": "recruiter",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Robert Walters Interim",
+      "kind": "recruiter",
+      "coverage": "unproven",
+      "status": "technical_failure"
+    },
+    {
+      "name": "Selby Jennings",
+      "kind": "recruiter",
+      "coverage": "unproven",
+      "status": "technical_failure"
+    },
+    {
+      "name": "Vroom",
+      "kind": "recruiter",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    }
+  ],
+  "technical_failures": [
+    "DB Contractors UK",
+    "McKinsey",
+    "Rabobank",
+    "Risk Talent Associates",
+    "Robert Walters Interim",
+    "Selby Jennings"
+  ]
+}
