@@ -37,7 +37,9 @@ jobs:
         env:
           VACANCY_TIMEOUT: "10"
           VACANCY_WORKERS: "16"
-        run: python vacancy-monitor/scanner.py
+        run: |
+          python -m unittest discover -s vacancy-monitor -p 'test_*.py'
+          python vacancy-monitor/scanner.py
       - name: Validate snapshot
         run: |
           python - <<'PY'
@@ -54,6 +56,7 @@ jobs:
             "run_date": d["run_date"],
             "coverage": d["coverage_percent"],
             "successful_control": d["successful_control_percent"],
+            "vacancy_coverage": d["vacancy_coverage_counts"],
             "counts": d["counts"],
             "technical_failures": [x["name"] for x in d["technical_failures"]],
             "live_relevant_jobs": len(d["live_relevant_jobs"])
