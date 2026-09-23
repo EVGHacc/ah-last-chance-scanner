@@ -7,7 +7,7 @@ END=22*60+30
 SLOTS=[f'{m//60:02d}:{m%60:02d}' for m in range(START,END+1,5)]
 RAW_SLOTS=[f'{m//60:02d}:{m%60:02d}' for m in range(START,END+1,3)]
 VALID_STATUS={'OK','OK_ZERO_ROWS'}
-STORE_IDS={1463,1348,1135,4046,8728}
+REQUIRED_STORE_IDS={1463,1348,1135}
 
 
 def valid_obs(o):
@@ -16,7 +16,7 @@ def valid_obs(o):
     if int(o.get('rawDelaySeconds',o.get('delaySeconds',999999)))>240: return False
     stores=o.get('stores') or []
     fetched={int(s.get('storeId')) for s in stores if s.get('fetched') is True and s.get('storeId') is not None}
-    return fetched==STORE_IDS and 'Vlees' in (o.get('categories') or [])
+    return REQUIRED_STORE_IDS.issubset(fetched) and 'Vlees' in (o.get('categories') or [])
 
 
 def exact_canonical_obs(o):
