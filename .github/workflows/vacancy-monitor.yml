@@ -8,6 +8,7 @@ on:
     paths:
       - "vacancy-monitor/registry.tsv"
       - "vacancy-monitor/scanner.py"
+      - "vacancy-monitor/test_scanner.py"
       - "vacancy-monitor/requirements.txt"
       - ".github/workflows/vacancy-monitor.yml"
 
