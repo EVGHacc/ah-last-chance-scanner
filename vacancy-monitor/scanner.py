@@ -192,7 +192,12 @@ def scan(o):
             tried.append({k:f[k] for k in ("url","final","method","status","ok","error","ms")})
             if f["ok"] and allowed(f["final"],o): success.append(f); break
     js=[]; [js.extend(extract_jobs(f,o)) for f in success]
-    jobs=validate_jobs(list({(j["title"].lower(),j["url"]):j for j in js}.values()))
+    raw_matches=list({(j["title"].lower(),j["url"]):j for j in js}.values())
+    audits=[]; [audits.extend(audit_candidates(f,o)) for f in success]
+    audit_unique=list({(j["title"].lower(),j["url"]):j for j in audits}.values())
+    matched_urls={j["url"] for j in raw_matches}
+    audit_missed=[j for j in audit_unique if j["url"] not in matched_urls]
+    jobs=validate_jobs(raw_matches)
     evidence=[listing_evidence(f,o) for f in success]
     if success:
         if o["no_public_hint"] and not jobs: st="no_public_vacancy_board"
@@ -200,11 +205,13 @@ def scan(o):
         elif any(CAREER.search(f["final"]+" "+f["text"][:12000]) for f in success): st="official_site_scanned"
         else: st="no_public_vacancy_board" if o["no_public_hint"] else "technical_failure"
     else: st="technical_failure"
-    # A 200 response, a careers landing page, and a manually tagged lack of a board
-    # cannot establish complete vacancy coverage.  Keep this separate from reachability.
-    listing=[e for e in evidence if e["job_link_count"]]
-    coverage="partial" if listing else ("not_applicable_unverified" if o["no_public_hint"] else "unproven")
-    return {"name":o["name"],"kind":o["kind"],"status":st,"vacancy_coverage":coverage,"listing_evidence":evidence,"match_audit":{"candidate_count":len(audit_unique),"matched_count":len(audit_unique)-len(audit_missed),"missed":audit_missed[:20]},"checked_at":iso(),"duration_ms":int((time.monotonic()-t)*1000),"routes_tried":tried[-18:],"successful_routes":[{"url":f["final"],"method":f["method"],"status":f["status"]} for f in success[:6]],"jobs":jobs,"error":None if st!="technical_failure" else "No verifiable official vacancy route completed","_org":o}
+    coverage=coverage_from_evidence(evidence,o)
+    return {"name":o["name"],"kind":o["kind"],"status":st,"vacancy_coverage":coverage,
+            "listing_evidence":evidence,
+            "match_audit":{"candidate_count":len(audit_unique),"matched_count":len(audit_unique)-len(audit_missed),"missed":audit_missed[:20]},
+            "checked_at":iso(),"duration_ms":int((time.monotonic()-t)*1000),"routes_tried":tried[-18:],
+            "successful_routes":[{"url":f["final"],"method":f["method"],"status":f["status"]} for f in success[:6]],
+            "jobs":jobs,"error":None if st!="technical_failure" else "No verifiable official vacancy route completed","_org":o}
 
 def inventory_job_links(html,final,o):
     soup=BeautifulSoup(html,"html.parser"); out={}
