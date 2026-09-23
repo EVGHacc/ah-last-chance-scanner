@@ -7,7 +7,7 @@ END=22*60+30
 SLOTS=[f'{m//60:02d}:{m%60:02d}' for m in range(START,END+1,5)]
 RAW_SLOTS=[f'{m//60:02d}:{m%60:02d}' for m in range(START,END+1,3)]
 VALID_STATUS={'OK','OK_ZERO_ROWS'}
-STORE_IDS={1463,1348,1135}
+STORE_IDS={1463,1348,1135,4046,8728}
 
 
 def valid_obs(o):
@@ -73,7 +73,7 @@ def main():
 
     latest_valid=max(valid_rows,key=lambda x:str(x.get('checkedAt',''))) if valid_rows else None
     raw_seen_ordered=[s for s in RAW_SLOTS if s in raw_seen]
-    status={'date':date,'authMode':'user-refresh','stores':[1463,1348,1135],'category':'Vlees',
+    status={'date':date,'authMode':'user-refresh','stores':[1463,1348,1135,4046,8728],'category':'Vlees',
             'rawCadenceMinutes':3,'canonicalCadenceMinutes':5,'rawExpected':101,'rawSeen':raw_seen_ordered,
             'rawMissing':[s for s in RAW_SLOTS if s not in raw_seen],'canonicalExpected':61,
             'canonicalSeen':[s for s in SLOTS if s in canonical],'canonicalMissing':missing,
