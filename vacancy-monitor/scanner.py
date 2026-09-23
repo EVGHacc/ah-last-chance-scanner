@@ -14,11 +14,11 @@ H={"User-Agent":UA,"Accept-Language":"en-GB,en;q=0.9,nl;q=0.8"}
 TIMEOUT=int(os.getenv("VACANCY_TIMEOUT","12")); WORKERS=int(os.getenv("VACANCY_WORKERS","12"))
 ATS=("myworkdayjobs.com","workday.com","oraclecloud.com","greenhouse.io","lever.co","teamtailor.com","recruitee.com","ashbyhq.com","breezy.hr","smartrecruiters.com","successfactors.com","eightfold.ai","icims.com")
 CAREER=re.compile(r"(job|career|vacanc|position|opportunit|werken.?bij|open.?roles)",re.I)
-REL=re.compile(r"(compliance|risk|audit|aml|financial.?crime|sanction|governance|regulatory|controls?|assurance|\bmlro\b|\bcco\b|\bcro\b|responsible.?ai|trust.?safety|resilien|business.?control|integrity|fraud|investigation|financial.?intelligence|conduct|ethics|financieel.?economische.?criminaliteit|witwassen)",re.I)
+REL=re.compile(r"(compliance|risk|audit|anti.?money|aml|financial.?crime|sanction|governance|regulat|controls?|assurance|oversight|\\bmlro\\b|\\bcco\\b|\\bcro\\b|responsible.?ai|trust.?safety|resilien|continuity|business.?control|integrity|fraud|investigation|financial.?intelligence|conduct|ethics|remediation|non.?financial|financieel.?economische.?criminaliteit|witwassen)",re.I)
 JOBURL=re.compile(r"(/job(?:s)?/|/vacanc|/position|/career|/opportunit|job[_-]|vacature|search-jobs|/offre-de-emploi/|/stellenangebot/)",re.I)
 AUDIT_REL=re.compile(r"(compliance|risk|audit|anti.?money|aml|financial.?crime|sanction|governance|regulat|control|assurance|oversight|resilien|continuity|integrity|fraud|investigation|financial.?intelligence|conduct|ethics|responsible.?ai|trust.?safety|remediation|non.?financial)",re.I)
 AUDIT_SENIOR=re.compile(r"(head|director|senior|lead|chief|vice.?president|\\bvp\\b|principal|partner|manager|expert|global|regional|\\bmlro\\b|\\bcco\\b|\\bcro\\b)",re.I)
-SENIOR=re.compile(r"(head|director|executive.?director|senior.?manager|lead|chief|vice.?president|\bvp\b|principal|partner|manager|hoofd|directeur|global|regional|strateg|expert|business.?resilien.?officer|operational.?continuity)",re.I)
+SENIOR=re.compile(r"(head|director|executive.?director|senior|lead|chief|vice.?president|\\bvp\\b|principal|partner|manager|hoofd|directeur|global|regional|strateg|expert|business.?resilien.?officer|operational.?continuity)",re.I)
 APPLY=re.compile(r"(apply.?now|\bapply\b|solliciteer|submit.?application|start.?application)",re.I)
 PAGING=re.compile(r"(next|volgende|suivant|weiter|load more|toon meer|show more|page [2-9])",re.I)
 DYNAMIC_MORE=re.compile(r"(load more|toon meer|show more|view more|see more|meer vacatures|more jobs)",re.I)
@@ -29,6 +29,10 @@ API_BOARDS={
     "Lloyds Banking Group":{"type":"workday","url":"https://lbg.wd3.myworkdayjobs.com/wday/cxs/lbg/LBG_Careers/jobs","board":"https://lbg.wd3.myworkdayjobs.com/LBG_Careers"},
     "Visa":{"type":"workday","url":"https://visa.wd5.myworkdayjobs.com/wday/cxs/visa/Visa/jobs","board":"https://visa.wd5.myworkdayjobs.com/Visa"},
     "Zerohash":{"type":"breezy","url":"https://zero-hash.breezy.hr/json","board":"https://zero-hash.breezy.hr"}
+}
+STATIC_BOARDS={
+    "Lime Search":{"url":"https://www.limesearch.nl/open-finance-posities","href":r"/positie/"},
+    "Vroom":{"url":"https://vroomsearch.com/nl/vacatures","href":r"/nl/vacature/"}
 }
 
 def iso(): return datetime.now(timezone.utc).isoformat()
@@ -100,6 +104,33 @@ def api_inventory(o):
     except Exception as e:
         return {"complete":False,"official_total":None,"jobs":[],"source":c["url"],"error":f"{type(e).__name__}: {e}"}
     return None
+
+def static_inventory(o):
+    """Prove completeness for small official boards exposing every public role on one terminal listing."""
+    c=STATIC_BOARDS.get(o["name"])
+    if not c: return None
+    try:
+        rr=requests.get(c["url"],headers=H,timeout=TIMEOUT,allow_redirects=True); rr.raise_for_status()
+        soup=BeautifulSoup(rr.text,"html.parser"); jobs={}; rx=re.compile(c["href"],re.I)
+        for a in soup.find_all("a",href=True):
+            u=norm(urljoin(rr.url,a["href"]))
+            if not rx.search(urlparse(u).path): continue
+            title=a.get_text(" ",strip=True)
+            if not title or re.fullmatch(r"(lees meer|read more|bekijk vacature|view job|more)",title,re.I):
+                box=a.find_parent(["article","li","section","div"])
+                if box:
+                    h=box.find(["h1","h2","h3","h4","h5"])
+                    if h: title=h.get_text(" ",strip=True)
+            if not title or len(title)<4:
+                slug=urlparse(u).path.rstrip("/").split("/")[-1]
+                title=re.sub(r"[-_]+"," ",slug).strip().title()
+            jobs[u]={"title":title,"url":u}
+        labels=" ".join(x.get_text(" ",strip=True) for x in soup.find_all(["a","button"]))
+        forward=bool(soup.find("a",attrs={"rel":lambda v:v and "next" in str(v).lower()}) or PAGING.search(labels) or DYNAMIC_MORE.search(labels))
+        return {"complete":bool(jobs and not forward),"official_total":len(jobs),"jobs":list(jobs.values()),"source":rr.url,
+                "error":None if jobs else "No vacancy links found"}
+    except Exception as e:
+        return {"complete":False,"official_total":None,"jobs":[],"source":c["url"],"error":f"{type(e).__name__}: {e}"}
 
 def candidates(o):
     q=list(o["seed_urls"]); base=origin(q[0])
@@ -215,7 +246,7 @@ def validate_jobs(js):
 
 def scan(o):
     t=time.monotonic(); tried=[]; success=[]; q=candidates(o); seen=set()
-    api=api_inventory(o)
+    api=api_inventory(o); static=static_inventory(o)
     while q and len(seen)<24:
         u=q.pop(0)
         if u in seen: continue
@@ -254,6 +285,16 @@ def scan(o):
         api_missed=[j for j in api_audit if j["url"] not in api_match]
         audit_unique=api_audit; audit_missed=api_missed
         if api_raw: jobs=validate_jobs(api_raw)
+
+    if static and static.get("complete"):
+        coverage="verified_complete"; st="official_site_scanned"
+        evidence.append({"url":static["source"],"static_board_complete":True,"official_total":static["official_total"],
+                         "job_link_count":len(static["jobs"]),"listing_like":True,"static_complete_evidence":True})
+        static_raw=[j for j in static["jobs"] if REL.search(j["title"]+" "+j["url"]) and (SENIOR.search(j["title"]) or re.search(r"\\b(mlro|cco|cro|sanctions counsel|regulatory counsel)\\b",j["title"],re.I))]
+        static_audit=[j for j in static["jobs"] if AUDIT_REL.search(j["title"]+" "+j["url"]) and AUDIT_SENIOR.search(j["title"])]
+        matched={j["url"] for j in static_raw}; missed=[j for j in static_audit if j["url"] not in matched]
+        audit_unique=static_audit; audit_missed=missed
+        if static_raw: jobs=validate_jobs(static_raw)
 
     return {"name":o["name"],"kind":o["kind"],"status":st,"vacancy_coverage":coverage,
             "listing_evidence":evidence,
