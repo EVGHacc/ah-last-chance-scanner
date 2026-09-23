@@ -32,7 +32,8 @@ API_BOARDS={
 }
 STATIC_BOARDS={
     "Lime Search":{"url":"https://www.limesearch.nl/open-finance-posities","href":r"/positie/"},
-    "Vroom":{"url":"https://vroomsearch.com/nl/vacatures","href":r"/nl/vacature/"}
+    "Vroom":{"url":"https://vroomsearch.com/nl/vacatures","href":r"/nl/vacature/"},
+    "Lloyds Banking Group":{"url":"https://www.lloydsbankinggroup.com/site-map.html/1000","href":r"/careers/job-search/workday-job\\.[0-9]+\\.html"}
 }
 
 def iso(): return datetime.now(timezone.utc).isoformat()
