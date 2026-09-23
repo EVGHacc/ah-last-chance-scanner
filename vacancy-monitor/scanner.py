@@ -118,8 +118,10 @@ def extract_jobs(f,o):
             stack.extend(v for v in item.values() if isinstance(v,(dict,list)))
             types=item.get("@type",[]); types=[types] if isinstance(types,str) else types
             if "JobPosting" not in types: continue
-            title=item.get("title",""); u=urljoin(f["final"],item.get("url","") or "")
-            if isinstance(title,str) and isinstance(u,str) and allowed(u,o) and REL.search(title) and SENIOR.search(title):
+            title=item.get("title",""); raw_url=item.get("url","")
+            if not isinstance(title,str) or not isinstance(raw_url,str) or not raw_url: continue
+            u=urljoin(f["final"],raw_url)
+            if allowed(u,o) and REL.search(title) and SENIOR.search(title):
                 out.append({"title":title,"url":u})
     d={}
     for j in out: d[(j["title"].lower(),j["url"])]=j
