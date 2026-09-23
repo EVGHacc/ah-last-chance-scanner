@@ -206,39 +206,96 @@ def scan(o):
     coverage="partial" if listing else ("not_applicable_unverified" if o["no_public_hint"] else "unproven")
     return {"name":o["name"],"kind":o["kind"],"status":st,"vacancy_coverage":coverage,"listing_evidence":evidence,"match_audit":{"candidate_count":len(audit_unique),"matched_count":len(audit_unique)-len(audit_missed),"missed":audit_missed[:20]},"checked_at":iso(),"duration_ms":int((time.monotonic()-t)*1000),"routes_tried":tried[-18:],"successful_routes":[{"url":f["final"],"method":f["method"],"status":f["status"]} for f in success[:6]],"jobs":jobs,"error":None if st!="technical_failure" else "No verifiable official vacancy route completed","_org":o}
 
+def inventory_job_links(html,final,o):
+    soup=BeautifulSoup(html,"html.parser"); out={}
+    for a in soup.find_all("a",href=True):
+        title=a.get_text(" ",strip=True); u=norm(urljoin(final,a["href"]))
+        if 4<=len(title)<=180 and u.startswith("http") and allowed(u,o) and JOBURL.search(u):
+            if not re.search(r"(search|filter|login|privacy|cookie|alert|subscribe|blog|article)",u,re.I):
+                out[u]=title
+    return out
+
 def browser_retry(rs):
-    bad=[r for r in rs if r["status"]=="technical_failure" or r["vacancy_coverage"]=="unproven"]
-    if not bad:return
+    """Render incomplete boards and exhaust scrolling/load-more/next pagination."""
+    targets=[r for r in rs if r["status"]=="technical_failure" or r["vacancy_coverage"] in ("partial","unproven")]
+    if not targets:return
     try: from playwright.sync_api import sync_playwright
     except Exception:return
     with sync_playwright() as p:
         b=p.chromium.launch(headless=True); c=b.new_context(user_agent=UA,locale="en-GB")
-        for r in bad:
-            o=r["_org"]
-            unresolved=r["status"]=="technical_failure"
-            # Dynamic listings are common. Render the best available listing once,
-            # without spending the whole run opening generic corporate pages.
-            likely=sorted(r["listing_evidence"],key=lambda x:(0 if re.search(r"(search-results|listing-page|/vacatures|/jobs|openings)",x["url"],re.I) else 1,-x["job_link_count"]))
-            urls=candidates(o)[:4] if unresolved else [likely[0]["url"] if likely else o["seed_urls"][0]]
+        for r in targets:
+            o=r["_org"]; unresolved=r["status"]=="technical_failure"
+            likely=sorted(r["listing_evidence"],key=lambda x:(0 if x.get("listing_like") else 1,0 if x.get("job_link_count",0) else 1,-x.get("job_link_count",0)))
+            urls=[]
+            if likely: urls.extend(x["url"] for x in likely[:3])
+            urls.extend(candidates(o)[:3])
+            urls=list(dict.fromkeys(urls))
             for u in urls:
-                pg=c.new_page(); t=time.monotonic()
+                pg=c.new_page(); t=time.monotonic(); all_links={}; visited=set(); terminal=False
                 try:
-                    resp=pg.goto(u,wait_until="domcontentloaded",timeout=10000); pg.wait_for_timeout(1200)
-                    txt=pg.locator("body").inner_text(timeout=3000); final=pg.url; sc=resp.status if resp else None
-                    ok=bool(sc and sc<400 and len(txt)>300 and allowed(final,o))
-                    r["routes_tried"].append({"url":u,"final":final,"method":"browser","status":sc,"ok":ok,"error":None if ok else "browser route unusable","ms":int((time.monotonic()-t)*1000)})
-                    if ok:
-                        html=pg.content(); f={"ok":True,"url":u,"final":final,"status":sc,"html":html,"text":txt,"method":"browser","error":None,"ms":0}
-                        fresh=extract_jobs(f,o)
-                        if fresh: r["jobs"]=validate_jobs(fresh)
-                        r["listing_evidence"].append(listing_evidence(f,o))
-                        r["vacancy_coverage"]=coverage_from_evidence(r["listing_evidence"],o)
-                        if unresolved:
-                            r["status"]="no_public_vacancy_board" if o["no_public_hint"] and not r["jobs"] else ("official_ats_scanned" if isats(final) else "official_site_scanned")
-                            r["error"]=None
-                        r["successful_routes"].append({"url":final,"method":"browser","status":sc}); break
+                    resp=pg.goto(u,wait_until="domcontentloaded",timeout=12000); pg.wait_for_timeout(700)
+                    final=pg.url; sc=resp.status if resp else None
+                    if not (sc and sc<400 and allowed(final,o)): continue
+                    for page_no in range(35):
+                        current=pg.url
+                        if current in visited and page_no: break
+                        visited.add(current)
+                        stable=0
+                        for _ in range(10):
+                            html=pg.content(); before=len(all_links)
+                            all_links.update(inventory_job_links(html,pg.url,o))
+                            # Infinite-scroll boards often need several bottom hits.
+                            try: pg.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+                            except Exception: pass
+                            pg.wait_for_timeout(450)
+                            # Click one visible load-more control if present.
+                            clicked=False
+                            loc=pg.locator("button, a")
+                            for i in range(min(loc.count(),250)):
+                                el=loc.nth(i)
+                                try:
+                                    label=(el.inner_text(timeout=150) or "").strip()
+                                    if DYNAMIC_MORE.search(label) and el.is_visible():
+                                        el.click(timeout=1200); pg.wait_for_timeout(650); clicked=True; break
+                                except Exception: pass
+                            html=pg.content(); all_links.update(inventory_job_links(html,pg.url,o))
+                            stable = stable+1 if len(all_links)==before and not clicked else 0
+                            if stable>=2: break
+                        html=pg.content(); soup=BeautifulSoup(html,"html.parser")
+                        next_url=None
+                        nxt=soup.find("a",attrs={"rel":lambda v:v and ("next" in v if isinstance(v,list) else "next" in str(v).lower())})
+                        if nxt and nxt.get("href"): next_url=norm(urljoin(pg.url,nxt["href"]))
+                        if not next_url:
+                            for a in soup.find_all("a",href=True):
+                                if re.fullmatch(r"\\s*(next|volgende|suivant|weiter|›|»)\\s*",a.get_text(" ",strip=True),re.I):
+                                    next_url=norm(urljoin(pg.url,a["href"])); break
+                        if next_url and next_url not in visited and allowed(next_url,o):
+                            pg.goto(next_url,wait_until="domcontentloaded",timeout=12000); pg.wait_for_timeout(500); continue
+                        # No forward pagination left and scrolling/load-more stabilized.
+                        terminal=True; break
+                    txt=pg.locator("body").inner_text(timeout=3000)
+                    html=pg.content(); f2={"ok":True,"url":u,"final":pg.url,"status":sc,"html":html,"text":txt,"method":"browser-exhaustive","error":None,"ms":0}
+                    ev=listing_evidence(f2,o); ev["browser_inventory_count"]=len(all_links); ev["browser_pages_traversed"]=len(visited); ev["browser_terminal"]=terminal
+                    r["listing_evidence"].append(ev)
+                    r["routes_tried"].append({"url":u,"final":pg.url,"method":"browser-exhaustive","status":sc,"ok":True,"error":None,"ms":int((time.monotonic()-t)*1000)})
+                    if all_links and terminal:
+                        r["vacancy_coverage"]="verified_complete"
+                        # Re-run both matchers over every discovered job title, not only the first HTML page.
+                        raw=[{"title":title,"url":url} for url,title in all_links.items() if REL.search(title+" "+url) and (SENIOR.search(title) or re.search(r"\\b(mlro|cco|cro|sanctions counsel|regulatory counsel)\\b",title,re.I))]
+                        audit=[{"title":title,"url":url} for url,title in all_links.items() if AUDIT_REL.search(title+" "+url) and AUDIT_SENIOR.search(title)]
+                        matched_urls={j["url"] for j in raw}
+                        missed=[j for j in audit if j["url"] not in matched_urls]
+                        r["match_audit"]={"candidate_count":len(audit),"matched_count":len(audit)-len(missed),"missed":missed[:20]}
+                        if raw:r["jobs"]=validate_jobs(raw)
+                    elif o["no_public_hint"] and terminal and not all_links:
+                        r["vacancy_coverage"]="verified_no_public_board"
+                    if unresolved:
+                        r["status"]="no_public_vacancy_board" if o["no_public_hint"] and not all_links else ("official_ats_scanned" if isats(pg.url) else "official_site_scanned")
+                        if r["status"]!="technical_failure":r["error"]=None
+                    r["successful_routes"].append({"url":pg.url,"method":"browser-exhaustive","status":sc})
+                    if r["vacancy_coverage"] in ("verified_complete","verified_no_public_board"): break
                 except Exception as e:
-                    r["routes_tried"].append({"url":u,"final":u,"method":"browser","status":None,"ok":False,"error":f"{type(e).__name__}: {e}","ms":int((time.monotonic()-t)*1000)})
+                    r["routes_tried"].append({"url":u,"final":getattr(pg,"url",u),"method":"browser-exhaustive","status":None,"ok":False,"error":f"{type(e).__name__}: {e}","ms":int((time.monotonic()-t)*1000)})
                 finally: pg.close()
         c.close(); b.close()
 
