@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-24",
   "weekday": "Thursday",
-  "scheduledSlot": "20:20",
-  "scheduledAt": "2026-09-24T20:20:00+02:00",
-  "rawScheduledSlot": "20:20",
-  "rawScheduledAt": "2026-09-24T20:20:00+02:00",
-  "startedAt": "2026-09-24T20:20:00.393832+02:00",
-  "completedAt": "2026-09-24T20:20:05.764325+02:00",
-  "checkedAt": "2026-09-24T20:20:05.764325+02:00",
+  "scheduledSlot": "20:21",
+  "scheduledAt": "2026-09-24T20:21:00+02:00",
+  "rawScheduledSlot": "20:21",
+  "rawScheduledAt": "2026-09-24T20:21:00+02:00",
+  "startedAt": "2026-09-24T20:21:00.492202+02:00",
+  "completedAt": "2026-09-24T20:21:05.463826+02:00",
+  "checkedAt": "2026-09-24T20:21:05.463826+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -496,11 +496,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 235,
+      "totalBargainItems": 208,
       "meatItems": 6,
       "meat70Items": 1,
       "meat70Stock": 4.0,
-      "bakeryItems": 37,
+      "bakeryItems": 33,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "items": [
@@ -663,30 +663,6 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
-          "productId": 571174,
-          "title": "AH Jalapeño kaasstengel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
-          "productId": 584031,
-          "title": "AH Rond wit sesam half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
           "productId": 487298,
           "title": "AH Rond volkoren half",
           "brand": "AH",
@@ -816,18 +792,6 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
-          "productId": 577447,
-          "title": "AH Everything bol",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.79",
-          "priceNow": "0.67",
           "markdownExpirationDate": "2026-09-24"
         },
         {
@@ -984,18 +948,6 @@
           "stock": 6,
           "priceWas": "4.19",
           "priceNow": "2.51",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 580174,
-          "title": "Koopmans Brood uit de pan Italiaans",
-          "brand": "Koopmans",
-          "size": "400 g",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "2.69",
-          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-11"
         },
         {
