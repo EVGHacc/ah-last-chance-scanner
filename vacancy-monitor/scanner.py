@@ -53,6 +53,18 @@ def norm(u):
         if q.get("uddg"): return unquote(q["uddg"][0]).split("#")[0]
     return u.split("#")[0]
 
+def job_key(u):
+    """Stable comparison key for the same vacancy URL across redirects/tracking params."""
+    p=urlparse(norm(u))
+    pairs=[]
+    for k,vals in parse_qs(p.query,keep_blank_values=True).items():
+        if k.lower().startswith("utm_") or k.lower() in ("gclid","fbclid","mc_cid","mc_eid"):
+            continue
+        for v in vals: pairs.append((k,v))
+    query=urlencode(sorted(pairs),doseq=True)
+    path=(p.path.rstrip("/") or "/")
+    return urlunparse(((p.scheme or "https").lower(),(p.netloc or "").lower(),path,"",query,""))
+
 def load_registry():
     out=[]
     with open(ROOT/"registry.tsv",encoding="utf-8") as f:
@@ -259,12 +271,34 @@ def extract_jobs(f,o):
     for j in out: d[(j["title"].lower(),j["url"])]=j
     return list(d.values())[:100]
 
-def validate_jobs(js):
+def board_job_keys_from_pages(pages,o):
+    """Current-board evidence: vacancy links exposed by an official listing/careers page."""
+    keys=set()
+    seeds={norm(x).rstrip("/") for x in o["seed_urls"]}
+    for f in pages:
+        found=inventory_job_links(f["html"],f["final"],o)
+        ev=listing_evidence(f,o)
+        source=norm(f["final"]).rstrip("/")
+        # Accept a declared seed/listing page, or a page that currently exposes multiple job links.
+        if source in seeds or ev.get("listing_like") or len(found)>=2:
+            keys.update(job_key(u) for u in found)
+    return keys
+
+def validate_jobs(js,board_keys=None):
+    board_keys=set(board_keys or ())
     out=[]
     for j in js[:50]:
-        f=fetch(j["url"],"job-live-check"); text=f["text"]
-        live=f["ok"] and (j["title"].lower()[:24] in text.lower() or len(j["title"])<12)
-        j.update({"url":f["final"],"live":live,"apply_live":bool(live and APPLY.search(text) and not CLOSED.search(text)),"http_status":f["status"],"checked_at":iso()}); out.append(j)
+        requested=j["url"]; f=fetch(requested,"job-live-check"); text=f["text"]
+        direct_live=f["ok"] and (j["title"].lower()[:24] in text.lower() or len(j["title"])<12)
+        board_present=job_key(requested) in board_keys or job_key(f["final"]) in board_keys
+        apply_live=bool(direct_live and board_present and APPLY.search(text) and not CLOSED.search(text))
+        if apply_live: reason="direct_live_and_current_board"
+        elif not board_present: reason="not_on_current_board"
+        elif not direct_live: reason="detail_page_not_live"
+        elif CLOSED.search(text): reason="closed_marker"
+        else: reason="no_live_apply_control"
+        j.update({"url":f["final"],"live":direct_live,"board_present":board_present,"apply_live":apply_live,
+                  "validation_reason":reason,"http_status":f["status"],"checked_at":iso()}); out.append(j)
     return out
 
 def scan(o):
@@ -290,7 +324,8 @@ def scan(o):
     audit_unique=list({(j["title"].lower(),j["url"]):j for j in audits}.values())
     matched_urls={j["url"] for j in raw_matches}
     audit_missed=[j for j in audit_unique if j["url"] not in matched_urls]
-    jobs=validate_jobs(raw_matches)
+    board_keys=board_job_keys_from_pages(success,o)
+    jobs=validate_jobs(raw_matches,board_keys)
     evidence=[listing_evidence(f,o) for f in success]
     if success:
         if o["no_public_hint"] and not jobs: st="no_public_vacancy_board"
@@ -307,7 +342,7 @@ def scan(o):
         api_match={j["url"] for j in api_raw}
         api_missed=[j for j in api_audit if j["url"] not in api_match]
         audit_unique=api_audit; audit_missed=api_missed
-        if api_raw: jobs=validate_jobs(api_raw)
+        if api_raw: jobs=validate_jobs(api_raw,{job_key(j["url"]) for j in api["jobs"]})
 
     if static and static.get("complete"):
         coverage="verified_complete"; st="official_site_scanned"
@@ -317,7 +352,7 @@ def scan(o):
         static_audit=[j for j in static["jobs"] if AUDIT_REL.search(j["title"]+" "+j["url"]) and AUDIT_SENIOR.search(j["title"])]
         matched={j["url"] for j in static_raw}; missed=[j for j in static_audit if j["url"] not in matched]
         audit_unique=static_audit; audit_missed=missed
-        if static_raw: jobs=validate_jobs(static_raw)
+        if static_raw: jobs=validate_jobs(static_raw,{job_key(j["url"]) for j in static["jobs"]})
 
     return {"name":o["name"],"kind":o["kind"],"status":st,"vacancy_coverage":coverage,
             "listing_evidence":evidence,
@@ -405,15 +440,17 @@ def browser_retry(rs):
                     ev=listing_evidence(f2,o); ev["browser_inventory_count"]=len(all_links); ev["browser_pages_traversed"]=len(visited); ev["browser_terminal"]=terminal
                     r["listing_evidence"].append(ev)
                     r["routes_tried"].append({"url":u,"final":pg.url,"method":"browser-exhaustive","status":sc,"ok":True,"error":None,"ms":int((time.monotonic()-t)*1000)})
-                    if all_links and terminal and ev.get("official_total") == len(all_links):
-                        r["vacancy_coverage"]="verified_complete"
-                        # Re-run both matchers over every discovered job title, not only the first HTML page.
+                    # For incomplete/dynamic boards the rendered browser inventory is authoritative
+                    # for liveness even when we cannot prove that the whole inventory is exhaustive.
+                    if all_links:
                         raw=[{"title":title,"url":url} for url,title in all_links.items() if REL.search(title+" "+url) and (SENIOR.search(title) or re.search(r"\\b(mlro|cco|cro|sanctions counsel|regulatory counsel)\\b",title,re.I))]
                         audit=[{"title":title,"url":url} for url,title in all_links.items() if AUDIT_REL.search(title+" "+url) and AUDIT_SENIOR.search(title)]
                         matched_urls={j["url"] for j in raw}
                         missed=[j for j in audit if j["url"] not in matched_urls]
                         r["match_audit"]={"candidate_count":len(audit),"matched_count":len(audit)-len(missed),"missed":missed[:20]}
-                        if raw:r["jobs"]=validate_jobs(raw)
+                        r["jobs"]=validate_jobs(raw,{job_key(url) for url in all_links})
+                    if all_links and terminal and ev.get("official_total") == len(all_links):
+                        r["vacancy_coverage"]="verified_complete"
                     elif o["no_public_hint"] and terminal and not all_links:
                         r["vacancy_coverage"]="verified_no_public_board"
                     if unresolved:
@@ -425,6 +462,20 @@ def browser_retry(rs):
                     r["routes_tried"].append({"url":u,"final":getattr(pg,"url",u),"method":"browser-exhaustive","status":None,"ok":False,"error":f"{type(e).__name__}: {e}","ms":int((time.monotonic()-t)*1000)})
                 finally: pg.close()
         c.close(); b.close()
+
+def qa_snapshot(payload):
+    """Fail closed before persisting/alerting when a supposedly live job lacks dual liveness proof."""
+    bad=[]
+    for r in payload.get("organisations",[]):
+        for j in r.get("jobs",[]):
+            if j.get("apply_live") and not (j.get("live") and j.get("board_present") and j.get("http_status")==200):
+                bad.append({"organisation":r["name"],"title":j.get("title"),"url":j.get("url")})
+    for j in payload.get("live_relevant_jobs",[]):
+        if not (j.get("apply_live") and j.get("live") and j.get("board_present") and j.get("http_status")==200):
+            bad.append({"organisation":j.get("organisation"),"title":j.get("title"),"url":j.get("url")})
+    if bad:
+        raise RuntimeError(f"live-vacancy QA failed for {len(bad)} record(s): {bad[:5]}")
+    return {"passed":True,"rule":"direct_detail_live_plus_current_board_presence","live_jobs_checked":len(payload.get("live_relevant_jobs",[]))}
 
 def main():
     reg=load_registry(); old=set(); latest=DATA/"latest.json"
@@ -455,7 +506,8 @@ def main():
     audit_total=sum(r.get("match_audit",{}).get("candidate_count",0) for r in audit_scope)
     audit_matched=sum(r.get("match_audit",{}).get("matched_count",0) for r in audit_scope)
     match_recall=round(100*audit_matched/audit_total,1) if audit_total else None
-    payload={"schema_version":3,"run_date":nldate(),"started_at":started,"completed_at":iso(),"total_expected":105,"total_classified":len(rs),"complete":len(rs)==105,"coverage_percent":round(100*len(rs)/105,1),"successful_control_count":ok,"successful_control_percent":round(100*ok/105,1),"vacancy_coverage_counts":coverage_counts,"match_audit":{"candidate_count":audit_total,"matched_count":audit_matched,"recall_percent":match_recall},"counts":counts,"counts_by_kind":bykind,"technical_failures":[{"name":r["name"],"kind":r["kind"],"error":r["error"],"routes_tried":r["routes_tried"]} for r in rs if r["status"]=="technical_failure"],"live_relevant_jobs":jobs,"organisations":rs}
+    payload={"schema_version":4,"run_date":nldate(),"started_at":started,"completed_at":iso(),"total_expected":105,"total_classified":len(rs),"complete":len(rs)==105,"coverage_percent":round(100*len(rs)/105,1),"successful_control_count":ok,"successful_control_percent":round(100*ok/105,1),"vacancy_coverage_counts":coverage_counts,"match_audit":{"candidate_count":audit_total,"matched_count":audit_matched,"recall_percent":match_recall},"counts":counts,"counts_by_kind":bykind,"technical_failures":[{"name":r["name"],"kind":r["kind"],"error":r["error"],"routes_tried":r["routes_tried"]} for r in rs if r["status"]=="technical_failure"],"live_relevant_jobs":jobs,"organisations":rs}
+    payload["qa"]=qa_snapshot(payload)
     text=json.dumps(payload,ensure_ascii=False,indent=2); latest.write_text(text); (DATA/f'{payload["run_date"]}.json').write_text(text)
     incomplete=[{"name":r["name"],"kind":r["kind"],"coverage":r["vacancy_coverage"],"status":r["status"]} for r in target if r["vacancy_coverage"] not in ("verified_complete","verified_no_public_board")]
     missed_examples=[]
