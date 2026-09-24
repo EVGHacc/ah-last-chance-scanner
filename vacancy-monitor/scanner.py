@@ -374,6 +374,13 @@ def browser_retry(rs):
     """Render incomplete boards and exhaust scrolling/load-more/next pagination."""
     targets=[r for r in rs if r["status"]=="technical_failure" or r["vacancy_coverage"] in ("partial","unproven")]
     if not targets:return
+    # Fail closed for boards whose current inventory is not proven: a requests-only
+    # detail/listing result may be stale. Browser inventory must reconfirm the job.
+    for r in targets:
+        for j in r.get("jobs",[]):
+            j["apply_live"]=False
+            j["board_present"]=False
+            j["validation_reason"]="browser_board_confirmation_required"
     try: from playwright.sync_api import sync_playwright
     except Exception:return
     with sync_playwright() as p:
