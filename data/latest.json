@@ -2,15 +2,15 @@
   "schemaVersion": 5,
   "date": "2026-09-24",
   "weekday": "Thursday",
-  "scheduledSlot": "19:57",
-  "scheduledAt": "2026-09-24T19:57:00+02:00",
-  "rawScheduledSlot": "19:57",
-  "rawScheduledAt": "2026-09-24T19:57:00+02:00",
-  "startedAt": "2026-09-24T19:57:00.404726+02:00",
-  "completedAt": "2026-09-24T19:57:06.601772+02:00",
-  "checkedAt": "2026-09-24T19:57:06.601772+02:00",
-  "delaySeconds": 0,
-  "rawDelaySeconds": 0,
+  "scheduledSlot": "20:00",
+  "scheduledAt": "2026-09-24T20:00:00+02:00",
+  "rawScheduledSlot": "20:00",
+  "rawScheduledAt": "2026-09-24T20:00:00+02:00",
+  "startedAt": "2026-09-24T20:00:01.524257+02:00",
+  "completedAt": "2026-09-24T20:00:06.582066+02:00",
+  "checkedAt": "2026-09-24T20:00:06.582066+02:00",
+  "delaySeconds": 1,
+  "rawDelaySeconds": 1,
   "status": "OK",
   "valid": true,
   "official1925": false,
@@ -1291,18 +1291,6 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
-          "productId": 230740,
-          "title": "AH Praliné chocolade croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "1.39",
-          "priceNow": "1.18",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
           "productId": 515766,
           "title": "AH Kaasstengel",
           "brand": "AH",
@@ -1504,6 +1492,18 @@
           "stock": 1,
           "priceWas": "2.39",
           "priceNow": "2.03",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 230740,
+          "title": "AH Praliné chocolade croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "1.39",
+          "priceNow": "1.18",
           "markdownExpirationDate": "2026-09-24"
         },
         {
@@ -2087,18 +2087,6 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
-          "productId": 487304,
-          "title": "AH Liefde & Passie OerDesem pompoen",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "3.19",
-          "priceNow": "2.71",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
           "productId": 230787,
           "title": "AH Les pains triomphe half",
           "brand": "AH",
@@ -2192,6 +2180,18 @@
           "stock": 1,
           "priceWas": "1.19",
           "priceNow": "1.01",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 487304,
+          "title": "AH Liefde & Passie OerDesem pompoen",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "3.19",
+          "priceNow": "2.71",
           "markdownExpirationDate": "2026-09-24"
         },
         {
