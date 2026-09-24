@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-24",
   "weekday": "Thursday",
-  "scheduledSlot": "20:21",
-  "scheduledAt": "2026-09-24T20:21:00+02:00",
-  "rawScheduledSlot": "20:21",
-  "rawScheduledAt": "2026-09-24T20:21:00+02:00",
-  "startedAt": "2026-09-24T20:21:00.492202+02:00",
-  "completedAt": "2026-09-24T20:21:05.463826+02:00",
-  "checkedAt": "2026-09-24T20:21:05.463826+02:00",
+  "scheduledSlot": "20:24",
+  "scheduledAt": "2026-09-24T20:24:00+02:00",
+  "rawScheduledSlot": "20:24",
+  "rawScheduledAt": "2026-09-24T20:24:00+02:00",
+  "startedAt": "2026-09-24T20:24:00.444277+02:00",
+  "completedAt": "2026-09-24T20:24:05.263159+02:00",
+  "checkedAt": "2026-09-24T20:24:05.263159+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,11 +25,11 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 203,
+      "totalBargainItems": 202,
       "meatItems": 0,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 38,
+      "bakeryItems": 37,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [],
@@ -323,18 +323,6 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
-          "productId": 606492,
-          "title": "AH Liefde & Passie Biologisch desem pistolet meerzaden",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.09",
-          "priceNow": "0.93",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
           "productId": 606049,
           "title": "AH Liefde & Passie Desem pistolet volkoren",
           "brand": "AH Liefde & Passie",
@@ -496,11 +484,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 208,
+      "totalBargainItems": 235,
       "meatItems": 6,
       "meat70Items": 1,
       "meat70Stock": 4.0,
-      "bakeryItems": 33,
+      "bakeryItems": 37,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "items": [
@@ -663,6 +651,30 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
+          "productId": 571174,
+          "title": "AH Jalapeño kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 584031,
+          "title": "AH Rond wit sesam half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
           "productId": 487298,
           "title": "AH Rond volkoren half",
           "brand": "AH",
@@ -708,18 +720,6 @@
           "stock": 1,
           "priceWas": "1.99",
           "priceNow": "1.49",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
-          "productId": 466494,
-          "title": "AH Meerzaden croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "0.79",
-          "priceNow": "0.67",
           "markdownExpirationDate": "2026-09-24"
         },
         {
@@ -792,6 +792,18 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 577447,
+          "title": "AH Everything bol",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.79",
+          "priceNow": "0.67",
           "markdownExpirationDate": "2026-09-24"
         },
         {
@@ -915,6 +927,18 @@
           "markdownExpirationDate": "2026-09-27"
         },
         {
+          "productId": 599394,
+          "title": "Bolletje Bagel crackers sesam",
+          "brand": "Bolletje",
+          "size": "225 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "2.89",
+          "priceNow": "2.17",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
           "productId": 515786,
           "title": "AH Mix voor hartige taart",
           "brand": "AH",
@@ -948,6 +972,18 @@
           "stock": 6,
           "priceWas": "4.19",
           "priceNow": "2.51",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 580174,
+          "title": "Koopmans Brood uit de pan Italiaans",
+          "brand": "Koopmans",
+          "size": "400 g",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 3,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-11"
         },
         {
