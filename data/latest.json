@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-24",
   "weekday": "Thursday",
-  "scheduledSlot": "20:25",
-  "scheduledAt": "2026-09-24T20:25:00+02:00",
-  "rawScheduledSlot": "20:25",
-  "rawScheduledAt": "2026-09-24T20:25:00+02:00",
-  "startedAt": "2026-09-24T20:25:00.409358+02:00",
-  "completedAt": "2026-09-24T20:25:05.204159+02:00",
-  "checkedAt": "2026-09-24T20:25:05.204159+02:00",
+  "scheduledSlot": "20:27",
+  "scheduledAt": "2026-09-24T20:27:00+02:00",
+  "rawScheduledSlot": "20:27",
+  "rawScheduledAt": "2026-09-24T20:27:00+02:00",
+  "startedAt": "2026-09-24T20:27:00.473929+02:00",
+  "completedAt": "2026-09-24T20:27:05.491453+02:00",
+  "checkedAt": "2026-09-24T20:27:05.491453+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -484,11 +484,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 235,
+      "totalBargainItems": 236,
       "meatItems": 6,
       "meat70Items": 1,
       "meat70Stock": 4.0,
-      "bakeryItems": 37,
+      "bakeryItems": 39,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "items": [
@@ -936,6 +936,30 @@
           "stock": 2,
           "priceWas": "2.89",
           "priceNow": "2.17",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
+          "productId": 455871,
+          "title": "AH Knäckebröd zonnebloempit",
+          "brand": "AH",
+          "size": "265 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.75",
+          "priceNow": "1.31",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
+          "productId": 455872,
+          "title": "AH Knäckebröd goudbruin",
+          "brand": "AH",
+          "size": "375 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.25",
+          "priceNow": "0.94",
           "markdownExpirationDate": "2026-10-01"
         },
         {
@@ -1835,18 +1859,6 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
-          "productId": 487305,
-          "title": "AH Liefde & Passie Spelt volkoren brood",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
           "productId": 578301,
           "title": "AH Liefde & Passie OerDesem zonne rogge",
           "brand": "AH Liefde & Passie",
@@ -1892,6 +1904,18 @@
           "stock": 3,
           "priceWas": "1.45",
           "priceNow": "1.09",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 487305,
+          "title": "AH Liefde & Passie Spelt volkoren brood",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-24"
         },
         {
