@@ -370,6 +370,23 @@ def inventory_job_links(html,final,o):
                 out[u]=title
     return out
 
+def browser_visible_job_links(pg,o):
+    """Collect vacancy links that are actually rendered/visible, excluding stale hidden DOM anchors."""
+    try:
+        rows=pg.eval_on_selector_all("a[href]", """els => els.filter(e => {
+            const r=e.getBoundingClientRect(); const s=getComputedStyle(e);
+            return r.width>0 && r.height>0 && s.display!=='none' && s.visibility!=='hidden';
+        }).map(e => [e.href, (e.innerText || e.textContent || '').trim()])""")
+    except Exception:
+        return {}
+    out={}
+    for href,title in rows:
+        u=norm(urljoin(pg.url,href or ""))
+        title=(title or "").strip()
+        if 4<=len(title)<=180 and u.startswith("http") and allowed(u,o) and JOBURL.search(u) and inventory_url(u):
+            out[u]=title
+    return out
+
 def browser_retry(rs):
     """Render incomplete boards and exhaust scrolling/load-more/next pagination."""
     targets=[r for r in rs if r["status"]=="technical_failure" or r["vacancy_coverage"] in ("partial","unproven")]
@@ -405,7 +422,7 @@ def browser_retry(rs):
                         stable=0
                         for _ in range(10):
                             html=pg.content(); before=len(all_links)
-                            all_links.update(inventory_job_links(html,pg.url,o))
+                            all_links.update(browser_visible_job_links(pg,o))
                             # Infinite-scroll boards often need several bottom hits.
                             try: pg.evaluate("window.scrollTo(0, document.body.scrollHeight)")
                             except Exception: pass
@@ -420,7 +437,7 @@ def browser_retry(rs):
                                     if DYNAMIC_MORE.search(label) and el.is_visible():
                                         el.click(timeout=1200); pg.wait_for_timeout(650); clicked=True; break
                                 except Exception: pass
-                            html=pg.content(); all_links.update(inventory_job_links(html,pg.url,o))
+                            html=pg.content(); all_links.update(browser_visible_job_links(pg,o))
                             stable = stable+1 if len(all_links)==before and not clicked else 0
                             if stable>=2: break
                         html=pg.content(); soup=BeautifulSoup(html,"html.parser")
