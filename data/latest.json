@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-24",
   "weekday": "Thursday",
-  "scheduledSlot": "20:54",
-  "scheduledAt": "2026-09-24T20:54:00+02:00",
-  "rawScheduledSlot": "20:54",
-  "rawScheduledAt": "2026-09-24T20:54:00+02:00",
-  "startedAt": "2026-09-24T20:54:00.468623+02:00",
-  "completedAt": "2026-09-24T20:54:05.406563+02:00",
-  "checkedAt": "2026-09-24T20:54:05.406563+02:00",
+  "scheduledSlot": "20:55",
+  "scheduledAt": "2026-09-24T20:55:00+02:00",
+  "rawScheduledSlot": "20:55",
+  "rawScheduledAt": "2026-09-24T20:55:00+02:00",
+  "startedAt": "2026-09-24T20:55:00.433470+02:00",
+  "completedAt": "2026-09-24T20:55:05.053545+02:00",
+  "checkedAt": "2026-09-24T20:55:05.053545+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -412,11 +412,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 236,
+      "totalBargainItems": 235,
       "meatItems": 6,
       "meat70Items": 1,
       "meat70Stock": 4.0,
-      "bakeryItems": 37,
+      "bakeryItems": 36,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "items": [
@@ -792,18 +792,6 @@
           "stock": 1,
           "priceWas": "1.19",
           "priceNow": "1.01",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
-          "productId": 487304,
-          "title": "AH Liefde & Passie OerDesem pompoen",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "3.19",
-          "priceNow": "2.71",
           "markdownExpirationDate": "2026-09-24"
         },
         {
@@ -1691,18 +1679,6 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
-          "productId": 544584,
-          "title": "AH Liefde & Passie OerDesem Spelt boekweit",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
           "productId": 230725,
           "title": "AH Roomboter appelflap",
           "brand": "AH",
@@ -1724,6 +1700,18 @@
           "stock": 4,
           "priceWas": "2.69",
           "priceNow": "2.02",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 544584,
+          "title": "AH Liefde & Passie OerDesem Spelt boekweit",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-24"
         },
         {
