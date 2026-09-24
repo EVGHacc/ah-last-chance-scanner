@@ -50,9 +50,17 @@ jobs:
           if not p.exists():
               raise SystemExit("latest.json missing")
           d=json.loads(p.read_text())
+          assert d["schema_version"] >= 4
           assert d["total_expected"] == 105
           assert d["total_classified"] == 105
           assert d["complete"] is True
+          assert d.get("qa", {}).get("passed") is True
+          bad = [
+              (j.get("organisation"), j.get("title"), j.get("url"))
+              for j in d.get("live_relevant_jobs", [])
+              if not (j.get("apply_live") and j.get("live") and j.get("board_present") and j.get("http_status") == 200)
+          ]
+          assert not bad, f"live vacancy QA failures: {bad[:5]}"
           print(json.dumps({
             "run_date": d["run_date"],
             "coverage": d["coverage_percent"],
@@ -60,7 +68,8 @@ jobs:
             "vacancy_coverage": d["vacancy_coverage_counts"],
             "counts": d["counts"],
             "technical_failures": [x["name"] for x in d["technical_failures"]],
-            "live_relevant_jobs": len(d["live_relevant_jobs"])
+            "live_relevant_jobs": len(d["live_relevant_jobs"]),
+            "qa": d["qa"]
           }, ensure_ascii=False, indent=2))
           PY
       - name: Persist daily snapshot
