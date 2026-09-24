@@ -1,22 +1,16 @@
 {
-  "run_date": "2026-09-23",
+  "run_date": "2026-09-24",
   "target_expected": 103,
-  "target_proven": 92,
-  "vacancy_coverage_percent": 89.3,
+  "target_proven": 94,
+  "vacancy_coverage_percent": 91.3,
   "match_audit": {
-    "candidate_count": 217,
-    "matched_count": 217,
+    "candidate_count": 221,
+    "matched_count": 221,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
   },
   "incomplete": [
-    {
-      "name": "Lloyds Banking Group",
-      "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_ats_scanned"
-    },
     {
       "name": "McKinsey",
       "kind": "employer",
@@ -42,12 +36,6 @@
       "status": "official_site_scanned"
     },
     {
-      "name": "CPI",
-      "kind": "recruiter",
-      "coverage": "unproven",
-      "status": "official_site_scanned"
-    },
-    {
       "name": "Global FinTech Talent",
       "kind": "recruiter",
       "coverage": "unproven",
@@ -62,8 +50,8 @@
     {
       "name": "Robert Walters Interim",
       "kind": "recruiter",
-      "coverage": "partial",
-      "status": "official_site_scanned"
+      "coverage": "unproven",
+      "status": "technical_failure"
     },
     {
       "name": "Selby Jennings",
@@ -83,6 +71,7 @@
     "McKinsey",
     "Rabobank",
     "Risk Talent Associates",
+    "Robert Walters Interim",
     "Selby Jennings"
   ]
 }
