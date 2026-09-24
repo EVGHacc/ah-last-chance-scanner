@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-24",
   "weekday": "Thursday",
-  "scheduledSlot": "21:20",
-  "scheduledAt": "2026-09-24T21:20:00+02:00",
-  "rawScheduledSlot": "21:20",
-  "rawScheduledAt": "2026-09-24T21:20:00+02:00",
-  "startedAt": "2026-09-24T21:20:00.470482+02:00",
-  "completedAt": "2026-09-24T21:20:06.565072+02:00",
-  "checkedAt": "2026-09-24T21:20:06.565072+02:00",
+  "scheduledSlot": "21:21",
+  "scheduledAt": "2026-09-24T21:21:00+02:00",
+  "rawScheduledSlot": "21:21",
+  "rawScheduledAt": "2026-09-24T21:21:00+02:00",
+  "startedAt": "2026-09-24T21:21:00.458563+02:00",
+  "completedAt": "2026-09-24T21:21:06.075836+02:00",
+  "checkedAt": "2026-09-24T21:21:06.075836+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -933,11 +933,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 230,
+      "totalBargainItems": 208,
       "meatItems": 3,
       "meat70Items": 1,
       "meat70Stock": 1.0,
-      "bakeryItems": 50,
+      "bakeryItems": 45,
       "bakery70Items": 1,
       "bakery70Stock": 2.0,
       "items": [
@@ -1220,18 +1220,6 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
-          "productId": 577444,
-          "title": "AH Worstenbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.29",
-          "priceNow": "0.97",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
           "productId": 590399,
           "title": "AH Broodje burger augurk tomatensaus",
           "brand": "AH",
@@ -1349,18 +1337,6 @@
           "stock": 3,
           "priceWas": "1.19",
           "priceNow": "1.01",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
-          "productId": 571174,
-          "title": "AH Jalapeño kaasstengel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
           "markdownExpirationDate": "2026-09-24"
         },
         {
@@ -1484,30 +1460,6 @@
           "markdownExpirationDate": "2026-09-27"
         },
         {
-          "productId": 578706,
-          "title": "AH Eierkoeken volkoren",
-          "brand": "AH",
-          "size": "360 g",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.49",
-          "priceNow": "1.12",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
-          "productId": 578973,
-          "title": "AH Gevouwen flatbread naturel",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.99",
-          "priceNow": "1.49",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
           "productId": 370644,
           "title": "Dr. Oetker Mug cake stracciatella",
           "brand": "Dr. Oetker",
@@ -1553,18 +1505,6 @@
           "stock": 2,
           "priceWas": "3.29",
           "priceNow": "2.47",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 580174,
-          "title": "Koopmans Brood uit de pan Italiaans",
-          "brand": "Koopmans",
-          "size": "400 g",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
           "markdownExpirationDate": "2026-10-11"
         },
         {
