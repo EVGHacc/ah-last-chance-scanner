@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-24",
   "weekday": "Thursday",
-  "scheduledSlot": "20:24",
-  "scheduledAt": "2026-09-24T20:24:00+02:00",
-  "rawScheduledSlot": "20:24",
-  "rawScheduledAt": "2026-09-24T20:24:00+02:00",
-  "startedAt": "2026-09-24T20:24:00.444277+02:00",
-  "completedAt": "2026-09-24T20:24:05.263159+02:00",
-  "checkedAt": "2026-09-24T20:24:05.263159+02:00",
+  "scheduledSlot": "20:25",
+  "scheduledAt": "2026-09-24T20:25:00+02:00",
+  "rawScheduledSlot": "20:25",
+  "rawScheduledAt": "2026-09-24T20:25:00+02:00",
+  "startedAt": "2026-09-24T20:25:00.409358+02:00",
+  "completedAt": "2026-09-24T20:25:05.204159+02:00",
+  "checkedAt": "2026-09-24T20:25:05.204159+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1117,7 +1117,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 9,
+          "stock": 8,
           "priceWas": "0.59",
           "priceNow": "0.44",
           "markdownExpirationDate": "2026-09-24"
@@ -2296,11 +2296,11 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 192,
+      "totalBargainItems": 191,
       "meatItems": 5,
       "meat70Items": 2,
       "meat70Stock": 2.0,
-      "bakeryItems": 25,
+      "bakeryItems": 24,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -2427,18 +2427,6 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
-          "productId": 606050,
-          "title": "AH Liefde & Passie Desem pistolet mais pompoen",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
           "productId": 603533,
           "title": "AH Kip mango snack",
           "brand": "AH",
@@ -2448,6 +2436,18 @@
           "stock": 3,
           "priceWas": "1.49",
           "priceNow": "1.12",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 606050,
+          "title": "AH Liefde & Passie Desem pistolet mais pompoen",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-09-24"
         },
         {
@@ -2592,18 +2592,6 @@
           "stock": 1,
           "priceWas": "0.99",
           "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
-          "productId": 606492,
-          "title": "AH Liefde & Passie Biologisch desem pistolet meerzaden",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.09",
-          "priceNow": "0.93",
           "markdownExpirationDate": "2026-09-24"
         },
         {
