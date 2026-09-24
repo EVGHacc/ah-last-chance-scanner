@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-24",
   "weekday": "Thursday",
-  "scheduledSlot": "20:30",
-  "scheduledAt": "2026-09-24T20:30:00+02:00",
-  "rawScheduledSlot": "20:30",
-  "rawScheduledAt": "2026-09-24T20:30:00+02:00",
-  "startedAt": "2026-09-24T20:30:00.452859+02:00",
-  "completedAt": "2026-09-24T20:30:05.238610+02:00",
-  "checkedAt": "2026-09-24T20:30:05.238610+02:00",
+  "scheduledSlot": "20:33",
+  "scheduledAt": "2026-09-24T20:33:00+02:00",
+  "rawScheduledSlot": "20:33",
+  "rawScheduledAt": "2026-09-24T20:33:00+02:00",
+  "startedAt": "2026-09-24T20:33:00.488256+02:00",
+  "completedAt": "2026-09-24T20:33:05.746336+02:00",
+  "checkedAt": "2026-09-24T20:33:05.746336+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2409,7 +2409,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 7,
+          "stock": 6,
           "priceWas": "3.19",
           "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-24"
@@ -2571,18 +2571,6 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
-          "productId": 417148,
-          "title": "AH Vloerbrood volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "2.69",
-          "priceNow": "2.29",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
           "productId": 230787,
           "title": "AH Les pains triomphe half",
           "brand": "AH",
@@ -2616,6 +2604,18 @@
           "stock": 1,
           "priceWas": "0.99",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 417148,
+          "title": "AH Vloerbrood volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "2.29",
           "markdownExpirationDate": "2026-09-24"
         },
         {
