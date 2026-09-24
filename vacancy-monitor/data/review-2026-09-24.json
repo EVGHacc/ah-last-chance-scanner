@@ -1,0 +1,137 @@
+{
+  "run_date": "2026-09-24",
+  "snapshot_blob": "8ba098246d61058bc75585b09b1b8fcfc9e06476",
+  "registry_sha": "ff61abde56c4063632227adb1a8715027f9020ae",
+  "classified": 105,
+  "successful_control": 103,
+  "counts_by_kind": {
+    "recruiter": {
+      "official_site_scanned": 34,
+      "official_ats_scanned": 1,
+      "no_public_vacancy_board": 13,
+      "technical_failure": 1
+    },
+    "employer": {
+      "official_site_scanned": 40,
+      "official_ats_scanned": 15,
+      "no_public_vacancy_board": 0,
+      "technical_failure": 1
+    }
+  },
+  "recoveries": [
+    {
+      "name": "McKinsey",
+      "url": "https://www.mckinsey.com/nl/careers",
+      "status": "official_site_scanned",
+      "full_inventory_proven": false
+    },
+    {
+      "name": "Rabobank",
+      "url": "https://rabobank.jobs/nl/vacatures/",
+      "status": "official_site_scanned",
+      "full_inventory_proven": false
+    },
+    {
+      "name": "Robert Walters Interim",
+      "url": "https://www.robertwalters.nl/onze-diensten/interim-recruitment/interim-opdrachten.html",
+      "status": "official_site_scanned",
+      "full_inventory_proven": false
+    },
+    {
+      "name": "Selby Jennings",
+      "url": "https://www.selbyjennings.com/en-nl/jobs",
+      "status": "official_site_scanned",
+      "full_inventory_proven": false
+    }
+  ],
+  "remaining_failures": [
+    {
+      "name": "Risk Talent Associates",
+      "error": "Snapshot HTTP 403; same-run web fetch internal error",
+      "routes": [
+        "http://www.risktalent.com/",
+        "https://www.risktalent.com/"
+      ]
+    },
+    {
+      "name": "DB Contractors UK",
+      "error": "Snapshot DNS resolution failure; same-run web fetch internal error",
+      "routes": [
+        "https://www.dbcontractors.co.uk/",
+        "https://www.dbcontractors.co.uk/careers"
+      ]
+    }
+  ],
+  "kiv": [
+    {
+      "employer": "MUFG",
+      "id": "10079011-WD-1",
+      "status": "unconfirmed",
+      "reason": "Direct attempted Workday URL rendered no job text or application proof; full exact slug not independently recovered."
+    },
+    {
+      "employer": "JP Morgan Chase",
+      "id": "210785757",
+      "status": "unconfirmed",
+      "reason": "Discovered official direct page opened blank; alternate site internal error; search snippet not accepted."
+    }
+  ],
+  "new_matches": [
+    {
+      "EMPLOYER": "Niet openbaar gemaakte Nederlandse verzekeraar, via Vroom",
+      "ROLE": "Head of Compliance (Sleutelfunctiehouder)",
+      "LOCATION": "Nederland; standplaats en werkvorm onbekend",
+      "SCORE": 9,
+      "WHY": "Compliance-teamleiding, governance en toezicht met onafhankelijke toegang tot bestuur. Bankingervaring expliciet geaccepteerd; senior compliance-ervaring en CAMS/CIA sluiten aan. Vervolg: werkgever, mandaat en team bespreken met Vroom.",
+      "LIMITERS": "Werkgever, salaris, teamomvang en werkvorm onbekend. Verzekeringsspecifieke verantwoordelijkheden nader toetsen.",
+      "MISMATCH": "Verzekeringen in plaats van banking; brede compliance in plaats van uitsluitend AML/sanctions.",
+      "SOURCE_URL": "https://vroomsearch.com/nl/vacature/head-compliance-sleutelfunctiehouder"
+    },
+    {
+      "EMPLOYER": "Barclays",
+      "ROLE": "IB Client Risk Governance Lead",
+      "LOCATION": "Londen, hybride; tekst noemt ook Birmingham als mogelijke basis",
+      "SCORE": 8.5,
+      "WHY": "Zeer directe inhoudelijke aansluiting op AML/sanctions governance en oversight: financial-crime risk appetite, escalaties, executive committees, transformatie en teamleiding. CAMS en internationale bancaire ervaring passen. Vervolg: niveau, beloning en Britse werkregeling bespreken.",
+      "LIMITERS": "Brits werkrecht/sponsoring en aanwezigheid op kantoor nog te bevestigen. Specifieke investment-banking/marketskennis toetsen.",
+      "MISMATCH": "VP-niveau, niet Director/Head; eerstelijns client-risk governance en Britse standplaats.",
+      "SOURCE_URL": "https://search.jobs.barclays/job/london/ib-client-risk-governance-lead/13015/100993268288"
+    },
+    {
+      "EMPLOYER": "Payhawk",
+      "ROLE": "Group Control Assurance Lead",
+      "LOCATION": "Londen",
+      "SCORE": 8,
+      "WHY": "Senior tweedelijns assurance over twee vergunninghouders; boardrapportage, AML/sanctions, governance en herstelprogramma's sluiten aan op audit- en compliance-ervaring en CIA/CAMS-Audit. Vervolg: werkrecht, people-managementscope en AI/data-eisen toetsen.",
+      "LIMITERS": "Bestaand Brits werkrecht expliciet vereist en niet bevestigd. Praktische AI/data-automatisering en FCA-kennis moeten aantoonbaar zijn.",
+      "MISMATCH": "Hands-on programmaleider; eigen team en director-niveau niet aangetoond. Fintech/e-money in plaats van grootbank.",
+      "SOURCE_URL": "https://payhawk.com/careers/4966324101/group-control-assurance-lead"
+    }
+  ],
+  "notification_result": "Exactly one successful job.strong_match event per new match; three corresponding delivered emails verified. Initial Vroom attempt rejected with 422 SCORE type error before successful corrected numeric event.",
+  "coverage_audit": {
+    "publish_percentages": false,
+    "reason": "No independent representative recall denominator. Snapshot completeness includes unsupported static/scroll terminal assumptions; fixed subset of evidence problems, not a complete coverage certification.",
+    "independent_examples": [
+      {
+        "name": "Vroom",
+        "title": "Head of Compliance (Sleutelfunctiehouder)",
+        "found_in_snapshot": false,
+        "live_application_verified": true
+      },
+      {
+        "name": "Payhawk",
+        "title": "Group Control Assurance Lead",
+        "found_in_snapshot": true,
+        "live_application_verified": true
+      },
+      {
+        "name": "Barclays",
+        "title": "IB Client Risk Governance Lead",
+        "found_in_snapshot": true,
+        "live_application_verified": true
+      }
+    ],
+    "tests": "12 local tests passed; scanner patch fe1cd34060be2280894bc72b5791f76553529cda pushed; deployment scan not yet verified"
+  }
+}
