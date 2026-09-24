@@ -34,7 +34,7 @@ class ScannerTests(unittest.TestCase):
         self.assertFalse(evidence["static_complete_evidence"])
 
     def test_static_listing_can_prove_complete_inventory(self):
-        html = ''.join(f'<a href="/jobs/{i}">Director Risk {i}</a>' for i in range(1,6))
+        html = '5 jobs' + ''.join(f'<a href="/jobs/{i}">Director Risk {i}</a>' for i in range(1,6))
         evidence = listing_evidence(page(html), ORG)
         self.assertTrue(evidence["static_complete_evidence"])
         self.assertEqual(coverage_from_evidence([evidence], {**ORG,"no_public_hint":False}), "verified_complete")
