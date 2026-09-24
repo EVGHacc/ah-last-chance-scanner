@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-24",
   "weekday": "Thursday",
-  "scheduledSlot": "22:03",
-  "scheduledAt": "2026-09-24T22:03:00+02:00",
-  "rawScheduledSlot": "22:03",
-  "rawScheduledAt": "2026-09-24T22:03:00+02:00",
-  "startedAt": "2026-09-24T22:03:00.491832+02:00",
-  "completedAt": "2026-09-24T22:03:06.223091+02:00",
-  "checkedAt": "2026-09-24T22:03:06.223091+02:00",
+  "scheduledSlot": "22:05",
+  "scheduledAt": "2026-09-24T22:05:00+02:00",
+  "rawScheduledSlot": "22:05",
+  "rawScheduledAt": "2026-09-24T22:05:00+02:00",
+  "startedAt": "2026-09-24T22:05:00.514934+02:00",
+  "completedAt": "2026-09-24T22:05:05.959387+02:00",
+  "checkedAt": "2026-09-24T22:05:05.959387+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1369,11 +1369,11 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 159,
+      "totalBargainItems": 152,
       "meatItems": 2,
       "meat70Items": 1,
       "meat70Stock": 1.0,
-      "bakeryItems": 44,
+      "bakeryItems": 37,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -1434,18 +1434,6 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 40,
-          "stock": 4,
-          "priceWas": "3.19",
-          "priceNow": "1.91",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
-          "productId": 578301,
-          "title": "AH Liefde & Passie OerDesem zonne rogge",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
           "stock": 3,
           "priceWas": "3.19",
           "priceNow": "1.91",
@@ -1464,18 +1452,6 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
-          "productId": 241458,
-          "title": "AH Vloerbrood wit half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "1.45",
-          "priceNow": "0.87",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
           "productId": 487305,
           "title": "AH Liefde & Passie Spelt volkoren brood",
           "brand": "AH Liefde & Passie",
@@ -1483,6 +1459,18 @@
           "category": "Bakkerij",
           "discountPct": 40,
           "stock": 3,
+          "priceWas": "3.19",
+          "priceNow": "1.91",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 578301,
+          "title": "AH Liefde & Passie OerDesem zonne rogge",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 2,
           "priceWas": "3.19",
           "priceNow": "1.91",
           "markdownExpirationDate": "2026-09-24"
@@ -1512,63 +1500,15 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
-          "productId": 365995,
-          "title": "AH Luxe roomboter croissant",
+          "productId": 241458,
+          "title": "AH Vloerbrood wit half",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 8,
-          "priceWas": "1.19",
-          "priceNow": "0.89",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
-          "productId": 230740,
-          "title": "AH Praliné chocolade croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 7,
-          "priceWas": "1.39",
-          "priceNow": "1.04",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
-          "productId": 230842,
-          "title": "AH Liefde & Passie Spelt",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 6,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
-          "productId": 230726,
-          "title": "AH Maple pecan vlechtbrood",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "0.59",
-          "priceNow": "0.44",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
-          "productId": 230725,
-          "title": "AH Roomboter appelflap",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "0.89",
-          "priceNow": "0.67",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "1.45",
+          "priceNow": "0.87",
           "markdownExpirationDate": "2026-09-24"
         },
         {
@@ -1581,6 +1521,18 @@
           "stock": 3,
           "priceWas": "1.49",
           "priceNow": "1.12",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 230842,
+          "title": "AH Liefde & Passie Spelt",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-24"
         },
         {
@@ -1608,6 +1560,18 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
+          "productId": 230726,
+          "title": "AH Maple pecan vlechtbrood",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.59",
+          "priceNow": "0.44",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
           "productId": 451137,
           "title": "AH Focaccia mozzarella",
           "brand": "AH",
@@ -1617,6 +1581,18 @@
           "stock": 2,
           "priceWas": "1.19",
           "priceNow": "0.89",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 230740,
+          "title": "AH Praliné chocolade croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.39",
+          "priceNow": "1.04",
           "markdownExpirationDate": "2026-09-24"
         },
         {
@@ -1656,15 +1632,15 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
-          "productId": 230787,
-          "title": "AH Les pains triomphe half",
+          "productId": 365995,
+          "title": "AH Luxe roomboter croissant",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
           "stock": 2,
-          "priceWas": "1.29",
-          "priceNow": "0.97",
+          "priceWas": "1.19",
+          "priceNow": "0.89",
           "markdownExpirationDate": "2026-09-24"
         },
         {
@@ -1680,32 +1656,8 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
-          "productId": 606074,
-          "title": "AH Pistache croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.29",
-          "priceNow": "0.97",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
           "productId": 606777,
           "title": "AH Borek kip gyros",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.19",
-          "priceNow": "0.89",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
-          "productId": 523680,
-          "title": "AH Frikandelbroodje vegan",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
@@ -1734,7 +1686,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
-          "stock": 8,
+          "stock": 7,
           "priceWas": "0.29",
           "priceNow": "0.25",
           "markdownExpirationDate": "2026-09-24"
@@ -1764,18 +1716,6 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
-          "productId": 230859,
-          "title": "AH Kaas croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
           "productId": 230710,
           "title": "AH Ham kaas croissant",
           "brand": "AH",
@@ -1785,18 +1725,6 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
-          "productId": 606047,
-          "title": "AH Pistolet volkoren",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.29",
-          "priceNow": "0.25",
           "markdownExpirationDate": "2026-09-24"
         },
         {
@@ -1812,18 +1740,6 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
-          "productId": 231924,
-          "title": "AH Chocoladebroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.59",
-          "priceNow": "0.50",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
           "productId": 425912,
           "title": "AH Focaccia pepperoni",
           "brand": "AH",
@@ -1833,6 +1749,18 @@
           "stock": 2,
           "priceWas": "1.49",
           "priceNow": "1.27",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 606047,
+          "title": "AH Pistolet volkoren",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.29",
+          "priceNow": "0.25",
           "markdownExpirationDate": "2026-09-24"
         },
         {
@@ -1857,18 +1785,6 @@
           "stock": 1,
           "priceWas": "2.39",
           "priceNow": "2.03",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
-          "productId": 230738,
-          "title": "AH Koffiebroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.69",
-          "priceNow": "0.59",
           "markdownExpirationDate": "2026-09-24"
         },
         {
