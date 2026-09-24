@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-24",
   "weekday": "Thursday",
-  "scheduledSlot": "20:48",
-  "scheduledAt": "2026-09-24T20:48:00+02:00",
-  "rawScheduledSlot": "20:48",
-  "rawScheduledAt": "2026-09-24T20:48:00+02:00",
-  "startedAt": "2026-09-24T20:48:00.462662+02:00",
-  "completedAt": "2026-09-24T20:48:05.627254+02:00",
-  "checkedAt": "2026-09-24T20:48:05.627254+02:00",
+  "scheduledSlot": "20:50",
+  "scheduledAt": "2026-09-24T20:50:00+02:00",
+  "rawScheduledSlot": "20:50",
+  "rawScheduledAt": "2026-09-24T20:50:00+02:00",
+  "startedAt": "2026-09-24T20:50:00.487087+02:00",
+  "completedAt": "2026-09-24T20:50:05.343279+02:00",
+  "checkedAt": "2026-09-24T20:50:05.343279+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -104,18 +104,6 @@
           "stock": 3,
           "priceWas": "2.69",
           "priceNow": "2.02",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
-          "productId": 475819,
-          "title": "AH Kaiserbroodje volkoren",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "0.29",
-          "priceNow": "0.22",
           "markdownExpirationDate": "2026-09-24"
         },
         {
@@ -248,6 +236,18 @@
           "stock": 1,
           "priceWas": "1.19",
           "priceNow": "0.89",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 475819,
+          "title": "AH Kaiserbroodje volkoren",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.29",
+          "priceNow": "0.22",
           "markdownExpirationDate": "2026-09-24"
         },
         {
@@ -1339,18 +1339,6 @@
           "markdownExpirationDate": "2026-09-24"
         },
         {
-          "productId": 230720,
-          "title": "AH Frikandelbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-24"
-        },
-        {
           "productId": 515766,
           "title": "AH Kaasstengel",
           "brand": "AH",
@@ -1432,6 +1420,18 @@
           "stock": 1,
           "priceWas": "2.39",
           "priceNow": "2.03",
+          "markdownExpirationDate": "2026-09-24"
+        },
+        {
+          "productId": 230720,
+          "title": "AH Frikandelbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
           "markdownExpirationDate": "2026-09-24"
         },
         {
