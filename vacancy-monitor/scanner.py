@@ -174,6 +174,12 @@ def search_official(o):
         if u.startswith("http") and allowed(u,o): out.append(u)
     return list(dict.fromkeys(out))[:6]
 
+def inventory_url(u):
+    """Exclude navigation paths, not employer hostnames or vacancy title words."""
+    path=urlparse(u).path
+    return bool(JOBURL.search(path)) and not re.search(
+        r"/(?:search|search-results|search-jobs|job-search|filter|login|privacy|data-privacy|cookie-policy|alert|subscribe|blog|article)(?:/|$)",path,re.I)
+
 def listing_evidence(f,o):
     """Evidence for whether an official public listing is exhaustively visible."""
     s=BeautifulSoup(f["html"],"html.parser")
@@ -182,7 +188,7 @@ def listing_evidence(f,o):
         u=norm(urljoin(f["final"],a["href"]))
         title=a.get_text(" ",strip=True)
         if 4<=len(title)<=180 and allowed(u,o) and JOBURL.search(u) and not PAGING.search(title):
-            if not re.search(r"(search|filter|login|privacy|cookie|alert|subscribe|blog|article)",u,re.I):
+            if inventory_url(u):
                 links.append(u)
     unique=set(links)
     forward=bool(s.find(attrs={"rel":"next"}) or any(PAGING.search(a.get_text(" ",strip=True)) for a in s.find_all("a",href=True)))
@@ -192,17 +198,19 @@ def listing_evidence(f,o):
     listing_like=bool(LISTING_URL.search(f["final"]) or (len(unique)>=5 and not re.search(r"/jobs?/[^/?#]+",path,re.I)))
     text=s.get_text(" ",strip=True)
     totals=[]
-    for m in re.finditer(r"\\b([0-9]{1,5})\\s+(?:open\\s+)?(?:jobs?|vacatures?|positions?|roles?|results?|offres?)\\b",text,re.I):
+    for m in re.finditer(r"\b([0-9]{1,5})\s+(?:open\s+)?(?:jobs?|vacatures?|positions?|roles?|results?|offres?)\b",text,re.I):
         n=int(m.group(1))
         if n>=len(unique): totals.append(n)
     official_total=max(totals) if totals else None
-    complete=bool(listing_like and unique and not forward and not dynamic and (official_total is None or len(unique)>=official_total))
+    complete=bool(listing_like and unique and not forward and not dynamic and official_total is not None and len(unique)==official_total)
     return {"url":f["final"],"job_link_count":len(unique),"pagination_seen":forward,
             "dynamic_more_seen":dynamic,"listing_like":listing_like,"official_total":official_total,
             "static_complete_evidence":complete}
 
 def coverage_from_evidence(evidence,o):
     """Keep reachability separate from proof that the public inventory is exhaustive."""
+    if not evidence:
+        return "unproven"
     if any(e.get("static_complete_evidence") for e in evidence):
         return "verified_complete"
     listing=[e for e in evidence if e.get("job_link_count")]
@@ -323,7 +331,7 @@ def inventory_job_links(html,final,o):
     for a in soup.find_all("a",href=True):
         title=a.get_text(" ",strip=True); u=norm(urljoin(final,a["href"]))
         if 4<=len(title)<=180 and u.startswith("http") and allowed(u,o) and JOBURL.search(u):
-            if not re.search(r"(search|filter|login|privacy|cookie|alert|subscribe|blog|article)",u,re.I):
+            if inventory_url(u):
                 out[u]=title
     return out
 
@@ -397,7 +405,7 @@ def browser_retry(rs):
                     ev=listing_evidence(f2,o); ev["browser_inventory_count"]=len(all_links); ev["browser_pages_traversed"]=len(visited); ev["browser_terminal"]=terminal
                     r["listing_evidence"].append(ev)
                     r["routes_tried"].append({"url":u,"final":pg.url,"method":"browser-exhaustive","status":sc,"ok":True,"error":None,"ms":int((time.monotonic()-t)*1000)})
-                    if all_links and terminal:
+                    if all_links and terminal and ev.get("official_total") == len(all_links):
                         r["vacancy_coverage"]="verified_complete"
                         # Re-run both matchers over every discovered job title, not only the first HTML page.
                         raw=[{"title":title,"url":url} for url,title in all_links.items() if REL.search(title+" "+url) and (SENIOR.search(title) or re.search(r"\\b(mlro|cco|cro|sanctions counsel|regulatory counsel)\\b",title,re.I))]
