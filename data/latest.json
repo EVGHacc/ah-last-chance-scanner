@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-25",
   "weekday": "Friday",
-  "scheduledSlot": "20:20",
-  "scheduledAt": "2026-09-25T20:20:00+02:00",
-  "rawScheduledSlot": "20:20",
-  "rawScheduledAt": "2026-09-25T20:20:00+02:00",
-  "startedAt": "2026-09-25T20:20:00.425676+02:00",
-  "completedAt": "2026-09-25T20:20:06.143440+02:00",
-  "checkedAt": "2026-09-25T20:20:06.143440+02:00",
+  "scheduledSlot": "20:21",
+  "scheduledAt": "2026-09-25T20:21:00+02:00",
+  "rawScheduledSlot": "20:21",
+  "rawScheduledAt": "2026-09-25T20:21:00+02:00",
+  "startedAt": "2026-09-25T20:21:00.474835+02:00",
+  "completedAt": "2026-09-25T20:21:05.193281+02:00",
+  "checkedAt": "2026-09-25T20:21:05.193281+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 193,
+      "totalBargainItems": 194,
       "meatItems": 0,
       "meat70Items": 0,
       "meat70Stock": 0,
@@ -508,11 +508,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 186,
+      "totalBargainItems": 210,
       "meatItems": 5,
       "meat70Items": 3,
       "meat70Stock": 4.0,
-      "bakeryItems": 38,
+      "bakeryItems": 44,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "items": [
@@ -588,6 +588,18 @@
           "stock": 1,
           "priceWas": "1.19",
           "priceNow": "0.36",
+          "markdownExpirationDate": "2026-09-25"
+        },
+        {
+          "productId": 578301,
+          "title": "AH Liefde & Passie OerDesem zonne rogge",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 4,
+          "priceWas": "3.19",
+          "priceNow": "1.91",
           "markdownExpirationDate": "2026-09-25"
         },
         {
@@ -687,6 +699,30 @@
           "markdownExpirationDate": "2026-09-25"
         },
         {
+          "productId": 571174,
+          "title": "AH Jalapeño kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-25"
+        },
+        {
+          "productId": 577447,
+          "title": "AH Everything bol",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.79",
+          "priceNow": "0.59",
+          "markdownExpirationDate": "2026-09-25"
+        },
+        {
           "productId": 590397,
           "title": "AH Kipnuggetbroodje",
           "brand": "AH",
@@ -771,6 +807,18 @@
           "markdownExpirationDate": "2026-09-25"
         },
         {
+          "productId": 584032,
+          "title": "AH Rond wit sesam heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "1.42",
+          "markdownExpirationDate": "2026-09-25"
+        },
+        {
           "productId": 606494,
           "title": "AH Focaccia brie rozemarijn",
           "brand": "AH",
@@ -840,6 +888,18 @@
           "stock": 2,
           "priceWas": "1.49",
           "priceNow": "1.27",
+          "markdownExpirationDate": "2026-09-25"
+        },
+        {
+          "productId": 577444,
+          "title": "AH Worstenbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "1.29",
+          "priceNow": "1.10",
           "markdownExpirationDate": "2026-09-25"
         },
         {
@@ -1008,6 +1068,18 @@
           "stock": 6,
           "priceWas": "4.19",
           "priceNow": "2.51",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 580174,
+          "title": "Koopmans Brood uit de pan Italiaans",
+          "brand": "Koopmans",
+          "size": "400 g",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 3,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-11"
         },
         {
