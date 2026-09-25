@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-25",
   "weekday": "Friday",
-  "scheduledSlot": "20:21",
-  "scheduledAt": "2026-09-25T20:21:00+02:00",
-  "rawScheduledSlot": "20:21",
-  "rawScheduledAt": "2026-09-25T20:21:00+02:00",
-  "startedAt": "2026-09-25T20:21:00.474835+02:00",
-  "completedAt": "2026-09-25T20:21:05.193281+02:00",
-  "checkedAt": "2026-09-25T20:21:05.193281+02:00",
+  "scheduledSlot": "20:24",
+  "scheduledAt": "2026-09-25T20:24:00+02:00",
+  "rawScheduledSlot": "20:24",
+  "rawScheduledAt": "2026-09-25T20:24:00+02:00",
+  "startedAt": "2026-09-25T20:24:00.459443+02:00",
+  "completedAt": "2026-09-25T20:24:05.460789+02:00",
+  "checkedAt": "2026-09-25T20:24:05.460789+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 194,
+      "totalBargainItems": 196,
       "meatItems": 0,
       "meat70Items": 0,
       "meat70Stock": 0,
@@ -1112,11 +1112,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 236,
+      "totalBargainItems": 235,
       "meatItems": 3,
       "meat70Items": 1,
       "meat70Stock": 1.0,
-      "bakeryItems": 60,
+      "bakeryItems": 59,
       "bakery70Items": 2,
       "bakery70Stock": 3.0,
       "items": [
@@ -1588,18 +1588,6 @@
           "stock": 3,
           "priceWas": "1.89",
           "priceNow": "1.61",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
-          "productId": 606047,
-          "title": "AH Pistolet volkoren",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.29",
-          "priceNow": "0.25",
           "markdownExpirationDate": "2026-09-25"
         },
         {
@@ -2339,18 +2327,6 @@
           "markdownExpirationDate": "2026-09-25"
         },
         {
-          "productId": 230786,
-          "title": "AH Les pains triomphe heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "2.39",
-          "priceNow": "2.03",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
           "productId": 365995,
           "title": "AH Luxe roomboter croissant",
           "brand": "AH",
@@ -2399,6 +2375,18 @@
           "markdownExpirationDate": "2026-09-25"
         },
         {
+          "productId": 230786,
+          "title": "AH Les pains triomphe heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "2.39",
+          "priceNow": "2.03",
+          "markdownExpirationDate": "2026-09-25"
+        },
+        {
           "productId": 600702,
           "title": "AH Eiwitrijk flatbread",
           "brand": "AH",
@@ -2440,11 +2428,11 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 163,
+      "totalBargainItems": 162,
       "meatItems": 8,
       "meat70Items": 1,
       "meat70Stock": 1.0,
-      "bakeryItems": 23,
+      "bakeryItems": 22,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -2628,18 +2616,6 @@
           "stock": 2,
           "priceWas": "3.19",
           "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
-          "productId": 230725,
-          "title": "AH Roomboter appelflap",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "0.89",
-          "priceNow": "0.67",
           "markdownExpirationDate": "2026-09-25"
         },
         {
