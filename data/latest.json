@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-25",
   "weekday": "Friday",
-  "scheduledSlot": "21:42",
-  "scheduledAt": "2026-09-25T21:42:00+02:00",
-  "rawScheduledSlot": "21:42",
-  "rawScheduledAt": "2026-09-25T21:42:00+02:00",
-  "startedAt": "2026-09-25T21:42:00.413000+02:00",
-  "completedAt": "2026-09-25T21:42:05.095569+02:00",
-  "checkedAt": "2026-09-25T21:42:05.095569+02:00",
+  "scheduledSlot": "21:45",
+  "scheduledAt": "2026-09-25T21:45:00+02:00",
+  "rawScheduledSlot": "21:45",
+  "rawScheduledAt": "2026-09-25T21:45:00+02:00",
+  "startedAt": "2026-09-25T21:45:00.414209+02:00",
+  "completedAt": "2026-09-25T21:45:05.794961+02:00",
+  "checkedAt": "2026-09-25T21:45:05.794961+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2232,18 +2232,6 @@
           "markdownExpirationDate": "2026-09-25"
         },
         {
-          "productId": 606047,
-          "title": "AH Pistolet volkoren",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "0.29",
-          "priceNow": "0.25",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
           "productId": 467677,
           "title": "AH Kip loempia börek",
           "brand": "AH",
@@ -2253,6 +2241,18 @@
           "stock": 3,
           "priceWas": "1.19",
           "priceNow": "1.01",
+          "markdownExpirationDate": "2026-09-25"
+        },
+        {
+          "productId": 606047,
+          "title": "AH Pistolet volkoren",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "0.29",
+          "priceNow": "0.25",
           "markdownExpirationDate": "2026-09-25"
         },
         {
