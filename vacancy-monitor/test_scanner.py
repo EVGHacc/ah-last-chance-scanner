@@ -48,7 +48,7 @@ class ScannerTests(unittest.TestCase):
     def test_live_job_requires_current_board_presence(self):
         candidate={"title":"Director Financial Crime","url":"https://example.com/jobs/123"}
         fetched={"ok":True,"final":"https://example.com/jobs/123","status":200,
-                 "text":"Director Financial Crime Apply now","html":"<p>Director Financial Crime Apply now</p>"}
+                 "text":"Director Financial Crime Apply now","html":"<p>Director Financial Crime</p><a href="/apply/123">Apply now</a>"}
         with patch("scanner.fetch",return_value=fetched):
             job=validate_jobs([candidate.copy()],set())[0]
         self.assertTrue(job["live"])
@@ -65,6 +65,26 @@ class ScannerTests(unittest.TestCase):
         self.assertTrue(job["board_present"])
         self.assertTrue(job["apply_live"])
         self.assertEqual(job["validation_reason"],"direct_live_and_current_board")
+
+    def test_filled_job_rejects_generic_apply_cta(self):
+        candidate={"title":"Director Financial Crime","url":"https://example.com/jobs/123"}
+        fetched={"ok":True,"final":"https://example.com/jobs/123","status":200,
+                 "text":"Director Financial Crime Apply now We're sorry, the job you are trying to apply for has been filled.",
+                 "html":'<h1>Director Financial Crime</h1><a href="/apply/123">Apply now</a><p>The job you are trying to apply for has been filled.</p>'}
+        with patch("scanner.fetch",return_value=fetched):
+            result=validate_jobs([candidate],{job_key(candidate["url"])})[0]
+        self.assertFalse(result["apply_live"])
+        self.assertEqual(result["validation_reason"],"closed_marker")
+
+    def test_apply_text_without_real_control_is_not_live(self):
+        candidate={"title":"Director Financial Crime","url":"https://example.com/jobs/123"}
+        fetched={"ok":True,"final":"https://example.com/jobs/123","status":200,
+                 "text":"Director Financial Crime Apply now",
+                 "html":"<p>Director Financial Crime Apply now</p>"}
+        with patch("scanner.fetch",return_value=fetched):
+            result=validate_jobs([candidate],{job_key(candidate["url"])})[0]
+        self.assertFalse(result["apply_live"])
+        self.assertEqual(result["validation_reason"],"no_live_apply_control")
 
     def test_snapshot_qa_rejects_false_live_record(self):
         payload={"organisations":[{"name":"Example","jobs":[{"title":"Risk Director","url":"https://example.com/jobs/1",
