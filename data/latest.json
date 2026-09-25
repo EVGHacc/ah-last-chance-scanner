@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-25",
   "weekday": "Friday",
-  "scheduledSlot": "21:50",
-  "scheduledAt": "2026-09-25T21:50:00+02:00",
-  "rawScheduledSlot": "21:50",
-  "rawScheduledAt": "2026-09-25T21:50:00+02:00",
-  "startedAt": "2026-09-25T21:50:00.423880+02:00",
-  "completedAt": "2026-09-25T21:50:05.636460+02:00",
-  "checkedAt": "2026-09-25T21:50:05.636460+02:00",
+  "scheduledSlot": "21:51",
+  "scheduledAt": "2026-09-25T21:51:00+02:00",
+  "rawScheduledSlot": "21:51",
+  "rawScheduledAt": "2026-09-25T21:51:00+02:00",
+  "startedAt": "2026-09-25T21:51:00.425698+02:00",
+  "completedAt": "2026-09-25T21:51:05.859626+02:00",
+  "checkedAt": "2026-09-25T21:51:05.859626+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1837,11 +1837,11 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 160,
+      "totalBargainItems": 156,
       "meatItems": 4,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 40,
+      "bakeryItems": 36,
       "bakery70Items": 1,
       "bakery70Stock": 4.0,
       "items": [
@@ -1908,42 +1908,6 @@
           "markdownExpirationDate": "2026-09-25"
         },
         {
-          "productId": 606777,
-          "title": "AH Borek kip gyros",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 5,
-          "priceWas": "1.19",
-          "priceNow": "0.71",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
-          "productId": 584031,
-          "title": "AH Rond wit sesam half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 4,
-          "priceWas": "0.99",
-          "priceNow": "0.59",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
-          "productId": 595350,
-          "title": "AH Biologisch Batard volkoren zonnepit heel",
-          "brand": "AH Biologisch",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 4,
-          "priceWas": "2.69",
-          "priceNow": "1.61",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
           "productId": 561021,
           "title": "AH Vloer waldkorn heel",
           "brand": "AH",
@@ -2004,6 +1968,18 @@
           "markdownExpirationDate": "2026-09-25"
         },
         {
+          "productId": 606777,
+          "title": "AH Borek kip gyros",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "1.19",
+          "priceNow": "0.71",
+          "markdownExpirationDate": "2026-09-25"
+        },
+        {
           "productId": 417147,
           "title": "AH Vloerbrood meergranen heel",
           "brand": "AH",
@@ -2016,15 +1992,15 @@
           "markdownExpirationDate": "2026-09-25"
         },
         {
-          "productId": 584032,
-          "title": "AH Rond wit sesam heel",
-          "brand": "AH",
+          "productId": 595350,
+          "title": "AH Biologisch Batard volkoren zonnepit heel",
+          "brand": "AH Biologisch",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 40,
           "stock": 1,
-          "priceWas": "1.89",
-          "priceNow": "1.13",
+          "priceWas": "2.69",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-09-25"
         },
         {
@@ -2040,18 +2016,6 @@
           "markdownExpirationDate": "2026-09-25"
         },
         {
-          "productId": 230859,
-          "title": "AH Kaas croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 6,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
           "productId": 577447,
           "title": "AH Everything bol",
           "brand": "AH",
@@ -2064,8 +2028,8 @@
           "markdownExpirationDate": "2026-09-25"
         },
         {
-          "productId": 230720,
-          "title": "AH Frikandelbroodje",
+          "productId": 230859,
+          "title": "AH Kaas croissant",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
@@ -2208,18 +2172,6 @@
           "markdownExpirationDate": "2026-09-25"
         },
         {
-          "productId": 515766,
-          "title": "AH Kaasstengel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
           "productId": 467677,
           "title": "AH Kip loempia börek",
           "brand": "AH",
@@ -2244,18 +2196,6 @@
           "markdownExpirationDate": "2026-09-25"
         },
         {
-          "productId": 230725,
-          "title": "AH Roomboter appelflap",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.89",
-          "priceNow": "0.76",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
           "productId": 230734,
           "title": "Ah kaiserbroodjes wit nat",
           "brand": "AH",
@@ -2265,6 +2205,18 @@
           "stock": 2,
           "priceWas": "0.29",
           "priceNow": "0.25",
+          "markdownExpirationDate": "2026-09-25"
+        },
+        {
+          "productId": 515766,
+          "title": "AH Kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
           "markdownExpirationDate": "2026-09-25"
         },
         {
