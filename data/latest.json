@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-25",
   "weekday": "Friday",
-  "scheduledSlot": "18:25",
-  "scheduledAt": "2026-09-25T18:25:00+02:00",
-  "rawScheduledSlot": "18:25",
-  "rawScheduledAt": "2026-09-25T18:25:00+02:00",
-  "startedAt": "2026-09-25T18:25:00.410487+02:00",
-  "completedAt": "2026-09-25T18:25:05.592945+02:00",
-  "checkedAt": "2026-09-25T18:25:05.592945+02:00",
+  "scheduledSlot": "18:27",
+  "scheduledAt": "2026-09-25T18:27:00+02:00",
+  "rawScheduledSlot": "18:27",
+  "rawScheduledAt": "2026-09-25T18:27:00+02:00",
+  "startedAt": "2026-09-25T18:27:00.429745+02:00",
+  "completedAt": "2026-09-25T18:27:05.886918+02:00",
+  "checkedAt": "2026-09-25T18:27:05.886918+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -722,18 +722,6 @@
           "markdownExpirationDate": "2026-09-26"
         },
         {
-          "productId": 187594,
-          "title": "AH Greenfields Beefburger naturel 2 stuks",
-          "brand": "AH Greenfields",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "4.99",
-          "priceNow": "1.87",
-          "markdownExpirationDate": "2026-09-26"
-        },
-        {
           "productId": 441916,
           "title": "AH Excellent Ultimate beefburger",
           "brand": "AH Excellent",
@@ -743,6 +731,18 @@
           "stock": 3,
           "priceWas": "3.49",
           "priceNow": "2.62",
+          "markdownExpirationDate": "2026-09-26"
+        },
+        {
+          "productId": 187594,
+          "title": "AH Greenfields Beefburger naturel 2 stuks",
+          "brand": "AH Greenfields",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "4.99",
+          "priceNow": "1.87",
           "markdownExpirationDate": "2026-09-26"
         },
         {
