@@ -59,7 +59,7 @@ class ScannerTests(unittest.TestCase):
     def test_live_job_passes_with_detail_and_board_proof(self):
         candidate={"title":"Director Financial Crime","url":"https://example.com/jobs/123?utm_source=test"}
         fetched={"ok":True,"final":"https://example.com/jobs/123/","status":200,
-                 "text":"Director Financial Crime Apply now","html":"<p>Director Financial Crime Apply now</p>"}
+                 "text":"Director Financial Crime Apply now","html":"<p>Director Financial Crime</p><a href='/apply/123'>Apply now</a>"}
         with patch("scanner.fetch",return_value=fetched):
             job=validate_jobs([candidate.copy()],{job_key("https://example.com/jobs/123")})[0]
         self.assertTrue(job["board_present"])
