@@ -12,6 +12,9 @@ DATA=ROOT/"data"; DATA.mkdir(exist_ok=True)
 UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/128 Safari/537.36 VacancyMonitor/1.0"
 H={"User-Agent":UA,"Accept-Language":"en-GB,en;q=0.9,nl;q=0.8"}
 TIMEOUT=int(os.getenv("VACANCY_TIMEOUT","12")); WORKERS=int(os.getenv("VACANCY_WORKERS","12"))
+BROWSER_BUDGET=int(os.getenv("VACANCY_BROWSER_BUDGET","660"))
+BROWSER_ORG_BUDGET=int(os.getenv("VACANCY_BROWSER_ORG_BUDGET","85"))
+BROWSER_URL_BUDGET=int(os.getenv("VACANCY_BROWSER_URL_BUDGET","28"))
 ATS=("myworkdayjobs.com","workday.com","oraclecloud.com","greenhouse.io","lever.co","teamtailor.com","recruitee.com","ashbyhq.com","breezy.hr","smartrecruiters.com","successfactors.com","eightfold.ai","icims.com")
 CAREER=re.compile(r"(job|career|vacanc|position|opportunit|werken.?bij|open.?roles)",re.I)
 REL=re.compile(r"(compliance|risk|audit|anti.?money|aml|financial.?crime|sanction|governance|regulat|controls?|assurance|oversight|mlro|cco|cro|responsible.?ai|trust.?safety|resilien|continuity|business.?control|integrity|fraud|investigation|financial.?intelligence|conduct|ethics|remediation|non.?financial|financieel.?economische.?criminaliteit|witwassen)",re.I)
@@ -285,9 +288,10 @@ def board_job_keys_from_pages(pages,o):
     return keys
 
 def validate_jobs(js,board_keys=None):
+    """Live-check every candidate in bounded parallel requests; never infer liveness from a board alone."""
     board_keys=set(board_keys or ())
-    out=[]
-    for j in js[:50]:
+    def verify(candidate):
+        j=dict(candidate)
         requested=j["url"]; f=fetch(requested,"job-live-check"); text=f["text"]
         direct_live=f["ok"] and (j["title"].lower()[:24] in text.lower() or len(j["title"])<12)
         board_present=job_key(requested) in board_keys or job_key(f["final"]) in board_keys
@@ -298,8 +302,11 @@ def validate_jobs(js,board_keys=None):
         elif CLOSED.search(text): reason="closed_marker"
         else: reason="no_live_apply_control"
         j.update({"url":f["final"],"live":direct_live,"board_present":board_present,"apply_live":apply_live,
-                  "validation_reason":reason,"http_status":f["status"],"checked_at":iso()}); out.append(j)
-    return out
+                  "validation_reason":reason,"http_status":f["status"],"checked_at":iso()})
+        return j
+    if not js: return []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=min(6,len(js))) as ex:
+        return list(ex.map(verify,js))
 
 def scan(o):
     t=time.monotonic(); tried=[]; success=[]; q=candidates(o); seen=set()
@@ -388,11 +395,11 @@ def browser_visible_job_links(pg,o):
     return out
 
 def browser_retry(rs):
-    """Render incomplete boards and exhaust scrolling/load-more/next pagination."""
+    """Best-effort deep recovery with hard time budgets; expired checks remain unproven."""
     targets=[r for r in rs if r["status"]=="technical_failure" or r["vacancy_coverage"] in ("partial","unproven")]
     if not targets:return
-    # Fail closed for boards whose current inventory is not proven: a requests-only
-    # detail/listing result may be stale. Browser inventory must reconfirm the job.
+    targets.sort(key=lambda r:(r["status"]!="technical_failure", r["vacancy_coverage"]!="partial",r["name"]))
+    # Fail closed: a requests-only listing or detail can be stale.
     for r in targets:
         for j in r.get("jobs",[]):
             j["apply_live"]=False
@@ -400,92 +407,108 @@ def browser_retry(rs):
             j["validation_reason"]="browser_board_confirmation_required"
     try: from playwright.sync_api import sync_playwright
     except Exception:return
+    deadline=time.monotonic()+BROWSER_BUDGET
     with sync_playwright() as p:
         b=p.chromium.launch(headless=True); c=b.new_context(user_agent=UA,locale="en-GB")
         for r in targets:
+            if time.monotonic()>=deadline:
+                r["browser_recovery_incomplete"]="global_budget_exhausted"
+                continue
+            started=time.monotonic()
+            org_deadline=min(deadline,started+BROWSER_ORG_BUDGET)
             o=r["_org"]; unresolved=r["status"]=="technical_failure"
             likely=sorted(r["listing_evidence"],key=lambda x:(0 if x.get("listing_like") else 1,0 if x.get("job_link_count",0) else 1,-x.get("job_link_count",0)))
             urls=[]
             if likely: urls.extend(x["url"] for x in likely[:3])
             urls.extend(candidates(o)[:3])
             urls=list(dict.fromkeys(urls))
+            observed_links={}
             for u in urls:
-                pg=c.new_page(); t=time.monotonic(); all_links={}; visited=set(); terminal=False
+                if time.monotonic()>=org_deadline:
+                    r["browser_recovery_incomplete"]="organisation_budget_exhausted"
+                    break
+                pg=c.new_page(); t=time.monotonic()
+                url_deadline=min(org_deadline,t+BROWSER_URL_BUDGET)
+                all_links={}; visited=set(); terminal=False
                 try:
-                    resp=pg.goto(u,wait_until="domcontentloaded",timeout=12000); pg.wait_for_timeout(700)
+                    resp=pg.goto(u,wait_until="domcontentloaded",timeout=12000); pg.wait_for_timeout(450)
                     final=pg.url; sc=resp.status if resp else None
                     if not (sc and sc<400 and allowed(final,o)): continue
-                    for page_no in range(35):
+                    for page_no in range(12):
+                        if time.monotonic()>=url_deadline:break
                         current=pg.url
                         if current in visited and page_no: break
                         visited.add(current)
                         stable=0
-                        for _ in range(10):
-                            html=pg.content(); before=len(all_links)
+                        for _ in range(6):
+                            if time.monotonic()>=url_deadline:break
+                            before=len(all_links)
                             all_links.update(browser_visible_job_links(pg,o))
-                            # Infinite-scroll boards often need several bottom hits.
                             try: pg.evaluate("window.scrollTo(0, document.body.scrollHeight)")
                             except Exception: pass
-                            pg.wait_for_timeout(450)
-                            # Click one visible load-more control if present.
+                            pg.wait_for_timeout(350)
                             clicked=False
+                            # One bulk DOM read instead of up to 250 sequential 150ms inner_text calls.
                             loc=pg.locator("button, a")
-                            for i in range(min(loc.count(),250)):
-                                el=loc.nth(i)
-                                try:
-                                    label=(el.inner_text(timeout=150) or "").strip()
-                                    if DYNAMIC_MORE.search(label) and el.is_visible():
-                                        el.click(timeout=1200); pg.wait_for_timeout(650); clicked=True; break
-                                except Exception: pass
-                            html=pg.content(); all_links.update(browser_visible_job_links(pg,o))
-                            stable = stable+1 if len(all_links)==before and not clicked else 0
-                            if stable>=2: break
+                            try: labels=loc.all_inner_texts(timeout=1500)
+                            except Exception: labels=[]
+                            for i,label in enumerate(labels[:100]):
+                                if DYNAMIC_MORE.search(label or ""):
+                                    el=loc.nth(i)
+                                    try:
+                                        if el.is_visible():
+                                            el.click(timeout=900); pg.wait_for_timeout(450); clicked=True; break
+                                    except Exception: pass
+                            all_links.update(browser_visible_job_links(pg,o))
+                            stable=stable+1 if len(all_links)==before and not clicked else 0
+                            if stable>=2:break
+                        if time.monotonic()>=url_deadline:break
                         html=pg.content(); soup=BeautifulSoup(html,"html.parser")
                         next_url=None
                         nxt=soup.find("a",attrs={"rel":lambda v:v and ("next" in v if isinstance(v,list) else "next" in str(v).lower())})
                         if nxt and nxt.get("href"): next_url=norm(urljoin(pg.url,nxt["href"]))
                         if not next_url:
                             for a in soup.find_all("a",href=True):
-                                if re.fullmatch(r"\\s*(next|volgende|suivant|weiter|›|»)\\s*",a.get_text(" ",strip=True),re.I):
-                                    next_url=norm(urljoin(pg.url,a["href"])); break
+                                if re.fullmatch(r"\s*(next|volgende|suivant|weiter|›|»)\s*",a.get_text(" ",strip=True),re.I):
+                                    next_url=norm(urljoin(pg.url,a["href"]));break
                         if not next_url:
                             body=soup.get_text(" ",strip=True)
-                            m=re.search(r"Displaying\\s+(\\d+)\\s*-\\s*(\\d+)\\s+of\\s+(\\d+)",body,re.I)
-                            if m and int(m.group(2)) < int(m.group(3)):
+                            m=re.search(r"Displaying\s+(\d+)\s*-\s*(\d+)\s+of\s+(\d+)",body,re.I)
+                            if m and int(m.group(2))<int(m.group(3)):
                                 pp=urlparse(pg.url); qs=parse_qs(pp.query); current_page=int((qs.get("page") or ["1"])[0] or 1)
                                 qs["page"]=[str(current_page+1)]
                                 next_url=urlunparse((pp.scheme,pp.netloc,pp.path,pp.params,urlencode(qs,doseq=True),pp.fragment))
                         if next_url and next_url not in visited and allowed(next_url,o):
-                            pg.goto(next_url,wait_until="domcontentloaded",timeout=12000); pg.wait_for_timeout(500); continue
-                        # No forward pagination left and scrolling/load-more stabilized.
-                        terminal=True; break
+                            pg.goto(next_url,wait_until="domcontentloaded",timeout=12000); pg.wait_for_timeout(350);continue
+                        terminal=True;break
                     txt=pg.locator("body").inner_text(timeout=3000)
                     html=pg.content(); f2={"ok":True,"url":u,"final":pg.url,"status":sc,"html":html,"text":txt,"method":"browser-exhaustive","error":None,"ms":0}
-                    ev=listing_evidence(f2,o); ev["browser_inventory_count"]=len(all_links); ev["browser_pages_traversed"]=len(visited); ev["browser_terminal"]=terminal
+                    ev=listing_evidence(f2,o);ev["browser_inventory_count"]=len(all_links);ev["browser_pages_traversed"]=len(visited);ev["browser_terminal"]=terminal
                     r["listing_evidence"].append(ev)
                     r["routes_tried"].append({"url":u,"final":pg.url,"method":"browser-exhaustive","status":sc,"ok":True,"error":None,"ms":int((time.monotonic()-t)*1000)})
-                    # For incomplete/dynamic boards the rendered browser inventory is authoritative
-                    # for liveness even when we cannot prove that the whole inventory is exhaustive.
-                    if all_links:
-                        raw=[{"title":title,"url":url} for url,title in all_links.items() if REL.search(title+" "+url) and (SENIOR.search(title) or re.search(r"\\b(mlro|cco|cro|sanctions counsel|regulatory counsel)\\b",title,re.I))]
-                        audit=[{"title":title,"url":url} for url,title in all_links.items() if AUDIT_REL.search(title+" "+url) and AUDIT_SENIOR.search(title)]
-                        matched_urls={j["url"] for j in raw}
-                        missed=[j for j in audit if j["url"] not in matched_urls]
-                        r["match_audit"]={"candidate_count":len(audit),"matched_count":len(audit)-len(missed),"missed":missed[:20]}
-                        r["jobs"]=validate_jobs(raw,{job_key(url) for url in all_links})
-                    if all_links and terminal and ev.get("official_total") == len(all_links):
+                    observed_links.update(all_links)
+                    if all_links and terminal and ev.get("official_total")==len(all_links):
                         r["vacancy_coverage"]="verified_complete"
                     elif o["no_public_hint"] and terminal and not all_links:
                         r["vacancy_coverage"]="verified_no_public_board"
-                    if unresolved:
+                    if unresolved and (all_links or (o["no_public_hint"] and terminal and not all_links)):
                         r["status"]="no_public_vacancy_board" if o["no_public_hint"] and not all_links else ("official_ats_scanned" if isats(pg.url) else "official_site_scanned")
-                        if r["status"]!="technical_failure":r["error"]=None
+                        r["error"]=None
                     r["successful_routes"].append({"url":pg.url,"method":"browser-exhaustive","status":sc})
-                    if r["vacancy_coverage"] in ("verified_complete","verified_no_public_board"): break
+                    if r["vacancy_coverage"] in ("verified_complete","verified_no_public_board"):break
                 except Exception as e:
                     r["routes_tried"].append({"url":u,"final":getattr(pg,"url",u),"method":"browser-exhaustive","status":None,"ok":False,"error":f"{type(e).__name__}: {e}","ms":int((time.monotonic()-t)*1000)})
                 finally: pg.close()
-        c.close(); b.close()
+            # Validate direct vacancy pages once per organisation, never once per attempted listing URL.
+            if observed_links:
+                raw=[{"title":title,"url":url} for url,title in observed_links.items() if REL.search(title+" "+url) and (SENIOR.search(title) or re.search(r"\b(mlro|cco|cro|sanctions counsel|regulatory counsel)\b",title,re.I))]
+                audit=[{"title":title,"url":url} for url,title in observed_links.items() if AUDIT_REL.search(title+" "+url) and AUDIT_SENIOR.search(title)]
+                matched_urls={j["url"] for j in raw}
+                missed=[j for j in audit if j["url"] not in matched_urls]
+                r["match_audit"]={"candidate_count":len(audit),"matched_count":len(audit)-len(missed),"missed":missed[:20]}
+                r["jobs"]=validate_jobs(raw,{job_key(url) for url in observed_links})
+            print(json.dumps({"phase":"browser_recovery","organisation":r["name"],"status":r["status"],"vacancy_coverage":r["vacancy_coverage"],"seconds":round(time.monotonic()-started,1),"remaining_global_seconds":round(deadline-time.monotonic(),1)},ensure_ascii=False),flush=True)
+        c.close();b.close()
 
 def qa_snapshot(payload):
     """Fail closed before persisting/alerting when a supposedly live job lacks dual liveness proof."""
@@ -508,8 +531,9 @@ def main():
             for o in json.loads(latest.read_text())["organisations"]:
                 old|={j["url"] for j in o.get("jobs",[]) if j.get("apply_live")}
         except Exception: pass
-    started=iso()
+    started=iso(); scan_started=time.monotonic()
     with concurrent.futures.ThreadPoolExecutor(max_workers=WORKERS) as ex: rs=list(ex.map(scan,reg))
+    print(json.dumps({"phase":"http_scan_complete","organisations":len(rs),"seconds":round(time.monotonic()-scan_started,1)}),flush=True)
     browser_retry(rs)
     for r in rs:r.pop("_org",None)
     rs.sort(key=lambda x:(x["kind"],x["name"].lower()))
