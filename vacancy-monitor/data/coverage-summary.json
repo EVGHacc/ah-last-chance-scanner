@@ -1,16 +1,154 @@
 {
-  "run_date": "2026-09-24",
+  "run_date": "2026-09-25",
   "target_expected": 103,
-  "target_proven": 94,
-  "vacancy_coverage_percent": 91.3,
+  "target_proven": 14,
+  "vacancy_coverage_percent": 13.6,
   "match_audit": {
-    "candidate_count": 221,
-    "matched_count": 221,
+    "candidate_count": 53,
+    "matched_count": 53,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
   },
   "incomplete": [
+    {
+      "name": "Airwallex",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "American Express",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "ASN Bank",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Bain & Co",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Barclays",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
+    },
+    {
+      "name": "BCG",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
+    },
+    {
+      "name": "BNP Paribas",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Checkout.com",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Commerzbank",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Crédit Agricole CIB",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Deutsche Bank",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "EU Remote jobs",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Finom",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
+    },
+    {
+      "name": "GFT",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Google",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "HSBC",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "IBANfirst",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "ING",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "JP Morgan Chase",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
+    },
+    {
+      "name": "Kroll",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Leaseplan / Ayvens Bank",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Mambu",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
+    },
+    {
+      "name": "Mastercard",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
     {
       "name": "McKinsey",
       "kind": "employer",
@@ -18,7 +156,73 @@
       "status": "technical_failure"
     },
     {
+      "name": "Meta",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Microsoft",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Mizuho",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Mollie",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
       "name": "Morgan Stanley",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
+    },
+    {
+      "name": "MUFG",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
+    },
+    {
+      "name": "N26",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "NN Bank",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Nordea",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "OpenAI",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
+    },
+    {
+      "name": "Payhawk",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "PayPal",
       "kind": "employer",
       "coverage": "partial",
       "status": "official_ats_scanned"
@@ -30,9 +234,183 @@
       "status": "technical_failure"
     },
     {
+      "name": "Remote.com",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Revolut",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Ripple",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Standard Chartered",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "State Street",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Stripe",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Surepay",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
+    },
+    {
+      "name": "Thunes",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Tide",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
+    },
+    {
+      "name": "Triodos Bank",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Van Lanschot",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Wise",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Worldline",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Zanders",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Zurich Insurance",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "AP Executive",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
       "name": "ARC",
       "kind": "recruiter",
       "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Barclay Simpson",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Black Swan Group",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Boer & Croon",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Brightstone",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Brunel",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Care Professionals",
+      "kind": "recruiter",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Compliance People",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Corbulo",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "De Vroed Ten Thierry",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "no_public_vacancy_board"
+    },
+    {
+      "name": "DPA",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Ebbinge",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Ferocia",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Finatal",
+      "kind": "recruiter",
+      "coverage": "partial",
       "status": "official_site_scanned"
     },
     {
@@ -42,9 +420,69 @@
       "status": "official_site_scanned"
     },
     {
+      "name": "Greenberg Nielsen",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Hanami International",
+      "kind": "recruiter",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Hunter Bond",
+      "kind": "recruiter",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Korn Ferry",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Matchd",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Michael Page",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Morgan McKinley",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Odger/Odgers",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "no_public_vacancy_board"
+    },
+    {
+      "name": "Oliver James",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
       "name": "PaymentGenes",
       "kind": "recruiter",
       "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Robert Half NL",
+      "kind": "recruiter",
+      "coverage": "partial",
       "status": "official_site_scanned"
     },
     {
@@ -54,15 +492,57 @@
       "status": "technical_failure"
     },
     {
+      "name": "Russell Reynolds Associates",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "no_public_vacancy_board"
+    },
+    {
       "name": "Selby Jennings",
       "kind": "recruiter",
       "coverage": "unproven",
       "status": "technical_failure"
     },
     {
+      "name": "Spencer Stuart",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "no_public_vacancy_board"
+    },
+    {
+      "name": "Taylor Root",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Varrlyn",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
+    },
+    {
       "name": "Vroom",
       "kind": "recruiter",
-      "coverage": "unproven",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Xanthic",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Yacht Executive",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Zanders",
+      "kind": "recruiter",
+      "coverage": "partial",
       "status": "official_site_scanned"
     }
   ],
