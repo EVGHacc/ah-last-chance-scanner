@@ -26,7 +26,7 @@ APPLY=re.compile(r"(apply.?now|\bapply\b|solliciteer|submit.?application|start.?
 PAGING=re.compile(r"(next|volgende|suivant|weiter|load more|toon meer|show more|page [2-9])",re.I)
 DYNAMIC_MORE=re.compile(r"(load more|toon meer|show more|view more|see more|meer vacatures|more jobs)",re.I)
 LISTING_URL=re.compile(r"(/jobs?/?$|/vacatures/?$|job-search|search-jobs|search-results|/positions/?$|open-roles|open-jobs|careers/search|offre-de-emploi/liste)",re.I)
-CLOSED=re.compile(r"(no.?longer.?available|position.?has.?been.?filled|vacature.?is.?gesloten|job.?is.?closed|applications?.?closed|expired)",re.I)
+CLOSED=re.compile(r"(no.?longer.?available|(?:position|job|vacancy).{0,65}(?:has.?been.?filled|is.?filled|is.?closed|was.?filled)|job you are trying to apply for has been filled|vacature.?is.?gesloten|applications?.?closed|expired)",re.I)
 COMMON=("/careers","/jobs","/vacatures","/job-search","/open-roles","/positions")
 API_BOARDS={
     "Lloyds Banking Group":{"type":"workday","url":"https://lbg.wd3.myworkdayjobs.com/wday/cxs/lbg/LBG_Careers/jobs","board":"https://lbg.wd3.myworkdayjobs.com/LBG_Careers"},
@@ -287,6 +287,20 @@ def board_job_keys_from_pages(pages,o):
             keys.update(job_key(u) for u in found)
     return keys
 
+def has_apply_control(html):
+    """Only count an enabled application link or button, not generic 'Apply' text."""
+    soup=BeautifulSoup(html or "","html.parser")
+    for el in soup.find_all(["a","button","input"]):
+        label=(el.get_text(" ",strip=True) or el.get("aria-label") or el.get("value") or "").strip()
+        if not APPLY.search(label):continue
+        if el.has_attr("disabled") or str(el.get("aria-disabled","")).lower()=="true":continue
+        if el.name=="input" and str(el.get("type","")).lower() not in ("submit","button"):continue
+        if el.name=="a":
+            href=str(el.get("href") or "").strip()
+            if not href or href.startswith("#") or href.lower().startswith("javascript:"):continue
+        return True
+    return False
+
 def validate_jobs(js,board_keys=None):
     """Live-check every candidate in bounded parallel requests; never infer liveness from a board alone."""
     board_keys=set(board_keys or ())
@@ -295,7 +309,7 @@ def validate_jobs(js,board_keys=None):
         requested=j["url"]; f=fetch(requested,"job-live-check"); text=f["text"]
         direct_live=f["ok"] and (j["title"].lower()[:24] in text.lower() or len(j["title"])<12)
         board_present=job_key(requested) in board_keys or job_key(f["final"]) in board_keys
-        apply_live=bool(direct_live and board_present and APPLY.search(text) and not CLOSED.search(text))
+        apply_live=bool(direct_live and board_present and has_apply_control(f["html"]) and not CLOSED.search(text))
         if apply_live: reason="direct_live_and_current_board"
         elif not board_present: reason="not_on_current_board"
         elif not direct_live: reason="detail_page_not_live"
