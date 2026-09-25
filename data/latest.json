@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-25",
   "weekday": "Friday",
-  "scheduledSlot": "20:51",
-  "scheduledAt": "2026-09-25T20:51:00+02:00",
-  "rawScheduledSlot": "20:51",
-  "rawScheduledAt": "2026-09-25T20:51:00+02:00",
-  "startedAt": "2026-09-25T20:51:00.463434+02:00",
-  "completedAt": "2026-09-25T20:51:04.985468+02:00",
-  "checkedAt": "2026-09-25T20:51:04.985468+02:00",
+  "scheduledSlot": "20:54",
+  "scheduledAt": "2026-09-25T20:54:00+02:00",
+  "rawScheduledSlot": "20:54",
+  "rawScheduledAt": "2026-09-25T20:54:00+02:00",
+  "startedAt": "2026-09-25T20:54:00.456435+02:00",
+  "completedAt": "2026-09-25T20:54:05.787158+02:00",
+  "checkedAt": "2026-09-25T20:54:05.787158+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,14 +25,27 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 209,
-      "meatItems": 0,
+      "totalBargainItems": 210,
+      "meatItems": 1,
       "meat70Items": 0,
       "meat70Stock": 0,
       "bakeryItems": 39,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "items": [],
+      "items": [
+        {
+          "productId": 238946,
+          "title": "AH Rundersoepballetjes",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "3.49",
+          "priceNow": "2.62",
+          "markdownExpirationDate": "2026-09-26"
+        }
+      ],
       "bakery": [
         {
           "productId": 417147,
@@ -1231,18 +1244,6 @@
           "markdownExpirationDate": "2026-09-25"
         },
         {
-          "productId": 597345,
-          "title": "AH Pretzel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "0.59",
-          "priceNow": "0.44",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
           "productId": 606050,
           "title": "AH Liefde & Passie Desem pistolet mais pompoen",
           "brand": "AH Liefde & Passie",
@@ -1420,6 +1421,18 @@
           "stock": 1,
           "priceWas": "3.19",
           "priceNow": "2.39",
+          "markdownExpirationDate": "2026-09-25"
+        },
+        {
+          "productId": 597345,
+          "title": "AH Pretzel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.59",
+          "priceNow": "0.44",
           "markdownExpirationDate": "2026-09-25"
         },
         {
