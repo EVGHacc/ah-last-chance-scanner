@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-25",
   "weekday": "Friday",
-  "scheduledSlot": "21:45",
-  "scheduledAt": "2026-09-25T21:45:00+02:00",
-  "rawScheduledSlot": "21:45",
-  "rawScheduledAt": "2026-09-25T21:45:00+02:00",
-  "startedAt": "2026-09-25T21:45:00.414209+02:00",
-  "completedAt": "2026-09-25T21:45:05.794961+02:00",
-  "checkedAt": "2026-09-25T21:45:05.794961+02:00",
+  "scheduledSlot": "21:48",
+  "scheduledAt": "2026-09-25T21:48:00+02:00",
+  "rawScheduledSlot": "21:48",
+  "rawScheduledAt": "2026-09-25T21:48:00+02:00",
+  "startedAt": "2026-09-25T21:48:00.410264+02:00",
+  "completedAt": "2026-09-25T21:48:06.694246+02:00",
+  "checkedAt": "2026-09-25T21:48:06.694246+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1089,11 +1089,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 226,
+      "totalBargainItems": 224,
       "meatItems": 3,
       "meat70Items": 1,
       "meat70Stock": 1.0,
-      "bakeryItems": 59,
+      "bakeryItems": 58,
       "bakery70Items": 2,
       "bakery70Stock": 3.0,
       "items": [
@@ -1340,18 +1340,6 @@
           "markdownExpirationDate": "2026-09-25"
         },
         {
-          "productId": 230726,
-          "title": "AH Maple pecan vlechtbrood",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "0.59",
-          "priceNow": "0.44",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
           "productId": 230738,
           "title": "AH Koffiebroodje",
           "brand": "AH",
@@ -1433,6 +1421,18 @@
           "stock": 2,
           "priceWas": "1.49",
           "priceNow": "1.12",
+          "markdownExpirationDate": "2026-09-25"
+        },
+        {
+          "productId": 230726,
+          "title": "AH Maple pecan vlechtbrood",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.59",
+          "priceNow": "0.44",
           "markdownExpirationDate": "2026-09-25"
         },
         {
@@ -1553,18 +1553,6 @@
           "stock": 1,
           "priceWas": "0.99",
           "priceNow": "0.74",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
-          "productId": 231537,
-          "title": "AH Les pains bastille half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.29",
-          "priceNow": "0.97",
           "markdownExpirationDate": "2026-09-25"
         },
         {
