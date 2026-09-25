@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-25",
   "weekday": "Friday",
-  "scheduledSlot": "19:50",
-  "scheduledAt": "2026-09-25T19:50:00+02:00",
-  "rawScheduledSlot": "19:50",
-  "rawScheduledAt": "2026-09-25T19:50:00+02:00",
-  "startedAt": "2026-09-25T19:50:00.425811+02:00",
-  "completedAt": "2026-09-25T19:50:05.617387+02:00",
-  "checkedAt": "2026-09-25T19:50:05.617387+02:00",
+  "scheduledSlot": "19:51",
+  "scheduledAt": "2026-09-25T19:51:00+02:00",
+  "rawScheduledSlot": "19:51",
+  "rawScheduledAt": "2026-09-25T19:51:00+02:00",
+  "startedAt": "2026-09-25T19:51:00.397568+02:00",
+  "completedAt": "2026-09-25T19:51:05.098292+02:00",
+  "checkedAt": "2026-09-25T19:51:05.098292+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 176,
+      "totalBargainItems": 178,
       "meatItems": 0,
       "meat70Items": 0,
       "meat70Stock": 0,
@@ -508,11 +508,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 213,
+      "totalBargainItems": 193,
       "meatItems": 5,
       "meat70Items": 3,
       "meat70Stock": 4.0,
-      "bakeryItems": 47,
+      "bakeryItems": 42,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "items": [
@@ -603,18 +603,6 @@
           "markdownExpirationDate": "2026-09-25"
         },
         {
-          "productId": 578301,
-          "title": "AH Liefde & Passie OerDesem zonne rogge",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
           "productId": 487304,
           "title": "AH Liefde & Passie OerDesem pompoen",
           "brand": "AH Liefde & Passie",
@@ -624,18 +612,6 @@
           "stock": 3,
           "priceWas": "3.19",
           "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
-          "productId": 571174,
-          "title": "AH Jalapeño kaasstengel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
           "markdownExpirationDate": "2026-09-25"
         },
         {
@@ -795,18 +771,6 @@
           "markdownExpirationDate": "2026-09-25"
         },
         {
-          "productId": 577447,
-          "title": "AH Everything bol",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.79",
-          "priceNow": "0.67",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
           "productId": 590397,
           "title": "AH Kipnuggetbroodje",
           "brand": "AH",
@@ -876,18 +840,6 @@
           "stock": 2,
           "priceWas": "1.49",
           "priceNow": "1.27",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
-          "productId": 577444,
-          "title": "AH Worstenbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.29",
-          "priceNow": "1.10",
           "markdownExpirationDate": "2026-09-25"
         },
         {
@@ -1104,18 +1056,6 @@
           "stock": 6,
           "priceWas": "4.19",
           "priceNow": "2.51",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 580174,
-          "title": "Koopmans Brood uit de pan Italiaans",
-          "brand": "Koopmans",
-          "size": "400 g",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "2.69",
-          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -2428,11 +2368,11 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 169,
+      "totalBargainItems": 168,
       "meatItems": 8,
       "meat70Items": 1,
       "meat70Stock": 1.0,
-      "bakeryItems": 24,
+      "bakeryItems": 23,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -2455,7 +2395,7 @@
           "size": "500 g",
           "category": "Vlees",
           "discountPct": 40,
-          "stock": 8,
+          "stock": 6,
           "priceWas": "4.95",
           "priceNow": "2.53",
           "markdownExpirationDate": "2026-09-26"
@@ -2748,18 +2688,6 @@
           "stock": 1,
           "priceWas": "1.19",
           "priceNow": "1.01",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
-          "productId": 182711,
-          "title": "AH Les pains bastille heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "2.39",
-          "priceNow": "2.03",
           "markdownExpirationDate": "2026-09-25"
         },
         {
