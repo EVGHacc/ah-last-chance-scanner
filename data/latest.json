@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-25",
   "weekday": "Friday",
-  "scheduledSlot": "21:10",
-  "scheduledAt": "2026-09-25T21:10:00+02:00",
-  "rawScheduledSlot": "21:10",
-  "rawScheduledAt": "2026-09-25T21:10:00+02:00",
-  "startedAt": "2026-09-25T21:10:00.427695+02:00",
-  "completedAt": "2026-09-25T21:10:05.410193+02:00",
-  "checkedAt": "2026-09-25T21:10:05.410193+02:00",
+  "scheduledSlot": "21:12",
+  "scheduledAt": "2026-09-25T21:12:00+02:00",
+  "rawScheduledSlot": "21:12",
+  "rawScheduledAt": "2026-09-25T21:12:00+02:00",
+  "startedAt": "2026-09-25T21:12:00.423431+02:00",
+  "completedAt": "2026-09-25T21:12:05.819451+02:00",
+  "checkedAt": "2026-09-25T21:12:05.819451+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2160,18 +2160,6 @@
           "markdownExpirationDate": "2026-09-25"
         },
         {
-          "productId": 230725,
-          "title": "AH Roomboter appelflap",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "0.89",
-          "priceNow": "0.76",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
           "productId": 230726,
           "title": "AH Maple pecan vlechtbrood",
           "brand": "AH",
@@ -2229,6 +2217,18 @@
           "stock": 2,
           "priceWas": "1.39",
           "priceNow": "1.18",
+          "markdownExpirationDate": "2026-09-25"
+        },
+        {
+          "productId": 230725,
+          "title": "AH Roomboter appelflap",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "0.89",
+          "priceNow": "0.76",
           "markdownExpirationDate": "2026-09-25"
         },
         {
@@ -2393,8 +2393,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 161,
-      "meatItems": 8,
+      "totalBargainItems": 160,
+      "meatItems": 7,
       "meat70Items": 1,
       "meat70Stock": 1.0,
       "bakeryItems": 22,
@@ -2435,18 +2435,6 @@
           "stock": 3,
           "priceWas": "3.49",
           "priceNow": "2.62",
-          "markdownExpirationDate": "2026-09-26"
-        },
-        {
-          "productId": 561190,
-          "title": "AH Greenfields Beefburger truffelsmaak 2 stuks",
-          "brand": "AH Greenfields",
-          "size": "250 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "4.99",
-          "priceNow": "1.87",
           "markdownExpirationDate": "2026-09-26"
         },
         {
