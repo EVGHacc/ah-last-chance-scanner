@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-25",
   "weekday": "Friday",
-  "scheduledSlot": "21:18",
-  "scheduledAt": "2026-09-25T21:18:00+02:00",
-  "rawScheduledSlot": "21:18",
-  "rawScheduledAt": "2026-09-25T21:18:00+02:00",
-  "startedAt": "2026-09-25T21:18:00.413542+02:00",
-  "completedAt": "2026-09-25T21:18:05.181957+02:00",
-  "checkedAt": "2026-09-25T21:18:05.181957+02:00",
+  "scheduledSlot": "21:20",
+  "scheduledAt": "2026-09-25T21:20:00+02:00",
+  "rawScheduledSlot": "21:20",
+  "rawScheduledAt": "2026-09-25T21:20:00+02:00",
+  "startedAt": "2026-09-25T21:20:00.446286+02:00",
+  "completedAt": "2026-09-25T21:20:05.630340+02:00",
+  "checkedAt": "2026-09-25T21:20:05.630340+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2493,10 +2493,10 @@
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
-          "discountPct": 25,
+          "discountPct": 40,
           "stock": 5,
           "priceWas": "1.29",
-          "priceNow": "0.97",
+          "priceNow": "0.77",
           "markdownExpirationDate": "2026-09-25"
         },
         {
@@ -2505,10 +2505,10 @@
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
-          "discountPct": 25,
+          "discountPct": 40,
           "stock": 4,
           "priceWas": "1.49",
-          "priceNow": "1.12",
+          "priceNow": "0.89",
           "markdownExpirationDate": "2026-09-25"
         },
         {
@@ -2557,6 +2557,18 @@
           "stock": 3,
           "priceWas": "1.45",
           "priceNow": "1.09",
+          "markdownExpirationDate": "2026-09-25"
+        },
+        {
+          "productId": 523679,
+          "title": "AH Pastel de nata",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "0.59",
+          "priceNow": "0.44",
           "markdownExpirationDate": "2026-09-25"
         },
         {
@@ -2629,18 +2641,6 @@
           "stock": 3,
           "priceWas": "0.29",
           "priceNow": "0.25",
-          "markdownExpirationDate": "2026-09-25"
-        },
-        {
-          "productId": 523679,
-          "title": "AH Pastel de nata",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "0.59",
-          "priceNow": "0.50",
           "markdownExpirationDate": "2026-09-25"
         },
         {
