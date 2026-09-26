@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-26",
   "weekday": "Saturday",
-  "scheduledSlot": "19:51",
-  "scheduledAt": "2026-09-26T19:51:00+02:00",
-  "rawScheduledSlot": "19:51",
-  "rawScheduledAt": "2026-09-26T19:51:00+02:00",
-  "startedAt": "2026-09-26T19:51:00.376456+02:00",
-  "completedAt": "2026-09-26T19:51:04.865564+02:00",
-  "checkedAt": "2026-09-26T19:51:04.865564+02:00",
+  "scheduledSlot": "19:54",
+  "scheduledAt": "2026-09-26T19:54:00+02:00",
+  "rawScheduledSlot": "19:54",
+  "rawScheduledAt": "2026-09-26T19:54:00+02:00",
+  "startedAt": "2026-09-26T19:54:00.323015+02:00",
+  "completedAt": "2026-09-26T19:54:04.733222+02:00",
+  "checkedAt": "2026-09-26T19:54:04.733222+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 182,
+      "totalBargainItems": 183,
       "meatItems": 6,
       "meat70Items": 4,
       "meat70Stock": 5.0,
@@ -545,11 +545,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 194,
+      "totalBargainItems": 193,
       "meatItems": 5,
       "meat70Items": 3,
       "meat70Stock": 8.0,
-      "bakeryItems": 46,
+      "bakeryItems": 45,
       "bakery70Items": 1,
       "bakery70Stock": 3.0,
       "items": [
@@ -786,18 +786,6 @@
         {
           "productId": 230720,
           "title": "AH Frikandelbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-09-26"
-        },
-        {
-          "productId": 487298,
-          "title": "AH Rond volkoren half",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
@@ -1388,18 +1376,6 @@
           "markdownExpirationDate": "2026-09-26"
         },
         {
-          "productId": 182711,
-          "title": "AH Les pains bastille heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "2.39",
-          "priceNow": "1.79",
-          "markdownExpirationDate": "2026-09-26"
-        },
-        {
           "productId": 606049,
           "title": "AH Liefde & Passie Desem pistolet volkoren",
           "brand": "AH Liefde & Passie",
@@ -1409,6 +1385,18 @@
           "stock": 3,
           "priceWas": "0.99",
           "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-26"
+        },
+        {
+          "productId": 182711,
+          "title": "AH Les pains bastille heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "2.39",
+          "priceNow": "1.79",
           "markdownExpirationDate": "2026-09-26"
         },
         {
@@ -2453,7 +2441,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 164,
+      "totalBargainItems": 166,
       "meatItems": 17,
       "meat70Items": 1,
       "meat70Stock": 1.0,
@@ -2740,18 +2728,6 @@
           "markdownExpirationDate": "2026-09-26"
         },
         {
-          "productId": 487301,
-          "title": "AH Rond volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "1.89",
-          "priceNow": "1.42",
-          "markdownExpirationDate": "2026-09-26"
-        },
-        {
           "productId": 606074,
           "title": "AH Pistache croissant",
           "brand": "AH",
@@ -2761,6 +2737,18 @@
           "stock": 4,
           "priceWas": "1.29",
           "priceNow": "0.97",
+          "markdownExpirationDate": "2026-09-26"
+        },
+        {
+          "productId": 487301,
+          "title": "AH Rond volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "1.89",
+          "priceNow": "1.42",
           "markdownExpirationDate": "2026-09-26"
         },
         {
