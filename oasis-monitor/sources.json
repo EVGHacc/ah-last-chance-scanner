@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "date": "2027-07-16",
+      "venue": "Johan Cruijff ArenA Amsterdam"
+    },
+    {
+      "date": "2027-07-17",
+      "venue": "Johan Cruijff ArenA Amsterdam",
+      "primary": true,
+      "seedUrl": "https://www.stubhub.nl/oasis-tickets-amsterdam-johan-cruijff-arena-17-7-2027/event/107667902/?sid=3557538%2C3557539"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ticketmaster",
+      "type": "official",
+      "url": "https://www.ticketmaster.nl/artist/oasis-tickets/3668"
+    },
+    {
+      "id": "stubhub-nl",
+      "type": "marketplace",
+      "url": "https://www.stubhub.nl/"
+    },
+    {
+      "id": "stubhub-international",
+      "type": "marketplace",
+      "url": "https://www.stubhub.com/"
+    },
+    {
+      "id": "viagogo",
+      "type": "marketplace",
+      "url": "https://www.viagogo.nl/"
+    },
+    {
+      "id": "ticketswap",
+      "type": "marketplace",
+      "url": "https://www.ticketswap.nl/"
+    },
+    {
+      "id": "ticombo",
+      "type": "marketplace",
+      "url": "https://www.ticombo.com/"
+    },
+    {
+      "id": "gigsberg",
+      "type": "marketplace",
+      "url": "https://www.gigsberg.com/"
+    },
+    {
+      "id": "tixel",
+      "type": "marketplace",
+      "url": "https://tixel.com/"
+    },
+    {
+      "id": "seatpick",
+      "type": "aggregator",
+      "url": "https://seatpick.com/"
+    },
+    {
+      "id": "eventworld",
+      "type": "aggregator",
+      "url": "https://www.eventworld.com/oasis-amsterdam-tickets-17-07-2027/event/562153"
+    }
+  ],
+  "forums": [
+    {
+      "id": "reddit-oasis",
+      "url": "https://www.reddit.com/r/oasis/"
+    },
+    {
+      "id": "reddit-tickets",
+      "url": "https://www.reddit.com/r/Tickets/"
+    },
+    {
+      "id": "reddit-concerts",
+      "url": "https://www.reddit.com/r/concerts/"
+    },
+    {
+      "id": "festivalsunited",
+      "url": "https://www.festivalsunited.com/forum/topic/35767"
+    },
+    {
+      "id": "viva",
+      "url": "https://forum.viva.nl/entertainment/oasis-tour-2027/list_messages/516143"
+    },
+    {
+      "id": "live4ever",
+      "url": null
+    }
+  ]
+}
