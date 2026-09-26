@@ -1,0 +1,106 @@
+name: Oasis Amsterdam resale monitor
+
+on:
+  schedule:
+    # 19:15 Europe/Amsterdam in both summer and winter (gate below).
+    - cron: '15 17,18 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'oasis-monitor/bootstrap.py'
+      - 'oasis-monitor/scanner.py'
+      - 'oasis-monitor/scanner.py.gz.b64'
+      - 'oasis-monitor/test_scanner.py'
+      - 'oasis-monitor/test_scanner.py.gz.b64'
+      - 'oasis-monitor/sources.json'
+      - 'oasis-monitor/requirements.txt'
+      - '.github/workflows/oasis-monitor.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: oasis-amsterdam-resale
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Summer/winter clock gate
+        id: clock
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          hour=$(TZ=Europe/Amsterdam date +%H)
+          if [[ "$EVENT_NAME" != "schedule" || "$hour" == "19" ]]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Skip duplicate summer/winter UTC occurrence (Amsterdam hour $hour)."
+          fi
+      - name: Bootstrap checked, readable source
+        if: steps.clock.outputs.run == 'true'
+        run: python oasis-monitor/bootstrap.py
+      - name: Install dependencies
+        if: steps.clock.outputs.run == 'true'
+        run: |
+          python -m pip install --disable-pip-version-check -r oasis-monitor/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Unit tests
+        if: steps.clock.outputs.run == 'true'
+        run: |
+          python -m py_compile oasis-monitor/scanner.py oasis-monitor/test_scanner.py
+          python -m unittest discover -s oasis-monitor -p 'test_*.py' -v
+      - name: Browser scan of all source/date combinations
+        if: steps.clock.outputs.run == 'true'
+        run: python oasis-monitor/scanner.py --timeout 18 --workers 3
+      - name: Validate snapshot and readback
+        if: steps.clock.outputs.run == 'true'
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          from datetime import datetime
+          import sys
+          sys.path.insert(0, 'oasis-monitor')
+          import scanner
+          root=Path('oasis-monitor/data')
+          today=datetime.now(ZoneInfo('Europe/Amsterdam')).date().isoformat()
+          day=root/(today+'.json')
+          assert day.exists(), 'Today snapshot missing'
+          assert day.read_bytes()==(root/'latest.json').read_bytes(), 'Latest/day mismatch'
+          snapshot=json.loads(day.read_text())
+          registry=json.loads(Path('oasis-monitor/sources.json').read_text())
+          assert snapshot['date']==today, 'Stale snapshot'
+          scanner.validate_snapshot(snapshot,registry)
+          assert len(snapshot['checks'])==20
+          print('LIVE_SCAN_QA_PASS',today,snapshot['sourceCoverage'], 'forum signals',len(snapshot['forumSignals']))
+          PY
+      - name: Commit tested scanner and source-backed history
+        if: steps.clock.outputs.run == 'true'
+        run: |
+          git config user.name "oasis-monitor-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add oasis-monitor/scanner.py oasis-monitor/test_scanner.py oasis-monitor/data
+          if git diff --cached --quiet; then
+            echo "No changes to persist"
+          else
+            git commit -m "Oasis monitor verified snapshot $(TZ=Europe/Amsterdam date +%F)"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Confirm published GitHub snapshot
+        if: steps.clock.outputs.run == 'true'
+        run: |
+          git fetch origin main
+          cmp oasis-monitor/data/latest.json <(git show origin/main:oasis-monitor/data/latest.json)
+          echo 'PUBLISHED_READBACK_PASS'
