@@ -1,21 +1,17 @@
-# Oasis Live '27 Amsterdam — dagelijkse marktscan
+# Oasis Amsterdam resale scanner
 
-Deze map bewaart de controleerbare historie van de ChatGPT-taak **Oasis doorverkoopmonitor Amsterdam** (dagelijks 21:00 Europe/Amsterdam). De taak doet live broncontroles. Dit is geen afzonderlijke GitHub Actions-runner; overige scanners en workflows worden niet gewijzigd.
+Live browser scanner in this public repository, separate from all AH/vacancy/Oro workflows.
 
-## Scope
-Evenementen: Johan Cruijff ArenA, 2027-07-16 en 2027-07-17, afzonderlijk. Primair 17 juli.
-Vaste bronregister in `sources.json`; dynamische aanbieders mogen uitsluitend worden toegevoegd, niet als vervanging van vaste bronnen. Fanforums: r/oasis, relevante r/Tickets/r/concerts threads, Live4ever, Festivals United en relevante Nederlandse Oasis-discussies.
+**Run order:** GitHub Action `.github/workflows/oasis-monitor.yml` runs around 19:15 Europe/Amsterdam (two UTC cron entries, local-time gate); the existing ChatGPT report runs at 21:00. A manual `workflow_dispatch` is also available. The workflow uses GitHub's standard public-repository Ubuntu runner, no paid runner or third-party scraping service.
 
-## Verplichte data
-- `data/latest.json`: laatste *daadwerkelijk uitgevoerde* run, inclusief volledige bronstatus.
-- `data/YYYY-MM-DD.json`: onveranderde dag-snapshot na succesvolle write/readback. Is er geen scan, dan **geen dag-snapshot verzinnen**.
-- Elke bron per datum heeft een `status`: `verified_prices`, `verified_no_listings`, `blocked_or_login`, `technical_failure`, `not_listed`, `unverified`, met individuele `checkedAt`, `evidenceUrl`, `note`.
-- Elke `listing`: `date`, `source`, `category`, `section` (optioneel), `askingPriceEur` per ticket of null, `allIn` true/false/null, `feeKnown` true/false, `listingCount` en `ticketCount` elk getal of null, `evidenceUrl`, `checkedAt`.
-- `forumSignals`: bron, datum van bericht, URL, samenvatting, `type` ('firsthand', 'rumour', 'official_relay').
-- `sourceCoverage`: geverifieerde bronnen en totale vaste bronnen per datum (tel een nul-aanbodpagina alleen als pagina live en nul expliciet bevestigd).
-- Schrijf bedragen in euro's, geen gecachte prijzen als live of vraagprijzen als gerealiseerde verkopen. Aggregator-aanbiedingen niet dubbel bij voorraad optellen; nooit ontbrekende data met nul vullen.
-- Na opslag bestand teruglezen en datum, 20 vaste bron/datum-combinaties, unieke source/date-paren, schema en individuele bewijslinks controleren. Rapporteer apart wanneer opslag faalt.
+**Events:** separately 2027-07-16 and 2027-07-17, Johan Cruijff ArenA. **Registry:** `sources.json`, exactly ten fixed platforms per date. `scanner.py` uses regular public Playwright Chromium browsing, a small concurrency cap and event-specific page validation. `bootstrap.py` verifies SHA-256 checksums of initial compressed sources, then creates readable `scanner.py` and `test_scanner.py` on the initial run; readable sources are committed alongside the first successfully validated snapshot. Existing readable files are never replaced by bootstrap.
 
-## Referentie
-Officiële regels: https://help.ticketmaster.nl/hc/nl/articles/50379069472529-Oasis-Live-27
-Ticketprijzen: Front Standing €252,45; Rear Standing €201,96 (beide incl. servicekosten; verifieer categorie in actuele FAQ).
+**Coverage is not one number:** for each concert, record (A) dated event page validated, (B) actual categorized listing(s) or explicitly verified zero, (C) verified all-in price. Report all as X/10 separately. "All 20 source/date checks classified" is not the same as verified listing coverage. Blocked/empty/unlisted pages are never treated as zero stock. Aggregator partner quotes remain separate and do not count as actual reseller listing inventory. Prices are asking prices only; no guessed fees, sales or realized profit.
+
+**Persistence:** `data/YYYY-MM-DD.json` and `data/latest.json`, with per-source timestamp/status/link/reason, listings and forum checks/signals. Both are written only after schema/coverage QA, read back locally, committed and checked against the published GitHub file. Only verified comparable category/fee-basis series appear in trends. `status=classified_with_gaps` means complete source classification, *not* 100% listing verification. If the scan fails before publication, `latest.json` remains stale and the reporter must flag that.
+
+**Quality controls:** `python -m unittest discover -s oasis-monitor -p 'test_*.py' -v`; then live browser scan; then 20 unique source/date checks, coverage consistency and byte-for-byte day/latest readback. Logs appear under GitHub Actions. The scanner respects access restrictions, does not bypass CAPTCHAs, use private APIs or place transactions. Client-side listings may be blocked or require login; this is an honestly reported limitation, not a 90% coverage guarantee.
+
+**Forums:** public Reddit feeds and the listed public forum URLs. Individual links and original publication times are required for Reddit signals; thread index/undated page text is not an evidence-backed new signal. Fan reports are not official ticket policy.
+
+**Official rules:** https://help.ticketmaster.nl/hc/nl/articles/50379069472529-Oasis-Live-27 ; check transfer/Face Value Exchange every day. Do not treat external asking prices as guaranteed or authorized resale.
