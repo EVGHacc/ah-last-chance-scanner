@@ -9,6 +9,7 @@ on:
     branches: [main]
     paths:
       - 'oasis-monitor/bootstrap.py'
+      - 'oasis-monitor/harden.py'
       - 'oasis-monitor/scanner.py'
       - 'oasis-monitor/scanner.py.gz.b64'
       - 'oasis-monitor/test_scanner.py'
@@ -22,7 +23,7 @@ permissions:
 
 concurrency:
   group: oasis-amsterdam-resale
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   scan:
@@ -49,6 +50,9 @@ jobs:
       - name: Bootstrap checked, readable source
         if: steps.clock.outputs.run == 'true'
         run: python oasis-monitor/bootstrap.py
+      - name: Harden browser timeouts
+        if: steps.clock.outputs.run == 'true'
+        run: python oasis-monitor/harden.py
       - name: Install dependencies
         if: steps.clock.outputs.run == 'true'
         run: |
