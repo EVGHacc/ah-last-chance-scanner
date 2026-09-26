@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-26",
   "weekday": "Saturday",
-  "scheduledSlot": "18:40",
-  "scheduledAt": "2026-09-26T18:40:00+02:00",
-  "rawScheduledSlot": "18:40",
-  "rawScheduledAt": "2026-09-26T18:40:00+02:00",
-  "startedAt": "2026-09-26T18:40:00.331850+02:00",
-  "completedAt": "2026-09-26T18:40:04.942986+02:00",
-  "checkedAt": "2026-09-26T18:40:04.942986+02:00",
+  "scheduledSlot": "18:42",
+  "scheduledAt": "2026-09-26T18:42:00+02:00",
+  "rawScheduledSlot": "18:42",
+  "rawScheduledAt": "2026-09-26T18:42:00+02:00",
+  "startedAt": "2026-09-26T18:42:00.346471+02:00",
+  "completedAt": "2026-09-26T18:42:04.331526+02:00",
+  "checkedAt": "2026-09-26T18:42:04.331526+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -441,11 +441,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 101,
-      "meatItems": 6,
-      "meat70Items": 4,
-      "meat70Stock": 21.0,
-      "bakeryItems": 4,
+      "totalBargainItems": 187,
+      "meatItems": 12,
+      "meat70Items": 5,
+      "meat70Stock": 28.0,
+      "bakeryItems": 10,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "items": [
@@ -498,6 +498,42 @@
           "markdownExpirationDate": "2026-09-26"
         },
         {
+          "productId": 597949,
+          "title": "AH Speklapjes a la minute",
+          "brand": "AH",
+          "size": "ca. 350 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "5.08",
+          "priceNow": "2.28",
+          "markdownExpirationDate": "2026-09-26"
+        },
+        {
+          "productId": 166839,
+          "title": "AH Mergpijp",
+          "brand": "AH",
+          "size": "ca. 300 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "1.79",
+          "markdownExpirationDate": "2026-09-26"
+        },
+        {
+          "productId": 436756,
+          "title": "AH Biologisch Hamburger 2 stuks",
+          "brand": "AH Biologisch",
+          "size": "200 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "4.39",
+          "priceNow": "2.63",
+          "markdownExpirationDate": "2026-09-26"
+        },
+        {
           "productId": 551140,
           "title": "AH Excellent Ultimate wagyu beefburger",
           "brand": "AH Excellent",
@@ -520,6 +556,42 @@
           "priceWas": "3.79",
           "priceNow": "2.84",
           "markdownExpirationDate": "2026-09-29"
+        },
+        {
+          "productId": 580667,
+          "title": "AH Magere slagersrookworst",
+          "brand": "AH",
+          "size": "250 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 7,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 580668,
+          "title": "AH Gelderse slagersrookworst XXL",
+          "brand": "AH",
+          "size": "375 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 7,
+          "priceWas": "3.95",
+          "priceNow": "2.37",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 580666,
+          "title": "AH Gelderse slagersrookworst",
+          "brand": "AH",
+          "size": "250 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 6,
+          "priceWas": "2.99",
+          "priceNow": "1.79",
+          "markdownExpirationDate": "2026-10-03"
         }
       ],
       "bakery": [
@@ -534,6 +606,30 @@
           "priceWas": "1.89",
           "priceNow": "0.57",
           "markdownExpirationDate": "2026-09-26"
+        },
+        {
+          "productId": 578706,
+          "title": "AH Eierkoeken volkoren",
+          "brand": "AH",
+          "size": "360 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
+          "productId": 578973,
+          "title": "AH Gevouwen flatbread naturel",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
+          "markdownExpirationDate": "2026-09-28"
         },
         {
           "productId": 517804,
@@ -560,6 +656,18 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
+          "productId": 606746,
+          "title": "Dr. Oetker Deco drip pistache smaak",
+          "brand": "Dr. Oetker",
+          "size": "80 g",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 4,
+          "priceWas": "4.19",
+          "priceNow": "2.51",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 370644,
           "title": "Dr. Oetker Mug cake stracciatella",
           "brand": "Dr. Oetker",
@@ -569,6 +677,42 @@
           "stock": 4,
           "priceWas": "1.59",
           "priceNow": "1.19",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 589024,
+          "title": "Dr. Oetker Kwarktaart eigen fruit bakmix",
+          "brand": "Dr. Oetker",
+          "size": "210 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "3.29",
+          "priceNow": "2.47",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 580174,
+          "title": "Koopmans Brood uit de pan Italiaans",
+          "brand": "Koopmans",
+          "size": "400 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 606747,
+          "title": "Dr. Oetker Deco drip choco smaak",
+          "brand": "Dr. Oetker",
+          "size": "80 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "4.19",
+          "priceNow": "3.14",
           "markdownExpirationDate": "2026-10-11"
         }
       ]
