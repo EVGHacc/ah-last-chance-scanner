@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-26",
   "weekday": "Saturday",
-  "scheduledSlot": "20:42",
-  "scheduledAt": "2026-09-26T20:42:00+02:00",
-  "rawScheduledSlot": "20:42",
-  "rawScheduledAt": "2026-09-26T20:42:00+02:00",
-  "startedAt": "2026-09-26T20:42:00.366400+02:00",
-  "completedAt": "2026-09-26T20:42:05.004270+02:00",
-  "checkedAt": "2026-09-26T20:42:05.004270+02:00",
+  "scheduledSlot": "20:45",
+  "scheduledAt": "2026-09-26T20:45:00+02:00",
+  "rawScheduledSlot": "20:45",
+  "rawScheduledAt": "2026-09-26T20:45:00+02:00",
+  "startedAt": "2026-09-26T20:45:00.362916+02:00",
+  "completedAt": "2026-09-26T20:45:05.699570+02:00",
+  "checkedAt": "2026-09-26T20:45:05.699570+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -26,25 +26,13 @@
       "store": "AH Blekersvaartweg",
       "fetched": true,
       "totalBargainItems": 211,
-      "meatItems": 6,
-      "meat70Items": 5,
-      "meat70Stock": 7.0,
+      "meatItems": 7,
+      "meat70Items": 4,
+      "meat70Stock": 5.0,
       "bakeryItems": 37,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
-        {
-          "productId": 441916,
-          "title": "AH Excellent Ultimate beefburger",
-          "brand": "AH Excellent",
-          "size": "150 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.49",
-          "priceNow": "1.05",
-          "markdownExpirationDate": "2026-09-26"
-        },
         {
           "productId": 238946,
           "title": "AH Rundersoepballetjes",
@@ -92,6 +80,30 @@
           "priceWas": "5.45",
           "priceNow": "1.64",
           "markdownExpirationDate": "2026-09-26"
+        },
+        {
+          "productId": 619347,
+          "title": "AH Scharrel kipbraadworsten 2 stuks",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 6,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
+          "markdownExpirationDate": "2026-09-27"
+        },
+        {
+          "productId": 533084,
+          "title": "AH Scharrel kip shoarma",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "5.79",
+          "priceNow": "4.34",
+          "markdownExpirationDate": "2026-09-27"
         },
         {
           "productId": 454769,
@@ -1322,7 +1334,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 35,
-          "stock": 7,
+          "stock": 2,
           "priceWas": "0.29",
           "priceNow": "0.19",
           "markdownExpirationDate": "2026-09-26"
@@ -1628,18 +1640,6 @@
           "markdownExpirationDate": "2026-09-26"
         },
         {
-          "productId": 606047,
-          "title": "AH Pistolet volkoren",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "0.29",
-          "priceNow": "0.25",
-          "markdownExpirationDate": "2026-09-26"
-        },
-        {
           "productId": 230718,
           "title": "AH Pistolet wit",
           "brand": "AH",
@@ -1709,6 +1709,18 @@
           "stock": 1,
           "priceWas": "0.99",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-09-26"
+        },
+        {
+          "productId": 606047,
+          "title": "AH Pistolet volkoren",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.29",
+          "priceNow": "0.25",
           "markdownExpirationDate": "2026-09-26"
         },
         {
