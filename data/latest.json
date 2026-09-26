@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-26",
   "weekday": "Saturday",
-  "scheduledSlot": "21:21",
-  "scheduledAt": "2026-09-26T21:21:00+02:00",
-  "rawScheduledSlot": "21:21",
-  "rawScheduledAt": "2026-09-26T21:21:00+02:00",
-  "startedAt": "2026-09-26T21:21:00.342412+02:00",
-  "completedAt": "2026-09-26T21:21:04.975029+02:00",
-  "checkedAt": "2026-09-26T21:21:04.975029+02:00",
+  "scheduledSlot": "21:24",
+  "scheduledAt": "2026-09-26T21:24:00+02:00",
+  "rawScheduledSlot": "21:24",
+  "rawScheduledAt": "2026-09-26T21:24:00+02:00",
+  "startedAt": "2026-09-26T21:24:00.366502+02:00",
+  "completedAt": "2026-09-26T21:24:04.928885+02:00",
+  "checkedAt": "2026-09-26T21:24:04.928885+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1508,18 +1508,6 @@
           "markdownExpirationDate": "2026-09-26"
         },
         {
-          "productId": 606049,
-          "title": "AH Liefde & Passie Desem pistolet volkoren",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-09-26"
-        },
-        {
           "productId": 231537,
           "title": "AH Les pains bastille half",
           "brand": "AH",
@@ -1733,6 +1721,18 @@
           "stock": 1,
           "priceWas": "1.29",
           "priceNow": "0.97",
+          "markdownExpirationDate": "2026-09-26"
+        },
+        {
+          "productId": 606049,
+          "title": "AH Liefde & Passie Desem pistolet volkoren",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-09-26"
         },
         {
@@ -2537,7 +2537,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 161,
+      "totalBargainItems": 158,
       "meatItems": 17,
       "meat70Items": 1,
       "meat70Stock": 1.0,
@@ -2776,18 +2776,6 @@
           "markdownExpirationDate": "2026-09-26"
         },
         {
-          "productId": 440472,
-          "title": "AH Kaas ruitbroodje wit",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 10,
-          "priceWas": "0.49",
-          "priceNow": "0.37",
-          "markdownExpirationDate": "2026-09-26"
-        },
-        {
           "productId": 125035,
           "title": "AH Les pains boulogne heel",
           "brand": "AH",
@@ -2806,9 +2794,21 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 8,
+          "stock": 7,
           "priceWas": "1.29",
           "priceNow": "0.97",
+          "markdownExpirationDate": "2026-09-26"
+        },
+        {
+          "productId": 440472,
+          "title": "AH Kaas ruitbroodje wit",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 6,
+          "priceWas": "0.49",
+          "priceNow": "0.37",
           "markdownExpirationDate": "2026-09-26"
         },
         {
