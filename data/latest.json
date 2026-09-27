@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-27",
   "weekday": "Sunday",
-  "scheduledSlot": "22:06",
-  "scheduledAt": "2026-09-27T22:06:00+02:00",
-  "rawScheduledSlot": "22:06",
-  "rawScheduledAt": "2026-09-27T22:06:00+02:00",
-  "startedAt": "2026-09-27T22:06:00.340015+02:00",
-  "completedAt": "2026-09-27T22:06:05.151634+02:00",
-  "checkedAt": "2026-09-27T22:06:05.151634+02:00",
+  "scheduledSlot": "22:09",
+  "scheduledAt": "2026-09-27T22:09:00+02:00",
+  "rawScheduledSlot": "22:09",
+  "rawScheduledAt": "2026-09-27T22:09:00+02:00",
+  "startedAt": "2026-09-27T22:09:00.364153+02:00",
+  "completedAt": "2026-09-27T22:09:06.184997+02:00",
+  "checkedAt": "2026-09-27T22:09:06.184997+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1209,11 +1209,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 225,
-      "meatItems": 11,
-      "meat70Items": 5,
-      "meat70Stock": 17.0,
-      "bakeryItems": 41,
+      "totalBargainItems": 114,
+      "meatItems": 7,
+      "meat70Items": 3,
+      "meat70Stock": 11.0,
+      "bakeryItems": 25,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -1239,18 +1239,6 @@
           "stock": 4,
           "priceWas": "3.79",
           "priceNow": "1.14",
-          "markdownExpirationDate": "2026-09-27"
-        },
-        {
-          "productId": 581558,
-          "title": "Cucina Spicy chicken wings",
-          "brand": "Cucina",
-          "size": "ca. 400 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "12.48",
-          "priceNow": "3.74",
           "markdownExpirationDate": "2026-09-27"
         },
         {
@@ -1312,42 +1300,6 @@
           "priceWas": "5.49",
           "priceNow": "4.12",
           "markdownExpirationDate": "2026-09-30"
-        },
-        {
-          "productId": 580667,
-          "title": "AH Magere slagersrookworst",
-          "brand": "AH",
-          "size": "250 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 5,
-          "priceWas": "2.99",
-          "priceNow": "0.90",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
-          "productId": 580668,
-          "title": "AH Gelderse slagersrookworst XXL",
-          "brand": "AH",
-          "size": "375 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 7,
-          "priceWas": "3.95",
-          "priceNow": "2.37",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
-          "productId": 580666,
-          "title": "AH Gelderse slagersrookworst",
-          "brand": "AH",
-          "size": "250 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 5,
-          "priceWas": "2.99",
-          "priceNow": "1.79",
-          "markdownExpirationDate": "2026-10-03"
         }
       ],
       "bakery": [
@@ -1361,18 +1313,6 @@
           "stock": 2,
           "priceWas": "0.59",
           "priceNow": "0.35",
-          "markdownExpirationDate": "2026-09-27"
-        },
-        {
-          "productId": 584032,
-          "title": "AH Rond wit sesam heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "1.89",
-          "priceNow": "1.13",
           "markdownExpirationDate": "2026-09-27"
         },
         {
@@ -1421,42 +1361,6 @@
           "stock": 3,
           "priceWas": "0.59",
           "priceNow": "0.44",
-          "markdownExpirationDate": "2026-09-27"
-        },
-        {
-          "productId": 571174,
-          "title": "AH Jalapeño kaasstengel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-09-27"
-        },
-        {
-          "productId": 606050,
-          "title": "AH Liefde & Passie Desem pistolet mais pompoen",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-09-27"
-        },
-        {
-          "productId": 125035,
-          "title": "AH Les pains boulogne heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "2.39",
-          "priceNow": "1.79",
           "markdownExpirationDate": "2026-09-27"
         },
         {
@@ -1529,42 +1433,6 @@
           "stock": 2,
           "priceWas": "3.19",
           "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-27"
-        },
-        {
-          "productId": 578301,
-          "title": "AH Liefde & Passie OerDesem zonne rogge",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-09-27"
-        },
-        {
-          "productId": 561020,
-          "title": "AH Vloer waldkorn half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.45",
-          "priceNow": "1.09",
-          "markdownExpirationDate": "2026-09-27"
-        },
-        {
-          "productId": 125034,
-          "title": "AH Les pains Boulogne half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.29",
-          "priceNow": "0.97",
           "markdownExpirationDate": "2026-09-27"
         },
         {
@@ -1664,18 +1532,6 @@
           "markdownExpirationDate": "2026-09-27"
         },
         {
-          "productId": 230718,
-          "title": "AH Pistolet wit",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.29",
-          "priceNow": "0.25",
-          "markdownExpirationDate": "2026-09-27"
-        },
-        {
           "productId": 230726,
           "title": "AH Maple pecan vlechtbrood",
           "brand": "AH",
@@ -1698,18 +1554,6 @@
           "priceWas": "1.19",
           "priceNow": "1.01",
           "markdownExpirationDate": "2026-09-27"
-        },
-        {
-          "productId": 578706,
-          "title": "AH Eierkoeken volkoren",
-          "brand": "AH",
-          "size": "360 g",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.49",
-          "priceNow": "1.12",
-          "markdownExpirationDate": "2026-09-28"
         },
         {
           "productId": 553584,
@@ -1736,30 +1580,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 606746,
-          "title": "Dr. Oetker Deco drip pistache smaak",
-          "brand": "Dr. Oetker",
-          "size": "80 g",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 4,
-          "priceWas": "4.19",
-          "priceNow": "2.51",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 589024,
-          "title": "Dr. Oetker Kwarktaart eigen fruit bakmix",
-          "brand": "Dr. Oetker",
-          "size": "210 g",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "3.29",
-          "priceNow": "1.97",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 550411,
           "title": "AH Kokossnippers",
           "brand": "AH",
@@ -1782,66 +1602,6 @@
           "priceWas": "1.59",
           "priceNow": "1.19",
           "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 580174,
-          "title": "Koopmans Brood uit de pan Italiaans",
-          "brand": "Koopmans",
-          "size": "400 g",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 606747,
-          "title": "Dr. Oetker Deco drip choco smaak",
-          "brand": "Dr. Oetker",
-          "size": "80 g",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "4.19",
-          "priceNow": "3.14",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 587853,
-          "title": "AH Glutenvrij Desembrood maanzaad",
-          "brand": "AH Glutenvrij",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 9,
-          "priceWas": "4.99",
-          "priceNow": "2.99",
-          "markdownExpirationDate": "2026-10-18"
-        },
-        {
-          "productId": 587852,
-          "title": "AH Glutenvrij Desembrood pompoen- & zonnebloempitten",
-          "brand": "AH Glutenvrij",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 4,
-          "priceWas": "4.99",
-          "priceNow": "2.99",
-          "markdownExpirationDate": "2026-10-18"
-        },
-        {
-          "productId": 587856,
-          "title": "AH Glutenvrij Cacao hazelnoot taart",
-          "brand": "AH Glutenvrij",
-          "size": "6 stuks",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 16,
-          "priceWas": "8.99",
-          "priceNow": "6.74",
-          "markdownExpirationDate": "2026-10-18"
         }
       ]
     },
