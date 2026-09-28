@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-28",
   "weekday": "Monday",
-  "scheduledSlot": "22:00",
-  "scheduledAt": "2026-09-28T22:00:00+02:00",
-  "rawScheduledSlot": "22:00",
-  "rawScheduledAt": "2026-09-28T22:00:00+02:00",
-  "startedAt": "2026-09-28T22:00:00.344099+02:00",
-  "completedAt": "2026-09-28T22:00:05.078065+02:00",
-  "checkedAt": "2026-09-28T22:00:05.078065+02:00",
+  "scheduledSlot": "22:03",
+  "scheduledAt": "2026-09-28T22:03:00+02:00",
+  "rawScheduledSlot": "22:03",
+  "rawScheduledAt": "2026-09-28T22:03:00+02:00",
+  "startedAt": "2026-09-28T22:03:00.318052+02:00",
+  "completedAt": "2026-09-28T22:03:06.291589+02:00",
+  "checkedAt": "2026-09-28T22:03:06.291589+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1377,11 +1377,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 221,
+      "totalBargainItems": 220,
       "meatItems": 9,
       "meat70Items": 3,
       "meat70Stock": 8.0,
-      "bakeryItems": 45,
+      "bakeryItems": 44,
       "bakery70Items": 4,
       "bakery70Stock": 6.0,
       "items": [
@@ -1889,18 +1889,6 @@
           "stock": 7,
           "priceWas": "2.99",
           "priceNow": "1.79",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
-          "productId": 476158,
-          "title": "AH Appelkruimel koeken",
-          "brand": "AH",
-          "size": "4 stuks",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "3.29",
-          "priceNow": "2.47",
           "markdownExpirationDate": "2026-10-01"
         },
         {
@@ -2657,11 +2645,11 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 143,
+      "totalBargainItems": 141,
       "meatItems": 15,
       "meat70Items": 3,
       "meat70Stock": 3.0,
-      "bakeryItems": 13,
+      "bakeryItems": 12,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -2848,18 +2836,6 @@
       ],
       "bakery": [
         {
-          "productId": 590399,
-          "title": "AH Broodje burger augurk tomatensaus",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "1.59",
-          "priceNow": "0.95",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
           "productId": 584032,
           "title": "AH Rond wit sesam heel",
           "brand": "AH",
@@ -2968,18 +2944,6 @@
           "markdownExpirationDate": "2026-09-28"
         },
         {
-          "productId": 440472,
-          "title": "AH Kaas ruitbroodje wit",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "0.49",
-          "priceNow": "0.42",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
           "productId": 515766,
           "title": "AH Kaasstengel",
           "brand": "AH",
@@ -2989,6 +2953,18 @@
           "stock": 1,
           "priceWas": "0.99",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
+          "productId": 241458,
+          "title": "AH Vloerbrood wit half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "1.45",
+          "priceNow": "1.23",
           "markdownExpirationDate": "2026-09-28"
         },
         {
