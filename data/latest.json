@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-28",
   "weekday": "Monday",
-  "scheduledSlot": "21:21",
-  "scheduledAt": "2026-09-28T21:21:00+02:00",
-  "rawScheduledSlot": "21:21",
-  "rawScheduledAt": "2026-09-28T21:21:00+02:00",
-  "startedAt": "2026-09-28T21:21:00.387097+02:00",
-  "completedAt": "2026-09-28T21:21:04.849790+02:00",
-  "checkedAt": "2026-09-28T21:21:04.849790+02:00",
+  "scheduledSlot": "21:24",
+  "scheduledAt": "2026-09-28T21:24:00+02:00",
+  "rawScheduledSlot": "21:24",
+  "rawScheduledAt": "2026-09-28T21:24:00+02:00",
+  "startedAt": "2026-09-28T21:24:00.377313+02:00",
+  "completedAt": "2026-09-28T21:24:04.964288+02:00",
+  "checkedAt": "2026-09-28T21:24:04.964288+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1640,18 +1640,6 @@
           "markdownExpirationDate": "2026-09-28"
         },
         {
-          "productId": 241458,
-          "title": "AH Vloerbrood wit half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "1.45",
-          "priceNow": "0.87",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
           "productId": 590095,
           "title": "AH Liefde & Passie Rozijn pistache",
           "brand": "AH Liefde & Passie",
@@ -1661,6 +1649,18 @@
           "stock": 2,
           "priceWas": "3.19",
           "priceNow": "1.91",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
+          "productId": 241458,
+          "title": "AH Vloerbrood wit half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "1.45",
+          "priceNow": "0.87",
           "markdownExpirationDate": "2026-09-28"
         },
         {
@@ -2777,11 +2777,11 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 151,
+      "totalBargainItems": 149,
       "meatItems": 15,
       "meat70Items": 3,
       "meat70Stock": 3.0,
-      "bakeryItems": 15,
+      "bakeryItems": 14,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -3121,18 +3121,6 @@
           "stock": 1,
           "priceWas": "0.99",
           "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
-          "productId": 466494,
-          "title": "AH Meerzaden croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.79",
-          "priceNow": "0.67",
           "markdownExpirationDate": "2026-09-28"
         },
         {
