@@ -2,8 +2,8 @@ name: AH supervised evening session
 
 on:
   schedule:
-    - cron: '0 15 * * *'
-    - cron: '0 16 * * *'
+    - cron: '0,5,10,15,20 15 * * *'
+    - cron: '0,5,10,15,20 16 * * *'
   workflow_dispatch:
 
 permissions:
@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 350
     steps:
-      - name: Gate to 17:00 Amsterdam
+      - name: Gate to Amsterdam 17:00-17:20 startup window
         id: gate
         shell: bash
         env:
@@ -31,8 +31,13 @@ jobs:
           from datetime import datetime
           from zoneinfo import ZoneInfo
           now=datetime.now(ZoneInfo('Europe/Amsterdam'))
-          expected=f"0 {17-int(now.utcoffset().total_seconds()//3600)} * * *"
-          run=os.environ.get('EVENT_SCHEDULE','')==expected
+          # GitHub scheduled runs can be delayed or dropped. Multiple UTC triggers
+          # provide independent opportunities to start the same supervised session.
+          # The concurrency group serializes them; session.py skips completed points.
+          expected_hour=17-int(now.utcoffset().total_seconds()//3600)
+          schedule=os.environ.get('EVENT_SCHEDULE','')
+          run=(now.hour==17 and now.minute<=20 and
+               schedule==f'0,5,10,15,20 {expected_hour} * * *')
           with open(os.environ['GITHUB_OUTPUT'],'a') as f: f.write(f'run={str(run).lower()}\n')
           print('Amsterdam=',now.isoformat(),'expected=',expected,'run=',run)
           PY
