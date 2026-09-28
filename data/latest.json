@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-28",
   "weekday": "Monday",
-  "scheduledSlot": "21:18",
-  "scheduledAt": "2026-09-28T21:18:00+02:00",
-  "rawScheduledSlot": "21:18",
-  "rawScheduledAt": "2026-09-28T21:18:00+02:00",
-  "startedAt": "2026-09-28T21:18:00.336950+02:00",
-  "completedAt": "2026-09-28T21:18:06.666931+02:00",
-  "checkedAt": "2026-09-28T21:18:06.666931+02:00",
+  "scheduledSlot": "21:20",
+  "scheduledAt": "2026-09-28T21:20:00+02:00",
+  "rawScheduledSlot": "21:20",
+  "rawScheduledAt": "2026-09-28T21:20:00+02:00",
+  "startedAt": "2026-09-28T21:20:00.337297+02:00",
+  "completedAt": "2026-09-28T21:20:05.111724+02:00",
+  "checkedAt": "2026-09-28T21:20:05.111724+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2777,13 +2777,13 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 152,
+      "totalBargainItems": 151,
       "meatItems": 15,
       "meat70Items": 3,
       "meat70Stock": 3.0,
       "bakeryItems": 15,
-      "bakery70Items": 1,
-      "bakery70Stock": 1.0,
+      "bakery70Items": 0,
+      "bakery70Stock": 0,
       "items": [
         {
           "productId": 619347,
@@ -2968,15 +2968,15 @@
       ],
       "bakery": [
         {
-          "productId": 473738,
-          "title": "AH Eierkoeken",
+          "productId": 590399,
+          "title": "AH Broodje burger augurk tomatensaus",
           "brand": "AH",
-          "size": "360 g",
+          "size": "per stuk",
           "category": "Bakkerij",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "1.49",
-          "priceNow": "0.45",
+          "discountPct": 40,
+          "stock": 3,
+          "priceWas": "1.59",
+          "priceNow": "0.95",
           "markdownExpirationDate": "2026-09-28"
         },
         {
@@ -3004,15 +3004,27 @@
           "markdownExpirationDate": "2026-09-28"
         },
         {
-          "productId": 590399,
-          "title": "AH Broodje burger augurk tomatensaus",
+          "productId": 467677,
+          "title": "AH Kip loempia börek",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.59",
-          "priceNow": "1.19",
+          "stock": 4,
+          "priceWas": "1.19",
+          "priceNow": "0.89",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
+          "productId": 230725,
+          "title": "AH Roomboter appelflap",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.89",
+          "priceNow": "0.67",
           "markdownExpirationDate": "2026-09-28"
         },
         {
@@ -3064,6 +3076,18 @@
           "markdownExpirationDate": "2026-09-28"
         },
         {
+          "productId": 606049,
+          "title": "AH Liefde & Passie Desem pistolet volkoren",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
           "productId": 487301,
           "title": "AH Rond volkoren heel",
           "brand": "AH",
@@ -3073,18 +3097,6 @@
           "stock": 1,
           "priceWas": "1.89",
           "priceNow": "1.42",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
-          "productId": 467677,
-          "title": "AH Kip loempia börek",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "1.19",
-          "priceNow": "1.01",
           "markdownExpirationDate": "2026-09-28"
         },
         {
@@ -3100,21 +3112,9 @@
           "markdownExpirationDate": "2026-09-28"
         },
         {
-          "productId": 230725,
-          "title": "AH Roomboter appelflap",
+          "productId": 515766,
+          "title": "AH Kaasstengel",
           "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.89",
-          "priceNow": "0.76",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
-          "productId": 606049,
-          "title": "AH Liefde & Passie Desem pistolet volkoren",
-          "brand": "AH Liefde & Passie",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
