@@ -22,6 +22,24 @@ def local_state_path() -> Path:
     return Path(os.getenv('AH_TOKEN_STATE_FILE',str(DEFAULT_LOCAL_STATE)))
 
 
+
+def read_sealed_state(root_secret: str, sealed_path: Path=SEALED_PATH) -> dict:
+    """Read the published token state even when a stale local cache exists."""
+    try:
+        if not sealed_path.exists():
+            return {}
+        envelope=json.loads(sealed_path.read_text(encoding='utf-8'))
+        if int(envelope.get('version',0))!=1:
+            return {}
+        nonce=base64.urlsafe_b64decode(envelope['nonce'])
+        ciphertext=base64.urlsafe_b64decode(envelope['ciphertext'])
+        plain=AESGCM(_key(root_secret)).decrypt(nonce,ciphertext,AAD)
+        data=json.loads(plain.decode())
+        return data if isinstance(data,dict) else {}
+    except Exception:
+        return {}
+
+
 def restore_state(root_secret: str, sealed_path: Path=SEALED_PATH) -> dict:
     path=local_state_path()
     if path.exists():
@@ -64,7 +82,7 @@ def seal_state_text(root_secret: str) -> str:
     refresh=str(data.get('refreshToken') or '').strip()
     if not refresh:
         return ''
-    payload=json.dumps({'refreshToken':refresh},separators=(',',':')).encode()
+    payload=json.dumps({'refreshToken':refresh,'issuedAtNs':int(data.get('issuedAtNs') or 0)},separators=(',',':')).encode()
     nonce=os.urandom(12)
     ciphertext=AESGCM(_key(root_secret)).encrypt(nonce,payload,AAD)
     return json.dumps({
