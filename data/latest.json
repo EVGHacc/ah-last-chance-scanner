@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-28",
   "weekday": "Monday",
-  "scheduledSlot": "20:50",
-  "scheduledAt": "2026-09-28T20:50:00+02:00",
-  "rawScheduledSlot": "20:50",
-  "rawScheduledAt": "2026-09-28T20:50:00+02:00",
-  "startedAt": "2026-09-28T20:50:00.347177+02:00",
-  "completedAt": "2026-09-28T20:50:06.130225+02:00",
-  "checkedAt": "2026-09-28T20:50:06.130225+02:00",
+  "scheduledSlot": "20:51",
+  "scheduledAt": "2026-09-28T20:51:00+02:00",
+  "rawScheduledSlot": "20:51",
+  "rawScheduledAt": "2026-09-28T20:51:00+02:00",
+  "startedAt": "2026-09-28T20:51:00.344144+02:00",
+  "completedAt": "2026-09-28T20:51:05.196930+02:00",
+  "checkedAt": "2026-09-28T20:51:05.196930+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -276,18 +276,6 @@
           "markdownExpirationDate": "2026-09-28"
         },
         {
-          "productId": 230734,
-          "title": "Ah kaiserbroodjes wit nat",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 13,
-          "priceWas": "0.29",
-          "priceNow": "0.22",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
           "productId": 230710,
           "title": "AH Ham kaas croissant",
           "brand": "AH",
@@ -297,6 +285,18 @@
           "stock": 11,
           "priceWas": "0.99",
           "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
+          "productId": 230734,
+          "title": "Ah kaiserbroodjes wit nat",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 11,
+          "priceWas": "0.29",
+          "priceNow": "0.22",
           "markdownExpirationDate": "2026-09-28"
         },
         {
@@ -3196,18 +3196,6 @@
           "markdownExpirationDate": "2026-09-28"
         },
         {
-          "productId": 561017,
-          "title": "AH Tijger tarwe maïs heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "1.99",
-          "priceNow": "1.49",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
           "productId": 590399,
           "title": "AH Broodje burger augurk tomatensaus",
           "brand": "AH",
@@ -3217,6 +3205,18 @@
           "stock": 3,
           "priceWas": "1.59",
           "priceNow": "1.19",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
+          "productId": 561017,
+          "title": "AH Tijger tarwe maïs heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
           "markdownExpirationDate": "2026-09-28"
         },
         {
