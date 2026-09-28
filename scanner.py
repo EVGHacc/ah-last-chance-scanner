@@ -3,7 +3,7 @@ import base64, json, os, time, urllib.request, urllib.error
 from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
-from scripts.auth_state import restore_state
+from scripts.auth_state import restore_state, read_sealed_state
 
 TZ=ZoneInfo('Europe/Amsterdam')
 STORES=[(1463,'AH Blekersvaartweg'),(1348,'AH Zandvoortselaan'),(1135,'AH Casablancastraat'),(4046,'AH Clothildestraat'),(8728,'AH Westergracht')]
@@ -60,23 +60,43 @@ def _jwt_expiry(token):
 
 def _load_state():
     path=_state_path()
+    local={}
     try:
         data=json.loads(path.read_text(encoding='utf-8'))
         if isinstance(data,dict):
-            return data
+            local=data
     except Exception:
         pass
     configured=os.getenv('AH_REFRESH_TOKEN','').strip()
     if not configured:
-        return {}
-    return restore_state(configured)
+        return local
+    if not local:
+        return restore_state(configured)
+    # Each runner caches its own access token. The published encrypted refresh
+    # token can rotate in another runner; never keep using an older local copy.
+    remote=read_sealed_state(configured)
+    remote_token=str(remote.get('refreshToken') or '').strip()
+    remote_time=int(remote.get('issuedAtNs') or 0)
+    local_time=int(local.get('issuedAtNs') or 0)
+    if remote_token and remote_token != local.get('refreshToken') and (
+            remote_time > local_time or
+            (remote_time == local_time == 0 and not local.get('accessToken'))):
+        local['refreshToken']=remote_token
+        local['issuedAtNs']=remote_time
+        path.parent.mkdir(parents=True,exist_ok=True)
+        tmp=path.with_suffix(path.suffix+'.tmp')
+        tmp.write_text(json.dumps(local,separators=(',',':')),encoding='utf-8')
+        os.chmod(tmp,0o600)
+        tmp.replace(path)
+        os.chmod(path,0o600)
+    return local
 
 
 def _save_state(access,expires_at,refresh=''):
     path=_state_path()
     path.parent.mkdir(parents=True,exist_ok=True)
     tmp=path.with_suffix(path.suffix+'.tmp')
-    tmp.write_text(json.dumps({'accessToken':access,'accessExpiresAt':int(expires_at),'refreshToken':refresh}),encoding='utf-8')
+    tmp.write_text(json.dumps({'accessToken':access,'accessExpiresAt':int(expires_at),'refreshToken':refresh,'issuedAtNs':time.time_ns()}),encoding='utf-8')
     os.chmod(tmp,0o600)
     tmp.replace(path)
     os.chmod(path,0o600)
