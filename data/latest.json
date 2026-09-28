@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-28",
   "weekday": "Monday",
-  "scheduledSlot": "20:57",
-  "scheduledAt": "2026-09-28T20:57:00+02:00",
-  "rawScheduledSlot": "20:57",
-  "rawScheduledAt": "2026-09-28T20:57:00+02:00",
-  "startedAt": "2026-09-28T20:57:00.361382+02:00",
-  "completedAt": "2026-09-28T20:57:04.990030+02:00",
-  "checkedAt": "2026-09-28T20:57:04.990030+02:00",
+  "scheduledSlot": "21:00",
+  "scheduledAt": "2026-09-28T21:00:00+02:00",
+  "rawScheduledSlot": "21:00",
+  "rawScheduledAt": "2026-09-28T21:00:00+02:00",
+  "startedAt": "2026-09-28T21:00:00.358779+02:00",
+  "completedAt": "2026-09-28T21:00:05.457590+02:00",
+  "checkedAt": "2026-09-28T21:00:05.457590+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1503,7 +1503,7 @@
       "meat70Stock": 8.0,
       "bakeryItems": 52,
       "bakery70Items": 5,
-      "bakery70Stock": 10.0,
+      "bakery70Stock": 8.0,
       "items": [
         {
           "productId": 451171,
@@ -1616,18 +1616,6 @@
       ],
       "bakery": [
         {
-          "productId": 606046,
-          "title": "AH Turks broodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "0.99",
-          "priceNow": "0.30",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
           "productId": 561016,
           "title": "AH Tijger tarwe maïs half",
           "brand": "AH",
@@ -1673,6 +1661,18 @@
           "stock": 1,
           "priceWas": "1.49",
           "priceNow": "0.45",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
+          "productId": 606046,
+          "title": "AH Turks broodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.30",
           "markdownExpirationDate": "2026-09-28"
         },
         {
