@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-28",
   "weekday": "Monday",
-  "scheduledSlot": "21:05",
-  "scheduledAt": "2026-09-28T21:05:00+02:00",
-  "rawScheduledSlot": "21:05",
-  "rawScheduledAt": "2026-09-28T21:05:00+02:00",
-  "startedAt": "2026-09-28T21:05:00.326615+02:00",
-  "completedAt": "2026-09-28T21:05:05.554190+02:00",
-  "checkedAt": "2026-09-28T21:05:05.554190+02:00",
+  "scheduledSlot": "21:06",
+  "scheduledAt": "2026-09-28T21:06:00+02:00",
+  "rawScheduledSlot": "21:06",
+  "rawScheduledAt": "2026-09-28T21:06:00+02:00",
+  "startedAt": "2026-09-28T21:06:00.372701+02:00",
+  "completedAt": "2026-09-28T21:06:05.435719+02:00",
+  "checkedAt": "2026-09-28T21:06:05.435719+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -3208,18 +3208,6 @@
           "markdownExpirationDate": "2026-09-28"
         },
         {
-          "productId": 561017,
-          "title": "AH Tijger tarwe maïs heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.99",
-          "priceNow": "1.49",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
           "productId": 231536,
           "title": "AH Tijger wit half",
           "brand": "AH",
@@ -3253,6 +3241,18 @@
           "stock": 2,
           "priceWas": "1.09",
           "priceNow": "0.82",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
+          "productId": 561017,
+          "title": "AH Tijger tarwe maïs heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
           "markdownExpirationDate": "2026-09-28"
         },
         {
