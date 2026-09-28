@@ -42,11 +42,11 @@ jobs:
           print('Amsterdam=',now.isoformat(),'expected_hour=',expected_hour,'schedule=',schedule,'run=',run)
           PY
 
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v4
         if: steps.gate.outputs.run == 'true'
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v7
+      - uses: actions/setup-python@v5
         if: steps.gate.outputs.run == 'true'
         with:
           python-version: '3.12'
