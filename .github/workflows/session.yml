@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 350
     steps:
-      - name: Gate to Amsterdam 17:00-17:20 startup window
+      - name: Gate delayed starts while evening window remains
         id: gate
         shell: bash
         env:
@@ -36,7 +36,7 @@ jobs:
           # The concurrency group serializes them; session.py skips completed points.
           expected_hour=17-int(now.utcoffset().total_seconds()//3600)
           schedule=os.environ.get('EVENT_SCHEDULE','')
-          run=(now.hour==17 and now.minute<=20 and
+          run=(17*60 <= now.hour*60+now.minute <= 22*60+20 and
                schedule==f'0,5,10,15,20 {expected_hour} * * *')
           with open(os.environ['GITHUB_OUTPUT'],'a') as f: f.write(f'run={str(run).lower()}\n')
           print('Amsterdam=',now.isoformat(),'expected_hour=',expected_hour,'schedule=',schedule,'run=',run)
