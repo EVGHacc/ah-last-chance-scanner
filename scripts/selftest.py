@@ -83,4 +83,26 @@ with tempfile.TemporaryDirectory() as td:
     code="import scanner; a,m=scanner.token(); assert a=='cross-process-access' and m=='user-refresh' and scanner.LAST_AUTH_SOURCE=='cache'"
     for _ in range(2): subprocess.run(['python','-c',code],cwd=ROOT,env=env,check=True)
 
+
+# An independent fallback may rotate the refresh token while the long-running
+# primary still holds a cached access token. The next refresh must use the
+# newer published token, but must not regress to an older published token.
+with tempfile.TemporaryDirectory() as td:
+    state=Path(td)/'auth.json'
+    old_state=os.environ.get('AH_TOKEN_STATE_FILE')
+    old_reader=scanner.read_sealed_state
+    try:
+        os.environ['AH_TOKEN_STATE_FILE']=str(state)
+        state.write_text(json.dumps({'accessToken':'still-valid','accessExpiresAt':int(time.time())+600,
+                                     'refreshToken':'stale-local','issuedAtNs':10}))
+        scanner.read_sealed_state=lambda root: {'refreshToken':'newer-remote','issuedAtNs':20}
+        result=scanner._load_state()
+        assert result['refreshToken']=='newer-remote' and result['accessToken']=='still-valid'
+        scanner.read_sealed_state=lambda root: {'refreshToken':'older-remote','issuedAtNs':9}
+        assert scanner._load_state()['refreshToken']=='newer-remote'
+    finally:
+        scanner.read_sealed_state=old_reader
+        if old_state is None: os.environ.pop('AH_TOKEN_STATE_FILE',None)
+        else: os.environ['AH_TOKEN_STATE_FILE']=old_state
+
 print('scanner/session/persistence/token-rotation self-test: PASS')
