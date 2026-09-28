@@ -7,7 +7,7 @@ END=22*60+30
 SLOTS=[f'{m//60:02d}:{m%60:02d}' for m in range(START,END+1,5)]
 RAW_SLOTS=[f'{m//60:02d}:{m%60:02d}' for m in range(START,END+1,3)]
 VALID_STATUS={'OK','OK_ZERO_ROWS'}
-REQUIRED_STORE_IDS={1463,1348,1135}
+REQUIRED_STORE_IDS={1463,1348,1135,4046,8728}
 
 
 def valid_obs(o):
@@ -47,7 +47,7 @@ def main():
     latest=Path('data/latest.json')
     if not latest.exists(): raise SystemExit('data/latest.json ontbreekt')
     obs=json.loads(latest.read_text(encoding='utf-8')); date=obs['date']
-    if not valid_obs(obs): raise SystemExit('latest observatie is niet geldig/user-refresh/3 winkels/Vlees')
+    if not valid_obs(obs): raise SystemExit('latest observatie is niet geldig/user-refresh/5 winkels/Vlees')
 
     day=Path(f'data/{date}.jsonl'); day.parent.mkdir(exist_ok=True)
     with day.open('a',encoding='utf-8') as f: f.write(json.dumps(obs,ensure_ascii=False,separators=(',',':'))+'\n')
