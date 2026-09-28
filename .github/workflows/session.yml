@@ -2,11 +2,18 @@ name: AH supervised evening session
 
 on:
   push:
+    branches: [main]
     paths:
       - '.github/workflows/session.yml'
   schedule:
-    - cron: '0,5,10,15,20 15 * * *'
-    - cron: '0,5,10,15,20 16 * * *'
+    # Local 16:47/53/59, 17:07/13/19, 18:11/17/23; UTC alternatives for DST.
+    # Starting early gives GitHub queue delays headroom; no top-of-hour starts.
+    - cron: '47,53,59 14 * * *'
+    - cron: '47,53,59 15 * * *'
+    - cron: '7,13,19 15 * * *'
+    - cron: '7,13,19 16 * * *'
+    - cron: '11,17,23 16 * * *'
+    - cron: '11,17,23 17 * * *'
   workflow_dispatch:
 
 permissions:
@@ -21,34 +28,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 350
     steps:
-      - name: Gate delayed starts while evening window remains
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Gate delayed and DST-adjusted starts
         id: gate
         shell: bash
         env:
           EVENT_NAME: ${{ github.event_name }}
           EVENT_SCHEDULE: ${{ github.event.schedule }}
-        run: |
-          python - <<'PY'
-          import os
-          from datetime import datetime
-          from zoneinfo import ZoneInfo
-          now=datetime.now(ZoneInfo('Europe/Amsterdam'))
-          # GitHub scheduled runs can be delayed or dropped. Multiple UTC triggers
-          # provide independent opportunities to start the same supervised session.
-          # The concurrency group serializes them; session.py skips completed points.
-          expected_hour=17-int(now.utcoffset().total_seconds()//3600)
-          schedule=os.environ.get('EVENT_SCHEDULE','')
-          window=(17*60+30 <= now.hour*60+now.minute <= 22*60+20)
-          run=window and (os.environ.get('EVENT_NAME')!='schedule' or
-                          schedule==f'0,5,10,15,20 {expected_hour} * * *')
-          with open(os.environ['GITHUB_OUTPUT'],'a') as f: f.write(f'run={str(run).lower()}\n')
-          print('Amsterdam=',now.isoformat(),'expected_hour=',expected_hour,'schedule=',schedule,'run=',run)
-          PY
-
-      - uses: actions/checkout@v4
-        if: steps.gate.outputs.run == 'true'
-        with:
-          fetch-depth: 0
+        run: python scripts/schedule_gate.py
       - uses: actions/setup-python@v5
         if: steps.gate.outputs.run == 'true'
         with:
@@ -59,7 +48,9 @@ jobs:
       - name: Test production stack
         if: steps.gate.outputs.run == 'true'
         run: |
-          python -m py_compile scanner.py scripts/auth_state.py scripts/persist.py scripts/publish.py scripts/session.py scripts/selftest.py
+          python -m py_compile scanner.py scripts/auth_state.py scripts/persist.py scripts/publish.py scripts/session.py scripts/selftest.py scripts/schedule_gate.py scripts/independent_qa.py
+          python scripts/schedule_gate.py --self-test
+          python scripts/independent_qa.py --self-test
           python scripts/auth_state.py
           python scripts/selftest.py
       - name: Run supervised scan session
