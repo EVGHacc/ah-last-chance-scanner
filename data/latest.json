@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-28",
   "weekday": "Monday",
-  "scheduledSlot": "20:21",
-  "scheduledAt": "2026-09-28T20:21:00+02:00",
-  "rawScheduledSlot": "20:21",
-  "rawScheduledAt": "2026-09-28T20:21:00+02:00",
-  "startedAt": "2026-09-28T20:21:00.505964+02:00",
-  "completedAt": "2026-09-28T20:21:06.319241+02:00",
-  "checkedAt": "2026-09-28T20:21:06.319241+02:00",
+  "scheduledSlot": "20:24",
+  "scheduledAt": "2026-09-28T20:24:00+02:00",
+  "rawScheduledSlot": "20:24",
+  "rawScheduledAt": "2026-09-28T20:24:00+02:00",
+  "startedAt": "2026-09-28T20:24:00.505436+02:00",
+  "completedAt": "2026-09-28T20:24:05.253719+02:00",
+  "checkedAt": "2026-09-28T20:24:05.253719+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1497,7 +1497,7 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 254,
+      "totalBargainItems": 253,
       "meatItems": 12,
       "meat70Items": 6,
       "meat70Stock": 14.0,
@@ -1736,18 +1736,6 @@
           "markdownExpirationDate": "2026-09-28"
         },
         {
-          "productId": 459347,
-          "title": "AH Tijgerbol wit",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 11,
-          "priceWas": "0.35",
-          "priceNow": "0.26",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
           "productId": 523679,
           "title": "AH Pastel de nata",
           "brand": "AH",
@@ -1760,15 +1748,15 @@
           "markdownExpirationDate": "2026-09-28"
         },
         {
-          "productId": 606048,
-          "title": "AH Liefde & Passie Desem pistolet wit",
-          "brand": "AH Liefde & Passie",
+          "productId": 459347,
+          "title": "AH Tijgerbol wit",
+          "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 6,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
+          "stock": 8,
+          "priceWas": "0.35",
+          "priceNow": "0.26",
           "markdownExpirationDate": "2026-09-28"
         },
         {
@@ -1784,6 +1772,18 @@
           "markdownExpirationDate": "2026-09-28"
         },
         {
+          "productId": 606048,
+          "title": "AH Liefde & Passie Desem pistolet wit",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
           "productId": 606494,
           "title": "AH Focaccia brie rozemarijn",
           "brand": "AH",
@@ -1793,18 +1793,6 @@
           "stock": 4,
           "priceWas": "1.59",
           "priceNow": "1.19",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
-          "productId": 168183,
-          "title": "AH Tijger volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "1.99",
-          "priceNow": "1.49",
           "markdownExpirationDate": "2026-09-28"
         },
         {
@@ -1889,6 +1877,18 @@
           "stock": 2,
           "priceWas": "2.89",
           "priceNow": "2.17",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
+          "productId": 168183,
+          "title": "AH Tijger volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
           "markdownExpirationDate": "2026-09-28"
         },
         {
@@ -2281,11 +2281,11 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 156,
+      "totalBargainItems": 155,
       "meatItems": 15,
       "meat70Items": 6,
       "meat70Stock": 9.0,
-      "bakeryItems": 39,
+      "bakeryItems": 38,
       "bakery70Items": 1,
       "bakery70Stock": 2.0,
       "items": [
@@ -2721,18 +2721,6 @@
           "stock": 1,
           "priceWas": "2.69",
           "priceNow": "2.02",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
-          "productId": 241458,
-          "title": "AH Vloerbrood wit half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.45",
-          "priceNow": "1.09",
           "markdownExpirationDate": "2026-09-28"
         },
         {
