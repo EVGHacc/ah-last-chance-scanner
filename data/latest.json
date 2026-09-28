@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-28",
   "weekday": "Monday",
-  "scheduledSlot": "20:20",
-  "scheduledAt": "2026-09-28T20:20:00+02:00",
-  "rawScheduledSlot": "20:20",
-  "rawScheduledAt": "2026-09-28T20:20:00+02:00",
-  "startedAt": "2026-09-28T20:20:00.496642+02:00",
-  "completedAt": "2026-09-28T20:20:05.666200+02:00",
-  "checkedAt": "2026-09-28T20:20:05.666200+02:00",
+  "scheduledSlot": "20:21",
+  "scheduledAt": "2026-09-28T20:21:00+02:00",
+  "rawScheduledSlot": "20:21",
+  "rawScheduledAt": "2026-09-28T20:21:00+02:00",
+  "startedAt": "2026-09-28T20:21:00.505964+02:00",
+  "completedAt": "2026-09-28T20:21:06.319241+02:00",
+  "checkedAt": "2026-09-28T20:21:06.319241+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 218,
+      "totalBargainItems": 217,
       "meatItems": 16,
       "meat70Items": 2,
       "meat70Stock": 5.0,
@@ -2950,8 +2950,8 @@
       "meat70Items": 10,
       "meat70Stock": 15.0,
       "bakeryItems": 18,
-      "bakery70Items": 0,
-      "bakery70Stock": 0,
+      "bakery70Items": 1,
+      "bakery70Stock": 1.0,
       "items": [
         {
           "productId": 551140,
@@ -3225,10 +3225,10 @@
           "brand": "AH",
           "size": "360 g",
           "category": "Bakkerij",
-          "discountPct": 40,
+          "discountPct": 70,
           "stock": 1,
           "priceWas": "1.49",
-          "priceNow": "0.89",
+          "priceNow": "0.45",
           "markdownExpirationDate": "2026-09-28"
         },
         {
@@ -3244,6 +3244,18 @@
           "markdownExpirationDate": "2026-09-28"
         },
         {
+          "productId": 561017,
+          "title": "AH Tijger tarwe maïs heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
           "productId": 590399,
           "title": "AH Broodje burger augurk tomatensaus",
           "brand": "AH",
@@ -3253,6 +3265,42 @@
           "stock": 3,
           "priceWas": "1.59",
           "priceNow": "1.19",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
+          "productId": 231536,
+          "title": "AH Tijger wit half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.09",
+          "priceNow": "0.82",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
+          "productId": 168184,
+          "title": "AH Tijger wit heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
+          "productId": 561016,
+          "title": "AH Tijger tarwe maïs half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.09",
+          "priceNow": "0.82",
           "markdownExpirationDate": "2026-09-28"
         },
         {
@@ -3292,18 +3340,6 @@
           "markdownExpirationDate": "2026-09-28"
         },
         {
-          "productId": 561017,
-          "title": "AH Tijger tarwe maïs heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "1.99",
-          "priceNow": "1.69",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
           "productId": 467677,
           "title": "AH Kip loempia börek",
           "brand": "AH",
@@ -3337,42 +3373,6 @@
           "stock": 2,
           "priceWas": "1.29",
           "priceNow": "1.10",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
-          "productId": 231536,
-          "title": "AH Tijger wit half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "1.09",
-          "priceNow": "0.93",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
-          "productId": 168184,
-          "title": "AH Tijger wit heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "1.99",
-          "priceNow": "1.69",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
-          "productId": 561016,
-          "title": "AH Tijger tarwe maïs half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "1.09",
-          "priceNow": "0.93",
           "markdownExpirationDate": "2026-09-28"
         },
         {
