@@ -1,7 +1,7 @@
-name: AH independent fallback and QA
+name: AH three-minute fallback and QA
 on:
   schedule:
-    - cron: '*/5 15-21 * * *'
+    - cron: '*/3 15-21 * * *'
   workflow_dispatch:
 permissions:
   contents: write
