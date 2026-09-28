@@ -66,10 +66,19 @@ def run_point(target):
         if age>MAX_RECOVERY_AGE:
             print(f'Point {target.isoformat()} no longer honestly recoverable after attempt {attempt-1}',flush=True)
             return False
-        scan=subprocess.run(['python','scanner.py'],env=env)
+        scan=subprocess.run(['python','scanner.py'],env=env,text=True,capture_output=True)
+        try:
+            obs=json.loads(Path('data/latest.json').read_text(encoding='utf-8'))
+        except (ValueError,OSError):
+            obs={}
+        summary=f"slot={target:%H:%M} status={obs.get('status','unknown')} auth={obs.get('authMode','unknown')} fetched={sum(s.get('fetched') is True for s in (obs.get('stores') or []))}/5"
         if scan.returncode!=0:
-            print(f'Scan attempt {attempt} failed for {target.isoformat()}',flush=True)
+            print(f'Scan attempt {attempt} failed: {summary}; stderr={scan.stderr[-350:]}',flush=True)
+            # A fallback may have rotated the encrypted refresh token after
+            # our previous checkout. Refresh it before retrying authentication.
+            refresh_checkout()
             continue
+        print(f'Scan complete: {summary}',flush=True)
         publish=subprocess.run(['python','scripts/publish.py'])
         if publish.returncode==0:
             refresh_checkout()
