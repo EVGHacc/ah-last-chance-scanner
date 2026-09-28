@@ -91,7 +91,9 @@ with tempfile.TemporaryDirectory() as td:
     state=Path(td)/'auth.json'
     old_state=os.environ.get('AH_TOKEN_STATE_FILE')
     old_reader=scanner.read_sealed_state
+    old_root=os.environ.get('AH_REFRESH_TOKEN')
     try:
+        os.environ['AH_REFRESH_TOKEN']='unit-root-refresh'
         os.environ['AH_TOKEN_STATE_FILE']=str(state)
         state.write_text(json.dumps({'accessToken':'still-valid','accessExpiresAt':int(time.time())+600,
                                      'refreshToken':'stale-local','issuedAtNs':10}))
@@ -102,6 +104,8 @@ with tempfile.TemporaryDirectory() as td:
         assert scanner._load_state()['refreshToken']=='newer-remote'
     finally:
         scanner.read_sealed_state=old_reader
+        if old_root is None: os.environ.pop('AH_REFRESH_TOKEN',None)
+        else: os.environ['AH_REFRESH_TOKEN']=old_root
         if old_state is None: os.environ.pop('AH_TOKEN_STATE_FILE',None)
         else: os.environ['AH_TOKEN_STATE_FILE']=old_state
 
