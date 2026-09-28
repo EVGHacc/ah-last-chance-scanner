@@ -1,0 +1,60 @@
+name: AH independent source QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/independent_qa.py'
+      - '.github/workflows/independent-qa.yml'
+  schedule:
+    - cron: '*/15 15-22 * * *'
+  workflow_run:
+    workflows: ['AH supervised evening session']
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ah-independent-qa-${{ github.event_name }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Independent tests and publication audit
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        shell: bash
+        run: |
+          python -m py_compile scripts/independent_qa.py
+          python scripts/independent_qa.py --self-test
+          python - <<'PY'
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          n=datetime.now(ZoneInfo('Europe/Amsterdam'))
+          in_window=(17*60+34<=n.hour*60+n.minute<=22*60+50)
+          run=os.environ['EVENT_NAME']!='schedule' or in_window
+          with open(os.environ['GITHUB_ENV'],'a') as f:
+              f.write(f'RUN_AH_QA={str(run).lower()}\n')
+          print('Independent QA gate:',n.isoformat(),run)
+          PY
+      - name: Cross-check published raw archive against status
+        if: env.RUN_AH_QA == 'true'
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        shell: bash
+        run: |
+          if [ "$EVENT_NAME" = workflow_run ]; then
+            python scripts/independent_qa.py --complete
+          else
+            python scripts/independent_qa.py
+          fi
