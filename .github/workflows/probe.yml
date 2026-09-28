@@ -29,4 +29,5 @@ jobs:
           python -m py_compile scanner.py scripts/*.py
           python scripts/auth_state.py
           python scripts/selftest.py
+          python scripts/independent_qa.py --self-test
           python scripts/central_data_check.py
