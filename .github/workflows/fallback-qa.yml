@@ -1,5 +1,9 @@
 name: AH three-minute fallback and QA
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fallback-qa.yml'
   schedule:
     - cron: '*/3 15-21 * * *'
   workflow_dispatch:
@@ -50,21 +54,4 @@ jobs:
         run: |
           git fetch origin main
           git reset --hard origin/main
-          python - <<'PY'
-          import json
-          from datetime import datetime
-          from pathlib import Path
-          from zoneinfo import ZoneInfo
-          n=datetime.now(ZoneInfo('Europe/Amsterdam'))
-          p=Path('data/status.json')
-          s=json.loads(p.read_text()) if p.exists() else {}
-          assert s.get('date')==n.strftime('%Y-%m-%d'), 'STALE: no current-day status'
-          raw=set(s.get('rawSeen',[])); canonical=set(s.get('canonicalSeen',[]))
-          minutes=n.hour*60+n.minute
-          due_raw={f'{m//60:02d}:{m%60:02d}' for m in range(1050,min(minutes-4,1350)+1,3)}
-          due_can={f'{m//60:02d}:{m%60:02d}' for m in range(1050,min(minutes-4,1350)+1,5)}
-          print('RAW',len(raw),'/101 CANONICAL',len(canonical),'/61')
-          print('RAW MISSING',sorted(due_raw-raw))
-          print('CANONICAL MISSING',sorted(due_can-canonical))
-          assert not (due_raw-raw or due_can-canonical), 'INCOMPLETE: overdue measurements'
-          PY
+          python scripts/independent_qa.py
