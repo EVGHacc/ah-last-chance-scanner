@@ -1,6 +1,9 @@
 name: AH supervised evening session
 
 on:
+  push:
+    paths:
+      - '.github/workflows/session.yml'
   schedule:
     - cron: '0,5,10,15,20 15 * * *'
     - cron: '0,5,10,15,20 16 * * *'
@@ -25,7 +28,6 @@ jobs:
           EVENT_NAME: ${{ github.event_name }}
           EVENT_SCHEDULE: ${{ github.event.schedule }}
         run: |
-          if [ "$EVENT_NAME" != "schedule" ]; then echo 'run=true' >> "$GITHUB_OUTPUT"; exit 0; fi
           python - <<'PY'
           import os
           from datetime import datetime
@@ -36,8 +38,9 @@ jobs:
           # The concurrency group serializes them; session.py skips completed points.
           expected_hour=17-int(now.utcoffset().total_seconds()//3600)
           schedule=os.environ.get('EVENT_SCHEDULE','')
-          run=(17*60 <= now.hour*60+now.minute <= 22*60+20 and
-               schedule==f'0,5,10,15,20 {expected_hour} * * *')
+          window=(17*60+30 <= now.hour*60+now.minute <= 22*60+20)
+          run=window and (os.environ.get('EVENT_NAME')!='schedule' or
+                          schedule==f'0,5,10,15,20 {expected_hour} * * *')
           with open(os.environ['GITHUB_OUTPUT'],'a') as f: f.write(f'run={str(run).lower()}\n')
           print('Amsterdam=',now.isoformat(),'expected_hour=',expected_hour,'schedule=',schedule,'run=',run)
           PY
