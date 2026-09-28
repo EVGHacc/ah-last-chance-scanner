@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-28",
   "weekday": "Monday",
-  "scheduledSlot": "20:39",
-  "scheduledAt": "2026-09-28T20:39:00+02:00",
-  "rawScheduledSlot": "20:39",
-  "rawScheduledAt": "2026-09-28T20:39:00+02:00",
-  "startedAt": "2026-09-28T20:39:00.349230+02:00",
-  "completedAt": "2026-09-28T20:39:04.894089+02:00",
-  "checkedAt": "2026-09-28T20:39:04.894089+02:00",
+  "scheduledSlot": "20:40",
+  "scheduledAt": "2026-09-28T20:40:00+02:00",
+  "rawScheduledSlot": "20:40",
+  "rawScheduledAt": "2026-09-28T20:40:00+02:00",
+  "startedAt": "2026-09-28T20:40:00.399669+02:00",
+  "completedAt": "2026-09-28T20:40:05.418972+02:00",
+  "checkedAt": "2026-09-28T20:40:05.418972+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1760,18 +1760,6 @@
           "markdownExpirationDate": "2026-09-28"
         },
         {
-          "productId": 417148,
-          "title": "AH Vloerbrood volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
           "productId": 606048,
           "title": "AH Liefde & Passie Desem pistolet wit",
           "brand": "AH Liefde & Passie",
@@ -1798,6 +1786,18 @@
         {
           "productId": 417147,
           "title": "AH Vloerbrood meergranen heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
+          "productId": 417148,
+          "title": "AH Vloerbrood volkoren heel",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
@@ -2933,11 +2933,11 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 168,
+      "totalBargainItems": 166,
       "meatItems": 22,
       "meat70Items": 10,
       "meat70Stock": 15.0,
-      "bakeryItems": 17,
+      "bakeryItems": 15,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "items": [
@@ -3352,18 +3352,6 @@
           "markdownExpirationDate": "2026-09-28"
         },
         {
-          "productId": 451137,
-          "title": "AH Focaccia mozzarella",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "1.29",
-          "priceNow": "1.10",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
           "productId": 466494,
           "title": "AH Meerzaden croissant",
           "brand": "AH",
@@ -3385,18 +3373,6 @@
           "stock": 1,
           "priceWas": "0.99",
           "priceNow": "0.84",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
-          "productId": 410181,
-          "title": "AH Kip paprikabroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.99",
-          "priceNow": "1.69",
           "markdownExpirationDate": "2026-09-28"
         },
         {
