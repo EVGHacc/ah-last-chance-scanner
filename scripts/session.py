@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import json
+import sys
 import os
 import subprocess
 import time
@@ -107,6 +108,20 @@ def final_reconcile(today):
     return not raw_missing and not canonical_missing and len(raw_seen)==101 and len(canonical_seen)==61
 
 
+def fallback_once():
+    """Independent short-lived recovery; never backdate observations beyond 240 seconds."""
+    now=datetime.now(TZ)
+    refresh_checkout()
+    candidates=[p for p in points_for(now) if 0 <= (now-p).total_seconds() <= MAX_RECOVERY_AGE]
+    for target in candidates:
+        if not point_complete(target):
+            print(f'Fallback attempting {target.isoformat()}',flush=True)
+            run_point(target)
+    refresh_checkout()
+    raw,canonical=status_seen(now)
+    print(f'Fallback status {now:%Y-%m-%d}: raw={len(raw)}/101 canonical={len(canonical)}/61',flush=True)
+
+
 def main():
     today=datetime.now(TZ)
     points=points_for(today)
@@ -130,4 +145,5 @@ def main():
     print('Supervised AH session finished: 101/101 raw and 61/61 canonical complete',flush=True)
 
 
-if __name__=='__main__': main()
+if __name__=='__main__':
+    fallback_once() if '--fallback-once' in sys.argv else main()
