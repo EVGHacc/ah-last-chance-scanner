@@ -132,7 +132,8 @@ def main():
             if delta<=0:
                 break
             time.sleep(min(delta,30))
-        recover_recent_gaps(today)
+        # Prioritize the current scheduled point; gap recovery must not make it late.
+        refresh_checkout()
         if not point_complete(target):
             age=(datetime.now(TZ)-target).total_seconds()
             if age<=MAX_RECOVERY_AGE:
