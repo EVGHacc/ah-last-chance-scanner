@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-28",
   "weekday": "Monday",
-  "scheduledSlot": "21:57",
-  "scheduledAt": "2026-09-28T21:57:00+02:00",
-  "rawScheduledSlot": "21:57",
-  "rawScheduledAt": "2026-09-28T21:57:00+02:00",
-  "startedAt": "2026-09-28T21:57:00.377551+02:00",
-  "completedAt": "2026-09-28T21:57:06.158116+02:00",
-  "checkedAt": "2026-09-28T21:57:06.158116+02:00",
+  "scheduledSlot": "22:00",
+  "scheduledAt": "2026-09-28T22:00:00+02:00",
+  "rawScheduledSlot": "22:00",
+  "rawScheduledAt": "2026-09-28T22:00:00+02:00",
+  "startedAt": "2026-09-28T22:00:00.344099+02:00",
+  "completedAt": "2026-09-28T22:00:05.078065+02:00",
+  "checkedAt": "2026-09-28T22:00:05.078065+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2041,11 +2041,11 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 134,
-      "meatItems": 14,
-      "meat70Items": 5,
-      "meat70Stock": 7.0,
-      "bakeryItems": 35,
+      "totalBargainItems": 147,
+      "meatItems": 13,
+      "meat70Items": 4,
+      "meat70Stock": 6.0,
+      "bakeryItems": 37,
       "bakery70Items": 1,
       "bakery70Stock": 2.0,
       "items": [
@@ -2095,18 +2095,6 @@
           "stock": 1,
           "priceWas": "4.11",
           "priceNow": "1.23",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
-          "productId": 620807,
-          "title": "AH Ovenschotel varkenshaas mozzarella",
-          "brand": "AH",
-          "size": "270 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.99",
-          "priceNow": "2.10",
           "markdownExpirationDate": "2026-09-28"
         },
         {
@@ -2424,6 +2412,18 @@
           "markdownExpirationDate": "2026-09-28"
         },
         {
+          "productId": 578301,
+          "title": "AH Liefde & Passie OerDesem zonne rogge",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
           "productId": 487305,
           "title": "AH Liefde & Passie Spelt volkoren brood",
           "brand": "AH Liefde & Passie",
@@ -2469,6 +2469,18 @@
           "stock": 2,
           "priceWas": "1.19",
           "priceNow": "0.89",
+          "markdownExpirationDate": "2026-09-28"
+        },
+        {
+          "productId": 571174,
+          "title": "AH Jalapeño kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-09-28"
         },
         {
@@ -2649,7 +2661,7 @@
       "meatItems": 15,
       "meat70Items": 3,
       "meat70Stock": 3.0,
-      "bakeryItems": 14,
+      "bakeryItems": 13,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -2881,18 +2893,6 @@
           "stock": 3,
           "priceWas": "1.19",
           "priceNow": "0.89",
-          "markdownExpirationDate": "2026-09-28"
-        },
-        {
-          "productId": 230725,
-          "title": "AH Roomboter appelflap",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "0.89",
-          "priceNow": "0.67",
           "markdownExpirationDate": "2026-09-28"
         },
         {
