@@ -481,6 +481,16 @@ def browser_visible_job_links(pg,o):
             out[u]=title
     return out
 
+def merge_validated_jobs(existing, newly_checked):
+    """Merge board recovery without losing an independently verified live job."""
+    by_key={job_key(j["url"]):j for j in existing}
+    for j in newly_checked:
+        key=job_key(j["url"])
+        if j.get("apply_live") or not by_key.get(key,{}).get("apply_live"):
+            by_key[key]=j
+    return list(by_key.values())
+
+
 def browser_retry(rs):
     """Best-effort deep recovery with hard time budgets; expired checks remain unproven."""
     targets=[r for r in rs if r["status"]=="technical_failure" or r["vacancy_coverage"] in ("partial","unproven")]
@@ -590,12 +600,7 @@ def browser_retry(rs):
                 matched_urls={j["url"] for j in raw}
                 missed=[j for j in audit if j["url"] not in matched_urls]
                 r["match_audit"]={"candidate_count":len(audit),"matched_count":len(audit)-len(missed),"missed":missed[:20]}
-                previous={job_key(j["url"]):j for j in r.get("jobs",[])}
-                for j in validate_jobs(raw,{job_key(url) for url in observed_links}):
-                    key=job_key(j["url"])
-                    if j.get("apply_live") or not previous.get(key,{}).get("apply_live"):
-                        previous[key]=j
-                r["jobs"]=list(previous.values())
+                r["jobs"]=merge_validated_jobs(r.get("jobs",[]),validate_jobs(raw,{job_key(url) for url in observed_links}))
             print(json.dumps({"phase":"browser_recovery","organisation":r["name"],"status":r["status"],"vacancy_coverage":r["vacancy_coverage"],"seconds":round(time.monotonic()-started,1),"remaining_global_seconds":round(deadline-time.monotonic(),1)},ensure_ascii=False),flush=True)
         c.close();b.close()
 
