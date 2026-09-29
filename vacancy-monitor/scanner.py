@@ -19,7 +19,7 @@ BROWSER_URL_BUDGET=int(os.getenv("VACANCY_BROWSER_URL_BUDGET","28"))
 ATS=("myworkdayjobs.com","workday.com","oraclecloud.com","greenhouse.io","lever.co","teamtailor.com","recruitee.com","ashbyhq.com","breezy.hr","smartrecruiters.com","successfactors.com","eightfold.ai","icims.com")
 CAREER=re.compile(r"(job|career|vacanc|position|opportunit|werken.?bij|open.?roles)",re.I)
 REL=re.compile(r"(compliance|risk|audit|anti.?money|aml|financial.?crime|sanction|governance|regulat|controls?|assurance|oversight|mlro|cco|cro|responsible.?ai|trust.?safety|resilien|continuity|business.?control|integrity|fraud|investigation|financial.?intelligence|conduct|ethics|remediation|non.?financial|financieel.?economische.?criminaliteit|witwassen)",re.I)
-JOBURL=re.compile(r"(/job(?:s)?/|/vacanc|/position|/career|/opportunit|job[_-]|vacature|search-jobs|/offre-de-emploi/|/stellenangebot/)",re.I)
+JOBURL=re.compile(r"(/overview/[0-9]+(?:/|$)|/job(?:s)?/|/vacanc|/position|/career|/opportunit|job[_-]|vacature|search-jobs|/offre-de-emploi/|/stellenangebot/)",re.I)
 AUDIT_REL=re.compile(r"(compliance|risk|audit|anti.?money|aml|financial.?crime|sanction|governance|regulat|control|assurance|oversight|resilien|continuity|integrity|fraud|investigation|financial.?intelligence|conduct|ethics|responsible.?ai|trust.?safety|remediation|non.?financial)",re.I)
 AUDIT_SENIOR=re.compile(r"(head|director|senior|lead|chief|vice.?president|\\bvp\\b|principal|partner|manager|expert|global|regional|\\bmlro\\b|\\bcco\\b|\\bcro\\b)",re.I)
 SENIOR=re.compile(r"(head|director|executive.?director|senior|lead|chief|vice.?president|vp|principal|partner|manager|hoofd|directeur|global|regional|strateg|expert|business.?resilien.?officer|operational.?continuity)",re.I)
@@ -84,7 +84,7 @@ def load_registry():
             r["seed_urls"]=[x for x in (r.get("seed_urls") or "").split(";") if x]
             r["allowed_domains"]=[x for x in (r.get("allowed_domains") or "").split(";") if x]
             r["no_public_hint"]=r["no_public_hint"]=="1"; out.append(r)
-    if len(out)!=105: raise RuntimeError(f"registry count {len(out)} != 105")
+    if len(out)!=106: raise RuntimeError(f"registry count {len(out)} != 106")
     return out
 
 def fetch(u,method="http"):
@@ -989,7 +989,7 @@ def main():
     for r in rs:
         for j in r["jobs"]:
             if j.get("apply_live"): jobs.append({**j,"organisation":r["name"],"kind":r["kind"],"is_new":j["url"] not in old})
-    ok=105-counts["technical_failure"]
+    ok=len(reg)-counts["technical_failure"]
     coverage_counts={k:sum(r["vacancy_coverage"]==k for r in rs) for k in ("verified_complete","verified_no_public_board","partial","unproven")}
     excluded={"DB Contractors UK","Risk Talent Associates"}
     target=[r for r in rs if r["name"] not in excluded]
@@ -999,7 +999,7 @@ def main():
     audit_total=sum(r.get("match_audit",{}).get("candidate_count",0) for r in audit_scope)
     audit_matched=sum(r.get("match_audit",{}).get("matched_count",0) for r in audit_scope)
     match_recall=round(100*audit_matched/audit_total,1) if audit_total else None
-    payload={"schema_version":4,"run_date":nldate(),"started_at":started,"completed_at":iso(),"total_expected":105,"total_classified":len(rs),"complete":len(rs)==105,"coverage_percent":round(100*len(rs)/105,1),"successful_control_count":ok,"successful_control_percent":round(100*ok/105,1),"vacancy_coverage_counts":coverage_counts,"match_audit":{"candidate_count":audit_total,"matched_count":audit_matched,"recall_percent":match_recall},"counts":counts,"counts_by_kind":bykind,"technical_failures":[{"name":r["name"],"kind":r["kind"],"error":r["error"],"routes_tried":r["routes_tried"]} for r in rs if r["status"]=="technical_failure"],"live_relevant_jobs":jobs,"organisations":rs}
+    payload={"schema_version":4,"run_date":nldate(),"started_at":started,"completed_at":iso(),"total_expected":len(reg),"total_classified":len(rs),"complete":len(rs)==len(reg),"coverage_percent":round(100*len(rs)/len(reg),1),"successful_control_count":ok,"successful_control_percent":round(100*ok/len(reg),1),"vacancy_coverage_counts":coverage_counts,"match_audit":{"candidate_count":audit_total,"matched_count":audit_matched,"recall_percent":match_recall},"counts":counts,"counts_by_kind":bykind,"technical_failures":[{"name":r["name"],"kind":r["kind"],"error":r["error"],"routes_tried":r["routes_tried"]} for r in rs if r["status"]=="technical_failure"],"live_relevant_jobs":jobs,"organisations":rs}
     payload["qa"]=qa_snapshot(payload)
     text=json.dumps(payload,ensure_ascii=False,indent=2); latest.write_text(text); (DATA/f'{payload["run_date"]}.json').write_text(text)
     incomplete=[{"name":r["name"],"kind":r["kind"],"coverage":r["vacancy_coverage"],"status":r["status"]} for r in target if r["vacancy_coverage"] not in ("verified_complete","verified_no_public_board")]
@@ -1007,7 +1007,7 @@ def main():
     for rr in audit_scope:
         for jj in rr.get("match_audit",{}).get("missed",[]):
             missed_examples.append({"organisation":rr["name"],"title":jj["title"],"url":jj["url"]})
-    summary={"run_date":payload["run_date"],"target_expected":103,"target_proven":len(proven),"vacancy_coverage_percent":vacancy_percent,
+    summary={"run_date":payload["run_date"],"target_expected":len(target),"target_proven":len(proven),"vacancy_coverage_percent":vacancy_percent,
              "match_audit":{"candidate_count":audit_total,"matched_count":audit_matched,"recall_percent":match_recall,
                             "missed_count":audit_total-audit_matched,"missed_examples":missed_examples[:100]},
              "incomplete":incomplete,"technical_failures":[x["name"] for x in payload["technical_failures"]]}
