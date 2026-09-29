@@ -43,3 +43,25 @@ for u in urls:
  except Exception as e:
   print("PROBE ERROR",u,type(e).__name__,str(e)[:170],flush=True)
 
+
+# Confirm the official site and the ATS still reference the same current posting.
+for ident, slug in (
+ ("ad877e85-6c71-4e6b-afc7-3d87b9488adb","senior-director-aml-sanctions-governance-policy"),
+ ("004af48d-83e6-44c0-9ed0-493142195481","senior-director-of-risk-assurance-monitoring-framework-reporting"),
+ ("15a5d8b4-a5fd-4b4d-a933-387702221b75","senior-director-eu-me-mlro"),
+):
+ for hosturl in (
+  f"https://careers.airwallex.com/job/{ident}/{slug}/",
+  f"https://jobs.ashbyhq.com/airwallex/{ident}",
+  f"https://jobs.ashbyhq.com/airwallex/{ident}/application",
+ ):
+  try:
+   r=requests.get(hosturl,headers=H,timeout=12)
+   soup=BeautifulSoup(r.text,"html.parser")
+   title=soup.title.get_text(" ",strip=True) if soup.title else None
+   applies=[(x.get_text(" ",strip=True)[:55],x.get("href")) for x in soup.find_all("a",href=True)
+            if re.search(r"apply|solliciteer",x.get_text(" ",strip=True),re.I)]
+   print("DETAIL_PROBE",ident,r.status_code,r.url,"title",title,"bytes",len(r.content),
+         "id_in_response",ident in r.text,
+         "apply_links",applies[:5],flush=True)
+  except Exception as e:print("DETAIL_PROBE_ERR",ident,hosturl,str(e)[:160],flush=True)
