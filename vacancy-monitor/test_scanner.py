@@ -1,6 +1,8 @@
+import json
 import unittest
 from unittest.mock import patch
 
+from embedded_inventory import embedded_inventory
 from scanner import REL, SENIOR, extract_jobs, listing_evidence, coverage_from_evidence, validate_jobs, job_key, qa_snapshot, api_inventory, merge_validated_jobs, discover_official_ats, airwallex_id, airwallex_official_url, strategic_inventory_match, airwallex_validation_queue, validate_workday_candidate, airwallex_id, airwallex_official_url, strategic_inventory_match
 
 
@@ -534,6 +536,109 @@ class VisaWorkdayTests(unittest.TestCase):
             result=validate_jobs([j],{job_key(j["url"])})[0]
         self.assertFalse(result["apply_live"])
         self.assertEqual(result["validation_reason"],"no_live_apply_control")
+
+
+class FirstPartyEmbeddedIndexTests(unittest.TestCase):
+    N26_ID="7845376"
+    UK_ID="6777d9e3-caf3-48e0-93ef-80e39230b1c7"
+    EU_ID="34647acd-dc06-4897-a30a-f1cca93abc87"
+    GOV_ID="158b9187-b51d-4674-9409-510565ca8a3b"
+
+    @staticmethod
+    def n26_page(count=1):
+        raw='["title","Team Lead Non-Financial Risk and Internal Controls","id",7845376,"2026-08-05T05:59:35-04:00"]'
+        return ('<h1>Search from '+str(count)+' positions to find your new careers path</h1>'
+                '<script>window.__reactRouterContext.streamController.enqueue('+
+                json.dumps(raw)+');</script>')
+
+    @staticmethod
+    def revolut_page(count=3):
+        ids=(FirstPartyEmbeddedIndexTests.UK_ID,FirstPartyEmbeddedIndexTests.EU_ID,
+             FirstPartyEmbeddedIndexTests.GOV_ID)
+        titles=("Head of Financial Crime & Fraud Risk",
+                "Head of Financial Crime & Fraud Risk",
+                "Financial Crime Compliance Governance Manager")
+        jobs=[{"id":ident,"text":title,"team":"Risk, Compliance & Audit",
+               "locations":[{"name":"UK - Remote","type":"remote","country":"United Kingdom"}]}
+              for ident,title in zip(ids,titles)]
+        data={"props":{"pageProps":{"positions":jobs}}}
+        return ('<h1>We have '+str(count)+' open positions</h1>'
+                '<script id="__NEXT_DATA__" type="application/json">'+json.dumps(data)+'</script>')
+
+    def test_n26_unseen_title_and_id_comes_from_first_party_embedded_index(self):
+        x=embedded_inventory("N26",self.n26_page(),"https://n26.com/en-eu/careers")
+        self.assertTrue(x["complete"])
+        self.assertEqual(x["official_total"],1)
+        self.assertEqual(x["jobs"][0]["embedded_job_id"],self.N26_ID)
+        self.assertEqual(x["jobs"][0]["url"],"https://n26.com/en-eu/careers/positions/7845376")
+        self.assertTrue(strategic_inventory_match(x["jobs"][0]))
+
+    def test_n26_partial_source_remains_partial_but_keeps_candidate(self):
+        x=embedded_inventory("N26",self.n26_page(63),"https://n26.com/en-eu/careers")
+        self.assertFalse(x["complete"])
+        self.assertEqual(x["official_total"],63)
+        self.assertEqual(len(x["jobs"]),1)
+
+    def test_revolut_two_identically_titled_heads_are_separate_and_governance_recovers(self):
+        x=embedded_inventory("Revolut",self.revolut_page(),"https://www.revolut.com/careers/")
+        self.assertTrue(x["complete"])
+        self.assertEqual(len(x["jobs"]),3)
+        ids={j["embedded_job_id"] for j in x["jobs"]}
+        self.assertEqual(ids,{self.UK_ID,self.EU_ID,self.GOV_ID})
+        self.assertTrue(all(strategic_inventory_match(j) for j in x["jobs"]))
+        heads=[j for j in x["jobs"] if j["title"].startswith("Head")]
+        self.assertEqual(len({j["url"] for j in heads}),2)
+        self.assertIn("head-of-financial-crime-fraud-risk-"+self.EU_ID,heads[1]["url"])
+
+    def test_revolut_missing_or_truncated_index_never_proves_complete(self):
+        x=embedded_inventory("Revolut",self.revolut_page(4),"https://www.revolut.com/careers/")
+        self.assertFalse(x["complete"])
+        x=embedded_inventory("Revolut","<h1>We have 3 open positions</h1>",
+                             "https://www.revolut.com/careers/")
+        self.assertFalse(x["complete"])
+        self.assertEqual(x["jobs"],[])
+
+    def test_revolut_only_exact_official_detail_and_own_apply_form_pass(self):
+        candidate=embedded_inventory("Revolut",self.revolut_page(),"https://www.revolut.com/careers/")["jobs"][0]
+        ident=candidate["embedded_job_id"]
+        apply_url="https://www.revolut.com/careers/apply/"+ident+"/"
+        detail={"ok":True,"final":candidate["url"],"status":200,
+                "html":'<h1>Head of Financial Crime & Fraud Risk</h1>'
+                       '<a href="/careers/apply/'+ident+'/">Apply for this role</a>',
+                "text":"Head of Financial Crime & Fraud Risk Apply for this role"}
+        form={"ok":True,"final":apply_url,"status":200,
+              "html":'<h1>Apply</h1><form><input name="firstName"></form>'+ident,
+              "text":"Apply"}
+        with patch("scanner.fetch",side_effect=[detail,form]) as fetched:
+            result=validate_jobs([candidate],{job_key(candidate["url"])})[0]
+        self.assertTrue(result["apply_live"])
+        self.assertEqual(result["validation_reason"],"direct_live_and_current_board")
+        self.assertEqual(fetched.call_count,2)
+        with patch("scanner.fetch",side_effect=[detail,{**form,"final":"https://www.revolut.com/careers/"}]):
+            result=validate_jobs([candidate],{job_key(candidate["url"])})[0]
+        self.assertFalse(result["apply_live"])
+        with patch("scanner.fetch",return_value=detail) as fetched:
+            result=validate_jobs([candidate],set())[0]
+        self.assertFalse(result["apply_live"])
+        self.assertEqual(fetched.call_count,1)
+
+    def test_n26_live_apply_route_can_be_react_rendered_without_static_html_form(self):
+        candidate=embedded_inventory("N26",self.n26_page(),"https://n26.com/en-eu/careers")["jobs"][0]
+        ident=candidate["embedded_job_id"]
+        apply_url=candidate["url"]+"/apply"
+        detail={"ok":True,"final":candidate["url"],"status":200,
+                "html":'<h1>'+candidate["title"]+'</h1>'
+                       '<a href="/en-eu/careers/positions/'+ident+'/apply">Apply for this position</a>',
+                "text":candidate["title"]}
+        form={"ok":True,"final":apply_url,"status":200,
+              "html":'<title>Apply as a '+candidate["title"]+' at N26</title>'+ident,
+              "text":candidate["title"]}
+        with patch("scanner.fetch",side_effect=[detail,form]):
+            result=validate_jobs([candidate],{job_key(candidate["url"])})[0]
+        self.assertTrue(result["apply_live"])
+        with patch("scanner.fetch",side_effect=[detail,{**form,"status":404,"ok":False}]):
+            result=validate_jobs([candidate],{job_key(candidate["url"])})[0]
+        self.assertFalse(result["apply_live"])
 
 
 if __name__ == "__main__":
