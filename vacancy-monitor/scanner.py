@@ -593,11 +593,18 @@ def validate_wise_candidate(j,board_keys):
                     redirect=fetch(apply_url,"apply-live-check")
                     oneclick_url=("https://jobs.smartrecruiters.com/oneclick-ui/company/Wise/publication/"
                                   +uuid+"?dcr_ci=Wise")
-                    form=fetch(oneclick_url,"apply-live-check")
+                    publication_path=("/oneclick-ui/company/wise/publication/"+uuid).lower()
+                    redirected_path=urlparse(redirect["final"]).path.rstrip("/").lower()
+                    redirect_is_publication=(hostname(redirect["final"])==expected_host and
+                                             redirected_path==publication_path)
+                    # SmartRecruiters ?oga=true legitimately redirects straight to its
+                    # one-click form. Reject a generic board or a different publication.
+                    form=redirect if redirect_is_publication else fetch(oneclick_url,"apply-live-check")
                     apply_status=form["status"]
-                    path=urlparse(form["final"]).path.rstrip("/")
-                    same_publication=path.lower()==("/oneclick-ui/company/wise/publication/"+uuid).lower()
-                    apply_route=bool(redirect["ok"] and posting_path_ok(redirect["final"]) and
+                    path=urlparse(form["final"]).path.rstrip("/").lower()
+                    same_publication=path==publication_path
+                    apply_route=bool(redirect["ok"] and
+                                     (posting_path_ok(redirect["final"]) or redirect_is_publication) and
                                      exact_title(redirect["html"]) and
                                      form["ok"] and hostname(form["final"])==expected_host and
                                      same_publication and exact_title(form["html"]) and
