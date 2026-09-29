@@ -1,4 +1,4 @@
-name: Vacancy Monitor 105
+name: Vacancy Monitor 106
 
 on:
   schedule:
@@ -17,7 +17,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: vacancy-monitor-105
+  group: vacancy-monitor-106
   cancel-in-progress: false
 
 jobs:
@@ -35,7 +35,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r vacancy-monitor/requirements.txt
           python -m playwright install --with-deps chromium
-      - name: Scan all 105 organisations
+      - name: Scan all 106 organisations
         env:
           VACANCY_TIMEOUT: "10"
           VACANCY_WORKERS: "16"
@@ -52,8 +52,8 @@ jobs:
               raise SystemExit("latest.json missing")
           d=json.loads(p.read_text())
           assert d["schema_version"] >= 4
-          assert d["total_expected"] == 105
-          assert d["total_classified"] == 105
+          assert d["total_expected"] == 106
+          assert d["total_classified"] == 106
           assert d["complete"] is True
           assert d.get("qa", {}).get("passed") is True
           bad = [
