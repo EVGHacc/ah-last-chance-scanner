@@ -74,13 +74,38 @@ jobs:
           PY
       - name: Persist daily snapshot
         run: |
+          set -euo pipefail
           git config user.name "vacancy-monitor-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add vacancy-monitor/data
-          if git diff --cached --quiet; then
-            echo "No data changes"
-          else
-            git commit -m "Vacancy monitor snapshot $(date -u +%F)"
-            git pull --rebase origin main
-            git push
-          fi
+
+          # Save only this run's validated outputs before moving to the newest main.
+          snapshot_dir="$(mktemp -d)"
+          trap 'rm -rf "$snapshot_dir"' EXIT
+          cp vacancy-monitor/data/latest.json "$snapshot_dir/latest.json"
+          cp vacancy-monitor/data/coverage-summary.json "$snapshot_dir/coverage-summary.json"
+          run_date="$(python -c 'import json; print(json.load(open("vacancy-monitor/data/latest.json"))["run_date"])')"
+          cp "vacancy-monitor/data/$run_date.json" "$snapshot_dir/$run_date.json"
+
+          # Another run may have pushed a snapshot while this scan was running.
+          # Reapply complete JSON files to the fresh tip, never line-merge JSON.
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp "$snapshot_dir/latest.json" vacancy-monitor/data/latest.json
+            cp "$snapshot_dir/coverage-summary.json" vacancy-monitor/data/coverage-summary.json
+            cp "$snapshot_dir/$run_date.json" "vacancy-monitor/data/$run_date.json"
+            git add -- vacancy-monitor/data/latest.json vacancy-monitor/data/coverage-summary.json "vacancy-monitor/data/$run_date.json"
+            if git diff --cached --quiet; then
+              echo "Snapshot already matches origin/main"
+              exit 0
+            fi
+            git commit -m "Vacancy monitor snapshot $run_date"
+            if git push origin HEAD:main; then
+              echo "Snapshot persisted successfully"
+              exit 0
+            fi
+            echo "Concurrent push detected (attempt $attempt); retrying against latest main"
+            sleep "$attempt"
+          done
+          echo "::error::Snapshot could not be persisted after five attempts"
+          exit 1
