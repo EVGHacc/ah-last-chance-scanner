@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch
 
-from scanner import REL, SENIOR, extract_jobs, listing_evidence, coverage_from_evidence, validate_jobs, job_key, qa_snapshot, api_inventory, merge_validated_jobs, discover_official_ats, airwallex_id, airwallex_official_url, strategic_inventory_match, airwallex_id, airwallex_official_url, strategic_inventory_match
+from scanner import REL, SENIOR, extract_jobs, listing_evidence, coverage_from_evidence, validate_jobs, job_key, qa_snapshot, api_inventory, merge_validated_jobs, discover_official_ats, airwallex_id, airwallex_official_url, strategic_inventory_match, airwallex_validation_queue, airwallex_id, airwallex_official_url, strategic_inventory_match
 
 
 ORG = {"official_domain": "example.com", "allowed_domains": []}
@@ -405,6 +405,34 @@ class AirwallexCoverageTests(unittest.TestCase):
         self.assertFalse(j["apply_live"])
         self.assertEqual(j["validation_reason"],"detail_page_not_live")
 
+
+    def test_priority_queue_retains_all_candidates_and_selects_both_strong_roles(self):
+        critical=[{"title":"Senior Director, AML & Sanctions, Governance & Policy",
+                   "location":"UK - London","source_job_id":self.AML,
+                   "url":"https://careers.airwallex.com/job/"+self.AML+"/senior-director-aml-sanctions-governance-policy/"},
+                  {"title":"Senior Director EU & ME, MLRO","location":"NL - Amsterdam",
+                   "source_job_id":self.MLRO,
+                   "url":"https://careers.airwallex.com/job/"+self.MLRO+"/senior-director-eu-me-mlro/"}]
+        others=[{"title":"Manager, Regulatory Operations","location":"Singapore",
+                 "source_job_id":str(i),"url":"https://careers.airwallex.com/job/"+str(i)+"/"} for i in range(50)]
+        chosen,pending=airwallex_validation_queue(critical+others,capacity=25,priority_count=20)
+        self.assertEqual(len(chosen),25)
+        self.assertEqual(len(pending),27)
+        self.assertTrue({self.AML,self.MLRO}.issubset({j["source_job_id"] for j in chosen}))
+        self.assertTrue(all(not j["apply_live"] and j["validation_reason"]=="pending_direct_validation"
+                            for j in pending))
+        self.assertEqual(len({j["source_job_id"] for j in chosen+pending}),52)
+
+    def test_rate_limited_detail_is_not_reportable(self):
+        candidate=self.posting("Senior Director, AML & Sanctions, Governance & Policy",self.AML)
+        u=airwallex_official_url(candidate)
+        j={"title":candidate["title"],"url":u,"source_job_id":self.AML}
+        fetched={"ok":False,"final":u,"status":429,"text":"",
+                 "html":"<button>Submit application</button>"}
+        with patch("scanner.fetch",return_value=fetched):
+            result=validate_jobs([j],{job_key(u)})[0]
+        self.assertFalse(result["apply_live"])
+        self.assertEqual(result["validation_reason"],"rate_limited")
 
 
 if __name__ == "__main__":
