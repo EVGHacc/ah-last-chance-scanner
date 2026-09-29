@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "vacancy-monitor/scanner.py"
+      - "vacancy-monitor/embedded_inventory.py"
       - "vacancy-monitor/test_scanner.py"
       - "vacancy-monitor/probe_airwallex.py"
       - "vacancy-monitor/probe_visa.py"
@@ -29,7 +30,7 @@ jobs:
       - name: Install unit dependencies
         run: python -m pip install "requests>=2.32,<3" "beautifulsoup4>=4.12,<5"
       - name: Compile scanner and tests
-        run: python -m compileall -q vacancy-monitor/scanner.py vacancy-monitor/test_scanner.py
+        run: python -m compileall -q vacancy-monitor/scanner.py vacancy-monitor/embedded_inventory.py vacancy-monitor/test_scanner.py
       - name: Run independent regression tests
         run: python -m unittest discover -s vacancy-monitor -p 'test_*.py' -v
       - name: Probe Airwallex official inventory
