@@ -868,12 +868,15 @@ def browser_retry(rs):
     deadline=time.monotonic()+BROWSER_BUDGET
     with sync_playwright() as p:
         b=p.chromium.launch(headless=True); c=b.new_context(user_agent=UA,locale="en-GB")
-        for r in targets:
+        for index,r in enumerate(targets):
             if time.monotonic()>=deadline:
                 r["browser_recovery_incomplete"]="global_budget_exhausted"
                 continue
             started=time.monotonic()
-            org_deadline=min(deadline,started+BROWSER_ORG_BUDGET)
+            # Reserve a fair first-pass time slice for every unresolved organisation.
+            remaining=len(targets)-index
+            fair_share=max(7.0,(deadline-started)/remaining)
+            org_deadline=min(deadline,started+min(BROWSER_ORG_BUDGET,fair_share))
             o=r["_org"]; unresolved=r["status"]=="technical_failure"
             likely=sorted(r["listing_evidence"],key=lambda x:(0 if x.get("listing_like") else 1,0 if x.get("job_link_count",0) else 1,-x.get("job_link_count",0)))
             urls=[]
@@ -993,7 +996,23 @@ def main():
     with concurrent.futures.ThreadPoolExecutor(max_workers=WORKERS) as ex: rs=list(ex.map(scan,reg))
     print(json.dumps({"phase":"http_scan_complete","organisations":len(rs),"seconds":round(time.monotonic()-scan_started,1)}),flush=True)
     browser_retry(rs)
-    for r in rs:r.pop("_org",None)
+    for r in rs:
+        evidence=r.get("listing_evidence",[])
+        totals=[e.get("official_total") for e in evidence
+                if type(e.get("official_total")) is int]
+        found=[e.get("browser_inventory_count",0) for e in evidence]
+        found += [e.get("job_link_count",0) for e in evidence]
+        r["inventory_audit"]={
+            "official_total":max(totals) if totals else None,
+            "observed_job_links":max(found,default=0),
+            "relevant_candidates":len(r.get("jobs",[])),
+            "live_apply_verified":sum(bool(j.get("apply_live")) for j in r.get("jobs",[])),
+            "coverage":r["vacancy_coverage"],
+            "failure":r.get("browser_recovery_incomplete") or r.get("error") or
+                       ("inventory_not_proven_exhaustive" if r["vacancy_coverage"] in ("partial","unproven") else None),
+            "checked_at":r["checked_at"]
+        }
+        r.pop("_org",None)
     rs.sort(key=lambda x:(x["kind"],x["name"].lower()))
     ks=("official_site_scanned","official_ats_scanned","no_public_vacancy_board","technical_failure")
     counts={k:sum(r["status"]==k for r in rs) for k in ks}
