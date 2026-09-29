@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch
 
-from scanner import REL, SENIOR, extract_jobs, listing_evidence, coverage_from_evidence, validate_jobs, job_key, qa_snapshot, api_inventory, merge_validated_jobs
+from scanner import REL, SENIOR, extract_jobs, listing_evidence, coverage_from_evidence, validate_jobs, job_key, qa_snapshot, api_inventory, merge_validated_jobs, discover_official_ats
 
 
 ORG = {"official_domain": "example.com", "allowed_domains": []}
@@ -195,6 +195,30 @@ class OfficialInventoryTests(unittest.TestCase):
         result=merge_validated_jobs([prior],[new])
         self.assertEqual(len(result),2)
         self.assertTrue(all(j["apply_live"] for j in result))
+
+
+    def test_greenhouse_feed_discovered_only_from_official_site(self):
+        org=self.org("Tide")
+        official={"final":"https://example.com/careers/","html":'<a href="https://job-boards.greenhouse.io/tide">Open positions</a>'}
+        untrusted={"final":"https://unrelated.example.org/article",
+                   "html":'<a href="https://job-boards.greenhouse.io/othercompany">Jobs</a>'}
+        found=discover_official_ats([untrusted,official],org)
+        self.assertEqual([x["url"] for x in found],
+                         ["https://boards-api.greenhouse.io/v1/boards/tide/jobs"])
+
+    def test_eu_greenhouse_link_keeps_eu_region(self):
+        org=self.org("Surepay")
+        page={"final":"https://example.com/careers/",
+              "html":'<a href="https://job-boards.eu.greenhouse.io/surepay">Vacancies</a>'}
+        found=discover_official_ats([page],org)
+        self.assertEqual(found[0]["url"],"https://boards-api.eu.greenhouse.io/v1/boards/surepay/jobs")
+
+    def test_authoritative_lever_seed_can_be_discovered(self):
+        org=self.org("Finom")
+        org["seed_urls"]=["https://jobs.eu.lever.co/pnlfin/"]
+        page={"final":"https://jobs.eu.lever.co/pnlfin/","html":"<p>Official board</p>"}
+        found=discover_official_ats([page],org)
+        self.assertEqual(found[0]["url"],"https://api.eu.lever.co/v0/postings/pnlfin")
 
 
 if __name__ == "__main__":
