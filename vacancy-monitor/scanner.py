@@ -31,7 +31,12 @@ COMMON=("/careers","/jobs","/vacatures","/job-search","/open-roles","/positions"
 API_BOARDS={
     "Lloyds Banking Group":{"type":"workday","url":"https://lbg.wd3.myworkdayjobs.com/wday/cxs/lbg/LBG_Careers/jobs","board":"https://lbg.wd3.myworkdayjobs.com/LBG_Careers"},
     "Visa":{"type":"workday","url":"https://visa.wd5.myworkdayjobs.com/wday/cxs/visa/Visa/jobs","board":"https://visa.wd5.myworkdayjobs.com/Visa"},
-    "Zerohash":{"type":"breezy","url":"https://zero-hash.breezy.hr/json","board":"https://zero-hash.breezy.hr"}
+    "Zerohash":{"type":"breezy","url":"https://zero-hash.breezy.hr/json","board":"https://zero-hash.breezy.hr"},
+    # Public inventory endpoints linked from each organisation's official careers page.
+    "Tide":{"type":"greenhouse","url":"https://boards-api.greenhouse.io/v1/boards/tide/jobs","board":"https://job-boards.greenhouse.io/tide"},
+    "Surepay":{"type":"greenhouse","url":"https://boards-api.eu.greenhouse.io/v1/boards/surepay/jobs","board":"https://job-boards.eu.greenhouse.io/surepay"},
+    "Finom":{"type":"lever","url":"https://api.eu.lever.co/v0/postings/pnlfin","board":"https://jobs.eu.lever.co/pnlfin"},
+    "Varrlyn":{"type":"smartrecruiters","url":"https://api.smartrecruiters.com/v1/companies/Varrlyn/postings","board":"https://jobs.smartrecruiters.com/Varrlyn"}
 }
 STATIC_BOARDS={
     "Lime Search":{"url":"https://www.limesearch.nl/open-finance-posities","href":r"/positie/"},
@@ -89,37 +94,101 @@ def fetch(u,method="http"):
         return {"ok":False,"url":u,"final":u,"status":None,"html":"","text":"","method":method,"error":f"{type(e).__name__}: {e}","ms":int((time.monotonic()-t)*1000)}
 
 def api_inventory(o):
-    """Enumerate selected public ATS feeds and prove completeness against their own totals."""
+    """Exhaust the configured official ATS feed. A partial/failed API is never complete."""
     c=API_BOARDS.get(o["name"])
-    if not c: return None
+    if not c:return None
+    items=[]; official_total=None; pages=0; terminal=False; source=c["url"]
     try:
+        def get_json(url,params=None):
+            response=requests.get(url,headers=H,params=params,timeout=TIMEOUT)
+            response.raise_for_status()
+            return response.json()
         if c["type"]=="workday":
-            first=requests.post(c["url"],headers=H,json={"limit":20,"offset":0,"searchText":"","appliedFacets":{}},timeout=TIMEOUT)
-            first.raise_for_status(); d=first.json(); total=int(d.get("total",0)); batches=[d]
-            for offset in range(20,total,20):
-                rr=requests.post(c["url"],headers=H,json={"limit":20,"offset":offset,"searchText":"","appliedFacets":{}},timeout=TIMEOUT)
-                rr.raise_for_status(); batches.append(rr.json())
-            items=[]
-            for b in batches:
-                for j in b.get("jobPostings",[]):
-                    path=j.get("externalPath") or ""
-                    title=j.get("title") or ""
-                    if path and title:
-                        items.append({"title":title,"url":c["board"].rstrip("/")+path})
-            uniq={j["url"]:j for j in items}
-            return {"complete":bool(total and len(uniq)==total),"official_total":total,"jobs":list(uniq.values()),"source":c["url"],"error":None}
-        if c["type"]=="breezy":
-            rr=requests.get(c["url"],headers=H,timeout=TIMEOUT); rr.raise_for_status(); d=rr.json()
-            if not isinstance(d,list): raise ValueError("Expected Breezy positions list")
-            items=[]
-            for j in d:
-                title=j.get("name") or j.get("title") or ""; u=j.get("url") or ""
-                if title and u: items.append({"title":title,"url":u})
-            uniq={j["url"]:j for j in items}
-            return {"complete":len(uniq)==len(d),"official_total":len(d),"jobs":list(uniq.values()),"source":c["url"],"error":None}
+            first=requests.post(source,headers=H,json={"limit":20,"offset":0,"searchText":"","appliedFacets":{}},timeout=TIMEOUT)
+            first.raise_for_status();d=first.json()
+            if not isinstance(d,dict) or not isinstance(d.get("total"),int) or not isinstance(d.get("jobPostings"),list):
+                raise ValueError("Workday first page missing official total/list")
+            official_total=d["total"];batches=[d];pages=1
+            for offset in range(20,official_total,20):
+                rr=requests.post(source,headers=H,json={"limit":20,"offset":offset,"searchText":"","appliedFacets":{}},timeout=TIMEOUT)
+                rr.raise_for_status();batch=rr.json()
+                if batch.get("total")!=official_total or not isinstance(batch.get("jobPostings"),list):
+                    raise ValueError("Workday total changed or page missing postings")
+                batches.append(batch);pages+=1
+            raw=[j for batch in batches for j in batch["jobPostings"]]
+            for j in raw:
+                path=j.get("externalPath") or "";title=j.get("title") or ""
+                if title and path and path.startswith("/"):
+                    items.append({"title":title,"url":c["board"].rstrip("/")+path})
+            terminal=True
+        elif c["type"]=="breezy":
+            raw=get_json(source);pages=1
+            if not isinstance(raw,list):raise ValueError("Expected Breezy positions list")
+            official_total=len(raw)
+            for j in raw:
+                title=j.get("name") or j.get("title") or "";u=j.get("url") or ""
+                if title and u:items.append({"title":title,"url":u})
+            terminal=True
+        elif c["type"]=="greenhouse":
+            d=get_json(source);pages=1
+            if not isinstance(d,dict) or not isinstance(d.get("jobs"),list) or not isinstance(d.get("meta"),dict):
+                raise ValueError("Greenhouse jobs/meta absent")
+            official_total=d["meta"].get("total")
+            if not isinstance(official_total,int):raise ValueError("Greenhouse official total absent")
+            raw=d["jobs"]
+            for j in raw:
+                title=j.get("title") or "";u=j.get("absolute_url") or ""
+                if title and u:items.append({"title":title,"url":u})
+            terminal=True
+        elif c["type"]=="lever":
+            # Lever documents skip/limit pagination, with no global total field.
+            # A final short/empty page is proof of exhaustion, not an invented official total.
+            limit=100;raw=[];offset=0
+            for _ in range(30):
+                batch=get_json(source,{"mode":"json","skip":offset,"limit":limit});pages+=1
+                if not isinstance(batch,list):raise ValueError("Lever returned non-list")
+                raw.extend(batch);offset+=len(batch)
+                if len(batch)<limit:
+                    terminal=True;break
+            for j in raw:
+                title=j.get("text") or "";u=j.get("hostedUrl") or ""
+                if title and u:items.append({"title":title,"url":u})
+        elif c["type"]=="smartrecruiters":
+            limit=100;raw=[];offset=0
+            for _ in range(30):
+                d=get_json(source,{"limit":limit,"offset":offset,"destination":"PUBLIC"});pages+=1
+                if not isinstance(d,dict) or not isinstance(d.get("totalFound"),int) or not isinstance(d.get("content"),list):
+                    raise ValueError("SmartRecruiters totalFound/content absent")
+                if official_total is None:official_total=d["totalFound"]
+                if d["totalFound"]!=official_total:raise ValueError("SmartRecruiters total changed")
+                batch=d["content"];raw.extend(batch);offset+=len(batch)
+                if offset>=official_total:
+                    terminal=True;break
+                if not batch:raise ValueError("SmartRecruiters pagination stopped early")
+            for j in raw:
+                title=j.get("name") or "";ident=j.get("id") or ""
+                u=j.get("jobAdUrl") or j.get("postingUrl") or (c["board"].rstrip("/")+"/"+str(ident) if ident else "")
+                if title and u:items.append({"title":title,"url":u})
+        else:raise ValueError("Unknown ATS type")
+        urls=[j["url"] for j in items]
+        # A board may return employer-hosted links, but never accept a foreign employer.
+        if any(not allowed(u,o) or not (u.startswith(c["board"]) or hostname(u)==hostname(o["seed_urls"][0]) or
+                    hostname(u)==o["official_domain"] or hostname(u).endswith("."+o["official_domain"]) or
+                    any(hostname(u)==d or hostname(u).endswith("."+d) for d in o["allowed_domains"]))
+               for u in urls):
+            raise ValueError("ATS returned an unrelated employer or board URL")
+        unique={job_key(j["url"]):j for j in items}
+        expected=official_total if official_total is not None else len(items)
+        complete=bool(terminal and len(items)==len(unique)==expected)
+        if c["type"]=="lever" and not terminal:complete=False
+        return {"complete":complete,"official_total":official_total,"jobs":list(unique.values()),
+                "source":source,"pages":pages,"terminal":terminal,
+                "evidence_kind":"official_api_total" if official_total is not None else "official_api_exhausted",
+                "error":None if complete else "Incomplete or duplicate ATS listing"}
     except Exception as e:
-        return {"complete":False,"official_total":None,"jobs":[],"source":c["url"],"error":f"{type(e).__name__}: {e}"}
-    return None
+        return {"complete":False,"official_total":official_total,"jobs":[],"source":source,
+                "pages":pages,"terminal":False,"evidence_kind":"api_failure",
+                "error":f"{type(e).__name__}: {e}"}
 
 def static_inventory(o):
     """Exhaust small official boards, including explicit ?page=N pagination, before proving completeness."""
@@ -355,9 +424,13 @@ def scan(o):
         else: st="no_public_vacancy_board" if o["no_public_hint"] else "technical_failure"
     else: st="technical_failure"
     coverage=coverage_from_evidence(evidence,o)
+    if api:
+        evidence.append({"url":api["source"],"api_complete":api["complete"],"official_total":api["official_total"],
+                         "job_link_count":len(api["jobs"]),"listing_like":True,"static_complete_evidence":api["complete"],
+                         "api_pages":api["pages"],"api_terminal":api["terminal"],
+                         "evidence_kind":api["evidence_kind"],"api_error":api["error"]})
     if api and api.get("complete"):
         coverage="verified_complete"; st="official_ats_scanned"
-        evidence.append({"url":api["source"],"api_complete":True,"official_total":api["official_total"],"job_link_count":len(api["jobs"]),"listing_like":True,"static_complete_evidence":True})
         api_raw=[j for j in api["jobs"] if REL.search(j["title"]+" "+j["url"]) and (SENIOR.search(j["title"]) or re.search(r"\\b(mlro|cco|cro|sanctions counsel|regulatory counsel)\\b",j["title"],re.I))]
         api_audit=[j for j in api["jobs"] if AUDIT_REL.search(j["title"]+" "+j["url"]) and AUDIT_SENIOR.search(j["title"])]
         api_match={j["url"] for j in api_raw}
@@ -413,12 +486,9 @@ def browser_retry(rs):
     targets=[r for r in rs if r["status"]=="technical_failure" or r["vacancy_coverage"] in ("partial","unproven")]
     if not targets:return
     targets.sort(key=lambda r:(r["status"]!="technical_failure", r["vacancy_coverage"]!="partial",r["name"]))
-    # Fail closed: a requests-only listing or detail can be stale.
-    for r in targets:
-        for j in r.get("jobs",[]):
-            j["apply_live"]=False
-            j["board_present"]=False
-            j["validation_reason"]="browser_board_confirmation_required"
+    # Direct detail + current official-board proof from the HTTP phase is already
+    # valid for that job, even if the entire board cannot be exhaustively enumerated.
+    # Never revoke it just because a separate browser coverage audit times out.
     try: from playwright.sync_api import sync_playwright
     except Exception:return
     deadline=time.monotonic()+BROWSER_BUDGET
@@ -520,7 +590,12 @@ def browser_retry(rs):
                 matched_urls={j["url"] for j in raw}
                 missed=[j for j in audit if j["url"] not in matched_urls]
                 r["match_audit"]={"candidate_count":len(audit),"matched_count":len(audit)-len(missed),"missed":missed[:20]}
-                r["jobs"]=validate_jobs(raw,{job_key(url) for url in observed_links})
+                previous={job_key(j["url"]):j for j in r.get("jobs",[])}
+                for j in validate_jobs(raw,{job_key(url) for url in observed_links}):
+                    key=job_key(j["url"])
+                    if j.get("apply_live") or not previous.get(key,{}).get("apply_live"):
+                        previous[key]=j
+                r["jobs"]=list(previous.values())
             print(json.dumps({"phase":"browser_recovery","organisation":r["name"],"status":r["status"],"vacancy_coverage":r["vacancy_coverage"],"seconds":round(time.monotonic()-started,1),"remaining_global_seconds":round(deadline-time.monotonic(),1)},ensure_ascii=False),flush=True)
         c.close();b.close()
 
