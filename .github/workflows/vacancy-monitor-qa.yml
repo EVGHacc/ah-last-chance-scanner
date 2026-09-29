@@ -5,6 +5,7 @@ on:
     paths:
       - "vacancy-monitor/scanner.py"
       - "vacancy-monitor/test_scanner.py"
+      - "vacancy-monitor/probe_airwallex.py"
       - "vacancy-monitor/requirements.txt"
       - "vacancy-monitor/registry.tsv"
       - ".github/workflows/vacancy-monitor-qa.yml"
@@ -28,6 +29,8 @@ jobs:
         run: python -m compileall -q vacancy-monitor/scanner.py vacancy-monitor/test_scanner.py
       - name: Run independent regression tests
         run: python -m unittest discover -s vacancy-monitor -p 'test_*.py' -v
+      - name: Probe Airwallex official inventory
+        run: python vacancy-monitor/probe_airwallex.py
       - name: Check registry and mandatory employers
         run: |
           python - <<'PY'
