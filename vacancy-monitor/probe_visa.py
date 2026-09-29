@@ -32,7 +32,7 @@ for u in urls:
        j=r.json();p=j.get("jobPostingInfo",{})
        print("VISA_DETAIL_JSON","title",p.get("title"),"id",p.get("jobReqId"),
              "posted",p.get("postedOn"),"jobId",p.get("jobId"),"externalUrl",p.get("externalUrl"),
-             "keys",list(p)[:25],"hasDescription",bool(p.get("jobDescription")),flush=True)
+             "canApply",p.get("canApply"),"keys",list(p)[:25],"hasDescription",bool(p.get("jobDescription")),flush=True)
     else:
        soup=BeautifulSoup(r.text,"html.parser")
        print("VISA_DETAIL_HTML","title",soup.title.get_text(" ",strip=True) if soup.title else None,
