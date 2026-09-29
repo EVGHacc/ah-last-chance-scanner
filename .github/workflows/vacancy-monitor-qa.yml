@@ -6,6 +6,7 @@ on:
       - "vacancy-monitor/scanner.py"
       - "vacancy-monitor/test_scanner.py"
       - "vacancy-monitor/probe_airwallex.py"
+      - "vacancy-monitor/probe_visa.py"
       - "vacancy-monitor/requirements.txt"
       - "vacancy-monitor/registry.tsv"
       - ".github/workflows/vacancy-monitor-qa.yml"
@@ -31,6 +32,8 @@ jobs:
         run: python -m unittest discover -s vacancy-monitor -p 'test_*.py' -v
       - name: Probe Airwallex official inventory
         run: python vacancy-monitor/probe_airwallex.py
+      - name: Probe Visa official Workday vacancy and pagination
+        run: python vacancy-monitor/probe_visa.py
       - name: Check registry and mandatory employers
         run: |
           python - <<'PY'
