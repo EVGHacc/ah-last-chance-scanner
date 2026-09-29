@@ -144,6 +144,29 @@ class OfficialInventoryTests(unittest.TestCase):
         self.assertEqual(len(result["jobs"]),2)
         self.assertEqual(result["evidence_kind"],"official_api_total")
 
+    def test_greenhouse_exhausted_feed_without_optional_meta(self):
+        url="https://job-boards.greenhouse.io/tide/jobs/"
+        jobs=[{"title":"Head of Compliance","absolute_url":url+"1"},
+              {"title":"Director Risk","absolute_url":url+"2"}]
+        with patch("scanner.requests.get",return_value=self.Reply({"jobs":jobs})):
+            result=api_inventory(self.org("Tide"))
+        self.assertTrue(result["complete"])
+        self.assertTrue(result["terminal"])
+        self.assertIsNone(result["official_total"])
+        self.assertEqual(result["evidence_kind"],"official_api_exhausted")
+        self.assertEqual(len(result["jobs"]),2)
+
+    def test_greenhouse_missing_meta_does_not_accept_empty_or_malformed_feed(self):
+        url="https://job-boards.greenhouse.io/tide/jobs/1"
+        payloads=[{"jobs":[]},
+                  {"jobs":[{"title":"Director Risk"}]},
+                  {"jobs":[{"title":"Director Risk","absolute_url":url},
+                           {"title":"Director Risk","absolute_url":url}]}]
+        for payload in payloads:
+            with self.subTest(payload=payload):
+                with patch("scanner.requests.get",return_value=self.Reply(payload)):
+                    self.assertFalse(api_inventory(self.org("Tide"))["complete"])
+
     def test_greenhouse_partial_does_not_claim_complete(self):
         url="https://job-boards.greenhouse.io/tide/jobs/1"
         payload={"jobs":[{"title":"Head of Compliance","absolute_url":url}],"meta":{"total":2}}
