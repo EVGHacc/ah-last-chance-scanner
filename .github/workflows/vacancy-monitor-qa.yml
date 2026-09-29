@@ -44,6 +44,32 @@ jobs:
         run: python vacancy-monitor/probe_n26_revolut_inventory.py
       - name: Probe Wise official board and four direct vacancy URLs
         run: python vacancy-monitor/probe_wise.py
+      - name: Verify the six user-reported vacancy IDs in live official indexes
+        run: |
+          python - <<'PY'
+          import sys,requests
+          sys.path.insert(0,"vacancy-monitor")
+          from embedded_inventory import embedded_inventory
+          headers={"User-Agent":"Mozilla/5.0 Chrome/128"}
+          cases=(("N26","https://n26.com/en-eu/careers",
+                  {"7845376"}),
+                 ("Revolut","https://www.revolut.com/careers/",
+                  {"42af5ac2-1c89-44ee-b0eb-bad4124ec2ab",
+                   "6777d9e3-caf3-48e0-93ef-80e39230b1c7",
+                   "34647acd-dc06-4897-a30a-f1cca93abc87",
+                   "ffdf2318-a97f-4a71-93ed-bc3e00ea2f12",
+                   "158b9187-b51d-4674-9409-510565ca8a3b"}))
+          for name,url,required in cases:
+              response=requests.get(url,headers=headers,timeout=15)
+              response.raise_for_status()
+              result=embedded_inventory(name,response.text,response.url)
+              assert result is not None, (name,"no official first-party index")
+              found={job["embedded_job_id"] for job in result["jobs"]}
+              assert required <= found, (name,"missing IDs",required-found)
+              if name=="Revolut":assert len(found)==len(result["jobs"]),"duplicate vacancy IDs"
+              print(name,"listed",len(found),"advertised",result["official_total"],
+                    "complete",result["complete"],"confirmed IDs",sorted(required),flush=True)
+          PY
       - name: Check registry and mandatory employers
         run: |
           python - <<'PY'
