@@ -29,7 +29,7 @@ for u in urls:
    arr=j.get("jobs",[]) if isinstance(j,dict) else []
    print("JSON", "keys",list(j)[:10] if isinstance(j,dict) else type(j).__name__,
          "jobs",len(arr),"titles",[(x.get("title"),x.get("jobUrl"),x.get("applyUrl")) for x in arr[:4]],
-         "targetHits",[(x.get("title"),x.get("jobUrl")) for x in arr if any(t in json.dumps(x) for t in targets)],flush=True)
+         "targetHits",[(x.get("title"),x.get("jobUrl"),x.get("location"),x.get("department"),x.get("team"),x.get("isListed"),list(x.keys())) for x in arr if any(t in json.dumps(x) for t in targets)],flush=True)
   else:
    soup=BeautifulSoup(body,"html.parser")
    entries=[(a.get_text(" ",strip=True)[:90],urljoin(r.url,a["href"]))
@@ -43,31 +43,3 @@ for u in urls:
  except Exception as e:
   print("PROBE ERROR",u,type(e).__name__,str(e)[:170],flush=True)
 
-# Independently walk the complete first-party job catalogue. Never infer total
-# listings from the last page link without actually requesting every page.
-def scrape_page(number):
- u="https://careers.airwallex.com/jobs/"
- if number>1:u+=f"?e-page-9075d2b={number}"
- try:
-  r=requests.get(u,headers=H,timeout=12);r.raise_for_status()
-  soup=BeautifulSoup(r.text,"html.parser")
-  jobs={urljoin(r.url,a["href"]) for a in soup.find_all("a",href=True)
-        if re.search(r"/job/[a-f0-9-]{36}/",a["href"],re.I)}
-  return number, r.url, jobs, None
- except Exception as e:return number,u,set(),str(e)[:160]
-
-first=scrape_page(1)
-page_text=requests.get("https://careers.airwallex.com/jobs/",headers=H,timeout=12).text
-page_numbers=[int(i) for i in re.findall(r"e-page-9075d2b=(\d+)",page_text)]
-last=max(page_numbers or [1])
-if last>120:raise RuntimeError("Suspicious Airwallex page count")
-with ThreadPoolExecutor(max_workers=10) as executor:
- results=list(executor.map(scrape_page,range(1,last+1)))
-ids={re.search(r"/job/([a-f0-9-]{36})/",u,re.I).group(1):u for _,_,jobs,_ in results
-     for u in jobs if re.search(r"/job/([a-f0-9-]{36})/",u,re.I)}
-failures=[(page,error) for page,_,_,error in results if error]
-print("FIRST_PARTY_EXHAUSTIVE","advertised_last",last,"pages_fetched",len(results),
-      "unique_job_ids",len(ids),"per_page_min",min(len(x[2]) for x in results),
-      "per_page_max",max(len(x[2]) for x in results),
-      "failed_pages",failures[:8],
-      "target_matches",[(t,ids.get(t)) for t in targets],flush=True)
