@@ -3,7 +3,7 @@ import unittest
 from unittest.mock import patch
 
 from embedded_inventory import embedded_inventory
-from scanner import REL, SENIOR, extract_jobs, listing_evidence, coverage_from_evidence, validate_jobs, job_key, qa_snapshot, api_inventory, merge_validated_jobs, discover_official_ats, airwallex_id, airwallex_official_url, strategic_inventory_match, airwallex_validation_queue, validate_workday_candidate, airwallex_id, airwallex_official_url, strategic_inventory_match
+from scanner import REL, SENIOR, extract_jobs, listing_evidence, coverage_from_evidence, validate_jobs, job_key, qa_snapshot, api_inventory, merge_validated_jobs, discover_official_ats, airwallex_id, airwallex_official_url, strategic_inventory_match, airwallex_validation_queue, validate_workday_candidate, airwallex_id, airwallex_official_url, strategic_inventory_match, validate_wise_candidate
 
 
 ORG = {"official_domain": "example.com", "allowed_domains": []}
@@ -639,6 +639,104 @@ class FirstPartyEmbeddedIndexTests(unittest.TestCase):
         with patch("scanner.fetch",side_effect=[detail,{**form,"status":404,"ok":False}]):
             result=validate_jobs([candidate],{job_key(candidate["url"])})[0]
         self.assertFalse(result["apply_live"])
+
+
+class WisePublicATSRegressionTests(unittest.TestCase):
+    IDS={
+        "Compliance Lead (Wise Platform)":("744000145714264","a9d42bdf-1da9-47df-b2dc-fb2a8156416b"),
+        "Compliance Manager: Group Regulatory Compliance":("744000141493699","b7061501-45d0-4e4e-b1cb-b5a9826d2f55"),
+        "Senior Risk Manager":("744000141874569","be4296e6-6375-42a4-8ffc-f63099a2410f"),
+        "Group Lead - Assets Risk":("744000139018719","32871e47-8380-425b-a398-0cbc59a8e133"),
+    }
+    class Reply:
+        def __init__(self,data,status=200,url="https://api.smartrecruiters.com/v1/companies/Wise/postings/744000145714264"):
+            self.data=data;self.status_code=status;self.url=url
+        def raise_for_status(self):
+            if self.status_code>=400:raise RuntimeError("HTTP "+str(self.status_code))
+        def json(self):return self.data
+    @staticmethod
+    def org():
+        return {"name":"Wise","official_domain":"wise.jobs","allowed_domains":[],
+                "seed_urls":["https://www.wise.jobs/"],"no_public_hint":False}
+    @staticmethod
+    def item(title):
+        ident,uuid=WisePublicATSRegressionTests.IDS[title]
+        return {"id":ident,"name":title,"uuid":uuid,"releasedDate":"2026-08-26T11:19:13.644Z",
+                "location":{"city":"London"}}
+    @staticmethod
+    def candidate():
+        title="Compliance Lead (Wise Platform)"
+        ident,uuid=WisePublicATSRegressionTests.IDS[title]
+        return {"title":title,"url":f"https://jobs.smartrecruiters.com/Wise/{ident}",
+                "smartrecruiters_posting_id":ident,"posting_uuid":uuid,
+                "smartrecruiters_detail_url":f"https://api.smartrecruiters.com/v1/companies/Wise/postings/{ident}"}
+    @staticmethod
+    def details(j,**updates):
+        d={"id":j["smartrecruiters_posting_id"],"uuid":j["posting_uuid"],
+           "name":j["title"],"postingUrl":j["url"]+"-compliance-lead-wise-platform-",
+           "applyUrl":j["url"]+"-compliance-lead-wise-platform-?oga=true"}
+        d.update(updates);return d
+    @staticmethod
+    def fetched(url,title=None,status=200):
+        title=title or "Compliance Lead (Wise Platform)"
+        return {"ok":status==200,"status":status,"final":url,"html":f"<title>{title} - Wise</title>",
+                "text":title,"error":None}
+
+    def test_complete_official_wise_inventory_finds_all_four_supplied_roles(self):
+        posts=[self.item(t) for t in self.IDS]
+        with patch("scanner.requests.get",return_value=self.Reply(
+                {"totalFound":4,"content":posts})):
+            inv=api_inventory(self.org())
+        self.assertTrue(inv["complete"])
+        self.assertEqual(inv["official_total"],4)
+        self.assertEqual({j["title"] for j in inv["jobs"]},set(self.IDS))
+        self.assertTrue(all(j["smartrecruiters_detail_url"].endswith("/"+j["smartrecruiters_posting_id"]) for j in inv["jobs"]))
+        self.assertTrue(all(REL.search(j["title"]+" "+j["url"]) and SENIOR.search(j["title"]) for j in inv["jobs"]))
+
+    def test_wise_official_api_and_matching_publication_allows_live_match(self):
+        j=self.candidate();d=self.details(j)
+        redirect_url=d["applyUrl"];form_url=("https://jobs.smartrecruiters.com/oneclick-ui/company/Wise/publication/"+
+                                                j["posting_uuid"]+"?dcr_ci=Wise")
+        with patch("scanner.requests.get",return_value=self.Reply(d)),patch(
+            "scanner.fetch",side_effect=[
+                self.fetched(j["url"]),self.fetched(redirect_url),self.fetched(form_url)]):
+            result=validate_jobs([j],{job_key(j["url"])})[0]
+        self.assertTrue(result["live"])
+        self.assertTrue(result["board_present"])
+        self.assertTrue(result["apply_live"])
+        self.assertEqual(result["validation_reason"],"direct_live_and_current_board")
+
+    def test_missing_current_inventory_proof_rejects_linked_detail(self):
+        j=self.candidate();d=self.details(j)
+        with patch("scanner.requests.get",return_value=self.Reply(d)),patch("scanner.fetch") as fetch:
+            result=validate_jobs([j],set())[0]
+        self.assertFalse(result["apply_live"])
+        self.assertEqual(result["validation_reason"],"not_on_current_board")
+        fetch.assert_not_called()
+
+    def test_wise_closed_or_changed_ats_identity_fails_closed(self):
+        j=self.candidate()
+        for changes in ({"uuid":"00000000-0000-0000-0000-000000000000"},
+                        {"id":"0"},{"name":"Unrelated vacancy"},{"applyUrl":""},
+                        {"postingUrl":"https://jobs.smartrecruiters.com/Other/123"}):
+            with self.subTest(changes=changes),patch(
+                "scanner.requests.get",return_value=self.Reply(self.details(j,**changes))),patch(
+                "scanner.fetch") as fetch:
+                result=validate_jobs([j],{job_key(j["url"])})[0]
+            self.assertFalse(result["apply_live"])
+            fetch.assert_not_called()
+
+    def test_application_generic_redirect_or_wrong_role_fails_closed(self):
+        j=self.candidate();d=self.details(j)
+        form_url="https://jobs.smartrecruiters.com/oneclick-ui/company/Wise/publication/"+j["posting_uuid"]+"?dcr_ci=Wise"
+        for form in (self.fetched("https://jobs.smartrecruiters.com/Wise"),
+                     self.fetched(form_url,"Unrelated vacancy"),
+                     self.fetched(form_url,status=404)):
+            with self.subTest(form=form),patch("scanner.requests.get",return_value=self.Reply(d)),patch(
+                "scanner.fetch",side_effect=[self.fetched(j["url"]),self.fetched(d["applyUrl"]),form]):
+                result=validate_jobs([j],{job_key(j["url"])})[0]
+            self.assertFalse(result["apply_live"])
+            self.assertEqual(result["validation_reason"],"no_live_apply_control")
 
 
 if __name__ == "__main__":
