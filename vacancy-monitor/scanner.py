@@ -487,7 +487,8 @@ def scan(o):
         api_match={j["url"] for j in api_raw}
         api_missed=[j for j in api_audit if j["url"] not in api_match]
         audit_unique=api_audit; audit_missed=api_missed
-        if api_raw: jobs=validate_jobs(api_raw,{job_key(j["url"]) for j in api["jobs"]})
+        # The exhaustive official feed supersedes any incidental/stale page candidates.
+        jobs=validate_jobs(api_raw,{job_key(j["url"]) for j in api["jobs"]})
 
     if static and static.get("complete"):
         coverage="verified_complete"; st="official_site_scanned"
@@ -497,7 +498,8 @@ def scan(o):
         static_audit=[j for j in static["jobs"] if AUDIT_REL.search(j["title"]+" "+j["url"]) and AUDIT_SENIOR.search(j["title"])]
         matched={j["url"] for j in static_raw}; missed=[j for j in static_audit if j["url"] not in matched]
         audit_unique=static_audit; audit_missed=missed
-        if static_raw: jobs=validate_jobs(static_raw,{job_key(j["url"]) for j in static["jobs"]})
+        # The exhausted official listing supersedes incidental page candidates.
+        jobs=validate_jobs(static_raw,{job_key(j["url"]) for j in static["jobs"]})
 
     return {"name":o["name"],"kind":o["kind"],"status":st,"vacancy_coverage":coverage,
             "listing_evidence":evidence,
