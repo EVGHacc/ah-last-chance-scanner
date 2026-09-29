@@ -65,3 +65,22 @@ for ident, slug in (
          "id_in_response",ident in r.text,
          "apply_links",applies[:5],flush=True)
   except Exception as e:print("DETAIL_PROBE_ERR",ident,hosturl,str(e)[:160],flush=True)
+
+
+# Run the exact new adapter and direct-detail validator against current public data.
+from scanner import load_registry, api_inventory, strategic_inventory_match, validate_jobs, job_key
+org=next(x for x in load_registry() if x["name"]=="Airwallex")
+feed=api_inventory(org)
+by_id={j["source_job_id"]:j for j in feed["jobs"]} if feed else {}
+sample=[by_id[t] for t in ("ad877e85-6c71-4e6b-afc7-3d87b9488adb",
+                         "15a5d8b4-a5fd-4b4d-a933-387702221b75") if t in by_id]
+checks=validate_jobs(sample,{job_key(j["url"]) for j in feed["jobs"]} if feed else set())
+print("AIRWALLEX_ADAPTER_SMOKE",
+      "api_complete",feed["complete"] if feed else None,
+      "published_count",feed["official_total"] if feed else None,
+      "relevant_count",sum(strategic_inventory_match(j) for j in feed["jobs"]) if feed else None,
+      "error",feed["error"] if feed else "no result",
+      "two_strong_ids_found",len(sample),
+      "expired_id_published","004af48d-83e6-44c0-9ed0-493142195481" in by_id,
+      "validation",[(j["title"],j["apply_live"],j["validation_reason"],j["url"],j["http_status"]) for j in checks],
+      flush=True)
