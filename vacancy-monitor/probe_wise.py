@@ -34,3 +34,29 @@ for label,url in URLS.items():
         "forms",len(s.select("form")),"applyControls",ctl,"scriptSources",scripts,
         "snippets",snippets[:7],flush=True)
  except Exception as e:print("WISE_PROBE_ERROR",label,type(e).__name__,str(e)[:170],flush=True)
+
+# Inspect first-party paging controls and the exact same-vacancy apply workflow,
+# without POSTing data or submitting an application.
+page=requests.get(URLS["BOARD"],headers=H,timeout=13)
+sp=BeautifulSoup(page.text,"html.parser")
+for a in sp.find_all(["a","button","input","select","form"]):
+ attrs={k:v for k,v in a.attrs.items() if k in ("href","action","name","value","data-page","data-url","data-page-number","id","class","type","onclick")}
+ label=a.get_text(" ",strip=True)[:80]
+ if re.search(r"next|page|pagination|results per|view more|show more|load more|search",label+" "+str(attrs),re.I):
+  print("WISE_PAGING",a.name,label,attrs,flush=True)
+for term in ("window.siteId","attrax-vacancy", "pagination", "nextPage", "pageNo", "pageSize", "searchResults", "/Vacancies/", "loadMore", "Take"):
+ matches=list(re.finditer(re.escape(term),page.text,re.I))
+ print("WISE_TERM",term,"count",len(matches),"sample",
+       [page.text[max(0,m.start()-160):m.start()+300].replace("\n"," ")[:460] for m in matches[-3:]],flush=True)
+for label,ident in (("LEAD","3054"),("MANAGER","3928"),("SENIOR_RISK","3822"),("ASSETS","3861")):
+ u="https://wise.jobs/Workflow?workflowId=e845dd41-c192-48c4-80f2-85eafdf6039b&vacancyId="+ident
+ try:
+  r=requests.get(u,headers=H,timeout=13)
+  soup=BeautifulSoup(r.text,"html.parser")
+  print("WISE_APPLY",label,r.status_code,r.url,"bytes",len(r.content),
+        "title",soup.title.get_text(" ",strip=True)[:90] if soup.title else "",
+        "identity",ident in r.text,"forms",len(soup.select("form")),"fields",len(soup.select("input")),
+        "closed",bool(re.search(r"job closed|vacancy closed|no longer available|applications closed|expired|not found",soup.get_text(" ",strip=True),re.I)),
+        "submit_labels",[x.get_text(" ",strip=True)[:40] for x in soup.select("button,input[type=submit]")][-6:],
+        flush=True)
+ except Exception as e:print("WISE_APPLY_ERROR",label,type(e).__name__,str(e)[:180],flush=True)
