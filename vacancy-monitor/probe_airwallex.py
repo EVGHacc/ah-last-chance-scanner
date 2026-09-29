@@ -3,6 +3,7 @@
 import json, re, requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse, parse_qs
+from concurrent.futures import ThreadPoolExecutor
 
 H={"User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/128 Safari/537.36"}
 urls=[
@@ -41,3 +42,32 @@ for u in urls:
          "scriptSrc",[x.get("src","") for x in soup.find_all("script",src=True) if re.search(r"(job|career|app)",x.get("src",""),re.I)][:8],flush=True)
  except Exception as e:
   print("PROBE ERROR",u,type(e).__name__,str(e)[:170],flush=True)
+
+# Independently walk the complete first-party job catalogue. Never infer total
+# listings from the last page link without actually requesting every page.
+def scrape_page(number):
+ u="https://careers.airwallex.com/jobs/"
+ if number>1:u+=f"?e-page-9075d2b={number}"
+ try:
+  r=requests.get(u,headers=H,timeout=12);r.raise_for_status()
+  soup=BeautifulSoup(r.text,"html.parser")
+  jobs={urljoin(r.url,a["href"]) for a in soup.find_all("a",href=True)
+        if re.search(r"/job/[a-f0-9-]{36}/",a["href"],re.I)}
+  return number, r.url, jobs, None
+ except Exception as e:return number,u,set(),str(e)[:160]
+
+first=scrape_page(1)
+page_text=requests.get("https://careers.airwallex.com/jobs/",headers=H,timeout=12).text
+page_numbers=[int(i) for i in re.findall(r"e-page-9075d2b=(\d+)",page_text)]
+last=max(page_numbers or [1])
+if last>120:raise RuntimeError("Suspicious Airwallex page count")
+with ThreadPoolExecutor(max_workers=10) as executor:
+ results=list(executor.map(scrape_page,range(1,last+1)))
+ids={re.search(r"/job/([a-f0-9-]{36})/",u,re.I).group(1):u for _,_,jobs,_ in results
+     for u in jobs if re.search(r"/job/([a-f0-9-]{36})/",u,re.I)}
+failures=[(page,error) for page,_,_,error in results if error]
+print("FIRST_PARTY_EXHAUSTIVE","advertised_last",last,"pages_fetched",len(results),
+      "unique_job_ids",len(ids),"per_page_min",min(len(x[2]) for x in results),
+      "per_page_max",max(len(x[2]) for x in results),
+      "failed_pages",failures[:8],
+      "target_matches",[(t,ids.get(t)) for t in targets],flush=True)
