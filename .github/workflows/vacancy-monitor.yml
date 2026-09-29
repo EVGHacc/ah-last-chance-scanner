@@ -18,7 +18,8 @@ permissions:
 
 concurrency:
   group: vacancy-monitor-106
-  cancel-in-progress: false
+  # A newer source-code scan supersedes older scans; do not let a stale run block fixes.
+  cancel-in-progress: true
 
 jobs:
   scan:
@@ -55,6 +56,9 @@ jobs:
           assert d["total_expected"] == 106
           assert d["total_classified"] == 106
           assert d["complete"] is True
+          assert len(d["organisations"]) == 106
+          assert all(isinstance(o.get("inventory_audit"), dict) for o in d["organisations"]), "missing per-source inventory audit"
+          assert all(o["inventory_audit"].get("checked_at") for o in d["organisations"]), "audit timestamps missing"
           assert d.get("qa", {}).get("passed") is True
           bad = [
               (j.get("organisation"), j.get("title"), j.get("url"))
