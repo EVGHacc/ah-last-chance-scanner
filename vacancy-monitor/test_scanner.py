@@ -706,6 +706,27 @@ class WisePublicATSRegressionTests(unittest.TestCase):
         self.assertTrue(result["apply_live"])
         self.assertEqual(result["validation_reason"],"direct_live_and_current_board")
 
+    def test_actual_wise_oga_redirect_to_matching_oneclick_is_valid(self):
+        j=self.candidate();d=self.details(j)
+        oneclick=("https://jobs.smartrecruiters.com/oneclick-ui/company/Wise/publication/"+
+                  j["posting_uuid"]+"?dcr_ci=Wise")
+        with patch("scanner.requests.get",return_value=self.Reply(d)),patch(
+            "scanner.fetch",side_effect=[self.fetched(j["url"]),self.fetched(oneclick)]) as fetch:
+            result=validate_jobs([j],{job_key(j["url"])})[0]
+        self.assertTrue(result["apply_live"])
+        self.assertEqual(result["apply_http_status"],200)
+        self.assertEqual(fetch.call_count,2)
+
+    def test_wise_wrong_oneclick_publication_redirect_fails(self):
+        j=self.candidate();d=self.details(j)
+        wrong="https://jobs.smartrecruiters.com/oneclick-ui/company/Wise/publication/00000000-0000-0000-0000-000000000000?dcr_ci=Wise"
+        correct=("https://jobs.smartrecruiters.com/oneclick-ui/company/Wise/publication/"+
+                  j["posting_uuid"]+"?dcr_ci=Wise")
+        with patch("scanner.requests.get",return_value=self.Reply(d)),patch(
+            "scanner.fetch",side_effect=[self.fetched(j["url"]),self.fetched(wrong),self.fetched(correct)]):
+            result=validate_jobs([j],{job_key(j["url"])})[0]
+        self.assertFalse(result["apply_live"])
+
     def test_missing_current_inventory_proof_rejects_linked_detail(self):
         j=self.candidate();d=self.details(j)
         with patch("scanner.requests.get",return_value=self.Reply(d)),patch("scanner.fetch") as fetch:
