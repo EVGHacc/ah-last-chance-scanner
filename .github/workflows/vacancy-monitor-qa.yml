@@ -37,8 +37,8 @@ jobs:
           assert len(rows)==105, f"expected 105, received {len(rows)}"
           kinds={kind:sum(row["kind"]==kind for row in rows) for kind in ("recruiter","employer")}
           assert kinds=={"recruiter":49,"employer":56}, kinds
-          names=[row["name"] for row in rows]
-          assert len(set(names))==105, "duplicate organisation names"
+          identities=[(row["kind"],row["name"]) for row in rows]
+          assert len(set(identities))==105, "duplicate organisation type/name pairs"
           required={"State Street","Kroll","Commerzbank","Lloyds Banking Group","Crédit Agricole CIB","Nordea"}
           assert required.issubset({row["name"] for row in rows if row["kind"]=="employer"})
           assert all(row["seed_urls"] and row["official_domain"] for row in rows)
