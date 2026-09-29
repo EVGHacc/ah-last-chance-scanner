@@ -173,14 +173,23 @@ def api_inventory(o,c=None):
             for offset in range(20,official_total,20):
                 rr=requests.post(source,headers=H,json={"limit":20,"offset":offset,"searchText":"","appliedFacets":{}},timeout=TIMEOUT)
                 rr.raise_for_status();batch=rr.json()
-                if batch.get("total")!=official_total or not isinstance(batch.get("jobPostings"),list):
+                # Visa Workday returns total=0 on continuation pages even while
+                # providing a full page. The first page's total is authoritative;
+                # completeness still requires exactly that many unique postings.
+                postings=batch.get("jobPostings")
+                if batch.get("total") not in (official_total,0) or not isinstance(postings,list):
                     raise ValueError("Workday total changed or page missing postings")
+                if not postings or len(postings)>20:
+                    raise ValueError("Workday pagination incomplete or overfilled")
                 batches.append(batch);pages+=1
             raw=[j for batch in batches for j in batch["jobPostings"]]
             for j in raw:
                 path=j.get("externalPath") or "";title=j.get("title") or ""
-                if title and path and path.startswith("/"):
-                    items.append({"title":title,"url":c["board"].rstrip("/")+path})
+                if title and path and path.startswith("/job/"):
+                    ident=re.search(r"_([A-Z]{2,5}[0-9]{5,}[A-Z0-9]*)$",path)
+                    items.append({"title":title,"url":c["board"].rstrip("/")+path,
+                                  "workday_detail_url":source.rsplit("/jobs",1)[0]+path,
+                                  "workday_job_id":ident.group(1) if ident else None})
             terminal=True
         elif c["type"]=="breezy":
             raw=get_json(source);pages=1
@@ -447,11 +456,51 @@ def has_apply_control(html):
         return True
     return False
 
+def validate_workday_candidate(j,board_keys):
+    """Require live official Workday detail, matching requisition and working apply route."""
+    out=dict(j);requested=j["url"]
+    board_present=job_key(requested) in board_keys
+    direct_live=False;apply_route=False;status=None;final=requested;reason="detail_page_not_live"
+    try:
+        api_url=j["workday_detail_url"]
+        response=requests.get(api_url,headers=H,timeout=TIMEOUT,allow_redirects=True)
+        status=response.status_code
+        data=response.json() if status==200 else {}
+        info=data.get("jobPostingInfo") if isinstance(data,dict) else None
+        if isinstance(info,dict):
+            title_match=str(info.get("title","")).strip().casefold()==j["title"].strip().casefold()
+            id_match=bool(j.get("workday_job_id") and info.get("jobReqId")==j["workday_job_id"])
+            official_path=urlparse(info.get("externalUrl") or "").path
+            path_match=official_path==urlparse(requested).path
+            direct_live=bool(title_match and id_match and path_match and info.get("canApply") is True)
+        if direct_live and board_present:
+            apply_url=requested.rstrip("/")+"/apply"
+            apply_response=requests.get(apply_url,headers=H,timeout=TIMEOUT,allow_redirects=True)
+            apply_route=bool(apply_response.status_code==200 and
+                             urlparse(apply_response.url).path.rstrip("/")==urlparse(apply_url).path.rstrip("/"))
+        else:
+            apply_url=None
+        if direct_live and board_present and apply_route:reason="direct_live_and_current_board"
+        elif not board_present:reason="not_on_current_board"
+        elif direct_live and not apply_route:reason="no_live_apply_control"
+    except Exception as exc:
+        reason="workday_detail_or_apply_error:"+type(exc).__name__
+        apply_url=None
+    out.update({"url":final,"live":direct_live,"board_present":board_present,
+                "apply_live":bool(direct_live and board_present and apply_route),
+                "validation_reason":reason,"http_status":status,"checked_at":iso(),
+                "validation_source":"official_workday_detail_and_apply",
+                "apply_url":apply_url})
+    return out
+
+
 def validate_jobs(js,board_keys=None,max_workers=6):
     """Live-check every candidate in bounded parallel requests; never infer liveness from a board alone."""
     board_keys=set(board_keys or ())
     def verify(candidate):
         j=dict(candidate)
+        if j.get("workday_detail_url"):
+            return validate_workday_candidate(j,board_keys)
         requested=j["url"]; f=fetch(requested,"job-live-check"); text=f["text"]
         identity_ok=not j.get("source_job_id") or airwallex_id(f["final"])==j["source_job_id"]
         direct_live=f["ok"] and identity_ok and (j["title"].lower()[:24] in text.lower() or len(j["title"])<12)
