@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import csv, json, os, re, time, concurrent.futures
+import csv, json, os, re, time, concurrent.futures, unicodedata
 from pathlib import Path
 from urllib.parse import urljoin, urlparse, quote_plus, parse_qs, unquote, urlencode, urlunparse
 from datetime import datetime, timezone
@@ -36,7 +36,8 @@ API_BOARDS={
     "Tide":{"type":"greenhouse","url":"https://boards-api.greenhouse.io/v1/boards/tide/jobs","board":"https://job-boards.greenhouse.io/tide"},
     "Surepay":{"type":"greenhouse","url":"https://boards-api.eu.greenhouse.io/v1/boards/surepay/jobs","board":"https://job-boards.eu.greenhouse.io/surepay"},
     "Finom":{"type":"lever","url":"https://api.eu.lever.co/v0/postings/pnlfin","board":"https://jobs.eu.lever.co/pnlfin"},
-    "Varrlyn":{"type":"smartrecruiters","url":"https://api.smartrecruiters.com/v1/companies/Varrlyn/postings","board":"https://jobs.smartrecruiters.com/Varrlyn"}
+    "Varrlyn":{"type":"smartrecruiters","url":"https://api.smartrecruiters.com/v1/companies/Varrlyn/postings","board":"https://jobs.smartrecruiters.com/Varrlyn"},
+    "Airwallex":{"type":"ashby","url":"https://api.ashbyhq.com/posting-api/job-board/airwallex","board":"https://jobs.ashbyhq.com/airwallex"}
 }
 STATIC_BOARDS={
     "Lime Search":{"url":"https://www.limesearch.nl/open-finance-posities","href":r"/positie/"},
@@ -92,6 +93,25 @@ def fetch(u,method="http"):
         return {"ok":ok,"url":u,"final":r.url,"status":r.status_code,"html":body[:1200000],"text":txt[:200000],"method":method,"error":None if ok else f"HTTP {r.status_code}","ms":int((time.monotonic()-t)*1000)}
     except Exception as e:
         return {"ok":False,"url":u,"final":u,"status":None,"html":"","text":"","method":method,"error":f"{type(e).__name__}: {e}","ms":int((time.monotonic()-t)*1000)}
+
+AIRWALLEX_JOB_ID=re.compile(r"/(?:job/|airwallex/)([0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12})(?:/|$)",re.I)
+
+def airwallex_id(url):
+    m=AIRWALLEX_JOB_ID.search(urlparse(url).path)
+    return m.group(1).lower() if m else None
+
+def airwallex_official_url(posting):
+    identifier=airwallex_id(posting.get("jobUrl",""))
+    if not identifier or str(posting.get("id") or "").lower()!=identifier:return None
+    raw=unicodedata.normalize("NFKD",posting.get("title",""))
+    slug=re.sub(r"[^a-z0-9]+","-","".join(c for c in raw if not unicodedata.combining(c)).lower()).strip("-")
+    return "https://careers.airwallex.com/job/"+identifier+"/"+slug+"/" if slug else None
+
+def strategic_inventory_match(job):
+    """Discover strategic roles using title and department/team; no employer boilerplate."""
+    title=job.get("title","")
+    context=" ".join(str(job.get(k) or "") for k in ("department","team"))
+    return bool(SENIOR.search(title) and (REL.search(title) or REL.search(context)))
 
 def discover_official_ats(pages,o):
     """Derive public provider feeds only from a first-party careers page or authoritative seed."""
@@ -194,6 +214,21 @@ def api_inventory(o,c=None):
             for j in raw:
                 title=j.get("text") or "";u=j.get("hostedUrl") or ""
                 if title and u:items.append({"title":title,"url":u})
+        elif c["type"]=="ashby":
+            d=get_json(source);pages=1
+            if not isinstance(d,dict) or not isinstance(d.get("jobs"),list) or not d.get("apiVersion"):
+                raise ValueError("Unexpected Ashby published-posting schema")
+            raw=[j for j in d["jobs"] if j.get("isListed") is not False]
+            official_total=len(raw)
+            for j in raw:
+                title=j.get("title") or ""
+                official=airwallex_official_url(j)
+                if title and official:
+                    items.append({"title":title,"url":official,"source_job_id":airwallex_id(official),
+                                  "ats_url":j["jobUrl"],"location":j.get("location") or "",
+                                  "department":j.get("department") or "","team":j.get("team") or "",
+                                  "published_at":j.get("publishedAt")})
+            terminal=True
         elif c["type"]=="smartrecruiters":
             limit=100;raw=[];offset=0
             for _ in range(30):
@@ -222,6 +257,7 @@ def api_inventory(o,c=None):
         expected=official_total if official_total is not None else len(items)
         complete=bool(terminal and len(items)==len(unique)==expected)
         if c["type"]=="lever" and not terminal:complete=False
+        if c["type"]=="ashby" and not official_total:complete=False
         return {"complete":complete,"official_total":official_total,"jobs":list(unique.values()),
                 "source":source,"pages":pages,"terminal":terminal,
                 "evidence_kind":"official_api_total" if official_total is not None else "official_api_exhausted",
@@ -417,7 +453,8 @@ def validate_jobs(js,board_keys=None):
     def verify(candidate):
         j=dict(candidate)
         requested=j["url"]; f=fetch(requested,"job-live-check"); text=f["text"]
-        direct_live=f["ok"] and (j["title"].lower()[:24] in text.lower() or len(j["title"])<12)
+        identity_ok=not j.get("source_job_id") or airwallex_id(f["final"])==j["source_job_id"]
+        direct_live=f["ok"] and identity_ok and (j["title"].lower()[:24] in text.lower() or len(j["title"])<12)
         board_present=job_key(requested) in board_keys or job_key(f["final"]) in board_keys
         apply_live=bool(direct_live and board_present and has_apply_control(f["html"]) and not CLOSED.search(text))
         if apply_live: reason="direct_live_and_current_board"
@@ -477,17 +514,26 @@ def scan(o):
     for checked_api in api_attempts:
         evidence.append({"url":checked_api["source"],"api_complete":checked_api["complete"],
                          "official_total":checked_api["official_total"],"job_link_count":len(checked_api["jobs"]),
-                         "listing_like":True,"static_complete_evidence":checked_api["complete"],
+                         "listing_like":True,"static_complete_evidence":checked_api["complete"] and o["name"]!="Airwallex",
                          "api_pages":checked_api["pages"],"api_terminal":checked_api["terminal"],
                          "evidence_kind":checked_api["evidence_kind"],"api_error":checked_api["error"]})
     if api and api.get("complete"):
-        coverage="verified_complete"; st="official_ats_scanned"
-        api_raw=[j for j in api["jobs"] if REL.search(j["title"]+" "+j["url"]) and (SENIOR.search(j["title"]) or re.search(r"\\b(mlro|cco|cro|sanctions counsel|regulatory counsel)\\b",j["title"],re.I))]
-        api_audit=[j for j in api["jobs"] if AUDIT_REL.search(j["title"]+" "+j["url"]) and AUDIT_SENIOR.search(j["title"])]
+        # The Ashby published feed is complete as an ATS source, but the
+        # separate Airwallex first-party catalogue has a different total.
+        # Do not claim complete overall Airwallex coverage until reconciled.
+        coverage="partial" if o["name"]=="Airwallex" else "verified_complete"
+        st="official_ats_scanned"
+        api_raw=([j for j in api["jobs"] if strategic_inventory_match(j)]
+                 if o["name"]=="Airwallex" else
+                 [j for j in api["jobs"] if REL.search(j["title"]+" "+j["url"]) and
+                  (SENIOR.search(j["title"]) or re.search(r"\b(mlro|cco|cro|sanctions counsel|regulatory counsel)\b",j["title"],re.I))])
+        api_audit=[j for j in api["jobs"] if AUDIT_SENIOR.search(j["title"]) and
+                   AUDIT_REL.search(j["title"]+" "+str(j.get("department",""))+" "+str(j.get("team","")))]
         api_match={j["url"] for j in api_raw}
         api_missed=[j for j in api_audit if j["url"] not in api_match]
         audit_unique=api_audit; audit_missed=api_missed
-        # The exhaustive official feed supersedes any incidental/stale page candidates.
+        # Cross-check every candidate against the same ID and title on the
+        # direct first-party detail page with an active application control.
         jobs=validate_jobs(api_raw,{job_key(j["url"]) for j in api["jobs"]})
 
     if static and static.get("complete"):
@@ -501,8 +547,10 @@ def scan(o):
         # The exhausted official listing supersedes incidental page candidates.
         jobs=validate_jobs(static_raw,{job_key(j["url"]) for j in static["jobs"]})
 
+    pending=[{"title":j["title"],"url":j["url"],"reason":j.get("validation_reason"),"source_job_id":j.get("source_job_id")}
+             for j in jobs if not j.get("apply_live")]
     return {"name":o["name"],"kind":o["kind"],"status":st,"vacancy_coverage":coverage,
-            "listing_evidence":evidence,
+            "listing_evidence":evidence,"pending_validation":pending,
             "match_audit":{"candidate_count":len(audit_unique),"matched_count":len(audit_unique)-len(audit_missed),"missed":audit_missed[:20]},
             "checked_at":iso(),"duration_ms":int((time.monotonic()-t)*1000),"routes_tried":tried[-18:],
             "successful_routes":[{"url":f["final"],"method":f["method"],"status":f["status"]} for f in success[:6]],
