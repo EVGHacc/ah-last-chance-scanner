@@ -29,6 +29,20 @@ class ScannerTests(unittest.TestCase):
         jobs = extract_jobs(page(html), ORG)
         self.assertEqual({j["title"] for j in jobs}, {"Director Financial Crime", "Head of Internal Audit"})
 
+    def test_coinmerce_overview_discovers_group_ccro(self):
+        org={"name":"Coinmerce","official_domain":"coinmerce.io",
+             "allowed_domains":["coinmerce.jobs.personio.com"],
+             "seed_urls":["https://careers.coinmerce.io/en/overview"],
+             "no_public_hint":False}
+        html=('Vacancies (8)<a href="/en/overview/2503505">'
+              'Chief Compliance & Risk Officer</a>')
+        page={"html":html,"final":"https://careers.coinmerce.io/en/overview"}
+        found=extract_jobs(page,org)
+        self.assertEqual(len(found),1)
+        self.assertEqual(found[0]["title"],"Chief Compliance & Risk Officer")
+        self.assertEqual(found[0]["url"],"https://careers.coinmerce.io/en/overview/2503505")
+        self.assertEqual(listing_evidence(page,org)["job_link_count"],1)
+
     def test_listing_is_partial_when_next_page_exists(self):
         html = '<a href="/jobs/123">Director Financial Crime</a><a href="?page=2">Next</a>'
         evidence = listing_evidence(page(html), ORG)
