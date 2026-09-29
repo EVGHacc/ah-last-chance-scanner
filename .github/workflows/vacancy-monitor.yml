@@ -17,7 +17,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: vacancy-monitor-106
+  # Recovery epoch isolates this scan from a stale run started with the previous policy.
+  group: vacancy-monitor-106-recovery-20260929
   # A newer source-code scan supersedes older scans; do not let a stale run block fixes.
   cancel-in-progress: true
 
