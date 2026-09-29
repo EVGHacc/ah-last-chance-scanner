@@ -17,6 +17,17 @@ for label,url in [("N26",n26),("REVOLUT",rev)]:
    i=html.find(target)
    print("N26_CONTEXT",target,"position",i,"snippet",html[max(0,i-380):i+470][:850],flush=True)
   scripts=[a.get_text() for a in soup.select("script") if "__reactRouterContext" in a.get_text()]
+  chunks=[]
+  for content in scripts:
+   for m in re.finditer(r'__reactRouterContext\.streamController\.enqueue\(("(?:\\.|[^"\\])*")\)',content):
+    try:chunks.append(json.loads(m.group(1)))
+    except (ValueError,TypeError):pass
+  decoded="".join(chunks)
+  matches=re.findall(r'"title","((?:\\.|[^"\\])*)","id",(\d{7,9})',decoded)
+  unique={ident:title for title,ident in matches}
+  print("N26_DECODED","chunks",len(chunks),"chars",len(decoded),
+       "matched_pairs",len(matches),"unique",len(unique),
+       "target_title",unique.get("7845376"),"samples",list(unique.items())[:4],flush=True)
   print("N26_SERIALIZED",len(scripts),"script_chars",list(map(len,scripts)),"positions_unique",
         len(set(re.findall(r'positions/(\d{7,9})',"".join(scripts)))),flush=True)
  else:
