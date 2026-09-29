@@ -473,7 +473,11 @@ def scan(o):
     t=time.monotonic(); tried=[]; success=[]; q=candidates(o); seen=set()
     configured_api=api_inventory(o); api_attempts=[configured_api] if configured_api else []
     api=configured_api; static=static_inventory(o)
-    while q and len(seen)<24:
+    # Published ATS enumeration replaces unfocused first-party crawling for
+    # Airwallex. The first-party seed and candidate detail pages are still read.
+    if o["name"]=="Airwallex" and api and api.get("complete"):
+        q=list(o["seed_urls"])
+    while q and len(seen)<(4 if o["name"]=="Airwallex" and api and api.get("complete") else 24):
         u=q.pop(0)
         if u in seen: continue
         seen.add(u); f=fetch(u)
@@ -594,7 +598,11 @@ def merge_validated_jobs(existing, newly_checked):
 
 def browser_retry(rs):
     """Best-effort deep recovery with hard time budgets; expired checks remain unproven."""
-    targets=[r for r in rs if r["status"]=="technical_failure" or r["vacancy_coverage"] in ("partial","unproven")]
+    targets=[r for r in rs if
+             (r["status"]=="technical_failure" or r["vacancy_coverage"] in ("partial","unproven"))
+             and not (r["name"]=="Airwallex" and
+                      any(e.get("api_complete") and "api.ashbyhq.com" in e.get("url","")
+                          for e in r.get("listing_evidence",[])))]
     if not targets:return
     targets.sort(key=lambda r:(r["status"]!="technical_failure", r["vacancy_coverage"]!="partial",r["name"]))
     # Direct detail + current official-board proof from the HTTP phase is already
