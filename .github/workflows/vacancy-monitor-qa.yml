@@ -1,0 +1,46 @@
+name: Vacancy Monitor QA
+
+on:
+  push:
+    paths:
+      - "vacancy-monitor/scanner.py"
+      - "vacancy-monitor/test_scanner.py"
+      - "vacancy-monitor/requirements.txt"
+      - "vacancy-monitor/registry.tsv"
+      - ".github/workflows/vacancy-monitor-qa.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unit-and-registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install unit dependencies
+        run: python -m pip install "requests>=2.32,<3" "beautifulsoup4>=4.12,<5"
+      - name: Compile scanner and tests
+        run: python -m compileall -q vacancy-monitor/scanner.py vacancy-monitor/test_scanner.py
+      - name: Run independent regression tests
+        run: python -m unittest discover -s vacancy-monitor -p 'test_*.py' -v
+      - name: Check registry and mandatory employers
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          rows=list(csv.DictReader(Path("vacancy-monitor/registry.tsv").open(encoding="utf-8"),delimiter="\t"))
+          assert len(rows)==105, f"expected 105, received {len(rows)}"
+          kinds={kind:sum(row["kind"]==kind for row in rows) for kind in ("recruiter","employer")}
+          assert kinds=={"recruiter":49,"employer":56}, kinds
+          names=[row["name"] for row in rows]
+          assert len(set(names))==105, "duplicate organisation names"
+          required={"State Street","Kroll","Commerzbank","Lloyds Banking Group","Crédit Agricole CIB","Nordea"}
+          assert required.issubset({row["name"] for row in rows if row["kind"]=="employer"})
+          assert all(row["seed_urls"] and row["official_domain"] for row in rows)
+          print("REGISTRY QA PASS: 49 recruiters, 56 employers, 105 unique official sources")
+          PY
