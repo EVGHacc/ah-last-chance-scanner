@@ -408,25 +408,25 @@ class AirwallexCoverageTests(unittest.TestCase):
 
     def test_priority_queue_retains_all_candidates_and_selects_both_strong_roles(self):
         critical=[{"title":"Senior Director, AML & Sanctions, Governance & Policy",
-                   "location":"UK - London","source_job_id":self.AML,
-                   "url":"https://careers.airwallex.com/job/"+self.AML+"/senior-director-aml-sanctions-governance-policy/"},
+                   "location":"UK - London","source_job_id":self.AML_ID,
+                   "url":"https://careers.airwallex.com/job/"+self.AML_ID+"/senior-director-aml-sanctions-governance-policy/"},
                   {"title":"Senior Director EU & ME, MLRO","location":"NL - Amsterdam",
-                   "source_job_id":self.MLRO,
-                   "url":"https://careers.airwallex.com/job/"+self.MLRO+"/senior-director-eu-me-mlro/"}]
+                   "source_job_id":self.MLRO_ID,
+                   "url":"https://careers.airwallex.com/job/"+self.MLRO_ID+"/senior-director-eu-me-mlro/"}]
         others=[{"title":"Manager, Regulatory Operations","location":"Singapore",
                  "source_job_id":str(i),"url":"https://careers.airwallex.com/job/"+str(i)+"/"} for i in range(50)]
         chosen,pending=airwallex_validation_queue(critical+others,capacity=25,priority_count=20)
         self.assertEqual(len(chosen),25)
         self.assertEqual(len(pending),27)
-        self.assertTrue({self.AML,self.MLRO}.issubset({j["source_job_id"] for j in chosen}))
+        self.assertTrue({self.AML_ID,self.MLRO_ID}.issubset({j["source_job_id"] for j in chosen}))
         self.assertTrue(all(not j["apply_live"] and j["validation_reason"]=="pending_direct_validation"
                             for j in pending))
         self.assertEqual(len({j["source_job_id"] for j in chosen+pending}),52)
 
     def test_rate_limited_detail_is_not_reportable(self):
-        candidate=self.posting("Senior Director, AML & Sanctions, Governance & Policy",self.AML)
+        candidate=self.posting(self.AML_ID,"Senior Director, AML & Sanctions, Governance & Policy")
         u=airwallex_official_url(candidate)
-        j={"title":candidate["title"],"url":u,"source_job_id":self.AML}
+        j={"title":candidate["title"],"url":u,"source_job_id":self.AML_ID}
         fetched={"ok":False,"final":u,"status":429,"text":"",
                  "html":"<button>Submit application</button>"}
         with patch("scanner.fetch",return_value=fetched):
