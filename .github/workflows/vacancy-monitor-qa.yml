@@ -50,6 +50,7 @@ jobs:
           import sys,requests
           sys.path.insert(0,"vacancy-monitor")
           from embedded_inventory import embedded_inventory
+          from scanner import validate_jobs,job_key
           headers={"User-Agent":"Mozilla/5.0 Chrome/128"}
           cases=(("N26","https://n26.com/en-eu/careers",
                   {"7845376"}),
@@ -69,6 +70,15 @@ jobs:
               if name=="Revolut":assert len(found)==len(result["jobs"]),"duplicate vacancy IDs"
               print(name,"listed",len(found),"advertised",result["official_total"],
                     "complete",result["complete"],"confirmed IDs",sorted(required),flush=True)
+              selected=[job for job in result["jobs"] if job["embedded_job_id"] in required]
+              validated=validate_jobs(selected,{job_key(job["url"]) for job in result["jobs"]},max_workers=3)
+              for job in validated:
+                  print("DIRECT_VALIDATION",name,job["embedded_job_id"],job["title"],
+                        "detail_status",job["http_status"],"apply_status",job.get("apply_http_status"),
+                        "live",job["apply_live"],"reason",job["validation_reason"],flush=True)
+              assert len(validated)==len(required)
+              assert all(job["apply_live"] for job in validated), (name,"not fully validated",
+                  [(job["embedded_job_id"],job["validation_reason"]) for job in validated if not job["apply_live"]])
           PY
       - name: Check registry and mandatory employers
         run: |
