@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-29",
   "weekday": "Tuesday",
-  "scheduledSlot": "21:50",
-  "scheduledAt": "2026-09-29T21:50:00+02:00",
-  "rawScheduledSlot": "21:50",
-  "rawScheduledAt": "2026-09-29T21:50:00+02:00",
-  "startedAt": "2026-09-29T21:50:00.460901+02:00",
-  "completedAt": "2026-09-29T21:50:05.557797+02:00",
-  "checkedAt": "2026-09-29T21:50:05.557797+02:00",
+  "scheduledSlot": "21:51",
+  "scheduledAt": "2026-09-29T21:51:00+02:00",
+  "rawScheduledSlot": "21:51",
+  "rawScheduledAt": "2026-09-29T21:51:00+02:00",
+  "startedAt": "2026-09-29T21:51:00.468299+02:00",
+  "completedAt": "2026-09-29T21:51:05.618925+02:00",
+  "checkedAt": "2026-09-29T21:51:05.618925+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1532,18 +1532,6 @@
           "markdownExpirationDate": "2026-09-29"
         },
         {
-          "productId": 606777,
-          "title": "AH Borek kip gyros",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 6,
-          "priceWas": "1.19",
-          "priceNow": "0.71",
-          "markdownExpirationDate": "2026-09-29"
-        },
-        {
           "productId": 417144,
           "title": "AH Vloerbrood wit heel",
           "brand": "AH",
@@ -1589,6 +1577,18 @@
           "stock": 5,
           "priceWas": "2.69",
           "priceNow": "1.61",
+          "markdownExpirationDate": "2026-09-29"
+        },
+        {
+          "productId": 606777,
+          "title": "AH Borek kip gyros",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 4,
+          "priceWas": "1.19",
+          "priceNow": "0.71",
           "markdownExpirationDate": "2026-09-29"
         },
         {
@@ -2837,11 +2837,11 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 154,
+      "totalBargainItems": 153,
       "meatItems": 9,
       "meat70Items": 3,
       "meat70Stock": 8.0,
-      "bakeryItems": 34,
+      "bakeryItems": 33,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -3229,18 +3229,6 @@
           "stock": 1,
           "priceWas": "1.39",
           "priceNow": "1.04",
-          "markdownExpirationDate": "2026-09-29"
-        },
-        {
-          "productId": 595350,
-          "title": "AH Biologisch Batard volkoren zonnepit heel",
-          "brand": "AH Biologisch",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
           "markdownExpirationDate": "2026-09-29"
         },
         {
