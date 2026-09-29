@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-09-29",
   "weekday": "Tuesday",
-  "scheduledSlot": "21:51",
-  "scheduledAt": "2026-09-29T21:51:00+02:00",
-  "rawScheduledSlot": "21:51",
-  "rawScheduledAt": "2026-09-29T21:51:00+02:00",
-  "startedAt": "2026-09-29T21:51:00.468299+02:00",
-  "completedAt": "2026-09-29T21:51:05.618925+02:00",
-  "checkedAt": "2026-09-29T21:51:05.618925+02:00",
+  "scheduledSlot": "21:54",
+  "scheduledAt": "2026-09-29T21:54:00+02:00",
+  "rawScheduledSlot": "21:54",
+  "rawScheduledAt": "2026-09-29T21:54:00+02:00",
+  "startedAt": "2026-09-29T21:54:00.480616+02:00",
+  "completedAt": "2026-09-29T21:54:05.607217+02:00",
+  "checkedAt": "2026-09-29T21:54:05.607217+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,11 +25,11 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 197,
+      "totalBargainItems": 193,
       "meatItems": 18,
       "meat70Items": 2,
       "meat70Stock": 4.0,
-      "bakeryItems": 37,
+      "bakeryItems": 34,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -252,18 +252,6 @@
       ],
       "bakery": [
         {
-          "productId": 561015,
-          "title": "AH Liefde & Passie Petit volkoren",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 4,
-          "priceWas": "2.29",
-          "priceNow": "1.37",
-          "markdownExpirationDate": "2026-09-29"
-        },
-        {
           "productId": 584032,
           "title": "AH Rond wit sesam heel",
           "brand": "AH",
@@ -276,27 +264,15 @@
           "markdownExpirationDate": "2026-09-29"
         },
         {
-          "productId": 230844,
-          "title": "AH Liefde & Passie Petit cereales",
+          "productId": 561015,
+          "title": "AH Liefde & Passie Petit volkoren",
           "brand": "AH Liefde & Passie",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 40,
           "stock": 2,
-          "priceWas": "1.89",
-          "priceNow": "1.13",
-          "markdownExpirationDate": "2026-09-29"
-        },
-        {
-          "productId": 590095,
-          "title": "AH Liefde & Passie Rozijn pistache",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "3.19",
-          "priceNow": "1.91",
+          "priceWas": "2.29",
+          "priceNow": "1.37",
           "markdownExpirationDate": "2026-09-29"
         },
         {
@@ -348,18 +324,6 @@
           "markdownExpirationDate": "2026-09-29"
         },
         {
-          "productId": 252839,
-          "title": "AH Vloerbrood meergranen half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "1.45",
-          "priceNow": "1.09",
-          "markdownExpirationDate": "2026-09-29"
-        },
-        {
           "productId": 429658,
           "title": "AH Spinazie feta börek",
           "brand": "AH",
@@ -369,18 +333,6 @@
           "stock": 3,
           "priceWas": "1.19",
           "priceNow": "0.89",
-          "markdownExpirationDate": "2026-09-29"
-        },
-        {
-          "productId": 487305,
-          "title": "AH Liefde & Passie Spelt volkoren brood",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
           "markdownExpirationDate": "2026-09-29"
         },
         {
@@ -480,15 +432,27 @@
           "markdownExpirationDate": "2026-09-29"
         },
         {
-          "productId": 417148,
-          "title": "AH Vloerbrood volkoren heel",
+          "productId": 252839,
+          "title": "AH Vloerbrood meergranen half",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
           "stock": 1,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
+          "priceWas": "1.45",
+          "priceNow": "1.09",
+          "markdownExpirationDate": "2026-09-29"
+        },
+        {
+          "productId": 277519,
+          "title": "AH Vloerbrood volkoren half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.45",
+          "priceNow": "1.09",
           "markdownExpirationDate": "2026-09-29"
         },
         {
@@ -904,18 +868,6 @@
           "markdownExpirationDate": "2026-09-29"
         },
         {
-          "productId": 417147,
-          "title": "AH Vloerbrood meergranen heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "2.69",
-          "priceNow": "1.61",
-          "markdownExpirationDate": "2026-09-29"
-        },
-        {
           "productId": 487305,
           "title": "AH Liefde & Passie Spelt volkoren brood",
           "brand": "AH Liefde & Passie",
@@ -949,6 +901,18 @@
           "stock": 2,
           "priceWas": "0.89",
           "priceNow": "0.53",
+          "markdownExpirationDate": "2026-09-29"
+        },
+        {
+          "productId": 417147,
+          "title": "AH Vloerbrood meergranen heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-09-29"
         },
         {
@@ -2837,7 +2801,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 153,
+      "totalBargainItems": 152,
       "meatItems": 9,
       "meat70Items": 3,
       "meat70Stock": 8.0,
