@@ -9,6 +9,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: ah-fallback-short
   cancel-in-progress: false
@@ -38,6 +39,13 @@ jobs:
         if: steps.gate.outputs.run == 'true'
         with:
           python-version: '3.12'
+      - name: Watchdog missing supervised session
+        if: steps.gate.outputs.run == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/session_watchdog.py --self-test
+          python scripts/session_watchdog.py
       - name: Recover recent points
         if: steps.gate.outputs.run == 'true'
         env:
