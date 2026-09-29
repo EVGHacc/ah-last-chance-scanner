@@ -21,6 +21,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Test watchdog and publication QA
+        run: |
+          python -m py_compile scripts/session_watchdog.py scripts/independent_qa.py scripts/session.py
+          python scripts/session_watchdog.py --self-test
+          python scripts/independent_qa.py --self-test
       - name: Gate Amsterdam evening
         id: gate
         env:
