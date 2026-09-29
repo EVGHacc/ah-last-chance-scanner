@@ -203,15 +203,28 @@ def api_inventory(o,c=None):
                 if title and u:items.append({"title":title,"url":u})
             terminal=True
         elif c["type"]=="greenhouse":
+            # Public Greenhouse board endpoints return an entire jobs array;
+            # meta.total is optional rather than a required pagination counter.
             d=get_json(source);pages=1
-            if not isinstance(d,dict) or not isinstance(d.get("jobs"),list) or not isinstance(d.get("meta"),dict):
-                raise ValueError("Greenhouse jobs/meta absent")
-            official_total=d["meta"].get("total")
-            if not isinstance(official_total,int):raise ValueError("Greenhouse official total absent")
+            if not isinstance(d,dict) or not isinstance(d.get("jobs"),list):
+                raise ValueError("Greenhouse jobs array absent")
             raw=d["jobs"]
+            meta=d.get("meta")
+            if meta is not None and not isinstance(meta,dict):
+                raise ValueError("Greenhouse meta has invalid type")
+            if isinstance(meta,dict) and "total" in meta:
+                official_total=meta["total"]
+                if type(official_total) is not int or official_total<0:
+                    raise ValueError("Greenhouse official total invalid")
+            if not raw and official_total is None:
+                raise ValueError("Empty Greenhouse feed without independent board-total evidence")
             for j in raw:
+                if not isinstance(j,dict):
+                    raise ValueError("Greenhouse posting has invalid type")
                 title=j.get("title") or "";u=j.get("absolute_url") or ""
-                if title and u:items.append({"title":title,"url":u})
+                if not title or not u:
+                    raise ValueError("Greenhouse posting missing title or URL")
+                items.append({"title":title,"url":u})
             terminal=True
         elif c["type"]=="lever":
             # Lever documents skip/limit pagination, with no global total field.
