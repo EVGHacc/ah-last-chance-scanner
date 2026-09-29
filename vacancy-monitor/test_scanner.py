@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch
 
-from scanner import REL, SENIOR, extract_jobs, listing_evidence, coverage_from_evidence, validate_jobs, job_key, qa_snapshot, api_inventory, merge_validated_jobs, discover_official_ats, airwallex_id, airwallex_official_url, strategic_inventory_match
+from scanner import REL, SENIOR, extract_jobs, listing_evidence, coverage_from_evidence, validate_jobs, job_key, qa_snapshot, api_inventory, merge_validated_jobs, discover_official_ats, airwallex_id, airwallex_official_url, strategic_inventory_match, airwallex_id, airwallex_official_url, strategic_inventory_match
 
 
 ORG = {"official_domain": "example.com", "allowed_domains": []}
@@ -301,6 +301,110 @@ class AirwallexDiscoveryTests(unittest.TestCase):
         candidate={"title":"Chief Policy Architect","department":"Regulatory & Compliance","team":"Financial Crime Compliance"}
         self.assertTrue(strategic_inventory_match(candidate))
         self.assertFalse(strategic_inventory_match({"title":"Account Executive","department":"Sales","team":"Commercial"}))
+
+
+class AirwallexCoverageTests(unittest.TestCase):
+    """Regression cases for the 2026-09-29 missed senior Airwallex roles."""
+    AML_ID="ad877e85-6c71-4e6b-afc7-3d87b9488adb"
+    MLRO_ID="15a5d8b4-a5fd-4b4d-a933-387702221b75"
+    OLD_ID="004af48d-83e6-44c0-9ed0-493142195481"
+
+    @staticmethod
+    def org():
+        return {"name":"Airwallex","official_domain":"airwallex.com",
+                "allowed_domains":[],"seed_urls":["https://careers.airwallex.com/jobs/"],
+                "no_public_hint":False}
+
+    @staticmethod
+    def posting(ident,title,listed=True,location="UK - London",
+                dept="Regulatory & Compliance",team="Financial Crime Compliance"):
+        return {"id":ident,"title":title,
+                "jobUrl":f"https://jobs.ashbyhq.com/airwallex/{ident}",
+                "applyUrl":f"https://jobs.ashbyhq.com/airwallex/{ident}/application",
+                "isListed":listed,"location":location,"department":dept,
+                "team":team}
+
+    def test_ashby_feed_recovers_aml_and_mlro_but_rejects_old_unlisted_risk_assurance(self):
+        data={"apiVersion":"1","jobs":[
+            self.posting(self.AML_ID,"Senior Director, AML & Sanctions, Governance & Policy"),
+            self.posting(self.MLRO_ID,"Senior Director EU & ME, MLRO",
+                         location="NL - Amsterdam"),
+            self.posting(self.OLD_ID,"Senior Director of Risk Assurance (Monitoring Framework & Reporting)",False)]}
+        with patch("scanner.requests.get",return_value=OfficialInventoryTests.Reply(data)):
+            inv=api_inventory(self.org())
+        self.assertTrue(inv["complete"])
+        self.assertEqual(inv["official_total"],2)
+        self.assertEqual(len(inv["jobs"]),2)
+        self.assertEqual({j["source_job_id"] for j in inv["jobs"]},{self.AML_ID,self.MLRO_ID})
+        self.assertTrue(all(j["url"].startswith("https://careers.airwallex.com/job/") for j in inv["jobs"]))
+        self.assertTrue(all(strategic_inventory_match(j) for j in inv["jobs"]))
+        self.assertEqual(inv["jobs"][0]["url"],"https://careers.airwallex.com/job/"+
+                         self.AML_ID+"/senior-director-aml-sanctions-governance-policy/")
+
+    def test_ashby_identity_mismatch_fails_closed(self):
+        item=self.posting(self.AML_ID,"Senior Director AML Policy")
+        item["id"]=self.MLRO_ID
+        with patch("scanner.requests.get",return_value=OfficialInventoryTests.Reply(
+                {"apiVersion":"1","jobs":[item]})):
+            inv=api_inventory(self.org())
+        self.assertFalse(inv["complete"])
+        self.assertEqual(inv["jobs"],[])
+
+    def test_ashby_no_jobs_does_not_prove_complete(self):
+        with patch("scanner.requests.get",return_value=OfficialInventoryTests.Reply(
+                {"apiVersion":"1","jobs":[]})):
+            self.assertFalse(api_inventory(self.org())["complete"])
+
+    def test_senior_governance_detected_from_department_when_title_is_unusual(self):
+        j={"title":"Director, Platform Policy","department":"Regulatory & Compliance",
+           "team":"Financial Crime Compliance"}
+        self.assertTrue(strategic_inventory_match(j))
+        self.assertFalse(strategic_inventory_match({**j,"title":"Junior Analyst"}))
+        self.assertFalse(strategic_inventory_match({"title":"Senior Engineering Manager",
+                                                     "department":"Technology","team":"Engineering"}))
+
+    def test_first_party_and_board_and_apply_are_all_required(self):
+        candidate={"title":"Senior Director, AML & Sanctions, Governance & Policy",
+                   "url":"https://careers.airwallex.com/job/"+self.AML_ID+
+                         "/senior-director-aml-sanctions-governance-policy/",
+                   "source_job_id":self.AML_ID}
+        response={"ok":True,"final":candidate["url"],"status":200,
+                  "html":"<title>Senior Director, AML & Sanctions, Governance & Policy</title>"
+                         "<h1>Senior Director, AML & Sanctions, Governance & Policy</h1>"
+                         '<button type="submit">Submit application</button>',
+                  "text":"Senior Director, AML & Sanctions, Governance & Policy Submit application"}
+        with patch("scanner.fetch",return_value=response):
+            j=validate_jobs([candidate],{job_key(candidate["url"])})[0]
+            self.assertTrue(j["apply_live"])
+            self.assertTrue(j["board_present"])
+            j2=validate_jobs([candidate],set())[0]
+            self.assertFalse(j2["apply_live"])
+            self.assertEqual(j2["validation_reason"],"not_on_current_board")
+
+    def test_old_direct_page_is_not_live_without_active_ats_board(self):
+        candidate={"title":"Senior Director of Risk Assurance",
+                   "url":"https://careers.airwallex.com/job/"+self.OLD_ID+"/risk-assurance/",
+                   "source_job_id":self.OLD_ID}
+        response={"ok":True,"final":candidate["url"],"status":200,
+                  "html":"<h1>Senior Director of Risk Assurance</h1>"
+                         '<button type="submit">Submit application</button>',
+                  "text":"Senior Director of Risk Assurance Submit application"}
+        with patch("scanner.fetch",return_value=response):
+            j=validate_jobs([candidate],set())[0]
+        self.assertFalse(j["apply_live"])
+
+    def test_first_party_redirect_to_different_job_id_is_not_live(self):
+        candidate={"title":"Senior Director, AML & Sanctions, Governance & Policy",
+                   "url":"https://careers.airwallex.com/job/"+self.AML_ID+"/role/",
+                   "source_job_id":self.AML_ID}
+        response={"ok":True,"final":"https://careers.airwallex.com/job/"+self.MLRO_ID+"/other/",
+                  "status":200,"html":'<button type="submit">Submit application</button>',
+                  "text":candidate["title"]}
+        with patch("scanner.fetch",return_value=response):
+            j=validate_jobs([candidate],{job_key(candidate["url"])})[0]
+        self.assertFalse(j["apply_live"])
+        self.assertEqual(j["validation_reason"],"detail_page_not_live")
+
 
 
 if __name__ == "__main__":
