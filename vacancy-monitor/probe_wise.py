@@ -60,3 +60,18 @@ for label,ident in (("LEAD","3054"),("MANAGER","3928"),("SENIOR_RISK","3822"),("
         "submit_labels",[x.get_text(" ",strip=True)[:40] for x in soup.select("button,input[type=submit]")][-6:],
         flush=True)
  except Exception as e:print("WISE_APPLY_ERROR",label,type(e).__name__,str(e)[:180],flush=True)
+
+# The first-party Wise application endpoint redirects to SmartRecruiters/Wise.
+# Check that publisher's public ATS listing with official totals and query.
+for company in ("Wise","wise"):
+ for q in ("","Compliance Lead (Wise Platform)","Compliance Manager: Group Regulatory Compliance","Senior Risk Manager","Group Lead - Assets Risk"):
+  try:
+   resp=requests.get(f"https://api.smartrecruiters.com/v1/companies/{company}/postings",headers=H,
+                     params={"limit":100,"offset":0,"destination":"PUBLIC","q":q},timeout=13)
+   data=resp.json() if resp.status_code==200 else {}
+   items=data.get("content",[]) if isinstance(data,dict) else []
+   print("WISE_ATS",company,repr(q),resp.status_code,"total",data.get("totalFound") if isinstance(data,dict) else None,
+         "returned",len(items),"first",[(x.get("id"),x.get("name"),x.get("jobAdUrl"),x.get("postingUrl")) for x in items[:2]],
+         "matches",[(x.get("id"),x.get("name")) for x in items if q and q.lower() in str(x.get("name","")).lower()],
+         flush=True)
+  except Exception as e:print("WISE_ATS_ERROR",company,repr(q),type(e).__name__,str(e)[:140],flush=True)
