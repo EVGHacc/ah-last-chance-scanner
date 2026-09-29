@@ -447,7 +447,7 @@ def has_apply_control(html):
         return True
     return False
 
-def validate_jobs(js,board_keys=None):
+def validate_jobs(js,board_keys=None,max_workers=6):
     """Live-check every candidate in bounded parallel requests; never infer liveness from a board alone."""
     board_keys=set(board_keys or ())
     def verify(candidate):
@@ -458,6 +458,8 @@ def validate_jobs(js,board_keys=None):
         board_present=job_key(requested) in board_keys or job_key(f["final"]) in board_keys
         apply_live=bool(direct_live and board_present and has_apply_control(f["html"]) and not CLOSED.search(text))
         if apply_live: reason="direct_live_and_current_board"
+        elif f["status"]==429: reason="rate_limited"
+        elif f["status"]==403: reason="access_blocked"
         elif not board_present: reason="not_on_current_board"
         elif not direct_live: reason="detail_page_not_live"
         elif CLOSED.search(text): reason="closed_marker"
@@ -466,8 +468,37 @@ def validate_jobs(js,board_keys=None):
                   "validation_reason":reason,"http_status":f["status"],"checked_at":iso()})
         return j
     if not js: return []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=min(6,len(js))) as ex:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=min(max_workers,len(js))) as ex:
         return list(ex.map(verify,js))
+
+def airwallex_validation_queue(jobs,capacity=25,priority_count=20):
+    """Prioritise senior EU/UK financial-crime leadership; rotate the remainder.
+    Retain every other ATS candidate as pending, never pretend it was checked.
+    """
+    def priority(j):
+        title=j["title"].lower(); loc=str(j.get("location","")).lower()
+        score=0
+        if re.search(r"aml|sanction|financial.crime|mlro|fcc|risk assurance",title):score+=12
+        if re.search(r"amsterdam|netherlands|nl -",loc):score+=10
+        elif re.search(r"london|united kingdom|uk -|emea|europe|remote",loc):score+=8
+        if re.search(r"director|head|chief|mlro|vice.president",title):score+=6
+        if re.search(r"operational kyc|customer support|sales|account manager",title):score-=10
+        return score
+    ordered=sorted(jobs,key=lambda j:(-priority(j),j.get("source_job_id") or j["url"]))
+    fixed=ordered[:min(priority_count,capacity)]
+    tail=ordered[len(fixed):]
+    count=capacity-len(fixed)
+    if count and tail:
+        offset=(datetime.now(ZoneInfo("Europe/Amsterdam")).date().toordinal()*count)%len(tail)
+        rotating=[tail[(offset+i)%len(tail)] for i in range(min(count,len(tail)))]
+    else:rotating=[]
+    chosen=fixed+rotating
+    picked={j["source_job_id"] for j in chosen}
+    deferred=[{**j,"live":False,"board_present":True,"apply_live":False,
+               "validation_reason":"pending_direct_validation","http_status":None,"checked_at":None}
+              for j in jobs if j["source_job_id"] not in picked]
+    return chosen,deferred
+
 
 def scan(o):
     t=time.monotonic(); tried=[]; success=[]; q=candidates(o); seen=set()
@@ -538,7 +569,11 @@ def scan(o):
         audit_unique=api_audit; audit_missed=api_missed
         # Cross-check every candidate against the same ID and title on the
         # direct first-party detail page with an active application control.
-        jobs=validate_jobs(api_raw,{job_key(j["url"]) for j in api["jobs"]})
+        if o["name"]=="Airwallex":
+            chosen,deferred=airwallex_validation_queue(api_raw)
+            jobs=validate_jobs(chosen,{job_key(j["url"]) for j in api["jobs"]},max_workers=2)+deferred
+        else:
+            jobs=validate_jobs(api_raw,{job_key(j["url"]) for j in api["jobs"]})
 
     if static and static.get("complete"):
         coverage="verified_complete"; st="official_site_scanned"
