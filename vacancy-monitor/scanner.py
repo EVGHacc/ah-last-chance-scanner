@@ -93,9 +93,50 @@ def fetch(u,method="http"):
     except Exception as e:
         return {"ok":False,"url":u,"final":u,"status":None,"html":"","text":"","method":method,"error":f"{type(e).__name__}: {e}","ms":int((time.monotonic()-t)*1000)}
 
-def api_inventory(o):
-    """Exhaust the configured official ATS feed. A partial/failed API is never complete."""
-    c=API_BOARDS.get(o["name"])
+def discover_official_ats(pages,o):
+    """Derive public provider feeds only from a first-party careers page or authoritative seed."""
+    configs=[]; seen=set()
+    primary=[o["official_domain"]]+o["allowed_domains"]
+    seeds={norm(x).rstrip("/") for x in o["seed_urls"]}
+    def first_party(host):
+        return any(host==h or host.endswith("."+h) for h in primary)
+    for f in pages:
+        source=norm(f.get("final","")).rstrip("/")
+        host=hostname(source)
+        if not (first_party(host) or any(source==seed or source.startswith(seed+"/") for seed in seeds)):
+            continue
+        urls=[source] if source in seeds else []
+        if first_party(host):
+            soup=BeautifulSoup(f.get("html") or "","html.parser")
+            urls.extend(urljoin(f["final"],a["href"]) for a in soup.find_all("a",href=True))
+        for u in urls:
+            p=urlparse(u); h=hostname(u); parts=[x for x in p.path.split("/") if x]
+            if not parts:continue
+            token=parts[0]
+            if token.lower() in ("jobs","job","careers","positions","search","en","nl"):continue
+            config=None
+            if h in ("job-boards.greenhouse.io","boards.greenhouse.io",
+                     "job-boards.eu.greenhouse.io","boards.eu.greenhouse.io"):
+                region="eu." if ".eu.greenhouse.io" in h else ""
+                config={"type":"greenhouse",
+                        "url":f"https://boards-api.{region}greenhouse.io/v1/boards/{token}/jobs",
+                        "board":f"https://{p.netloc}/{token}"}
+            elif h in ("jobs.lever.co","jobs.eu.lever.co"):
+                region="eu." if h=="jobs.eu.lever.co" else ""
+                config={"type":"lever","url":f"https://api.{region}lever.co/v0/postings/{token}",
+                        "board":f"https://{p.netloc}/{token}"}
+            elif h in ("careers.smartrecruiters.com","jobs.smartrecruiters.com"):
+                config={"type":"smartrecruiters",
+                        "url":f"https://api.smartrecruiters.com/v1/companies/{token}/postings",
+                        "board":f"https://jobs.smartrecruiters.com/{token}"}
+            if config and config["url"] not in seen:
+                seen.add(config["url"]);configs.append(config)
+    return configs
+
+
+def api_inventory(o,c=None):
+    """Exhaust the configured or officially discovered ATS feed. Partial data is never complete."""
+    c=c or API_BOARDS.get(o["name"])
     if not c:return None
     items=[]; official_total=None; pages=0; terminal=False; source=c["url"]
     try:
@@ -393,7 +434,8 @@ def validate_jobs(js,board_keys=None):
 
 def scan(o):
     t=time.monotonic(); tried=[]; success=[]; q=candidates(o); seen=set()
-    api=api_inventory(o); static=static_inventory(o)
+    configured_api=api_inventory(o); api_attempts=[configured_api] if configured_api else []
+    api=configured_api; static=static_inventory(o)
     while q and len(seen)<24:
         u=q.pop(0)
         if u in seen: continue
@@ -408,6 +450,14 @@ def scan(o):
             f=fetch(u,"search-discovered-official")
             tried.append({k:f[k] for k in ("url","final","method","status","ok","error","ms")})
             if f["ok"] and allowed(f["final"],o): success.append(f); break
+    # Discover provider feeds from pages actually linked by the official employer.
+    # A broken configured endpoint cannot prevent checking an officially linked replacement.
+    if not (api and api["complete"]):
+        for config in discover_official_ats(success,o)[:4]:
+            if config["url"] in {x["source"] for x in api_attempts}:continue
+            result=api_inventory(o,config);api_attempts.append(result)
+            if result["complete"]:
+                api=result;break
     js=[]; [js.extend(extract_jobs(f,o)) for f in success]
     raw_matches=list({(j["title"].lower(),j["url"]):j for j in js}.values())
     audits=[]; [audits.extend(audit_candidates(f,o)) for f in success]
@@ -424,11 +474,12 @@ def scan(o):
         else: st="no_public_vacancy_board" if o["no_public_hint"] else "technical_failure"
     else: st="technical_failure"
     coverage=coverage_from_evidence(evidence,o)
-    if api:
-        evidence.append({"url":api["source"],"api_complete":api["complete"],"official_total":api["official_total"],
-                         "job_link_count":len(api["jobs"]),"listing_like":True,"static_complete_evidence":api["complete"],
-                         "api_pages":api["pages"],"api_terminal":api["terminal"],
-                         "evidence_kind":api["evidence_kind"],"api_error":api["error"]})
+    for checked_api in api_attempts:
+        evidence.append({"url":checked_api["source"],"api_complete":checked_api["complete"],
+                         "official_total":checked_api["official_total"],"job_link_count":len(checked_api["jobs"]),
+                         "listing_like":True,"static_complete_evidence":checked_api["complete"],
+                         "api_pages":checked_api["pages"],"api_terminal":checked_api["terminal"],
+                         "evidence_kind":checked_api["evidence_kind"],"api_error":checked_api["error"]})
     if api and api.get("complete"):
         coverage="verified_complete"; st="official_ats_scanned"
         api_raw=[j for j in api["jobs"] if REL.search(j["title"]+" "+j["url"]) and (SENIOR.search(j["title"]) or re.search(r"\\b(mlro|cco|cro|sanctions counsel|regulatory counsel)\\b",j["title"],re.I))]
