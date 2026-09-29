@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: "30 5 * * 1-5"
   workflow_dispatch:
+  # Full-scan request: 2026-09-29; push also starts the scheduled scanner job.
   push:
     paths:
       - "vacancy-monitor/registry.tsv"
