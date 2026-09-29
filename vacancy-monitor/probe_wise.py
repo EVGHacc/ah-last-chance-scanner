@@ -105,3 +105,21 @@ for j in matches:
          "fields",{k:data.get(k) for k in ("id","name","status","releasedDate","postingUrl","jobAdUrl","applyUrl","uuid","ref")},
          "links",links[:4],flush=True)
   except Exception as e:print("WISE_ATS_DETAIL_ERROR",ident,type(e).__name__,str(e)[:130],flush=True)
+
+# End-to-end focussed scanner check, with the unchanged real 105-entry registry.
+from scanner import load_registry,api_inventory,validate_jobs,job_key
+org=next(o for o in load_registry() if o["name"]=="Wise")
+published=api_inventory(org)
+print("WISE_SCANNER_INVENTORY","complete",published["complete"],
+      "official_total",published["official_total"],"page_count",published["pages"],
+      "error",published["error"],flush=True)
+if not published["complete"]:raise RuntimeError("Wise public ATS inventory incomplete")
+names={"Compliance Lead (Wise Platform)","Compliance Manager: Group Regulatory Compliance",
+       "Senior Risk Manager","Group Lead - Assets Risk"}
+chosen=[j for j in published["jobs"] if j["title"] in names]
+print("WISE_SCANNER_TARGETS",[(j["title"],j["url"],j.get("posting_uuid")) for j in chosen],flush=True)
+if {j["title"] for j in chosen}!=names:raise RuntimeError("One or more user-provided Wise roles missed by official inventory")
+verified=validate_jobs(chosen,{job_key(j["url"]) for j in published["jobs"]},max_workers=2)
+print("WISE_SCANNER_LIVE",[(j["title"],j["url"],j["live"],j["board_present"],
+                           j["apply_live"],j["validation_reason"],j["http_status"],j.get("apply_http_status"))
+                          for j in verified],flush=True)
