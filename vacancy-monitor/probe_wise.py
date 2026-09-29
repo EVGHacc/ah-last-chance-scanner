@@ -75,3 +75,33 @@ for company in ("Wise","wise"):
          "matches",[(x.get("id"),x.get("name")) for x in items if q and q.lower() in str(x.get("name","")).lower()],
          flush=True)
   except Exception as e:print("WISE_ATS_ERROR",company,repr(q),type(e).__name__,str(e)[:140],flush=True)
+
+full=[];pages=[];total=None
+for offset in (0,100,200,300,400):
+ try:
+  r=requests.get("https://api.smartrecruiters.com/v1/companies/Wise/postings",headers=H,
+                params={"limit":100,"offset":offset,"destination":"PUBLIC"},timeout=13)
+  d=r.json() if r.status_code==200 else {};batch=d.get("content",[]) if isinstance(d,dict) else []
+  pages.append((offset,r.status_code,d.get("totalFound"),len(batch)))
+  if total is None:total=d.get("totalFound")
+  full+=batch
+ except Exception as e:print("WISE_FULL_API_ERROR",offset,str(e)[:140],flush=True)
+focus=("Compliance Lead (Wise Platform)","Compliance Manager: Group Regulatory Compliance","Senior Risk Manager","Group Lead - Assets Risk")
+matches=[j for j in full if j.get("name") in focus]
+print("WISE_FULL_ATS","pages",pages,"total",total,"uniqueIds",len({j.get("id") for j in full}),
+      "targetMatches",[(j.get("id"),j.get("name"),list(j)[:25]) for j in matches],flush=True)
+for j in matches:
+ ident=str(j["id"])
+ for url in (f"https://api.smartrecruiters.com/v1/companies/Wise/postings/{ident}",
+             f"https://jobs.smartrecruiters.com/Wise/{ident}"):
+  try:
+   r=requests.get(url,headers=H,timeout=13)
+   data=r.json() if "json" in r.headers.get("content-type","") and r.status_code==200 else {}
+   s=BeautifulSoup(r.text,"html.parser")
+   links=[(a.get_text(" ",strip=True)[:60],urljoin(r.url,a["href"])) for a in s.find_all("a",href=True)
+          if re.search("interested|apply",a.get_text(" ",strip=True),re.I)]
+   print("WISE_ATS_DETAIL",j.get("name"),ident,r.status_code,r.url,
+         "title",s.title.get_text(" ",strip=True)[:90] if s.title else None,
+         "fields",{k:data.get(k) for k in ("id","name","status","releasedDate","postingUrl","jobAdUrl","applyUrl","uuid","ref")},
+         "links",links[:4],flush=True)
+  except Exception as e:print("WISE_ATS_DETAIL_ERROR",ident,type(e).__name__,str(e)[:130],flush=True)
