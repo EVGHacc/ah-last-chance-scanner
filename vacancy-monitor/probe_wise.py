@@ -123,3 +123,18 @@ verified=validate_jobs(chosen,{job_key(j["url"]) for j in published["jobs"]},max
 print("WISE_SCANNER_LIVE",[(j["title"],j["url"],j["live"],j["board_present"],
                            j["apply_live"],j["validation_reason"],j["http_status"],j.get("apply_http_status"))
                           for j in verified],flush=True)
+
+# Explain why a live ATS detail may still fail the application-route proof.
+target=next(j for j in chosen if j["title"]=="Compliance Lead (Wise Platform)")
+ident=target["smartrecruiters_posting_id"];uuid=target["posting_uuid"]
+api=requests.get(target["smartrecruiters_detail_url"],headers=H,timeout=12).json()
+for label,url in (("applyUrl",api.get("applyUrl")),("oneclick","https://jobs.smartrecruiters.com/oneclick-ui/company/Wise/publication/"+uuid+"?dcr_ci=Wise")):
+ try:
+  rr=requests.get(url,headers=H,timeout=12)
+  soup=BeautifulSoup(rr.text,"html.parser")
+  tt=soup.title.get_text(" ",strip=True) if soup.title else ""
+  print("WISE_APPLY_TRACE",label,rr.status_code,rr.url,"title",tt,
+        "roleInTitle",target["title"].casefold() in tt.casefold(),
+        "uuidInUrl",uuid.lower() in rr.url.lower(),
+        "bodyWords",soup.get_text(" ",strip=True)[:150],flush=True)
+ except Exception as e:print("WISE_APPLY_TRACE_ERROR",label,type(e).__name__,str(e)[:140],flush=True)
