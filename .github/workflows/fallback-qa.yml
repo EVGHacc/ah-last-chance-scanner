@@ -17,6 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Gate Amsterdam evening
         id: gate
         env:
@@ -31,10 +34,6 @@ jobs:
           with open(os.environ['GITHUB_OUTPUT'],'a') as f: f.write(f'run={str(run).lower()}\n')
           print('Amsterdam',n.isoformat(),'fallback enabled',run)
           PY
-      - uses: actions/checkout@v4
-        if: steps.gate.outputs.run == 'true'
-        with:
-          fetch-depth: 0
       - uses: actions/setup-python@v5
         if: steps.gate.outputs.run == 'true'
         with:
