@@ -38,6 +38,8 @@ API_BOARDS={
     "Surepay":{"type":"greenhouse","url":"https://boards-api.eu.greenhouse.io/v1/boards/surepay/jobs","board":"https://job-boards.eu.greenhouse.io/surepay"},
     "Finom":{"type":"lever","url":"https://api.eu.lever.co/v0/postings/pnlfin","board":"https://jobs.eu.lever.co/pnlfin"},
     "Varrlyn":{"type":"smartrecruiters","url":"https://api.smartrecruiters.com/v1/companies/Varrlyn/postings","board":"https://jobs.smartrecruiters.com/Varrlyn"},
+    # wise.jobs/Workflow redirects to this exact Wise publisher/application system.
+    "Wise":{"type":"smartrecruiters","url":"https://api.smartrecruiters.com/v1/companies/Wise/postings","board":"https://jobs.smartrecruiters.com/Wise"},
     "Airwallex":{"type":"ashby","url":"https://api.ashbyhq.com/posting-api/job-board/airwallex","board":"https://jobs.ashbyhq.com/airwallex"}
 }
 STATIC_BOARDS={
@@ -254,7 +256,15 @@ def api_inventory(o,c=None):
             for j in raw:
                 title=j.get("name") or "";ident=j.get("id") or ""
                 u=j.get("jobAdUrl") or j.get("postingUrl") or (c["board"].rstrip("/")+"/"+str(ident) if ident else "")
-                if title and u:items.append({"title":title,"url":u})
+                if title and u:
+                    item={"title":title,"url":u}
+                    if o["name"]=="Wise":
+                        item.update({"smartrecruiters_posting_id":str(ident),
+                                     "smartrecruiters_detail_url":source.rstrip("/")+"/"+str(ident),
+                                     "posting_uuid":j.get("uuid"),
+                                     "location":j.get("location",{}).get("city","") if isinstance(j.get("location"),dict) else "",
+                                     "published_at":j.get("releasedDate")})
+                    items.append(item)
         else:raise ValueError("Unknown ATS type")
         urls=[j["url"] for j in items]
         # A board may return employer-hosted links, but never accept a foreign employer.
@@ -544,6 +554,68 @@ def validate_embedded_candidate(j,board_keys):
     return item
 
 
+def validate_wise_candidate(j,board_keys):
+    """Verify Wise's published ATS posting and the same posting's active application."""
+    item=dict(j);requested=j["url"];ident=str(j.get("smartrecruiters_posting_id") or "")
+    uuid=str(j.get("posting_uuid") or "").lower()
+    board_present=bool(job_key(requested) in board_keys)
+    detail_live=False;apply_route=False;detail_status=None;apply_status=None
+    reason="detail_page_not_live";first_party_detail=None
+    expected_host="jobs.smartrecruiters.com"
+    def posting_path_ok(url):
+        path=urlparse(url).path
+        return bool(hostname(url)==expected_host and
+                    re.match(r"^/Wise/"+re.escape(ident)+r"(?:-|/|$)",path,re.I))
+    def exact_title(html):
+        soup=BeautifulSoup(html or "","html.parser")
+        title=soup.title.get_text(" ",strip=True) if soup.title else ""
+        return bool(j["title"].casefold() in title.casefold())
+    try:
+        api=requests.get(j["smartrecruiters_detail_url"],headers=H,timeout=TIMEOUT)
+        if api.status_code==200 and hostname(api.url)=="api.smartrecruiters.com":
+            d=api.json()
+            ats_url=d.get("postingUrl") or ""
+            apply_url=d.get("applyUrl") or ""
+            api_ok=bool(str(d.get("id"))==ident and
+                        str(d.get("name") or "").strip().casefold()==j["title"].strip().casefold() and
+                        str(d.get("uuid") or "").lower()==uuid and
+                        re.fullmatch(r"[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}",uuid) and
+                        posting_path_ok(ats_url) and posting_path_ok(apply_url))
+            if api_ok and board_present:
+                page=fetch(requested,"job-live-check")
+                detail_status=page["status"]
+                detail_live=bool(page["ok"] and posting_path_ok(page["final"]) and
+                                 exact_title(page["html"]) and not CLOSED.search(page["text"]))
+                first_party_detail=page["final"]
+                if detail_live:
+                    # The official public API supplies the application route. The
+                    # same UUID must resolve to Wise's actual one-click application.
+                    redirect=fetch(apply_url,"apply-live-check")
+                    oneclick_url=("https://jobs.smartrecruiters.com/oneclick-ui/company/Wise/publication/"
+                                  +uuid+"?dcr_ci=Wise")
+                    form=fetch(oneclick_url,"apply-live-check")
+                    apply_status=form["status"]
+                    path=urlparse(form["final"]).path.rstrip("/")
+                    same_publication=path.lower()==("/oneclick-ui/company/wise/publication/"+uuid).lower()
+                    apply_route=bool(redirect["ok"] and posting_path_ok(redirect["final"]) and
+                                     exact_title(redirect["html"]) and
+                                     form["ok"] and hostname(form["final"])==expected_host and
+                                     same_publication and exact_title(form["html"]) and
+                                     not CLOSED.search(form["text"]))
+            if detail_live and board_present and apply_route:reason="direct_live_and_current_board"
+            elif not board_present:reason="not_on_current_board"
+            elif detail_live:reason="no_live_apply_control"
+        if api.status_code==404:reason="detail_page_not_live"
+    except Exception as exc:
+        reason="smartrecruiters_detail_or_apply_error:"+type(exc).__name__
+    item.update({"url":first_party_detail or requested,"live":detail_live,"board_present":board_present,
+                 "apply_live":bool(detail_live and board_present and apply_route),
+                 "validation_reason":reason,"http_status":detail_status,"checked_at":iso(),
+                 "validation_source":"official_smartrecruiters_listing_detail_and_application",
+                 "apply_http_status":apply_status})
+    return item
+
+
 def validate_jobs(js,board_keys=None,max_workers=6):
     """Live-check every candidate in bounded parallel requests; never infer liveness from a board alone."""
     board_keys=set(board_keys or ())
@@ -551,6 +623,8 @@ def validate_jobs(js,board_keys=None,max_workers=6):
         j=dict(candidate)
         if j.get("workday_detail_url"):
             return validate_workday_candidate(j,board_keys)
+        if j.get("smartrecruiters_detail_url") and j.get("posting_uuid"):
+            return validate_wise_candidate(j,board_keys)
         if j.get("embedded_provider") in ("N26","Revolut"):
             return validate_embedded_candidate(j,board_keys)
         requested=j["url"]; f=fetch(requested,"job-live-check"); text=f["text"]
@@ -657,14 +731,14 @@ def scan(o):
     for checked_api in api_attempts:
         evidence.append({"url":checked_api["source"],"api_complete":checked_api["complete"],
                          "official_total":checked_api["official_total"],"job_link_count":len(checked_api["jobs"]),
-                         "listing_like":True,"static_complete_evidence":checked_api["complete"] and o["name"]!="Airwallex",
+                         "listing_like":True,"static_complete_evidence":checked_api["complete"] and o["name"] not in ("Airwallex","Wise"),
                          "api_pages":checked_api["pages"],"api_terminal":checked_api["terminal"],
                          "evidence_kind":checked_api["evidence_kind"],"api_error":checked_api["error"]})
     if api and api.get("complete"):
         # The Ashby published feed is complete as an ATS source, but the
         # separate Airwallex first-party catalogue has a different total.
         # Do not claim complete overall Airwallex coverage until reconciled.
-        coverage="partial" if o["name"]=="Airwallex" else "verified_complete"
+        coverage="partial" if o["name"] in ("Airwallex","Wise") else "verified_complete"
         st="official_ats_scanned"
         api_raw=([j for j in api["jobs"] if strategic_inventory_match(j)]
                  if o["name"]=="Airwallex" else
