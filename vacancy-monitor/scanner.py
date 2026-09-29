@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 import requests
 from bs4 import BeautifulSoup
+from embedded_inventory import embedded_inventory
 
 ROOT=Path(__file__).resolve().parent
 DATA=ROOT/"data"; DATA.mkdir(exist_ok=True)
@@ -494,6 +495,55 @@ def validate_workday_candidate(j,board_keys):
     return out
 
 
+def validate_embedded_candidate(j,board_keys):
+    """Strict ID, current official index, exact title, live detail and application path."""
+    item=dict(j); ident=str(j["embedded_job_id"]).lower();provider=j["embedded_provider"]
+    requested=j["url"];detail=fetch(requested,"job-live-check")
+    path=urlparse(detail["final"]).path.rstrip("/").lower()
+    host=hostname(detail["final"])
+    if provider=="N26":
+        identity=bool(host=="n26.com" and path=="/en-eu/careers/positions/"+ident)
+        apply_url="https://n26.com/en-eu/careers/positions/"+ident+"/apply"
+    else:
+        identity=bool(host in ("revolut.com","www.revolut.com") and
+                      path.startswith("/careers/position/") and path.endswith("-"+ident))
+        apply_url="https://www.revolut.com/careers/apply/"+ident+"/"
+    soup=BeautifulSoup(detail["html"],"html.parser")
+    h1=soup.find("h1");actual_title=h1.get_text(" ",strip=True) if h1 else ""
+    title_ok=re.sub(r"\s+"," ",actual_title).casefold()==re.sub(r"\s+"," ",j["title"]).casefold()
+    board_present=job_key(requested) in board_keys
+    direct_live=bool(detail["ok"] and identity and title_ok and not CLOSED.search(detail["text"]))
+    link_ok=any(
+        APPLY.search(a.get_text(" ",strip=True)) and
+        urlparse(urljoin(detail["final"],a.get("href",""))).path.rstrip("/")==urlparse(apply_url).path.rstrip("/")
+        and hostname(urljoin(detail["final"],a.get("href","")))==hostname(apply_url)
+        for a in soup.find_all("a",href=True)
+    )
+    apply_route=False;apply_http_status=None
+    if direct_live and board_present and link_ok:
+        check=fetch(apply_url,"apply-live-check");apply_http_status=check["status"]
+        asoup=BeautifulSoup(check["html"],"html.parser")
+        path_ok=(hostname(check["final"])==hostname(apply_url) and
+                 urlparse(check["final"]).path.rstrip("/")==urlparse(apply_url).path.rstrip("/"))
+        if provider=="Revolut":
+            form_ok=bool(asoup.find("form") and asoup.find("input"))
+        else:
+            form_ok=bool(asoup.title and j["title"].casefold() in asoup.title.get_text(" ",strip=True).casefold())
+        apply_route=bool(check["ok"] and path_ok and ident in check["html"].lower() and form_ok)
+    apply_live=bool(direct_live and board_present and link_ok and apply_route)
+    if apply_live:reason="direct_live_and_current_board"
+    elif detail["status"]==429:reason="rate_limited"
+    elif detail["status"]==403:reason="access_blocked"
+    elif not board_present:reason="not_on_current_board"
+    elif not direct_live:reason="detail_page_not_live"
+    else:reason="no_live_apply_control"
+    item.update({"url":detail["final"],"live":direct_live,"board_present":board_present,
+                 "apply_live":apply_live,"validation_reason":reason,"http_status":detail["status"],
+                 "checked_at":iso(),"apply_url":apply_url,"apply_http_status":apply_http_status,
+                 "validation_source":"first_party_embedded_index_and_direct_apply"})
+    return item
+
+
 def validate_jobs(js,board_keys=None,max_workers=6):
     """Live-check every candidate in bounded parallel requests; never infer liveness from a board alone."""
     board_keys=set(board_keys or ())
@@ -501,6 +551,8 @@ def validate_jobs(js,board_keys=None,max_workers=6):
         j=dict(candidate)
         if j.get("workday_detail_url"):
             return validate_workday_candidate(j,board_keys)
+        if j.get("embedded_provider") in ("N26","Revolut"):
+            return validate_embedded_candidate(j,board_keys)
         requested=j["url"]; f=fetch(requested,"job-live-check"); text=f["text"]
         identity_ok=not j.get("source_job_id") or airwallex_id(f["final"])==j["source_job_id"]
         direct_live=f["ok"] and identity_ok and (j["title"].lower()[:24] in text.lower() or len(j["title"])<12)
@@ -579,6 +631,13 @@ def scan(o):
             result=api_inventory(o,config);api_attempts.append(result)
             if result["complete"]:
                 api=result;break
+    embedded=None
+    if o["name"] in ("N26","Revolut"):
+        for f in success:
+            found=embedded_inventory(o["name"],f["html"],f["final"])
+            if found and (embedded is None or len(found["jobs"])>len(embedded["jobs"])):
+                embedded=found
+            if embedded and embedded["complete"]:break
     js=[]; [js.extend(extract_jobs(f,o)) for f in success]
     raw_matches=list({(j["title"].lower(),j["url"]):j for j in js}.values())
     audits=[]; [audits.extend(audit_candidates(f,o)) for f in success]
@@ -623,6 +682,24 @@ def scan(o):
             jobs=validate_jobs(chosen,{job_key(j["url"]) for j in api["jobs"]},max_workers=2)+deferred
         else:
             jobs=validate_jobs(api_raw,{job_key(j["url"]) for j in api["jobs"]})
+
+    if embedded:
+        evidence.append({"url":embedded["source"],"embedded_complete":embedded["complete"],
+                         "official_total":embedded["official_total"],"job_link_count":len(embedded["jobs"]),
+                         "listing_like":True,"static_complete_evidence":embedded["complete"],
+                         "evidence_kind":embedded["evidence_kind"],"embedded_error":embedded["error"]})
+        if embedded["jobs"]:
+            st="official_site_scanned"
+            coverage="verified_complete" if embedded["complete"] else "partial"
+            indexed=embedded["jobs"]
+            matched=[j for j in indexed if strategic_inventory_match(j)]
+            independent=[j for j in indexed if AUDIT_SENIOR.search(j["title"]) and
+                         AUDIT_REL.search(j["title"]+" "+j.get("department","")+" "+j.get("team",""))]
+            chosen_urls={j["url"] for j in matched}
+            missed=[j for j in independent if j["url"] not in chosen_urls]
+            audit_unique=independent;audit_missed=missed
+            chosen,deferred=airwallex_validation_queue(matched,capacity=45,priority_count=40)
+            jobs=validate_jobs(chosen,{job_key(j["url"]) for j in indexed},max_workers=4)+deferred
 
     if static and static.get("complete"):
         coverage="verified_complete"; st="official_site_scanned"
