@@ -10,6 +10,7 @@ on:
       - "vacancy-monitor/probe_visa.py"
       - "vacancy-monitor/probe_n26_revolut.py"
       - "vacancy-monitor/probe_n26_revolut_inventory.py"
+      - "vacancy-monitor/probe_wise.py"
       - "vacancy-monitor/requirements.txt"
       - "vacancy-monitor/registry.tsv"
       - ".github/workflows/vacancy-monitor-qa.yml"
@@ -41,6 +42,8 @@ jobs:
         run: python vacancy-monitor/probe_n26_revolut.py
       - name: Inspect embedded N26 and Revolut inventories and exact apply routes
         run: python vacancy-monitor/probe_n26_revolut_inventory.py
+      - name: Probe Wise official board and four direct vacancy URLs
+        run: python vacancy-monitor/probe_wise.py
       - name: Check registry and mandatory employers
         run: |
           python - <<'PY'
