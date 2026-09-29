@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch
 
-from scanner import REL, SENIOR, extract_jobs, listing_evidence, coverage_from_evidence, validate_jobs, job_key, qa_snapshot, api_inventory, merge_validated_jobs, discover_official_ats, airwallex_id, airwallex_official_url, strategic_inventory_match, airwallex_validation_queue, airwallex_id, airwallex_official_url, strategic_inventory_match
+from scanner import REL, SENIOR, extract_jobs, listing_evidence, coverage_from_evidence, validate_jobs, job_key, qa_snapshot, api_inventory, merge_validated_jobs, discover_official_ats, airwallex_id, airwallex_official_url, strategic_inventory_match, airwallex_validation_queue, validate_workday_candidate, airwallex_id, airwallex_official_url, strategic_inventory_match
 
 
 ORG = {"official_domain": "example.com", "allowed_domains": []}
@@ -433,6 +433,107 @@ class AirwallexCoverageTests(unittest.TestCase):
             result=validate_jobs([j],{job_key(u)})[0]
         self.assertFalse(result["apply_live"])
         self.assertEqual(result["validation_reason"],"rate_limited")
+
+
+class VisaWorkdayTests(unittest.TestCase):
+    class Reply:
+        def __init__(self,data=None,status_code=200,url=""):
+            self.data=data or {};self.status_code=status_code;self.url=url
+        def raise_for_status(self):
+            if self.status_code>=400:raise RuntimeError("HTTP "+str(self.status_code))
+        def json(self):return self.data
+
+    @staticmethod
+    def org():
+        return {"name":"Visa","official_domain":"visa.com",
+                "allowed_domains":[],"seed_urls":["https://corporate.visa.com/en/jobs/"],
+                "no_public_hint":False}
+
+    @staticmethod
+    def posting(i):
+        return {"title":f"Director, Risk Governance {i}",
+                "externalPath":f"/job/GB---London-United-Kingdom/Director--Risk-Governance_{'REF%06dW' % i}"}
+
+    def test_workday_continuation_total_zero_is_valid_only_if_exhausted(self):
+        first={"total":21,"jobPostings":[self.posting(i) for i in range(20)]}
+        second={"total":0,"jobPostings":[self.posting(20)]}
+        with patch("scanner.requests.post",side_effect=[self.Reply(first),self.Reply(second)]) as post:
+            inv=api_inventory(self.org())
+        self.assertTrue(inv["complete"])
+        self.assertEqual(inv["official_total"],21)
+        self.assertEqual(len(inv["jobs"]),21)
+        self.assertEqual(post.call_count,2)
+        self.assertEqual(inv["jobs"][20]["workday_job_id"],"REF000020W")
+        self.assertEqual(inv["jobs"][20]["workday_detail_url"],
+                         "https://visa.wd5.myworkdayjobs.com/wday/cxs/visa/Visa"+
+                         self.posting(20)["externalPath"])
+
+    def test_workday_partial_or_duplicate_continuation_is_not_proven(self):
+        first={"total":21,"jobPostings":[self.posting(i) for i in range(20)]}
+        with patch("scanner.requests.post",side_effect=[
+                self.Reply(first),self.Reply({"total":0,"jobPostings":[]})]):
+            self.assertFalse(api_inventory(self.org())["complete"])
+        with patch("scanner.requests.post",side_effect=[
+                self.Reply(first),self.Reply({"total":0,"jobPostings":[self.posting(0)]})]):
+            self.assertFalse(api_inventory(self.org())["complete"])
+        with patch("scanner.requests.post",side_effect=[
+                self.Reply(first),self.Reply({"total":22,"jobPostings":[self.posting(20)]})]):
+            self.assertFalse(api_inventory(self.org())["complete"])
+
+    @staticmethod
+    def candidate():
+        path="/job/GB---London-United-Kingdom/Director--Rules-Governance-and-Transformation_REF088281W"
+        board="https://visa.wd5.myworkdayjobs.com/Visa"
+        return {"title":"Director, Rules Governance and Transformation",
+                "url":board+path,
+                "workday_detail_url":"https://visa.wd5.myworkdayjobs.com/wday/cxs/visa/Visa"+path,
+                "workday_job_id":"REF088281W"}
+
+    def test_exact_official_workday_detail_can_apply_and_route(self):
+        j=self.candidate()
+        data={"jobPostingInfo":{"title":j["title"],"jobReqId":"REF088281W",
+                "canApply":True,"externalUrl":j["url"]}}
+        apply_url=j["url"]+"/apply"
+        with patch("scanner.requests.get",side_effect=[
+            self.Reply(data,200,j["workday_detail_url"]),
+            self.Reply({},200,apply_url)]) as req:
+            result=validate_jobs([j],{job_key(j["url"])})[0]
+        self.assertTrue(result["apply_live"])
+        self.assertTrue(result["board_present"])
+        self.assertEqual(result["validation_reason"],"direct_live_and_current_board")
+        self.assertEqual(result["apply_url"],apply_url)
+        self.assertEqual(req.call_count,2)
+
+    def test_workday_closed_or_wrong_identity_never_passes(self):
+        j=self.candidate()
+        for changed in ({"canApply":False},{"jobReqId":"REF000001W"},
+                        {"title":"Unrelated Director"},
+                        {"externalUrl":"https://visa.wd5.myworkdayjobs.com/Visa/job/unrelated"}):
+            info={"title":j["title"],"jobReqId":"REF088281W","canApply":True,
+                  "externalUrl":j["url"]}
+            info.update(changed)
+            with patch("scanner.requests.get",return_value=
+                    self.Reply({"jobPostingInfo":info},200,j["workday_detail_url"])) as get:
+                result=validate_jobs([j],{job_key(j["url"])})[0]
+            self.assertFalse(result["apply_live"])
+            self.assertEqual(get.call_count,1)
+        with patch("scanner.requests.get",return_value=
+                self.Reply({"jobPostingInfo":{"title":j["title"],"jobReqId":"REF088281W",
+                "canApply":True,"externalUrl":j["url"]}},200,j["workday_detail_url"])) as get:
+            result=validate_jobs([j],set())[0]
+        self.assertFalse(result["apply_live"])
+        self.assertEqual(get.call_count,1)
+
+    def test_workday_apply_redirect_does_not_count_as_application_route(self):
+        j=self.candidate()
+        info={"jobPostingInfo":{"title":j["title"],"jobReqId":"REF088281W",
+                                  "canApply":True,"externalUrl":j["url"]}}
+        with patch("scanner.requests.get",side_effect=[
+                self.Reply(info,200,j["workday_detail_url"]),
+                self.Reply({},200,"https://visa.wd5.myworkdayjobs.com/Visa")]):
+            result=validate_jobs([j],{job_key(j["url"])})[0]
+        self.assertFalse(result["apply_live"])
+        self.assertEqual(result["validation_reason"],"no_live_apply_control")
 
 
 if __name__ == "__main__":
