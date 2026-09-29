@@ -25,6 +25,11 @@ for label,url in [("N26",n26),("REVOLUT",rev)]:
   decoded="".join(chunks)
   matches=re.findall(r'"title","((?:\\.|[^"\\])*)","id",(\d{7,9})',decoded)
   unique={ident:title for title,ident in matches}
+  allpairs=re.findall(r'"((?:\\.|[^"\\]){4,180})",(?:"id",)?(\d{7,9}),"20\d{2}-',decoded)
+  allunique={ident:title for title,ident in allpairs}
+  print("N26_ALLPAIRS",len(allpairs),"unique",len(allunique),
+        "target_title",alluniqe.get("7845376") if False else allunique.get("7845376"),
+        "first",list(allunique.items())[:5],flush=True)
   print("N26_DECODED","chunks",len(chunks),"chars",len(decoded),
        "matched_pairs",len(matches),"unique",len(unique),
        "target_title",unique.get("7845376"),"samples",list(unique.items())[:4],flush=True)
