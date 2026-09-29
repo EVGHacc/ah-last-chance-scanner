@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch
 
-from scanner import REL, SENIOR, extract_jobs, listing_evidence, coverage_from_evidence, validate_jobs, job_key, qa_snapshot
+from scanner import REL, SENIOR, extract_jobs, listing_evidence, coverage_from_evidence, validate_jobs, job_key, qa_snapshot, api_inventory, merge_validated_jobs
 
 
 ORG = {"official_domain": "example.com", "allowed_domains": []}
@@ -101,6 +101,100 @@ class ScannerTests(unittest.TestCase):
         qa=qa_snapshot(payload)
         self.assertTrue(qa["passed"])
         self.assertEqual(qa["live_jobs_checked"],1)
+
+
+class OfficialInventoryTests(unittest.TestCase):
+    class Reply:
+        def __init__(self, data):
+            self.data=data
+        def raise_for_status(self):
+            return None
+        def json(self):
+            return self.data
+
+    @staticmethod
+    def org(name):
+        return {"name":name,"official_domain":"example.com","allowed_domains":[],
+                "seed_urls":["https://example.com/careers/"],"no_public_hint":False}
+
+    def test_greenhouse_uses_official_total(self):
+        url="https://job-boards.greenhouse.io/tide/jobs/"
+        jobs=[{"title":"Head of Compliance","absolute_url":url+"1"},
+              {"title":"Director Risk","absolute_url":url+"2"}]
+        with patch("scanner.requests.get",return_value=self.Reply({"jobs":jobs,"meta":{"total":2}})):
+            result=api_inventory(self.org("Tide"))
+        self.assertTrue(result["complete"])
+        self.assertEqual(result["official_total"],2)
+        self.assertEqual(len(result["jobs"]),2)
+        self.assertEqual(result["evidence_kind"],"official_api_total")
+
+    def test_greenhouse_partial_does_not_claim_complete(self):
+        url="https://job-boards.greenhouse.io/tide/jobs/1"
+        payload={"jobs":[{"title":"Head of Compliance","absolute_url":url}],"meta":{"total":2}}
+        with patch("scanner.requests.get",return_value=self.Reply(payload)):
+            result=api_inventory(self.org("Tide"))
+        self.assertFalse(result["complete"])
+        self.assertEqual(result["official_total"],2)
+
+    def test_greenhouse_foreign_employer_rejected(self):
+        payload={"jobs":[{"title":"Head of Compliance",
+                            "absolute_url":"https://job-boards.greenhouse.io/other/jobs/1"}],"meta":{"total":1}}
+        with patch("scanner.requests.get",return_value=self.Reply(payload)):
+            result=api_inventory(self.org("Tide"))
+        self.assertFalse(result["complete"])
+        self.assertIn("unrelated",result["error"])
+
+    def test_lever_requires_terminal_page(self):
+        jobs=[{"text":"Head of Financial Crime","hostedUrl":"https://jobs.eu.lever.co/pnlfin/job-1"},
+              {"text":"Director of Risk","hostedUrl":"https://jobs.eu.lever.co/pnlfin/job-2"}]
+        with patch("scanner.requests.get",return_value=self.Reply(jobs)) as get:
+            result=api_inventory(self.org("Finom"))
+        self.assertTrue(result["complete"])
+        self.assertTrue(result["terminal"])
+        self.assertIsNone(result["official_total"])
+        self.assertEqual(result["evidence_kind"],"official_api_exhausted")
+        self.assertEqual(get.call_args.kwargs["params"]["skip"],0)
+
+    def test_lever_full_page_must_fetch_terminal_page(self):
+        first=[{"text":f"Role {i}","hostedUrl":f"https://jobs.eu.lever.co/pnlfin/{i}"} for i in range(100)]
+        with patch("scanner.requests.get",side_effect=[self.Reply(first),self.Reply([])]) as get:
+            result=api_inventory(self.org("Finom"))
+        self.assertTrue(result["complete"])
+        self.assertEqual(get.call_count,2)
+        self.assertEqual(len(result["jobs"]),100)
+
+    def test_smartrecruiters_paginates_to_total(self):
+        a={"id":"1","name":"Compliance Director"}
+        b={"id":"2","name":"Head of Risk"}
+        responses=[{"totalFound":2,"content":[a]},{"totalFound":2,"content":[b]}]
+        with patch("scanner.requests.get",side_effect=[self.Reply(x) for x in responses]) as get:
+            result=api_inventory(self.org("Varrlyn"))
+        self.assertTrue(result["complete"])
+        self.assertEqual(result["official_total"],2)
+        self.assertEqual(get.call_count,2)
+        self.assertEqual(get.call_args.kwargs["params"]["offset"],1)
+
+    def test_smartrecruiters_inconsistent_total_fails_closed(self):
+        responses=[{"totalFound":2,"content":[{"id":"1","name":"Compliance Director"}]},
+                   {"totalFound":3,"content":[{"id":"2","name":"Head of Risk"}]}]
+        with patch("scanner.requests.get",side_effect=[self.Reply(x) for x in responses]):
+            result=api_inventory(self.org("Varrlyn"))
+        self.assertFalse(result["complete"])
+
+    def test_partial_browser_recovery_cannot_revoke_verified_match(self):
+        prior={"title":"Director Risk","url":"https://example.com/jobs/1","apply_live":True,"board_present":True}
+        browser={"title":"Director Risk","url":"https://example.com/jobs/1?utm_source=test","apply_live":False,
+                 "board_present":False,"validation_reason":"not_on_current_board"}
+        result=merge_validated_jobs([prior],[browser])
+        self.assertEqual(len(result),1)
+        self.assertTrue(result[0]["apply_live"])
+
+    def test_browser_can_add_new_match_without_dropping_old(self):
+        prior={"title":"Director Risk","url":"https://example.com/jobs/1","apply_live":True}
+        new={"title":"Head of Audit","url":"https://example.com/jobs/2","apply_live":True}
+        result=merge_validated_jobs([prior],[new])
+        self.assertEqual(len(result),2)
+        self.assertTrue(all(j["apply_live"] for j in result))
 
 
 if __name__ == "__main__":
