@@ -30,11 +30,6 @@ LISTING_URL=re.compile(r"(/jobs?/?$|/vacatures/?$|job-search|search-jobs|search-
 CLOSED=re.compile(r"(no.?longer.?available|(?:position|job|vacancy).{0,65}(?:has.?been.?filled|is.?filled|is.?closed|was.?filled)|job you are trying to apply for has been filled|vacature.?is.?gesloten|applications?.?closed|expired)",re.I)
 COMMON=("/careers","/jobs","/vacatures","/job-search","/open-roles","/positions")
 API_BOARDS={
-    "Morgan Stanley":{"type":"workday","url":"https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/External/jobs","board":"https://ms.wd5.myworkdayjobs.com/External"},
-    "Deutsche Bank":{"type":"workday","url":"https://db.wd3.myworkdayjobs.com/wday/cxs/db/DBWebsite/jobs","board":"https://db.wd3.myworkdayjobs.com/DBWebsite"},
-    "PayPal":{"type":"workday","url":"https://paypal.wd1.myworkdayjobs.com/wday/cxs/paypal/jobs/jobs","board":"https://paypal.wd1.myworkdayjobs.com/jobs"},
-    "Mastercard":{"type":"workday","url":"https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs","board":"https://mastercard.wd1.myworkdayjobs.com/CorporateCareers"},
-    "State Street":{"type":"workday","url":"https://statestreet.wd1.myworkdayjobs.com/wday/cxs/statestreet/Global/jobs","board":"https://statestreet.wd1.myworkdayjobs.com/Global"},
     "Lloyds Banking Group":{"type":"workday","url":"https://lbg.wd3.myworkdayjobs.com/wday/cxs/lbg/LBG_Careers/jobs","board":"https://lbg.wd3.myworkdayjobs.com/LBG_Careers"},
     "Visa":{"type":"workday","url":"https://visa.wd5.myworkdayjobs.com/wday/cxs/visa/Visa/jobs","board":"https://visa.wd5.myworkdayjobs.com/Visa"},
     "Zerohash":{"type":"breezy","url":"https://zero-hash.breezy.hr/json","board":"https://zero-hash.breezy.hr"},
@@ -45,7 +40,8 @@ API_BOARDS={
     "Varrlyn":{"type":"smartrecruiters","url":"https://api.smartrecruiters.com/v1/companies/Varrlyn/postings","board":"https://jobs.smartrecruiters.com/Varrlyn"},
     # wise.jobs/Workflow redirects to this exact Wise publisher/application system.
     "Wise":{"type":"smartrecruiters","url":"https://api.smartrecruiters.com/v1/companies/Wise/postings","board":"https://jobs.smartrecruiters.com/Wise"},
-    "Airwallex":{"type":"ashby","url":"https://api.ashbyhq.com/posting-api/job-board/airwallex","board":"https://jobs.ashbyhq.com/airwallex"}
+    "Airwallex":{"type":"ashby","url":"https://api.ashbyhq.com/posting-api/job-board/airwallex","board":"https://jobs.ashbyhq.com/airwallex"},
+    "IBANfirst":{"type":"recruitee","url":"https://careers.ibanfirst.com/api/offers/","board":"https://careers.ibanfirst.com"}
 }
 STATIC_BOARDS={
     "Lime Search":{"url":"https://www.limesearch.nl/open-finance-posities","href":r"/positie/"},
@@ -258,6 +254,25 @@ def api_inventory(o,c=None):
                                   "ats_url":j["jobUrl"],"location":j.get("location") or "",
                                   "department":j.get("department") or "","team":j.get("team") or "",
                                   "published_at":j.get("publishedAt")})
+            terminal=True
+        elif c["type"]=="recruitee":
+            d=get_json(source);pages=1
+            if not isinstance(d,dict) or not isinstance(d.get("offers"),list):
+                raise ValueError("Recruitee offers array absent")
+            raw=d["offers"]
+            # The public Careers Site API is the publication inventory itself.
+            # It is unpaginated; prove exhaustion by requiring every published
+            # offer to have a stable slug/id and an official careers URL.
+            official_total=len(raw)
+            for j in raw:
+                if not isinstance(j,dict):
+                    raise ValueError("Recruitee offer has invalid type")
+                title=j.get("title") or ""; slug=j.get("slug") or ""; ident=j.get("id")
+                u=j.get("careers_url") or j.get("url") or (c["board"].rstrip("/")+"/o/"+str(slug) if slug else "")
+                if not title or not u or (not slug and ident is None):
+                    raise ValueError("Recruitee offer missing title, identity or URL")
+                items.append({"title":title,"url":u,"source_job_id":str(ident) if ident is not None else str(slug),
+                              "department":j.get("department") or "","location":j.get("location") or ""})
             terminal=True
         elif c["type"]=="smartrecruiters":
             limit=100;raw=[];offset=0
@@ -541,8 +556,8 @@ def validate_embedded_candidate(j,board_keys):
     title_ok=re.sub(r"\s+"," ",actual_title).casefold()==re.sub(r"\s+"," ",j["title"]).casefold()
     board_present=job_key(requested) in board_keys
     direct_live=bool(detail["ok"] and identity and title_ok and not CLOSED.search(detail["text"]))
+    # The exact first-party application URL is the control. Do not depend on mutable link copy.
     link_ok=any(
-        APPLY.search(a.get_text(" ",strip=True)) and
         urlparse(urljoin(detail["final"],a.get("href",""))).path.rstrip("/")==urlparse(apply_url).path.rstrip("/")
         and hostname(urljoin(detail["final"],a.get("href","")))==hostname(apply_url)
         for a in soup.find_all("a",href=True)
