@@ -2,15 +2,15 @@
   "schemaVersion": 5,
   "date": "2026-09-30",
   "weekday": "Wednesday",
-  "scheduledSlot": "21:40",
-  "scheduledAt": "2026-09-30T21:40:00+02:00",
-  "rawScheduledSlot": "21:40",
-  "rawScheduledAt": "2026-09-30T21:40:00+02:00",
-  "startedAt": "2026-09-30T21:40:24.021377+02:00",
-  "completedAt": "2026-09-30T21:40:29.031428+02:00",
-  "checkedAt": "2026-09-30T21:40:29.031428+02:00",
-  "delaySeconds": 24,
-  "rawDelaySeconds": 24,
+  "scheduledSlot": "21:42",
+  "scheduledAt": "2026-09-30T21:42:00+02:00",
+  "rawScheduledSlot": "21:42",
+  "rawScheduledAt": "2026-09-30T21:42:00+02:00",
+  "startedAt": "2026-09-30T21:42:00.410039+02:00",
+  "completedAt": "2026-09-30T21:42:05.280564+02:00",
+  "checkedAt": "2026-09-30T21:42:05.280564+02:00",
+  "delaySeconds": 0,
+  "rawDelaySeconds": 0,
   "status": "OK",
   "valid": true,
   "official1925": false,
@@ -569,11 +569,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 291,
+      "totalBargainItems": 277,
       "meatItems": 18,
       "meat70Items": 4,
       "meat70Stock": 15.0,
-      "bakeryItems": 51,
+      "bakeryItems": 46,
       "bakery70Items": 2,
       "bakery70Stock": 2.0,
       "items": [
@@ -868,18 +868,6 @@
           "markdownExpirationDate": "2026-09-30"
         },
         {
-          "productId": 606073,
-          "title": "AH Kruidenkaas snack",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "0.89",
-          "priceNow": "0.53",
-          "markdownExpirationDate": "2026-09-30"
-        },
-        {
           "productId": 584031,
           "title": "AH Rond wit sesam half",
           "brand": "AH",
@@ -973,18 +961,6 @@
           "stock": 6,
           "priceWas": "0.29",
           "priceNow": "0.22",
-          "markdownExpirationDate": "2026-09-30"
-        },
-        {
-          "productId": 577444,
-          "title": "AH Worstenbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "1.39",
-          "priceNow": "1.04",
           "markdownExpirationDate": "2026-09-30"
         },
         {
@@ -1096,18 +1072,6 @@
           "markdownExpirationDate": "2026-09-30"
         },
         {
-          "productId": 574950,
-          "title": "AH Pizza donut jalapeño cheddar",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.49",
-          "priceNow": "1.12",
-          "markdownExpirationDate": "2026-09-30"
-        },
-        {
           "productId": 230704,
           "title": "AH Kaasbroodje",
           "brand": "AH",
@@ -1129,18 +1093,6 @@
           "stock": 1,
           "priceWas": "1.49",
           "priceNow": "1.12",
-          "markdownExpirationDate": "2026-09-30"
-        },
-        {
-          "productId": 606074,
-          "title": "AH Pistache croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.29",
-          "priceNow": "0.97",
           "markdownExpirationDate": "2026-09-30"
         },
         {
@@ -1310,18 +1262,6 @@
           "priceWas": "1.25",
           "priceNow": "0.38",
           "markdownExpirationDate": "2026-10-01"
-        },
-        {
-          "productId": 603857,
-          "title": "AH Snackcrackers appel & kaneel",
-          "brand": "AH",
-          "size": "100 g",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "1.99",
-          "priceNow": "1.19",
-          "markdownExpirationDate": "2026-10-02"
         },
         {
           "productId": 578706,
