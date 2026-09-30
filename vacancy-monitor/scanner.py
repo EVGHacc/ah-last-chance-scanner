@@ -45,7 +45,8 @@ API_BOARDS={
     "Varrlyn":{"type":"smartrecruiters","url":"https://api.smartrecruiters.com/v1/companies/Varrlyn/postings","board":"https://jobs.smartrecruiters.com/Varrlyn"},
     # wise.jobs/Workflow redirects to this exact Wise publisher/application system.
     "Wise":{"type":"smartrecruiters","url":"https://api.smartrecruiters.com/v1/companies/Wise/postings","board":"https://jobs.smartrecruiters.com/Wise"},
-    "Airwallex":{"type":"ashby","url":"https://api.ashbyhq.com/posting-api/job-board/airwallex","board":"https://jobs.ashbyhq.com/airwallex"}
+    "Airwallex":{"type":"ashby","url":"https://api.ashbyhq.com/posting-api/job-board/airwallex","board":"https://jobs.ashbyhq.com/airwallex"},
+    "IBANfirst":{"type":"recruitee","url":"https://careers.ibanfirst.com/api/offers/","board":"https://careers.ibanfirst.com"}
 }
 STATIC_BOARDS={
     "Lime Search":{"url":"https://www.limesearch.nl/open-finance-posities","href":r"/positie/"},
@@ -346,6 +347,22 @@ def api_inventory(o,c=None):
                                   "ats_url":j["jobUrl"],"location":j.get("location") or "",
                                   "department":j.get("department") or "","team":j.get("team") or "",
                                   "published_at":j.get("publishedAt")})
+            terminal=True
+        elif c["type"]=="recruitee":
+            d=get_json(source);pages=1
+            if not isinstance(d,dict) or not isinstance(d.get("offers"),list):
+                raise ValueError("Recruitee offers array absent")
+            raw=d["offers"];official_total=len(raw);identities=set()
+            for j in raw:
+                if not isinstance(j,dict):raise ValueError("Recruitee offer has invalid type")
+                title=j.get("title") or "";slug=j.get("slug") or "";ident=j.get("id")
+                stable=str(ident) if ident is not None else str(slug)
+                u=j.get("careers_url") or j.get("careers_apply_url") or (c["board"].rstrip("/")+"/o/"+str(slug) if slug else "")
+                if not title or not u or not stable:raise ValueError("Recruitee offer missing required publication fields")
+                if stable in identities:raise ValueError("Duplicate Recruitee offer identity")
+                identities.add(stable)
+                items.append({"title":title,"url":u,"source_job_id":stable,
+                              "department":j.get("department") or "","location":j.get("location") or ""})
             terminal=True
         elif c["type"]=="smartrecruiters":
             limit=100;raw=[];offset=0
