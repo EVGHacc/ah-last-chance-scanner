@@ -474,6 +474,40 @@ class AirwallexCoverageTests(unittest.TestCase):
         self.assertEqual(result["validation_reason"],"rate_limited")
 
 
+class RecruiteeInventoryTests(unittest.TestCase):
+    class Reply:
+        def __init__(self,data): self.data=data
+        def raise_for_status(self): return None
+        def json(self): return self.data
+
+    @staticmethod
+    def org():
+        return {"name":"IBANfirst","official_domain":"ibanfirst.com",
+                "allowed_domains":["careers.ibanfirst.com"],
+                "seed_urls":["https://careers.ibanfirst.com/"],"no_public_hint":False}
+
+    def test_recruitee_complete_public_inventory(self):
+        offers=[
+            {"id":1,"slug":"head-of-compliance","title":"Head of Compliance",
+             "careers_url":"https://careers.ibanfirst.com/o/head-of-compliance"},
+            {"id":2,"slug":"risk-director","title":"Risk Director",
+             "careers_url":"https://careers.ibanfirst.com/o/risk-director"}]
+        with patch("scanner.requests.get",return_value=self.Reply({"offers":offers})):
+            inv=api_inventory(self.org())
+        self.assertTrue(inv["complete"])
+        self.assertTrue(inv["terminal"])
+        self.assertEqual(inv["official_total"],2)
+        self.assertEqual(len(inv["jobs"]),2)
+
+    def test_recruitee_duplicate_or_malformed_inventory_fails_closed(self):
+        duplicate={"id":1,"slug":"risk-director","title":"Risk Director",
+                   "careers_url":"https://careers.ibanfirst.com/o/risk-director"}
+        with patch("scanner.requests.get",return_value=self.Reply({"offers":[duplicate,duplicate]})):
+            self.assertFalse(api_inventory(self.org())["complete"])
+        with patch("scanner.requests.get",return_value=self.Reply({"offers":[{"title":"Risk Director"}]})):
+            self.assertFalse(api_inventory(self.org())["complete"])
+
+
 class VisaWorkdayTests(unittest.TestCase):
     class Reply:
         def __init__(self,data=None,status_code=200,url=""):
