@@ -1,11 +1,11 @@
 {
   "run_date": "2026-09-30",
   "target_expected": 104,
-  "target_proven": 20,
-  "vacancy_coverage_percent": 19.2,
+  "target_proven": 23,
+  "vacancy_coverage_percent": 22.1,
   "match_audit": {
-    "candidate_count": 269,
-    "matched_count": 269,
+    "candidate_count": 456,
+    "matched_count": 456,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -73,12 +73,6 @@
     },
     {
       "name": "Crédit Agricole CIB",
-      "kind": "employer",
-      "coverage": "partial",
-      "status": "official_site_scanned"
-    },
-    {
-      "name": "Deutsche Bank",
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
@@ -153,7 +147,7 @@
       "name": "Meta",
       "kind": "employer",
       "coverage": "unproven",
-      "status": "technical_failure"
+      "status": "official_site_scanned"
     },
     {
       "name": "Microsoft",
@@ -172,12 +166,6 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
-    },
-    {
-      "name": "Morgan Stanley",
-      "kind": "employer",
-      "coverage": "partial",
-      "status": "official_ats_scanned"
     },
     {
       "name": "MUFG",
@@ -214,12 +202,6 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
-    },
-    {
-      "name": "PayPal",
-      "kind": "employer",
-      "coverage": "partial",
-      "status": "official_ats_scanned"
     },
     {
       "name": "Rabobank",
@@ -268,6 +250,12 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
+    },
+    {
+      "name": "Visa",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "technical_failure"
     },
     {
       "name": "Wise",
@@ -339,7 +327,7 @@
       "name": "Care Professionals",
       "kind": "recruiter",
       "coverage": "unproven",
-      "status": "official_site_scanned"
+      "status": "technical_failure"
     },
     {
       "name": "Compliance People",
@@ -352,12 +340,6 @@
       "kind": "recruiter",
       "coverage": "partial",
       "status": "official_site_scanned"
-    },
-    {
-      "name": "Cowen Partners",
-      "kind": "recruiter",
-      "coverage": "partial",
-      "status": "no_public_vacancy_board"
     },
     {
       "name": "De Vroed Ten Thierry",
@@ -519,8 +501,9 @@
   "technical_failures": [
     "DB Contractors UK",
     "McKinsey",
-    "Meta",
     "Rabobank",
+    "Visa",
+    "Care Professionals",
     "Risk Talent Associates",
     "Robert Walters Interim",
     "Selby Jennings"
