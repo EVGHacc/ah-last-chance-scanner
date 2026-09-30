@@ -30,6 +30,9 @@ LISTING_URL=re.compile(r"(/jobs?/?$|/vacatures/?$|job-search|search-jobs|search-
 CLOSED=re.compile(r"(no.?longer.?available|(?:position|job|vacancy).{0,65}(?:has.?been.?filled|is.?filled|is.?closed|was.?filled)|job you are trying to apply for has been filled|vacature.?is.?gesloten|applications?.?closed|expired)",re.I)
 COMMON=("/careers","/jobs","/vacatures","/job-search","/open-roles","/positions")
 API_BOARDS={
+    "Morgan Stanley":{"type":"workday","url":"https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/External/jobs","board":"https://ms.wd5.myworkdayjobs.com/External"},
+    "Deutsche Bank":{"type":"workday","url":"https://db.wd3.myworkdayjobs.com/wday/cxs/db/DBWebsite/jobs","board":"https://db.wd3.myworkdayjobs.com/DBWebsite"},
+    "PayPal":{"type":"workday","url":"https://paypal.wd1.myworkdayjobs.com/wday/cxs/paypal/jobs/jobs","board":"https://paypal.wd1.myworkdayjobs.com/jobs"},
     "Mastercard":{"type":"workday","url":"https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs","board":"https://mastercard.wd1.myworkdayjobs.com/CorporateCareers"},
     "State Street":{"type":"workday","url":"https://statestreet.wd1.myworkdayjobs.com/wday/cxs/statestreet/Global/jobs","board":"https://statestreet.wd1.myworkdayjobs.com/Global"},
     "Lloyds Banking Group":{"type":"workday","url":"https://lbg.wd3.myworkdayjobs.com/wday/cxs/lbg/LBG_Careers/jobs","board":"https://lbg.wd3.myworkdayjobs.com/LBG_Careers"},
