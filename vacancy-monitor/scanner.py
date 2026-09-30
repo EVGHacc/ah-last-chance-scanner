@@ -173,14 +173,26 @@ def api_inventory(o,c=None):
             response.raise_for_status()
             return response.json()
         if c["type"]=="workday":
-            first=requests.post(source,headers=H,json={"limit":20,"offset":0,"searchText":"","appliedFacets":{}},timeout=TIMEOUT)
-            first.raise_for_status();d=first.json()
+            def workday_page(offset):
+                payload={"limit":20,"offset":offset,"searchText":"","appliedFacets":{}}
+                last=None
+                for attempt in range(3):
+                    try:
+                        rr=requests.post(source,headers=H,json=payload,timeout=TIMEOUT)
+                        rr.raise_for_status()
+                        return rr
+                    except Exception as exc:
+                        last=exc
+                        if attempt<2: time.sleep(0.35*(attempt+1))
+                raise last
+            first=workday_page(0)
+            d=first.json()
             if not isinstance(d,dict) or not isinstance(d.get("total"),int) or not isinstance(d.get("jobPostings"),list):
                 raise ValueError("Workday first page missing official total/list")
             official_total=d["total"];batches=[d];pages=1
             for offset in range(20,official_total,20):
-                rr=requests.post(source,headers=H,json={"limit":20,"offset":offset,"searchText":"","appliedFacets":{}},timeout=TIMEOUT)
-                rr.raise_for_status();batch=rr.json()
+                rr=workday_page(offset)
+                batch=rr.json()
                 # Visa Workday returns total=0 on continuation pages even while
                 # providing a full page. The first page's total is authoritative;
                 # completeness still requires exactly that many unique postings.
