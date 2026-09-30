@@ -173,31 +173,119 @@ def api_inventory(o,c=None):
             response.raise_for_status()
             return response.json()
         if c["type"]=="workday":
-            first=requests.post(source,headers=H,json={"limit":20,"offset":0,"searchText":"","appliedFacets":{}},timeout=TIMEOUT)
-            first.raise_for_status();d=first.json()
-            if not isinstance(d,dict) or not isinstance(d.get("total"),int) or not isinstance(d.get("jobPostings"),list):
-                raise ValueError("Workday first page missing official total/list")
-            official_total=d["total"];batches=[d];pages=1
-            for offset in range(20,official_total,20):
-                rr=requests.post(source,headers=H,json={"limit":20,"offset":offset,"searchText":"","appliedFacets":{}},timeout=TIMEOUT)
-                rr.raise_for_status();batch=rr.json()
-                # Visa Workday returns total=0 on continuation pages even while
-                # providing a full page. The first page's total is authoritative;
-                # completeness still requires exactly that many unique postings.
-                postings=batch.get("jobPostings")
-                if batch.get("total") not in (official_total,0) or not isinstance(postings,list):
-                    raise ValueError("Workday total changed or page missing postings")
-                if not postings or len(postings)>20:
-                    raise ValueError("Workday pagination incomplete or overfilled")
-                batches.append(batch);pages+=1
-            raw=[j for batch in batches for j in batch["jobPostings"]]
+            # Workday public CXS API. Design adapted from the MIT-licensed
+            # kalil0321/ats-scrapers Workday adapter, with stricter fail-closed
+            # completeness semantics for this monitor.
+            WD_LIMIT=20; WD_CAP=2000; WD_RETRIES=4
+            retryable={403,429,502,503,504}
+            def wd_request(facets,offset):
+                nonlocal pages
+                body={"limit":WD_LIMIT,"offset":offset,"searchText":"","appliedFacets":facets}
+                last=None
+                for attempt in range(WD_RETRIES):
+                    try:
+                        rr=requests.post(source,headers=H,json=body,timeout=TIMEOUT)
+                        if rr.status_code in retryable:
+                            last=ValueError(f"Workday transient HTTP {rr.status_code}")
+                            if attempt+1<WD_RETRIES:
+                                wait=rr.headers.get("Retry-After")
+                                delay=min(5.0,float(wait)) if wait and str(wait).isdigit() else min(5.0,2**attempt)
+                                time.sleep(delay);continue
+                            raise last
+                        rr.raise_for_status()
+                        try: d=rr.json()
+                        except ValueError:
+                            last=ValueError("Workday returned non-JSON success response")
+                            if attempt+1<WD_RETRIES:
+                                time.sleep(min(5.0,2**attempt));continue
+                            raise last
+                        if not isinstance(d,dict) or not isinstance(d.get("total"),int) or not isinstance(d.get("jobPostings"),list):
+                            raise ValueError("Workday response missing total/jobPostings")
+                        pages+=1
+                        return d
+                    except requests.RequestException as exc:
+                        last=exc
+                        if attempt+1<WD_RETRIES:
+                            time.sleep(min(5.0,2**attempt));continue
+                        raise
+                raise last or ValueError("Workday request failed")
+
+            def wd_key(j):
+                path=j.get("externalPath") or ""
+                ident=re.search(r"_([A-Z]{2,8}[0-9]{4,}[A-Z0-9]*)$",path)
+                return ident.group(1) if ident else path
+
+            def wd_pick_facet(payload,used):
+                by={}
+                for facet in payload.get("facets") or []:
+                    if not isinstance(facet,dict):continue
+                    param=facet.get("facetParameter"); vals=facet.get("values") or []
+                    if not param or param in used:continue
+                    good=[(v.get("id"),int(v.get("count") or 0)) for v in vals
+                          if isinstance(v,dict) and v.get("id") and int(v.get("count") or 0)>0]
+                    if len(good)>=2:by[param]=good
+                for preferred in ("jobFamilyGroup","timeType","locations","workerSubType"):
+                    if preferred in by:return preferred,by[preferred]
+                return max(by.items(),key=lambda kv:len(kv[1])) if by else None
+
+            collected={}
+            def absorb(postings):
+                for j in postings:
+                    if not isinstance(j,dict):raise ValueError("Workday posting has invalid type")
+                    key=wd_key(j)
+                    if not key:raise ValueError("Workday posting missing stable identity")
+                    collected[key]=j
+
+            def exhaust(facets,depth=0):
+                first=wd_request(facets,0)
+                total=first["total"]; postings=first["jobPostings"]
+                if len(postings)>WD_LIMIT:raise ValueError("Workday page overfilled")
+                absorb(postings)
+                if total==0:return 0
+                if not postings:raise ValueError("Workday empty first page with positive total")
+                if total==WD_CAP:
+                    if depth>=4:raise ValueError("Workday 2000-result cap unresolved at max subdivision depth")
+                    choice=wd_pick_facet(first,set(facets))
+                    if not choice:raise ValueError("Workday 2000-result cap unresolved: no partition facet")
+                    param,values=choice
+                    for value,_count in values:
+                        exhaust({**facets,param:[value]},depth+1)
+                    return None
+                if total>WD_CAP:raise ValueError("Workday total exceeds supported query cap")
+                seen_page={wd_key(j) for j in postings}
+                for offset in range(WD_LIMIT,total,WD_LIMIT):
+                    batch=wd_request(facets,offset)
+                    more=batch["jobPostings"]
+                    # Some tenants return total=0 on continuation pages. The
+                    # first page remains authoritative for this partition.
+                    if batch["total"] not in (total,0):
+                        raise ValueError("Workday total changed during pagination")
+                    if not more or len(more)>WD_LIMIT:
+                        raise ValueError("Workday pagination stopped early or overfilled")
+                    keys={wd_key(j) for j in more}
+                    if not keys or keys.issubset(seen_page):
+                        raise ValueError("Workday page-wrap/repeated page detected")
+                    seen_page.update(keys);absorb(more)
+                if len(seen_page)!=total:
+                    raise ValueError(f"Workday unique count mismatch: {len(seen_page)} != {total}")
+                return total
+
+            root_total=exhaust({})
+            raw=list(collected.values())
+            # For an uncapped root, the official total must reconcile exactly.
+            # For a successfully partitioned capped root, every child partition
+            # was independently exhausted; the deduplicated union is the proof.
+            official_total=root_total if root_total is not None else len(raw)
+            if root_total is not None and len(raw)!=root_total:
+                raise ValueError("Workday root inventory did not reconcile")
             for j in raw:
                 path=j.get("externalPath") or "";title=j.get("title") or ""
-                if title and path and path.startswith("/job/"):
-                    ident=re.search(r"_([A-Z]{2,5}[0-9]{5,}[A-Z0-9]*)$",path)
-                    items.append({"title":title,"url":c["board"].rstrip("/")+path,
-                                  "workday_detail_url":source.rsplit("/jobs",1)[0]+path,
-                                  "workday_job_id":ident.group(1) if ident else None})
+                if not title or not path.startswith("/job/"):
+                    raise ValueError("Workday posting missing title/externalPath")
+                ident=re.search(r"_([A-Z]{2,8}[0-9]{4,}[A-Z0-9]*)$",path)
+                items.append({"title":title,"url":c["board"].rstrip("/")+path,
+                              "workday_detail_url":source.rsplit("/jobs",1)[0]+path,
+                              "workday_job_id":ident.group(1) if ident else None})
             terminal=True
         elif c["type"]=="breezy":
             raw=get_json(source);pages=1
