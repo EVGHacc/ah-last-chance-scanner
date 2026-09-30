@@ -1,11 +1,11 @@
 {
   "run_date": "2026-09-30",
   "target_expected": 104,
-  "target_proven": 19,
-  "vacancy_coverage_percent": 18.3,
+  "target_proven": 20,
+  "vacancy_coverage_percent": 19.2,
   "match_audit": {
-    "candidate_count": 304,
-    "matched_count": 304,
+    "candidate_count": 165,
+    "matched_count": 165,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -108,12 +108,6 @@
       "status": "official_site_scanned"
     },
     {
-      "name": "IBANfirst",
-      "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_site_scanned"
-    },
-    {
       "name": "ING",
       "kind": "employer",
       "coverage": "partial",
@@ -180,6 +174,12 @@
       "status": "official_site_scanned"
     },
     {
+      "name": "Morgan Stanley",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
+    },
+    {
       "name": "MUFG",
       "kind": "employer",
       "coverage": "partial",
@@ -214,6 +214,12 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
+    },
+    {
+      "name": "PayPal",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
     },
     {
       "name": "Rabobank",
@@ -339,7 +345,7 @@
       "name": "Care Professionals",
       "kind": "recruiter",
       "coverage": "unproven",
-      "status": "official_site_scanned"
+      "status": "technical_failure"
     },
     {
       "name": "Compliance People",
@@ -420,12 +426,6 @@
       "status": "official_site_scanned"
     },
     {
-      "name": "Lime Search",
-      "kind": "recruiter",
-      "coverage": "unproven",
-      "status": "technical_failure"
-    },
-    {
       "name": "Matchd",
       "kind": "recruiter",
       "coverage": "partial",
@@ -448,12 +448,6 @@
       "kind": "recruiter",
       "coverage": "partial",
       "status": "no_public_vacancy_board"
-    },
-    {
-      "name": "Oliver James",
-      "kind": "recruiter",
-      "coverage": "partial",
-      "status": "official_site_scanned"
     },
     {
       "name": "PaymentGenes",
@@ -526,7 +520,7 @@
     "DB Contractors UK",
     "McKinsey",
     "Rabobank",
-    "Lime Search",
+    "Care Professionals",
     "Risk Talent Associates",
     "Robert Walters Interim",
     "Selby Jennings"
