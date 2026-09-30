@@ -1,11 +1,11 @@
 {
   "run_date": "2026-09-30",
   "target_expected": 104,
-  "target_proven": 19,
-  "vacancy_coverage_percent": 18.3,
+  "target_proven": 20,
+  "vacancy_coverage_percent": 19.2,
   "match_audit": {
-    "candidate_count": 229,
-    "matched_count": 229,
+    "candidate_count": 269,
+    "matched_count": 269,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -144,12 +144,6 @@
       "status": "official_ats_scanned"
     },
     {
-      "name": "Mastercard",
-      "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_site_scanned"
-    },
-    {
       "name": "McKinsey",
       "kind": "employer",
       "coverage": "unproven",
@@ -159,7 +153,7 @@
       "name": "Meta",
       "kind": "employer",
       "coverage": "unproven",
-      "status": "official_site_scanned"
+      "status": "technical_failure"
     },
     {
       "name": "Microsoft",
@@ -525,6 +519,7 @@
   "technical_failures": [
     "DB Contractors UK",
     "McKinsey",
+    "Meta",
     "Rabobank",
     "Risk Talent Associates",
     "Robert Walters Interim",
