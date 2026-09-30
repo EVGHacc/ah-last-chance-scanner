@@ -30,6 +30,8 @@ LISTING_URL=re.compile(r"(/jobs?/?$|/vacatures/?$|job-search|search-jobs|search-
 CLOSED=re.compile(r"(no.?longer.?available|(?:position|job|vacancy).{0,65}(?:has.?been.?filled|is.?filled|is.?closed|was.?filled)|job you are trying to apply for has been filled|vacature.?is.?gesloten|applications?.?closed|expired)",re.I)
 COMMON=("/careers","/jobs","/vacatures","/job-search","/open-roles","/positions")
 API_BOARDS={
+    "Mastercard":{"type":"workday","url":"https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs","board":"https://mastercard.wd1.myworkdayjobs.com/CorporateCareers"},
+    "State Street":{"type":"workday","url":"https://statestreet.wd1.myworkdayjobs.com/wday/cxs/statestreet/Global/jobs","board":"https://statestreet.wd1.myworkdayjobs.com/Global"},
     "Lloyds Banking Group":{"type":"workday","url":"https://lbg.wd3.myworkdayjobs.com/wday/cxs/lbg/LBG_Careers/jobs","board":"https://lbg.wd3.myworkdayjobs.com/LBG_Careers"},
     "Visa":{"type":"workday","url":"https://visa.wd5.myworkdayjobs.com/wday/cxs/visa/Visa/jobs","board":"https://visa.wd5.myworkdayjobs.com/Visa"},
     "Zerohash":{"type":"breezy","url":"https://zero-hash.breezy.hr/json","board":"https://zero-hash.breezy.hr"},
