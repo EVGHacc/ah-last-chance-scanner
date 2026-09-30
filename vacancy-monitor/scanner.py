@@ -16,6 +16,7 @@ TIMEOUT=int(os.getenv("VACANCY_TIMEOUT","12")); WORKERS=int(os.getenv("VACANCY_W
 BROWSER_BUDGET=int(os.getenv("VACANCY_BROWSER_BUDGET","660"))
 BROWSER_ORG_BUDGET=int(os.getenv("VACANCY_BROWSER_ORG_BUDGET","85"))
 BROWSER_URL_BUDGET=int(os.getenv("VACANCY_BROWSER_URL_BUDGET","28"))
+BROWSER_VALIDATION_CAP=int(os.getenv("VACANCY_BROWSER_VALIDATION_CAP","18"))
 ATS=("myworkdayjobs.com","workday.com","oraclecloud.com","greenhouse.io","lever.co","teamtailor.com","recruitee.com","ashbyhq.com","breezy.hr","smartrecruiters.com","successfactors.com","eightfold.ai","icims.com")
 CAREER=re.compile(r"(job|career|vacanc|position|opportunit|werken.?bij|open.?roles)",re.I)
 REL=re.compile(r"(compliance|risk|audit|anti.?money|aml|financial.?crime|sanction|governance|regulat|controls?|assurance|oversight|mlro|cco|cro|responsible.?ai|trust.?safety|resilien|continuity|business.?control|integrity|fraud|investigation|financial.?intelligence|conduct|ethics|remediation|non.?financial|financieel.?economische.?criminaliteit|witwassen)",re.I)
@@ -1077,7 +1078,16 @@ def browser_retry(rs):
                 matched_urls={j["url"] for j in raw}
                 missed=[j for j in audit if j["url"] not in matched_urls]
                 r["match_audit"]={"candidate_count":len(audit),"matched_count":len(audit)-len(missed),"missed":missed[:20]}
-                r["jobs"]=merge_validated_jobs(r.get("jobs",[]),validate_jobs(raw,{job_key(url) for url in observed_links}))
+                remaining_seconds=max(0.0,min(org_deadline,deadline)-time.monotonic())
+                capacity=min(BROWSER_VALIDATION_CAP,6*max(0,int(remaining_seconds//max(1,TIMEOUT))))
+                ordered=sorted(raw,key=lambda j:(j["title"].casefold(),job_key(j["url"])))
+                chosen=ordered[:capacity]
+                deferred=[{**j,"live":False,"board_present":True,"apply_live":False,
+                           "validation_reason":"pending_browser_detail_validation",
+                           "http_status":None,"checked_at":None} for j in ordered[capacity:]]
+                validated=validate_jobs(chosen,{job_key(url) for url in observed_links}) if chosen else []
+                r["jobs"]=merge_validated_jobs(r.get("jobs",[]),validated+deferred)
+                if deferred:r["browser_detail_validation_deferred"]=len(deferred)
             print(json.dumps({"phase":"browser_recovery","organisation":r["name"],"status":r["status"],"vacancy_coverage":r["vacancy_coverage"],"seconds":round(time.monotonic()-started,1),"remaining_global_seconds":round(deadline-time.monotonic(),1)},ensure_ascii=False),flush=True)
         c.close();b.close()
 
