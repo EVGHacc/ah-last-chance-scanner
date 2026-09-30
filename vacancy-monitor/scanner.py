@@ -556,8 +556,8 @@ def validate_embedded_candidate(j,board_keys):
     title_ok=re.sub(r"\s+"," ",actual_title).casefold()==re.sub(r"\s+"," ",j["title"]).casefold()
     board_present=job_key(requested) in board_keys
     direct_live=bool(detail["ok"] and identity and title_ok and not CLOSED.search(detail["text"]))
+    # The exact first-party application URL is the control. Do not depend on mutable link copy.
     link_ok=any(
-        APPLY.search(a.get_text(" ",strip=True)) and
         urlparse(urljoin(detail["final"],a.get("href",""))).path.rstrip("/")==urlparse(apply_url).path.rstrip("/")
         and hostname(urljoin(detail["final"],a.get("href","")))==hostname(apply_url)
         for a in soup.find_all("a",href=True)
