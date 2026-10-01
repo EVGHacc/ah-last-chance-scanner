@@ -1008,8 +1008,11 @@ def browser_retry(rs):
                     for page_no in range(12):
                         if time.monotonic()>=url_deadline:break
                         current=pg.url
-                        if current in visited and page_no: break
-                        visited.add(current)
+                        # SPA boards (notably Rabobank) can paginate without changing the URL.
+                        # Identify a rendered page by URL + a small stable sample of visible job IDs.
+                        page_state=(current,tuple(sorted(browser_visible_job_links(pg,o))[:5]))
+                        if page_state in visited and page_no: break
+                        visited.add(page_state)
                         stable=0
                         for _ in range(6):
                             if time.monotonic()>=url_deadline:break
@@ -1042,6 +1045,25 @@ def browser_retry(rs):
                             for a in soup.find_all("a",href=True):
                                 if re.fullmatch(r"\s*(next|volgende|suivant|weiter|›|»)\s*",a.get_text(" ",strip=True),re.I):
                                     next_url=norm(urljoin(pg.url,a["href"]));break
+                        numeric_clicked=False
+                        if not next_url:
+                            # React/SPA career boards often expose numbered pagination as buttons
+                            # rather than hrefs. Click the exact next page number and require the
+                            # rendered job identity sample to change on the next iteration.
+                            wanted=str(page_no+2)
+                            try:
+                                buttons=pg.locator("button")
+                                labels=buttons.all_inner_texts(timeout=1200)
+                                for bi,label in enumerate(labels[:80]):
+                                    if (label or "").strip()==wanted and buttons.nth(bi).is_visible():
+                                        buttons.nth(bi).click(timeout=900)
+                                        pg.wait_for_timeout(500)
+                                        numeric_clicked=True
+                                        break
+                            except Exception:
+                                numeric_clicked=False
+                        if numeric_clicked:
+                            continue
                         if not next_url:
                             body=soup.get_text(" ",strip=True)
                             m=re.search(r"Displaying\s+(\d+)\s*-\s*(\d+)\s+of\s+(\d+)",body,re.I)
