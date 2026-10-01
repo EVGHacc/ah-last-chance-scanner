@@ -21,9 +21,7 @@ permissions:
 
 concurrency:
   group: ah-last-chance-session
-  # Preserve redundant scheduled starters instead of replacing the one pending run.
-  # Late queued starters are harmless: schedule_gate rejects them after 22:20.
-  queue: max
+  cancel-in-progress: false
 
 jobs:
   session:
@@ -52,6 +50,7 @@ jobs:
         run: |
           python -m py_compile scanner.py scripts/auth_state.py scripts/persist.py scripts/publish.py scripts/session.py scripts/selftest.py scripts/schedule_gate.py scripts/independent_qa.py
           python scripts/schedule_gate.py --self-test
+          python scripts/session.py --self-test
           python scripts/independent_qa.py --self-test
           python scripts/auth_state.py
           python scripts/selftest.py
