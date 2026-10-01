@@ -1038,7 +1038,7 @@ def browser_retry(rs):
                             clicked=False
                             # One bulk DOM read instead of up to 250 sequential 150ms inner_text calls.
                             loc=pg.locator("button, a")
-                            try: labels=loc.all_inner_texts(timeout=1500)
+                            try: labels=loc.all_inner_texts()
                             except Exception: labels=[]
                             for i,label in enumerate(labels[:100]):
                                 if DYNAMIC_MORE.search(label or ""):
