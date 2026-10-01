@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-01",
   "weekday": "Thursday",
-  "scheduledSlot": "21:57",
-  "scheduledAt": "2026-10-01T21:57:00+02:00",
-  "rawScheduledSlot": "21:57",
-  "rawScheduledAt": "2026-10-01T21:57:00+02:00",
-  "startedAt": "2026-10-01T21:57:00.544947+02:00",
-  "completedAt": "2026-10-01T21:57:05.200048+02:00",
-  "checkedAt": "2026-10-01T21:57:05.200048+02:00",
+  "scheduledSlot": "22:00",
+  "scheduledAt": "2026-10-01T22:00:00+02:00",
+  "rawScheduledSlot": "22:00",
+  "rawScheduledAt": "2026-10-01T22:00:00+02:00",
+  "startedAt": "2026-10-01T22:00:00.366458+02:00",
+  "completedAt": "2026-10-01T22:00:05.048799+02:00",
+  "checkedAt": "2026-10-01T22:00:05.048799+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -760,18 +760,6 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
-          "productId": 459347,
-          "title": "AH Tijgerbol wit",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "0.35",
-          "priceNow": "0.26",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
           "productId": 571174,
           "title": "AH Jalapeño kaasstengel",
           "brand": "AH",
@@ -793,6 +781,18 @@
           "stock": 2,
           "priceWas": "1.59",
           "priceNow": "1.19",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
+          "productId": 459347,
+          "title": "AH Tijgerbol wit",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.35",
+          "priceNow": "0.26",
           "markdownExpirationDate": "2026-10-01"
         },
         {
