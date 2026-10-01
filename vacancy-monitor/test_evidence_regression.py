@@ -6,6 +6,12 @@ class EvidenceRegression(unittest.TestCase):
         self.org={"official_domain":"vroomsearch.com","allowed_domains":[],"no_public_hint":False}
     def evidence(self, prefix=""):
         return scanner.listing_evidence({"final":"https://vroomsearch.com/nl/vacatures", "html":prefix+'<a href="/nl/vacature/head-compliance">Head of Compliance</a>'},self.org)
+    def test_playwright_all_inner_texts_called_without_timeout(self):
+        class StrictLocator:
+            def all_inner_texts(self):
+                return ["1", "2", "Next"]
+        self.assertEqual(scanner.locator_all_inner_texts(StrictLocator()), ["1", "2", "Next"])
+
     def test_search_hostname_is_not_navigation(self):
         self.assertEqual(self.evidence()["job_link_count"],1)
     def test_unknown_total_is_not_proof(self):
