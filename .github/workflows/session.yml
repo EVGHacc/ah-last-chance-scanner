@@ -21,7 +21,9 @@ permissions:
 
 concurrency:
   group: ah-last-chance-session
-  cancel-in-progress: false
+  # Preserve redundant scheduled starters instead of replacing the one pending run.
+  # Late queued starters are harmless: schedule_gate rejects them after 22:20.
+  queue: max
 
 jobs:
   session:
