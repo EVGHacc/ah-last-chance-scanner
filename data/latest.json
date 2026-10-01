@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-01",
   "weekday": "Thursday",
-  "scheduledSlot": "19:18",
-  "scheduledAt": "2026-10-01T19:18:00+02:00",
-  "rawScheduledSlot": "19:18",
-  "rawScheduledAt": "2026-10-01T19:18:00+02:00",
-  "startedAt": "2026-10-01T19:18:00.387959+02:00",
-  "completedAt": "2026-10-01T19:18:04.813942+02:00",
-  "checkedAt": "2026-10-01T19:18:04.813942+02:00",
+  "scheduledSlot": "19:20",
+  "scheduledAt": "2026-10-01T19:20:00+02:00",
+  "rawScheduledSlot": "19:20",
+  "rawScheduledAt": "2026-10-01T19:20:00+02:00",
+  "startedAt": "2026-10-01T19:20:00.343290+02:00",
+  "completedAt": "2026-10-01T19:20:04.981967+02:00",
+  "checkedAt": "2026-10-01T19:20:04.981967+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1025,10 +1025,10 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 172,
-      "meatItems": 20,
-      "meat70Items": 5,
-      "meat70Stock": 30.0,
+      "totalBargainItems": 173,
+      "meatItems": 21,
+      "meat70Items": 10,
+      "meat70Stock": 39.0,
       "bakeryItems": 2,
       "bakery70Items": 0,
       "bakery70Stock": 0,
@@ -1070,6 +1070,42 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
+          "productId": 551140,
+          "title": "AH Excellent Ultimate wagyu beefburger",
+          "brand": "AH Excellent",
+          "size": "130 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 3,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
+          "productId": 436877,
+          "title": "AH Biologisch Rundergehakt balletjes",
+          "brand": "AH Biologisch",
+          "size": "12 stuks",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "6.49",
+          "priceNow": "1.95",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
+          "productId": 531872,
+          "title": "AH Scharrel kipburger gepaneerd 4 stuks",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "5.49",
+          "priceNow": "1.65",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
           "productId": 385506,
           "title": "AH Biologisch Gerookte kipfilet",
           "brand": "AH Biologisch",
@@ -1082,51 +1118,15 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
-          "productId": 551140,
-          "title": "AH Excellent Ultimate wagyu beefburger",
-          "brand": "AH Excellent",
-          "size": "130 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "3.99",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
-          "productId": 436877,
-          "title": "AH Biologisch Rundergehakt balletjes",
-          "brand": "AH Biologisch",
-          "size": "12 stuks",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "6.49",
-          "priceNow": "3.89",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
-          "productId": 531872,
-          "title": "AH Scharrel kipburger gepaneerd 4 stuks",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "5.49",
-          "priceNow": "3.29",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
           "productId": 619311,
           "title": "AH Stoofvlees",
           "brand": "AH",
           "size": "ca. 500 g",
           "category": "Vlees",
-          "discountPct": 40,
+          "discountPct": 70,
           "stock": 1,
           "priceWas": "10.00",
-          "priceNow": "6.00",
+          "priceNow": "3.00",
           "markdownExpirationDate": "2026-10-01"
         },
         {
@@ -1135,10 +1135,10 @@
           "brand": "AH",
           "size": "ca. 660 g",
           "category": "Vlees",
-          "discountPct": 40,
+          "discountPct": 70,
           "stock": 1,
           "priceWas": "4.69",
-          "priceNow": "2.81",
+          "priceNow": "1.41",
           "markdownExpirationDate": "2026-10-01"
         },
         {
@@ -1166,6 +1166,18 @@
           "markdownExpirationDate": "2026-10-02"
         },
         {
+          "productId": 619342,
+          "title": "AH Scharrel kipfilet voordeelverpakking",
+          "brand": "AH",
+          "size": "1 kg",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 7,
+          "priceWas": "11.99",
+          "priceNow": "7.19",
+          "markdownExpirationDate": "2026-10-02"
+        },
+        {
           "productId": 619323,
           "title": "AH Burger spicy 2 stuks",
           "brand": "AH",
@@ -1187,18 +1199,6 @@
           "stock": 10,
           "priceWas": "3.59",
           "priceNow": "2.69",
-          "markdownExpirationDate": "2026-10-02"
-        },
-        {
-          "productId": 619342,
-          "title": "AH Scharrel kipfilet voordeelverpakking",
-          "brand": "AH",
-          "size": "1 kg",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 7,
-          "priceWas": "11.99",
-          "priceNow": "8.99",
           "markdownExpirationDate": "2026-10-02"
         },
         {
@@ -1259,6 +1259,18 @@
           "stock": 1,
           "priceWas": "2.88",
           "priceNow": "2.16",
+          "markdownExpirationDate": "2026-10-02"
+        },
+        {
+          "productId": 474380,
+          "title": "AH Gehaktbal met ui en jus",
+          "brand": "AH",
+          "size": "262 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "4.49",
+          "priceNow": "3.37",
           "markdownExpirationDate": "2026-10-02"
         },
         {
