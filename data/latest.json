@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-01",
   "weekday": "Thursday",
-  "scheduledSlot": "20:03",
-  "scheduledAt": "2026-10-01T20:03:00+02:00",
-  "rawScheduledSlot": "20:03",
-  "rawScheduledAt": "2026-10-01T20:03:00+02:00",
-  "startedAt": "2026-10-01T20:03:00.431532+02:00",
-  "completedAt": "2026-10-01T20:03:05.925803+02:00",
-  "checkedAt": "2026-10-01T20:03:05.925803+02:00",
+  "scheduledSlot": "20:05",
+  "scheduledAt": "2026-10-01T20:05:00+02:00",
+  "rawScheduledSlot": "20:05",
+  "rawScheduledAt": "2026-10-01T20:05:00+02:00",
+  "startedAt": "2026-10-01T20:05:00.371507+02:00",
+  "completedAt": "2026-10-01T20:05:05.649950+02:00",
+  "checkedAt": "2026-10-01T20:05:05.649950+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2412,18 +2412,6 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
-          "productId": 417147,
-          "title": "AH Vloerbrood meergranen heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
           "productId": 230845,
           "title": "AH Liefde & Passie Petit beurre",
           "brand": "AH Liefde & Passie",
@@ -2457,6 +2445,18 @@
           "stock": 2,
           "priceWas": "1.49",
           "priceNow": "1.12",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
+          "productId": 417147,
+          "title": "AH Vloerbrood meergranen heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
           "markdownExpirationDate": "2026-10-01"
         },
         {
@@ -2777,7 +2777,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 210,
+      "totalBargainItems": 209,
       "meatItems": 21,
       "meat70Items": 10,
       "meat70Stock": 39.0,
@@ -3160,18 +3160,6 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
-          "productId": 606074,
-          "title": "AH Pistache croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "1.29",
-          "priceNow": "0.97",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
           "productId": 523680,
           "title": "AH Frikandelbroodje vegan",
           "brand": "AH",
@@ -3193,6 +3181,18 @@
           "stock": 1,
           "priceWas": "1.89",
           "priceNow": "1.42",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
+          "productId": 606074,
+          "title": "AH Pistache croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.29",
+          "priceNow": "0.97",
           "markdownExpirationDate": "2026-10-01"
         },
         {
