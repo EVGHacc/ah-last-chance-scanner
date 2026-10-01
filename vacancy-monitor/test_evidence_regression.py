@@ -18,6 +18,14 @@ class EvidenceRegression(unittest.TestCase):
         self.assertEqual(scanner.coverage_from_evidence([],{"no_public_hint":True}),"unproven")
     def test_research_title_not_excluded(self):
         self.assertTrue(scanner.inventory_url("https://example.com/job/director-governance-research/"))
+    def test_numbered_button_pagination_advances_exactly_one_page(self):
+        self.assertEqual(scanner.next_numeric_page_label(["1","2","3","Volgende"],1),"2")
+        self.assertEqual(scanner.next_numeric_page_label(["1","2","3"],2),"3")
+
+    def test_numbered_button_pagination_stops_without_next_page(self):
+        self.assertIsNone(scanner.next_numeric_page_label(["1","2","3"],3))
+        self.assertIsNone(scanner.next_numeric_page_label(["10","20"],1))
+
     def test_privacy_navigation_excluded(self):
         self.assertFalse(scanner.inventory_url("https://example.com/careers/cookie-policy"))
 

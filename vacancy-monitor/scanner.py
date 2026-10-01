@@ -506,6 +506,12 @@ def inventory_url(u):
     return bool(JOBURL.search(path)) and not re.search(
         r"/(?:search|search-results|search-jobs|job-search|filter|login|privacy|data-privacy|cookie-policy|alert|subscribe|blog|article)(?:/|$)",path,re.I)
 
+def next_numeric_page_label(labels, current_page):
+    """Return the next numbered pagination label, or None when absent."""
+    target=str(current_page+1)
+    return target if any((label or "").strip()==target for label in labels) else None
+
+
 def listing_evidence(f,o):
     """Evidence for whether an official public listing is exhaustively visible."""
     s=BeautifulSoup(f["html"],"html.parser")
@@ -1065,6 +1071,19 @@ def browser_retry(rs):
                                 if re.fullmatch(r"\s*(next|volgende|suivant|weiter|›|»)\s*",a.get_text(" ",strip=True),re.I):
                                     next_url=norm(urljoin(pg.url,a["href"]));break
                         if not next_url:
+                            # Some first-party boards (notably Rabobank) render numbered
+                            # pagination as buttons rather than anchors.
+                            current_page=page_no+1
+                            try: page_labels=pg.locator("button").all_inner_texts()
+                            except Exception: page_labels=[]
+                            next_label=next_numeric_page_label(page_labels,current_page)
+                            if next_label:
+                                btn=pg.get_by_role("button",name=next_label,exact=True)
+                                try:
+                                    if btn.count() and btn.first.is_visible():
+                                        btn.first.click(timeout=900); pg.wait_for_timeout(450)
+                                        continue
+                                except Exception: pass
                             body=soup.get_text(" ",strip=True)
                             m=re.search(r"Displaying\s+(\d+)\s*-\s*(\d+)\s+of\s+(\d+)",body,re.I)
                             if m and int(m.group(2))<int(m.group(3)):
