@@ -16,6 +16,7 @@ TIMEOUT=int(os.getenv("VACANCY_TIMEOUT","12")); WORKERS=int(os.getenv("VACANCY_W
 BROWSER_BUDGET=int(os.getenv("VACANCY_BROWSER_BUDGET","660"))
 BROWSER_ORG_BUDGET=int(os.getenv("VACANCY_BROWSER_ORG_BUDGET","85"))
 BROWSER_URL_BUDGET=int(os.getenv("VACANCY_BROWSER_URL_BUDGET","28"))
+PRIORITY_ORGS=("ING","Rabobank")
 ATS=("myworkdayjobs.com","workday.com","oraclecloud.com","greenhouse.io","lever.co","teamtailor.com","recruitee.com","ashbyhq.com","breezy.hr","smartrecruiters.com","successfactors.com","eightfold.ai","icims.com")
 CAREER=re.compile(r"(job|career|vacanc|position|opportunit|werken.?bij|open.?roles)",re.I)
 REL=re.compile(r"(compliance|risk|audit|anti.?money|aml|financial.?crime|sanction|governance|regulat|controls?|assurance|oversight|mlro|cco|cro|responsible.?ai|trust.?safety|resilien|continuity|business.?control|integrity|fraud|investigation|financial.?intelligence|conduct|ethics|remediation|non.?financial|financieel.?economische.?criminaliteit|witwassen)",re.I)
@@ -969,7 +970,7 @@ def browser_retry(rs):
                       any(e.get("api_complete") and "api.ashbyhq.com" in e.get("url","")
                           for e in r.get("listing_evidence",[])))]
     if not targets:return
-    targets.sort(key=lambda r:(r["status"]!="technical_failure", r["vacancy_coverage"]!="partial",r["name"]))
+    targets.sort(key=lambda r:(r["name"] not in PRIORITY_ORGS, r["status"]!="technical_failure", r["vacancy_coverage"]!="partial",r["name"]))
     # Direct detail + current official-board proof from the HTTP phase is already
     # valid for that job, even if the entire board cannot be exhaustively enumerated.
     # Never revoke it just because a separate browser coverage audit times out.
@@ -985,7 +986,7 @@ def browser_retry(rs):
             started=time.monotonic()
             # Reserve a fair first-pass time slice for every unresolved organisation.
             remaining=len(targets)-index
-            fair_share=max(7.0,(deadline-started)/remaining)
+            fair_share=BROWSER_ORG_BUDGET if r["name"] in PRIORITY_ORGS else max(7.0,(deadline-started)/remaining)
             org_deadline=min(deadline,started+min(BROWSER_ORG_BUDGET,fair_share))
             o=r["_org"]; unresolved=r["status"]=="technical_failure"
             likely=sorted(r["listing_evidence"],key=lambda x:(0 if x.get("listing_like") else 1,0 if x.get("job_link_count",0) else 1,-x.get("job_link_count",0)))
