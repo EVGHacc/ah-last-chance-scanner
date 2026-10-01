@@ -417,7 +417,8 @@ def static_inventory(o):
     c=STATIC_BOARDS.get(o["name"])
     if not c: return None
     try:
-        queue=[c["url"]]; seen=set(); jobs={}; rx=re.compile(c["href"],re.I); source=c["url"]; terminal=True\n        official_total=None; planned=False
+        queue=[c["url"]]; seen=set(); jobs={}; rx=re.compile(c["href"],re.I); source=c["url"]; terminal=True
+        official_total=None; planned=False
         while queue and len(seen)<25:
             page=queue.pop(0)
             if page in seen: continue
@@ -463,7 +464,11 @@ def static_inventory(o):
             labels=" ".join(x.get_text(" ",strip=True) for x in soup.find_all(["a","button"]))
             if DYNAMIC_MORE.search(labels):
                 terminal=False
-        if queue: terminal=False\n        if c.get("strict_total"):\n            terminal=bool(planned and official_total is not None and len(jobs)==official_total and not queue)\n            if not terminal: raise ValueError(f"Static inventory count mismatch: {len(jobs)} != {official_total}")\n        return {"complete":bool(jobs and terminal),"official_total":official_total if official_total is not None else len(jobs),"jobs":list(jobs.values()),"source":source,
+        if queue: terminal=False
+        if c.get("strict_total"):
+            terminal=bool(planned and official_total is not None and len(jobs)==official_total and not queue)
+            if not terminal: raise ValueError(f"Static inventory count mismatch: {len(jobs)} != {official_total}")
+        return {"complete":bool(jobs and terminal),"official_total":official_total if official_total is not None else len(jobs),"jobs":list(jobs.values()),"source":source,
                 "pages":len(seen),"error":None if jobs else "No vacancy links found"}
     except Exception as e:
         return {"complete":False,"official_total":None,"jobs":[],"source":c["url"],"error":f"{type(e).__name__}: {e}"}
