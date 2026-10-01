@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-01",
   "weekday": "Thursday",
-  "scheduledSlot": "21:45",
-  "scheduledAt": "2026-10-01T21:45:00+02:00",
-  "rawScheduledSlot": "21:45",
-  "rawScheduledAt": "2026-10-01T21:45:00+02:00",
-  "startedAt": "2026-10-01T21:45:00.362791+02:00",
-  "completedAt": "2026-10-01T21:45:05.141006+02:00",
-  "checkedAt": "2026-10-01T21:45:05.141006+02:00",
+  "scheduledSlot": "21:48",
+  "scheduledAt": "2026-10-01T21:48:00+02:00",
+  "rawScheduledSlot": "21:48",
+  "rawScheduledAt": "2026-10-01T21:48:00+02:00",
+  "startedAt": "2026-10-01T21:48:00.385210+02:00",
+  "completedAt": "2026-10-01T21:48:05.845101+02:00",
+  "checkedAt": "2026-10-01T21:48:05.845101+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2609,11 +2609,11 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 191,
+      "totalBargainItems": 204,
       "meatItems": 21,
       "meat70Items": 10,
       "meat70Stock": 39.0,
-      "bakeryItems": 40,
+      "bakeryItems": 43,
       "bakery70Items": 1,
       "bakery70Stock": 2.0,
       "items": [
@@ -2908,6 +2908,18 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
+          "productId": 577444,
+          "title": "AH Worstenbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 5,
+          "priceWas": "1.39",
+          "priceNow": "0.83",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
           "productId": 603533,
           "title": "AH Kip mango snack",
           "brand": "AH",
@@ -3100,6 +3112,18 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
+          "productId": 574950,
+          "title": "AH Pizza donut jalapeño cheddar",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
           "productId": 487305,
           "title": "AH Liefde & Passie Spelt volkoren brood",
           "brand": "AH Liefde & Passie",
@@ -3109,6 +3133,18 @@
           "stock": 3,
           "priceWas": "3.19",
           "priceNow": "2.39",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
+          "productId": 571174,
+          "title": "AH Jalapeño kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-10-01"
         },
         {
