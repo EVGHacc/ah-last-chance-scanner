@@ -1,6 +1,9 @@
 import importlib.util
+import json
 import sys
+import tempfile
 import unittest
+from datetime import datetime, timedelta
 from pathlib import Path
 
 
@@ -44,6 +47,67 @@ class AHContractTests(unittest.TestCase):
             ],
         }
         self.assertFalse(persist.valid_obs(observation))
+
+    def _write_partial_day(self, root):
+        day = "2026-10-01"
+        slot = "18:00"
+        at = datetime.fromisoformat(f"{day}T{slot}:00+02:00")
+        row = {
+            "date": day,
+            "rawScheduledSlot": slot,
+            "scheduledSlot": slot,
+            "rawScheduledAt": at.isoformat(),
+            "scheduledAt": at.isoformat(),
+            "startedAt": (at + timedelta(seconds=10)).isoformat(),
+            "checkedAt": (at + timedelta(seconds=15)).isoformat(),
+            "rawDelaySeconds": 10,
+            "delaySeconds": 10,
+            "valid": True,
+            "status": "OK",
+            "authMode": "user-refresh",
+            "categories": ["Vlees", "Bakkerij"],
+            "stores": [
+                {"storeId": store_id, "fetched": True}
+                for store_id in independent.STORE_IDS
+            ],
+        }
+        (root / f"{day}.jsonl").write_text(json.dumps(row) + "\n", encoding="utf-8")
+        (root / "status.json").write_text(
+            json.dumps(
+                {
+                    "date": day,
+                    "authMode": "user-refresh",
+                    "category": "Vlees",
+                    "rawExpected": 101,
+                    "canonicalExpected": 61,
+                    "stores": sorted(independent.STORE_IDS),
+                    "rawSeen": [slot],
+                    "canonicalSeen": [slot],
+                    "rawMissing": [s for s in independent.RAW if s != slot],
+                    "canonicalMissing": [s for s in independent.CANONICAL if s != slot],
+                }
+            ),
+            encoding="utf-8",
+        )
+        return datetime.fromisoformat(day + "T22:35:00+02:00")
+
+    def test_partial_valid_day_remains_usable(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            now = self._write_partial_day(root)
+            report = independent.verify(root, now, require_complete=False)
+        self.assertTrue(report["usable"])
+        self.assertFalse(report["complete"])
+        self.assertEqual(report["quality"], "partial")
+        self.assertGreater(len(report["missingRaw"]), 0)
+        self.assertGreater(len(report["missingCanonical"]), 0)
+
+    def test_strict_completeness_mode_still_rejects_missing_points(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            now = self._write_partial_day(root)
+            with self.assertRaises(AssertionError):
+                independent.verify(root, now, require_complete=True)
 
 
 if __name__ == "__main__":
