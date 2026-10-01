@@ -51,7 +51,9 @@ API_BOARDS={
 STATIC_BOARDS={
     "Lime Search":{"url":"https://www.limesearch.nl/open-finance-posities","href":r"/positie/"},
     "Vroom":{"url":"https://vroomsearch.com/nl/vacatures","href":r"/nl/vacature/"},
-    "Lloyds Banking Group":{"url":"https://www.lloydsbankinggroup.com/site-map.html/1000","href":r"/careers/job-search/workday-job\\.[0-9]+\\.html"}
+    "Lloyds Banking Group":{"url":"https://www.lloydsbankinggroup.com/site-map.html/1000","href":r"/careers/job-search/workday-job\\.[0-9]+\\.html"},
+    # First-party Rabobank board: numbered pagination is rendered as buttons.
+    "Rabobank":{"url":"https://rabobank.jobs/nl/vacatures/","href":r"/nl/vacature/","page_param":"page","strict_total":True}
 }
 
 def iso(): return datetime.now(timezone.utc).isoformat()
@@ -415,13 +417,13 @@ def static_inventory(o):
     c=STATIC_BOARDS.get(o["name"])
     if not c: return None
     try:
-        queue=[c["url"]]; seen=set(); jobs={}; rx=re.compile(c["href"],re.I); source=c["url"]; terminal=True
+        queue=[c["url"]]; seen=set(); jobs={}; rx=re.compile(c["href"],re.I); source=c["url"]; terminal=True\n        official_total=None; planned=False
         while queue and len(seen)<25:
             page=queue.pop(0)
             if page in seen: continue
             seen.add(page)
             rr=requests.get(page,headers=H,timeout=TIMEOUT,allow_redirects=True); rr.raise_for_status(); source=rr.url
-            soup=BeautifulSoup(rr.text,"html.parser")
+            soup=BeautifulSoup(rr.text,"html.parser"); before=len(jobs)
             for a in soup.find_all("a",href=True):
                 u=norm(urljoin(rr.url,a["href"]))
                 if rx.search(urlparse(u).path):
@@ -438,6 +440,22 @@ def static_inventory(o):
                 pp=urlparse(u); q=parse_qs(pp.query)
                 if hostname(u)==hostname(rr.url) and q.get("page") and u not in seen and u not in queue:
                     queue.append(u)
+            if len(seen)==1 and c.get("strict_total"):
+                text=soup.get_text(" ",strip=True)
+                totals=[int(m.group(1)) for m in re.finditer(r"\\b([0-9]{1,5})\\s+(?:open\\s+)?(?:jobs?|vacatures?|positions?|roles?|results?)\\b",text,re.I)]
+                official_total=max(totals) if totals else None
+                page_size=len(jobs)-before
+                if official_total is None or not page_size: raise ValueError("Static board missing authoritative total or first-page jobs")
+                param=c.get("page_param")
+                pages_needed=(official_total+page_size-1)//page_size
+                base=urlparse(c["url"]); base_q=parse_qs(base.query,keep_blank_values=True)
+                for page_no in range(2,pages_needed+1):
+                    qq={k:list(v) for k,v in base_q.items()}; qq[param]=[str(page_no)]
+                    u=urlunparse((base.scheme,base.netloc,base.path,base.params,urlencode(qq,doseq=True),base.fragment))
+                    if u not in seen and u not in queue: queue.append(u)
+                planned=True
+            elif c.get("strict_total") and len(jobs)==before and len(jobs)<(official_total or 0):
+                raise ValueError("Static pagination repeated/no-new-id page")
             nxt=soup.find("a",attrs={"rel":lambda v:v and "next" in str(v).lower()})
             if nxt and nxt.get("href"):
                 u=norm(urljoin(rr.url,nxt["href"]))
@@ -445,8 +463,7 @@ def static_inventory(o):
             labels=" ".join(x.get_text(" ",strip=True) for x in soup.find_all(["a","button"]))
             if DYNAMIC_MORE.search(labels):
                 terminal=False
-        if queue: terminal=False
-        return {"complete":bool(jobs and terminal),"official_total":len(jobs),"jobs":list(jobs.values()),"source":source,
+        if queue: terminal=False\n        if c.get("strict_total"):\n            terminal=bool(planned and official_total is not None and len(jobs)==official_total and not queue)\n            if not terminal: raise ValueError(f"Static inventory count mismatch: {len(jobs)} != {official_total}")\n        return {"complete":bool(jobs and terminal),"official_total":official_total if official_total is not None else len(jobs),"jobs":list(jobs.values()),"source":source,
                 "pages":len(seen),"error":None if jobs else "No vacancy links found"}
     except Exception as e:
         return {"complete":False,"official_total":None,"jobs":[],"source":c["url"],"error":f"{type(e).__name__}: {e}"}
