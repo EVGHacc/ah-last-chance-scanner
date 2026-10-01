@@ -2,7 +2,8 @@ name: Vacancy Monitor 106
 
 on:
   schedule:
-    - cron: "30 5 * * 1-5"
+    - cron: "0,30 * * * *"
+      timezone: "Europe/Amsterdam"
   workflow_dispatch:
   # Full-scan request: 2026-09-29; push also starts the scheduled scanner job.
   push:
@@ -17,10 +18,10 @@ permissions:
   contents: write
 
 concurrency:
-  # Recovery epoch isolates this scan from a stale run started with the previous policy.
-  group: vacancy-monitor-106-recovery-20260929
-  # A newer source-code scan supersedes older scans; do not let a stale run block fixes.
-  cancel-in-progress: true
+  # Exactly two scheduled cycles per hour. Preserve running and queued cycles.
+  group: vacancy-monitor-106-half-hourly
+  cancel-in-progress: false
+  queue: max
 
 jobs:
   scan:
