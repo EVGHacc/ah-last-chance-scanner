@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-01",
   "weekday": "Thursday",
-  "scheduledSlot": "22:05",
-  "scheduledAt": "2026-10-01T22:05:00+02:00",
-  "rawScheduledSlot": "22:05",
-  "rawScheduledAt": "2026-10-01T22:05:00+02:00",
-  "startedAt": "2026-10-01T22:05:00.377987+02:00",
-  "completedAt": "2026-10-01T22:05:05.125531+02:00",
-  "checkedAt": "2026-10-01T22:05:05.125531+02:00",
+  "scheduledSlot": "22:06",
+  "scheduledAt": "2026-10-01T22:06:00+02:00",
+  "rawScheduledSlot": "22:06",
+  "rawScheduledAt": "2026-10-01T22:06:00+02:00",
+  "startedAt": "2026-10-01T22:06:00.408976+02:00",
+  "completedAt": "2026-10-01T22:06:05.048033+02:00",
+  "checkedAt": "2026-10-01T22:06:05.048033+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2992,18 +2992,6 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
-          "productId": 168183,
-          "title": "AH Tijger volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 6,
-          "priceWas": "1.99",
-          "priceNow": "1.49",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
           "productId": 523679,
           "title": "AH Pastel de nata",
           "brand": "AH",
@@ -3025,6 +3013,18 @@
           "stock": 5,
           "priceWas": "0.49",
           "priceNow": "0.37",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
+          "productId": 168183,
+          "title": "AH Tijger volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 5,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
           "markdownExpirationDate": "2026-10-01"
         },
         {
