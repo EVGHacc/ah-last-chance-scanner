@@ -999,13 +999,15 @@ def browser_retry(rs):
                     r["browser_recovery_incomplete"]="organisation_budget_exhausted"
                     break
                 pg=c.new_page(); t=time.monotonic()
-                url_deadline=min(org_deadline,t+BROWSER_URL_BUDGET)
+                priority_url_budget=80 if o["name"]=="ING" else 45 if o["name"]=="Rabobank" else BROWSER_URL_BUDGET
+                url_deadline=min(org_deadline,t+priority_url_budget)
                 all_links={}; visited=set(); terminal=False
                 try:
                     resp=pg.goto(u,wait_until="domcontentloaded",timeout=12000); pg.wait_for_timeout(450)
                     final=pg.url; sc=resp.status if resp else None
                     if not (sc and sc<400 and allowed(final,o)): continue
-                    for page_no in range(12):
+                    page_limit=80 if o["name"]=="ING" else 20 if o["name"]=="Rabobank" else 12
+                    for page_no in range(page_limit):
                         if time.monotonic()>=url_deadline:break
                         current=pg.url
                         # SPA boards (notably Rabobank) can paginate without changing the URL.
