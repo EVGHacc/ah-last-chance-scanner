@@ -1,11 +1,11 @@
 {
   "run_date": "2026-10-01",
   "target_expected": 104,
-  "target_proven": 22,
-  "vacancy_coverage_percent": 21.2,
+  "target_proven": 26,
+  "vacancy_coverage_percent": 25.0,
   "match_audit": {
-    "candidate_count": 391,
-    "matched_count": 391,
+    "candidate_count": 501,
+    "matched_count": 501,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -73,12 +73,6 @@
     },
     {
       "name": "Crédit Agricole CIB",
-      "kind": "employer",
-      "coverage": "partial",
-      "status": "official_site_scanned"
-    },
-    {
-      "name": "Deutsche Bank",
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
@@ -252,12 +246,6 @@
       "status": "official_site_scanned"
     },
     {
-      "name": "Visa",
-      "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_ats_scanned"
-    },
-    {
       "name": "Wise",
       "kind": "employer",
       "coverage": "partial",
@@ -342,12 +330,6 @@
       "status": "official_site_scanned"
     },
     {
-      "name": "Cowen Partners",
-      "kind": "recruiter",
-      "coverage": "partial",
-      "status": "no_public_vacancy_board"
-    },
-    {
       "name": "De Vroed Ten Thierry",
       "kind": "recruiter",
       "coverage": "partial",
@@ -430,12 +412,6 @@
       "kind": "recruiter",
       "coverage": "partial",
       "status": "no_public_vacancy_board"
-    },
-    {
-      "name": "Oliver James",
-      "kind": "recruiter",
-      "coverage": "partial",
-      "status": "official_site_scanned"
     },
     {
       "name": "PaymentGenes",
