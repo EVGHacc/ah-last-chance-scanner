@@ -119,6 +119,26 @@ class ScannerTests(unittest.TestCase):
         self.assertEqual(qa["live_jobs_checked"],1)
 
 
+class InventoryAuditRegressionTests(unittest.TestCase):
+    def test_authoritative_api_count_is_not_mixed_with_incidental_html_count(self):
+        evidence=[
+            {"api_complete":True,"api_terminal":True,"official_total":10,"job_link_count":10},
+            {"job_link_count":25,"listing_like":True}
+        ]
+        complete=[e for e in evidence if (
+            e.get("static_board_complete") is True or e.get("embedded_complete") is True or
+            (e.get("api_complete") is True and e.get("api_terminal") is True) or
+            (e.get("browser_terminal") is True and type(e.get("official_total")) is int and
+             e.get("browser_inventory_count")==e.get("official_total"))
+        )]
+        authoritative=max((e for e in complete if type(e.get("official_total")) is int),
+                          key=lambda e:e["official_total"])
+        observed=(authoritative.get("browser_inventory_count")
+                  if authoritative.get("browser_terminal") is True
+                  else authoritative.get("job_link_count",0))
+        self.assertEqual((authoritative["official_total"],observed),(10,10))
+
+
 class OfficialInventoryTests(unittest.TestCase):
     class Reply:
         def __init__(self, data):

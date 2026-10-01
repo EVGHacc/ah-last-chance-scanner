@@ -1130,13 +1130,31 @@ def main():
     browser_retry(rs)
     for r in rs:
         evidence=r.get("listing_evidence",[])
-        totals=[e.get("official_total") for e in evidence
-                if type(e.get("official_total")) is int]
-        found=[e.get("browser_inventory_count",0) for e in evidence]
-        found += [e.get("job_link_count",0) for e in evidence]
+        # Reconcile an official total only with the complete inventory evidence
+        # that produced it; incidental HTML link counts are not comparable.
+        complete_evidence=[e for e in evidence if (
+            e.get("static_board_complete") is True or
+            e.get("embedded_complete") is True or
+            (e.get("api_complete") is True and e.get("api_terminal") is True) or
+            (e.get("browser_terminal") is True and
+             type(e.get("official_total")) is int and
+             e.get("browser_inventory_count")==e.get("official_total"))
+        )]
+        with_total=[e for e in complete_evidence if type(e.get("official_total")) is int]
+        authoritative=max(with_total,key=lambda e:e.get("official_total")) if with_total else None
+        if authoritative:
+            official_total=authoritative["official_total"]
+            observed_job_links=(authoritative.get("browser_inventory_count")
+                                if authoritative.get("browser_terminal") is True
+                                else authoritative.get("job_link_count",0))
+        else:
+            official_total=None
+            observed_job_links=max(
+                [e.get("browser_inventory_count",0) for e in evidence]+
+                [e.get("job_link_count",0) for e in evidence],default=0)
         r["inventory_audit"]={
-            "official_total":max(totals) if totals else None,
-            "observed_job_links":max(found,default=0),
+            "official_total":official_total,
+            "observed_job_links":observed_job_links,
             "relevant_candidates":len(r.get("jobs",[])),
             "live_apply_verified":sum(bool(j.get("apply_live")) for j in r.get("jobs",[])),
             "coverage":r["vacancy_coverage"],
