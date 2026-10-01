@@ -89,16 +89,22 @@ def verify(root=Path("data"), now=None, require_complete=False):
     cutoff = END if (day != today or require_complete) else min(END, now.hour * 60 + now.minute - 4)
     overdue_raw = [s for s in RAW if 60 * int(s[:2]) + int(s[3:]) <= cutoff and s not in seen_raw]
     overdue_can = [s for s in CANONICAL if 60 * int(s[:2]) + int(s[3:]) <= cutoff and s not in seen_canonical]
+    missing_raw = [s for s in RAW if s not in seen_raw]
+    missing_can = [s for s in CANONICAL if s not in seen_canonical]
+    complete = len(seen_raw) == 101 and len(seen_canonical) == 61
+    usable = bool(seen_raw) and not inconsistencies
     report = {
         "date": day, "raw": len(seen_raw), "rawExpected": 101,
         "canonical": len(seen_canonical), "canonicalExpected": 61,
+        "missingRaw": missing_raw, "missingCanonical": missing_can,
         "overdueRaw": overdue_raw, "overdueCanonical": overdue_can,
         "invalidRowsIgnored": bad, "inconsistencies": inconsistencies,
-        "complete": len(seen_raw) == 101 and len(seen_canonical) == 61,
+        "usable": usable,
+        "quality": "complete" if complete else ("partial" if usable else "unusable"),
+        "complete": complete,
     }
     print(json.dumps(report, ensure_ascii=False))
-    if inconsistencies or overdue_raw or overdue_can or (
-            require_complete and not report["complete"]):
+    if inconsistencies or not usable or (require_complete and not complete):
         raise AssertionError("Independent AH QA failed; see detailed report")
     return report
 

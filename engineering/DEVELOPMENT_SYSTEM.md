@@ -84,7 +84,12 @@ Independent production proof:
 - `scripts/independent_qa.py` rescans the published JSONL archive;
 - validates user-refresh authentication, five-store scope, Vlees scope, timing,
   raw/canonical cadence and status/archive consistency;
-- at end-of-session, all expected slots must be independently present.
+- valid available observations remain usable when measurement slots are missing;
+- missing/overdue slots are reported explicitly as `quality=partial` and
+  `complete=false`, rather than causing otherwise valid data to be discarded;
+- corrupt scope/auth/archive evidence remains a hard failure;
+- strict completeness mode remains available when a process specifically needs
+  proof that all 101 raw and 61 canonical slots are present.
 
 ### Vacancy Monitor v2
 

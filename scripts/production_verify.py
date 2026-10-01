@@ -133,16 +133,22 @@ def verify_vacancy(
     return report
 
 
+def _ah_result(report: dict) -> str:
+    """Classify verified AH evidence without discarding valid partial data."""
+    assert report.get("usable") is True, "AH dataset is not usable"
+    return "PASS" if report.get("complete") is True else "PASS_PARTIAL"
+
+
 def verify_ah(root: Path = Path(".")) -> dict:
-    """Delegate AH production proof to the pre-existing independent read-only verifier."""
+    """Verify AH integrity; missing slots reduce quality but do not discard valid data."""
     module_path = root / "scripts" / "independent_qa.py"
     spec = importlib.util.spec_from_file_location("ah_independent_qa", module_path)
     if spec is None or spec.loader is None:
         raise AssertionError(f"cannot load {module_path}")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-    report = module.verify(root / "data", require_complete=True)
-    return {"project": "ah", "result": "PASS", **report}
+    report = module.verify(root / "data", require_complete=False)
+    return {"project": "ah", **report, "result": _ah_result(report)}
 
 
 def main() -> int:

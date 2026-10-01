@@ -126,5 +126,27 @@ class VacancyProductionVerifierTests(unittest.TestCase):
                 verify.verify_vacancy(snapshot, registry)
 
 
+class AHProductionVerifierTests(unittest.TestCase):
+    def test_partial_but_valid_ah_dataset_passes_as_partial(self):
+        report = {
+            "usable": True,
+            "complete": False,
+            "quality": "partial",
+            "missingRaw": ["17:30"],
+            "missingCanonical": ["17:30"],
+        }
+        self.assertEqual(verify._ah_result(report), "PASS_PARTIAL")
+
+    def test_complete_ah_dataset_passes_as_complete(self):
+        self.assertEqual(
+            verify._ah_result({"usable": True, "complete": True, "quality": "complete"}),
+            "PASS",
+        )
+
+    def test_unusable_ah_dataset_is_rejected(self):
+        with self.assertRaises(AssertionError):
+            verify._ah_result({"usable": False, "complete": False, "quality": "unusable"})
+
+
 if __name__ == "__main__":
     unittest.main()
