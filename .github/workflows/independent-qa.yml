@@ -42,11 +42,9 @@ jobs:
           from zoneinfo import ZoneInfo
           n=datetime.now(ZoneInfo('Europe/Amsterdam'))
           in_window=(17*60+34<=n.hour*60+n.minute<=22*60+50)
-          event=os.environ['EVENT_NAME']
-          # A daytime workflow_run can be produced by the session workflow's
-          # push trigger even though schedule_gate correctly skipped scanning.
-          # Do not misreport yesterday's status as a production failure.
-          run=(event not in ('schedule','workflow_run')) or in_window
+          # Self-tests always run, but the publication audit is meaningful
+          # only while today's evening dataset is being produced.
+          run=in_window
           with open(os.environ['GITHUB_ENV'],'a') as f:
               f.write(f'RUN_AH_QA={str(run).lower()}\n')
           print('Independent QA gate:',n.isoformat(),run)
