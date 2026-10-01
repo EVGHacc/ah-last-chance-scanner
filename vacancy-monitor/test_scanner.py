@@ -797,5 +797,17 @@ class WisePublicATSRegressionTests(unittest.TestCase):
             self.assertEqual(result["validation_reason"],"no_live_apply_control")
 
 
+
+class WorkflowScheduleTests(unittest.TestCase):
+    def test_vacancy_monitor_runs_twice_per_hour_without_dropping_cycles(self):
+        with open(".github/workflows/vacancy-monitor.yml", encoding="utf-8") as handle:
+            workflow = handle.read()
+        self.assertIn('cron: "0,30 * * * *"', workflow)
+        self.assertIn('timezone: "Europe/Amsterdam"', workflow)
+        self.assertIn('group: vacancy-monitor-106-half-hourly', workflow)
+        self.assertIn('cancel-in-progress: false', workflow)
+        self.assertIn('queue: max', workflow)
+        self.assertNotIn('cron: "30 5 * * 1-5"', workflow)
+
 if __name__ == "__main__":
     unittest.main()
