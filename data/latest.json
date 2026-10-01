@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-01",
   "weekday": "Thursday",
-  "scheduledSlot": "21:48",
-  "scheduledAt": "2026-10-01T21:48:00+02:00",
-  "rawScheduledSlot": "21:48",
-  "rawScheduledAt": "2026-10-01T21:48:00+02:00",
-  "startedAt": "2026-10-01T21:48:00.385210+02:00",
-  "completedAt": "2026-10-01T21:48:05.845101+02:00",
-  "checkedAt": "2026-10-01T21:48:05.845101+02:00",
+  "scheduledSlot": "21:50",
+  "scheduledAt": "2026-10-01T21:50:00+02:00",
+  "rawScheduledSlot": "21:50",
+  "rawScheduledAt": "2026-10-01T21:50:00+02:00",
+  "startedAt": "2026-10-01T21:50:00.364348+02:00",
+  "completedAt": "2026-10-01T21:50:05.288164+02:00",
+  "checkedAt": "2026-10-01T21:50:05.288164+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1221,11 +1221,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 235,
+      "totalBargainItems": 204,
       "meatItems": 8,
       "meat70Items": 3,
       "meat70Stock": 5.0,
-      "bakeryItems": 56,
+      "bakeryItems": 51,
       "bakery70Items": 2,
       "bakery70Stock": 3.0,
       "items": [
@@ -1373,18 +1373,6 @@
           "stock": 6,
           "priceWas": "1.09",
           "priceNow": "0.65",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
-          "productId": 595350,
-          "title": "AH Biologisch Batard volkoren zonnepit heel",
-          "brand": "AH Biologisch",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "2.69",
-          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-01"
         },
         {
@@ -1700,30 +1688,6 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
-          "productId": 590399,
-          "title": "AH Broodje burger augurk tomatensaus",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.59",
-          "priceNow": "1.19",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
-          "productId": 603533,
-          "title": "AH Kip mango snack",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.49",
-          "priceNow": "1.12",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
           "productId": 606048,
           "title": "AH Liefde & Passie Desem pistolet wit",
           "brand": "AH Liefde & Passie",
@@ -1904,18 +1868,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 589024,
-          "title": "Dr. Oetker Kwarktaart eigen fruit bakmix",
-          "brand": "Dr. Oetker",
-          "size": "210 g",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "3.29",
-          "priceNow": "1.97",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 550411,
           "title": "AH Kokossnippers",
           "brand": "AH",
@@ -1983,18 +1935,6 @@
           "category": "Bakkerij",
           "discountPct": 40,
           "stock": 7,
-          "priceWas": "4.99",
-          "priceNow": "2.99",
-          "markdownExpirationDate": "2026-10-18"
-        },
-        {
-          "productId": 587852,
-          "title": "AH Glutenvrij Desembrood pompoen- & zonnebloempitten",
-          "brand": "AH Glutenvrij",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 3,
           "priceWas": "4.99",
           "priceNow": "2.99",
           "markdownExpirationDate": "2026-10-18"
