@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-01",
   "weekday": "Thursday",
-  "scheduledSlot": "21:12",
-  "scheduledAt": "2026-10-01T21:12:00+02:00",
-  "rawScheduledSlot": "21:12",
-  "rawScheduledAt": "2026-10-01T21:12:00+02:00",
-  "startedAt": "2026-10-01T21:12:00.614799+02:00",
-  "completedAt": "2026-10-01T21:12:05.460685+02:00",
-  "checkedAt": "2026-10-01T21:12:05.460685+02:00",
+  "scheduledSlot": "21:15",
+  "scheduledAt": "2026-10-01T21:15:00+02:00",
+  "rawScheduledSlot": "21:15",
+  "rawScheduledAt": "2026-10-01T21:15:00+02:00",
+  "startedAt": "2026-10-01T21:15:00.611486+02:00",
+  "completedAt": "2026-10-01T21:15:05.477703+02:00",
+  "checkedAt": "2026-10-01T21:15:05.477703+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -581,11 +581,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 229,
+      "totalBargainItems": 228,
       "meatItems": 9,
       "meat70Items": 3,
       "meat70Stock": 4.0,
-      "bakeryItems": 43,
+      "bakeryItems": 42,
       "bakery70Items": 2,
       "bakery70Stock": 3.0,
       "items": [
@@ -772,18 +772,6 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
-          "productId": 606492,
-          "title": "AH Liefde & Passie Biologisch desem pistolet meerzaden",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "1.09",
-          "priceNow": "0.82",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
           "productId": 277519,
           "title": "AH Vloerbrood volkoren half",
           "brand": "AH",
@@ -844,6 +832,18 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
+          "productId": 606492,
+          "title": "AH Liefde & Passie Biologisch desem pistolet meerzaden",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.09",
+          "priceNow": "0.82",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
           "productId": 606049,
           "title": "AH Liefde & Passie Desem pistolet volkoren",
           "brand": "AH Liefde & Passie",
@@ -877,18 +877,6 @@
           "stock": 1,
           "priceWas": "1.99",
           "priceNow": "1.49",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
-          "productId": 231536,
-          "title": "AH Tijger wit half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.09",
-          "priceNow": "0.82",
           "markdownExpirationDate": "2026-10-01"
         },
         {
