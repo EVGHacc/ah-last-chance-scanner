@@ -158,6 +158,19 @@ def discover_official_ats(pages,o):
                 config={"type":"smartrecruiters",
                         "url":f"https://api.smartrecruiters.com/v1/companies/{token}/postings",
                         "board":f"https://jobs.smartrecruiters.com/{token}"}
+            elif h=="jobs.ashbyhq.com":
+                config={"type":"ashby","url":f"https://api.ashbyhq.com/posting-api/job-board/{token}","board":f"https://jobs.ashbyhq.com/{token}"}
+            elif h.endswith(".recruitee.com") and h!="recruitee.com":
+                slug=h[:-len(".recruitee.com")].split(".")[-1]
+                if slug and slug not in ("www","support","help"):
+                    config={"type":"recruitee","url":f"https://{slug}.recruitee.com/api/offers/","board":f"https://{slug}.recruitee.com"}
+            elif h.endswith(".myworkdayjobs.com"):
+                wd=re.fullmatch(r"([a-z0-9-]+)\.(wd\d+)\.myworkdayjobs\.com",h,re.I)
+                if wd and parts:
+                    site=parts[0]
+                    if site.lower() not in ("en-us","en-gb","nl-nl","jobs","job"):
+                        tenant,cluster=wd.group(1),wd.group(2)
+                        config={"type":"workday","url":f"https://{tenant}.{cluster}.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs","board":f"https://{tenant}.{cluster}.myworkdayjobs.com/{site}"}
             if config and config["url"] not in seen:
                 seen.add(config["url"]);configs.append(config)
     return configs
