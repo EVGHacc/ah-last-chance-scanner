@@ -4,8 +4,8 @@
   "target_proven": 24,
   "vacancy_coverage_percent": 23.1,
   "match_audit": {
-    "candidate_count": 497,
-    "matched_count": 497,
+    "candidate_count": 427,
+    "matched_count": 427,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -216,6 +216,12 @@
       "status": "official_site_scanned"
     },
     {
+      "name": "State Street",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
       "name": "Stripe",
       "kind": "employer",
       "coverage": "partial",
@@ -328,12 +334,6 @@
       "kind": "recruiter",
       "coverage": "partial",
       "status": "official_site_scanned"
-    },
-    {
-      "name": "Cowen Partners",
-      "kind": "recruiter",
-      "coverage": "partial",
-      "status": "no_public_vacancy_board"
     },
     {
       "name": "De Vroed Ten Thierry",
