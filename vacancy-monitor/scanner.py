@@ -443,7 +443,7 @@ def static_inventory(o):
                     queue.append(u)
             if len(seen)==1 and c.get("strict_total"):
                 text=soup.get_text(" ",strip=True)
-                totals=[int(m.group(1)) for m in re.finditer(r"\\b([0-9]{1,5})\\s+(?:open\\s+)?(?:jobs?|vacatures?|positions?|roles?|results?)\\b",text,re.I)]
+                totals=[int(m.group(1)) for m in re.finditer(r"\b([0-9]{1,5})\s+(?:open\s+)?(?:jobs?|vacatures?|positions?|roles?|results?)\b",text,re.I)]
                 official_total=max(totals) if totals else None
                 page_size=len(jobs)-before
                 if official_total is None or not page_size: raise ValueError("Static board missing authoritative total or first-page jobs")
