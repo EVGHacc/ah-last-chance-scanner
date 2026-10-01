@@ -20,6 +20,11 @@ class EvidenceRegression(unittest.TestCase):
         self.assertTrue(scanner.inventory_url("https://example.com/job/director-governance-research/"))
     def test_privacy_navigation_excluded(self):
         self.assertFalse(scanner.inventory_url("https://example.com/careers/cookie-policy"))
+    def test_browser_pagination_uses_supported_playwright_all_inner_texts_signature(self):
+        import inspect
+        source=inspect.getsource(scanner.browser_retry)
+        self.assertNotIn("all_inner_texts(timeout=", source)
+        self.assertIn("all_inner_texts()", source)
 
 if __name__ == "__main__":
     unittest.main()
