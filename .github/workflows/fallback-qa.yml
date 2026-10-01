@@ -15,7 +15,9 @@ permissions:
   actions: write
 concurrency:
   group: ah-fallback-short
-  cancel-in-progress: false
+  # A fallback older than one 5-minute cadence can no longer protect the
+  # original <=240s slot. Prefer the fresh recovery run over a stuck one.
+  cancel-in-progress: true
 jobs:
   recover:
     runs-on: ubuntu-latest
