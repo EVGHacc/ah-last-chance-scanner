@@ -12,6 +12,9 @@ TZ=ZoneInfo('Europe/Amsterdam')
 START=17*60+30
 END=22*60+30
 MAX_RECOVERY_AGE=240
+# Gap recovery must start with enough headroom to scan, publish and retry while
+# the resulting observation can still satisfy the hard <=240s validity limit.
+RECOVERY_START_DEADLINE=205
 RETRY_DELAYS=(0,8,20)
 STORES={'1463','1348','1135'}
 
@@ -97,7 +100,7 @@ def recover_recent_gaps(today):
     missing=[]
     for target in points_for(today):
         age=(now-target).total_seconds()
-        if 35 <= age <= 180 and not point_complete(target):
+        if 35 <= age <= RECOVERY_START_DEADLINE and not point_complete(target):
             missing.append(target)
     for target in missing:
         print(f'Heartbeat detected missing point {target.isoformat()}; recovering now',flush=True)
@@ -121,7 +124,7 @@ def fallback_once():
     """Independent short-lived recovery; never backdate observations beyond 240 seconds."""
     now=datetime.now(TZ)
     refresh_checkout()
-    candidates=[p for p in points_for(now) if 0 <= (now-p).total_seconds() <= MAX_RECOVERY_AGE]
+    candidates=[p for p in points_for(now) if 0 <= (now-p).total_seconds() <= RECOVERY_START_DEADLINE]
     for target in candidates:
         if not point_complete(target):
             print(f'Fallback attempting {target.isoformat()}',flush=True)
@@ -129,6 +132,18 @@ def fallback_once():
     refresh_checkout()
     raw,canonical=status_seen(now)
     print(f'Fallback status {now:%Y-%m-%d}: raw={len(raw)}/101 canonical={len(canonical)}/61',flush=True)
+
+
+def self_test():
+    d=datetime(2026,10,1,17,30,tzinfo=TZ)
+    pts=points_for(d)
+    raw=[p for p in pts if raw_due(p.hour*60+p.minute)]
+    canonical=[p for p in pts if canonical_due(p.hour*60+p.minute)]
+    assert len(raw)==101 and raw[0].strftime('%H:%M')=='17:30' and raw[-1].strftime('%H:%M')=='22:30'
+    assert len(canonical)==61 and canonical[0].strftime('%H:%M')=='17:30' and canonical[-1].strftime('%H:%M')=='22:30'
+    assert MAX_RECOVERY_AGE==240 and RECOVERY_START_DEADLINE < MAX_RECOVERY_AGE
+    assert STORES=={'1463','1348','1135'}
+    print('Session cadence/recovery self-test: PASS')
 
 
 def main():
@@ -156,4 +171,9 @@ def main():
 
 
 if __name__=='__main__':
-    fallback_once() if '--fallback-once' in sys.argv else main()
+    if '--self-test' in sys.argv:
+        self_test()
+    elif '--fallback-once' in sys.argv:
+        fallback_once()
+    else:
+        main()
