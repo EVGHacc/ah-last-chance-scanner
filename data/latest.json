@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-01",
   "weekday": "Thursday",
-  "scheduledSlot": "20:21",
-  "scheduledAt": "2026-10-01T20:21:00+02:00",
-  "rawScheduledSlot": "20:21",
-  "rawScheduledAt": "2026-10-01T20:21:00+02:00",
-  "startedAt": "2026-10-01T20:21:00.397247+02:00",
-  "completedAt": "2026-10-01T20:21:04.990091+02:00",
-  "checkedAt": "2026-10-01T20:21:04.990091+02:00",
+  "scheduledSlot": "20:24",
+  "scheduledAt": "2026-10-01T20:24:00+02:00",
+  "rawScheduledSlot": "20:24",
+  "rawScheduledAt": "2026-10-01T20:24:00+02:00",
+  "startedAt": "2026-10-01T20:24:00.571255+02:00",
+  "completedAt": "2026-10-01T20:24:06.149844+02:00",
+  "checkedAt": "2026-10-01T20:24:06.149844+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -234,7 +234,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 16,
+          "stock": 14,
           "priceWas": "0.29",
           "priceNow": "0.22",
           "markdownExpirationDate": "2026-10-01"
@@ -1060,18 +1060,6 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
-          "productId": 230710,
-          "title": "AH Ham kaas croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 6,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
           "productId": 459347,
           "title": "AH Tijgerbol wit",
           "brand": "AH",
@@ -1081,6 +1069,18 @@
           "stock": 3,
           "priceWas": "0.35",
           "priceNow": "0.30",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
+          "productId": 230710,
+          "title": "AH Ham kaas croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-01"
         },
         {
@@ -1868,18 +1868,6 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
-          "productId": 230859,
-          "title": "AH Kaas croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
           "productId": 230720,
           "title": "AH Frikandelbroodje",
           "brand": "AH",
@@ -1925,6 +1913,18 @@
           "stock": 2,
           "priceWas": "1.89",
           "priceNow": "1.61",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
+          "productId": 230859,
+          "title": "AH Kaas croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-01"
         },
         {
