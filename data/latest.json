@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-01",
   "weekday": "Thursday",
-  "scheduledSlot": "21:27",
-  "scheduledAt": "2026-10-01T21:27:00+02:00",
-  "rawScheduledSlot": "21:27",
-  "rawScheduledAt": "2026-10-01T21:27:00+02:00",
-  "startedAt": "2026-10-01T21:27:00.419052+02:00",
-  "completedAt": "2026-10-01T21:27:05.948303+02:00",
-  "checkedAt": "2026-10-01T21:27:05.948303+02:00",
+  "scheduledSlot": "21:30",
+  "scheduledAt": "2026-10-01T21:30:00+02:00",
+  "rawScheduledSlot": "21:30",
+  "rawScheduledAt": "2026-10-01T21:30:00+02:00",
+  "startedAt": "2026-10-01T21:30:00.408793+02:00",
+  "completedAt": "2026-10-01T21:30:06.307477+02:00",
+  "checkedAt": "2026-10-01T21:30:06.307477+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -228,18 +228,6 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
-          "productId": 590095,
-          "title": "AH Liefde & Passie Rozijn pistache",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "3.19",
-          "priceNow": "1.91",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
           "productId": 606777,
           "title": "AH Borek kip gyros",
           "brand": "AH",
@@ -249,6 +237,18 @@
           "stock": 2,
           "priceWas": "1.19",
           "priceNow": "0.71",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
+          "productId": 590095,
+          "title": "AH Liefde & Passie Rozijn pistache",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "3.19",
+          "priceNow": "1.91",
           "markdownExpirationDate": "2026-10-01"
         },
         {
@@ -2944,18 +2944,6 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
-          "productId": 561021,
-          "title": "AH Vloer waldkorn heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 4,
-          "priceWas": "2.69",
-          "priceNow": "1.61",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
           "productId": 561017,
           "title": "AH Tijger tarwe maïs heel",
           "brand": "AH",
@@ -2975,6 +2963,18 @@
           "category": "Bakkerij",
           "discountPct": 40,
           "stock": 4,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
+          "productId": 561021,
+          "title": "AH Vloer waldkorn heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 3,
           "priceWas": "2.69",
           "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-01"
@@ -3052,18 +3052,6 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
-          "productId": 468259,
-          "title": "AH Kaneelbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 7,
-          "priceWas": "0.59",
-          "priceNow": "0.44",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
           "productId": 231533,
           "title": "AH Tijger volkoren half",
           "brand": "AH",
@@ -3073,6 +3061,18 @@
           "stock": 7,
           "priceWas": "1.09",
           "priceNow": "0.82",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
+          "productId": 468259,
+          "title": "AH Kaneelbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 6,
+          "priceWas": "0.59",
+          "priceNow": "0.44",
           "markdownExpirationDate": "2026-10-01"
         },
         {
