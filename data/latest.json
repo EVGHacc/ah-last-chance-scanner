@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-01",
   "weekday": "Thursday",
-  "scheduledSlot": "20:57",
-  "scheduledAt": "2026-10-01T20:57:00+02:00",
-  "rawScheduledSlot": "20:57",
-  "rawScheduledAt": "2026-10-01T20:57:00+02:00",
-  "startedAt": "2026-10-01T20:57:00.591383+02:00",
-  "completedAt": "2026-10-01T20:57:05.690662+02:00",
-  "checkedAt": "2026-10-01T20:57:05.690662+02:00",
+  "scheduledSlot": "21:00",
+  "scheduledAt": "2026-10-01T21:00:00+02:00",
+  "rawScheduledSlot": "21:00",
+  "rawScheduledAt": "2026-10-01T21:00:00+02:00",
+  "startedAt": "2026-10-01T21:00:00.686597+02:00",
+  "completedAt": "2026-10-01T21:00:05.722777+02:00",
+  "checkedAt": "2026-10-01T21:00:05.722777+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -3136,18 +3136,6 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
-          "productId": 230845,
-          "title": "AH Liefde & Passie Petit beurre",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.89",
-          "priceNow": "1.42",
-          "markdownExpirationDate": "2026-10-01"
-        },
-        {
           "productId": 597345,
           "title": "AH Pretzel",
           "brand": "AH",
@@ -3181,6 +3169,18 @@
           "stock": 2,
           "priceWas": "1.19",
           "priceNow": "0.89",
+          "markdownExpirationDate": "2026-10-01"
+        },
+        {
+          "productId": 230845,
+          "title": "AH Liefde & Passie Petit beurre",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.89",
+          "priceNow": "1.42",
           "markdownExpirationDate": "2026-10-01"
         },
         {
