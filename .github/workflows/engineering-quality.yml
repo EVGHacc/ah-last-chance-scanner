@@ -1,0 +1,110 @@
+name: Engineering Quality Gate
+
+on:
+  pull_request:
+    paths:
+      - 'scanner.py'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'vacancy-monitor/**'
+      - 'engineering/**'
+      - '.github/workflows/**'
+  push:
+    branches: [main]
+    paths:
+      - 'scanner.py'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'vacancy-monitor/**'
+      - 'engineering/**'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: engineering-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  policy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test engineering policy and verifier
+        run: python -m unittest discover -s tests -p 'test_engineering_*.py' -v
+      - name: Test workflow contracts
+        run: python -m unittest discover -s tests -p 'test_workflow_*.py' -v
+      - name: Read-only control-plane review
+        run: python scripts/engineering_gate.py --static-review
+      - name: Enforce code-to-test change policy
+        if: github.event_name != 'workflow_dispatch'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: python scripts/engineering_gate.py --base "$BASE_SHA" --head "$GITHUB_SHA"
+
+  ah-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install AH test dependency
+        run: python -m pip install --disable-pip-version-check --quiet cryptography
+      - name: Compile AH production stack
+        run: python -m py_compile scanner.py scripts/*.py
+      - name: Run AH developer and independent self-tests
+        run: |
+          python scripts/auth_state.py
+          python scripts/schedule_gate.py --self-test
+          python scripts/session.py --self-test
+          python scripts/independent_qa.py --self-test
+          python scripts/selftest.py
+      - name: Run dedicated AH regression tests
+        run: python -m unittest discover -s tests -p 'test_ah_*.py' -v
+
+  vacancy-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install vacancy unit dependencies
+        run: python -m pip install --disable-pip-version-check --quiet 'requests>=2.32,<3' 'beautifulsoup4>=4.12,<5'
+      - name: Compile Vacancy Monitor
+        run: python -m compileall -q vacancy-monitor
+      - name: Run Vacancy Monitor regression suite
+        run: python -m unittest discover -s vacancy-monitor -p 'test_*.py' -v
+      - name: Run cross-project vacancy contract tests
+        run: python -m unittest discover -s tests -p 'test_vacancy_*.py' -v
+
+  independent-review:
+    needs: [policy, ah-tests, vacancy-tests]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Independent read-only review
+        run: |
+          python scripts/engineering_gate.py --static-review
+          python -m unittest discover -s tests -p 'test_engineering_*.py' -v
+          python -m unittest discover -s tests -p 'test_workflow_*.py' -v
+      - name: Assert reviewer has no write token scope
+        run: |
+          echo "Independent reviewer intentionally has contents: read and receives no production secrets."
