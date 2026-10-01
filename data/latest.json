@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-01",
   "weekday": "Thursday",
-  "scheduledSlot": "18:39",
-  "scheduledAt": "2026-10-01T18:39:00+02:00",
-  "rawScheduledSlot": "18:39",
-  "rawScheduledAt": "2026-10-01T18:39:00+02:00",
-  "startedAt": "2026-10-01T18:39:00.367594+02:00",
-  "completedAt": "2026-10-01T18:39:05.003535+02:00",
-  "checkedAt": "2026-10-01T18:39:05.003535+02:00",
+  "scheduledSlot": "18:40",
+  "scheduledAt": "2026-10-01T18:40:00+02:00",
+  "rawScheduledSlot": "18:40",
+  "rawScheduledAt": "2026-10-01T18:40:00+02:00",
+  "startedAt": "2026-10-01T18:40:00.619940+02:00",
+  "completedAt": "2026-10-01T18:40:05.108820+02:00",
+  "checkedAt": "2026-10-01T18:40:05.108820+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -916,7 +916,7 @@
           "size": "150 g",
           "category": "Vlees",
           "discountPct": 25,
-          "stock": 4,
+          "stock": 2,
           "priceWas": "3.99",
           "priceNow": "2.99",
           "markdownExpirationDate": "2026-10-04"
@@ -1094,6 +1094,18 @@
           "markdownExpirationDate": "2026-10-01"
         },
         {
+          "productId": 619342,
+          "title": "AH Scharrel kipfilet voordeelverpakking",
+          "brand": "AH",
+          "size": "1 kg",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 7,
+          "priceWas": "11.99",
+          "priceNow": "8.99",
+          "markdownExpirationDate": "2026-10-02"
+        },
+        {
           "productId": 620806,
           "title": "AH Ovenschotel varkenshaas brie",
           "brand": "AH",
@@ -1103,18 +1115,6 @@
           "stock": 4,
           "priceWas": "6.99",
           "priceNow": "5.24",
-          "markdownExpirationDate": "2026-10-02"
-        },
-        {
-          "productId": 619342,
-          "title": "AH Scharrel kipfilet voordeelverpakking",
-          "brand": "AH",
-          "size": "1 kg",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "11.99",
-          "priceNow": "8.99",
           "markdownExpirationDate": "2026-10-02"
         },
         {
