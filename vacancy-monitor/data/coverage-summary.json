@@ -1,11 +1,11 @@
 {
   "run_date": "2026-10-01",
   "target_expected": 104,
-  "target_proven": 25,
-  "vacancy_coverage_percent": 24.0,
+  "target_proven": 23,
+  "vacancy_coverage_percent": 22.1,
   "match_audit": {
-    "candidate_count": 498,
-    "matched_count": 498,
+    "candidate_count": 354,
+    "matched_count": 354,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -78,10 +78,16 @@
       "status": "official_site_scanned"
     },
     {
-      "name": "EU Remote jobs",
+      "name": "Deutsche Bank",
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
+    },
+    {
+      "name": "EU Remote jobs",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "technical_failure"
     },
     {
       "name": "GFT",
@@ -216,6 +222,12 @@
       "status": "official_site_scanned"
     },
     {
+      "name": "State Street",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
       "name": "Stripe",
       "kind": "employer",
       "coverage": "partial",
@@ -230,8 +242,8 @@
     {
       "name": "Thunes",
       "kind": "employer",
-      "coverage": "partial",
-      "status": "official_site_scanned"
+      "coverage": "unproven",
+      "status": "technical_failure"
     },
     {
       "name": "Triodos Bank",
@@ -330,12 +342,6 @@
       "status": "official_site_scanned"
     },
     {
-      "name": "Cowen Partners",
-      "kind": "recruiter",
-      "coverage": "partial",
-      "status": "no_public_vacancy_board"
-    },
-    {
       "name": "De Vroed Ten Thierry",
       "kind": "recruiter",
       "coverage": "partial",
@@ -420,6 +426,12 @@
       "status": "no_public_vacancy_board"
     },
     {
+      "name": "Oliver James",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
       "name": "PaymentGenes",
       "kind": "recruiter",
       "coverage": "unproven",
@@ -470,7 +482,7 @@
     {
       "name": "Xanthic",
       "kind": "recruiter",
-      "coverage": "unproven",
+      "coverage": "partial",
       "status": "official_site_scanned"
     },
     {
@@ -488,8 +500,10 @@
   ],
   "technical_failures": [
     "DB Contractors UK",
+    "EU Remote jobs",
     "McKinsey",
     "Rabobank",
+    "Thunes",
     "Risk Talent Associates",
     "Robert Walters Interim",
     "Selby Jennings"
