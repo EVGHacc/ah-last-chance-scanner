@@ -4,17 +4,21 @@ from pathlib import Path
 from .models import Source
 
 
+def _split_optional(value: str | None) -> tuple[str, ...]:
+    return tuple(x.strip() for x in (value or "").split(";") if x.strip())
+
+
 def load_registry(path: str | Path) -> list[Source]:
     with Path(path).open(encoding="utf-8", newline="") as fh:
         rows = list(csv.DictReader(fh, delimiter="\t"))
     sources = [
         Source(
-            kind=row["kind"].strip(),
-            name=row["name"].strip(),
-            official_domain=row["official_domain"].strip(),
-            seed_urls=tuple(x for x in row["seed_urls"].split(";") if x),
-            no_public_hint=row["no_public_hint"].strip() == "1",
-            allowed_domains=tuple(x for x in row["allowed_domains"].split(";") if x),
+            kind=(row["kind"] or "").strip(),
+            name=(row["name"] or "").strip(),
+            official_domain=(row["official_domain"] or "").strip(),
+            seed_urls=_split_optional(row["seed_urls"]),
+            no_public_hint=(row["no_public_hint"] or "").strip() == "1",
+            allowed_domains=_split_optional(row["allowed_domains"]),
         )
         for row in rows
     ]
