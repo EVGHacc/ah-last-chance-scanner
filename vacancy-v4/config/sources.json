@@ -1,0 +1,1008 @@
+{
+  "schema_version": 1,
+  "target_count": 104,
+  "sources": [
+    {
+      "kind": "recruiter",
+      "name": "Alexander Hughes",
+      "official_domain": "alexanderhughes.com",
+      "seed_urls": [
+        "https://www.alexanderhughes.com/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "AP Executive",
+      "official_domain": "ap-executive.com",
+      "seed_urls": [
+        "https://www.ap-executive.com/en-nl"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "ARC",
+      "official_domain": "arcpeople.nl",
+      "seed_urls": [
+        "https://arcpeople.nl/professionals/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Barclay Simpson",
+      "official_domain": "barclaysimpson.com",
+      "seed_urls": [
+        "https://www.barclaysimpson.com/job-search/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Black Swan Group",
+      "official_domain": "blackswangroup.com",
+      "seed_urls": [
+        "https://www.blackswangroup.com/bsg-jobs/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Blooming Hill",
+      "official_domain": "bloominghill.nl",
+      "seed_urls": [
+        "https://bloominghill.nl/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Boer & Croon",
+      "official_domain": "boercroon.nl",
+      "seed_urls": [
+        "https://boercroon.nl/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Brightstone",
+      "official_domain": "brightstonegroup.nl",
+      "seed_urls": [
+        "https://brightstonegroup.nl/vacatures/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Brunel",
+      "official_domain": "brunel.net",
+      "seed_urls": [
+        "https://www.brunel.net/nl-nl/vacatures",
+        "https://www.brunel.net/en/jobs"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Care Professionals",
+      "official_domain": "careprofessionals.nl",
+      "seed_urls": [
+        "https://careprofessionals.nl/vacatures"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Compliance People",
+      "official_domain": "compliancepeople.nl",
+      "seed_urls": [
+        "https://www.compliancepeople.nl/vacatures/",
+        "https://www.compliancepeople.nl/"
+      ],
+      "allowed_domains": [
+        "compliance-people.com"
+      ]
+    },
+    {
+      "kind": "recruiter",
+      "name": "Confius",
+      "official_domain": "confius.nl",
+      "seed_urls": [
+        "https://confius.nl/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Corbulo",
+      "official_domain": "corbulo.net",
+      "seed_urls": [
+        "https://www.corbulo.net/vacature/",
+        "https://www.corbulo.net/en/vacancies/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Cowen Partners",
+      "official_domain": "cowenpartners.com",
+      "seed_urls": [
+        "https://cowenpartners.com/seeking-a-new-job/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "CPI",
+      "official_domain": "meetcpi.com",
+      "seed_urls": [
+        "https://meetcpi.com/over-cpi/vacatures/",
+        "https://meetcpi.com/"
+      ],
+      "allowed_domains": [
+        "meetcpi.nl"
+      ]
+    },
+    {
+      "kind": "recruiter",
+      "name": "De Vroed Ten Thierry",
+      "official_domain": "devroedtenthierry.nl",
+      "seed_urls": [
+        "https://www.devroedtenthierry.nl/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "DPA",
+      "official_domain": "dpa.nl",
+      "seed_urls": [
+        "https://www.dpa.nl/vacatures"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Ebbinge",
+      "official_domain": "ebbinge.nl",
+      "seed_urls": [
+        "https://www.ebbinge.nl/posities"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Egon Zehnder",
+      "official_domain": "egonzehnder.com",
+      "seed_urls": [
+        "https://www.egonzehnder.com/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Ferocia",
+      "official_domain": "ferocia.nl",
+      "seed_urls": [
+        "https://www.ferocia.nl/jobboard"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Financial Assets",
+      "official_domain": "financialassets.nl",
+      "seed_urls": [
+        "https://financialassets.nl/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Global FinTech Talent",
+      "official_domain": "globalfintechtalent.com",
+      "seed_urls": [
+        "https://www.globalfintechtalent.com/fintechjobs",
+        "https://www.globalfintechtalent.com/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Finatal",
+      "official_domain": "finatal.com",
+      "seed_urls": [
+        "https://finatal.com/jobs/",
+        "https://finatal.com/careers/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Greenberg Nielsen",
+      "official_domain": "greenbergnielsen.nl",
+      "seed_urls": [
+        "https://greenbergnielsen.nl/vacatures/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Hanami International",
+      "official_domain": "hanamiinternational.com",
+      "seed_urls": [
+        "https://hanamiinternational.com/jobs/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Hunter Bond",
+      "official_domain": "hunterbond.com",
+      "seed_urls": [
+        "https://www.hunterbond.com/job-search/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Korn Ferry",
+      "official_domain": "kornferry.com",
+      "seed_urls": [
+        "https://jobs.candidate.kornferry.com/jobs/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Lime Search",
+      "official_domain": "limesearch.nl",
+      "seed_urls": [
+        "https://www.limesearch.nl/open-finance-posities",
+        "https://www.limesearch.nl/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Matchd",
+      "official_domain": "matchd.nl",
+      "seed_urls": [
+        "https://matchd.nl/vacatures/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Michael Page",
+      "official_domain": "michaelpage.nl",
+      "seed_urls": [
+        "https://www.michaelpage.nl/jobs/risk-compliance-audit",
+        "https://www.michaelpage.nl/jobs"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Morgan McKinley",
+      "official_domain": "morganmckinley.com",
+      "seed_urls": [
+        "https://www.morganmckinley.com/jobs"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Odger/Odgers",
+      "official_domain": "odgers.com",
+      "seed_urls": [
+        "https://www.odgers.com/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Oliver James",
+      "official_domain": "oliverjames.com",
+      "seed_urls": [
+        "https://www.oliverjames.com/jobs"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "PaymentGenes",
+      "official_domain": "paymentgenes.com",
+      "seed_urls": [
+        "https://www.paymentgenes.com/fintech-jobs",
+        "https://jobs.paymentgenes.com/",
+        "https://www.paymentgenes.com/recruitment"
+      ],
+      "allowed_domains": [
+        "jobs.paymentgenes.com"
+      ]
+    },
+    {
+      "kind": "recruiter",
+      "name": "Amrop Executive Search",
+      "official_domain": "amrop.com",
+      "seed_urls": [
+        "https://www.amrop.com/nl/nl/",
+        "https://www.amrop.com/nl/nl/wat-we-doen/executive-search/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Robert Half NL",
+      "official_domain": "roberthalf.com",
+      "seed_urls": [
+        "https://www.roberthalf.com/nl/nl/vacatures"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Robert Walters Interim",
+      "official_domain": "robertwalters.nl",
+      "seed_urls": [
+        "https://www.robertwalters.nl/onze-diensten/interim-recruitment/interim-opdrachten.html"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Russell Reynolds Associates",
+      "official_domain": "russellreynolds.com",
+      "seed_urls": [
+        "https://www.russellreynolds.com/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Selby Jennings",
+      "official_domain": "selbyjennings.com",
+      "seed_urls": [
+        "https://www.selbyjennings.com/en-nl/jobs/lt-amsterdam",
+        "https://www.selbyjennings.com/en-nl/jobs/s-compliance/lt-amsterdam",
+        "https://www.selbyjennings.com/en-nl/jobs"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Spencer Stuart",
+      "official_domain": "spencerstuart.com",
+      "seed_urls": [
+        "https://www.spencerstuart.com/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Staatsen",
+      "official_domain": "staatsen.nl",
+      "seed_urls": [
+        "https://www.staatsen.nl/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Taylor Root",
+      "official_domain": "taylorroot.com",
+      "seed_urls": [
+        "https://www.taylorroot.com/jobs/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Ten",
+      "official_domain": "ten.nl",
+      "seed_urls": [
+        "https://ten.nl/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Varrlyn",
+      "official_domain": "varrlyn.com",
+      "seed_urls": [
+        "https://varrlyn.com/careers/",
+        "https://careers.smartrecruiters.com/Varrlyn/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Vroom",
+      "official_domain": "vroomsearch.com",
+      "seed_urls": [
+        "https://www.vroomsearch.com/nl/vacatures"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "recruiter",
+      "name": "Xanthic",
+      "official_domain": "xanthic.nl",
+      "seed_urls": [
+        "https://vacatures.xanthic1.nl/",
+        "https://www.xanthic.nl/"
+      ],
+      "allowed_domains": [
+        "xanthic1.nl"
+      ]
+    },
+    {
+      "kind": "recruiter",
+      "name": "Yacht Executive",
+      "official_domain": "randstadprofessional.nl",
+      "seed_urls": [
+        "https://www.randstadprofessional.nl/vacatures",
+        "https://www.randstadprofessional.nl/werken-als-yacht-professional",
+        "https://www.yacht.nl/vacatures"
+      ],
+      "allowed_domains": [
+        "yacht.nl"
+      ]
+    },
+    {
+      "kind": "recruiter",
+      "name": "Zanders",
+      "official_domain": "zandersgroup.com",
+      "seed_urls": [
+        "https://careers.zandersgroup.com/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "JP Morgan Chase",
+      "official_domain": "jpmorgan.com",
+      "seed_urls": [
+        "https://careers.jpmorgan.com/"
+      ],
+      "allowed_domains": [
+        "jpmorganchase.com"
+      ]
+    },
+    {
+      "kind": "employer",
+      "name": "Standard Chartered",
+      "official_domain": "sc.com",
+      "seed_urls": [
+        "https://www.sc.com/en/global-careers/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "HSBC",
+      "official_domain": "hsbc.com",
+      "seed_urls": [
+        "https://www.hsbc.com/careers"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "MUFG",
+      "official_domain": "mufg.com",
+      "seed_urls": [
+        "https://www.mufg.com/careers/",
+        "https://www.mufgemea.com/careers/"
+      ],
+      "allowed_domains": [
+        "mufgemea.com"
+      ]
+    },
+    {
+      "kind": "employer",
+      "name": "Mizuho",
+      "official_domain": "mizuhogroup.com",
+      "seed_urls": [
+        "https://www.mizuhogroup.com/emea/careers",
+        "https://careers.mizuhoemea.com/job/?locale=en_GB"
+      ],
+      "allowed_domains": [
+        "careers.mizuhoemea.com"
+      ]
+    },
+    {
+      "kind": "employer",
+      "name": "McKinsey",
+      "official_domain": "mckinsey.com",
+      "seed_urls": [
+        "https://www.mckinsey.com/nl/careers",
+        "https://www.mckinsey.com/careers/",
+        "https://www.mckinsey.com/careers/search-jobs"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "BCG",
+      "official_domain": "bcg.com",
+      "seed_urls": [
+        "https://careers.bcg.com/global/en/search-results"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Bain & Co",
+      "official_domain": "bain.com",
+      "seed_urls": [
+        "https://www.bain.com/careers/find-a-role/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "ING",
+      "official_domain": "ing.com",
+      "seed_urls": [
+        "https://careers.ing.com/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Rabobank",
+      "official_domain": "rabobank.nl",
+      "seed_urls": [
+        "https://www.rabobank.nl/over-ons/vacatures",
+        "https://rabobank.jobs/nl/vacatures/",
+        "https://rabobank.jobs/en/jobs/?country=nl&job_type%5B%5D=professionals"
+      ],
+      "allowed_domains": [
+        "rabobank.jobs"
+      ]
+    },
+    {
+      "kind": "employer",
+      "name": "ASN Bank",
+      "official_domain": "asnbank.nl",
+      "seed_urls": [
+        "https://werkenbij.asnbank.nl/nl/nl/search-results?s=1",
+        "https://werkenbij.asnbank.nl/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "NN Bank",
+      "official_domain": "nn-careers.com",
+      "seed_urls": [
+        "https://www.nn-careers.com/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Triodos Bank",
+      "official_domain": "triodos.com",
+      "seed_urls": [
+        "https://www.triodos.com/careers"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Barclays",
+      "official_domain": "barclays.com",
+      "seed_urls": [
+        "https://search.jobs.barclays/en/search-jobs/?orgIds=13015",
+        "https://search.jobs.barclays/"
+      ],
+      "allowed_domains": [
+        "search.jobs.barclays"
+      ]
+    },
+    {
+      "kind": "employer",
+      "name": "Zurich Insurance",
+      "official_domain": "zurich.com",
+      "seed_urls": [
+        "https://www.zurich.com/careers"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Deutsche Bank",
+      "official_domain": "db.com",
+      "seed_urls": [
+        "https://careers.db.com/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "American Express",
+      "official_domain": "americanexpress.com",
+      "seed_urls": [
+        "https://careers.americanexpress.com/en/sites/CX_1/jobs",
+        "https://careers.americanexpress.com/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Visa",
+      "official_domain": "visa.com",
+      "seed_urls": [
+        "https://corporate.visa.com/en/jobs/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Mastercard",
+      "official_domain": "mastercard.com",
+      "seed_urls": [
+        "https://careers.mastercard.com/us/en"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Leaseplan / Ayvens Bank",
+      "official_domain": "ayvens.com",
+      "seed_urls": [
+        "https://www.ayvens.com/nl-nl/over-ayvens/vacatures/overzicht/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Google",
+      "official_domain": "google.com",
+      "seed_urls": [
+        "https://www.google.com/about/careers/applications/jobs/results/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "GFT",
+      "official_domain": "gft.com",
+      "seed_urls": [
+        "https://jobs.gft.com/",
+        "https://www.gft.com/int/en/careers"
+      ],
+      "allowed_domains": [
+        "jobs.gft.com"
+      ]
+    },
+    {
+      "kind": "employer",
+      "name": "Meta",
+      "official_domain": "metacareers.com",
+      "seed_urls": [
+        "https://www.metacareers.com/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "OpenAI",
+      "official_domain": "openai.com",
+      "seed_urls": [
+        "https://openai.com/careers/search/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Microsoft",
+      "official_domain": "microsoft.com",
+      "seed_urls": [
+        "https://jobs.careers.microsoft.com/global/en/search"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Mollie",
+      "official_domain": "mollie.com",
+      "seed_urls": [
+        "https://jobs.mollie.com/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "N26",
+      "official_domain": "n26.com",
+      "seed_urls": [
+        "https://n26.com/en-eu/careers/positions/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Revolut",
+      "official_domain": "revolut.com",
+      "seed_urls": [
+        "https://www.revolut.com/careers/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Wise",
+      "official_domain": "wise.jobs",
+      "seed_urls": [
+        "https://www.wise.jobs/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Coinmerce",
+      "official_domain": "coinmerce.io",
+      "seed_urls": [
+        "https://careers.coinmerce.io/en/overview",
+        "https://careers.coinmerce.io/en/overview/2503505"
+      ],
+      "allowed_domains": [
+        "coinmerce.jobs.personio.com"
+      ]
+    },
+    {
+      "kind": "employer",
+      "name": "BNP Paribas",
+      "official_domain": "bnpparibas.nl",
+      "seed_urls": [
+        "https://www.bnpparibas.nl/en/careers/",
+        "https://www.bnpparibas.nl/en/jobs/",
+        "https://group.bnpparibas/en/careers/all-job-offers/netherlands"
+      ],
+      "allowed_domains": [
+        "group.bnpparibas"
+      ]
+    },
+    {
+      "kind": "employer",
+      "name": "Zerohash",
+      "official_domain": "zero-hash.breezy.hr",
+      "seed_urls": [
+        "https://zero-hash.breezy.hr/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "PayPal",
+      "official_domain": "paypal.com",
+      "seed_urls": [
+        "https://paypal.eightfold.ai/careers"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Payhawk",
+      "official_domain": "payhawk.com",
+      "seed_urls": [
+        "https://payhawk.com/careers",
+        "https://payhawk.com/nl/vacatures"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Stripe",
+      "official_domain": "stripe.com",
+      "seed_urls": [
+        "https://stripe.com/jobs/search"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Morgan Stanley",
+      "official_domain": "morganstanley.com",
+      "seed_urls": [
+        "https://www.morganstanley.com/careers/career-opportunities-search"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Worldline",
+      "official_domain": "worldline.com",
+      "seed_urls": [
+        "https://jobs.worldline.com/viewalljobs/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Remote.com",
+      "official_domain": "remote.com",
+      "seed_urls": [
+        "https://remote.com/openings"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Airwallex",
+      "official_domain": "airwallex.com",
+      "seed_urls": [
+        "https://careers.airwallex.com/jobs/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Surepay",
+      "official_domain": "surepay.eu",
+      "seed_urls": [
+        "https://www.surepay.eu/nl/vacatures/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Van Lanschot",
+      "official_domain": "vanlanschotkempen.com",
+      "seed_urls": [
+        "https://careers.vanlanschotkempen.com/nl-nl/vacancies"
+      ],
+      "allowed_domains": [
+        "vanlanschotkempen.com"
+      ]
+    },
+    {
+      "kind": "employer",
+      "name": "Ripple",
+      "official_domain": "ripple.com",
+      "seed_urls": [
+        "https://ripple.com/careers/all-jobs/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Thunes",
+      "official_domain": "thunes.com",
+      "seed_urls": [
+        "https://www.thunes.com/careers/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Checkout.com",
+      "official_domain": "checkout.com",
+      "seed_urls": [
+        "https://www.checkout.com/careers"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Mambu",
+      "official_domain": "mambu.com",
+      "seed_urls": [
+        "https://mambu.com/en/careers"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Finom",
+      "official_domain": "jobs.eu.lever.co",
+      "seed_urls": [
+        "https://jobs.eu.lever.co/pnlfin/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Tide",
+      "official_domain": "tide.co",
+      "seed_urls": [
+        "https://www.tide.co/careers/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "IBANfirst",
+      "official_domain": "ibanfirst.com",
+      "seed_urls": [
+        "https://careers.ibanfirst.com/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "EU Remote jobs",
+      "official_domain": "euremotejobs.com",
+      "seed_urls": [
+        "https://euremotejobs.com/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Zanders",
+      "official_domain": "zandersgroup.com",
+      "seed_urls": [
+        "https://careers.zandersgroup.com/"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "State Street",
+      "official_domain": "statestreet.com",
+      "seed_urls": [
+        "https://careers.statestreet.com/global/en"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Kroll",
+      "official_domain": "kroll.com",
+      "seed_urls": [
+        "https://careers.kroll.com/en",
+        "https://careers.kroll.com/en/listing-page"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Commerzbank",
+      "official_domain": "commerzbank.com",
+      "seed_urls": [
+        "https://jobs.commerzbank.com/",
+        "https://www.commerzbank.de/group/careers/job-opportunities/"
+      ],
+      "allowed_domains": [
+        "commerzbank.de"
+      ]
+    },
+    {
+      "kind": "employer",
+      "name": "Lloyds Banking Group",
+      "official_domain": "lloydsbankinggroup.com",
+      "seed_urls": [
+        "https://www.lloydsbankinggroup.com/careers/job-search.html",
+        "https://www.lloydsbankinggroup.com/careers.html"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Crédit Agricole CIB",
+      "official_domain": "ca-cib.com",
+      "seed_urls": [
+        "https://jobs.ca-cib.com/",
+        "https://www.ca-cib.com/en/career"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Nordea",
+      "official_domain": "nordea.com",
+      "seed_urls": [
+        "https://careers.nordea.com/",
+        "https://www.nordea.com/en/careers"
+      ],
+      "allowed_domains": []
+    }
+  ]
+}
