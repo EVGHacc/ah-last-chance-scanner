@@ -28,5 +28,5 @@ class InventoryProof:
                 raise ValueError("verified_complete requires exhausted inventory")
             if self.authoritative_total is not None and self.unique_jobs != self.authoritative_total:
                 raise ValueError("verified_complete count mismatch")
-            if self.authoritative_total is None and self.evidence_kind != "pagination_exhausted":
-                raise ValueError("verified_complete requires total or pagination proof")
+            if self.authoritative_total is None and self.evidence_kind not in {"pagination_exhausted","official_complete_payload"}:
+                raise ValueError("verified_complete requires total or exhaustive official payload proof")
