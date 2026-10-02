@@ -7,7 +7,7 @@ sys.path.insert(0,str(ROOT))
 from app.greenhouse_batch import run_batch
 
 
-DOMAINS={"stripe":"stripe.com","ripple":"ripple.com","remotecom":"remote.com"}
+DOMAINS={"stripe":"stripe.com","ripple":"ripple.com"}
 
 
 def payload(board,count=2):
@@ -29,11 +29,12 @@ def payload(board,count=2):
 
 
 class GreenhouseBatchDeveloperTests(unittest.TestCase):
-    def test_all_configured_targets_persist_complete_job_inventory(self):
+    def test_all_current_greenhouse_targets_persist_complete_job_inventory(self):
         result=run_batch(lambda url:payload(url.split("/boards/")[1].split("/")[0],2))
-        self.assertEqual(result["configured_sources"],3)
-        self.assertEqual(result["verified_complete"],3)
+        self.assertEqual(result["configured_sources"],2)
+        self.assertEqual(result["verified_complete"],2)
         self.assertEqual(result["failed"],0)
+        self.assertEqual({x["name"] for x in result["sources"]},{"Stripe","Ripple"})
         for row in result["sources"]:
             self.assertEqual(len(row["jobs"]),2)
             self.assertEqual(row["unique_jobs"],row["authoritative_total"])

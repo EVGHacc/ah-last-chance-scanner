@@ -8,7 +8,7 @@ from app.greenhouse_batch import run_batch
 from app.transport import TransportError
 
 
-DOMAINS={"stripe":"stripe.com","ripple":"ripple.com","remotecom":"remote.com"}
+DOMAINS={"stripe":"stripe.com","ripple":"ripple.com"}
 
 
 def good(board):
@@ -32,7 +32,7 @@ class GreenhouseIndependentQA(unittest.TestCase):
             if board=="stripe": raise TransportError("network failure")
             return good(board)
         result=run_batch(fetch)
-        self.assertEqual(result["verified_complete"],2)
+        self.assertEqual(result["verified_complete"],1)
         failed=next(x for x in result["sources"] if x["name"]=="Stripe")
         self.assertEqual(failed["coverage"],"unproven")
         self.assertEqual(failed["jobs"],[])
@@ -50,9 +50,9 @@ class GreenhouseIndependentQA(unittest.TestCase):
     def test_schema_change_is_unproven(self):
         def fetch(url):
             board=url.split("/boards/")[1].split("/")[0]
-            return {"postings":[],"total":0} if board=="remotecom" else good(board)
+            return {"postings":[],"total":0} if board=="ripple" else good(board)
         result=run_batch(fetch)
-        row=next(x for x in result["sources"] if x["name"]=="Remote.com")
+        row=next(x for x in result["sources"] if x["name"]=="Ripple")
         self.assertEqual(row["coverage"],"unproven")
         self.assertIn("GreenhouseError",row["error"])
 
@@ -84,10 +84,10 @@ class GreenhouseIndependentQA(unittest.TestCase):
         def fetch(url):
             board=url.split("/boards/")[1].split("/")[0]
             p=good(board)
-            if board=="remotecom": p["jobs"][0]["content"]=""
+            if board=="ripple": p["jobs"][0]["content"]=""
             return p
         result=run_batch(fetch)
-        row=next(x for x in result["sources"] if x["name"]=="Remote.com")
+        row=next(x for x in result["sources"] if x["name"]=="Ripple")
         self.assertEqual(row["coverage"],"unproven")
         self.assertEqual(row["jobs"],[])
 
