@@ -16,15 +16,16 @@ def good(board):
         "jobUrl":f"https://jobs.ashbyhq.com/{board}/{ID}",
         "applyUrl":f"https://jobs.ashbyhq.com/{board}/{ID}/application",
         "isListed":True,
+        "location":"Amsterdam",
+        "descriptionPlain":"Lead regulatory controls and assurance. Advise senior stakeholders.",
     }]}
 
 def matching_html(url):
     if "jobs.mollie.com/vacancies/" in url:
         job_id=url.rstrip("/").split("/")[-1]
-        return (
-            f'<a href="https://jobs.ashbyhq.com/mollie/{job_id}">job</a>'
-            f'<a href="https://jobs.ashbyhq.com/mollie/{job_id}/application">Apply now</a>'
-        )
+        return f'''<script type="application/ld+json">{{"@type":"JobPosting","title":"Role","description":"Lead controls.","jobLocation":{{"address":{{"addressLocality":"Amsterdam"}}}}}}</script>
+        <a href="https://jobs.ashbyhq.com/mollie/{job_id}">job</a>
+        <a href="https://jobs.ashbyhq.com/mollie/{job_id}/application">Apply now</a>'''
     if "mollie" in url: return f"/vacancies/{ID}"
     return "<html></html>"
 
@@ -40,6 +41,7 @@ class AshbyBatchIndependentQA(unittest.TestCase):
         self.assertEqual(result["failed"],1)
         failed=[x for x in result["sources"] if x["coverage"]=="unproven"]
         self.assertEqual([x["name"] for x in failed],["OpenAI"])
+        self.assertEqual(failed[0]["jobs"],[])
 
     def test_schema_change_is_unproven_not_empty_success(self):
         def fetch(url):
@@ -49,6 +51,7 @@ class AshbyBatchIndependentQA(unittest.TestCase):
         row=next(x for x in result["sources"] if x["name"]=="Mollie")
         self.assertEqual(row["coverage"],"unproven")
         self.assertFalse(row["exhausted"])
+        self.assertEqual(row["jobs"],[])
         self.assertIn("AshbyError",row["error"])
 
     def test_duplicate_and_cross_board_fail_closed(self):
@@ -78,7 +81,19 @@ class AshbyBatchIndependentQA(unittest.TestCase):
         result=run_batch(lambda url: good(url.rsplit("/",1)[-1]),html)
         row=next(x for x in result["sources"] if x["name"]=="Mollie")
         self.assertEqual(row["coverage"],"unproven")
+        self.assertEqual(row["jobs"],[])
         self.assertIn("not live/apply-linked",row["error"])
+
+    def test_every_green_source_has_persisted_title_and_summary_per_job(self):
+        result=run_batch(lambda url: good(url.rsplit("/",1)[-1]),matching_html)
+        for row in result["sources"]:
+            self.assertEqual(row["coverage"],"verified_complete")
+            self.assertEqual(len(row["jobs"]),row["unique_jobs"])
+            for job in row["jobs"]:
+                self.assertTrue(job["title"].strip())
+                self.assertTrue(job["summary"].strip())
+                self.assertTrue(job["job_url"].startswith("https://"))
+                self.assertTrue(job["apply_url"].startswith("https://"))
 
 
 if __name__=="__main__": unittest.main()

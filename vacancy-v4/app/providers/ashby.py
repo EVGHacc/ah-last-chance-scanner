@@ -1,4 +1,6 @@
 from dataclasses import dataclass
+from html import unescape
+import re
 from urllib.parse import urlparse
 
 
@@ -6,11 +8,20 @@ class AshbyError(RuntimeError):
     pass
 
 
+SUMMARY_LIMIT = 360
+
+
 @dataclass(frozen=True)
 class AshbyJob:
+    job_id: str
     title: str
+    location: str
+    summary: str
     job_url: str
     apply_url: str
+    department: str = ""
+    team: str = ""
+    published_at: str | None = None
 
 
 @dataclass(frozen=True)
@@ -28,6 +39,33 @@ def _posting_identity(url: str, board_name: str) -> str:
     if len(parts) < 2 or parts[0].casefold() != board_name.casefold():
         raise AshbyError("posting belongs to another board")
     return parts[1].lower()
+
+
+def _plain(value) -> str:
+    if not isinstance(value, str):
+        return ""
+    text=re.sub(r"<[^>]+>"," ",value)
+    return re.sub(r"\s+"," ",unescape(text)).strip()
+
+
+def short_summary(raw: dict) -> str:
+    text=_plain(raw.get("descriptionPlain")) or _plain(raw.get("descriptionHtml"))
+    if not text:
+        context=[_plain(raw.get("department")),_plain(raw.get("team")),_plain(raw.get("location"))]
+        context=[x for x in context if x]
+        text=("Role in "+", ".join(context)+".") if context else "Published role; Ashby supplied no description text."
+    sentences=re.split(r"(?<=[.!?])\s+",text)
+    summary=""
+    for sentence in sentences[:2]:
+        candidate=(summary+" "+sentence).strip()
+        if len(candidate)>SUMMARY_LIMIT:
+            break
+        summary=candidate
+    if not summary:
+        summary=text[:SUMMARY_LIMIT+1]
+        if len(summary)>SUMMARY_LIMIT:
+            summary=summary[:SUMMARY_LIMIT].rsplit(" ",1)[0].rstrip()+ "…"
+    return summary
 
 
 def parse_payload(board_name, payload):
@@ -53,7 +91,17 @@ def parse_payload(board_name, payload):
             raise AshbyError("application route belongs to another posting")
         if ident in jobs:
             raise AshbyError("duplicate posting identity")
-        jobs[ident] = AshbyJob(title.strip(), job_url, apply_url)
+        jobs[ident] = AshbyJob(
+            job_id=ident,
+            title=title.strip(),
+            location=_plain(raw.get("location")),
+            summary=short_summary(raw),
+            job_url=job_url,
+            apply_url=apply_url,
+            department=_plain(raw.get("department")),
+            team=_plain(raw.get("team")),
+            published_at=raw.get("publishedAt") if isinstance(raw.get("publishedAt"),str) else None,
+        )
     return AshbyInventory(tuple(jobs.values()), len(raw_jobs), unlisted)
 
 

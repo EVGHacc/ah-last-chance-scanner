@@ -55,13 +55,21 @@ jobs:
             git push origin HEAD:vacancy-v4-clean-sheet
           fi
 
-      - name: Require all configured Ashby sources proven
+      - name: Require all configured Ashby sources proven with job details
         run: |
           python - <<'PY'
           import json
           p=json.load(open("vacancy-v4/data/ashby-proof.json"))
+          assert p["schema_version"] >= 2
           assert p["configured_sources"] > 0
           assert p["failed"] == 0, [(x["name"],x["error"]) for x in p["sources"] if x["coverage"]!="verified_complete"]
           assert p["verified_complete"] == p["configured_sources"]
-          print(f'Ashby verified_complete: {p["verified_complete"]}/{p["configured_sources"]}')
+          for source in p["sources"]:
+              jobs=source.get("jobs")
+              assert isinstance(jobs,list), f'{source["name"]}: jobs missing'
+              assert len(jobs)==source["unique_jobs"], f'{source["name"]}: persisted jobs/count mismatch'
+              assert len({j["job_id"] for j in jobs})==len(jobs), f'{source["name"]}: duplicate persisted job id'
+              assert all(j.get("title","").strip() and j.get("summary","").strip() for j in jobs), f'{source["name"]}: title/summary missing'
+              assert all(j.get("job_url","").startswith("https://") and j.get("apply_url","").startswith("https://") for j in jobs), f'{source["name"]}: URL missing'
+          print(f'Ashby verified_complete with job details: {p["verified_complete"]}/{p["configured_sources"]}; jobs={sum(len(x["jobs"]) for x in p["sources"])}')
           PY
