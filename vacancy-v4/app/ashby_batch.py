@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
-from .model import Coverage
+from .model import Coverage, InventoryProof
 from .registry import load_sources
 from .runner import ashby_endpoint, ashby_run_with_metadata
 from .transport import fetch_text
@@ -23,23 +23,34 @@ def load_config(path=DEFAULT_CONFIG):
     if not isinstance(rows,list) or not rows:
         raise ValueError("Ashby config has no sources")
     seen=set()
-    allowed={"name","board","first_party_evidence_url","first_party_job_id_pattern"}
+    allowed={
+        "name","board","first_party_evidence_url",
+        "first_party_job_id_pattern","first_party_detail_url_template",
+    }
+    required={"name","board","first_party_evidence_url"}
     for row in rows:
-        if not set(row).issubset(allowed) or not {"name","board","first_party_evidence_url"}.issubset(row):
+        if not set(row).issubset(allowed) or not required.issubset(row):
             raise ValueError("unexpected Ashby config fields")
         if not all(isinstance(row[k],str) and row[k].strip() for k in row):
             raise ValueError("invalid Ashby config value")
         if row["name"] in seen:
             raise ValueError("duplicate Ashby source")
-        if "first_party_job_id_pattern" in row:
+        has_pattern="first_party_job_id_pattern" in row
+        has_template="first_party_detail_url_template" in row
+        if has_pattern != has_template:
+            raise ValueError("first-party reconciliation requires pattern and detail template")
+        if has_pattern:
             re.compile(row["first_party_job_id_pattern"])
+            if "{id}" not in row["first_party_detail_url_template"]:
+                raise ValueError("first-party detail template missing {id}")
         seen.add(row["name"])
     return rows
 
 
-def _jobs_hash(jobs):
-    canonical="\n".join(sorted(f"{j.title}\t{j.job_url}\t{j.apply_url}" for j in jobs))
-    return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+def _jobs_hash(jobs, reconciled_ids=()):
+    canonical=[f"{j.title}\t{j.job_url}\t{j.apply_url}" for j in jobs]
+    canonical.extend(f"FIRST_PARTY_RECONCILED\t{x}" for x in reconciled_ids)
+    return hashlib.sha256("\n".join(sorted(canonical)).encode("utf-8")).hexdigest()
 
 
 def _job_ids(jobs):
@@ -57,6 +68,21 @@ def _first_party_ids(row, html_fetcher):
     return ids
 
 
+def _reconcile_first_party_only(row, ids, html_fetcher):
+    reconciled=[]
+    template=row.get("first_party_detail_url_template")
+    for ident in sorted(ids):
+        detail_url=template.format(id=ident)
+        html=html_fetcher(detail_url)
+        lower=html.lower()
+        ashby_job=f"jobs.ashbyhq.com/{row['board'].lower()}/{ident}"
+        ashby_apply=ashby_job+"/application"
+        if ident not in lower or ashby_job not in lower or ashby_apply not in lower:
+            raise ValueError(f"first-party-only job not live/apply-linked: {ident}")
+        reconciled.append(ident)
+    return tuple(reconciled)
+
+
 def run_batch(fetcher=None, html_fetcher=None, config_path=DEFAULT_CONFIG):
     source_by_name={s.name:s for s in load_sources()}
     configured=load_config(config_path)
@@ -69,30 +95,54 @@ def run_batch(fetcher=None, html_fetcher=None, config_path=DEFAULT_CONFIG):
         source=source_by_name[row["name"]]
         checked_at=datetime.now(timezone.utc).isoformat()
         try:
-            proof,meta=ashby_run_with_metadata(source,row["board"],fetcher)
-            first_party_ids=_first_party_ids(row,page_fetcher)
+            provider_proof,meta=ashby_run_with_metadata(source,row["board"],fetcher)
             ashby_ids=_job_ids(meta.jobs)
-            if first_party_ids is not None and first_party_ids != ashby_ids:
-                missing=sorted(first_party_ids-ashby_ids)
-                extra=sorted(ashby_ids-first_party_ids)
-                raise ValueError(
-                    f"first-party/Ashby inventory mismatch "
-                    f"first_party={len(first_party_ids)} ashby={len(ashby_ids)} "
-                    f"missing={missing[:3]} extra={extra[:3]}"
-                )
+            first_party_ids=_first_party_ids(row,page_fetcher)
+            first_party_only=set()
+            provider_only=set()
+            reconciled=()
+            proof=provider_proof
+            inventory_count=len(ashby_ids)
+            evidence_kind=provider_proof.evidence_kind
+
+            if first_party_ids is not None:
+                first_party_only=first_party_ids-ashby_ids
+                provider_only=ashby_ids-first_party_ids
+                if provider_only:
+                    raise ValueError(
+                        f"Ashby jobs missing from first-party inventory "
+                        f"count={len(provider_only)} sample={sorted(provider_only)[:3]}"
+                    )
+                if first_party_only:
+                    reconciled=_reconcile_first_party_only(row,first_party_only,page_fetcher)
+                    inventory_count=len(first_party_ids)
+                    proof=InventoryProof(
+                        source=source,
+                        coverage=Coverage.VERIFIED_COMPLETE,
+                        unique_jobs=inventory_count,
+                        authoritative_total=None,
+                        exhausted=True,
+                        evidence_kind="official_complete_payload_plus_first_party_reconciled",
+                    )
+                    proof.validate()
+                    evidence_kind=proof.evidence_kind
+
             results.append({
                 "name":source.name,
                 "board":row["board"],
                 "coverage":proof.coverage.value,
                 "raw_jobs":meta.raw_count,
                 "unlisted_jobs":meta.unlisted_count,
-                "unique_jobs":proof.unique_jobs,
+                "provider_unique_jobs":len(ashby_ids),
                 "first_party_unique_jobs":None if first_party_ids is None else len(first_party_ids),
+                "first_party_only_jobs":len(first_party_only),
+                "reconciled_first_party_only_ids":list(reconciled),
+                "unique_jobs":inventory_count,
                 "exhausted":proof.exhausted,
-                "evidence_kind":proof.evidence_kind,
+                "evidence_kind":evidence_kind,
                 "endpoint":ashby_endpoint(row["board"]),
                 "first_party_evidence_url":row["first_party_evidence_url"],
-                "jobs_sha256":_jobs_hash(meta.jobs),
+                "jobs_sha256":_jobs_hash(meta.jobs,reconciled),
                 "checked_at":checked_at,
                 "error":None,
             })
@@ -103,8 +153,11 @@ def run_batch(fetcher=None, html_fetcher=None, config_path=DEFAULT_CONFIG):
                 "coverage":Coverage.UNPROVEN.value,
                 "raw_jobs":None,
                 "unlisted_jobs":None,
-                "unique_jobs":0,
+                "provider_unique_jobs":None,
                 "first_party_unique_jobs":None,
+                "first_party_only_jobs":None,
+                "reconciled_first_party_only_ids":[],
+                "unique_jobs":0,
                 "exhausted":False,
                 "evidence_kind":None,
                 "endpoint":ashby_endpoint(row["board"]),

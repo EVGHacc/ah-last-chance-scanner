@@ -8,19 +8,24 @@ from app.ashby_batch import run_batch
 from app.transport import TransportError
 
 
+ID="00000000-0000-4000-8000-000000000001"
+
 def good(board):
-    ident="00000000-0000-4000-8000-000000000001"
     return {"apiVersion":"1","jobs":[{
         "title":"Role",
-        "jobUrl":f"https://jobs.ashbyhq.com/{board}/{ident}",
-        "applyUrl":f"https://jobs.ashbyhq.com/{board}/{ident}/application",
+        "jobUrl":f"https://jobs.ashbyhq.com/{board}/{ID}",
+        "applyUrl":f"https://jobs.ashbyhq.com/{board}/{ID}/application",
         "isListed":True,
     }]}
 
 def matching_html(url):
-    ident="00000000-0000-4000-8000-000000000001"
-    if "openai" in url: return f"https://jobs.ashbyhq.com/openai/{ident}"
-    if "mollie" in url: return f"/vacancies/{ident}"
+    if "jobs.mollie.com/vacancies/" in url:
+        job_id=url.rstrip("/").split("/")[-1]
+        return (
+            f'<a href="https://jobs.ashbyhq.com/mollie/{job_id}">job</a>'
+            f'<a href="https://jobs.ashbyhq.com/mollie/{job_id}/application">Apply now</a>'
+        )
+    if "mollie" in url: return f"/vacancies/{ID}"
     return "<html></html>"
 
 
@@ -62,15 +67,18 @@ class AshbyBatchIndependentQA(unittest.TestCase):
         self.assertEqual(states["OpenAI"],"verified_complete")
         self.assertEqual(states["Mollie"],"verified_complete")
 
-    def test_first_party_count_or_identity_mismatch_fails_closed(self):
-        def bad_html(url):
-            ident="00000000-0000-4000-8000-999999999999"
-            if "mollie" in url: return f"/vacancies/{ident}"
+    def test_unreconciled_first_party_only_job_fails_closed(self):
+        extra="00000000-0000-4000-8000-999999999999"
+        def html(url):
+            if url=="https://jobs.mollie.com/vacancies":
+                return f"/vacancies/{ID}\n/vacancies/{extra}"
+            if url.endswith(extra):
+                return "<html>no matching apply route</html>"
             return matching_html(url)
-        result=run_batch(lambda url: good(url.rsplit("/",1)[-1]),bad_html)
+        result=run_batch(lambda url: good(url.rsplit("/",1)[-1]),html)
         row=next(x for x in result["sources"] if x["name"]=="Mollie")
         self.assertEqual(row["coverage"],"unproven")
-        self.assertIn("inventory mismatch",row["error"])
+        self.assertIn("not live/apply-linked",row["error"])
 
 
 if __name__=="__main__": unittest.main()
