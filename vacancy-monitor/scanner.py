@@ -7,6 +7,7 @@ from zoneinfo import ZoneInfo
 import requests
 from bs4 import BeautifulSoup
 from embedded_inventory import embedded_inventory
+from probe_rabobank import probe as probe_rabobank
 
 ROOT=Path(__file__).resolve().parent
 DATA=ROOT/"data"; DATA.mkdir(exist_ok=True)
@@ -808,7 +809,21 @@ def airwallex_validation_queue(jobs,capacity=25,priority_count=20):
 
 def scan(o):
     t=time.monotonic(); tried=[]; success=[]; q=candidates(o); seen=set()
-    configured_api=api_inventory(o); api_attempts=[configured_api] if configured_api else []
+    configured_api=api_inventory(o)
+    if o["name"]=="Rabobank":
+        try:
+            rb=probe_rabobank()
+            configured_api={"complete":rb["complete"],"official_total":rb["official_total"],
+                            "jobs":rb["jobs"],"source":rb["source"],"pages":1,"terminal":rb["complete"],
+                            "evidence_kind":"official_first_party_total",
+                            "error":None if rb["complete"] else
+                                    f"Rabobank first-party count mismatch: {rb['unique_count']} != {rb['official_total']}"}
+        except Exception as exc:
+            configured_api={"complete":False,"official_total":None,"jobs":[],
+                            "source":"https://rabobank.jobs/nl/vacatures/","pages":0,"terminal":False,
+                            "evidence_kind":"first_party_failure",
+                            "error":f"{type(exc).__name__}: {exc}"}
+    api_attempts=[configured_api] if configured_api else []
     api=configured_api; static=static_inventory(o)
     # Published ATS enumeration replaces unfocused first-party crawling for
     # Airwallex. The first-party seed and candidate detail pages are still read.
