@@ -15,6 +15,11 @@ class FoundationTests(unittest.TestCase):
         self.assertEqual(106,len(sources))
         self.assertEqual(106,len({(x.kind,x.name) for x in sources}))
 
+    def test_optional_allowed_domains_are_normalized(self):
+        sources=load_registry(ROOT/"vacancy-monitor"/"registry.tsv")
+        alexander=next(x for x in sources if x.name=="Alexander Hughes")
+        self.assertEqual((),alexander.allowed_domains)
+
     def test_authoritative_total_must_reconcile(self):
         self.assertTrue(InventoryProof("x","api",4,4,4,True,0).verified_complete)
         self.assertFalse(InventoryProof("x","api",6,6,4,True,0).verified_complete)
