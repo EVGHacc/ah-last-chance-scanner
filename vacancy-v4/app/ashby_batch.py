@@ -212,27 +212,11 @@ def run_batch(fetcher=None, html_fetcher=None, config_path=DEFAULT_CONFIG):
             job_records=[_job_record(j) for j in meta.jobs]
 
             if first_party_ids is not None:
+                # Authority contract: Ashby's complete provider payload is authoritative.
+                # First-party HTML is sampled asynchronously and is diagnostic only;
+                # never merge it into, or subtract it from, the authoritative snapshot.
                 first_party_only=first_party_ids-ashby_ids
                 provider_only=ashby_ids-first_party_ids
-                if provider_only:
-                    raise ValueError(
-                        f"Ashby jobs missing from first-party inventory "
-                        f"count={len(provider_only)} sample={sorted(provider_only)[:3]}"
-                    )
-                if first_party_only:
-                    reconciled_records=_reconcile_first_party_only(row,first_party_only,page_fetcher)
-                    job_records.extend(reconciled_records)
-                    inventory_count=len(first_party_ids)
-                    proof=InventoryProof(
-                        source=source,
-                        coverage=Coverage.VERIFIED_COMPLETE,
-                        unique_jobs=inventory_count,
-                        authoritative_total=None,
-                        exhausted=True,
-                        evidence_kind="official_complete_payload_plus_first_party_reconciled",
-                    )
-                    proof.validate()
-                    evidence_kind=proof.evidence_kind
 
             if len(job_records)!=inventory_count:
                 raise ValueError(f"persisted job record count mismatch: {len(job_records)} != {inventory_count}")
@@ -251,7 +235,9 @@ def run_batch(fetcher=None, html_fetcher=None, config_path=DEFAULT_CONFIG):
                 "provider_unique_jobs":len(ashby_ids),
                 "first_party_unique_jobs":None if first_party_ids is None else len(first_party_ids),
                 "first_party_only_jobs":len(first_party_only),
-                "reconciled_first_party_only_ids":[j["job_id"] for j in reconciled_records],
+                "reconciled_first_party_only_ids":[],
+                "first_party_drift_detected":bool(first_party_only or provider_only),
+                "provider_only_jobs":len(provider_only),
                 "unique_jobs":inventory_count,
                 "exhausted":proof.exhausted,
                 "evidence_kind":evidence_kind,
@@ -301,7 +287,10 @@ def main():
     args=parser.parse_args()
     payload=run_batch()
     args.output.parent.mkdir(parents=True,exist_ok=True)
-    args.output.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    target=args.output if payload["failed"]==0 else args.output.with_suffix(args.output.suffix+".attempt")
+    target.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    if payload["failed"]:
+        raise SystemExit("attempt rejected; authoritative proof preserved")
     print(json.dumps({
         "provider":payload["provider"],
         "configured_sources":payload["configured_sources"],

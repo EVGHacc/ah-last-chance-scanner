@@ -48,7 +48,9 @@ def run_batch(fetcher=None,config_path=DEFAULT_CONFIG):
 
 def main():
     p=argparse.ArgumentParser(); p.add_argument("--output",type=Path,default=DEFAULT_OUTPUT); a=p.parse_args()
-    result=run_batch(); a.output.parent.mkdir(parents=True,exist_ok=True); a.output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    result=run_batch(); a.output.parent.mkdir(parents=True,exist_ok=True)
+    target=a.output if result["failed"]==0 else a.output.with_suffix(a.output.suffix+".attempt")
+    target.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({"provider":"smartrecruiters","configured_sources":result["configured_sources"],"verified_complete":result["verified_complete"],"failed":result["failed"],"persisted_jobs":sum(len(x["jobs"]) for x in result["sources"])}))
     if result["failed"]: raise SystemExit(1)
 if __name__=="__main__": main()

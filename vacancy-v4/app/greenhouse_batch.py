@@ -143,7 +143,10 @@ def main():
     args=parser.parse_args()
     payload=run_batch()
     args.output.parent.mkdir(parents=True,exist_ok=True)
-    args.output.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    target=args.output if payload["failed"]==0 else args.output.with_suffix(args.output.suffix+".attempt")
+    target.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    if payload["failed"]:
+        raise SystemExit("attempt rejected; authoritative proof preserved")
     print(json.dumps({
         "provider":payload["provider"],
         "configured_sources":payload["configured_sources"],
