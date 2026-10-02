@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "provider": "ashby",
-  "generated_at": "2026-10-02T10:27:44.434650+00:00",
+  "generated_at": "2026-10-02T11:00:57.860333+00:00",
   "configured_sources": 4,
   "verified_complete": 4,
   "failed": 0,
@@ -10020,7 +10020,7 @@
           "record_source": "ashby_public_api"
         }
       ],
-      "checked_at": "2026-10-02T10:27:42.567811+00:00",
+      "checked_at": "2026-10-02T11:00:56.123693+00:00",
       "error": null
     },
     {
@@ -10560,7 +10560,7 @@
           "record_source": "ashby_public_api"
         }
       ],
-      "checked_at": "2026-10-02T10:27:43.083028+00:00",
+      "checked_at": "2026-10-02T11:00:56.787998+00:00",
       "error": null
     },
     {
@@ -10578,7 +10578,7 @@
       "evidence_kind": "official_complete_payload",
       "endpoint": "https://api.ashbyhq.com/posting-api/job-board/airwallex",
       "first_party_evidence_url": "https://careers.airwallex.com/jobs/",
-      "jobs_sha256": "48ad78dc9b66f0791c2c3eb736f40af086831357a8d06e0da407d248e5a5f090",
+      "jobs_sha256": "c51ad5c617e1395e5e06c5153da520034f9ce877a819a43b26b5a0a9788ac62f",
       "jobs": [
         {
           "job_id": "0248185e-80e7-49e5-bef2-269323b4c0c4",
@@ -10590,18 +10590,6 @@
           "department": "Engineering",
           "team": "Org & Identity",
           "published_at": "2026-03-03T07:38:05.686+00:00",
-          "record_source": "ashby_public_api"
-        },
-        {
-          "job_id": "5f2ac4e6-5e56-4159-a025-09aad728d828",
-          "title": "(Senior) Legal Counsel, Product Legal, Yield",
-          "location": "SG - Singapore",
-          "summary": "ABOUT AIRWALLEX Airwallex is the AI-native financial operating system for a real-time, intelligent economy. More than 676,000 businesses, including McLaren Racing, Qantas, SHEIN, and TikTok, use us, directly or through our platform partners, to run their financial operations or build and monetize financial products of their own.",
-          "job_url": "https://jobs.ashbyhq.com/airwallex/5f2ac4e6-5e56-4159-a025-09aad728d828",
-          "apply_url": "https://jobs.ashbyhq.com/airwallex/5f2ac4e6-5e56-4159-a025-09aad728d828/application",
-          "department": "Legal",
-          "team": "Product Legal",
-          "published_at": "2026-09-24T02:46:20.830+00:00",
           "record_source": "ashby_public_api"
         },
         {
@@ -14613,6 +14601,18 @@
           "record_source": "ashby_public_api"
         },
         {
+          "job_id": "aeef3845-8a16-476d-89b8-92c30a33ffe6",
+          "title": "Senior Director, AML & Sanctions, Governance & Policy",
+          "location": "US - New York",
+          "summary": "ABOUT AIRWALLEX Airwallex is the AI-native financial operating system for a real-time, intelligent economy. More than 676,000 businesses, including McLaren Racing, Qantas, SHEIN, and TikTok, use us, directly or through our platform partners, to run their financial operations or build and monetize financial products of their own.",
+          "job_url": "https://jobs.ashbyhq.com/airwallex/aeef3845-8a16-476d-89b8-92c30a33ffe6",
+          "apply_url": "https://jobs.ashbyhq.com/airwallex/aeef3845-8a16-476d-89b8-92c30a33ffe6/application",
+          "department": "Regulatory & Compliance",
+          "team": "Financial Crime Compliance",
+          "published_at": "2026-10-02T10:55:37.448+00:00",
+          "record_source": "ashby_public_api"
+        },
+        {
           "job_id": "0694215e-c0b3-48fe-a326-52504ff21b6b",
           "title": "Senior Employment Counsel - EMEA",
           "location": "NL - Amsterdam",
@@ -17145,25 +17145,25 @@
           "record_source": "ashby_public_api"
         }
       ],
-      "checked_at": "2026-10-02T10:27:43.959349+00:00",
+      "checked_at": "2026-10-02T11:00:57.347611+00:00",
       "error": null
     },
     {
       "name": "Checkout.com",
       "board": "checkout.com",
       "coverage": "verified_complete",
-      "raw_jobs": 177,
+      "raw_jobs": 178,
       "unlisted_jobs": 0,
-      "provider_unique_jobs": 177,
+      "provider_unique_jobs": 178,
       "first_party_unique_jobs": null,
       "first_party_only_jobs": 0,
       "reconciled_first_party_only_ids": [],
-      "unique_jobs": 177,
+      "unique_jobs": 178,
       "exhausted": true,
       "evidence_kind": "official_complete_payload",
       "endpoint": "https://api.ashbyhq.com/posting-api/job-board/checkout.com",
       "first_party_evidence_url": "https://www.checkout.com/jobs",
-      "jobs_sha256": "1f9844e2e9ebf41c10d2e78fab61a049485053765f12880084bfe46376295c90",
+      "jobs_sha256": "94b3ed48e923372958d55a40770f500699eb4c7120d82d656824cfcf107e4735",
       "jobs": [
         {
           "job_id": "0d2870a0-2e7d-4674-8f55-39f63ff9f845",
@@ -17595,6 +17595,18 @@
           "department": "All Departments",
           "team": "Account Management",
           "published_at": "2026-09-28T16:02:36.999+00:00",
+          "record_source": "ashby_public_api"
+        },
+        {
+          "job_id": "d270d6e5-d68f-4514-a9c4-d6ab7e37d425",
+          "title": "Enterprise Account Manager - UAE",
+          "location": "Dubai",
+          "summary": "Company Description We’re http://checkout.comCheckout.com http://Checkout.com. You might not know our name, but companies like eBay, Spotify, Klarna, Uber, and Sony do, because we’re behind many of the digital experiences you use every day.",
+          "job_url": "https://jobs.ashbyhq.com/checkout.com/d270d6e5-d68f-4514-a9c4-d6ab7e37d425",
+          "apply_url": "https://jobs.ashbyhq.com/checkout.com/d270d6e5-d68f-4514-a9c4-d6ab7e37d425/application",
+          "department": "All Departments",
+          "team": "Account Management",
+          "published_at": "2026-10-02T10:49:41.309+00:00",
           "record_source": "ashby_public_api"
         },
         {
@@ -19290,7 +19302,7 @@
           "record_source": "ashby_public_api"
         }
       ],
-      "checked_at": "2026-10-02T10:27:44.272522+00:00",
+      "checked_at": "2026-10-02T11:00:57.702644+00:00",
       "error": null
     }
   ]
