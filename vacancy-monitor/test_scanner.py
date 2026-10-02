@@ -809,5 +809,17 @@ class WorkflowScheduleTests(unittest.TestCase):
         self.assertIn('queue: max', workflow)
         self.assertNotIn('cron: "30 5 * * 1-5"', workflow)
 
+class InventoryAuditRegressionTests(unittest.TestCase):
+    def test_complete_provider_inventory_overrides_incidental_extra_links(self):
+        evidence=[{"official_total":4,"job_link_count":4,"static_complete_evidence":True},
+                  {"official_total":None,"job_link_count":6,"static_complete_evidence":False}]
+        self.assertEqual(inventory_audit_counts(evidence),(4,4,None))
+
+    def test_conflicting_complete_inventory_evidence_fails_closed(self):
+        evidence=[{"official_total":4,"job_link_count":4,"static_complete_evidence":True},
+                  {"official_total":5,"job_link_count":5,"static_complete_evidence":True}]
+        self.assertEqual(inventory_audit_counts(evidence),(None,None,"conflicting_complete_inventory_evidence"))
+
+
 if __name__ == "__main__":
     unittest.main()

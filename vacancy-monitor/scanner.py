@@ -1131,6 +1131,20 @@ def qa_snapshot(payload):
         raise RuntimeError(f"live-vacancy QA failed for {len(bad)} record(s): {bad[:5]}")
     return {"passed":True,"rule":"direct_detail_live_plus_current_board_presence","live_jobs_checked":len(payload.get("live_relevant_jobs",[]))}
 
+def inventory_audit_counts(evidence):
+    """Pair authoritative totals with the same exhaustive inventory observation."""
+    complete=[e for e in evidence if e.get("static_complete_evidence")
+              and type(e.get("official_total")) is int and type(e.get("job_link_count")) is int]
+    if complete:
+        pairs={(e["official_total"],e["job_link_count"]) for e in complete}
+        if len(pairs)!=1:return None,None,"conflicting_complete_inventory_evidence"
+        total,observed=next(iter(pairs))
+        return total,observed,None if total==observed else "complete_inventory_count_mismatch"
+    totals=[e.get("official_total") for e in evidence if type(e.get("official_total")) is int]
+    found=[e.get("browser_inventory_count",0) for e in evidence]+[e.get("job_link_count",0) for e in evidence]
+    return max(totals) if totals else None,max(found,default=0),None
+
+
 def main():
     reg=load_registry(); old=set(); latest=DATA/"latest.json"
     if latest.exists():
@@ -1144,17 +1158,14 @@ def main():
     browser_retry(rs)
     for r in rs:
         evidence=r.get("listing_evidence",[])
-        totals=[e.get("official_total") for e in evidence
-                if type(e.get("official_total")) is int]
-        found=[e.get("browser_inventory_count",0) for e in evidence]
-        found += [e.get("job_link_count",0) for e in evidence]
+        audit_total,audit_observed,audit_count_failure=inventory_audit_counts(evidence)
         r["inventory_audit"]={
-            "official_total":max(totals) if totals else None,
-            "observed_job_links":max(found,default=0),
+            "official_total":audit_total,
+            "observed_job_links":audit_observed,
             "relevant_candidates":len(r.get("jobs",[])),
             "live_apply_verified":sum(bool(j.get("apply_live")) for j in r.get("jobs",[])),
             "coverage":r["vacancy_coverage"],
-            "failure":r.get("browser_recovery_incomplete") or r.get("error") or
+            "failure":audit_count_failure or r.get("browser_recovery_incomplete") or r.get("error") or
                        ("inventory_not_proven_exhaustive" if r["vacancy_coverage"] in ("partial","unproven") else None),
             "checked_at":r["checked_at"]
         }
