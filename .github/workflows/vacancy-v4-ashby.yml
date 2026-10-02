@@ -1,0 +1,67 @@
+name: Vacancy v4 Ashby production proof
+
+on:
+  push:
+    branches:
+      - vacancy-v4-clean-sheet
+    paths:
+      - "vacancy-v4/app/**"
+      - "vacancy-v4/config/**"
+      - "vacancy-v4/tests/**"
+      - ".github/workflows/vacancy-v4-ashby.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vacancy-v4-ashby-production
+  cancel-in-progress: false
+
+jobs:
+  ashby-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: vacancy-v4-clean-sheet
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Developer unit tests
+        run: python -m unittest discover -s vacancy-v4/tests/unit -p 'test_*.py'
+
+      - name: Independent QA and resilience
+        run: python -m unittest discover -s vacancy-v4/tests/qa -p 'test_*.py'
+
+      - name: Live Ashby production proof
+        env:
+          PYTHONPATH: vacancy-v4
+        run: python -m app.ashby_batch --output vacancy-v4/data/ashby-proof.json
+
+      - name: Persist v4 Ashby evidence
+        run: |
+          set -euo pipefail
+          git config user.name "vacancy-v4-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -- vacancy-v4/data/ashby-proof.json
+          if git diff --cached --quiet; then
+            echo "No Ashby evidence change"
+          else
+            git commit -m "v4: persist Ashby production proof"
+            git push origin HEAD:vacancy-v4-clean-sheet
+          fi
+
+      - name: Require all configured Ashby sources proven
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open("vacancy-v4/data/ashby-proof.json"))
+          assert p["configured_sources"] > 0
+          assert p["failed"] == 0, [(x["name"],x["error"]) for x in p["sources"] if x["coverage"]!="verified_complete"]
+          assert p["verified_complete"] == p["configured_sources"]
+          print(f'Ashby verified_complete: {p["verified_complete"]}/{p["configured_sources"]}')
+          PY

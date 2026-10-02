@@ -3,13 +3,17 @@ from .transport import fetch_json
 from .providers.ashby import inventory
 
 
-def ashby_inventory(board_name: str):
-    endpoint = f"https://api.ashbyhq.com/posting-api/job-board/{board_name}"
-    return inventory(board_name, lambda _: fetch_json(endpoint))
+def ashby_endpoint(board_name: str) -> str:
+    return f"https://api.ashbyhq.com/posting-api/job-board/{board_name}"
 
 
-def ashby_proof(source: Source, board_name: str) -> InventoryProof:
-    jobs = ashby_inventory(board_name)
+def ashby_inventory(board_name: str, fetcher=fetch_json):
+    endpoint = ashby_endpoint(board_name)
+    return inventory(board_name, lambda _: fetcher(endpoint))
+
+
+def ashby_run(source: Source, board_name: str, fetcher=fetch_json):
+    jobs = ashby_inventory(board_name, fetcher)
     proof = InventoryProof(
         source=source,
         coverage=Coverage.VERIFIED_COMPLETE,
@@ -19,4 +23,8 @@ def ashby_proof(source: Source, board_name: str) -> InventoryProof:
         evidence_kind="official_complete_payload",
     )
     proof.validate()
-    return proof
+    return proof, jobs
+
+
+def ashby_proof(source: Source, board_name: str, fetcher=fetch_json) -> InventoryProof:
+    return ashby_run(source, board_name, fetcher)[0]

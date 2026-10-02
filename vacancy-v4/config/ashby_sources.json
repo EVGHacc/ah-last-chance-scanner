@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "provider": "ashby",
+  "sources": [
+    {
+      "name": "OpenAI",
+      "board": "openai",
+      "first_party_evidence_url": "https://openai.com/careers/search/"
+    },
+    {
+      "name": "Mollie",
+      "board": "mollie",
+      "first_party_evidence_url": "https://jobs.mollie.com/vacancies"
+    },
+    {
+      "name": "Airwallex",
+      "board": "airwallex",
+      "first_party_evidence_url": "https://careers.airwallex.com/jobs/"
+    },
+    {
+      "name": "Checkout.com",
+      "board": "checkout.com",
+      "first_party_evidence_url": "https://www.checkout.com/jobs"
+    }
+  ]
+}
