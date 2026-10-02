@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "provider": "ashby",
-  "generated_at": "2026-10-02T12:31:54.557672+00:00",
+  "generated_at": "2026-10-02T12:59:47.293611+00:00",
   "configured_sources": 4,
   "verified_complete": 3,
   "failed": 1,
@@ -10020,7 +10020,7 @@
           "record_source": "ashby_public_api"
         }
       ],
-      "checked_at": "2026-10-02T12:31:53.367418+00:00",
+      "checked_at": "2026-10-02T12:59:45.494601+00:00",
       "error": null
     },
     {
@@ -10040,7 +10040,7 @@
       "first_party_evidence_url": "https://jobs.mollie.com/vacancies",
       "jobs_sha256": null,
       "jobs": [],
-      "checked_at": "2026-10-02T12:31:53.861684+00:00",
+      "checked_at": "2026-10-02T12:59:46.111942+00:00",
       "error": "ValueError: Ashby jobs missing from first-party inventory count=1 sample=['632619e8-45b0-4719-a994-0605ebfd65e0']"
     },
     {
@@ -16625,7 +16625,7 @@
           "record_source": "ashby_public_api"
         }
       ],
-      "checked_at": "2026-10-02T12:31:54.151129+00:00",
+      "checked_at": "2026-10-02T12:59:46.596441+00:00",
       "error": null
     },
     {
@@ -18794,7 +18794,7 @@
           "record_source": "ashby_public_api"
         }
       ],
-      "checked_at": "2026-10-02T12:31:54.447144+00:00",
+      "checked_at": "2026-10-02T12:59:46.951562+00:00",
       "error": null
     }
   ]
