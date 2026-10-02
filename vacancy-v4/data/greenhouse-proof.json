@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "provider": "greenhouse",
-  "generated_at": "2026-10-02T10:35:20.792763+00:00",
-  "configured_sources": 3,
-  "verified_complete": 3,
+  "generated_at": "2026-10-02T10:37:20.186067+00:00",
+  "configured_sources": 2,
+  "verified_complete": 2,
   "failed": 0,
   "sources": [
     {
@@ -9262,7 +9262,7 @@
           "record_source": "greenhouse_job_board_api"
         }
       ],
-      "checked_at": "2026-10-02T10:35:19.853632+00:00",
+      "checked_at": "2026-10-02T10:37:19.497345+00:00",
       "error": null
     },
     {
@@ -11007,22 +11007,7 @@
           "record_source": "greenhouse_job_board_api"
         }
       ],
-      "checked_at": "2026-10-02T10:35:20.526441+00:00",
-      "error": null
-    },
-    {
-      "name": "Remote.com",
-      "board": "remotecom",
-      "coverage": "verified_complete",
-      "unique_jobs": 0,
-      "authoritative_total": 0,
-      "exhausted": true,
-      "evidence_kind": "greenhouse_meta_total_reconciled",
-      "endpoint": "https://boards-api.greenhouse.io/v1/boards/remotecom/jobs?content=true",
-      "first_party_evidence_url": "https://remote.com/openings",
-      "jobs_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "jobs": [],
-      "checked_at": "2026-10-02T10:35:20.740700+00:00",
+      "checked_at": "2026-10-02T10:37:19.966167+00:00",
       "error": null
     }
   ]
