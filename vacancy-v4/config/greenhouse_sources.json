@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "provider": "greenhouse",
+  "sources": [
+    {
+      "name": "Stripe",
+      "board": "stripe",
+      "first_party_evidence_url": "https://stripe.com/careers/search"
+    },
+    {
+      "name": "Ripple",
+      "board": "ripple",
+      "first_party_evidence_url": "https://ripple.com/careers/all-jobs/"
+    },
+    {
+      "name": "Remote.com",
+      "board": "remotecom",
+      "first_party_evidence_url": "https://remote.com/openings"
+    }
+  ]
+}

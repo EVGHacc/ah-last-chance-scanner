@@ -1,0 +1,76 @@
+name: Vacancy v4 Greenhouse production proof
+
+on:
+  push:
+    branches:
+      - vacancy-v4-clean-sheet
+    paths:
+      - "vacancy-v4/app/providers/greenhouse.py"
+      - "vacancy-v4/app/greenhouse_batch.py"
+      - "vacancy-v4/config/greenhouse_sources.json"
+      - "vacancy-v4/tests/unit/test_greenhouse*.py"
+      - "vacancy-v4/tests/qa/test_greenhouse*.py"
+      - ".github/workflows/vacancy-v4-greenhouse.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vacancy-v4-greenhouse-production
+  cancel-in-progress: false
+
+jobs:
+  greenhouse-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: vacancy-v4-clean-sheet
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Developer unit tests
+        run: python -m unittest discover -s vacancy-v4/tests/unit -p 'test_*.py'
+
+      - name: Independent QA and resilience
+        run: python -m unittest discover -s vacancy-v4/tests/qa -p 'test_*.py'
+
+      - name: Live Greenhouse production proof
+        env:
+          PYTHONPATH: vacancy-v4
+        run: python -m app.greenhouse_batch --output vacancy-v4/data/greenhouse-proof.json
+
+      - name: Require all configured Greenhouse sources proven with job details
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open("vacancy-v4/data/greenhouse-proof.json"))
+          assert p["configured_sources"] > 0
+          assert p["failed"] == 0, [(x["name"],x["error"]) for x in p["sources"] if x["coverage"]!="verified_complete"]
+          assert p["verified_complete"] == p["configured_sources"]
+          for source in p["sources"]:
+              jobs=source.get("jobs")
+              assert isinstance(jobs,list)
+              assert len(jobs)==source["unique_jobs"]==source["authoritative_total"]
+              assert len({j["job_id"] for j in jobs})==len(jobs)
+              assert all(j.get("title","").strip() and j.get("summary","").strip() for j in jobs)
+              assert all(j.get("job_url","").startswith("https://") and j.get("apply_url","").startswith("https://") for j in jobs)
+          print(f'Greenhouse verified_complete: {p["verified_complete"]}/{p["configured_sources"]}; jobs={sum(len(x["jobs"]) for x in p["sources"])}')
+          PY
+
+      - name: Persist v4 Greenhouse evidence
+        run: |
+          set -euo pipefail
+          git config user.name "vacancy-v4-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -- vacancy-v4/data/greenhouse-proof.json
+          if git diff --cached --quiet; then
+            echo "No Greenhouse evidence change"
+          else
+            git commit -m "v4: persist Greenhouse production proof"
+            git push origin HEAD:vacancy-v4-clean-sheet
+          fi
