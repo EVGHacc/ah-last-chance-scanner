@@ -7,7 +7,6 @@ from pathlib import Path
 from .model import Coverage
 from .registry import load_sources
 from .runner import ashby_endpoint, ashby_run
-from .transport import fetch_json
 
 DEFAULT_CONFIG = Path(__file__).resolve().parents[1] / "config" / "ashby_sources.json"
 DEFAULT_OUTPUT = Path(__file__).resolve().parents[1] / "data" / "ashby-proof.json"
@@ -37,7 +36,7 @@ def _jobs_hash(jobs):
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
 
 
-def run_batch(fetcher=fetch_json, config_path=DEFAULT_CONFIG):
+def run_batch(fetcher=None, config_path=DEFAULT_CONFIG):
     source_by_name={s.name:s for s in load_sources()}
     configured=load_config(config_path)
     unknown=[r["name"] for r in configured if r["name"] not in source_by_name]
