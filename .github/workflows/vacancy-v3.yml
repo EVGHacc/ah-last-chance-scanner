@@ -1,0 +1,27 @@
+name: Vacancy Scanner v3 CI
+
+on:
+  push:
+    branches: [vacancy-v3]
+    paths:
+      - "vacancy-v3/**"
+      - "vacancy-monitor/registry.tsv"
+      - ".github/workflows/vacancy-v3.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  foundation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile
+        run: python -m compileall -q vacancy-v3/app vacancy-v3/tests
+      - name: Unit tests
+        run: python -m unittest discover -s vacancy-v3/tests -p 'test_*.py' -v
