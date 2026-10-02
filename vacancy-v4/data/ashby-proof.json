@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "provider": "ashby",
+  "generated_at": "2026-10-02T09:20:13.999568+00:00",
+  "configured_sources": 4,
+  "verified_complete": 3,
+  "failed": 1,
+  "sources": [
+    {
+      "name": "OpenAI",
+      "board": "openai",
+      "coverage": "unproven",
+      "unique_jobs": 0,
+      "exhausted": false,
+      "evidence_kind": null,
+      "endpoint": "https://api.ashbyhq.com/posting-api/job-board/openai",
+      "first_party_evidence_url": "https://openai.com/careers/search/",
+      "jobs_sha256": null,
+      "checked_at": "2026-10-02T09:20:13.173674+00:00",
+      "error": "TransportError: response exceeds byte cap"
+    },
+    {
+      "name": "Mollie",
+      "board": "mollie",
+      "coverage": "verified_complete",
+      "unique_jobs": 42,
+      "exhausted": true,
+      "evidence_kind": "official_complete_payload",
+      "endpoint": "https://api.ashbyhq.com/posting-api/job-board/mollie",
+      "first_party_evidence_url": "https://jobs.mollie.com/vacancies",
+      "jobs_sha256": "e59d26ec67a48d735489e31845e237c3881a1ab3c9baaf221a09956d77c4adec",
+      "checked_at": "2026-10-02T09:20:13.437215+00:00",
+      "error": null
+    },
+    {
+      "name": "Airwallex",
+      "board": "airwallex",
+      "coverage": "verified_complete",
+      "unique_jobs": 547,
+      "exhausted": true,
+      "evidence_kind": "official_complete_payload",
+      "endpoint": "https://api.ashbyhq.com/posting-api/job-board/airwallex",
+      "first_party_evidence_url": "https://careers.airwallex.com/jobs/",
+      "jobs_sha256": "be46965c0ee043b6f92849a9c6d8c4c0a4bf010691034fa5b15921c91d258ba0",
+      "checked_at": "2026-10-02T09:20:13.590446+00:00",
+      "error": null
+    },
+    {
+      "name": "Checkout.com",
+      "board": "checkout.com",
+      "coverage": "verified_complete",
+      "unique_jobs": 177,
+      "exhausted": true,
+      "evidence_kind": "official_complete_payload",
+      "endpoint": "https://api.ashbyhq.com/posting-api/job-board/checkout.com",
+      "first_party_evidence_url": "https://www.checkout.com/jobs",
+      "jobs_sha256": "a2b06715ad5ea6f19cca209b4ec60f6dfeba6d5873204911064bae0a944d37d1",
+      "checked_at": "2026-10-02T09:20:13.794466+00:00",
+      "error": null
+    }
+  ]
+}
