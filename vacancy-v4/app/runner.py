@@ -1,6 +1,6 @@
 from .model import Coverage, InventoryProof, Source
 from .transport import fetch_json
-from .providers.ashby import inventory
+from .providers.ashby import inventory, inventory_with_metadata
 
 ASHBY_MAX_BYTES = 64_000_000
 
@@ -19,8 +19,13 @@ def ashby_inventory(board_name: str, fetcher=None):
     return inventory(board_name, lambda _: transport(endpoint))
 
 
-def ashby_run(source: Source, board_name: str, fetcher=None):
-    jobs = ashby_inventory(board_name, fetcher)
+def ashby_inventory_with_metadata(board_name: str, fetcher=None):
+    endpoint = ashby_endpoint(board_name)
+    transport = fetcher or ashby_fetch_json
+    return inventory_with_metadata(board_name, lambda _: transport(endpoint))
+
+
+def _proof(source: Source, jobs):
     proof = InventoryProof(
         source=source,
         coverage=Coverage.VERIFIED_COMPLETE,
@@ -30,7 +35,17 @@ def ashby_run(source: Source, board_name: str, fetcher=None):
         evidence_kind="official_complete_payload",
     )
     proof.validate()
-    return proof, jobs
+    return proof
+
+
+def ashby_run(source: Source, board_name: str, fetcher=None):
+    jobs = ashby_inventory(board_name, fetcher)
+    return _proof(source, jobs), jobs
+
+
+def ashby_run_with_metadata(source: Source, board_name: str, fetcher=None):
+    meta = ashby_inventory_with_metadata(board_name, fetcher)
+    return _proof(source, meta.jobs), meta
 
 
 def ashby_proof(source: Source, board_name: str, fetcher=None) -> InventoryProof:

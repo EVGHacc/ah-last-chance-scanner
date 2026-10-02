@@ -4,7 +4,7 @@ import unittest
 
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT))
-from app.providers.ashby import AshbyError, inventory
+from app.providers.ashby import AshbyError, inventory, inventory_with_metadata
 
 
 def job(i, listed=True):
@@ -17,9 +17,11 @@ class AshbyDeveloperTests(unittest.TestCase):
         got=inventory("acme",lambda _:{"apiVersion":"1","jobs":[job("a"),job("b")]})
         self.assertEqual(len(got),2)
 
-    def test_unlisted_is_not_public_inventory(self):
-        got=inventory("acme",lambda _:{"apiVersion":"1","jobs":[job("a"),job("b",False)]})
-        self.assertEqual([x.title for x in got],["Role a"])
+    def test_unlisted_is_not_public_inventory_and_is_counted_in_metadata(self):
+        got=inventory_with_metadata("acme",lambda _:{"apiVersion":"1","jobs":[job("a"),job("b",False)]})
+        self.assertEqual([x.title for x in got.jobs],["Role a"])
+        self.assertEqual(got.raw_count,2)
+        self.assertEqual(got.unlisted_count,1)
 
     def test_duplicate_fails_closed(self):
         with self.assertRaises(AshbyError):

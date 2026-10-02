@@ -6,7 +6,7 @@ from pathlib import Path
 
 from .model import Coverage
 from .registry import load_sources
-from .runner import ashby_endpoint, ashby_run
+from .runner import ashby_endpoint, ashby_run_with_metadata
 
 DEFAULT_CONFIG = Path(__file__).resolve().parents[1] / "config" / "ashby_sources.json"
 DEFAULT_OUTPUT = Path(__file__).resolve().parents[1] / "data" / "ashby-proof.json"
@@ -47,17 +47,19 @@ def run_batch(fetcher=None, config_path=DEFAULT_CONFIG):
         source=source_by_name[row["name"]]
         checked_at=datetime.now(timezone.utc).isoformat()
         try:
-            proof,jobs=ashby_run(source,row["board"],fetcher)
+            proof,meta=ashby_run_with_metadata(source,row["board"],fetcher)
             results.append({
                 "name":source.name,
                 "board":row["board"],
                 "coverage":proof.coverage.value,
+                "raw_jobs":meta.raw_count,
+                "unlisted_jobs":meta.unlisted_count,
                 "unique_jobs":proof.unique_jobs,
                 "exhausted":proof.exhausted,
                 "evidence_kind":proof.evidence_kind,
                 "endpoint":ashby_endpoint(row["board"]),
                 "first_party_evidence_url":row["first_party_evidence_url"],
-                "jobs_sha256":_jobs_hash(jobs),
+                "jobs_sha256":_jobs_hash(meta.jobs),
                 "checked_at":checked_at,
                 "error":None,
             })
@@ -66,6 +68,8 @@ def run_batch(fetcher=None, config_path=DEFAULT_CONFIG):
                 "name":source.name,
                 "board":row["board"],
                 "coverage":Coverage.UNPROVEN.value,
+                "raw_jobs":None,
+                "unlisted_jobs":None,
                 "unique_jobs":0,
                 "exhausted":False,
                 "evidence_kind":None,
