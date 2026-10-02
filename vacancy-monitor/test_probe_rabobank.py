@@ -1,7 +1,7 @@
 import unittest
 from probe_rabobank import parse_inventory
 
-HTML = """<html><body><h1>3 Vacatures bij Rabobank</h1><a href="/nl/vacature/a/JR_1/">A</a><a href="/nl/vacature/b/JR_2/">B</a><a href="/nl/vacature/c/JR_3/">C</a></body></html>"""
+HTML = """<html><body><h1>3 Vacatures bij Rabobank</h1><a href="/nl/vacature/a/JR_00000001/">A</a><a href="/nl/vacature/b/JR_00000002/">B</a><a href="/nl/vacature/c/JR_00000003/">C</a></body></html>"""
 
 class RabobankInventoryTests(unittest.TestCase):
     def test_reconciles_exact_first_party_total(self):
