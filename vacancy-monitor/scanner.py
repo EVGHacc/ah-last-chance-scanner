@@ -811,6 +811,7 @@ def scan(o):
     t=time.monotonic(); tried=[]; success=[]; q=candidates(o); seen=set()
     configured_api=api_inventory(o)
     if o["name"]=="Rabobank":
+        # Fail closed: reachability alone never proves exhaustive inventory.
         try:
             rb=probe_rabobank()
             configured_api={"complete":rb["complete"],"official_total":rb["official_total"],
