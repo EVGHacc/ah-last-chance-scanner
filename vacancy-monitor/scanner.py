@@ -7,6 +7,7 @@ from zoneinfo import ZoneInfo
 import requests
 from bs4 import BeautifulSoup
 from embedded_inventory import embedded_inventory
+from probe_rabobank import probe as probe_rabobank
 
 ROOT=Path(__file__).resolve().parent
 DATA=ROOT/"data"; DATA.mkdir(exist_ok=True)
@@ -412,7 +413,19 @@ def api_inventory(o,c=None):
                 "error":f"{type(e).__name__}: {e}"}
 
 def static_inventory(o):
-    """Exhaust small official boards, including explicit ?page=N pagination, before proving completeness."""
+    """Exhaust first-party/static boards before proving completeness."""
+    if o["name"]=="Rabobank":
+        try:
+            result=probe_rabobank(timeout=max(TIMEOUT,30))
+            jobs=[{"title":j["title"] or j["id"],"url":j["url"],"source_job_id":j["id"]}
+                  for j in result["jobs"]]
+            return {"complete":result["complete"],"official_total":result["official_total"],
+                    "jobs":jobs,"source":result["source"],"pages":1,
+                    "error":None if result["complete"] else "Rabobank first-party inventory mismatch"}
+        except Exception as e:
+            return {"complete":False,"official_total":None,"jobs":[],
+                    "source":"https://rabobank.jobs/nl/vacatures/","pages":0,
+                    "error":f"{type(e).__name__}: {e}"}
     c=STATIC_BOARDS.get(o["name"])
     if not c: return None
     try:
