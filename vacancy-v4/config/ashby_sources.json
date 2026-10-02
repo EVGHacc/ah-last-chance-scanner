@@ -5,12 +5,14 @@
     {
       "name": "OpenAI",
       "board": "openai",
-      "first_party_evidence_url": "https://openai.com/careers/search/"
+      "first_party_evidence_url": "https://openai.com/careers/search/",
+      "first_party_job_id_pattern": "https://jobs\\\\.ashbyhq\\\\.com/openai/([0-9a-fA-F-]{36})"
     },
     {
       "name": "Mollie",
       "board": "mollie",
-      "first_party_evidence_url": "https://jobs.mollie.com/vacancies"
+      "first_party_evidence_url": "https://jobs.mollie.com/vacancies",
+      "first_party_job_id_pattern": "/vacancies/([0-9a-fA-F-]{36})"
     },
     {
       "name": "Airwallex",

@@ -9,12 +9,19 @@ from app.transport import TransportError
 
 
 def good(board):
+    ident="00000000-0000-4000-8000-000000000001"
     return {"apiVersion":"1","jobs":[{
         "title":"Role",
-        "jobUrl":f"https://jobs.ashbyhq.com/{board}/abc",
-        "applyUrl":f"https://jobs.ashbyhq.com/{board}/abc/application",
+        "jobUrl":f"https://jobs.ashbyhq.com/{board}/{ident}",
+        "applyUrl":f"https://jobs.ashbyhq.com/{board}/{ident}/application",
         "isListed":True,
     }]}
+
+def matching_html(url):
+    ident="00000000-0000-4000-8000-000000000001"
+    if "openai" in url: return f"https://jobs.ashbyhq.com/openai/{ident}"
+    if "mollie" in url: return f"/vacancies/{ident}"
+    return "<html></html>"
 
 
 class AshbyBatchIndependentQA(unittest.TestCase):
@@ -23,7 +30,7 @@ class AshbyBatchIndependentQA(unittest.TestCase):
             board=url.rsplit("/",1)[-1]
             if board=="openai": raise TransportError("network failure")
             return good(board)
-        result=run_batch(fetch)
+        result=run_batch(fetch,matching_html)
         self.assertEqual(result["verified_complete"],3)
         self.assertEqual(result["failed"],1)
         failed=[x for x in result["sources"] if x["coverage"]=="unproven"]
@@ -33,7 +40,7 @@ class AshbyBatchIndependentQA(unittest.TestCase):
         def fetch(url):
             board=url.rsplit("/",1)[-1]
             return {"apiVersion":"2","postings":[]} if board=="mollie" else good(board)
-        result=run_batch(fetch)
+        result=run_batch(fetch,matching_html)
         row=next(x for x in result["sources"] if x["name"]=="Mollie")
         self.assertEqual(row["coverage"],"unproven")
         self.assertFalse(row["exhausted"])
@@ -46,15 +53,24 @@ class AshbyBatchIndependentQA(unittest.TestCase):
                 j=good(board)["jobs"][0]
                 return {"apiVersion":"1","jobs":[j,j]}
             if board=="checkout.com":
-                j=good("other")["jobs"][0]
-                return {"apiVersion":"1","jobs":[j]}
+                return good("other")
             return good(board)
-        result=run_batch(fetch)
+        result=run_batch(fetch,matching_html)
         states={x["name"]:x["coverage"] for x in result["sources"]}
         self.assertEqual(states["Airwallex"],"unproven")
         self.assertEqual(states["Checkout.com"],"unproven")
         self.assertEqual(states["OpenAI"],"verified_complete")
         self.assertEqual(states["Mollie"],"verified_complete")
+
+    def test_first_party_count_or_identity_mismatch_fails_closed(self):
+        def bad_html(url):
+            ident="00000000-0000-4000-8000-999999999999"
+            if "mollie" in url: return f"/vacancies/{ident}"
+            return matching_html(url)
+        result=run_batch(lambda url: good(url.rsplit("/",1)[-1]),bad_html)
+        row=next(x for x in result["sources"] if x["name"]=="Mollie")
+        self.assertEqual(row["coverage"],"unproven")
+        self.assertIn("inventory mismatch",row["error"])
 
 
 if __name__=="__main__": unittest.main()
