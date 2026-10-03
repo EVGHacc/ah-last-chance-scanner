@@ -1,15 +1,58 @@
-import sys,unittest
-from pathlib import Path
-ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT))
-from app.providers.lever import LeverError,inventory
+import pytest
 
-def job(i): return {'id':str(i),'text':f'Job {i}','hostedUrl':f'https://jobs.eu.lever.co/acme/{i}'}
-class LeverUnitTests(unittest.TestCase):
- def test_exhausts(self):
-  def page(site,offset,limit): return [job(0),job(1)] if offset==0 else [job(2)]
-  self.assertEqual(len(inventory('acme',page,limit=2)),3)
- def test_duplicate_fails_closed(self):
-  with self.assertRaises(LeverError): inventory('acme',lambda *_:[job(1),job(1)],limit=2)
- def test_cap_fails_closed(self):
-  with self.assertRaises(LeverError): inventory('acme',lambda s,o,l:[job(o)],limit=1,max_pages=2)
-if __name__=='__main__': unittest.main()
+from app.providers.lever import LeverError, inventory
+
+
+def _job(job_id="1"):
+    return {
+        "id": job_id,
+        "text": "Risk Lead",
+        "descriptionPlain": "Own the enterprise risk programme.",
+        "hostedUrl": f"https://jobs.eu.lever.co/pnlfin/{job_id}",
+        "applyUrl": f"https://jobs.eu.lever.co/pnlfin/{job_id}/apply",
+        "categories": {
+            "location": "Amsterdam",
+            "department": "Risk",
+            "team": "Compliance",
+            "office": "Amsterdam",
+        },
+        "createdAt": 1,
+        "updatedAt": 2,
+    }
+
+
+def test_inventory_preserves_hard_job_data_invariant():
+    jobs = inventory("pnlfin", lambda site, offset, limit: [_job()])
+    assert len(jobs) == 1
+    job = jobs[0]
+    assert job.job_id == "1"
+    assert job.title == "Risk Lead"
+    assert job.short_summary
+    assert job.job_url.endswith("/1")
+    assert job.apply_url.endswith("/1/apply")
+    assert job.location == "Amsterdam"
+    assert job.department == "Risk"
+    assert job.team == "Compliance"
+    assert job.office == "Amsterdam"
+    assert job.created_at == 1
+    assert job.updated_at == 2
+
+
+@pytest.mark.parametrize("field", ["id", "text", "descriptionPlain", "hostedUrl", "applyUrl"])
+def test_inventory_fails_closed_when_required_field_missing(field):
+    raw = _job()
+    raw.pop(field)
+    with pytest.raises(LeverError, match="required posting fields missing"):
+        inventory("pnlfin", lambda site, offset, limit: [raw])
+
+
+def test_inventory_rejects_duplicate_ids_across_pages():
+    def fetch(site, offset, limit):
+        return [_job(str(i)) for i in range(100)] if offset == 0 else [_job("0")]
+    with pytest.raises(LeverError, match="duplicate/page-wrap"):
+        inventory("pnlfin", fetch)
+
+
+def test_inventory_rejects_non_array_payload():
+    with pytest.raises(LeverError, match="expected JSON array"):
+        inventory("pnlfin", lambda site, offset, limit: {"jobs": []})
