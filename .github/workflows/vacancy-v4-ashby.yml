@@ -5,9 +5,20 @@ on:
     branches:
       - vacancy-v4-clean-sheet
     paths:
-      - "vacancy-v4/app/**"
-      - "vacancy-v4/config/**"
-      - "vacancy-v4/tests/**"
+      - "vacancy-v4/app/ashby_batch.py"
+      - "vacancy-v4/app/providers/ashby.py"
+      - "vacancy-v4/app/transport.py"
+      - "vacancy-v4/app/proof_acceptance.py"
+      - "vacancy-v4/app/release_gate.py"
+      - "vacancy-v4/app/certification_registry.py"
+      - "vacancy-v4/config/ashby_sources.json"
+      - "vacancy-v4/config/provider_authority.json"
+      - "vacancy-v4/tests/unit/test_ashby*.py"
+      - "vacancy-v4/tests/unit/test_transport.py"
+      - "vacancy-v4/tests/unit/test_proof_acceptance.py"
+      - "vacancy-v4/tests/unit/test_release_gate.py"
+      - "vacancy-v4/tests/unit/test_certification_registry.py"
+      - "vacancy-v4/tests/qa/test_ashby*.py"
       - ".github/workflows/vacancy-v4-ashby.yml"
   workflow_dispatch:
 
