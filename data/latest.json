@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-03",
   "weekday": "Saturday",
-  "scheduledSlot": "20:45",
-  "scheduledAt": "2026-10-03T20:45:00+02:00",
-  "rawScheduledSlot": "20:45",
-  "rawScheduledAt": "2026-10-03T20:45:00+02:00",
-  "startedAt": "2026-10-03T20:45:00.275552+02:00",
-  "completedAt": "2026-10-03T20:45:04.983333+02:00",
-  "checkedAt": "2026-10-03T20:45:04.983333+02:00",
+  "scheduledSlot": "20:48",
+  "scheduledAt": "2026-10-03T20:48:00+02:00",
+  "rawScheduledSlot": "20:48",
+  "rawScheduledAt": "2026-10-03T20:48:00+02:00",
+  "startedAt": "2026-10-03T20:48:00.294267+02:00",
+  "completedAt": "2026-10-03T20:48:04.863539+02:00",
+  "checkedAt": "2026-10-03T20:48:04.863539+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -737,11 +737,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 243,
+      "totalBargainItems": 242,
       "meatItems": 8,
       "meat70Items": 4,
       "meat70Stock": 8.0,
-      "bakeryItems": 46,
+      "bakeryItems": 45,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -1213,18 +1213,6 @@
           "stock": 2,
           "priceWas": "0.59",
           "priceNow": "0.50",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
-          "productId": 606046,
-          "title": "AH Turks broodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-03"
         },
         {
@@ -1700,18 +1688,6 @@
           "markdownExpirationDate": "2026-10-03"
         },
         {
-          "productId": 168184,
-          "title": "AH Tijger wit heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.99",
-          "priceNow": "1.49",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
           "productId": 606074,
           "title": "AH Pistache croissant",
           "brand": "AH",
@@ -1757,6 +1733,18 @@
           "stock": 2,
           "priceWas": "1.09",
           "priceNow": "0.82",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 168184,
+          "title": "AH Tijger wit heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
           "markdownExpirationDate": "2026-10-03"
         },
         {
@@ -2137,7 +2125,7 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 166,
+      "totalBargainItems": 165,
       "meatItems": 15,
       "meat70Items": 7,
       "meat70Stock": 17.0,
@@ -2765,11 +2753,11 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 151,
+      "totalBargainItems": 145,
       "meatItems": 19,
       "meat70Items": 5,
       "meat70Stock": 6.0,
-      "bakeryItems": 36,
+      "bakeryItems": 35,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -3121,18 +3109,6 @@
           "stock": 2,
           "priceWas": "1.99",
           "priceNow": "1.49",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
-          "productId": 417147,
-          "title": "AH Vloerbrood meergranen heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
           "markdownExpirationDate": "2026-10-03"
         },
         {
