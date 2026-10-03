@@ -1,1 +1,30 @@
-{"schema_version":1,"providers":{"ashby":{"authority":"provider_complete_payload","first_party_role":"temporal cross-check; not a same-instant authoritative total","temporal_drift":"repeat observation before rejection; never merge asynchronous inventories into a synthetic total"},"greenhouse":{"authority":"meta.total","reconciliation":"jobs length == unique ids == meta.total","first_party_role":"identity/routing cross-check"},"smartrecruiters":{"authority":"totalFound across exhausted pagination","reconciliation":"stable totalFound; exhaustive offsets; unique ids == totalFound; detail company matches","temporal_drift":"restart attempt if totalFound changes; never persist partial attempt"}}}
+{
+  "schema_version": 1,
+  "providers": {
+    "ashby": {
+      "authority": "provider_complete_payload",
+      "first_party_role": "temporal cross-check; not a same-instant authoritative total",
+      "temporal_drift": "repeat observation before rejection; never merge asynchronous inventories into a synthetic total"
+    },
+    "greenhouse": {
+      "authority": "meta.total",
+      "reconciliation": "jobs length == unique ids == meta.total",
+      "first_party_role": "identity/routing cross-check"
+    },
+    "lever": {
+      "authority": "exhausted public postings API pagination",
+      "reconciliation": "paginate skip/limit until terminal short page; jobs length == unique ids",
+      "regional_instance": "must be proven by first-party Lever-hosted careers evidence"
+    },
+    "smartrecruiters": {
+      "authority": "totalFound across exhausted pagination",
+      "reconciliation": "stable totalFound; exhaustive offsets; unique ids == totalFound; detail company matches",
+      "temporal_drift": "restart attempt if totalFound changes; never persist partial attempt"
+    },
+    "eightfold": {
+      "authority": "first-party public careers payload only",
+      "reconciliation": "exhaust pagination/cursor and require unique ids plus complete job invariant",
+      "restriction": "no certification from discovery metadata or third-party feeds; if no public authoritative inventory endpoint is proven, remain BLOCKED"
+    }
+  }
+}
