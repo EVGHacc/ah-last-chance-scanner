@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-03",
   "weekday": "Saturday",
-  "scheduledSlot": "20:27",
-  "scheduledAt": "2026-10-03T20:27:00+02:00",
-  "rawScheduledSlot": "20:27",
-  "rawScheduledAt": "2026-10-03T20:27:00+02:00",
-  "startedAt": "2026-10-03T20:27:00.290094+02:00",
-  "completedAt": "2026-10-03T20:27:06.031280+02:00",
-  "checkedAt": "2026-10-03T20:27:06.031280+02:00",
+  "scheduledSlot": "20:30",
+  "scheduledAt": "2026-10-03T20:30:00+02:00",
+  "rawScheduledSlot": "20:30",
+  "rawScheduledAt": "2026-10-03T20:30:00+02:00",
+  "startedAt": "2026-10-03T20:30:00.311018+02:00",
+  "completedAt": "2026-10-03T20:30:05.257850+02:00",
+  "checkedAt": "2026-10-03T20:30:05.257850+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,8 +25,8 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 209,
-      "meatItems": 9,
+      "totalBargainItems": 210,
+      "meatItems": 10,
       "meat70Items": 2,
       "meat70Stock": 3.0,
       "bakeryItems": 41,
@@ -91,6 +91,18 @@
           "stock": 2,
           "priceWas": "3.79",
           "priceNow": "2.84",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 425633,
+          "title": "AH Varkensribeye naturel",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "4.49",
+          "priceNow": "3.37",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -1329,7 +1341,7 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 244,
+      "totalBargainItems": 243,
       "meatItems": 19,
       "meat70Items": 11,
       "meat70Stock": 16.0,
@@ -1616,18 +1628,6 @@
           "markdownExpirationDate": "2026-10-03"
         },
         {
-          "productId": 606050,
-          "title": "AH Liefde & Passie Desem pistolet mais pompoen",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
           "productId": 606777,
           "title": "AH Borek kip gyros",
           "brand": "AH",
@@ -1666,6 +1666,18 @@
         {
           "productId": 606049,
           "title": "AH Liefde & Passie Desem pistolet volkoren",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 606050,
+          "title": "AH Liefde & Passie Desem pistolet mais pompoen",
           "brand": "AH Liefde & Passie",
           "size": "per stuk",
           "category": "Bakkerij",
@@ -1784,18 +1796,6 @@
           "markdownExpirationDate": "2026-10-03"
         },
         {
-          "productId": 230731,
-          "title": "AH Triangel meergranen bruin",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "0.69",
-          "priceNow": "0.59",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
           "productId": 584032,
           "title": "AH Rond wit sesam heel",
           "brand": "AH",
@@ -1841,6 +1841,18 @@
           "stock": 3,
           "priceWas": "0.29",
           "priceNow": "0.25",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 230731,
+          "title": "AH Triangel meergranen bruin",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "0.69",
+          "priceNow": "0.59",
           "markdownExpirationDate": "2026-10-03"
         },
         {
@@ -2705,8 +2717,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 146,
-      "meatItems": 15,
+      "totalBargainItems": 149,
+      "meatItems": 18,
       "meat70Items": 6,
       "meat70Stock": 9.0,
       "bakeryItems": 36,
@@ -2774,6 +2786,30 @@
           "markdownExpirationDate": "2026-10-03"
         },
         {
+          "productId": 561331,
+          "title": "AH Gemengd gehakt",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 15,
+          "priceWas": "3.59",
+          "priceNow": "2.69",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 619320,
+          "title": "AH Biologisch Gemengd gehakt",
+          "brand": "AH Biologisch",
+          "size": "250 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 6,
+          "priceWas": "3.99",
+          "priceNow": "2.99",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
           "productId": 531853,
           "title": "AH Kipgehakt gekruid",
           "brand": "AH",
@@ -2783,6 +2819,18 @@
           "stock": 5,
           "priceWas": "3.95",
           "priceNow": "2.96",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 187580,
+          "title": "AH Gehakt cordon bleu",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "2.29",
+          "priceNow": "1.72",
           "markdownExpirationDate": "2026-10-04"
         },
         {
