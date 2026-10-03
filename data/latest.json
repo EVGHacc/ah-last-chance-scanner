@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-03",
   "weekday": "Saturday",
-  "scheduledSlot": "21:06",
-  "scheduledAt": "2026-10-03T21:06:00+02:00",
-  "rawScheduledSlot": "21:06",
-  "rawScheduledAt": "2026-10-03T21:06:00+02:00",
-  "startedAt": "2026-10-03T21:06:00.284107+02:00",
-  "completedAt": "2026-10-03T21:06:04.985084+02:00",
-  "checkedAt": "2026-10-03T21:06:04.985084+02:00",
+  "scheduledSlot": "21:09",
+  "scheduledAt": "2026-10-03T21:09:00+02:00",
+  "rawScheduledSlot": "21:09",
+  "rawScheduledAt": "2026-10-03T21:09:00+02:00",
+  "startedAt": "2026-10-03T21:09:00.296796+02:00",
+  "completedAt": "2026-10-03T21:09:04.929106+02:00",
+  "checkedAt": "2026-10-03T21:09:04.929106+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 224,
+      "totalBargainItems": 223,
       "meatItems": 17,
       "meat70Items": 2,
       "meat70Stock": 3.0,
@@ -588,18 +588,6 @@
           "markdownExpirationDate": "2026-10-03"
         },
         {
-          "productId": 230704,
-          "title": "AH Kaasbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
           "productId": 606492,
           "title": "AH Liefde & Passie Biologisch desem pistolet meerzaden",
           "brand": "AH Liefde & Passie",
@@ -609,6 +597,18 @@
           "stock": 2,
           "priceWas": "1.09",
           "priceNow": "0.93",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 230704,
+          "title": "AH Kaasbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-03"
         },
         {
@@ -2717,7 +2717,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 150,
+      "totalBargainItems": 151,
       "meatItems": 18,
       "meat70Items": 5,
       "meat70Stock": 6.0,
@@ -3076,18 +3076,6 @@
           "markdownExpirationDate": "2026-10-03"
         },
         {
-          "productId": 277519,
-          "title": "AH Vloerbrood volkoren half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "1.45",
-          "priceNow": "1.09",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
           "productId": 606491,
           "title": "AH Taco snack",
           "brand": "AH",
@@ -3121,6 +3109,18 @@
           "stock": 1,
           "priceWas": "2.69",
           "priceNow": "2.02",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 277519,
+          "title": "AH Vloerbrood volkoren half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.45",
+          "priceNow": "1.09",
           "markdownExpirationDate": "2026-10-03"
         },
         {
