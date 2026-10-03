@@ -1,0 +1,2296 @@
+{
+  "schema_version": 1,
+  "source_manifest_count": 104,
+  "source_manifest_path": "vacancy-v4/config/sources.json",
+  "note": "Initial durable map. PROVEN only when current v4 manifest itself contains direct ATS evidence; UNKNOWN requires active first-party research and is never equivalent to DISPROVEN.",
+  "sources": [
+    {
+      "name": "Alexander Hughes",
+      "kind": "recruiter",
+      "official_domain": "alexanderhughes.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "AP Executive",
+      "kind": "recruiter",
+      "official_domain": "ap-executive.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "ARC",
+      "kind": "recruiter",
+      "official_domain": "arcpeople.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Barclay Simpson",
+      "kind": "recruiter",
+      "official_domain": "barclaysimpson.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Black Swan Group",
+      "kind": "recruiter",
+      "official_domain": "blackswangroup.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Blooming Hill",
+      "kind": "recruiter",
+      "official_domain": "bloominghill.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Boer & Croon",
+      "kind": "recruiter",
+      "official_domain": "boercroon.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Brightstone",
+      "kind": "recruiter",
+      "official_domain": "brightstonegroup.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Brunel",
+      "kind": "recruiter",
+      "official_domain": "brunel.net",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Care Professionals",
+      "kind": "recruiter",
+      "official_domain": "careprofessionals.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Compliance People",
+      "kind": "recruiter",
+      "official_domain": "compliancepeople.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Confius",
+      "kind": "recruiter",
+      "official_domain": "confius.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Corbulo",
+      "kind": "recruiter",
+      "official_domain": "corbulo.net",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Cowen Partners",
+      "kind": "recruiter",
+      "official_domain": "cowenpartners.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "CPI",
+      "kind": "recruiter",
+      "official_domain": "meetcpi.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "De Vroed Ten Thierry",
+      "kind": "recruiter",
+      "official_domain": "devroedtenthierry.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "DPA",
+      "kind": "recruiter",
+      "official_domain": "dpa.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Ebbinge",
+      "kind": "recruiter",
+      "official_domain": "ebbinge.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Egon Zehnder",
+      "kind": "recruiter",
+      "official_domain": "egonzehnder.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Ferocia",
+      "kind": "recruiter",
+      "official_domain": "ferocia.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Financial Assets",
+      "kind": "recruiter",
+      "official_domain": "financialassets.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Global FinTech Talent",
+      "kind": "recruiter",
+      "official_domain": "globalfintechtalent.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Finatal",
+      "kind": "recruiter",
+      "official_domain": "finatal.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Greenberg Nielsen",
+      "kind": "recruiter",
+      "official_domain": "greenbergnielsen.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Hanami International",
+      "kind": "recruiter",
+      "official_domain": "hanamiinternational.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Hunter Bond",
+      "kind": "recruiter",
+      "official_domain": "hunterbond.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Korn Ferry",
+      "kind": "recruiter",
+      "official_domain": "kornferry.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Lime Search",
+      "kind": "recruiter",
+      "official_domain": "limesearch.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Matchd",
+      "kind": "recruiter",
+      "official_domain": "matchd.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Michael Page",
+      "kind": "recruiter",
+      "official_domain": "michaelpage.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Morgan McKinley",
+      "kind": "recruiter",
+      "official_domain": "morganmckinley.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Odger/Odgers",
+      "kind": "recruiter",
+      "official_domain": "odgers.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Oliver James",
+      "kind": "recruiter",
+      "official_domain": "oliverjames.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "PaymentGenes",
+      "kind": "recruiter",
+      "official_domain": "paymentgenes.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Amrop Executive Search",
+      "kind": "recruiter",
+      "official_domain": "amrop.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Robert Half NL",
+      "kind": "recruiter",
+      "official_domain": "roberthalf.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Robert Walters Interim",
+      "kind": "recruiter",
+      "official_domain": "robertwalters.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Russell Reynolds Associates",
+      "kind": "recruiter",
+      "official_domain": "russellreynolds.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Selby Jennings",
+      "kind": "recruiter",
+      "official_domain": "selbyjennings.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Spencer Stuart",
+      "kind": "recruiter",
+      "official_domain": "spencerstuart.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Staatsen",
+      "kind": "recruiter",
+      "official_domain": "staatsen.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Taylor Root",
+      "kind": "recruiter",
+      "official_domain": "taylorroot.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Ten",
+      "kind": "recruiter",
+      "official_domain": "ten.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Varrlyn",
+      "kind": "recruiter",
+      "official_domain": "varrlyn.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "PROVEN",
+          "evidence_url": "https://careers.smartrecruiters.com/Varrlyn/",
+          "checked_at": "2026-10-03T08:45:00Z"
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Vroom",
+      "kind": "recruiter",
+      "official_domain": "vroomsearch.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Xanthic",
+      "kind": "recruiter",
+      "official_domain": "xanthic.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Yacht Executive",
+      "kind": "recruiter",
+      "official_domain": "randstadprofessional.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Zanders",
+      "kind": "recruiter",
+      "official_domain": "zandersgroup.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "JP Morgan Chase",
+      "kind": "employer",
+      "official_domain": "jpmorgan.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Standard Chartered",
+      "kind": "employer",
+      "official_domain": "sc.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "HSBC",
+      "kind": "employer",
+      "official_domain": "hsbc.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "MUFG",
+      "kind": "employer",
+      "official_domain": "mufg.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Mizuho",
+      "kind": "employer",
+      "official_domain": "mizuhogroup.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "McKinsey",
+      "kind": "employer",
+      "official_domain": "mckinsey.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "BCG",
+      "kind": "employer",
+      "official_domain": "bcg.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Bain & Co",
+      "kind": "employer",
+      "official_domain": "bain.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "ING",
+      "kind": "employer",
+      "official_domain": "ing.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Rabobank",
+      "kind": "employer",
+      "official_domain": "rabobank.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "ASN Bank",
+      "kind": "employer",
+      "official_domain": "asnbank.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "NN Bank",
+      "kind": "employer",
+      "official_domain": "nn-careers.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Triodos Bank",
+      "kind": "employer",
+      "official_domain": "triodos.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Barclays",
+      "kind": "employer",
+      "official_domain": "barclays.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Zurich Insurance",
+      "kind": "employer",
+      "official_domain": "zurich.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Deutsche Bank",
+      "kind": "employer",
+      "official_domain": "db.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "American Express",
+      "kind": "employer",
+      "official_domain": "americanexpress.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Visa",
+      "kind": "employer",
+      "official_domain": "visa.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Mastercard",
+      "kind": "employer",
+      "official_domain": "mastercard.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Leaseplan / Ayvens Bank",
+      "kind": "employer",
+      "official_domain": "ayvens.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Google",
+      "kind": "employer",
+      "official_domain": "google.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "GFT",
+      "kind": "employer",
+      "official_domain": "gft.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Meta",
+      "kind": "employer",
+      "official_domain": "metacareers.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "OpenAI",
+      "kind": "employer",
+      "official_domain": "openai.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Microsoft",
+      "kind": "employer",
+      "official_domain": "microsoft.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Mollie",
+      "kind": "employer",
+      "official_domain": "mollie.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "N26",
+      "kind": "employer",
+      "official_domain": "n26.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Revolut",
+      "kind": "employer",
+      "official_domain": "revolut.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Wise",
+      "kind": "employer",
+      "official_domain": "wise.jobs",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Coinmerce",
+      "kind": "employer",
+      "official_domain": "coinmerce.io",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "BNP Paribas",
+      "kind": "employer",
+      "official_domain": "bnpparibas.nl",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Zerohash",
+      "kind": "employer",
+      "official_domain": "zero-hash.breezy.hr",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "PayPal",
+      "kind": "employer",
+      "official_domain": "paypal.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "PROVEN",
+          "evidence_url": "https://paypal.eightfold.ai/careers",
+          "checked_at": "2026-10-03T08:45:00Z"
+        }
+      }
+    },
+    {
+      "name": "Payhawk",
+      "kind": "employer",
+      "official_domain": "payhawk.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Stripe",
+      "kind": "employer",
+      "official_domain": "stripe.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Morgan Stanley",
+      "kind": "employer",
+      "official_domain": "morganstanley.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Worldline",
+      "kind": "employer",
+      "official_domain": "worldline.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Remote.com",
+      "kind": "employer",
+      "official_domain": "remote.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Airwallex",
+      "kind": "employer",
+      "official_domain": "airwallex.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Surepay",
+      "kind": "employer",
+      "official_domain": "surepay.eu",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Van Lanschot",
+      "kind": "employer",
+      "official_domain": "vanlanschotkempen.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Ripple",
+      "kind": "employer",
+      "official_domain": "ripple.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Thunes",
+      "kind": "employer",
+      "official_domain": "thunes.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Checkout.com",
+      "kind": "employer",
+      "official_domain": "checkout.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Mambu",
+      "kind": "employer",
+      "official_domain": "mambu.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Finom",
+      "kind": "employer",
+      "official_domain": "jobs.eu.lever.co",
+      "platforms": {
+        "lever": {
+          "status": "PROVEN",
+          "evidence_url": "https://jobs.eu.lever.co/pnlfin/",
+          "checked_at": "2026-10-03T08:45:00Z"
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Tide",
+      "kind": "employer",
+      "official_domain": "tide.co",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "IBANfirst",
+      "kind": "employer",
+      "official_domain": "ibanfirst.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "EU Remote jobs",
+      "kind": "employer",
+      "official_domain": "euremotejobs.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Zanders",
+      "kind": "employer",
+      "official_domain": "zandersgroup.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "State Street",
+      "kind": "employer",
+      "official_domain": "statestreet.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Kroll",
+      "kind": "employer",
+      "official_domain": "kroll.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Commerzbank",
+      "kind": "employer",
+      "official_domain": "commerzbank.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Lloyds Banking Group",
+      "kind": "employer",
+      "official_domain": "lloydsbankinggroup.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Crédit Agricole CIB",
+      "kind": "employer",
+      "official_domain": "ca-cib.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Nordea",
+      "kind": "employer",
+      "official_domain": "nordea.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    }
+  ]
+}
