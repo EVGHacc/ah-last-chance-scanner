@@ -53,9 +53,11 @@ jobs:
       - name: Independent guardian QA
         if: steps.gate.outputs.run == 'true'
         run: |
-          python -m py_compile scanner.py scripts/auth_state.py scripts/persist.py scripts/publish.py scripts/session.py scripts/guardian.py
+          python -m py_compile scanner.py scripts/auth_state.py scripts/persist.py scripts/publish.py scripts/session.py scripts/guardian.py scripts/production_health.py
           python scripts/session.py --self-test
           python scripts/guardian.py --self-test
+          python scripts/production_health.py --self-test
+          python scripts/production_health.py --preflight
       - name: Guard production output and self-heal
         if: steps.gate.outputs.run == 'true'
         env:
