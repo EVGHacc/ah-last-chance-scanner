@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/session.yml'
+      - 'scripts/production_kick.txt'
   schedule:
     # Local 16:47/53/59, 17:07/13/19, 18:11/17/23; UTC alternatives for DST.
     # Starting early gives GitHub queue delays headroom; no top-of-hour starts.
