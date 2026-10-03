@@ -15,14 +15,18 @@ def detail(i):
             "jobAd":{"sections":{"jobDescription":{"text":"Lead regulatory compliance and governance."}}}}
 
 class SmartRecruitersIndependentQA(unittest.TestCase):
-    def test_network_failure_is_fail_closed(self):
+    def test_network_failure_is_fail_closed_for_every_configured_source(self):
         r=run_batch(lambda url: (_ for _ in ()).throw(TransportError("network failure")))
-        self.assertEqual((r["verified_complete"],r["failed"]),(0,1));self.assertEqual(r["sources"][0]["jobs"],[])
+        self.assertEqual(r["verified_complete"],0)
+        self.assertEqual(r["failed"],r["configured_sources"])
+        self.assertTrue(r["sources"])
+        self.assertTrue(all(row["coverage"]=="unproven" and row["jobs"]==[] for row in r["sources"]))
     def test_http_429_is_fail_closed(self):
         r=run_batch(lambda url: (_ for _ in ()).throw(TransportError("HTTP 429")))
-        self.assertEqual(r["sources"][0]["coverage"],"unproven")
+        self.assertTrue(all(row["coverage"]=="unproven" for row in r["sources"]))
     def test_malformed_payload_is_not_coverage(self):
-        r=run_batch(lambda url:{"unexpected":[]});self.assertEqual(r["sources"][0]["coverage"],"unproven")
+        r=run_batch(lambda url:{"unexpected":[]})
+        self.assertTrue(all(row["coverage"]=="unproven" for row in r["sources"]))
     def test_duplicate_is_rejected(self):
         with self.assertRaises(SmartRecruitersError):inventory("Varrlyn",lambda url:listing(["x","x"],2))
     def test_incomplete_pagination_is_rejected(self):
