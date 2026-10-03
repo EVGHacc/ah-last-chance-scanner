@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-03",
   "weekday": "Saturday",
-  "scheduledSlot": "20:40",
-  "scheduledAt": "2026-10-03T20:40:00+02:00",
-  "rawScheduledSlot": "20:40",
-  "rawScheduledAt": "2026-10-03T20:40:00+02:00",
-  "startedAt": "2026-10-03T20:40:00.287057+02:00",
-  "completedAt": "2026-10-03T20:40:04.530636+02:00",
-  "checkedAt": "2026-10-03T20:40:04.530636+02:00",
+  "scheduledSlot": "20:42",
+  "scheduledAt": "2026-10-03T20:42:00+02:00",
+  "rawScheduledSlot": "20:42",
+  "rawScheduledAt": "2026-10-03T20:42:00+02:00",
+  "startedAt": "2026-10-03T20:42:00.274851+02:00",
+  "completedAt": "2026-10-03T20:42:05.203867+02:00",
+  "checkedAt": "2026-10-03T20:42:05.203867+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 221,
+      "totalBargainItems": 225,
       "meatItems": 17,
       "meat70Items": 2,
       "meat70Stock": 3.0,
@@ -874,7 +874,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 16,
+          "stock": 12,
           "priceWas": "0.29",
           "priceNow": "0.22",
           "markdownExpirationDate": "2026-10-03"
@@ -1144,18 +1144,6 @@
           "markdownExpirationDate": "2026-10-03"
         },
         {
-          "productId": 230718,
-          "title": "AH Pistolet wit",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 6,
-          "priceWas": "0.29",
-          "priceNow": "0.25",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
           "productId": 230710,
           "title": "AH Ham kaas croissant",
           "brand": "AH",
@@ -1187,6 +1175,18 @@
           "category": "Bakkerij",
           "discountPct": 15,
           "stock": 3,
+          "priceWas": "0.29",
+          "priceNow": "0.25",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 230718,
+          "title": "AH Pistolet wit",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
           "priceWas": "0.29",
           "priceNow": "0.25",
           "markdownExpirationDate": "2026-10-03"
@@ -3172,18 +3172,6 @@
           "markdownExpirationDate": "2026-10-03"
         },
         {
-          "productId": 417148,
-          "title": "AH Vloerbrood volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
           "productId": 277519,
           "title": "AH Vloerbrood volkoren half",
           "brand": "AH",
@@ -3217,6 +3205,18 @@
           "stock": 1,
           "priceWas": "0.89",
           "priceNow": "0.67",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 417148,
+          "title": "AH Vloerbrood volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
           "markdownExpirationDate": "2026-10-03"
         },
         {
