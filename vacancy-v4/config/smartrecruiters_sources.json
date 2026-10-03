@@ -1,1 +1,21 @@
-{"schema_version":1,"provider":"smartrecruiters","sources":[{"name":"Varrlyn","company_identifier":"Varrlyn","first_party_evidence_url":"https://varrlyn.com/careers/"}]}
+{
+  "schema_version": 1,
+  "provider": "smartrecruiters",
+  "sources": [
+    {
+      "name": "Varrlyn",
+      "company_identifier": "Varrlyn",
+      "first_party_evidence_url": "https://careers.smartrecruiters.com/Varrlyn/"
+    },
+    {
+      "name": "Wise",
+      "company_identifier": "Wise",
+      "first_party_evidence_url": "https://jobs.smartrecruiters.com/Wise/"
+    },
+    {
+      "name": "Visa",
+      "company_identifier": "Visa",
+      "first_party_evidence_url": "https://careers.smartrecruiters.com/Visa"
+    }
+  ]
+}
