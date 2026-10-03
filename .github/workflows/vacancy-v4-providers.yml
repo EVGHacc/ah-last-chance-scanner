@@ -1,0 +1,68 @@
+name: Vacancy v4 provider production proofs
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [vacancy-v4-clean-sheet]
+    paths:
+      - 'vacancy-v4/app/**'
+      - 'vacancy-v4/config/**'
+      - 'vacancy-v4/tests/**'
+      - '.github/workflows/vacancy-v4-providers.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  proof:
+    strategy:
+      fail-fast: false
+      matrix:
+        provider: [lever, smartrecruiters, eightfold]
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: vacancy-v4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Exact unittest discovery
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Production proof 1
+        env:
+          PROVIDER: ${{ matrix.provider }}
+        run: |
+          python - <<'PY'
+          import importlib,json,os,pathlib,sys
+          p=os.environ["PROVIDER"]
+          m=importlib.import_module(f"app.{p}_batch")
+          r=m.run_batch()
+          pathlib.Path(f"{p}-proof-1.json").write_text(json.dumps(r,ensure_ascii=False,indent=2)+"\n")
+          print(json.dumps({"provider":p,"proof":1,"verified":r["verified_complete"],"failed":r["failed"]}))
+          sys.exit(1 if r["failed"] else 0)
+          PY
+      - name: Production proof 2
+        env:
+          PROVIDER: ${{ matrix.provider }}
+        run: |
+          python - <<'PY'
+          import importlib,json,os,pathlib,sys
+          p=os.environ["PROVIDER"]
+          m=importlib.import_module(f"app.{p}_batch")
+          r=m.run_batch()
+          pathlib.Path(f"{p}-proof-2.json").write_text(json.dumps(r,ensure_ascii=False,indent=2)+"\n")
+          print(json.dumps({"provider":p,"proof":2,"verified":r["verified_complete"],"failed":r["failed"]}))
+          sys.exit(1 if r["failed"] else 0)
+          PY
+      - name: Upload immutable proof evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.provider }}-proofs-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            vacancy-v4/${{ matrix.provider }}-proof-1.json
+            vacancy-v4/${{ matrix.provider }}-proof-2.json
+          if-no-files-found: warn
+          retention-days: 90
