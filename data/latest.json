@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-03",
   "weekday": "Saturday",
-  "scheduledSlot": "22:24",
-  "scheduledAt": "2026-10-03T22:24:00+02:00",
-  "rawScheduledSlot": "22:24",
-  "rawScheduledAt": "2026-10-03T22:24:00+02:00",
-  "startedAt": "2026-10-03T22:24:00.310979+02:00",
-  "completedAt": "2026-10-03T22:24:04.864059+02:00",
-  "checkedAt": "2026-10-03T22:24:04.864059+02:00",
+  "scheduledSlot": "22:25",
+  "scheduledAt": "2026-10-03T22:25:00+02:00",
+  "rawScheduledSlot": "22:25",
+  "rawScheduledAt": "2026-10-03T22:25:00+02:00",
+  "startedAt": "2026-10-03T22:25:00.275496+02:00",
+  "completedAt": "2026-10-03T22:25:04.663292+02:00",
+  "checkedAt": "2026-10-03T22:25:04.663292+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -605,11 +605,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 208,
+      "totalBargainItems": 229,
       "meatItems": 8,
       "meat70Items": 4,
       "meat70Stock": 8.0,
-      "bakeryItems": 27,
+      "bakeryItems": 32,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -772,6 +772,30 @@
           "markdownExpirationDate": "2026-10-03"
         },
         {
+          "productId": 584031,
+          "title": "AH Rond wit sesam half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.59",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 584032,
+          "title": "AH Rond wit sesam heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "1.13",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
           "productId": 168184,
           "title": "AH Tijger wit heel",
           "brand": "AH",
@@ -841,6 +865,18 @@
           "stock": 2,
           "priceWas": "1.39",
           "priceNow": "1.04",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 571174,
+          "title": "AH Jalapeño kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-10-03"
         },
         {
@@ -976,6 +1012,18 @@
           "markdownExpirationDate": "2026-10-03"
         },
         {
+          "productId": 578706,
+          "title": "AH Eierkoeken volkoren",
+          "brand": "AH",
+          "size": "360 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
           "productId": 606747,
           "title": "Dr. Oetker Deco drip choco smaak",
           "brand": "Dr. Oetker",
@@ -985,6 +1033,18 @@
           "stock": 6,
           "priceWas": "4.19",
           "priceNow": "2.10",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 589024,
+          "title": "Dr. Oetker Kwarktaart eigen fruit bakmix",
+          "brand": "Dr. Oetker",
+          "size": "210 g",
+          "category": "Bakkerij",
+          "discountPct": 50,
+          "stock": 5,
+          "priceWas": "3.29",
+          "priceNow": "1.65",
           "markdownExpirationDate": "2026-10-11"
         },
         {
