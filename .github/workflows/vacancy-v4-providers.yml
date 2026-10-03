@@ -30,14 +30,38 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Top-level clean-sheet tests
+      - name: Clean-sheet manifest tests
         run: python -m unittest discover -s tests -p 'test_*.py' -v
 
-      - name: Developer unit and provider contract tests
-        run: python -m unittest discover -s tests/unit -p 'test_*.py' -v
+      - name: Shared certification and transport tests
+        run: |
+          python -m unittest discover -s tests/unit -p 'test_certification_registry.py' -v
+          python -m unittest discover -s tests/unit -p 'test_proof_acceptance.py' -v
+          python -m unittest discover -s tests/unit -p 'test_release_gate.py' -v
+          python -m unittest discover -s tests/unit -p 'test_transport.py' -v
 
-      - name: Independent QA and resilience tests
-        run: python -m unittest discover -s tests/qa -p 'test_*.py' -v
+      - name: Provider unit and contract tests
+        env:
+          PROVIDER: ${{ matrix.provider }}
+        run: python -m unittest discover -s tests/unit -p "test_${PROVIDER}*.py" -v
+
+      - name: Provider independent QA
+        env:
+          PROVIDER: ${{ matrix.provider }}
+        run: |
+          case "$PROVIDER" in
+            lever)
+              python -m unittest discover -s tests/qa -p 'test_lever*.py' -v
+              python -m unittest discover -s tests/qa -p 'test_transport_resilience.py' -v
+              ;;
+            smartrecruiters)
+              python -m unittest discover -s tests/qa -p 'test_smartrecruiters*.py' -v
+              python -m unittest discover -s tests/qa -p 'test_transport_resilience.py' -v
+              ;;
+            eightfold)
+              python -m unittest discover -s tests/unit -p 'test_eightfold*.py' -v
+              ;;
+          esac
 
       - name: Live provider canary
         env:
