@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-03",
   "weekday": "Saturday",
-  "scheduledSlot": "20:05",
-  "scheduledAt": "2026-10-03T20:05:00+02:00",
-  "rawScheduledSlot": "20:05",
-  "rawScheduledAt": "2026-10-03T20:05:00+02:00",
-  "startedAt": "2026-10-03T20:05:00.288968+02:00",
-  "completedAt": "2026-10-03T20:05:05.080747+02:00",
-  "checkedAt": "2026-10-03T20:05:05.080747+02:00",
+  "scheduledSlot": "20:06",
+  "scheduledAt": "2026-10-03T20:06:00+02:00",
+  "rawScheduledSlot": "20:06",
+  "rawScheduledAt": "2026-10-03T20:06:00+02:00",
+  "startedAt": "2026-10-03T20:06:00.294591+02:00",
+  "completedAt": "2026-10-03T20:06:04.622864+02:00",
+  "checkedAt": "2026-10-03T20:06:04.622864+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -832,18 +832,6 @@
           "markdownExpirationDate": "2026-10-03"
         },
         {
-          "productId": 584031,
-          "title": "AH Rond wit sesam half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
           "productId": 561015,
           "title": "AH Liefde & Passie Petit volkoren",
           "brand": "AH Liefde & Passie",
@@ -877,6 +865,18 @@
           "stock": 2,
           "priceWas": "0.65",
           "priceNow": "0.49",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 584031,
+          "title": "AH Rond wit sesam half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-10-03"
         },
         {
