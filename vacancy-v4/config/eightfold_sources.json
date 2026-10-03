@@ -1,5 +1,14 @@
 {
   "schema_version": 1,
   "provider": "eightfold",
-  "sources": [{"name":"PayPal","tenant":"paypal","domain":"paypal.com","careers_url":"https://paypal.eightfold.ai/careers","mapping_status":"PROVEN"}]
+  "sources": [
+    {
+      "name": "PayPal",
+      "tenant": "paypal",
+      "domain": "paypal.com",
+      "careers_url": "https://paypal.eightfold.ai/careers",
+      "public_inventory_endpoint": "https://paypal.eightfold.ai/api/apply/v2/jobs",
+      "mapping_status": "PROVEN"
+    }
+  ]
 }
