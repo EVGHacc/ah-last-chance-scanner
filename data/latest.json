@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-03",
   "weekday": "Saturday",
-  "scheduledSlot": "20:00",
-  "scheduledAt": "2026-10-03T20:00:00+02:00",
-  "rawScheduledSlot": "20:00",
-  "rawScheduledAt": "2026-10-03T20:00:00+02:00",
-  "startedAt": "2026-10-03T20:00:00.282389+02:00",
-  "completedAt": "2026-10-03T20:00:05.159886+02:00",
-  "checkedAt": "2026-10-03T20:00:05.159886+02:00",
+  "scheduledSlot": "20:03",
+  "scheduledAt": "2026-10-03T20:03:00+02:00",
+  "rawScheduledSlot": "20:03",
+  "rawScheduledAt": "2026-10-03T20:03:00+02:00",
+  "startedAt": "2026-10-03T20:03:00.319847+02:00",
+  "completedAt": "2026-10-03T20:03:05.525255+02:00",
+  "checkedAt": "2026-10-03T20:03:05.525255+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -29,7 +29,7 @@
       "meatItems": 11,
       "meat70Items": 5,
       "meat70Stock": 7.0,
-      "bakeryItems": 43,
+      "bakeryItems": 42,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -237,6 +237,18 @@
           "stock": 2,
           "priceWas": "1.29",
           "priceNow": "0.97",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 168183,
+          "title": "AH Tijger volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
           "markdownExpirationDate": "2026-10-03"
         },
         {
@@ -528,18 +540,6 @@
           "markdownExpirationDate": "2026-10-03"
         },
         {
-          "productId": 168183,
-          "title": "AH Tijger volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "1.99",
-          "priceNow": "1.69",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
           "productId": 561015,
           "title": "AH Liefde & Passie Petit volkoren",
           "brand": "AH Liefde & Passie",
@@ -549,18 +549,6 @@
           "stock": 2,
           "priceWas": "2.29",
           "priceNow": "1.95",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
-          "productId": 584032,
-          "title": "AH Rond wit sesam heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.89",
-          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-03"
         },
         {
@@ -832,6 +820,18 @@
       ],
       "bakery": [
         {
+          "productId": 417144,
+          "title": "AH Vloerbrood wit heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 3,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
           "productId": 230720,
           "title": "AH Frikandelbroodje",
           "brand": "AH",
@@ -865,18 +865,6 @@
           "stock": 3,
           "priceWas": "0.99",
           "priceNow": "0.74",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
-          "productId": 417144,
-          "title": "AH Vloerbrood wit heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
           "markdownExpirationDate": "2026-10-03"
         },
         {
@@ -973,6 +961,18 @@
           "stock": 1,
           "priceWas": "1.99",
           "priceNow": "1.49",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 561021,
+          "title": "AH Vloer waldkorn heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
           "markdownExpirationDate": "2026-10-03"
         },
         {
@@ -1237,18 +1237,6 @@
           "stock": 1,
           "priceWas": "0.99",
           "priceNow": "0.84",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
-          "productId": 561021,
-          "title": "AH Vloer waldkorn heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "2.69",
-          "priceNow": "2.29",
           "markdownExpirationDate": "2026-10-03"
         },
         {
@@ -2125,7 +2113,7 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 170,
+      "totalBargainItems": 169,
       "meatItems": 15,
       "meat70Items": 7,
       "meat70Stock": 17.0,
@@ -2333,10 +2321,22 @@
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
-          "discountPct": 25,
+          "discountPct": 40,
           "stock": 7,
           "priceWas": "2.69",
-          "priceNow": "2.02",
+          "priceNow": "1.61",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 168183,
+          "title": "AH Tijger volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
           "markdownExpirationDate": "2026-10-03"
         },
         {
@@ -2361,6 +2361,30 @@
           "stock": 4,
           "priceWas": "2.69",
           "priceNow": "2.02",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 417148,
+          "title": "AH Vloerbrood volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 487301,
+          "title": "AH Rond volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "1.89",
+          "priceNow": "1.42",
           "markdownExpirationDate": "2026-10-03"
         },
         {
@@ -2424,6 +2448,18 @@
           "markdownExpirationDate": "2026-10-03"
         },
         {
+          "productId": 584032,
+          "title": "AH Rond wit sesam heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "1.42",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
           "productId": 230710,
           "title": "AH Ham kaas croissant",
           "brand": "AH",
@@ -2469,42 +2505,6 @@
           "stock": 5,
           "priceWas": "1.19",
           "priceNow": "1.01",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
-          "productId": 168183,
-          "title": "AH Tijger volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "1.99",
-          "priceNow": "1.69",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
-          "productId": 417148,
-          "title": "AH Vloerbrood volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "2.69",
-          "priceNow": "2.29",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
-          "productId": 487301,
-          "title": "AH Rond volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "1.89",
-          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-03"
         },
         {
@@ -2601,18 +2601,6 @@
           "stock": 2,
           "priceWas": "1.39",
           "priceNow": "1.18",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
-          "productId": 584032,
-          "title": "AH Rond wit sesam heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.89",
-          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-03"
         },
         {
@@ -2765,10 +2753,10 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 127,
-      "meatItems": 14,
+      "totalBargainItems": 129,
+      "meatItems": 16,
       "meat70Items": 12,
-      "meat70Stock": 23.0,
+      "meat70Stock": 24.0,
       "bakeryItems": 35,
       "bakery70Items": 0,
       "bakery70Stock": 0,
@@ -2906,16 +2894,28 @@
           "markdownExpirationDate": "2026-10-03"
         },
         {
-          "productId": 385506,
-          "title": "AH Biologisch Gerookte kipfilet",
-          "brand": "AH Biologisch",
-          "size": "ca. 125 g",
+          "productId": 533080,
+          "title": "AH Scharrel kipfilet blokjes",
+          "brand": "AH",
+          "size": "300 g",
           "category": "Vlees",
-          "discountPct": 70,
+          "discountPct": 25,
           "stock": 1,
-          "priceWas": "4.72",
-          "priceNow": "1.42",
-          "markdownExpirationDate": "2026-10-03"
+          "priceWas": "5.49",
+          "priceNow": "4.12",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 531827,
+          "title": "AH Scharrel kipfilet stukjes roerbak",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "5.49",
+          "priceNow": "4.12",
+          "markdownExpirationDate": "2026-10-04"
         },
         {
           "productId": 165535,
@@ -2928,6 +2928,18 @@
           "priceWas": "2.88",
           "priceNow": "2.16",
           "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 385506,
+          "title": "AH Biologisch Gerookte kipfilet",
+          "brand": "AH Biologisch",
+          "size": "ca. 125 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "4.72",
+          "priceNow": "1.42",
+          "markdownExpirationDate": "2026-10-06"
         },
         {
           "productId": 580671,
@@ -2986,7 +2998,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 4,
+          "stock": 3,
           "priceWas": "2.69",
           "priceNow": "2.02",
           "markdownExpirationDate": "2026-10-03"
@@ -3001,6 +3013,30 @@
           "stock": 2,
           "priceWas": "1.99",
           "priceNow": "1.49",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 561017,
+          "title": "AH Tijger tarwe maïs heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
+          "markdownExpirationDate": "2026-10-03"
+        },
+        {
+          "productId": 584032,
+          "title": "AH Rond wit sesam heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "1.42",
           "markdownExpirationDate": "2026-10-03"
         },
         {
@@ -3208,18 +3244,6 @@
           "markdownExpirationDate": "2026-10-03"
         },
         {
-          "productId": 561017,
-          "title": "AH Tijger tarwe maïs heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "1.99",
-          "priceNow": "1.69",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
           "productId": 417148,
           "title": "AH Vloerbrood volkoren heel",
           "brand": "AH",
@@ -3253,18 +3277,6 @@
           "stock": 2,
           "priceWas": "0.29",
           "priceNow": "0.25",
-          "markdownExpirationDate": "2026-10-03"
-        },
-        {
-          "productId": 584032,
-          "title": "AH Rond wit sesam heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.89",
-          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-03"
         },
         {
