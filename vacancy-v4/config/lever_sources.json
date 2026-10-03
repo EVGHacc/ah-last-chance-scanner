@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "provider": "lever",
+  "sources": [
+    {
+      "name": "Finom",
+      "instance": "eu",
+      "slug": "pnlfin",
+      "board_url": "https://jobs.eu.lever.co/pnlfin/",
+      "mapping_status": "PROVEN",
+      "authority": "v4 manifest first-party ATS host"
+    }
+  ]
+}
