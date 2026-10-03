@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-03",
   "weekday": "Saturday",
-  "scheduledSlot": "21:30",
-  "scheduledAt": "2026-10-03T21:30:00+02:00",
-  "rawScheduledSlot": "21:30",
-  "rawScheduledAt": "2026-10-03T21:30:00+02:00",
-  "startedAt": "2026-10-03T21:30:00.287893+02:00",
-  "completedAt": "2026-10-03T21:30:04.827745+02:00",
-  "checkedAt": "2026-10-03T21:30:04.827745+02:00",
+  "scheduledSlot": "21:33",
+  "scheduledAt": "2026-10-03T21:33:00+02:00",
+  "rawScheduledSlot": "21:33",
+  "rawScheduledAt": "2026-10-03T21:33:00+02:00",
+  "startedAt": "2026-10-03T21:33:00.321641+02:00",
+  "completedAt": "2026-10-03T21:33:05.136792+02:00",
+  "checkedAt": "2026-10-03T21:33:05.136792+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -82,6 +82,18 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
+          "productId": 477571,
+          "title": "AH Scharrel gebraden kipfilet caesar",
+          "brand": "AH",
+          "size": "ca. 150 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "3.79",
+          "priceNow": "2.27",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
           "productId": 612613,
           "title": "AH Scharrel kipburger 6 stuks",
           "brand": "AH",
@@ -115,18 +127,6 @@
           "stock": 2,
           "priceWas": "14.39",
           "priceNow": "10.79",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
-          "productId": 477571,
-          "title": "AH Scharrel gebraden kipfilet caesar",
-          "brand": "AH",
-          "size": "ca. 150 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "3.79",
-          "priceNow": "2.84",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -2878,7 +2878,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 8,
+          "stock": 7,
           "priceWas": "1.09",
           "priceNow": "0.82",
           "markdownExpirationDate": "2026-10-03"
