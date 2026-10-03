@@ -20,6 +20,7 @@ jobs:
       matrix:
         provider: [lever, smartrecruiters, eightfold]
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     defaults:
       run:
         working-directory: vacancy-v4
@@ -28,8 +29,35 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Exact unittest discovery
+
+      - name: Top-level clean-sheet tests
         run: python -m unittest discover -s tests -p 'test_*.py' -v
+
+      - name: Developer unit and provider contract tests
+        run: python -m unittest discover -s tests/unit -p 'test_*.py' -v
+
+      - name: Independent QA and resilience tests
+        run: python -m unittest discover -s tests/qa -p 'test_*.py' -v
+
+      - name: Live provider canary
+        env:
+          PROVIDER: ${{ matrix.provider }}
+        run: |
+          python - <<'PY'
+          import importlib,json,os,pathlib,sys,tempfile
+          p=os.environ["PROVIDER"]
+          m=importlib.import_module(f"app.{p}_batch")
+          cfg=pathlib.Path("config")/f"{p}_sources.json"
+          data=json.loads(cfg.read_text())
+          data["sources"]=data["sources"][:1]
+          with tempfile.NamedTemporaryFile("w",suffix=".json",delete=False) as f:
+              json.dump(data,f)
+              temp=f.name
+          r=m.run_batch(config_path=temp)
+          print(json.dumps({"provider":p,"canary_verified":r["verified_complete"],"failed":r["failed"]}))
+          sys.exit(1 if r["failed"] or r["verified_complete"]!=r["configured_sources"] else 0)
+          PY
+
       - name: Production proof 1
         env:
           PROVIDER: ${{ matrix.provider }}
@@ -43,6 +71,7 @@ jobs:
           print(json.dumps({"provider":p,"proof":1,"verified":r["verified_complete"],"failed":r["failed"]}))
           sys.exit(1 if r["failed"] else 0)
           PY
+
       - name: Production proof 2
         env:
           PROVIDER: ${{ matrix.provider }}
@@ -56,6 +85,7 @@ jobs:
           print(json.dumps({"provider":p,"proof":2,"verified":r["verified_complete"],"failed":r["failed"]}))
           sys.exit(1 if r["failed"] else 0)
           PY
+
       - name: Upload immutable proof evidence
         if: always()
         uses: actions/upload-artifact@v4
