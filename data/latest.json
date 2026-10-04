@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-04",
   "weekday": "Sunday",
-  "scheduledSlot": "18:25",
-  "scheduledAt": "2026-10-04T18:25:00+02:00",
-  "rawScheduledSlot": "18:25",
-  "rawScheduledAt": "2026-10-04T18:25:00+02:00",
-  "startedAt": "2026-10-04T18:25:00.213768+02:00",
-  "completedAt": "2026-10-04T18:25:04.807710+02:00",
-  "checkedAt": "2026-10-04T18:25:04.807710+02:00",
+  "scheduledSlot": "18:27",
+  "scheduledAt": "2026-10-04T18:27:00+02:00",
+  "rawScheduledSlot": "18:27",
+  "rawScheduledAt": "2026-10-04T18:27:00+02:00",
+  "startedAt": "2026-10-04T18:27:00.219169+02:00",
+  "completedAt": "2026-10-04T18:27:04.362776+02:00",
+  "checkedAt": "2026-10-04T18:27:04.362776+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -29,7 +29,7 @@
       "meatItems": 14,
       "meat70Items": 1,
       "meat70Stock": 2.0,
-      "bakeryItems": 50,
+      "bakeryItems": 49,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -312,18 +312,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 429658,
-          "title": "AH Spinazie feta börek",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "1.19",
-          "priceNow": "0.89",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 597345,
           "title": "AH Pretzel",
           "brand": "AH",
@@ -333,6 +321,18 @@
           "stock": 4,
           "priceWas": "0.65",
           "priceNow": "0.49",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 429658,
+          "title": "AH Spinazie feta börek",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "1.19",
+          "priceNow": "0.89",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -669,18 +669,6 @@
           "stock": 1,
           "priceWas": "2.89",
           "priceNow": "2.46",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
-          "productId": 230724,
-          "title": "AH Saucijzenbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -2437,7 +2425,7 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 117,
+      "totalBargainItems": 116,
       "meatItems": 17,
       "meat70Items": 0,
       "meat70Stock": 0,
@@ -2681,8 +2669,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 104,
-      "meatItems": 14,
+      "totalBargainItems": 105,
+      "meatItems": 15,
       "meat70Items": 0,
       "meat70Stock": 0,
       "bakeryItems": 3,
@@ -2808,6 +2796,18 @@
           "priceWas": "4.99",
           "priceNow": "2.99",
           "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 621981,
+          "title": "AH Excellent Wagyu gehakt",
+          "brand": "AH Excellent",
+          "size": "300 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "6.99",
+          "priceNow": "5.24",
+          "markdownExpirationDate": "2026-10-05"
         },
         {
           "productId": 165535,
