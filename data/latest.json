@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-04",
   "weekday": "Sunday",
-  "scheduledSlot": "20:15",
-  "scheduledAt": "2026-10-04T20:15:00+02:00",
-  "rawScheduledSlot": "20:15",
-  "rawScheduledAt": "2026-10-04T20:15:00+02:00",
-  "startedAt": "2026-10-04T20:15:00.222370+02:00",
-  "completedAt": "2026-10-04T20:15:04.944708+02:00",
-  "checkedAt": "2026-10-04T20:15:04.944708+02:00",
+  "scheduledSlot": "20:18",
+  "scheduledAt": "2026-10-04T20:18:00+02:00",
+  "rawScheduledSlot": "20:18",
+  "rawScheduledAt": "2026-10-04T20:18:00+02:00",
+  "startedAt": "2026-10-04T20:18:00.213948+02:00",
+  "completedAt": "2026-10-04T20:18:04.607153+02:00",
+  "checkedAt": "2026-10-04T20:18:04.607153+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2712,18 +2712,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 429658,
-          "title": "AH Spinazie feta börek",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "1.19",
-          "priceNow": "1.01",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 365995,
           "title": "AH Luxe roomboter croissant",
           "brand": "AH",
@@ -2745,6 +2733,18 @@
           "stock": 3,
           "priceWas": "0.69",
           "priceNow": "0.59",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 429658,
+          "title": "AH Spinazie feta börek",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 3,
+          "priceWas": "1.19",
+          "priceNow": "1.01",
           "markdownExpirationDate": "2026-10-04"
         },
         {
