@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-04",
   "weekday": "Sunday",
-  "scheduledSlot": "20:42",
-  "scheduledAt": "2026-10-04T20:42:00+02:00",
-  "rawScheduledSlot": "20:42",
-  "rawScheduledAt": "2026-10-04T20:42:00+02:00",
-  "startedAt": "2026-10-04T20:42:00.226325+02:00",
-  "completedAt": "2026-10-04T20:42:04.996114+02:00",
-  "checkedAt": "2026-10-04T20:42:04.996114+02:00",
+  "scheduledSlot": "20:45",
+  "scheduledAt": "2026-10-04T20:45:00+02:00",
+  "rawScheduledSlot": "20:45",
+  "rawScheduledAt": "2026-10-04T20:45:00+02:00",
+  "startedAt": "2026-10-04T20:45:00.219255+02:00",
+  "completedAt": "2026-10-04T20:45:04.941311+02:00",
+  "checkedAt": "2026-10-04T20:45:04.941311+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2257,11 +2257,11 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 142,
+      "totalBargainItems": 140,
       "meatItems": 13,
       "meat70Items": 3,
       "meat70Stock": 3.0,
-      "bakeryItems": 39,
+      "bakeryItems": 38,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "items": [
@@ -2604,18 +2604,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 606777,
-          "title": "AH Borek kip gyros",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "1.19",
-          "priceNow": "0.89",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 241458,
           "title": "AH Vloerbrood wit half",
           "brand": "AH",
@@ -2637,6 +2625,18 @@
           "stock": 1,
           "priceWas": "0.99",
           "priceNow": "0.74",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 606777,
+          "title": "AH Borek kip gyros",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.19",
+          "priceNow": "0.89",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -2721,18 +2721,6 @@
           "stock": 3,
           "priceWas": "0.69",
           "priceNow": "0.59",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
-          "productId": 429658,
-          "title": "AH Spinazie feta börek",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "1.19",
-          "priceNow": "1.01",
           "markdownExpirationDate": "2026-10-04"
         },
         {
