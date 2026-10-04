@@ -136,6 +136,20 @@ def make_items(rows,category):
     return out
 
 
+def make_all_70(rows):
+    out=[]
+    for x in rows:
+        m=x.get('markdown') or {}
+        try:
+            discount=float(m.get('markdownPercentage',0) or 0)
+        except (TypeError,ValueError):
+            discount=0
+        if discount<70: continue
+        p=x.get('product') or {}; bp=x.get('bargainPrice') or {}
+        out.append({'productId':p.get('id'),'title':p.get('title',''),'brand':p.get('brand',''),'size':p.get('salesUnitSize',''),'category':str(x.get('categoryTitle','')),'discountPct':m.get('markdownPercentage',0) or 0,'stock':x.get('stock',0) or 0,'priceWas':bp.get('priceWas'),'priceNow':bp.get('priceNow'),'markdownExpirationDate':m.get('markdownExpirationDate')})
+    return out
+
+
 def intended_minute(mins):
     if not (START<=mins<=END): return False
     return (mins-START)%3==0 or (mins-START)%5==0
@@ -161,11 +175,11 @@ def fetch_store(sid,name,access,attempts=4):
         status,data=post('/graphql',{'query':QUERY,'variables':{'storeId':str(sid)}},access,attempts=2)
         if status==200 and not data.get('errors'):
             rows=(data.get('data') or {}).get('bargainItems') or []
-            meat=make_items(rows,'Vlees'); bakery=make_items(rows,'Bakkerij')
+            meat=make_items(rows,'Vlees'); bakery=make_items(rows,'Bakkerij'); all70=make_all_70(rows)
             m70=[x for x in meat if float(x['discountPct'])>=70]; b70=[x for x in bakery if float(x['discountPct'])>=70]
-            return {'storeId':sid,'store':name,'fetched':True,'totalBargainItems':len(rows),'meatItems':len(meat),'meat70Items':len(m70),'meat70Stock':sum(float(x['stock']) for x in m70),'bakeryItems':len(bakery),'bakery70Items':len(b70),'bakery70Stock':sum(float(x['stock']) for x in b70),'items':meat,'bakery':bakery}
+            return {'storeId':sid,'store':name,'fetched':True,'totalBargainItems':len(rows),'meatItems':len(meat),'meat70Items':len(m70),'meat70Stock':sum(float(x['stock']) for x in m70),'bakeryItems':len(bakery),'bakery70Items':len(b70),'bakery70Stock':sum(float(x['stock']) for x in b70),'all70Items':len(all70),'all70Stock':sum(float(x['stock']) for x in all70),'all70':all70,'items':meat,'bakery':bakery}
         if attempt<attempts: time.sleep(min(4,2**(attempt-1)))
-    return {'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,'bakery70Items':0,'bakery70Stock':0,'items':[],'bakery':[],'error':f'HTTP {status}: {data}'[:350]}
+    return {'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,'bakery70Items':0,'bakery70Stock':0,'all70Items':0,'all70Stock':0,'all70':[],'items':[],'bakery':[],'error':f'HTTP {status}: {data}'[:350]}
 
 
 def main():
