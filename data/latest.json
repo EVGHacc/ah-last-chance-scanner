@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-04",
   "weekday": "Sunday",
-  "scheduledSlot": "18:36",
-  "scheduledAt": "2026-10-04T18:36:00+02:00",
-  "rawScheduledSlot": "18:36",
-  "rawScheduledAt": "2026-10-04T18:36:00+02:00",
-  "startedAt": "2026-10-04T18:36:00.229407+02:00",
-  "completedAt": "2026-10-04T18:36:04.149688+02:00",
-  "checkedAt": "2026-10-04T18:36:04.149688+02:00",
+  "scheduledSlot": "18:39",
+  "scheduledAt": "2026-10-04T18:39:00+02:00",
+  "rawScheduledSlot": "18:39",
+  "rawScheduledAt": "2026-10-04T18:39:00+02:00",
+  "startedAt": "2026-10-04T18:39:00.252722+02:00",
+  "completedAt": "2026-10-04T18:39:04.683759+02:00",
+  "checkedAt": "2026-10-04T18:39:04.683759+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,8 +25,8 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 194,
-      "meatItems": 14,
+      "totalBargainItems": 193,
+      "meatItems": 13,
       "meat70Items": 1,
       "meat70Stock": 2.0,
       "bakeryItems": 49,
@@ -115,18 +115,6 @@
           "stock": 1,
           "priceWas": "4.29",
           "priceNow": "2.57",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
-          "productId": 619321,
-          "title": "AH Gemengd gehakt",
-          "brand": "AH",
-          "size": "1 kg",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "8.99",
-          "priceNow": "5.39",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -1329,24 +1317,36 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 273,
-      "meatItems": 16,
-      "meat70Items": 1,
-      "meat70Stock": 1.0,
+      "totalBargainItems": 271,
+      "meatItems": 15,
+      "meat70Items": 2,
+      "meat70Stock": 2.0,
       "bakeryItems": 71,
-      "bakery70Items": 1,
-      "bakery70Stock": 1.0,
+      "bakery70Items": 2,
+      "bakery70Stock": 2.0,
       "items": [
         {
-          "productId": 187604,
-          "title": "AH Varkensschnitzel gepaneerd",
+          "productId": 40562,
+          "title": "AH Varkensriblap",
           "brand": "AH",
-          "size": "300 g",
+          "size": "ca. 500 g",
           "category": "Vlees",
           "discountPct": 70,
           "stock": 1,
-          "priceWas": "3.69",
-          "priceNow": "1.11",
+          "priceWas": "5.45",
+          "priceNow": "1.64",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 166284,
+          "title": "AH Excellent Hazenrugfilet",
+          "brand": "AH Excellent",
+          "size": "ca. 220 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "11.00",
+          "priceNow": "3.30",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -1386,18 +1386,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 40562,
-          "title": "AH Varkensriblap",
-          "brand": "AH",
-          "size": "ca. 500 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "5.45",
-          "priceNow": "3.27",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 436877,
           "title": "AH Biologisch Rundergehakt balletjes",
           "brand": "AH Biologisch",
@@ -1431,18 +1419,6 @@
           "stock": 1,
           "priceWas": "14.49",
           "priceNow": "7.39",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
-          "productId": 166284,
-          "title": "AH Excellent Hazenrugfilet",
-          "brand": "AH Excellent",
-          "size": "ca. 220 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "11.00",
-          "priceNow": "6.60",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -1544,6 +1520,18 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
+          "productId": 553584,
+          "title": "AH Mini naanbrood knoflook koriander",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Bakkerij",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "0.57",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
           "productId": 417148,
           "title": "AH Vloerbrood volkoren heel",
           "brand": "AH",
@@ -1625,18 +1613,6 @@
           "stock": 2,
           "priceWas": "1.45",
           "priceNow": "0.87",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
-          "productId": 553584,
-          "title": "AH Mini naanbrood knoflook koriander",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "1.89",
-          "priceNow": "1.13",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -2389,7 +2365,7 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 116,
+      "totalBargainItems": 115,
       "meatItems": 17,
       "meat70Items": 0,
       "meat70Stock": 0,
@@ -2633,8 +2609,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 107,
-      "meatItems": 18,
+      "totalBargainItems": 110,
+      "meatItems": 20,
       "meat70Items": 0,
       "meat70Stock": 0,
       "bakeryItems": 3,
@@ -2786,6 +2762,18 @@
           "markdownExpirationDate": "2026-10-05"
         },
         {
+          "productId": 597942,
+          "title": "AH Biologisch Varkenschipolata",
+          "brand": "AH Biologisch",
+          "size": "215 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "2.99",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
           "productId": 597944,
           "title": "AH Biologisch Varkensschnitzel",
           "brand": "AH Biologisch",
@@ -2795,6 +2783,18 @@
           "stock": 1,
           "priceWas": "6.50",
           "priceNow": "4.88",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 436755,
+          "title": "AH Biologisch Rundervink",
+          "brand": "AH Biologisch",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "4.99",
+          "priceNow": "3.74",
           "markdownExpirationDate": "2026-10-05"
         },
         {
