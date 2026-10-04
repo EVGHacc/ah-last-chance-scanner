@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-04",
   "weekday": "Sunday",
-  "scheduledSlot": "17:55",
-  "scheduledAt": "2026-10-04T17:55:00+02:00",
-  "rawScheduledSlot": "17:55",
-  "rawScheduledAt": "2026-10-04T17:55:00+02:00",
-  "startedAt": "2026-10-04T17:55:00.238669+02:00",
-  "completedAt": "2026-10-04T17:55:06.192211+02:00",
-  "checkedAt": "2026-10-04T17:55:06.192211+02:00",
+  "scheduledSlot": "17:57",
+  "scheduledAt": "2026-10-04T17:57:00+02:00",
+  "rawScheduledSlot": "17:57",
+  "rawScheduledAt": "2026-10-04T17:57:00+02:00",
+  "startedAt": "2026-10-04T17:57:00.211493+02:00",
+  "completedAt": "2026-10-04T17:57:04.279237+02:00",
+  "checkedAt": "2026-10-04T17:57:04.279237+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -749,11 +749,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 215,
+      "totalBargainItems": 214,
       "meatItems": 8,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 46,
+      "bakeryItems": 45,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -1252,18 +1252,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 561017,
-          "title": "AH Tijger tarwe maïs heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.99",
-          "priceNow": "1.69",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 440472,
           "title": "AH Kaas ruitbroodje wit",
           "brand": "AH",
@@ -1712,18 +1700,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 417148,
-          "title": "AH Vloerbrood volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 8,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 411164,
           "title": "AH Kaas uienbroodje",
           "brand": "AH",
@@ -1733,6 +1709,18 @@
           "stock": 8,
           "priceWas": "1.39",
           "priceNow": "1.04",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 417148,
+          "title": "AH Vloerbrood volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 7,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -1856,18 +1844,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 425912,
-          "title": "AH Focaccia pepperoni",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "1.59",
-          "priceNow": "1.19",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 578301,
           "title": "AH Liefde & Passie OerDesem zonne rogge",
           "brand": "AH Liefde & Passie",
@@ -1925,6 +1901,18 @@
           "stock": 3,
           "priceWas": "2.69",
           "priceNow": "2.02",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 425912,
+          "title": "AH Focaccia pepperoni",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "1.59",
+          "priceNow": "1.19",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -2120,18 +2108,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 537022,
-          "title": "AH Pizzabroodje kaas-groente",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "1.09",
-          "priceNow": "0.93",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 544584,
           "title": "AH Liefde & Passie OerDesem Spelt boekweit",
           "brand": "AH Liefde & Passie",
@@ -2177,6 +2153,18 @@
           "stock": 3,
           "priceWas": "2.89",
           "priceNow": "2.46",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 537022,
+          "title": "AH Pizzabroodje kaas-groente",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 3,
+          "priceWas": "1.09",
+          "priceNow": "0.93",
           "markdownExpirationDate": "2026-10-04"
         },
         {
