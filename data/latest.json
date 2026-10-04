@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-04",
   "weekday": "Sunday",
-  "scheduledSlot": "20:10",
-  "scheduledAt": "2026-10-04T20:10:00+02:00",
-  "rawScheduledSlot": "20:10",
-  "rawScheduledAt": "2026-10-04T20:10:00+02:00",
-  "startedAt": "2026-10-04T20:10:00.211980+02:00",
-  "completedAt": "2026-10-04T20:10:04.738800+02:00",
-  "checkedAt": "2026-10-04T20:10:04.738800+02:00",
+  "scheduledSlot": "20:12",
+  "scheduledAt": "2026-10-04T20:12:00+02:00",
+  "rawScheduledSlot": "20:12",
+  "rawScheduledAt": "2026-10-04T20:12:00+02:00",
+  "startedAt": "2026-10-04T20:12:00.214744+02:00",
+  "completedAt": "2026-10-04T20:12:04.809920+02:00",
+  "checkedAt": "2026-10-04T20:12:04.809920+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2610,7 +2610,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
-          "stock": 20,
+          "stock": 17,
           "priceWas": "0.99",
           "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-04"
@@ -2640,18 +2640,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 230734,
-          "title": "Ah kaiserbroodjes wit nat",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 12,
-          "priceWas": "0.29",
-          "priceNow": "0.25",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 459347,
           "title": "AH Tijgerbol wit",
           "brand": "AH",
@@ -2661,6 +2649,18 @@
           "stock": 9,
           "priceWas": "0.35",
           "priceNow": "0.30",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 230734,
+          "title": "Ah kaiserbroodjes wit nat",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 9,
+          "priceWas": "0.29",
+          "priceNow": "0.25",
           "markdownExpirationDate": "2026-10-04"
         },
         {
