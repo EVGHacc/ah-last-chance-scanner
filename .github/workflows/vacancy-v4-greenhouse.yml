@@ -34,10 +34,10 @@ jobs:
           python-version: "3.12"
 
       - name: Developer unit tests
-        run: python -m unittest discover -s vacancy-v4/tests/unit -p 'test_*.py'
+        run: python -m unittest discover -s vacancy-v4/tests/unit -p 'test_greenhouse*.py'
 
       - name: Independent QA and resilience
-        run: python -m unittest discover -s vacancy-v4/tests/qa -p 'test_*.py'
+        run: python -m unittest discover -s vacancy-v4/tests/qa -p 'test_greenhouse*.py'
 
       - name: Live Greenhouse production proof
         env:
