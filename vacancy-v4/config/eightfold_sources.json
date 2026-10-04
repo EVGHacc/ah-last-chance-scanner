@@ -7,7 +7,8 @@
       "tenant": "paypal",
       "domain": "paypal.com",
       "careers_url": "https://paypal.eightfold.ai/careers",
-      "public_inventory_endpoint": "https://paypal.eightfold.ai/api/apply/v2/jobs",
+      "pcsx_search_endpoint": "https://paypal.eightfold.ai/api/pcsx/search",
+      "pcsx_details_endpoint": "https://paypal.eightfold.ai/api/pcsx/position_details",
       "mapping_status": "PROVEN"
     }
   ]
