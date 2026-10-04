@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-04",
   "weekday": "Sunday",
-  "scheduledSlot": "18:20",
-  "scheduledAt": "2026-10-04T18:20:00+02:00",
-  "rawScheduledSlot": "18:20",
-  "rawScheduledAt": "2026-10-04T18:20:00+02:00",
-  "startedAt": "2026-10-04T18:20:00.222237+02:00",
-  "completedAt": "2026-10-04T18:20:05.307500+02:00",
-  "checkedAt": "2026-10-04T18:20:05.307500+02:00",
+  "scheduledSlot": "18:21",
+  "scheduledAt": "2026-10-04T18:21:00+02:00",
+  "rawScheduledSlot": "18:21",
+  "rawScheduledAt": "2026-10-04T18:21:00+02:00",
+  "startedAt": "2026-10-04T18:21:00.219066+02:00",
+  "completedAt": "2026-10-04T18:21:04.232989+02:00",
+  "checkedAt": "2026-10-04T18:21:04.232989+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -450,7 +450,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
-          "stock": 6,
+          "stock": 5,
           "priceWas": "2.69",
           "priceNow": "2.29",
           "markdownExpirationDate": "2026-10-04"
@@ -749,11 +749,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 188,
+      "totalBargainItems": 206,
       "meatItems": 7,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 35,
+      "bakeryItems": 39,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -844,6 +844,18 @@
       ],
       "bakery": [
         {
+          "productId": 571174,
+          "title": "AH Jalapeño kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 5,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
           "productId": 230720,
           "title": "AH Frikandelbroodje",
           "brand": "AH",
@@ -925,6 +937,18 @@
           "stock": 2,
           "priceWas": "1.89",
           "priceNow": "1.42",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 584031,
+          "title": "AH Rond wit sesam half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -1084,6 +1108,18 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
+          "productId": 574950,
+          "title": "AH Pizza donut jalapeño cheddar",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "1.49",
+          "priceNow": "1.27",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
           "productId": 561020,
           "title": "AH Vloer waldkorn half",
           "brand": "AH",
@@ -1166,6 +1202,18 @@
           "priceWas": "1.39",
           "priceNow": "1.18",
           "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 578706,
+          "title": "AH Eierkoeken volkoren",
+          "brand": "AH",
+          "size": "360 g",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "1.49",
+          "priceNow": "0.89",
+          "markdownExpirationDate": "2026-10-05"
         },
         {
           "productId": 212974,
