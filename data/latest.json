@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-04",
   "weekday": "Sunday",
-  "scheduledSlot": "20:45",
-  "scheduledAt": "2026-10-04T20:45:00+02:00",
-  "rawScheduledSlot": "20:45",
-  "rawScheduledAt": "2026-10-04T20:45:00+02:00",
-  "startedAt": "2026-10-04T20:45:00.219255+02:00",
-  "completedAt": "2026-10-04T20:45:04.941311+02:00",
-  "checkedAt": "2026-10-04T20:45:04.941311+02:00",
+  "scheduledSlot": "20:48",
+  "scheduledAt": "2026-10-04T20:48:00+02:00",
+  "rawScheduledSlot": "20:48",
+  "rawScheduledAt": "2026-10-04T20:48:00+02:00",
+  "startedAt": "2026-10-04T20:48:00.214794+02:00",
+  "completedAt": "2026-10-04T20:48:04.994680+02:00",
+  "checkedAt": "2026-10-04T20:48:04.994680+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2460,18 +2460,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 440472,
-          "title": "AH Kaas ruitbroodje wit",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 13,
-          "priceWas": "0.49",
-          "priceNow": "0.37",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 425912,
           "title": "AH Focaccia pepperoni",
           "brand": "AH",
@@ -2493,6 +2481,18 @@
           "stock": 8,
           "priceWas": "0.99",
           "priceNow": "0.74",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 440472,
+          "title": "AH Kaas ruitbroodje wit",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 8,
+          "priceWas": "0.49",
+          "priceNow": "0.37",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -2670,7 +2670,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
-          "stock": 9,
+          "stock": 7,
           "priceWas": "0.29",
           "priceNow": "0.25",
           "markdownExpirationDate": "2026-10-04"
