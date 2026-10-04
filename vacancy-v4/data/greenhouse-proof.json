@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provider": "greenhouse",
-  "generated_at": "2026-10-04T21:19:20.765632+00:00",
+  "generated_at": "2026-10-04T22:19:07.836520+00:00",
   "configured_sources": 2,
   "verified_complete": 2,
   "failed": 0,
@@ -16,7 +16,7 @@
       "evidence_kind": "greenhouse_meta_total_reconciled",
       "endpoint": "https://boards-api.greenhouse.io/v1/boards/stripe/jobs?content=true",
       "first_party_evidence_url": "https://stripe.com/careers/search",
-      "jobs_sha256": "667ab97e4a1cb3cfd0beba9f51af2e132f5ef242be8776183492ca3903385e26",
+      "jobs_sha256": "7a685b2fb9a880a4e8f98af4a7945ff5a8eb0e208fba03e814a04e51fb92b52c",
       "jobs": [
         {
           "job_id": "8172487",
@@ -6021,7 +6021,7 @@
           "department": "4119 Product Support",
           "office": "Singapore Locations",
           "published_at": "2026-09-29T07:42:32-04:00",
-          "updated_at": "2026-09-29T07:42:32-04:00",
+          "updated_at": "2026-10-04T17:51:39-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -9327,7 +9327,7 @@
           "record_source": "greenhouse_job_board_api"
         }
       ],
-      "checked_at": "2026-10-04T21:19:19.708147+00:00",
+      "checked_at": "2026-10-04T22:19:07.058970+00:00",
       "error": null
     },
     {
@@ -11046,7 +11046,7 @@
           "record_source": "greenhouse_job_board_api"
         }
       ],
-      "checked_at": "2026-10-04T21:19:20.512343+00:00",
+      "checked_at": "2026-10-04T22:19:07.596781+00:00",
       "error": null
     }
   ]
