@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-04",
   "weekday": "Sunday",
-  "scheduledSlot": "18:48",
-  "scheduledAt": "2026-10-04T18:48:00+02:00",
-  "rawScheduledSlot": "18:48",
-  "rawScheduledAt": "2026-10-04T18:48:00+02:00",
-  "startedAt": "2026-10-04T18:48:00.237195+02:00",
-  "completedAt": "2026-10-04T18:48:05.569410+02:00",
-  "checkedAt": "2026-10-04T18:48:05.569410+02:00",
+  "scheduledSlot": "18:50",
+  "scheduledAt": "2026-10-04T18:50:00+02:00",
+  "rawScheduledSlot": "18:50",
+  "rawScheduledAt": "2026-10-04T18:50:00+02:00",
+  "startedAt": "2026-10-04T18:50:00.217677+02:00",
+  "completedAt": "2026-10-04T18:50:04.558601+02:00",
+  "checkedAt": "2026-10-04T18:50:04.558601+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,11 +25,11 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 198,
-      "meatItems": 21,
+      "totalBargainItems": 196,
+      "meatItems": 22,
       "meat70Items": 4,
       "meat70Stock": 11.0,
-      "bakeryItems": 49,
+      "bakeryItems": 47,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -94,18 +94,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 531881,
-          "title": "AH Scharrel kipborrelhapjes",
-          "brand": "AH",
-          "size": "900 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "7.49",
-          "priceNow": "4.49",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 619345,
           "title": "AH Scharrel kipborrelhapjes paprika",
           "brand": "AH",
@@ -115,6 +103,18 @@
           "stock": 1,
           "priceWas": "4.29",
           "priceNow": "2.57",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 531881,
+          "title": "AH Scharrel kipborrelhapjes",
+          "brand": "AH",
+          "size": "900 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "7.49",
+          "priceNow": "4.49",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -151,6 +151,18 @@
           "stock": 2,
           "priceWas": "5.49",
           "priceNow": "4.12",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 619344,
+          "title": "AH Scharrel chickenwings pikant",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "3.59",
+          "priceNow": "2.69",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -780,30 +792,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 467677,
-          "title": "AH Kip loempia börek",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.19",
-          "priceNow": "1.01",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
-          "productId": 487305,
-          "title": "AH Liefde & Passie Spelt volkoren brood",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "3.19",
-          "priceNow": "2.71",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 515786,
           "title": "AH Mix voor hartige taart",
           "brand": "AH",
@@ -1024,18 +1012,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 606047,
-          "title": "AH Pistolet volkoren",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "0.29",
-          "priceNow": "0.22",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 606777,
           "title": "AH Borek kip gyros",
           "brand": "AH",
@@ -1081,6 +1057,18 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.74",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 606047,
+          "title": "AH Pistolet volkoren",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.29",
+          "priceNow": "0.22",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -1156,18 +1144,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 230734,
-          "title": "Ah kaiserbroodjes wit nat",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 5,
-          "priceWas": "0.29",
-          "priceNow": "0.25",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 515766,
           "title": "AH Kaasstengel",
           "brand": "AH",
@@ -1213,6 +1189,18 @@
           "stock": 2,
           "priceWas": "0.49",
           "priceNow": "0.42",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 230734,
+          "title": "Ah kaiserbroodjes wit nat",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "0.29",
+          "priceNow": "0.25",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -2693,8 +2681,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 115,
-      "meatItems": 21,
+      "totalBargainItems": 117,
+      "meatItems": 22,
       "meat70Items": 0,
       "meat70Stock": 0,
       "bakeryItems": 3,
@@ -2735,6 +2723,18 @@
           "stock": 2,
           "priceWas": "8.99",
           "priceNow": "5.39",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 187574,
+          "title": "AH Riblap",
+          "brand": "AH",
+          "size": "ca. 720 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "14.39",
+          "priceNow": "8.63",
           "markdownExpirationDate": "2026-10-04"
         },
         {
