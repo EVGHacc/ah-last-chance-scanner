@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-04",
   "weekday": "Sunday",
-  "scheduledSlot": "18:45",
-  "scheduledAt": "2026-10-04T18:45:00+02:00",
-  "rawScheduledSlot": "18:45",
-  "rawScheduledAt": "2026-10-04T18:45:00+02:00",
-  "startedAt": "2026-10-04T18:45:00.226240+02:00",
-  "completedAt": "2026-10-04T18:45:05.024055+02:00",
-  "checkedAt": "2026-10-04T18:45:05.024055+02:00",
+  "scheduledSlot": "18:48",
+  "scheduledAt": "2026-10-04T18:48:00+02:00",
+  "rawScheduledSlot": "18:48",
+  "rawScheduledAt": "2026-10-04T18:48:00+02:00",
+  "startedAt": "2026-10-04T18:48:00.237195+02:00",
+  "completedAt": "2026-10-04T18:48:05.569410+02:00",
+  "checkedAt": "2026-10-04T18:48:05.569410+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,8 +25,8 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 196,
-      "meatItems": 19,
+      "totalBargainItems": 198,
+      "meatItems": 21,
       "meat70Items": 4,
       "meat70Stock": 11.0,
       "bakeryItems": 49,
@@ -118,6 +118,18 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
+          "productId": 622556,
+          "title": "AH Rundergehakt Mexicaanse stijl",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 8,
+          "priceWas": "4.99",
+          "priceNow": "3.74",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
           "productId": 4041,
           "title": "AH Schouderkarbonade",
           "brand": "AH",
@@ -139,6 +151,18 @@
           "stock": 2,
           "priceWas": "5.49",
           "priceNow": "4.12",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 619307,
+          "title": "AH Roerbakvlees Indische stijl",
+          "brand": "AH",
+          "size": "ca. 300 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "2.99",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -468,18 +492,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 417144,
-          "title": "AH Vloerbrood wit heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 429658,
           "title": "AH Spinazie feta börek",
           "brand": "AH",
@@ -525,6 +537,18 @@
           "stock": 1,
           "priceWas": "0.89",
           "priceNow": "0.67",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 417144,
+          "title": "AH Vloerbrood wit heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -2669,8 +2693,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 114,
-      "meatItems": 20,
+      "totalBargainItems": 115,
+      "meatItems": 21,
       "meat70Items": 0,
       "meat70Stock": 0,
       "bakeryItems": 3,
@@ -2855,6 +2879,18 @@
           "stock": 1,
           "priceWas": "4.99",
           "priceNow": "3.74",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 4002,
+          "title": "AH Greenfields Magere runderlappen",
+          "brand": "AH Greenfields",
+          "size": "ca. 720 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "15.99",
+          "priceNow": "11.99",
           "markdownExpirationDate": "2026-10-05"
         },
         {
