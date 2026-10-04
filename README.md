@@ -52,3 +52,5 @@ Cloudflare zit niet in het kritieke scanpad. De Worker:
 ## Authenticatie
 
 De productie gebruikt `AH_REFRESH_TOKEN` als GitHub Actions Secret. Een geroteerde refresh-tokenstate wordt versleuteld in `data/auth_state.enc`, zodat opeenvolgende scannerprocessen dezelfde sessie veilig kunnen voortzetten.
+
+<!-- production recovery trigger 2026-10-04 17:34 Europe/Amsterdam -->
