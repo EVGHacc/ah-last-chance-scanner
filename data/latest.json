@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-04",
   "weekday": "Sunday",
-  "scheduledSlot": "18:27",
-  "scheduledAt": "2026-10-04T18:27:00+02:00",
-  "rawScheduledSlot": "18:27",
-  "rawScheduledAt": "2026-10-04T18:27:00+02:00",
-  "startedAt": "2026-10-04T18:27:00.219169+02:00",
-  "completedAt": "2026-10-04T18:27:04.362776+02:00",
-  "checkedAt": "2026-10-04T18:27:04.362776+02:00",
+  "scheduledSlot": "18:30",
+  "scheduledAt": "2026-10-04T18:30:00+02:00",
+  "rawScheduledSlot": "18:30",
+  "rawScheduledAt": "2026-10-04T18:30:00+02:00",
+  "startedAt": "2026-10-04T18:30:00.250338+02:00",
+  "completedAt": "2026-10-04T18:30:04.548110+02:00",
+  "checkedAt": "2026-10-04T18:30:04.548110+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 188,
+      "totalBargainItems": 192,
       "meatItems": 14,
       "meat70Items": 1,
       "meat70Stock": 2.0,
@@ -797,11 +797,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 206,
+      "totalBargainItems": 202,
       "meatItems": 7,
       "meat70Items": 1,
       "meat70Stock": 2.0,
-      "bakeryItems": 39,
+      "bakeryItems": 36,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -848,7 +848,7 @@
           "size": "500 g",
           "category": "Vlees",
           "discountPct": 40,
-          "stock": 3,
+          "stock": 2,
           "priceWas": "5.40",
           "priceNow": "3.24",
           "markdownExpirationDate": "2026-10-04"
@@ -898,7 +898,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 13,
+          "stock": 11,
           "priceWas": "0.99",
           "priceNow": "0.74",
           "markdownExpirationDate": "2026-10-04"
@@ -1021,18 +1021,6 @@
           "stock": 2,
           "priceWas": "0.79",
           "priceNow": "0.59",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
-          "productId": 467677,
-          "title": "AH Kip loempia börek",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "1.19",
-          "priceNow": "0.89",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -1204,18 +1192,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 537022,
-          "title": "AH Pizzabroodje kaas-groente",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.09",
-          "priceNow": "0.93",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 230740,
           "title": "AH Praliné chocolade croissant",
           "brand": "AH",
@@ -1225,18 +1201,6 @@
           "stock": 1,
           "priceWas": "1.39",
           "priceNow": "1.18",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
-          "productId": 440472,
-          "title": "AH Kaas ruitbroodje wit",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.49",
-          "priceNow": "0.42",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -1988,18 +1952,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 537022,
-          "title": "AH Pizzabroodje kaas-groente",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.09",
-          "priceNow": "0.82",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 451137,
           "title": "AH Focaccia mozzarella",
           "brand": "AH",
@@ -2105,6 +2057,18 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.74",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 537022,
+          "title": "AH Pizzabroodje kaas-groente",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.09",
+          "priceNow": "0.82",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -2669,8 +2633,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 105,
-      "meatItems": 15,
+      "totalBargainItems": 106,
+      "meatItems": 16,
       "meat70Items": 0,
       "meat70Stock": 0,
       "bakeryItems": 3,
@@ -2819,6 +2783,18 @@
           "stock": 1,
           "priceWas": "2.88",
           "priceNow": "2.16",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 560559,
+          "title": "AH Scharrel kipburger smokey 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "2.24",
           "markdownExpirationDate": "2026-10-05"
         },
         {
