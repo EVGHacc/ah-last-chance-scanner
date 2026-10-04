@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-04",
   "weekday": "Sunday",
-  "scheduledSlot": "18:10",
-  "scheduledAt": "2026-10-04T18:10:00+02:00",
-  "rawScheduledSlot": "18:10",
-  "rawScheduledAt": "2026-10-04T18:10:00+02:00",
-  "startedAt": "2026-10-04T18:10:00.207193+02:00",
-  "completedAt": "2026-10-04T18:10:04.530238+02:00",
-  "checkedAt": "2026-10-04T18:10:04.530238+02:00",
+  "scheduledSlot": "18:12",
+  "scheduledAt": "2026-10-04T18:12:00+02:00",
+  "rawScheduledSlot": "18:12",
+  "rawScheduledAt": "2026-10-04T18:12:00+02:00",
+  "startedAt": "2026-10-04T18:12:00.221134+02:00",
+  "completedAt": "2026-10-04T18:12:04.361934+02:00",
+  "checkedAt": "2026-10-04T18:12:04.361934+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -749,11 +749,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 209,
+      "totalBargainItems": 208,
       "meatItems": 7,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 42,
+      "bakeryItems": 41,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
@@ -964,18 +964,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 168184,
-          "title": "AH Tijger wit heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.99",
-          "priceNow": "1.49",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 230710,
           "title": "AH Ham kaas croissant",
           "brand": "AH",
@@ -985,18 +973,6 @@
           "stock": 13,
           "priceWas": "0.99",
           "priceNow": "0.84",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
-          "productId": 606047,
-          "title": "AH Pistolet volkoren",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 6,
-          "priceWas": "0.29",
-          "priceNow": "0.25",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -1033,6 +1009,18 @@
           "stock": 5,
           "priceWas": "1.19",
           "priceNow": "1.01",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 606047,
+          "title": "AH Pistolet volkoren",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 4,
+          "priceWas": "0.29",
+          "priceNow": "0.25",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -2036,18 +2024,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 487305,
-          "title": "AH Liefde & Passie Spelt volkoren brood",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 5,
-          "priceWas": "3.19",
-          "priceNow": "2.71",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 230715,
           "title": "AH Italiaanse bol wit",
           "brand": "AH",
@@ -2093,6 +2069,18 @@
           "stock": 4,
           "priceWas": "0.99",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-10-04"
+        },
+        {
+          "productId": 487305,
+          "title": "AH Liefde & Passie Spelt volkoren brood",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 4,
+          "priceWas": "3.19",
+          "priceNow": "2.71",
           "markdownExpirationDate": "2026-10-04"
         },
         {
@@ -2669,7 +2657,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 105,
+      "totalBargainItems": 104,
       "meatItems": 14,
       "meat70Items": 0,
       "meat70Stock": 0,
