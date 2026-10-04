@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-04",
   "weekday": "Sunday",
-  "scheduledSlot": "18:50",
-  "scheduledAt": "2026-10-04T18:50:00+02:00",
-  "rawScheduledSlot": "18:50",
-  "rawScheduledAt": "2026-10-04T18:50:00+02:00",
-  "startedAt": "2026-10-04T18:50:00.217677+02:00",
-  "completedAt": "2026-10-04T18:50:04.558601+02:00",
-  "checkedAt": "2026-10-04T18:50:04.558601+02:00",
+  "scheduledSlot": "18:51",
+  "scheduledAt": "2026-10-04T18:51:00+02:00",
+  "rawScheduledSlot": "18:51",
+  "rawScheduledAt": "2026-10-04T18:51:00+02:00",
+  "startedAt": "2026-10-04T18:51:00.221079+02:00",
+  "completedAt": "2026-10-04T18:51:04.407420+02:00",
+  "checkedAt": "2026-10-04T18:51:04.407420+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,26 +25,14 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 196,
-      "meatItems": 22,
-      "meat70Items": 4,
-      "meat70Stock": 11.0,
+      "totalBargainItems": 194,
+      "meatItems": 21,
+      "meat70Items": 2,
+      "meat70Stock": 6.0,
       "bakeryItems": 47,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "items": [
-        {
-          "productId": 619325,
-          "title": "AH Rundergehakt Italiaanse stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 4,
-          "priceWas": "4.99",
-          "priceNow": "1.50",
-          "markdownExpirationDate": "2026-10-04"
-        },
         {
           "productId": 622557,
           "title": "AH Gehaktballetjes Italiaanse stijl",
@@ -70,18 +58,6 @@
           "markdownExpirationDate": "2026-10-04"
         },
         {
-          "productId": 612613,
-          "title": "AH Scharrel kipburger 6 stuks",
-          "brand": "AH",
-          "size": "600 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "7.49",
-          "priceNow": "2.25",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
           "productId": 454769,
           "title": "AH Scharrel kipreepjes Italiaans gebraden",
           "brand": "AH",
@@ -100,22 +76,10 @@
           "size": "500 g",
           "category": "Vlees",
           "discountPct": 40,
-          "stock": 1,
+          "stock": 2,
           "priceWas": "4.29",
           "priceNow": "2.57",
-          "markdownExpirationDate": "2026-10-04"
-        },
-        {
-          "productId": 531881,
-          "title": "AH Scharrel kipborrelhapjes",
-          "brand": "AH",
-          "size": "900 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "7.49",
-          "priceNow": "4.49",
-          "markdownExpirationDate": "2026-10-04"
+          "markdownExpirationDate": "2026-10-05"
         },
         {
           "productId": 622556,
@@ -166,6 +130,18 @@
           "markdownExpirationDate": "2026-10-05"
         },
         {
+          "productId": 619346,
+          "title": "AH Kipchorizo worstjes",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "2.99",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
           "productId": 619307,
           "title": "AH Roerbakvlees Indische stijl",
           "brand": "AH",
@@ -199,6 +175,18 @@
           "stock": 1,
           "priceWas": "2.99",
           "priceNow": "2.24",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 531890,
+          "title": "AH Kalkoenfilet blokjes",
+          "brand": "AH",
+          "size": "250 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "4.99",
+          "priceNow": "3.74",
           "markdownExpirationDate": "2026-10-05"
         },
         {
