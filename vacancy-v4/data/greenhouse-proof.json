@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provider": "greenhouse",
-  "generated_at": "2026-10-02T10:37:20.186067+00:00",
+  "generated_at": "2026-10-04T21:19:20.765632+00:00",
   "configured_sources": 2,
   "verified_complete": 2,
   "failed": 0,
@@ -10,13 +10,13 @@
       "name": "Stripe",
       "board": "stripe",
       "coverage": "verified_complete",
-      "unique_jobs": 711,
-      "authoritative_total": 711,
+      "unique_jobs": 716,
+      "authoritative_total": 716,
       "exhausted": true,
       "evidence_kind": "greenhouse_meta_total_reconciled",
       "endpoint": "https://boards-api.greenhouse.io/v1/boards/stripe/jobs?content=true",
       "first_party_evidence_url": "https://stripe.com/careers/search",
-      "jobs_sha256": "46243ad0d06f7a0d80fe65c631d08839e5103e88061b8fa36d9cc72dd2fa110a",
+      "jobs_sha256": "667ab97e4a1cb3cfd0beba9f51af2e132f5ef242be8776183492ca3903385e26",
       "jobs": [
         {
           "job_id": "8172487",
@@ -93,7 +93,7 @@
           "department": "1175 Enterprise - Account Executives (NA)",
           "office": "Mexico Locations",
           "published_at": "2026-08-21T14:22:44-04:00",
-          "updated_at": "2026-09-25T16:44:53-04:00",
+          "updated_at": "2026-10-02T12:48:13-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -211,6 +211,19 @@
           "office": "US",
           "published_at": "2026-09-15T21:47:18-04:00",
           "updated_at": "2026-09-25T16:45:06-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8238731",
+          "title": "Account Executive, AI Startups - Grower",
+          "location": "San Francisco",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8238731",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8238731",
+          "department": "1653 Startups - Account Executives (NA)",
+          "office": "US",
+          "published_at": "2026-10-02T12:55:48-04:00",
+          "updated_at": "2026-10-02T12:55:48-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -1081,7 +1094,7 @@
           "department": "1175 Enterprise - Account Executives (NA)",
           "office": "Canada Locations",
           "published_at": "2026-09-30T14:21:22-04:00",
-          "updated_at": "2026-09-30T14:21:22-04:00",
+          "updated_at": "2026-10-02T16:51:22-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -1146,7 +1159,7 @@
           "department": "1185 Account Executives (EMEA)",
           "office": "GB-London",
           "published_at": "2026-09-09T08:03:50-04:00",
-          "updated_at": "2026-10-01T08:52:52-04:00",
+          "updated_at": "2026-10-02T09:44:11-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -1185,7 +1198,7 @@
           "department": "1185 Account Executives (EMEA)",
           "office": "United Kingdom Locations",
           "published_at": "2026-09-16T05:49:25-04:00",
-          "updated_at": "2026-09-25T16:44:54-04:00",
+          "updated_at": "2026-10-02T09:14:55-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -1666,7 +1679,7 @@
           "department": "8612 Security Infrastructure",
           "office": "US",
           "published_at": "2026-06-05T16:09:40-04:00",
-          "updated_at": "2026-09-25T16:44:45-04:00",
+          "updated_at": "2026-10-02T13:23:31-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -1693,6 +1706,19 @@
           "office": "France Locations",
           "published_at": "2026-07-30T10:04:54-04:00",
           "updated_at": "2026-09-25T16:44:51-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8241857",
+          "title": "Comms Strategy & Operations Associate",
+          "location": "NYC, SF",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies - from the world’s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8241857",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8241857",
+          "department": "2413 Communications",
+          "office": "US",
+          "published_at": "2026-10-02T14:07:40-04:00",
+          "updated_at": "2026-10-02T14:09:44-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -1826,19 +1852,6 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
-          "job_id": "8001341",
-          "title": "Creative Director, Copy & Campaigns",
-          "location": "US",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies - from the world’s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=8001341",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=8001341",
-          "department": "8113 Brand Studio",
-          "office": "US",
-          "published_at": "2026-06-18T21:05:52-04:00",
-          "updated_at": "2026-09-25T16:44:46-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
           "job_id": "8213951",
           "title": "Credit Operations Manager",
           "location": "Chicago, Atlanta, US-Remote",
@@ -1914,32 +1927,6 @@
           "office": "India Locations",
           "published_at": "2026-08-25T04:18:11-04:00",
           "updated_at": "2026-09-25T16:44:48-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
-          "job_id": "8044686",
-          "title": "Credit Risk Strategy and Analytics",
-          "location": "Canada",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=8044686",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=8044686",
-          "department": "3130 Credit Risk Strategy",
-          "office": "Canada Locations",
-          "published_at": "2026-07-06T11:29:21-04:00",
-          "updated_at": "2026-09-30T10:51:12-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
-          "job_id": "8052468",
-          "title": "Credit Risk Strategy and Analytics",
-          "location": "United States",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=8052468",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=8052468",
-          "department": "3130 Credit Risk Strategy",
-          "office": "Canada Locations",
-          "published_at": "2026-07-08T17:30:41-04:00",
-          "updated_at": "2026-09-30T10:51:12-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -2619,19 +2606,6 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
-          "job_id": "8165515",
-          "title": "Engineering Manager, Billing Configuration",
-          "location": "N/A",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=8165515",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=8165515",
-          "department": "8412 Subscriptions",
-          "office": "Canada Locations",
-          "published_at": "2026-08-29T10:45:19-04:00",
-          "updated_at": "2026-09-25T16:44:59-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
           "job_id": "8180536",
           "title": "Engineering Manager, Billing Products",
           "location": "US-Remote, Chicago",
@@ -2746,6 +2720,19 @@
           "office": "Canada Locations",
           "published_at": "2026-09-09T13:53:05-04:00",
           "updated_at": "2026-09-25T16:44:54-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8165515",
+          "title": "Engineering Manager, Revenue Foundations",
+          "location": "N/A",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies - from the world’s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8165515",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8165515",
+          "department": "8412 Subscriptions",
+          "office": "Canada Locations",
+          "published_at": "2026-08-29T10:45:19-04:00",
+          "updated_at": "2026-10-02T14:38:42-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -2892,6 +2879,19 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
+          "job_id": "8222212",
+          "title": "Events Manager, Event Technology and Registration",
+          "location": "Remote US",
+          "summary": "About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8222212",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8222212",
+          "department": "2318 Corp Events",
+          "office": "US",
+          "published_at": "2026-10-02T13:24:51-04:00",
+          "updated_at": "2026-10-02T13:24:51-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
           "job_id": "8190030",
           "title": "Executive Advisory Programs Manager",
           "location": "South San Francisco HQ, New York, Remote US",
@@ -2941,6 +2941,19 @@
           "office": "US",
           "published_at": "2026-09-25T14:11:25-04:00",
           "updated_at": "2026-09-25T16:45:09-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8249865",
+          "title": "Finance & Strategy, Corporate Finance Analyst",
+          "location": "New York, NY",
+          "summary": "Who we are About Stripe Stripe, LLC. is a financial infrastructure platform for businesses.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8249865",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8249865",
+          "department": "Global Operations",
+          "office": "US-PERM",
+          "published_at": "2026-10-02T14:36:55-04:00",
+          "updated_at": "2026-10-02T14:36:55-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -3291,7 +3304,7 @@
           "department": "8916 Growth - Eng",
           "office": "Canada Locations",
           "published_at": "2025-04-03T16:35:43-04:00",
-          "updated_at": "2026-09-25T16:44:32-04:00",
+          "updated_at": "2026-10-02T18:12:39-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -3386,6 +3399,19 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
+          "job_id": "8234357",
+          "title": "Full Stack Engineer, Revenue",
+          "location": "N/A",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8234357",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8234357",
+          "department": "8412 Subscriptions",
+          "office": "Canada Locations",
+          "published_at": "2026-10-02T18:15:23-04:00",
+          "updated_at": "2026-10-02T18:15:23-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
           "job_id": "8039548",
           "title": "Full Stack Engineer, Support Experience (Greater China Support)",
           "location": "US",
@@ -3422,19 +3448,6 @@
           "office": "Brazil Locations",
           "published_at": "2026-05-26T14:51:39-04:00",
           "updated_at": "2026-09-25T16:44:41-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
-          "job_id": "6717520",
-          "title": "Fullstack Engineer, Payments and Risk",
-          "location": "Dublin, Ireland",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=6717520",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=6717520",
-          "department": "8216 Risk Onboarding and Trusted Users",
-          "office": "Ireland Locations",
-          "published_at": "2025-04-24T08:56:32-04:00",
-          "updated_at": "2026-09-30T02:58:46-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -3630,6 +3643,19 @@
           "office": "Singapore Locations",
           "published_at": "2026-03-07T12:45:58-05:00",
           "updated_at": "2026-09-25T16:44:38-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8180845",
+          "title": "Head of Events, Works in Progress",
+          "location": "SF, NYC",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies - from the world’s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8180845",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8180845",
+          "department": "2414 Works in Progress",
+          "office": "US",
+          "published_at": "2026-10-02T15:50:02-04:00",
+          "updated_at": "2026-10-02T15:50:02-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -3929,6 +3955,19 @@
           "office": "US",
           "published_at": "2026-09-21T23:21:06-04:00",
           "updated_at": "2026-09-25T16:45:03-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "7819426",
+          "title": "Integration Engineer (Chicago)",
+          "location": "Chicago, US-Remote",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=7819426",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=7819426",
+          "department": "1141 AMER Delivery",
+          "office": "US",
+          "published_at": "2026-04-29T13:15:11-04:00",
+          "updated_at": "2026-10-02T13:04:27-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -4842,6 +4881,19 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
+          "job_id": "8203653",
+          "title": "Operations Program Manager",
+          "location": "Bengaluru",
+          "summary": "About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies, from the world’s largest enterprises to the most ambitious startups, use Stripe to accept payments, grow their revenue, and pursue new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8203653",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8203653",
+          "department": "4138 SDC - Tech Ops",
+          "office": "India Locations",
+          "published_at": "2026-09-18T02:08:55-04:00",
+          "updated_at": "2026-10-03T11:38:33-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
           "job_id": "8162189",
           "title": "Operations Recruiter",
           "location": "CDMX",
@@ -5176,7 +5228,7 @@
           "department": "1342 Payment Performance",
           "office": "Mexico Locations",
           "published_at": "2026-09-10T22:48:51-04:00",
-          "updated_at": "2026-10-01T17:00:13-04:00",
+          "updated_at": "2026-10-02T15:25:02-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -5245,32 +5297,6 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
-          "job_id": "7704660",
-          "title": "People Partner",
-          "location": "San Francisco, Seattle, New York, Chicago, Atlanta or Toronto",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=7704660",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=7704660",
-          "department": "6550 People Partners",
-          "office": "US",
-          "published_at": "2026-03-12T06:37:28-04:00",
-          "updated_at": "2026-09-25T16:44:39-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
-          "job_id": "7466921",
-          "title": "People Partner, Technology",
-          "location": "San Francisco, Chicago, New York City or Seattle",
-          "summary": "• This role requires 50% on-site presence in one of our Office Locations. Who we are About Stripe Stripe is a financial infrastructure platform for businesses.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=7466921",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=7466921",
-          "department": "6550 People Partners",
-          "office": "US",
-          "published_at": "2026-01-06T11:54:15-05:00",
-          "updated_at": "2026-09-25T16:44:37-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
           "job_id": "8039954",
           "title": "People Project Manager",
           "location": "US-Remote, Atlanta, Chicago",
@@ -5333,19 +5359,6 @@
           "office": "US",
           "published_at": "2026-05-04T18:05:58-04:00",
           "updated_at": "2026-09-25T16:44:40-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
-          "job_id": "7728618",
-          "title": "Pre-Sales Solutions Architect, Billing",
-          "location": "Remote",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=7728618",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=7728618",
-          "department": "1150 Solutions Architecture",
-          "office": "US",
-          "published_at": "2026-07-09T15:42:53-04:00",
-          "updated_at": "2026-09-25T16:44:39-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -5752,19 +5765,6 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
-          "job_id": "8140438",
-          "title": "Product Manager, Mobile",
-          "location": "New York City, Toronto, Chicago, or Remote",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=8140438",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=8140438",
-          "department": "8569 MerchantXP - PM",
-          "office": "US",
-          "published_at": "2026-09-09T13:11:56-04:00",
-          "updated_at": "2026-09-25T16:44:56-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
           "job_id": "7176530",
           "title": "Product Manager, Payments",
           "location": "SF, NY, SEA, Remote-US",
@@ -5960,19 +5960,6 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
-          "job_id": "8163532",
-          "title": "Product Operations Manager",
-          "location": "NYC, SF, Seattle, US",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies - from the world’s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=8163532",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=8163532",
-          "department": "1522 GTM Product StratOps",
-          "office": "US",
-          "published_at": "2026-08-28T13:30:30-04:00",
-          "updated_at": "2026-09-25T16:44:59-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
           "job_id": "8179341",
           "title": "Product Sales Development Representative (Mandarin-speaking)",
           "location": "Singapore",
@@ -6099,7 +6086,7 @@
           "department": "1340 Customer Success Management",
           "office": "US",
           "published_at": "2026-09-17T18:11:30-04:00",
-          "updated_at": "2026-09-25T16:45:02-04:00",
+          "updated_at": "2026-10-02T11:05:22-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -7026,6 +7013,19 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
+          "job_id": "8198330",
+          "title": "Senior Manager, Sales Development",
+          "location": "Chicago",
+          "summary": "Who We Are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8198330",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8198330",
+          "department": "1130 Global Sales Development Mgrs",
+          "office": "US",
+          "published_at": "2026-10-02T22:25:02-04:00",
+          "updated_at": "2026-10-02T22:25:02-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
           "job_id": "8170920",
           "title": "Senior Mechanical and Industrial Design Engineer",
           "location": "Taipei,Taiwan",
@@ -7234,16 +7234,16 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
-          "job_id": "8174105",
+          "job_id": "8249901",
           "title": "Software Engineer",
           "location": "Seattle, WA",
           "summary": "Who we are About Stripe Stripe, LLC. is a financial infrastructure platform for businesses.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=8174105",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=8174105",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8249901",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8249901",
           "department": "Global Operations",
           "office": "US-PERM",
-          "published_at": "2026-09-02T12:57:08-04:00",
-          "updated_at": "2026-09-25T16:45:00-04:00",
+          "published_at": "2026-10-02T14:52:10-04:00",
+          "updated_at": "2026-10-02T14:52:10-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -7257,19 +7257,6 @@
           "office": "US",
           "published_at": "2025-12-31T14:29:41-05:00",
           "updated_at": "2026-09-25T16:44:37-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
-          "job_id": "8069941",
-          "title": "Software Engineer, Authorization Infrastructure",
-          "location": "N/A",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=8069941",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=8069941",
-          "department": "8613 Data Privacy",
-          "office": "US",
-          "published_at": "2026-07-20T16:59:05-04:00",
-          "updated_at": "2026-09-28T23:03:37-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -7637,6 +7624,19 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
+          "job_id": "6717520",
+          "title": "Software Engineer, Payments and Risk",
+          "location": "Dublin, Ireland",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=6717520",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=6717520",
+          "department": "8216 Risk Onboarding and Trusted Users",
+          "office": "Ireland Locations",
+          "published_at": "2025-04-24T08:56:32-04:00",
+          "updated_at": "2026-10-03T11:53:06-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
           "job_id": "7761694",
           "title": "Software Engineer, Product Security Data Platforms",
           "location": "Seattle",
@@ -7647,6 +7647,32 @@
           "office": "US",
           "published_at": "2026-03-31T18:20:49-04:00",
           "updated_at": "2026-09-25T16:44:39-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8076616",
+          "title": "Software Engineer, Revenue and Financial Automation",
+          "location": "N/A",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8076616",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8076616",
+          "department": "8412 Subscriptions",
+          "office": "Canada Locations",
+          "published_at": "2026-10-02T18:37:04-04:00",
+          "updated_at": "2026-10-02T19:20:36-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8127182",
+          "title": "Software Engineer, Revenue and Financial Automation",
+          "location": "San Francisco, New York City, Seattle, Chicago, US-Remote",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8127182",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8127182",
+          "department": "8421 RevSuite Foundations",
+          "office": "US",
+          "published_at": "2026-09-01T12:36:00-04:00",
+          "updated_at": "2026-10-03T16:18:56-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -7793,19 +7819,6 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
-          "job_id": "8092652",
-          "title": "Solutions Architect, Enterprise (French Speaking)",
-          "location": "N/A",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=8092652",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=8092652",
-          "department": "1151 Solutions Architecture (AMER)",
-          "office": "Canada Locations",
-          "published_at": "2026-07-31T09:49:25-04:00",
-          "updated_at": "2026-09-25T16:44:51-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
           "job_id": "8144185",
           "title": "Solutions Architect, Enterprise (Presales)",
           "location": "San Francisco, CA, Chicago, IL, New York, NY",
@@ -7894,6 +7907,32 @@
           "office": "US",
           "published_at": "2026-08-31T17:14:06-04:00",
           "updated_at": "2026-09-25T16:44:56-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "7728618",
+          "title": "Specialist Solutions Architect, Billing",
+          "location": "Remote",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=7728618",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=7728618",
+          "department": "1150 Solutions Architecture",
+          "office": "US",
+          "published_at": "2026-07-09T15:42:53-04:00",
+          "updated_at": "2026-10-02T12:32:38-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8236491",
+          "title": "Specialist Solutions Architect, Crypto",
+          "location": "LOCATION",
+          "summary": "Who We Are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8236491",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8236491",
+          "department": "1154 Specialized Solutions Architecture",
+          "office": "United Kingdom Locations",
+          "published_at": "2026-10-02T12:06:44-04:00",
+          "updated_at": "2026-10-02T12:06:44-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -8235,6 +8274,19 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
+          "job_id": "8140438",
+          "title": "Staff Product Manager, Mobile",
+          "location": "New York City, Toronto, Chicago, or Remote",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8140438",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8140438",
+          "department": "8569 MerchantXP - PM",
+          "office": "US",
+          "published_at": "2026-09-09T13:11:56-04:00",
+          "updated_at": "2026-10-02T12:31:56-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
           "job_id": "7819059",
           "title": "Staff Product Manager, Payments",
           "location": "SF, SEA, NYC, Remote",
@@ -8348,7 +8400,7 @@
           "department": "8414 MerchantXP - Eng",
           "office": "US",
           "published_at": "2026-08-12T20:27:36-04:00",
-          "updated_at": "2026-09-25T16:44:50-04:00",
+          "updated_at": "2026-10-02T15:19:28-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -8375,6 +8427,19 @@
           "office": "Canada Locations",
           "published_at": "2026-08-11T15:17:09-04:00",
           "updated_at": "2026-09-25T16:44:54-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8080799",
+          "title": "Staff Software Engineer, Infrastructure",
+          "location": "Seattle, San Francisco",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8080799",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8080799",
+          "department": "8127 Core Infrastructure",
+          "office": "US",
+          "published_at": "2026-10-02T16:11:16-04:00",
+          "updated_at": "2026-10-02T16:11:16-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -9193,7 +9258,7 @@
           "department": "8812 UX Research",
           "office": "Canada Locations",
           "published_at": "2026-09-01T08:11:08-04:00",
-          "updated_at": "2026-09-25T16:44:59-04:00",
+          "updated_at": "2026-10-02T08:22:26-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -9262,20 +9327,20 @@
           "record_source": "greenhouse_job_board_api"
         }
       ],
-      "checked_at": "2026-10-02T10:37:19.497345+00:00",
+      "checked_at": "2026-10-04T21:19:19.708147+00:00",
       "error": null
     },
     {
       "name": "Ripple",
       "board": "ripple",
       "coverage": "verified_complete",
-      "unique_jobs": 133,
-      "authoritative_total": 133,
+      "unique_jobs": 131,
+      "authoritative_total": 131,
       "exhausted": true,
       "evidence_kind": "greenhouse_meta_total_reconciled",
       "endpoint": "https://boards-api.greenhouse.io/v1/boards/ripple/jobs?content=true",
       "first_party_evidence_url": "https://ripple.com/careers/all-jobs/",
-      "jobs_sha256": "c80b3462e887f77cbc150e9fb770a3d2829968830f9b085d88afc2ff30f3f783",
+      "jobs_sha256": "4d853b08d21bd10836b3eae487f9eef64ddb7345c32afa70561a37c312f38b81",
       "jobs": [
         {
           "job_id": "8042882",
@@ -9395,6 +9460,19 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
+          "job_id": "8241654",
+          "title": "Customer Success Senior Manager",
+          "location": "Miami, FL, United States",
+          "summary": "At Ripple, we’re building a world where value moves like information does today. It’s big, it’s bold, and we’re already doing it.",
+          "job_url": "https://ripple.com/careers/all-jobs/job/8241654?gh_jid=8241654",
+          "apply_url": "https://ripple.com/careers/all-jobs/job/8241654?gh_jid=8241654",
+          "department": "Customer Success",
+          "office": "San Francisco, CA, United States",
+          "published_at": "2026-10-02T13:23:30-04:00",
+          "updated_at": "2026-10-02T13:23:30-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
           "job_id": "8241656",
           "title": "Customer Success Senior Manager",
           "location": "New York, NY, United States",
@@ -9405,6 +9483,19 @@
           "office": "San Francisco, CA, United States",
           "published_at": "2026-10-01T12:15:43-04:00",
           "updated_at": "2026-10-01T12:15:43-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8241677",
+          "title": "Customer Success Senior Manager",
+          "location": "Chicago, Illinois, United States",
+          "summary": "At Ripple, we’re building a world where value moves like information does today. It’s big, it’s bold, and we’re already doing it.",
+          "job_url": "https://ripple.com/careers/all-jobs/job/8241677?gh_jid=8241677",
+          "apply_url": "https://ripple.com/careers/all-jobs/job/8241677?gh_jid=8241677",
+          "department": "Customer Success",
+          "office": "San Francisco, CA, United States",
+          "published_at": "2026-10-02T13:23:40-04:00",
+          "updated_at": "2026-10-02T13:23:40-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -9690,7 +9781,7 @@
           "department": "Engineering",
           "office": "Chicago, IL, United States",
           "published_at": "2026-08-05T10:23:30-04:00",
-          "updated_at": "2026-09-02T14:58:47-04:00",
+          "updated_at": "2026-10-02T11:47:44-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -9824,45 +9915,6 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
-          "job_id": "7750208",
-          "title": "Professional Services Consultant",
-          "location": "San Francisco, CA, United States",
-          "summary": "At Ripple, we’re building a world where value moves like information does today. It’s big, it’s bold, and we’re already doing it.",
-          "job_url": "https://ripple.com/careers/all-jobs/job/7750208?gh_jid=7750208",
-          "apply_url": "https://ripple.com/careers/all-jobs/job/7750208?gh_jid=7750208",
-          "department": "Service & Delivery",
-          "office": "New York, NY, United States",
-          "published_at": "2026-04-22T13:17:28-04:00",
-          "updated_at": "2026-09-30T11:31:56-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
-          "job_id": "7750218",
-          "title": "Professional Services Consultant",
-          "location": "Miami, FL, United States",
-          "summary": "At Ripple, we’re building a world where value moves like information does today. It’s big, it’s bold, and we’re already doing it.",
-          "job_url": "https://ripple.com/careers/all-jobs/job/7750218?gh_jid=7750218",
-          "apply_url": "https://ripple.com/careers/all-jobs/job/7750218?gh_jid=7750218",
-          "department": "Service & Delivery",
-          "office": "New York, NY, United States",
-          "published_at": "2026-06-02T23:55:01-04:00",
-          "updated_at": "2026-09-30T11:31:56-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
-          "job_id": "7750241",
-          "title": "Professional Services Consultant",
-          "location": "Chicago, Illinois, United States",
-          "summary": "At Ripple, we’re building a world where value moves like information does today. It’s big, it’s bold, and we’re already doing it.",
-          "job_url": "https://ripple.com/careers/all-jobs/job/7750241?gh_jid=7750241",
-          "apply_url": "https://ripple.com/careers/all-jobs/job/7750241?gh_jid=7750241",
-          "department": "Service & Delivery",
-          "office": "New York, NY, United States",
-          "published_at": "2026-04-22T13:16:49-04:00",
-          "updated_at": "2026-09-30T11:31:56-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
           "job_id": "7980840",
           "title": "Professional Services Consultant, Payments",
           "location": "Chicago, Illinois, United States",
@@ -9990,19 +10042,6 @@
           "office": "Dubai, United Arab Emirates",
           "published_at": "2026-09-02T03:37:00-04:00",
           "updated_at": "2026-09-02T03:37:00-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
-          "job_id": "8122926",
-          "title": "Senior Business Recruiter (12-Month Contract)",
-          "location": "London, UK",
-          "summary": "At Ripple, we’re building a world where value moves like information does today. It’s big, it’s bold, and we’re already doing it.",
-          "job_url": "https://ripple.com/careers/all-jobs/job/8122926?gh_jid=8122926",
-          "apply_url": "https://ripple.com/careers/all-jobs/job/8122926?gh_jid=8122926",
-          "department": "Recruiting",
-          "office": "London, United Kingdom",
-          "published_at": "2026-08-13T21:39:17-04:00",
-          "updated_at": "2026-09-08T03:02:49-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -10344,19 +10383,6 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
-          "job_id": "7729908",
-          "title": "Senior Software Engineer, Banking Connectivity",
-          "location": "London, UK",
-          "summary": "At Ripple, we’re building a world where value moves like information does today. It’s big, it’s bold, and we’re already doing it.",
-          "job_url": "https://ripple.com/careers/all-jobs/job/7729908?gh_jid=7729908",
-          "apply_url": "https://ripple.com/careers/all-jobs/job/7729908?gh_jid=7729908",
-          "department": "Engineering",
-          "office": "London, United Kingdom",
-          "published_at": "2026-03-17T22:28:21-04:00",
-          "updated_at": "2026-07-20T15:03:29-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
           "job_id": "8069867",
           "title": "Senior Software Engineer, Full-Stack",
           "location": "Dublin, Ireland",
@@ -10574,7 +10600,7 @@
           "department": "Engineering",
           "office": "San Francisco, CA, United States",
           "published_at": "2026-09-03T20:09:23-04:00",
-          "updated_at": "2026-09-03T20:09:23-04:00",
+          "updated_at": "2026-10-02T18:17:29-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -10591,32 +10617,6 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
-          "job_id": "7947800",
-          "title": "Site Reliability Engineer, Observability",
-          "location": "New York, NY, United States",
-          "summary": "At Ripple, we’re building a world where value moves like information does today. It’s big, it’s bold, and we’re already doing it.",
-          "job_url": "https://ripple.com/careers/all-jobs/job/7947800?gh_jid=7947800",
-          "apply_url": "https://ripple.com/careers/all-jobs/job/7947800?gh_jid=7947800",
-          "department": "Engineering",
-          "office": "Chicago, IL, United States",
-          "published_at": "2026-05-26T13:10:52-04:00",
-          "updated_at": "2026-09-24T10:16:43-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
-          "job_id": "7947821",
-          "title": "Site Reliability Engineer, Observability",
-          "location": "Chicago, Illinois, United States",
-          "summary": "At Ripple, we’re building a world where value moves like information does today. It’s big, it’s bold, and we’re already doing it.",
-          "job_url": "https://ripple.com/careers/all-jobs/job/7947821?gh_jid=7947821",
-          "apply_url": "https://ripple.com/careers/all-jobs/job/7947821?gh_jid=7947821",
-          "department": "Engineering",
-          "office": "Chicago, IL, United States",
-          "published_at": "2026-05-26T13:10:05-04:00",
-          "updated_at": "2026-09-24T10:16:51-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
           "job_id": "8186969",
           "title": "Social Media Manager",
           "location": "New York, NY, United States",
@@ -10627,6 +10627,19 @@
           "office": "New York, NY, United States",
           "published_at": "2026-09-09T16:06:12-04:00",
           "updated_at": "2026-09-09T16:06:13-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8241603",
+          "title": "Software Engineer II",
+          "location": "San Francisco, CA, United States",
+          "summary": "At Ripple, we’re building a world where value moves like information does today. It’s big, it’s bold, and we’re already doing it.",
+          "job_url": "https://ripple.com/careers/all-jobs/job/8241603?gh_jid=8241603",
+          "apply_url": "https://ripple.com/careers/all-jobs/job/8241603?gh_jid=8241603",
+          "department": "Engineering",
+          "office": "San Francisco, CA, United States",
+          "published_at": "2026-09-29T21:39:09-04:00",
+          "updated_at": "2026-10-02T08:55:44-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -10743,7 +10756,7 @@
           "department": "Engineering",
           "office": "Dublin, Ireland",
           "published_at": "2026-09-04T12:41:12-04:00",
-          "updated_at": "2026-10-01T10:32:24-04:00",
+          "updated_at": "2026-10-02T11:47:52-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -10877,6 +10890,19 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
+          "job_id": "8233618",
+          "title": "Treasury Manager",
+          "location": "New York, NY, United States",
+          "summary": "At Ripple, we’re building a world where value moves like information does today. It’s big, it’s bold, and we’re already doing it.",
+          "job_url": "https://ripple.com/careers/all-jobs/job/8233618?gh_jid=8233618",
+          "apply_url": "https://ripple.com/careers/all-jobs/job/8233618?gh_jid=8233618",
+          "department": "Finance",
+          "office": "New York, NY, United States",
+          "published_at": "2026-10-02T15:18:51-04:00",
+          "updated_at": "2026-10-02T15:18:51-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
           "job_id": "7767529",
           "title": "Treasury Manager, Global Treasury Operations",
           "location": "Miami, FL, United States",
@@ -11005,9 +11031,22 @@
           "published_at": "2026-09-13T22:01:56-04:00",
           "updated_at": "2026-09-24T22:29:02-04:00",
           "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8241693",
+          "title": "Workplace Project Manager",
+          "location": "New York, NY, United States",
+          "summary": "At Ripple, we’re building a world where value moves like information does today. It’s big, it’s bold, and we’re already doing it.",
+          "job_url": "https://ripple.com/careers/all-jobs/job/8241693?gh_jid=8241693",
+          "apply_url": "https://ripple.com/careers/all-jobs/job/8241693?gh_jid=8241693",
+          "department": "Global Workplace",
+          "office": "New York, NY, United States",
+          "published_at": "2026-10-02T16:23:05-04:00",
+          "updated_at": "2026-10-02T16:23:05-04:00",
+          "record_source": "greenhouse_job_board_api"
         }
       ],
-      "checked_at": "2026-10-02T10:37:19.966167+00:00",
+      "checked_at": "2026-10-04T21:19:20.512343+00:00",
       "error": null
     }
   ]
