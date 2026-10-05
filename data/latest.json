@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-05",
   "weekday": "Monday",
-  "scheduledSlot": "20:42",
-  "scheduledAt": "2026-10-05T20:42:00+02:00",
-  "rawScheduledSlot": "20:42",
-  "rawScheduledAt": "2026-10-05T20:42:00+02:00",
-  "startedAt": "2026-10-05T20:42:00.317878+02:00",
-  "completedAt": "2026-10-05T20:42:05.006260+02:00",
-  "checkedAt": "2026-10-05T20:42:05.006260+02:00",
+  "scheduledSlot": "20:45",
+  "scheduledAt": "2026-10-05T20:45:00+02:00",
+  "rawScheduledSlot": "20:45",
+  "rawScheduledAt": "2026-10-05T20:45:00+02:00",
+  "startedAt": "2026-10-05T20:45:00.234673+02:00",
+  "completedAt": "2026-10-05T20:45:04.509170+02:00",
+  "checkedAt": "2026-10-05T20:45:04.509170+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,8 +25,8 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 175,
-      "meatItems": 17,
+      "totalBargainItems": 179,
+      "meatItems": 21,
       "meat70Items": 6,
       "meat70Stock": 13.0,
       "bakeryItems": 46,
@@ -467,6 +467,54 @@
           "stock": 1,
           "priceWas": "2.66",
           "priceNow": "2.00",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 619339,
+          "title": "AH Scharrel krokante kipfiletschnitzel",
+          "brand": "AH",
+          "size": "600 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "7.99",
+          "priceNow": "5.99",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 620805,
+          "title": "AH Ovenschotel sticky bites sweet garlic",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "6.99",
+          "priceNow": "5.24",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 620816,
+          "title": "AH Oven scharrel kippendijen coq au vin",
+          "brand": "AH",
+          "size": "480 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "6.29",
+          "priceNow": "4.72",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 436917,
+          "title": "AH Kipgehakt naturel",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "2.99",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -2561,15 +2609,15 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 245,
-      "meatItems": 13,
-      "meat70Items": 9,
-      "meat70Stock": 14.0,
+      "totalBargainItems": 244,
+      "meatItems": 12,
+      "meat70Items": 8,
+      "meat70Stock": 12.0,
       "bakeryItems": 53,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 65,
-      "all70Stock": 167.0,
+      "all70Items": 64,
+      "all70Stock": 164.0,
       "all70": [
         {
           "productId": 169688,
@@ -2950,7 +2998,7 @@
           "size": "2 stuks",
           "category": "Vlees",
           "discountPct": 70,
-          "stock": 5,
+          "stock": 4,
           "priceWas": "3.50",
           "priceNow": "1.05",
           "markdownExpirationDate": "2026-10-05"
@@ -2965,18 +3013,6 @@
           "stock": 2,
           "priceWas": "2.19",
           "priceNow": "0.66",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
-          "productId": 589094,
-          "title": "AH Scharrel kipburger 4 stuks",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "5.49",
-          "priceNow": "1.65",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -3220,18 +3256,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 619335,
-          "title": "AH Scharrel sticky chicken teriyaki",
-          "brand": "AH",
-          "size": "ca. 370 g",
-          "category": "Borrel, chips, snacks",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.29",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
           "productId": 560996,
           "title": "AH Beenham mosterd salade",
           "brand": "AH",
@@ -3241,6 +3265,18 @@
           "stock": 1,
           "priceWas": "2.99",
           "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 619335,
+          "title": "AH Scharrel sticky chicken teriyaki",
+          "brand": "AH",
+          "size": "ca. 370 g",
+          "category": "Borrel, chips, snacks",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.29",
+          "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -3360,7 +3396,7 @@
           "size": "2 stuks",
           "category": "Vlees",
           "discountPct": 70,
-          "stock": 5,
+          "stock": 4,
           "priceWas": "3.50",
           "priceNow": "1.05",
           "markdownExpirationDate": "2026-10-05"
@@ -3375,18 +3411,6 @@
           "stock": 2,
           "priceWas": "2.19",
           "priceNow": "0.66",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
-          "productId": 589094,
-          "title": "AH Scharrel kipburger 4 stuks",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "5.49",
-          "priceNow": "1.65",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -4153,7 +4177,7 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 154,
+      "totalBargainItems": 152,
       "meatItems": 10,
       "meat70Items": 3,
       "meat70Stock": 5.0,
@@ -4161,20 +4185,8 @@
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "all70Items": 36,
-      "all70Stock": 63.0,
+      "all70Stock": 62.0,
       "all70": [
-        {
-          "productId": 597255,
-          "title": "AH Halve kriel rozemarijn zeezout",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "1.49",
-          "priceNow": "0.45",
-          "markdownExpirationDate": "2026-10-05"
-        },
         {
           "productId": 185765,
           "title": "AH Roerbakgroente Mexicaans",
@@ -4209,6 +4221,18 @@
           "stock": 1,
           "priceWas": "5.99",
           "priceNow": "1.80",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 597255,
+          "title": "AH Halve kriel rozemarijn zeezout",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.49",
+          "priceNow": "0.45",
           "markdownExpirationDate": "2026-10-05"
         },
         {
