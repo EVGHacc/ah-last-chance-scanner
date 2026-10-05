@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "target_count": 104,
-  "certified_coverage": 6,
-  "updated_at": "2026-10-05T18:36:40.414477+00:00",
+  "certified_coverage": 7,
+  "updated_at": "2026-10-05T18:39:40.753665+00:00",
   "records": [
     {
       "provider": null,
@@ -1709,19 +1709,25 @@
       "name": "PayPal"
     },
     {
-      "provider": null,
+      "provider": "greenhouse",
       "source": "employer::Payhawk",
-      "certification": "UNPROVEN",
-      "health": "STALE",
-      "accepted_proofs": [],
-      "consecutive_green_proofs": 0,
-      "certification_provenance": null,
-      "adapter_version": null,
-      "code_commit_sha": null,
-      "config_hash": null,
-      "authority_contract_version": null,
-      "certified_job_count": null,
-      "freshness_at": null,
+      "certification": "CERTIFIED",
+      "health": "HEALTHY",
+      "accepted_proofs": [
+        "37357401493-1:greenhouse:employer::Payhawk:proof",
+        "37357401493-2:greenhouse:employer::Payhawk:proof"
+      ],
+      "consecutive_green_proofs": 2,
+      "certification_provenance": [
+        "37357401493-1:greenhouse:employer::Payhawk:proof",
+        "37357401493-2:greenhouse:employer::Payhawk:proof"
+      ],
+      "adapter_version": "47ce30062dceef269ea00539e37a695b9a7957fa",
+      "code_commit_sha": "7557bf670c97e2562ceac47c78fdc404e4aa284c",
+      "config_hash": "gitblob:bc162a7bd1055120708056b4e7141f20ca230883",
+      "authority_contract_version": "schema1:gitblob:42c7b9bf8993bcf737926dbe4168777fdf2555e0",
+      "certified_job_count": 49,
+      "freshness_at": "2026-10-05T18:39:40.583793+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "employer::Payhawk",
