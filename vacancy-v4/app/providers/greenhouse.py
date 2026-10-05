@@ -8,7 +8,13 @@ class GreenhouseError(RuntimeError):
     pass
 
 
-SUMMARY_LIMIT = 360\nGREENHOUSE_JOB_BOARD_HOSTS = {\n    "boards.greenhouse.io",\n    "job-boards.greenhouse.io",\n    "job-boards.eu.greenhouse.io",\n}\n
+SUMMARY_LIMIT = 360
+GREENHOUSE_JOB_BOARD_HOSTS = {
+    "boards.greenhouse.io",
+    "job-boards.greenhouse.io",
+    "job-boards.eu.greenhouse.io",
+}
+
 
 @dataclass(frozen=True)
 class GreenhouseJob:

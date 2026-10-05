@@ -1,6 +1,8 @@
 import argparse
 import hashlib
-import json\nimport sys\nfrom datetime import datetime, timezone
+import json
+import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 from .model import Coverage, InventoryProof
