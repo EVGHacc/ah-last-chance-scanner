@@ -8,16 +8,19 @@ from app.greenhouse_batch import run_batch
 from app.transport import TransportError
 
 
-DOMAINS={"stripe":"stripe.com","ripple":"ripple.com"}
+BASE_URLS={
+    "stripe":"https://stripe.com/jobs",
+    "ripple":"https://ripple.com/jobs",
+    "payhawkio":"https://job-boards.eu.greenhouse.io/payhawkio/jobs",
+}
 
 
 def good(board):
-    domain=DOMAINS[board]
     return {"jobs":[{
         "id":1,
         "title":"Compliance Lead",
         "location":{"name":"Amsterdam"},
-        "absolute_url":f"https://{domain}/jobs/1",
+        "absolute_url":f"{BASE_URLS[board]}/1",
         "content":"Lead compliance governance and controls. Advise senior stakeholders.",
         "departments":[{"name":"Compliance"}],
         "offices":[{"name":"Amsterdam"}],
@@ -26,13 +29,20 @@ def good(board):
 
 
 class GreenhouseIndependentQA(unittest.TestCase):
+    def test_payhawk_eu_greenhouse_host_is_valid_provider_route(self):
+        result=run_batch(lambda url: good(url.split("/boards/")[1].split("/")[0]))
+        self.assertEqual(result["verified_complete"],3)
+        payhawk=next(x for x in result["sources"] if x["name"]=="Payhawk")
+        self.assertEqual(payhawk["coverage"],"verified_complete")
+        self.assertTrue(payhawk["jobs"][0]["job_url"].startswith("https://job-boards.eu.greenhouse.io/payhawkio/"))
+
     def test_network_failure_isolated_per_source(self):
         def fetch(url):
             board=url.split("/boards/")[1].split("/")[0]
             if board=="stripe": raise TransportError("network failure")
             return good(board)
         result=run_batch(fetch)
-        self.assertEqual(result["verified_complete"],1)
+        self.assertEqual(result["verified_complete"],2)
         failed=next(x for x in result["sources"] if x["name"]=="Stripe")
         self.assertEqual(failed["coverage"],"unproven")
         self.assertEqual(failed["jobs"],[])

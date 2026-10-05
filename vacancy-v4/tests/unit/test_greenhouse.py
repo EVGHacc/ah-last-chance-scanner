@@ -48,6 +48,18 @@ class GreenhouseDeveloperTests(unittest.TestCase):
         with self.assertRaises(GreenhouseError):
             inventory(SOURCE,"acme",lambda _:{"jobs":[bad],"meta":{"total":1}})
 
+    def test_same_board_eu_greenhouse_host_is_allowed(self):
+        hosted=job(1)
+        hosted["absolute_url"]="https://job-boards.eu.greenhouse.io/acme/jobs/1"
+        inv=inventory(SOURCE,"acme",lambda _:{"jobs":[hosted],"meta":{"total":1}})
+        self.assertEqual(inv.jobs[0].job_url,hosted["absolute_url"])
+
+    def test_cross_board_greenhouse_host_fails_closed(self):
+        bad=job(1)
+        bad["absolute_url"]="https://job-boards.eu.greenhouse.io/other/jobs/1"
+        with self.assertRaises(GreenhouseError):
+            inventory(SOURCE,"acme",lambda _:{"jobs":[bad],"meta":{"total":1}})
+
     def test_missing_content_fails_closed(self):
         bad=job(1);bad.pop("content")
         with self.assertRaises(GreenhouseError):

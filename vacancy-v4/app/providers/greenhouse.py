@@ -8,8 +8,7 @@ class GreenhouseError(RuntimeError):
     pass
 
 
-SUMMARY_LIMIT = 360
-
+SUMMARY_LIMIT = 360\nGREENHOUSE_JOB_BOARD_HOSTS = {\n    "boards.greenhouse.io",\n    "job-boards.greenhouse.io",\n    "job-boards.eu.greenhouse.io",\n}\n
 
 @dataclass(frozen=True)
 class GreenhouseJob:
@@ -59,13 +58,18 @@ def short_summary(content: str) -> str:
     return summary
 
 
-def _host_allowed(url: str, official_domain: str, allowed_domains=()) -> bool:
+def _host_allowed(url: str, official_domain: str, allowed_domains=(), board_token: str | None = None) -> bool:
     parsed=urlparse(url)
     if parsed.scheme != "https" or not parsed.netloc:
         return False
     host=parsed.netloc.lower().split(":",1)[0]
     domains=[official_domain,*allowed_domains]
-    return any(host==d.lower() or host.endswith("."+d.lower()) for d in domains)
+    if any(host==d.lower() or host.endswith("."+d.lower()) for d in domains):
+        return True
+    if host in GREENHOUSE_JOB_BOARD_HOSTS and board_token:
+        segments=[part for part in parsed.path.split("/") if part]
+        return bool(segments) and segments[0].casefold()==board_token.strip().casefold()
+    return False
 
 
 def _first_name(rows, key="name") -> str:
@@ -105,8 +109,13 @@ def parse_payload(source, board_token: str, payload):
             raise GreenhouseError("structural change: title missing")
         if not isinstance(absolute_url,str) or not absolute_url.strip():
             raise GreenhouseError("structural change: absolute_url missing")
-        if not _host_allowed(absolute_url,source.official_domain,source.allowed_domains):
-            raise GreenhouseError("job URL does not belong to source official domain")
+        if not _host_allowed(
+            absolute_url,
+            source.official_domain,
+            source.allowed_domains,
+            board_token=board_token,
+        ):
+            raise GreenhouseError("job URL does not belong to source or configured Greenhouse board")
         if ident in jobs:
             raise GreenhouseError("duplicate job identity")
         location=""

@@ -1,7 +1,6 @@
 import argparse
 import hashlib
-import json
-from datetime import datetime, timezone
+import json\nimport sys\nfrom datetime import datetime, timezone
 from pathlib import Path
 
 from .model import Coverage, InventoryProof
@@ -146,6 +145,11 @@ def main():
     target=args.output if payload["failed"]==0 else args.output.with_suffix(args.output.suffix+".attempt")
     target.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     if payload["failed"]:
+        failures=[
+            {"name":row["name"],"board":row["board"],"error":row["error"]}
+            for row in payload["sources"] if row["coverage"]!=Coverage.VERIFIED_COMPLETE.value
+        ]
+        print(json.dumps({"greenhouse_failed_sources":failures},ensure_ascii=False),file=sys.stderr)
         raise SystemExit("attempt rejected; authoritative proof preserved")
     print(json.dumps({
         "provider":payload["provider"],
