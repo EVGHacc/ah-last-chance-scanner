@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provider": "greenhouse",
-  "generated_at": "2026-10-05T01:19:35.050083+00:00",
+  "generated_at": "2026-10-05T05:24:36.207471+00:00",
   "configured_sources": 2,
   "verified_complete": 2,
   "failed": 0,
@@ -10,13 +10,13 @@
       "name": "Stripe",
       "board": "stripe",
       "coverage": "verified_complete",
-      "unique_jobs": 716,
-      "authoritative_total": 716,
+      "unique_jobs": 717,
+      "authoritative_total": 717,
       "exhausted": true,
       "evidence_kind": "greenhouse_meta_total_reconciled",
       "endpoint": "https://boards-api.greenhouse.io/v1/boards/stripe/jobs?content=true",
       "first_party_evidence_url": "https://stripe.com/careers/search",
-      "jobs_sha256": "7a685b2fb9a880a4e8f98af4a7945ff5a8eb0e208fba03e814a04e51fb92b52c",
+      "jobs_sha256": "663d39d6dd05d288e51401b81902eef7357183f3c7bd9dcf1ed226b754c8b326",
       "jobs": [
         {
           "job_id": "8172487",
@@ -146,6 +146,19 @@
           "office": "US-Chicago",
           "published_at": "2026-09-09T12:47:02-04:00",
           "updated_at": "2026-09-25T16:45:02-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8174141",
+          "title": "Account Executive Product - Global Selling",
+          "location": "Sydney Or Melbourne",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies from the world's largest enterprises to the most ambitious startups use Stripe to accept payments, grow their revenue and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8174141",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8174141",
+          "department": "1640 Product Sales - Payments",
+          "office": "Australia Locations",
+          "published_at": "2026-09-29T07:14:22-04:00",
+          "updated_at": "2026-10-04T23:51:43-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -9327,7 +9340,7 @@
           "record_source": "greenhouse_job_board_api"
         }
       ],
-      "checked_at": "2026-10-05T01:19:34.290415+00:00",
+      "checked_at": "2026-10-05T05:24:34.256546+00:00",
       "error": null
     },
     {
@@ -11046,7 +11059,7 @@
           "record_source": "greenhouse_job_board_api"
         }
       ],
-      "checked_at": "2026-10-05T01:19:34.839020+00:00",
+      "checked_at": "2026-10-05T05:24:34.991304+00:00",
       "error": null
     }
   ]
