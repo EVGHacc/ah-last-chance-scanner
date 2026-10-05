@@ -6,9 +6,7 @@ ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT))
 from app.greenhouse_batch import run_batch
 
-
-DOMAINS={"stripe":"stripe.com","ripple":"ripple.com","payhawkio":"payhawk.com","remotecom":"remote.com"}
-
+DOMAINS={"stripe":"stripe.com","ripple":"ripple.com","payhawkio":"payhawk.com","remotecom":"remote.com","tide":"tide.co"}
 
 def payload(board,count=2):
     domain=DOMAINS[board]
@@ -27,18 +25,16 @@ def payload(board,count=2):
         "meta":{"total":count},
     }
 
-
 class GreenhouseBatchDeveloperTests(unittest.TestCase):
     def test_all_current_greenhouse_targets_persist_complete_job_inventory(self):
         result=run_batch(lambda url:payload(url.split("/boards/")[1].split("/")[0],2))
-        self.assertEqual(result["configured_sources"],4)
-        self.assertEqual(result["verified_complete"],4)
+        self.assertEqual(result["configured_sources"],5)
+        self.assertEqual(result["verified_complete"],5)
         self.assertEqual(result["failed"],0)
-        self.assertEqual({x["name"] for x in result["sources"]},{"Stripe","Ripple","Payhawk","Remote.com"})
+        self.assertEqual({x["name"] for x in result["sources"]},{"Stripe","Ripple","Payhawk","Remote.com","Tide"})
         for row in result["sources"]:
             self.assertEqual(len(row["jobs"]),2)
             self.assertEqual(row["unique_jobs"],row["authoritative_total"])
             self.assertTrue(all(j["title"] and j["summary"] for j in row["jobs"]))
-
 
 if __name__=="__main__": unittest.main()

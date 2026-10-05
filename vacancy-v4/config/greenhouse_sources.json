@@ -2,25 +2,10 @@
   "schema_version": 1,
   "provider": "greenhouse",
   "sources": [
-    {
-      "name": "Stripe",
-      "board": "stripe",
-      "first_party_evidence_url": "https://stripe.com/careers/search"
-    },
-    {
-      "name": "Ripple",
-      "board": "ripple",
-      "first_party_evidence_url": "https://ripple.com/careers/all-jobs/"
-    },
-    {
-      "name": "Payhawk",
-      "board": "payhawkio",
-      "first_party_evidence_url": "https://payhawk.com/careers"
-    },
-    {
-      "name": "Remote.com",
-      "board": "remotecom",
-      "first_party_evidence_url": "https://remote.com/openings"
-    }
+    {"name":"Stripe","board":"stripe","first_party_evidence_url":"https://stripe.com/careers/search"},
+    {"name":"Ripple","board":"ripple","first_party_evidence_url":"https://ripple.com/careers/all-jobs/"},
+    {"name":"Payhawk","board":"payhawkio","first_party_evidence_url":"https://payhawk.com/careers"},
+    {"name":"Remote.com","board":"remotecom","first_party_evidence_url":"https://remote.com/openings"},
+    {"name":"Tide","board":"tide","first_party_evidence_url":"https://www.tide.co/careers/"}
   ]
 }
