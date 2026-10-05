@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-05",
   "weekday": "Monday",
-  "scheduledSlot": "21:50",
-  "scheduledAt": "2026-10-05T21:50:00+02:00",
-  "rawScheduledSlot": "21:50",
-  "rawScheduledAt": "2026-10-05T21:50:00+02:00",
-  "startedAt": "2026-10-05T21:50:00.235031+02:00",
-  "completedAt": "2026-10-05T21:50:04.103184+02:00",
-  "checkedAt": "2026-10-05T21:50:04.103184+02:00",
+  "scheduledSlot": "21:51",
+  "scheduledAt": "2026-10-05T21:51:00+02:00",
+  "rawScheduledSlot": "21:51",
+  "rawScheduledAt": "2026-10-05T21:51:00+02:00",
+  "startedAt": "2026-10-05T21:51:00.228857+02:00",
+  "completedAt": "2026-10-05T21:51:04.782608+02:00",
+  "checkedAt": "2026-10-05T21:51:04.782608+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -652,18 +652,6 @@
           "markdownExpirationDate": "2026-10-05"
         },
         {
-          "productId": 125035,
-          "title": "AH Les pains boulogne heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "2.39",
-          "priceNow": "1.79",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
           "productId": 487304,
           "title": "AH Liefde & Passie OerDesem pompoen",
           "brand": "AH Liefde & Passie",
@@ -697,6 +685,18 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.74",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 125035,
+          "title": "AH Les pains boulogne heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "2.39",
+          "priceNow": "1.79",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -4534,7 +4534,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 20,
+          "stock": 19,
           "priceWas": "0.28",
           "priceNow": "0.21",
           "markdownExpirationDate": "2026-10-05"
@@ -4546,7 +4546,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 13,
+          "stock": 11,
           "priceWas": "0.99",
           "priceNow": "0.74",
           "markdownExpirationDate": "2026-10-05"
@@ -4558,7 +4558,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 11,
+          "stock": 9,
           "priceWas": "0.99",
           "priceNow": "0.74",
           "markdownExpirationDate": "2026-10-05"
@@ -4612,18 +4612,6 @@
           "markdownExpirationDate": "2026-10-05"
         },
         {
-          "productId": 425912,
-          "title": "AH Focaccia pepperoni",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 6,
-          "priceWas": "1.59",
-          "priceNow": "1.19",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
           "productId": 537022,
           "title": "AH Pizzabroodje kaas-groente",
           "brand": "AH",
@@ -4672,6 +4660,18 @@
           "markdownExpirationDate": "2026-10-05"
         },
         {
+          "productId": 425912,
+          "title": "AH Focaccia pepperoni",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 5,
+          "priceWas": "1.59",
+          "priceNow": "1.19",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
           "productId": 487304,
           "title": "AH Liefde & Passie OerDesem pompoen",
           "brand": "AH Liefde & Passie",
@@ -4686,18 +4686,6 @@
         {
           "productId": 571174,
           "title": "AH Jalapeño kaasstengel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
-          "productId": 606046,
-          "title": "AH Turks broodje",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
@@ -4873,6 +4861,18 @@
           "stock": 2,
           "priceWas": "1.49",
           "priceNow": "1.12",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 606046,
+          "title": "AH Turks broodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -5802,7 +5802,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
-          "stock": 5,
+          "stock": 4,
           "priceWas": "0.99",
           "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-05"
