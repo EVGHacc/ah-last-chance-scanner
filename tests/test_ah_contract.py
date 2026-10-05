@@ -19,6 +19,7 @@ def load_module(name, relative):
 
 
 persist = load_module("ah_persist_contract", "scripts/persist.py")
+scanner = load_module("ah_scanner_contract", "scanner.py")
 independent = load_module("ah_independent_contract", "scripts/independent_qa.py")
 
 
@@ -30,6 +31,24 @@ class AHContractTests(unittest.TestCase):
         self.assertEqual(persist.RAW_SLOTS[-1], "22:30")
         self.assertEqual(persist.SLOTS[0], "17:30")
         self.assertEqual(persist.SLOTS[-1], "22:30")
+
+    def test_all_70_products_are_captured_across_categories(self):
+        rows = [
+            {"categoryTitle": "Vlees", "product": {"id": 1, "title": "Kip"}, "markdown": {"markdownPercentage": 70}, "stock": 2, "bargainPrice": {}},
+            {"categoryTitle": "Vleeswaren", "product": {"id": 2, "title": "Ham"}, "markdown": {"markdownPercentage": 70}, "stock": 1, "bargainPrice": {}},
+            {"categoryTitle": "Zuivel", "product": {"id": 3, "title": "Yoghurt"}, "markdown": {"markdownPercentage": 40}, "stock": 4, "bargainPrice": {}},
+        ]
+        captured = scanner.make_all_70(rows)
+        self.assertEqual([x["productId"] for x in captured], [1, 2])
+        self.assertEqual({x["category"] for x in captured}, {"Vlees", "Vleeswaren"})
+
+    def test_compact_obs_preserves_all_70_products(self):
+        observation = {"stores": [{"storeId": 1463, "store": "AH", "fetched": True, "all70Items": 1, "all70Stock": 3,
+                                   "all70": [{"productId": 9, "title": "Test", "category": "Zuivel", "discountPct": 70, "stock": 3}],
+                                   "items": []}]}
+        compact = persist.compact_obs(observation)
+        self.assertEqual(compact["stores"][0]["all70Items"], 1)
+        self.assertEqual(compact["stores"][0]["all70"][0]["category"], "Zuivel")
 
     def test_required_store_scope_matches_independent_verifier(self):
         self.assertEqual(persist.REQUIRED_STORE_IDS, independent.STORE_IDS)
