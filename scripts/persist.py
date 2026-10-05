@@ -37,7 +37,9 @@ def compact_obs(o):
     c={k:o.get(k) for k in keep if k in o}; c['categories']=['Vlees']; c['stores']=[]
     for s in o.get('stores') or []:
         cs={k:s.get(k) for k in ('storeId','store','fetched','meatItems','meat70Items','meat70Stock','all70Items','all70Stock') if k in s}
-        cs['all70']=[{k:i.get(k) for k in ('productId','title','brand','size','category','discountPct','stock','priceWas','priceNow','markdownExpirationDate') if k in i}\n                     for i in (s.get('all70') or []) if float(i.get('discountPct',0) or 0)>=70]\n        cs['items']=[{k:i.get(k) for k in ('productId','title','brand','size','category','discountPct','stock','priceWas','priceNow','markdownExpirationDate') if k in i}
+        cs['all70']=[{k:i.get(k) for k in ('productId','title','brand','size','category','discountPct','stock','priceWas','priceNow','markdownExpirationDate') if k in i}
+                     for i in (s.get('all70') or []) if float(i.get('discountPct',0) or 0)>=70]
+        cs['items']=[{k:i.get(k) for k in ('productId','title','brand','size','category','discountPct','stock','priceWas','priceNow','markdownExpirationDate') if k in i}
                      for i in (s.get('items') or []) if i.get('category')=='Vlees']
         c['stores'].append(cs)
     return c
