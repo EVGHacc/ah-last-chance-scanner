@@ -3,7 +3,7 @@ import unittest
 from unittest.mock import patch
 
 from embedded_inventory import embedded_inventory
-from scanner import REL, SENIOR, extract_jobs, listing_evidence, coverage_from_evidence, validate_jobs, job_key, qa_snapshot, api_inventory, merge_validated_jobs, discover_official_ats, airwallex_id, airwallex_official_url, strategic_inventory_match, airwallex_validation_queue, validate_workday_candidate, airwallex_id, airwallex_official_url, strategic_inventory_match, validate_wise_candidate
+from scanner import REL, SENIOR, extract_jobs, listing_evidence, coverage_from_evidence, validate_jobs, job_key, qa_snapshot, api_inventory, merge_validated_jobs, discover_official_ats, airwallex_id, airwallex_official_url, strategic_inventory_match, airwallex_validation_queue, validate_workday_candidate, airwallex_id, airwallex_official_url, strategic_inventory_match, validate_wise_candidate, inventory_audit_counts
 
 
 ORG = {"official_domain": "example.com", "allowed_domains": []}
