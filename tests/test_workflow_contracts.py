@@ -14,7 +14,10 @@ class WorkflowContractTests(unittest.TestCase):
         self.assertIn("permissions:\n  contents: read", text)
         for job in ("policy:", "ah-tests:", "vacancy-tests:", "independent-review:"):
             self.assertIn(job, text)
-        self.assertIn("needs: [policy, ah-tests, vacancy-tests]", text)
+        self.assertIn("changes:", text)
+        self.assertIn("needs: [changes, policy, ah-tests, vacancy-tests]", text)
+        self.assertIn("if: needs.changes.outputs.ah == 'true'", text)
+        self.assertIn("if: needs.changes.outputs.vacancy == 'true'", text)
         self.assertNotIn("contents: write", text)
 
     def test_production_verifier_is_read_only_and_post_run(self):
