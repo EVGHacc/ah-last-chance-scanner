@@ -11,6 +11,8 @@ DEFAULT_CONFIG=Path(__file__).resolve().parents[1]/"config"/"eightfold_sources.j
 MAX_BYTES=16_000_000
 PAGE_SIZE=10
 MAX_PAGES=5000
+EIGHTFOLD_RETRIES=5
+EIGHTFOLD_BACKOFF=2.0
 
 def load_config(path=DEFAULT_CONFIG):
     data=json.loads(Path(path).read_text(encoding="utf-8"))
@@ -80,7 +82,7 @@ def run_batch(fetcher=None,config_path=DEFAULT_CONFIG):
     for row in rows:
         checked_at=datetime.now(timezone.utc).isoformat()
         try:
-            transport=fetcher or (lambda url: fetch_json(url,max_bytes=MAX_BYTES))
+            transport=fetcher or (lambda url: fetch_json(url,max_bytes=MAX_BYTES,retries=EIGHTFOLD_RETRIES,backoff=EIGHTFOLD_BACKOFF))
             records=_pcsx_inventory(row,transport)
             if len(records)!=len({j["job_id"] for j in records}): raise ValueError("persisted inventory mismatch")
             digest=hashlib.sha256(json.dumps(records,sort_keys=True,ensure_ascii=False).encode()).hexdigest()

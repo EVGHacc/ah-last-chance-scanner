@@ -3,6 +3,7 @@ import sys
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT))
 from app.eightfold_batch import run_batch
 
@@ -46,5 +47,21 @@ class EightfoldBatchTests(unittest.TestCase):
             r=run_batch(fetch,config_path=path)
         self.assertEqual((r["verified_complete"],r["failed"]),(0,1))
         self.assertIn("pagination ended",r["sources"][0]["error"])
+
+    @patch("app.eightfold_batch.fetch_json")
+    def test_default_transport_uses_eightfold_cooldown_retry_budget(self, fetch_json):
+        def response(url, **kwargs):
+            if "position_details" in url:
+                return {"data":{"jobDescription":"Description"}}
+            return {"data":{"count":1,"positions":[{"id":1,"name":"Role","positionUrl":"/careers/job/1"}]}}
+        fetch_json.side_effect=response
+        with tempfile.TemporaryDirectory() as d:
+            path=Path(d)/"eightfold_sources.json"; path.write_text(json.dumps(self._config()),encoding="utf-8")
+            r=run_batch(config_path=path)
+        self.assertEqual((r["verified_complete"],r["failed"]),(1,0))
+        self.assertGreaterEqual(fetch_json.call_count,2)
+        for call in fetch_json.call_args_list:
+            self.assertEqual(call.kwargs["retries"],5)
+            self.assertEqual(call.kwargs["backoff"],2.0)
 
 if __name__=="__main__":unittest.main()
