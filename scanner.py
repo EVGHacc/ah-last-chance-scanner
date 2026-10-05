@@ -196,7 +196,7 @@ def main():
         auth_source=LAST_AUTH_SOURCE
         stores=[fetch_store(sid,name,access) for sid,name in STORES]
     except Exception as e:
-        stores=[{'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,'bakery70Items':0,'bakery70Stock':0,'items':[],'bakery':[],'error':str(e)[:350]} for sid,name in STORES]
+        stores=[{'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,'bakery70Items':0,'bakery70Stock':0,'all70Items':0,'all70Stock':0,'all70':[],'items':[],'bakery':[],'error':str(e)[:350]} for sid,name in STORES]
     fetched=sum(1 for x in stores if x['fetched'])
     status=('OK_ZERO_ROWS' if sum(x['meatItems'] for x in stores)==0 else 'OK') if fetched==len(STORES) else ('FAILED' if fetched==0 else 'INCOMPLETE')
     completed=datetime.now(TZ)
