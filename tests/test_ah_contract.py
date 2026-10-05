@@ -18,7 +18,8 @@ def load_module(name, relative):
     return module
 
 
-persist = load_module("ah_persist_contract", "scripts/persist.py")\nscanner = load_module("ah_scanner_contract", "scanner.py")
+persist = load_module("ah_persist_contract", "scripts/persist.py")
+scanner = load_module("ah_scanner_contract", "scanner.py")
 independent = load_module("ah_independent_contract", "scripts/independent_qa.py")
 
 
