@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-05",
   "weekday": "Monday",
-  "scheduledSlot": "20:05",
-  "scheduledAt": "2026-10-05T20:05:00+02:00",
-  "rawScheduledSlot": "20:05",
-  "rawScheduledAt": "2026-10-05T20:05:00+02:00",
-  "startedAt": "2026-10-05T20:05:00.253245+02:00",
-  "completedAt": "2026-10-05T20:05:04.213704+02:00",
-  "checkedAt": "2026-10-05T20:05:04.213704+02:00",
+  "scheduledSlot": "20:06",
+  "scheduledAt": "2026-10-05T20:06:00+02:00",
+  "rawScheduledSlot": "20:06",
+  "rawScheduledAt": "2026-10-05T20:06:00+02:00",
+  "startedAt": "2026-10-05T20:06:00.241683+02:00",
+  "completedAt": "2026-10-05T20:06:04.070769+02:00",
+  "checkedAt": "2026-10-05T20:06:04.070769+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -288,18 +288,6 @@
           "markdownExpirationDate": "2026-10-05"
         },
         {
-          "productId": 577444,
-          "title": "AH Worstenbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.39",
-          "priceNow": "1.04",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
           "productId": 590096,
           "title": "AH Liefde & Passie Biologisch OerDesem blond",
           "brand": "AH Liefde & Passie",
@@ -348,6 +336,18 @@
           "markdownExpirationDate": "2026-10-05"
         },
         {
+          "productId": 577444,
+          "title": "AH Worstenbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.39",
+          "priceNow": "1.04",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
           "productId": 584032,
           "title": "AH Rond wit sesam heel",
           "brand": "AH",
@@ -357,18 +357,6 @@
           "stock": 2,
           "priceWas": "1.89",
           "priceNow": "1.42",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
-          "productId": 606491,
-          "title": "AH Taco snack",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "0.89",
-          "priceNow": "0.67",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -417,6 +405,18 @@
           "stock": 1,
           "priceWas": "1.49",
           "priceNow": "1.12",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 606491,
+          "title": "AH Taco snack",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.89",
+          "priceNow": "0.67",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -2976,18 +2976,6 @@
           "markdownExpirationDate": "2026-10-05"
         },
         {
-          "productId": 487301,
-          "title": "AH Rond volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "1.89",
-          "priceNow": "1.61",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
           "productId": 230786,
           "title": "AH Les pains triomphe heel",
           "brand": "AH",
@@ -3072,6 +3060,18 @@
           "markdownExpirationDate": "2026-10-05"
         },
         {
+          "productId": 487301,
+          "title": "AH Rond volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "1.61",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
           "productId": 455559,
           "title": "Koopmans Volkoren brood fijn volkoren",
           "brand": "Koopmans",
@@ -3113,7 +3113,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 158,
+      "totalBargainItems": 159,
       "meatItems": 21,
       "meat70Items": 3,
       "meat70Stock": 4.0,
