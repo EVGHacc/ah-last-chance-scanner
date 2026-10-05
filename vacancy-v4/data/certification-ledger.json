@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "target_count": 104,
-  "certified_coverage": 4,
-  "updated_at": "2026-10-05T06:43:10.803031+00:00",
+  "certified_coverage": 6,
+  "updated_at": "2026-10-05T08:04:12+00:00",
   "records": [
     {
       "provider": null,
@@ -1693,19 +1693,25 @@
       "name": "Payhawk"
     },
     {
-      "provider": null,
+      "provider": "greenhouse",
       "source": "employer::Stripe",
-      "certification": "UNPROVEN",
-      "health": "STALE",
-      "accepted_proofs": [],
-      "consecutive_green_proofs": 0,
-      "certification_provenance": null,
-      "adapter_version": null,
-      "code_commit_sha": null,
-      "config_hash": null,
-      "authority_contract_version": null,
-      "certified_job_count": null,
-      "freshness_at": null,
+      "certification": "CERTIFIED",
+      "health": "HEALTHY",
+      "accepted_proofs": [
+        "37235605438-4:greenhouse:employer::Stripe:proof",
+        "37235605438-5:greenhouse:employer::Stripe:proof"
+      ],
+      "consecutive_green_proofs": 2,
+      "certification_provenance": [
+        "37235605438-4:greenhouse:employer::Stripe:proof",
+        "37235605438-5:greenhouse:employer::Stripe:proof"
+      ],
+      "adapter_version": "ec328cb2ee01a4b05c04a3f8ec1fce36106e5164",
+      "code_commit_sha": "698e4c12bfba7892992ba619e771741903a57d81",
+      "config_hash": "gitblob:34b2e218a8e937b2d11056993e03c51e8b79dbf8",
+      "authority_contract_version": "schema1:gitblob:42c7b9bf8993bcf737926dbe4168777fdf2555e0",
+      "certified_job_count": 717,
+      "freshness_at": "2026-10-05T05:24:34.256546+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "employer::Stripe",
@@ -1833,19 +1839,25 @@
       "name": "Van Lanschot"
     },
     {
-      "provider": null,
+      "provider": "greenhouse",
       "source": "employer::Ripple",
-      "certification": "UNPROVEN",
-      "health": "STALE",
-      "accepted_proofs": [],
-      "consecutive_green_proofs": 0,
-      "certification_provenance": null,
-      "adapter_version": null,
-      "code_commit_sha": null,
-      "config_hash": null,
-      "authority_contract_version": null,
-      "certified_job_count": null,
-      "freshness_at": null,
+      "certification": "CERTIFIED",
+      "health": "HEALTHY",
+      "accepted_proofs": [
+        "37235605438-4:greenhouse:employer::Ripple:proof",
+        "37235605438-5:greenhouse:employer::Ripple:proof"
+      ],
+      "consecutive_green_proofs": 2,
+      "certification_provenance": [
+        "37235605438-4:greenhouse:employer::Ripple:proof",
+        "37235605438-5:greenhouse:employer::Ripple:proof"
+      ],
+      "adapter_version": "ec328cb2ee01a4b05c04a3f8ec1fce36106e5164",
+      "code_commit_sha": "698e4c12bfba7892992ba619e771741903a57d81",
+      "config_hash": "gitblob:34b2e218a8e937b2d11056993e03c51e8b79dbf8",
+      "authority_contract_version": "schema1:gitblob:42c7b9bf8993bcf737926dbe4168777fdf2555e0",
+      "certified_job_count": 131,
+      "freshness_at": "2026-10-05T05:24:34.991304+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "employer::Ripple",
