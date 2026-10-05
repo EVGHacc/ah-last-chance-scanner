@@ -19,7 +19,7 @@ def load_module(name, relative):
 
 
 persist = load_module("ah_persist_contract", "scripts/persist.py")
-independent = load_module("ah_independent_contract", "scripts/independent_qa.py")
+independent = load_module("ah_independent_contract", "scripts/independent_qa.py")\ncentral_check = load_module("ah_central_data_check", "scripts/central_data_check.py")
 
 
 class AHContractTests(unittest.TestCase):
