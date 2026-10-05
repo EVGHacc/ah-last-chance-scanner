@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-05",
   "weekday": "Monday",
-  "scheduledSlot": "18:30",
-  "scheduledAt": "2026-10-05T18:30:00+02:00",
-  "rawScheduledSlot": "18:30",
-  "rawScheduledAt": "2026-10-05T18:30:00+02:00",
-  "startedAt": "2026-10-05T18:30:00.239339+02:00",
-  "completedAt": "2026-10-05T18:30:04.316629+02:00",
-  "checkedAt": "2026-10-05T18:30:04.316629+02:00",
+  "scheduledSlot": "18:33",
+  "scheduledAt": "2026-10-05T18:33:00+02:00",
+  "rawScheduledSlot": "18:33",
+  "rawScheduledAt": "2026-10-05T18:33:00+02:00",
+  "startedAt": "2026-10-05T18:33:00.249914+02:00",
+  "completedAt": "2026-10-05T18:33:05.372277+02:00",
+  "checkedAt": "2026-10-05T18:33:05.372277+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -27,8 +27,8 @@
       "fetched": true,
       "totalBargainItems": 110,
       "meatItems": 16,
-      "meat70Items": 1,
-      "meat70Stock": 2.0,
+      "meat70Items": 3,
+      "meat70Stock": 4.0,
       "bakeryItems": 6,
       "bakery70Items": 0,
       "bakery70Stock": 0,
@@ -43,6 +43,30 @@
           "stock": 2,
           "priceWas": "3.79",
           "priceNow": "1.14",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 619345,
+          "title": "AH Scharrel kipborrelhapjes paprika",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.29",
+          "priceNow": "1.29",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 560559,
+          "title": "AH Scharrel kipburger smokey 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -94,18 +118,6 @@
           "markdownExpirationDate": "2026-10-05"
         },
         {
-          "productId": 619345,
-          "title": "AH Scharrel kipborrelhapjes paprika",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "4.29",
-          "priceNow": "2.57",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
           "productId": 507416,
           "title": "Streeckgenoten Shoarmareepjes",
           "brand": "Streeckgenoten",
@@ -115,18 +127,6 @@
           "stock": 1,
           "priceWas": "6.49",
           "priceNow": "3.29",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
-          "productId": 560559,
-          "title": "AH Scharrel kipburger smokey 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "2.99",
-          "priceNow": "1.79",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -305,10 +305,10 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 217,
+      "totalBargainItems": 216,
       "meatItems": 20,
-      "meat70Items": 2,
-      "meat70Stock": 3.0,
+      "meat70Items": 3,
+      "meat70Stock": 4.0,
       "bakeryItems": 8,
       "bakery70Items": 2,
       "bakery70Stock": 4.0,
@@ -323,6 +323,18 @@
           "stock": 2,
           "priceWas": "2.99",
           "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 619338,
+          "title": "AH Kip boomstammetjes",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.50",
+          "priceNow": "1.35",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -359,18 +371,6 @@
           "stock": 2,
           "priceWas": "3.99",
           "priceNow": "2.39",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
-          "productId": 619338,
-          "title": "AH Kip boomstammetjes",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "4.50",
-          "priceNow": "2.70",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -659,8 +659,8 @@
       "fetched": true,
       "totalBargainItems": 211,
       "meatItems": 17,
-      "meat70Items": 2,
-      "meat70Stock": 11.0,
+      "meat70Items": 3,
+      "meat70Stock": 12.0,
       "bakeryItems": 11,
       "bakery70Items": 0,
       "bakery70Stock": 0,
@@ -687,6 +687,18 @@
           "stock": 3,
           "priceWas": "3.79",
           "priceNow": "1.14",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 612920,
+          "title": "Wahid Adana kebab",
+          "brand": "Wahid",
+          "size": "240 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "5.69",
+          "priceNow": "1.71",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -747,18 +759,6 @@
           "stock": 1,
           "priceWas": "5.49",
           "priceNow": "3.29",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
-          "productId": 612920,
-          "title": "Wahid Adana kebab",
-          "brand": "Wahid",
-          "size": "240 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "5.69",
-          "priceNow": "3.41",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -1229,7 +1229,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 97,
+      "totalBargainItems": 99,
       "meatItems": 10,
       "meat70Items": 0,
       "meat70Stock": 0,
