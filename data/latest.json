@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-05",
   "weekday": "Monday",
-  "scheduledSlot": "19:57",
-  "scheduledAt": "2026-10-05T19:57:00+02:00",
-  "rawScheduledSlot": "19:57",
-  "rawScheduledAt": "2026-10-05T19:57:00+02:00",
-  "startedAt": "2026-10-05T19:57:00.213825+02:00",
-  "completedAt": "2026-10-05T19:57:05.110427+02:00",
-  "checkedAt": "2026-10-05T19:57:05.110427+02:00",
+  "scheduledSlot": "20:00",
+  "scheduledAt": "2026-10-05T20:00:00+02:00",
+  "rawScheduledSlot": "20:00",
+  "rawScheduledAt": "2026-10-05T20:00:00+02:00",
+  "startedAt": "2026-10-05T20:00:00.251930+02:00",
+  "completedAt": "2026-10-05T20:00:04.277875+02:00",
+  "checkedAt": "2026-10-05T20:00:04.277875+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -504,18 +504,6 @@
           "markdownExpirationDate": "2026-10-05"
         },
         {
-          "productId": 125034,
-          "title": "AH Les pains Boulogne half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "1.29",
-          "priceNow": "1.10",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
           "productId": 230726,
           "title": "AH Maple pecan vlechtbrood",
           "brand": "AH",
@@ -621,6 +609,18 @@
           "stock": 1,
           "priceWas": "1.19",
           "priceNow": "1.01",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 125034,
+          "title": "AH Les pains Boulogne half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "1.29",
+          "priceNow": "1.10",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -2422,18 +2422,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 589120,
-          "title": "AH Kipgehakt naturel",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "6.49",
-          "priceNow": "4.87",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 533528,
           "title": "Omar Biefstuk naturel",
           "brand": "Omar",
@@ -2455,6 +2443,18 @@
           "stock": 2,
           "priceWas": "3.69",
           "priceNow": "2.77",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 589120,
+          "title": "AH Kipgehakt naturel",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "6.49",
+          "priceNow": "4.87",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -3125,7 +3125,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 152,
+      "totalBargainItems": 154,
       "meatItems": 21,
       "meat70Items": 3,
       "meat70Stock": 4.0,
@@ -3496,18 +3496,6 @@
           "markdownExpirationDate": "2026-10-05"
         },
         {
-          "productId": 429658,
-          "title": "AH Spinazie feta börek",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 5,
-          "priceWas": "1.19",
-          "priceNow": "1.01",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
           "productId": 487298,
           "title": "AH Rond volkoren half",
           "brand": "AH",
@@ -3529,6 +3517,18 @@
           "stock": 4,
           "priceWas": "1.29",
           "priceNow": "1.10",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 429658,
+          "title": "AH Spinazie feta börek",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 4,
+          "priceWas": "1.19",
+          "priceNow": "1.01",
           "markdownExpirationDate": "2026-10-05"
         },
         {
