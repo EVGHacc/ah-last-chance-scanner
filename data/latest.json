@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-05",
   "weekday": "Monday",
-  "scheduledSlot": "19:30",
-  "scheduledAt": "2026-10-05T19:30:00+02:00",
-  "rawScheduledSlot": "19:30",
-  "rawScheduledAt": "2026-10-05T19:30:00+02:00",
-  "startedAt": "2026-10-05T19:30:00.243649+02:00",
-  "completedAt": "2026-10-05T19:30:06.577795+02:00",
-  "checkedAt": "2026-10-05T19:30:06.577795+02:00",
+  "scheduledSlot": "19:33",
+  "scheduledAt": "2026-10-05T19:33:00+02:00",
+  "rawScheduledSlot": "19:33",
+  "rawScheduledAt": "2026-10-05T19:33:00+02:00",
+  "startedAt": "2026-10-05T19:33:00.241454+02:00",
+  "completedAt": "2026-10-05T19:33:04.507471+02:00",
+  "checkedAt": "2026-10-05T19:33:04.507471+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -27,8 +27,8 @@
       "fetched": true,
       "totalBargainItems": 110,
       "meatItems": 16,
-      "meat70Items": 8,
-      "meat70Stock": 15.0,
+      "meat70Items": 9,
+      "meat70Stock": 16.0,
       "bakeryItems": 6,
       "bakery70Items": 0,
       "bakery70Stock": 0,
@@ -106,6 +106,18 @@
           "markdownExpirationDate": "2026-10-05"
         },
         {
+          "productId": 507416,
+          "title": "Streeckgenoten Shoarmareepjes",
+          "brand": "Streeckgenoten",
+          "size": "450 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.49",
+          "priceNow": "1.65",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
           "productId": 560559,
           "title": "AH Scharrel kipburger smokey 2 stuks",
           "brand": "AH",
@@ -127,18 +139,6 @@
           "stock": 1,
           "priceWas": "6.00",
           "priceNow": "1.80",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
-          "productId": 507416,
-          "title": "Streeckgenoten Shoarmareepjes",
-          "brand": "Streeckgenoten",
-          "size": "450 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "6.49",
-          "priceNow": "3.29",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -307,12 +307,24 @@
       "fetched": true,
       "totalBargainItems": 210,
       "meatItems": 19,
-      "meat70Items": 6,
-      "meat70Stock": 7.0,
+      "meat70Items": 11,
+      "meat70Stock": 14.0,
       "bakeryItems": 8,
       "bakery70Items": 2,
       "bakery70Stock": 4.0,
       "items": [
+        {
+          "productId": 436755,
+          "title": "AH Biologisch Rundervink",
+          "brand": "AH Biologisch",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "4.99",
+          "priceNow": "1.27",
+          "markdownExpirationDate": "2026-10-05"
+        },
         {
           "productId": 560559,
           "title": "AH Scharrel kipburger smokey 2 stuks",
@@ -323,6 +335,18 @@
           "stock": 2,
           "priceWas": "2.99",
           "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 483907,
+          "title": "AH Varkensslavink 4 stuks",
+          "brand": "AH",
+          "size": "4 stuks",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -338,6 +362,18 @@
           "markdownExpirationDate": "2026-10-05"
         },
         {
+          "productId": 619344,
+          "title": "AH Scharrel chickenwings pikant",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.59",
+          "priceNow": "1.08",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
           "productId": 620807,
           "title": "AH Ovenschotel varkenshaas mozzarella",
           "brand": "AH",
@@ -350,6 +386,18 @@
           "markdownExpirationDate": "2026-10-05"
         },
         {
+          "productId": 507416,
+          "title": "Streeckgenoten Shoarmareepjes",
+          "brand": "Streeckgenoten",
+          "size": "450 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.49",
+          "priceNow": "1.65",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
           "productId": 533080,
           "title": "AH Scharrel kipfilet blokjes",
           "brand": "AH",
@@ -359,6 +407,18 @@
           "stock": 1,
           "priceWas": "5.49",
           "priceNow": "1.35",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 199713,
+          "title": "AH Slavink",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.49",
+          "priceNow": "0.64",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -383,66 +443,6 @@
           "stock": 1,
           "priceWas": "2.99",
           "priceNow": "0.90",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
-          "productId": 436755,
-          "title": "AH Biologisch Rundervink",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "4.99",
-          "priceNow": "2.54",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
-          "productId": 483907,
-          "title": "AH Varkensslavink 4 stuks",
-          "brand": "AH",
-          "size": "4 stuks",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "3.99",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
-          "productId": 619344,
-          "title": "AH Scharrel chickenwings pikant",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "3.59",
-          "priceNow": "2.15",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
-          "productId": 507416,
-          "title": "Streeckgenoten Shoarmareepjes",
-          "brand": "Streeckgenoten",
-          "size": "450 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "6.49",
-          "priceNow": "3.29",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
-          "productId": 199713,
-          "title": "AH Slavink",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "2.49",
-          "priceNow": "1.27",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -1157,7 +1157,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 122,
+      "totalBargainItems": 123,
       "meatItems": 21,
       "meat70Items": 3,
       "meat70Stock": 4.0,
