@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-05",
   "weekday": "Monday",
-  "scheduledSlot": "20:51",
-  "scheduledAt": "2026-10-05T20:51:00+02:00",
-  "rawScheduledSlot": "20:51",
-  "rawScheduledAt": "2026-10-05T20:51:00+02:00",
-  "startedAt": "2026-10-05T20:51:00.269264+02:00",
-  "completedAt": "2026-10-05T20:51:05.315056+02:00",
-  "checkedAt": "2026-10-05T20:51:05.315056+02:00",
+  "scheduledSlot": "20:54",
+  "scheduledAt": "2026-10-05T20:54:00+02:00",
+  "rawScheduledSlot": "20:54",
+  "rawScheduledAt": "2026-10-05T20:54:00+02:00",
+  "startedAt": "2026-10-05T20:54:00.235239+02:00",
+  "completedAt": "2026-10-05T20:54:04.959409+02:00",
+  "checkedAt": "2026-10-05T20:54:04.959409+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2633,7 +2633,7 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 244,
+      "totalBargainItems": 245,
       "meatItems": 12,
       "meat70Items": 8,
       "meat70Stock": 12.0,
@@ -4192,12 +4192,12 @@
       "totalBargainItems": 152,
       "meatItems": 10,
       "meat70Items": 3,
-      "meat70Stock": 5.0,
+      "meat70Stock": 4.0,
       "bakeryItems": 50,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "all70Items": 37,
-      "all70Stock": 73.0,
+      "all70Stock": 72.0,
       "all70": [
         {
           "productId": 185765,
@@ -4500,18 +4500,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 622556,
-          "title": "AH Rundergehakt Mexicaanse stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "4.99",
-          "priceNow": "0.90",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
           "productId": 385506,
           "title": "AH Biologisch Gerookte kipfilet",
           "brand": "AH Biologisch",
@@ -4521,6 +4509,18 @@
           "stock": 2,
           "priceWas": "4.72",
           "priceNow": "1.42",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 622556,
+          "title": "AH Rundergehakt Mexicaanse stijl",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.99",
+          "priceNow": "0.90",
           "markdownExpirationDate": "2026-10-05"
         },
         {
@@ -4646,18 +4646,6 @@
       ],
       "items": [
         {
-          "productId": 622556,
-          "title": "AH Rundergehakt Mexicaanse stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "4.99",
-          "priceNow": "0.90",
-          "markdownExpirationDate": "2026-10-05"
-        },
-        {
           "productId": 385506,
           "title": "AH Biologisch Gerookte kipfilet",
           "brand": "AH Biologisch",
@@ -4667,6 +4655,18 @@
           "stock": 2,
           "priceWas": "4.72",
           "priceNow": "1.42",
+          "markdownExpirationDate": "2026-10-05"
+        },
+        {
+          "productId": 622556,
+          "title": "AH Rundergehakt Mexicaanse stijl",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.99",
+          "priceNow": "0.90",
           "markdownExpirationDate": "2026-10-05"
         },
         {
