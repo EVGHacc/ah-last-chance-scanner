@@ -2,7 +2,7 @@
   "schema_version": 1,
   "target_count": 104,
   "certified_coverage": 6,
-  "updated_at": "2026-10-05T14:17:30.234661+00:00",
+  "updated_at": "2026-10-05T15:11:23.505844+00:00",
   "records": [
     {
       "provider": null,
@@ -889,19 +889,21 @@
         "37313953407-1:smartrecruiters:recruiter::Varrlyn:proof-1",
         "37313953407-1:smartrecruiters:recruiter::Varrlyn:proof-2",
         "37322583700-1:smartrecruiters:recruiter::Varrlyn:proof-1",
-        "37322583700-1:smartrecruiters:recruiter::Varrlyn:proof-2"
+        "37322583700-1:smartrecruiters:recruiter::Varrlyn:proof-2",
+        "37329887470-1:smartrecruiters:recruiter::Varrlyn:proof-1",
+        "37329887470-1:smartrecruiters:recruiter::Varrlyn:proof-2"
       ],
-      "consecutive_green_proofs": 20,
+      "consecutive_green_proofs": 22,
       "certification_provenance": [
-        "37322583700-1:smartrecruiters:recruiter::Varrlyn:proof-1",
-        "37322583700-1:smartrecruiters:recruiter::Varrlyn:proof-2"
+        "37329887470-1:smartrecruiters:recruiter::Varrlyn:proof-1",
+        "37329887470-1:smartrecruiters:recruiter::Varrlyn:proof-2"
       ],
       "adapter_version": "8a3cc61ebddf5fbec4e6b91330bf8ab14adf3d2a",
-      "code_commit_sha": "3e815fa93d32018cf118a836c986d8ec9d3949b4",
+      "code_commit_sha": "72f761a62a2479b77faff8918cfdf1e456e7faa4",
       "config_hash": "ba271aa223d8a65caf82881e8b4058e52298f5658de686fa95257cb0640fd9f7",
       "authority_contract_version": "schema1:9ec4b0a4040a2af2270682add25f0ddb7d352d04220478a456ab81640676417b",
       "certified_job_count": 4,
-      "freshness_at": "2026-10-05T14:14:03.255940+00:00",
+      "freshness_at": "2026-10-05T15:08:12.728712+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "recruiter::Varrlyn",
@@ -1353,19 +1355,21 @@
         "37313953407-1:smartrecruiters:employer::Visa:proof-1",
         "37313953407-1:smartrecruiters:employer::Visa:proof-2",
         "37322583700-1:smartrecruiters:employer::Visa:proof-1",
-        "37322583700-1:smartrecruiters:employer::Visa:proof-2"
+        "37322583700-1:smartrecruiters:employer::Visa:proof-2",
+        "37329887470-1:smartrecruiters:employer::Visa:proof-1",
+        "37329887470-1:smartrecruiters:employer::Visa:proof-2"
       ],
-      "consecutive_green_proofs": 20,
+      "consecutive_green_proofs": 22,
       "certification_provenance": [
-        "37322583700-1:smartrecruiters:employer::Visa:proof-1",
-        "37322583700-1:smartrecruiters:employer::Visa:proof-2"
+        "37329887470-1:smartrecruiters:employer::Visa:proof-1",
+        "37329887470-1:smartrecruiters:employer::Visa:proof-2"
       ],
       "adapter_version": "8a3cc61ebddf5fbec4e6b91330bf8ab14adf3d2a",
-      "code_commit_sha": "3e815fa93d32018cf118a836c986d8ec9d3949b4",
+      "code_commit_sha": "72f761a62a2479b77faff8918cfdf1e456e7faa4",
       "config_hash": "ba271aa223d8a65caf82881e8b4058e52298f5658de686fa95257cb0640fd9f7",
       "authority_contract_version": "schema1:9ec4b0a4040a2af2270682add25f0ddb7d352d04220478a456ab81640676417b",
       "certified_job_count": 0,
-      "freshness_at": "2026-10-05T14:17:12.214144+00:00",
+      "freshness_at": "2026-10-05T15:11:04.927449+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "employer::Visa",
@@ -1597,19 +1601,21 @@
         "37313953407-1:smartrecruiters:employer::Wise:proof-1",
         "37313953407-1:smartrecruiters:employer::Wise:proof-2",
         "37322583700-1:smartrecruiters:employer::Wise:proof-1",
-        "37322583700-1:smartrecruiters:employer::Wise:proof-2"
+        "37322583700-1:smartrecruiters:employer::Wise:proof-2",
+        "37329887470-1:smartrecruiters:employer::Wise:proof-1",
+        "37329887470-1:smartrecruiters:employer::Wise:proof-2"
       ],
-      "consecutive_green_proofs": 20,
+      "consecutive_green_proofs": 22,
       "certification_provenance": [
-        "37322583700-1:smartrecruiters:employer::Wise:proof-1",
-        "37322583700-1:smartrecruiters:employer::Wise:proof-2"
+        "37329887470-1:smartrecruiters:employer::Wise:proof-1",
+        "37329887470-1:smartrecruiters:employer::Wise:proof-2"
       ],
       "adapter_version": "8a3cc61ebddf5fbec4e6b91330bf8ab14adf3d2a",
-      "code_commit_sha": "3e815fa93d32018cf118a836c986d8ec9d3949b4",
+      "code_commit_sha": "72f761a62a2479b77faff8918cfdf1e456e7faa4",
       "config_hash": "ba271aa223d8a65caf82881e8b4058e52298f5658de686fa95257cb0640fd9f7",
       "authority_contract_version": "schema1:9ec4b0a4040a2af2270682add25f0ddb7d352d04220478a456ab81640676417b",
-      "certified_job_count": 406,
-      "freshness_at": "2026-10-05T14:14:05.676524+00:00",
+      "certified_job_count": 403,
+      "freshness_at": "2026-10-05T15:08:14.930945+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "employer::Wise",
@@ -1975,19 +1981,21 @@
         "37313953407-1:lever:employer::Finom:proof-1",
         "37313953407-1:lever:employer::Finom:proof-2",
         "37322583700-1:lever:employer::Finom:proof-1",
-        "37322583700-1:lever:employer::Finom:proof-2"
+        "37322583700-1:lever:employer::Finom:proof-2",
+        "37329887470-1:lever:employer::Finom:proof-1",
+        "37329887470-1:lever:employer::Finom:proof-2"
       ],
-      "consecutive_green_proofs": 22,
+      "consecutive_green_proofs": 24,
       "certification_provenance": [
-        "37322583700-1:lever:employer::Finom:proof-1",
-        "37322583700-1:lever:employer::Finom:proof-2"
+        "37329887470-1:lever:employer::Finom:proof-1",
+        "37329887470-1:lever:employer::Finom:proof-2"
       ],
       "adapter_version": "07ddb14df2f887ec42896348e664719f6d3e3702",
-      "code_commit_sha": "3e815fa93d32018cf118a836c986d8ec9d3949b4",
+      "code_commit_sha": "72f761a62a2479b77faff8918cfdf1e456e7faa4",
       "config_hash": "a31ac116986e8c0baa90cf6c2f277113ccce74ea2f28225dc2af503a75cfbfdf",
       "authority_contract_version": "schema1:9ec4b0a4040a2af2270682add25f0ddb7d352d04220478a456ab81640676417b",
       "certified_job_count": 78,
-      "freshness_at": "2026-10-05T14:10:58.237423+00:00",
+      "freshness_at": "2026-10-05T15:05:16.601644+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "employer::Finom",
