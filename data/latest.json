@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-05",
   "weekday": "Monday",
-  "scheduledSlot": "19:12",
-  "scheduledAt": "2026-10-05T19:12:00+02:00",
-  "rawScheduledSlot": "19:12",
-  "rawScheduledAt": "2026-10-05T19:12:00+02:00",
-  "startedAt": "2026-10-05T19:12:00.244777+02:00",
-  "completedAt": "2026-10-05T19:12:04.220711+02:00",
-  "checkedAt": "2026-10-05T19:12:04.220711+02:00",
+  "scheduledSlot": "19:15",
+  "scheduledAt": "2026-10-05T19:15:00+02:00",
+  "rawScheduledSlot": "19:15",
+  "rawScheduledAt": "2026-10-05T19:15:00+02:00",
+  "startedAt": "2026-10-05T19:15:00.247870+02:00",
+  "completedAt": "2026-10-05T19:15:04.081323+02:00",
+  "checkedAt": "2026-10-05T19:15:04.081323+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 109,
+      "totalBargainItems": 110,
       "meatItems": 16,
       "meat70Items": 3,
       "meat70Stock": 4.0,
@@ -985,11 +985,11 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 90,
-      "meatItems": 10,
+      "totalBargainItems": 109,
+      "meatItems": 11,
       "meat70Items": 1,
       "meat70Stock": 2.0,
-      "bakeryItems": 2,
+      "bakeryItems": 3,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "items": [
@@ -1039,6 +1039,18 @@
           "stock": 4,
           "priceWas": "4.99",
           "priceNow": "2.99",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 589120,
+          "title": "AH Kipgehakt naturel",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "6.49",
+          "priceNow": "4.87",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -1128,6 +1140,18 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
+          "productId": 954,
+          "title": "AH Paneermeel naturel beschuit",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.69",
+          "priceNow": "0.52",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 596889,
           "title": "Dr. Oetker Just for me red velvet mini cake",
           "brand": "Dr. Oetker",
@@ -1145,8 +1169,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 111,
-      "meatItems": 16,
+      "totalBargainItems": 114,
+      "meatItems": 19,
       "meat70Items": 1,
       "meat70Stock": 2.0,
       "bakeryItems": 6,
@@ -1238,6 +1262,18 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
+          "productId": 383505,
+          "title": "AH Excellent Black angus burger",
+          "brand": "AH Excellent",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "5.49",
+          "priceNow": "4.12",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
           "productId": 620769,
           "title": "AH Excellent Mais kipfilet",
           "brand": "AH Excellent",
@@ -1247,6 +1283,18 @@
           "stock": 2,
           "priceWas": "7.99",
           "priceNow": "5.99",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 589119,
+          "title": "AH Kipgehakt naturel",
+          "brand": "AH",
+          "size": "175 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.49",
+          "priceNow": "1.87",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -1283,6 +1331,18 @@
           "stock": 1,
           "priceWas": "4.89",
           "priceNow": "3.67",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 436917,
+          "title": "AH Kipgehakt naturel",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "2.99",
           "markdownExpirationDate": "2026-10-06"
         },
         {
