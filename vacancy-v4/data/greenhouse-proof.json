@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "provider": "greenhouse",
-  "generated_at": "2026-10-05T05:24:36.207471+00:00",
-  "configured_sources": 2,
-  "verified_complete": 2,
+  "generated_at": "2026-10-05T18:38:07.055124+00:00",
+  "configured_sources": 3,
+  "verified_complete": 3,
   "failed": 0,
   "sources": [
     {
@@ -16,7 +16,7 @@
       "evidence_kind": "greenhouse_meta_total_reconciled",
       "endpoint": "https://boards-api.greenhouse.io/v1/boards/stripe/jobs?content=true",
       "first_party_evidence_url": "https://stripe.com/careers/search",
-      "jobs_sha256": "663d39d6dd05d288e51401b81902eef7357183f3c7bd9dcf1ed226b754c8b326",
+      "jobs_sha256": "8e2df50ecf82d5c8ef8c53ba72334266e9b9b8ff2545bfa6f957835a994a8666",
       "jobs": [
         {
           "job_id": "8172487",
@@ -80,7 +80,7 @@
           "department": "1175 Enterprise - Account Executives (NA)",
           "office": "US",
           "published_at": "2026-09-08T11:55:39-04:00",
-          "updated_at": "2026-09-25T16:45:02-04:00",
+          "updated_at": "2026-10-05T13:03:21-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -540,15 +540,15 @@
         },
         {
           "job_id": "8121419",
-          "title": "Account Executive, Funded Startups — Hunter, Italy",
-          "location": "Milan or Madrid",
+          "title": "Account Executive, Funded Startups — Hunter, (Italian Speaker)",
+          "location": "Milan OR Madrid",
           "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow revenue, and unlock new business opportunities.",
           "job_url": "https://stripe.com/jobs/search?gh_jid=8121419",
           "apply_url": "https://stripe.com/jobs/search?gh_jid=8121419",
           "department": "1185 Account Executives (EMEA)",
           "office": "Italy Locations",
           "published_at": "2026-08-13T10:03:06-04:00",
-          "updated_at": "2026-09-29T10:27:25-04:00",
+          "updated_at": "2026-10-05T12:37:35-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -861,6 +861,19 @@
           "office": "Singapore Locations",
           "published_at": "2026-08-19T11:55:47-04:00",
           "updated_at": "2026-09-25T16:44:53-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8190059",
+          "title": "Account Executive, Product Sales (Data)",
+          "location": "US-SF-HQ, US-NYC, US-CHI, US-SEA",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies - from the world’s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8190059",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8190059",
+          "department": "1641 Product Sales - RFA ex Billing",
+          "office": "US",
+          "published_at": "2026-10-05T12:08:53-04:00",
+          "updated_at": "2026-10-05T12:08:53-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -1692,7 +1705,7 @@
           "department": "8612 Security Infrastructure",
           "office": "US",
           "published_at": "2026-06-05T16:09:40-04:00",
-          "updated_at": "2026-10-02T13:23:31-04:00",
+          "updated_at": "2026-10-05T13:07:27-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -1719,6 +1732,19 @@
           "office": "France Locations",
           "published_at": "2026-07-30T10:04:54-04:00",
           "updated_at": "2026-09-25T16:44:51-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8175653",
+          "title": "Commercial Operations Associate",
+          "location": "Mexico City",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8175653",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8175653",
+          "department": "4139 SDC - GTM Operations",
+          "office": "Mexico Locations",
+          "published_at": "2026-10-05T10:47:18-04:00",
+          "updated_at": "2026-10-05T10:47:18-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -1849,19 +1875,6 @@
           "office": "US",
           "published_at": "2026-05-01T12:23:05-04:00",
           "updated_at": "2026-09-25T16:44:40-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
-          "job_id": "8065818",
-          "title": "Corporate Development M&A Integration Manager",
-          "location": "SF, NYC",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies - from the world’s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=8065818",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=8065818",
-          "department": "2222 Corporate Development",
-          "office": "US",
-          "published_at": "2026-07-16T18:41:16-04:00",
-          "updated_at": "2026-09-25T16:44:49-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -2125,6 +2138,19 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
+          "job_id": "8237366",
+          "title": "Customer Success Manager, Revenue Suite",
+          "location": "Chicago",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8237366",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8237366",
+          "department": "1340 Customer Success Management",
+          "office": "US",
+          "published_at": "2026-10-05T05:44:45-04:00",
+          "updated_at": "2026-10-05T05:44:45-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
           "job_id": "8194289",
           "title": "Customer Success Manager, RFA",
           "location": "Chicago, IL",
@@ -2359,19 +2385,6 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
-          "job_id": "8080240",
-          "title": "Deal Pricing Strategist",
-          "location": "San Francisco, California",
-          "summary": "Who we are About Stripe Stripe, LLC. is a financial infrastructure platform for businesses.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=8080240",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=8080240",
-          "department": "Global Operations",
-          "office": "US-PERM",
-          "published_at": "2026-07-22T15:14:39-04:00",
-          "updated_at": "2026-09-25T16:44:51-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
           "job_id": "7960875",
           "title": "Deal Pricing Strategist, APAC",
           "location": "Singapore",
@@ -2421,19 +2434,6 @@
           "office": "US",
           "published_at": "2026-09-22T11:50:40-04:00",
           "updated_at": "2026-09-25T16:45:07-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
-          "job_id": "7144975",
-          "title": "Design Engineer, Presence",
-          "location": "US, Canada",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=7144975",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=7144975",
-          "department": "8813 Web Presence & Platform",
-          "office": "US",
-          "published_at": "2025-08-07T17:33:26-04:00",
-          "updated_at": "2026-09-25T16:44:34-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -2504,14 +2504,14 @@
         {
           "job_id": "8209649",
           "title": "Engagement Manager, Professional Services",
-          "location": "United States",
+          "location": "United States, US-Remote",
           "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies - from the world’s largest enterprises to the most ambitious startups use Stripe to accept payments, grow their revenue and accelerate new business opportunities.",
           "job_url": "https://stripe.com/jobs/search?gh_jid=8209649",
           "apply_url": "https://stripe.com/jobs/search?gh_jid=8209649",
           "department": "1141 AMER Delivery",
           "office": "US",
           "published_at": "2026-09-21T10:33:28-04:00",
-          "updated_at": "2026-09-25T16:45:06-04:00",
+          "updated_at": "2026-10-05T07:10:53-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -2707,6 +2707,19 @@
           "office": "US",
           "published_at": "2026-07-16T13:23:32-04:00",
           "updated_at": "2026-09-25T16:44:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8229361",
+          "title": "Engineering Manager, Mobile Development Productivity",
+          "location": "US-Remote",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8229361",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8229361",
+          "department": "8126 Developer Infrastructure",
+          "office": "US",
+          "published_at": "2026-10-05T11:39:44-04:00",
+          "updated_at": "2026-10-05T11:39:44-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -2933,14 +2946,14 @@
         {
           "job_id": "7634113",
           "title": "Field Marketing Manager, SMB and Mid-Market - EMEA",
-          "location": "Dublin",
+          "location": "France",
           "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
           "job_url": "https://stripe.com/jobs/search?gh_jid=7634113",
           "apply_url": "https://stripe.com/jobs/search?gh_jid=7634113",
           "department": "2312 Marketing - EMEA",
           "office": "Ireland Locations",
           "published_at": "2026-02-19T12:32:50-05:00",
-          "updated_at": "2026-09-25T16:44:38-04:00",
+          "updated_at": "2026-10-05T07:30:59-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -3239,7 +3252,7 @@
           "department": "3134 Fraud Risk Strategy",
           "office": "US",
           "published_at": "2026-08-21T18:30:07-04:00",
-          "updated_at": "2026-09-25T16:44:52-04:00",
+          "updated_at": "2026-10-05T10:24:58-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -4205,6 +4218,19 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
+          "job_id": "8241571",
+          "title": "Junior Commercial Associate — Works in Progress",
+          "location": "London",
+          "summary": "Location: London, in office Reports to: Head of Commercial and Audiovisual, Works in Progress Salary: £30k-35k About Works in Progress Works in Progress is Stripe’s magazine of new and underrated ideas to improve the world. We publish an eclectic mix of articles on policy, economics, business, technology, science, history, arts and culture.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8241571",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8241571",
+          "department": "2414 Works in Progress",
+          "office": "GB-London",
+          "published_at": "2026-10-05T08:48:25-04:00",
+          "updated_at": "2026-10-05T08:48:25-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
           "job_id": "8022463",
           "title": "KYB/KYC Operations Associate, Bridge (English fluency)",
           "location": "Mexico City",
@@ -4894,19 +4920,6 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
-          "job_id": "8203653",
-          "title": "Operations Program Manager",
-          "location": "Bengaluru",
-          "summary": "About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies, from the world’s largest enterprises to the most ambitious startups, use Stripe to accept payments, grow their revenue, and pursue new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=8203653",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=8203653",
-          "department": "4138 SDC - Tech Ops",
-          "office": "India Locations",
-          "published_at": "2026-09-18T02:08:55-04:00",
-          "updated_at": "2026-10-03T11:38:33-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
           "job_id": "8162189",
           "title": "Operations Recruiter",
           "location": "CDMX",
@@ -5466,45 +5479,6 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
-          "job_id": "8089069",
-          "title": "Product Counsel - RevSuite/Startups",
-          "location": "US remote",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=8089069",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=8089069",
-          "department": "6360 Product & Partnering Legal",
-          "office": "US",
-          "published_at": "2026-07-27T16:39:34-04:00",
-          "updated_at": "2026-09-25T16:44:51-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
-          "job_id": "7930151",
-          "title": "Product Counsel, Data Products",
-          "location": "US remote",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=7930151",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=7930151",
-          "department": "6320 Commercial Legal",
-          "office": "US",
-          "published_at": "2026-05-20T16:56:21-04:00",
-          "updated_at": "2026-09-25T16:44:44-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
-          "job_id": "8096726",
-          "title": "Product Design Manager, Global Payments",
-          "location": "United Kingdom",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=8096726",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=8096726",
-          "department": "8811 Product Design",
-          "office": "United Kingdom Locations",
-          "published_at": "2026-08-05T04:59:36-04:00",
-          "updated_at": "2026-09-25T16:44:52-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
           "job_id": "7980578",
           "title": "Product Designer - Dashboard",
           "location": "US / Canada",
@@ -5973,6 +5947,19 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
+          "job_id": "8163193",
+          "title": "Product Recruiter",
+          "location": "Remote",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8163193",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8163193",
+          "department": "6520 Recruiting",
+          "office": "US",
+          "published_at": "2026-09-24T13:13:48-04:00",
+          "updated_at": "2026-10-05T13:47:17-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
           "job_id": "8179341",
           "title": "Product Sales Development Representative (Mandarin-speaking)",
           "location": "Singapore",
@@ -6087,19 +6074,6 @@
           "office": "US",
           "published_at": "2026-09-04T17:08:04-04:00",
           "updated_at": "2026-09-25T16:45:01-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
-          "job_id": "8181030",
-          "title": "Program Manager, Customer Advocacy & Programs",
-          "location": "US-ATL, US-CHI, US-Remote",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies - from the world’s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=8181030",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=8181030",
-          "department": "1340 Customer Success Management",
-          "office": "US",
-          "published_at": "2026-09-17T18:11:30-04:00",
-          "updated_at": "2026-10-02T11:05:22-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -6281,7 +6255,7 @@
           "department": "4891 Partner Risk Operations",
           "office": "US",
           "published_at": "2025-09-10T15:53:58-04:00",
-          "updated_at": "2026-10-01T12:24:46-04:00",
+          "updated_at": "2026-10-05T10:32:47-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -6294,7 +6268,7 @@
           "department": "3110 User Policy Operations",
           "office": "US",
           "published_at": "2026-09-22T16:19:21-04:00",
-          "updated_at": "2026-09-25T16:45:01-04:00",
+          "updated_at": "2026-10-05T12:01:27-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -6337,6 +6311,19 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
+          "job_id": "8248096",
+          "title": "Risk Operations Manager",
+          "location": "Bangalore",
+          "summary": "About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8248096",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8248096",
+          "department": "4899 SDC - Bridge RiskOps",
+          "office": "India Locations",
+          "published_at": "2026-10-05T06:46:26-04:00",
+          "updated_at": "2026-10-05T06:46:59-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
           "job_id": "8178563",
           "title": "Risk Partnerships Manager, Banks & Treasury",
           "location": "London, Dublin, UK-Remote",
@@ -6373,6 +6360,19 @@
           "office": "US",
           "published_at": "2025-02-03T21:54:10-05:00",
           "updated_at": "2026-09-25T16:44:32-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8048266",
+          "title": "Sales Development Representative",
+          "location": "Dublin",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8048266",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8048266",
+          "department": "1133 EMEA Sales Development Reps",
+          "office": "Ireland Locations",
+          "published_at": "2026-07-08T05:08:02-04:00",
+          "updated_at": "2026-10-05T11:57:06-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -6727,19 +6727,6 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
-          "job_id": "8190052",
-          "title": "Sales Manager, Velocity SMB Grower (Canada)",
-          "location": "CA-Toronto",
-          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies - from the world’s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
-          "job_url": "https://stripe.com/jobs/search?gh_jid=8190052",
-          "apply_url": "https://stripe.com/jobs/search?gh_jid=8190052",
-          "department": "1170 GEO Sales HQ (NA)",
-          "office": "Canada Locations",
-          "published_at": "2026-09-23T10:40:46-04:00",
-          "updated_at": "2026-09-30T06:52:57-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
           "job_id": "8184893",
           "title": "Sales Program Manager, APAC",
           "location": "Singapore",
@@ -6867,6 +6854,19 @@
           "office": "Mexico Locations",
           "published_at": "2026-08-06T06:13:26-04:00",
           "updated_at": "2026-09-25T16:44:49-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8237526",
+          "title": "SDC Recruiter",
+          "location": "Bengaluru",
+          "summary": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies - from the world’s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
+          "job_url": "https://stripe.com/jobs/search?gh_jid=8237526",
+          "apply_url": "https://stripe.com/jobs/search?gh_jid=8237526",
+          "department": "6520 Recruiting",
+          "office": "India Locations",
+          "published_at": "2026-10-05T02:50:19-04:00",
+          "updated_at": "2026-10-05T02:50:19-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -7952,13 +7952,13 @@
           "job_id": "7120766",
           "title": "Specialist Solutions Architect, Crypto & Stablecoins",
           "location": "US-NY",
-          "summary": "Who we are About Stripe At Stripe, you have an unprecedented opportunity to put the global economy within everyone's reach. Stripe is a financial infrastructure platform for businesses.",
+          "summary": "Who We Are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities.",
           "job_url": "https://stripe.com/jobs/search?gh_jid=7120766",
           "apply_url": "https://stripe.com/jobs/search?gh_jid=7120766",
           "department": "1150 Solutions Architecture",
           "office": "US",
           "published_at": "2025-07-31T13:21:47-04:00",
-          "updated_at": "2026-09-25T16:44:33-04:00",
+          "updated_at": "2026-10-05T10:46:03-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -8647,7 +8647,7 @@
           "department": "6314 Public Policy",
           "office": "US",
           "published_at": "2026-09-29T09:18:12-04:00",
-          "updated_at": "2026-09-29T09:18:12-04:00",
+          "updated_at": "2026-10-05T12:45:05-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -9340,20 +9340,20 @@
           "record_source": "greenhouse_job_board_api"
         }
       ],
-      "checked_at": "2026-10-05T05:24:34.256546+00:00",
+      "checked_at": "2026-10-05T18:38:05.944868+00:00",
       "error": null
     },
     {
       "name": "Ripple",
       "board": "ripple",
       "coverage": "verified_complete",
-      "unique_jobs": 131,
-      "authoritative_total": 131,
+      "unique_jobs": 130,
+      "authoritative_total": 130,
       "exhausted": true,
       "evidence_kind": "greenhouse_meta_total_reconciled",
       "endpoint": "https://boards-api.greenhouse.io/v1/boards/ripple/jobs?content=true",
       "first_party_evidence_url": "https://ripple.com/careers/all-jobs/",
-      "jobs_sha256": "4d853b08d21bd10836b3eae487f9eef64ddb7345c32afa70561a37c312f38b81",
+      "jobs_sha256": "28a95bbf7260b5cded4158070b9a32044bd04f0e1f10887173cc2b176b727d13",
       "jobs": [
         {
           "job_id": "8042882",
@@ -9795,6 +9795,19 @@
           "office": "Chicago, IL, United States",
           "published_at": "2026-08-05T10:23:30-04:00",
           "updated_at": "2026-10-02T11:47:44-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "8209410",
+          "title": "Manager, Software Engineering",
+          "location": "Chicago, Illinois, United States",
+          "summary": "At Ripple, we’re building a world where value moves like information does today. It’s big, it’s bold, and we’re already doing it.",
+          "job_url": "https://ripple.com/careers/all-jobs/job/8209410?gh_jid=8209410",
+          "apply_url": "https://ripple.com/careers/all-jobs/job/8209410?gh_jid=8209410",
+          "department": "Engineering",
+          "office": "Chicago, IL, United States",
+          "published_at": "2026-10-05T08:33:03-04:00",
+          "updated_at": "2026-10-05T08:33:03-04:00",
           "record_source": "greenhouse_job_board_api"
         },
         {
@@ -10422,19 +10435,6 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
-          "job_id": "7930645",
-          "title": "Senior Software Engineer, Infrastructure",
-          "location": "Geneva, Switzerland",
-          "summary": "At Ripple, we’re building a world where value moves like information does today. It’s big, it’s bold, and we’re already doing it.",
-          "job_url": "https://ripple.com/careers/all-jobs/job/7930645?gh_jid=7930645",
-          "apply_url": "https://ripple.com/careers/all-jobs/job/7930645?gh_jid=7930645",
-          "department": "Engineering",
-          "office": "Geneva, Switzerland",
-          "published_at": "2026-05-22T01:10:37-04:00",
-          "updated_at": "2026-09-29T13:46:50-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
           "job_id": "8125912",
           "title": "Senior Software Engineer, Payments",
           "location": "San Francisco, CA, United States",
@@ -10773,19 +10773,6 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
-          "job_id": "8088649",
-          "title": "Staff Software Engineer, Financial Crimes",
-          "location": "San Francisco, CA, United States",
-          "summary": "At Ripple, we’re building a world where value moves like information does today. It’s big, it’s bold, and we’re already doing it.",
-          "job_url": "https://ripple.com/careers/all-jobs/job/8088649?gh_jid=8088649",
-          "apply_url": "https://ripple.com/careers/all-jobs/job/8088649?gh_jid=8088649",
-          "department": "Engineering",
-          "office": "San Francisco, CA, United States",
-          "published_at": "2026-07-27T13:03:28-04:00",
-          "updated_at": "2026-07-27T13:03:28-04:00",
-          "record_source": "greenhouse_job_board_api"
-        },
-        {
           "job_id": "7944348",
           "title": "Staff Software Engineer, Liquidity Management (C#/.NET)",
           "location": "Chicago, Illinois, United States; New York, NY, United States",
@@ -11059,7 +11046,660 @@
           "record_source": "greenhouse_job_board_api"
         }
       ],
-      "checked_at": "2026-10-05T05:24:34.991304+00:00",
+      "checked_at": "2026-10-05T18:38:06.582481+00:00",
+      "error": null
+    },
+    {
+      "name": "Payhawk",
+      "board": "payhawkio",
+      "coverage": "verified_complete",
+      "unique_jobs": 49,
+      "authoritative_total": 49,
+      "exhausted": true,
+      "evidence_kind": "greenhouse_meta_total_reconciled",
+      "endpoint": "https://boards-api.greenhouse.io/v1/boards/payhawkio/jobs?content=true",
+      "first_party_evidence_url": "https://payhawk.com/careers",
+      "jobs_sha256": "9caadb53e286af4bc3b1dc69fa42224adc49fbd4116cdbeb982a49e7c9f9d820",
+      "jobs": [
+        {
+          "job_id": "4258713101",
+          "title": "Account Executive",
+          "location": "London",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4258713101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4258713101",
+          "department": "Sales",
+          "office": "Payhawk London",
+          "published_at": "2023-12-07T09:16:04-05:00",
+          "updated_at": "2026-10-05T10:42:39-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4563891101",
+          "title": "Account Executive",
+          "location": "Paris",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4563891101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4563891101",
+          "department": "Sales",
+          "office": "Payhawk Paris",
+          "published_at": "2025-03-26T08:33:26-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4367152101",
+          "title": "Account Executive (España & Italian Market)",
+          "location": "Barcelona",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4367152101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4367152101",
+          "department": "Sales",
+          "office": "Payhawk Barcelona",
+          "published_at": "2024-07-19T11:05:50-04:00",
+          "updated_at": "2026-10-05T03:36:24-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4194784101",
+          "title": "Account Executive - DACH",
+          "location": "Berlin",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4194784101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4194784101",
+          "department": "Sales",
+          "office": "Payhawk Berlin",
+          "published_at": "2023-07-12T14:31:53-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4420245101",
+          "title": "Account Executive - DACH",
+          "location": "Munich",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4420245101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4420245101",
+          "department": "Sales",
+          "office": "Payhawk Berlin",
+          "published_at": "2024-10-04T13:08:54-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4166882101",
+          "title": "Business Development Representative",
+          "location": "Amsterdam",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4166882101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4166882101",
+          "department": "Business Development Representatives",
+          "office": "Payhawk Amsterdam",
+          "published_at": "2023-05-22T05:03:56-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4187783101",
+          "title": "Business Development Representative",
+          "location": "Berlin",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4187783101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4187783101",
+          "department": "Business Development Representatives",
+          "office": "Payhawk Berlin",
+          "published_at": "2023-07-12T08:34:01-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4420217101",
+          "title": "Business Development Representative",
+          "location": "London",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4420217101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4420217101",
+          "department": "Business Development Representatives",
+          "office": "Payhawk London",
+          "published_at": "2024-10-09T07:27:38-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4600274101",
+          "title": "Business Development Representative (BDR) - NL",
+          "location": "Amsterdam",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4600274101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4600274101",
+          "department": "Business Development Representatives",
+          "office": "Payhawk Amsterdam",
+          "published_at": "2025-06-03T05:29:03-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4309788101",
+          "title": "Business Development Representative, French Speaking",
+          "location": "Amsterdam",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4309788101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4309788101",
+          "department": "Sales",
+          "office": "Payhawk Amsterdam",
+          "published_at": "2024-03-20T13:57:43-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4512588101",
+          "title": "Customer Support Specialist",
+          "location": "Sofia",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4512588101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4512588101",
+          "department": "Customer Support",
+          "office": "Payhawk Sofia",
+          "published_at": "2026-04-21T04:19:01-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4923629101",
+          "title": "Customer Support Specialist",
+          "location": "Barcelona",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4923629101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4923629101",
+          "department": "Customer Support",
+          "office": "Payhawk Sofia",
+          "published_at": "2026-07-10T09:23:29-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4650780101",
+          "title": "Customer Support Specialist (US Hours/Night-shifts)",
+          "location": "Sofia",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4650780101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4650780101",
+          "department": "Customer Support",
+          "office": "Payhawk Sofia",
+          "published_at": "2025-08-06T10:29:05-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4000089101",
+          "title": "Don't see the right position? We'd like to hear from you anyway!",
+          "location": "All locations",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4000089101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4000089101",
+          "department": "Stay in touch",
+          "office": "Stay in touch",
+          "published_at": "2021-06-04T10:59:45-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4929558101",
+          "title": "Founding Account Executive",
+          "location": "Warsaw",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4929558101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4929558101",
+          "department": "Sales",
+          "office": "Payhawk Warsaw",
+          "published_at": "2026-07-16T05:18:18-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4929714101",
+          "title": "Founding Account Executive",
+          "location": "Stockholm",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4929714101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4929714101",
+          "department": "Sales",
+          "office": "Payhawk Stockholm",
+          "published_at": "2026-07-16T07:59:14-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4929570101",
+          "title": "Founding Business Development Representative",
+          "location": "Warsaw",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4929570101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4929570101",
+          "department": "Business Development Representatives",
+          "office": "Payhawk Warsaw",
+          "published_at": "2026-07-16T07:29:36-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4929719101",
+          "title": "Founding Business Development Representative",
+          "location": "Stockholm",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4929719101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4929719101",
+          "department": "Business Development Representatives",
+          "office": "Payhawk Stockholm",
+          "published_at": "2026-07-16T08:03:00-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4824016101",
+          "title": "Global Demand Generation Manager",
+          "location": "Barcelona",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4824016101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4824016101",
+          "department": "Marketing",
+          "office": "Payhawk Barcelona",
+          "published_at": "2026-03-26T12:53:06-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4824179101",
+          "title": "Global Demand Generation Manager",
+          "location": "London",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4824179101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4824179101",
+          "department": "Marketing",
+          "office": "Payhawk Barcelona",
+          "published_at": "2026-03-26T16:05:20-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4824180101",
+          "title": "Global Demand Generation Manager",
+          "location": "Sofia",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4824180101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4824180101",
+          "department": "Marketing",
+          "office": "Payhawk Barcelona",
+          "published_at": "2026-03-26T16:06:33-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4827563101",
+          "title": "Global Demand Generation Manager",
+          "location": "Paris",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4827563101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4827563101",
+          "department": "Marketing",
+          "office": "Payhawk Barcelona",
+          "published_at": "2026-03-31T02:57:07-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4956271101",
+          "title": "Global Demand Generation Manager",
+          "location": "Amsterdam",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4956271101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4956271101",
+          "department": "Marketing",
+          "office": "Payhawk Barcelona",
+          "published_at": "2026-08-19T12:12:26-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4966324101",
+          "title": "Group Control Assurance Lead",
+          "location": "London",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4966324101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4966324101",
+          "department": "Risk",
+          "office": "Payhawk London",
+          "published_at": "2026-09-02T07:48:33-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4424825101",
+          "title": "Implementation Manager, French Speaking",
+          "location": "Sofia",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4424825101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4424825101",
+          "department": "Implementations",
+          "office": "Payhawk Barcelona",
+          "published_at": "2024-10-15T10:34:34-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4767464101",
+          "title": "Implementation Manager, French speaking",
+          "location": "Barcelona",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4767464101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4767464101",
+          "department": "Implementations",
+          "office": "Payhawk Barcelona",
+          "published_at": "2026-01-27T06:45:47-05:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4563773101",
+          "title": "Implementation Manager, German Speaking",
+          "location": "Sofia",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4563773101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4563773101",
+          "department": "Implementations",
+          "office": "Payhawk Sofia",
+          "published_at": "2025-04-01T06:22:26-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4767470101",
+          "title": "Implementation Manager, German Speaking",
+          "location": "Barcelona",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4767470101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4767470101",
+          "department": "Implementations",
+          "office": "Payhawk Sofia",
+          "published_at": "2026-01-27T06:47:15-05:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4081441101",
+          "title": "Junior Security Engineer",
+          "location": "Sofia",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4081441101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4081441101",
+          "department": "Engineering",
+          "office": "Payhawk Sofia",
+          "published_at": "2022-09-27T03:17:51-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4366256101",
+          "title": "KYC Analyst",
+          "location": "Sofia",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4366256101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4366256101",
+          "department": "Compliance",
+          "office": "Payhawk Sofia",
+          "published_at": "2024-07-15T13:03:15-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4976761101",
+          "title": "Legal Counsel",
+          "location": "Sofia",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4976761101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4976761101",
+          "department": "Legal",
+          "office": "Payhawk Sofia",
+          "published_at": "2026-09-16T06:47:37-04:00",
+          "updated_at": "2026-10-05T11:12:35-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4816900101",
+          "title": "Partnership  Development Representative",
+          "location": "Barcelona",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4816900101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4816900101",
+          "department": "Partnerships",
+          "office": "Payhawk Barcelona",
+          "published_at": "2026-03-19T10:26:11-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4977585101",
+          "title": "Partnership  Development Representative",
+          "location": "London",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4977585101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4977585101",
+          "department": "Partnerships",
+          "office": "Payhawk Barcelona",
+          "published_at": "2026-09-16T07:44:54-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4989783101",
+          "title": "Partnerships Manager - France",
+          "location": "Paris",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4989783101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4989783101",
+          "department": "Partnerships",
+          "office": "Payhawk Paris",
+          "published_at": "2026-09-29T10:56:02-04:00",
+          "updated_at": "2026-10-05T11:13:30-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4984011101",
+          "title": "Partnerships Manager - UK&I",
+          "location": "London",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4984011101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4984011101",
+          "department": "Partnerships",
+          "office": "Payhawk London",
+          "published_at": "2026-09-23T11:22:29-04:00",
+          "updated_at": "2026-10-05T11:13:07-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4280878101",
+          "title": "Payment Operations Specialist",
+          "location": "Sofia",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4280878101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4280878101",
+          "department": "Finance",
+          "office": "Payhawk Sofia",
+          "published_at": "2024-02-01T13:46:05-05:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4274333101",
+          "title": "Product Marketing Manager",
+          "location": "London",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4274333101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4274333101",
+          "department": "Product Marketing",
+          "office": "Payhawk Barcelona",
+          "published_at": "2024-01-11T11:58:52-05:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4777977101",
+          "title": "Product Marketing Manager",
+          "location": "Amsterdam",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4777977101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4777977101",
+          "department": "Product Marketing",
+          "office": "Payhawk Barcelona",
+          "published_at": "2026-02-09T11:07:43-05:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4777978101",
+          "title": "Product Marketing Manager",
+          "location": "Barcelona",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4777978101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4777978101",
+          "department": "Product Marketing",
+          "office": "Payhawk Barcelona",
+          "published_at": "2026-02-09T11:08:34-05:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4777979101",
+          "title": "Product Marketing Manager",
+          "location": "Sofia",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4777979101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4777979101",
+          "department": "Product Marketing",
+          "office": "Payhawk Barcelona",
+          "published_at": "2026-02-09T11:08:35-05:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4958895101",
+          "title": "Product Marketing Manager",
+          "location": "Paris",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4958895101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4958895101",
+          "department": "Product Marketing",
+          "office": "Payhawk Barcelona",
+          "published_at": "2026-08-24T05:43:12-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4958896101",
+          "title": "Product Marketing Manager",
+          "location": "Berlin",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4958896101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4958896101",
+          "department": "Product Marketing",
+          "office": "Payhawk Barcelona",
+          "published_at": "2026-08-24T05:44:29-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4804574101",
+          "title": "Security Engineer",
+          "location": "Sofia",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4804574101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4804574101",
+          "department": "Engineering",
+          "office": "Payhawk Sofia",
+          "published_at": "2026-03-11T09:42:55-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4000039101",
+          "title": "Senior Software Engineer",
+          "location": "Sofia",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4000039101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4000039101",
+          "department": "Engineering",
+          "office": "Payhawk Sofia",
+          "published_at": "2021-06-03T08:40:11-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4000749101",
+          "title": "Software Engineer",
+          "location": "Sofia",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4000749101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4000749101",
+          "department": "Engineering",
+          "office": "Payhawk Sofia",
+          "published_at": "2021-08-05T02:36:30-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4531371101",
+          "title": "Solutions Consultant",
+          "location": "Paris",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4531371101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4531371101",
+          "department": "Solution Engineering",
+          "office": "Payhawk Paris",
+          "published_at": "2025-02-06T05:32:39-05:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4907794101",
+          "title": "Solutions Consultant",
+          "location": "Berlin",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4907794101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4907794101",
+          "department": "Solution Engineering",
+          "office": "Payhawk Berlin",
+          "published_at": "2026-06-25T03:57:29-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4907795101",
+          "title": "Solutions Consultant",
+          "location": "Munich",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4907795101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4907795101",
+          "department": "Solution Engineering",
+          "office": "Payhawk Berlin",
+          "published_at": "2026-06-25T03:58:48-04:00",
+          "updated_at": "2026-10-01T08:00:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
+          "job_id": "4588449101",
+          "title": "Talent Acquisition Partner",
+          "location": "Sofia",
+          "summary": "Company Mission Payhawk is one AI-powered spend management platform for scaling businesses — corporate cards, expense management, procurement, and accounts payable, unified in one place. We serve finance teams across 32+ countries, cutting month-end close time and reconciling 99.7% of transactions with zero manual touch.",
+          "job_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4588449101",
+          "apply_url": "https://job-boards.eu.greenhouse.io/payhawkio/jobs/4588449101",
+          "department": "People and Talent",
+          "office": "Payhawk Sofia",
+          "published_at": "2025-05-13T04:40:48-04:00",
+          "updated_at": "2026-10-05T11:16:50-04:00",
+          "record_source": "greenhouse_job_board_api"
+        }
+      ],
+      "checked_at": "2026-10-05T18:38:06.894933+00:00",
       "error": null
     }
   ]
