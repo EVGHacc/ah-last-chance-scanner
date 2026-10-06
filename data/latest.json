@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-06",
   "weekday": "Tuesday",
-  "scheduledSlot": "21:12",
-  "scheduledAt": "2026-10-06T21:12:00+02:00",
-  "rawScheduledSlot": "21:12",
-  "rawScheduledAt": "2026-10-06T21:12:00+02:00",
-  "startedAt": "2026-10-06T21:12:00.212969+02:00",
-  "completedAt": "2026-10-06T21:12:04.690665+02:00",
-  "checkedAt": "2026-10-06T21:12:04.690665+02:00",
+  "scheduledSlot": "21:15",
+  "scheduledAt": "2026-10-06T21:15:00+02:00",
+  "rawScheduledSlot": "21:15",
+  "rawScheduledAt": "2026-10-06T21:15:00+02:00",
+  "startedAt": "2026-10-06T21:15:00.253382+02:00",
+  "completedAt": "2026-10-06T21:15:05.043166+02:00",
+  "checkedAt": "2026-10-06T21:15:05.043166+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,8 +25,8 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 204,
-      "meatItems": 22,
+      "totalBargainItems": 209,
+      "meatItems": 23,
       "meat70Items": 6,
       "meat70Stock": 10.0,
       "bakeryItems": 46,
@@ -635,6 +635,18 @@
           "stock": 2,
           "priceWas": "9.69",
           "priceNow": "5.81",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 619323,
+          "title": "AH Burger spicy 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "3.99",
+          "priceNow": "2.39",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -4917,15 +4929,15 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 160,
+      "totalBargainItems": 159,
       "meatItems": 17,
       "meat70Items": 2,
       "meat70Stock": 18.0,
-      "bakeryItems": 44,
+      "bakeryItems": 43,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 38,
-      "all70Stock": 98.0,
+      "all70Stock": 97.0,
       "all70": [
         {
           "productId": 550007,
@@ -5288,18 +5300,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 620820,
-          "title": "AH Garnalen roerbak",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Vis",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "8.99",
-          "priceNow": "2.70",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 51336,
           "title": "AH Lekkerbek",
           "brand": "AH",
@@ -5309,6 +5309,18 @@
           "stock": 1,
           "priceWas": "5.49",
           "priceNow": "1.65",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 620820,
+          "title": "AH Garnalen roerbak",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "8.99",
+          "priceNow": "2.70",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -5817,18 +5829,6 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.74",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 230725,
-          "title": "AH Roomboter appelflap",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "0.89",
-          "priceNow": "0.67",
           "markdownExpirationDate": "2026-10-06"
         },
         {
