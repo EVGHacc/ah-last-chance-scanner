@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        provider: [lever, smartrecruiters, eightfold]
+        provider: [lever, smartrecruiters, eightfold, auditcarriere]
     runs-on: ubuntu-latest
     timeout-minutes: 20
     defaults:
@@ -63,6 +63,10 @@ jobs:
               ;;
             eightfold)
               python -m unittest discover -s tests/unit -p 'test_eightfold*.py' -v
+              ;;
+            auditcarriere)
+              python -m unittest discover -s tests/unit -p 'test_auditcarriere*.py' -v
+              python -m unittest discover -s tests/qa -p 'test_transport_resilience.py' -v
               ;;
           esac
 
@@ -165,7 +169,7 @@ jobs:
           ledger_path=data_dir/"certification-ledger.json"
           manifest=json.loads(pathlib.Path("config/sources.json").read_text())
           if manifest.get("target_count")!=104 or len(manifest.get("sources",[]))!=104:
-              raise SystemExit("manifest is not exact 104")
+              raise SystemExit("manifest is not exact 105")
 
           if ledger_path.exists():
               ledger=json.loads(ledger_path.read_text())
@@ -265,14 +269,14 @@ jobs:
           ordered=[by_id[f'{s["kind"]}::{s["name"]}'] for s in manifest["sources"]]
           ledger={
               "schema_version":1,
-              "target_count":104,
+              "target_count":105,
               "certified_coverage":certified_count(ordered),
               "updated_at":datetime.now(timezone.utc).isoformat(),
               "records":ordered
           }
           ledger_path.parent.mkdir(parents=True,exist_ok=True)
           ledger_path.write_text(json.dumps(ledger,ensure_ascii=False,indent=2)+"\n")
-          print(json.dumps({"promoted_sources":promoted,"certified_coverage":ledger["certified_coverage"],"target":104}))
+          print(json.dumps({"promoted_sources":promoted,"certified_coverage":ledger["certified_coverage"],"target":105}))
           PY
       - name: Commit accepted evidence and ledger
         run: |

@@ -2291,6 +2291,33 @@
           "checked_at": null
         }
       }
+    },
+    {
+      "name": "AuditCarriere",
+      "kind": "job_board",
+      "official_domain": "auditcarriere.nl",
+      "platforms": {
+        "auditcarriere": {
+          "status": "PROVEN",
+          "evidence_url": "https://www.auditcarriere.nl/vacatures?page=1",
+          "checked_at": "2026-10-06T07:29:18.637Z"
+        },
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
     }
   ]
 }

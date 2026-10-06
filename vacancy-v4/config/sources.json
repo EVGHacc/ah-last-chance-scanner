@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "target_count": 104,
+  "target_count": 105,
   "sources": [
     {
       "kind": "recruiter",
@@ -1001,6 +1001,15 @@
       "seed_urls": [
         "https://careers.nordea.com/",
         "https://www.nordea.com/en/careers"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "job_board",
+      "name": "AuditCarriere",
+      "official_domain": "auditcarriere.nl",
+      "seed_urls": [
+        "https://www.auditcarriere.nl/vacatures?page=1"
       ],
       "allowed_domains": []
     }

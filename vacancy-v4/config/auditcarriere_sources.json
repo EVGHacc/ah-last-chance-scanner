@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "provider": "auditcarriere",
+  "sources": [
+    {
+      "name": "AuditCarriere",
+      "listing_url_template": "https://www.auditcarriere.nl/vacatures?page={page}",
+      "first_party_evidence_url": "https://www.auditcarriere.nl/vacatures?page=1"
+    }
+  ]
+}

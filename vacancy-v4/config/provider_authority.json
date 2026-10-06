@@ -25,6 +25,12 @@
       "authority": "first-party public careers payload only",
       "reconciliation": "exhaust pagination/cursor and require unique ids plus complete job invariant",
       "restriction": "no certification from discovery metadata or third-party feeds; if no public authoritative inventory endpoint is proven, remain BLOCKED"
+    },
+    "auditcarriere": {
+      "authority": "first-party paginated HTML inventory plus visible total",
+      "reconciliation": "stable visible vacancy total; exhaust ?page=N until unique vacancy URLs == total",
+      "detail_contract": "each vacancy must have stable /vacature/ URL, nonempty title and summary; location/employer retained when exposed in JobPosting JSON-LD",
+      "temporal_drift": "restart/reject if visible total changes during pagination; never persist partial inventory"
     }
   }
 }
