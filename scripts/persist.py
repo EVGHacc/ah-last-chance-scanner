@@ -52,7 +52,23 @@ def main():
     if not valid_obs(obs): raise SystemExit('latest observatie is niet geldig/user-refresh/5 winkels/Vlees')
 
     day=Path(f'data/{date}.jsonl'); day.parent.mkdir(exist_ok=True)
-    with day.open('a',encoding='utf-8') as f: f.write(json.dumps(obs,ensure_ascii=False,separators=(',',':'))+'\n')
+    row_text=json.dumps(obs,ensure_ascii=False,separators=(',',':'))
+    with day.open('a',encoding='utf-8') as f: f.write(row_text+'\n')
+
+    # Durable per-observation archive.  The monolithic JSONL remains for
+    # backwards compatibility, while small immutable slot files keep every
+    # genuine measurement directly readable for future analysis/recovery.
+    slot=obs.get('rawScheduledSlot') or obs.get('scheduledSlot')
+    if not slot: raise SystemExit('latest observatie mist scheduled slot')
+    slot_dir=Path('data/raw')/date
+    slot_dir.mkdir(parents=True,exist_ok=True)
+    slot_file=slot_dir/f"{slot.replace(':','')}.json"
+    if slot_file.exists():
+        existing=json.loads(slot_file.read_text(encoding='utf-8'))
+        if existing.get('checkedAt') != obs.get('checkedAt'):
+            raise SystemExit(f'weigert bestaande historische slotmeting te overschrijven: {slot}')
+    else:
+        slot_file.write_text(row_text,encoding='utf-8')
 
     canonical={}; valid_rows=[]; raw_seen=set()
     with day.open(encoding='utf-8') as f:
@@ -69,7 +85,7 @@ def main():
     missing=[s for s in SLOTS if s not in canonical]
     today={'date':date,'expectedSlots':61,'presentSlots':len(observations),'missingSlots':missing,'observations':observations,
            '_source':{'scanner':'authenticated GitHub scanner','authRequired':'user-refresh','canonicalCadenceMinutes':5,
-                      'rawCadenceMinutes':3,'scope':'canonical Vlees view; lossless raw observations remain in data/YYYY-MM-DD.jsonl',
+                      'rawCadenceMinutes':3,'scope':'canonical Vlees view; lossless raw observations remain in data/YYYY-MM-DD.jsonl and data/raw/YYYY-MM-DD/HHMM.json',
                       'canonicalSelection':'exact rawScheduledSlot equals scheduledSlot; canonical delaySeconds <=240; lowest delay then earliest checkedAt'}}
     Path('data/today.json').write_text(json.dumps(today,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
 
