@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "accepted": true,
+  "release_allowed": true,
+  "release_gates": {
+    "release_allowed": true,
+    "failed_gates": [],
+    "evaluated_gates": {
+      "unit_tests": true,
+      "contract_tests": true,
+      "independent_qa": true,
+      "canary": true,
+      "live_proof": true,
+      "authority_contract": true,
+      "persistence_safety": true
+    }
+  },
+  "run_id": "37386058755-2:greenhouse:employer::Tide:proof",
+  "provider": "greenhouse",
+  "source_id": "employer::Tide",
+  "source": {
+    "name": "Tide",
+    "board": "tide",
+    "coverage": "verified_complete",
+    "unique_jobs": 84,
+    "authoritative_total": 84,
+    "jobs_sha256": "292f62839bd9aeaa4e1a81376445cb24afe4bb36d46ba59e0ba235a71e6e2112",
+    "checked_at": "2026-10-06T01:05:27.158650+00:00",
+    "error": null
+  },
+  "batch_generated_at": "2026-10-06T01:05:27.347226+00:00",
+  "workflow_run_id": "37386058755",
+  "workflow_run_attempt": 2,
+  "adapter_version": "47ce30062dceef269ea00539e37a695b9a7957fa",
+  "code_commit_sha": "9f20b24aae0ff934dd7881a52be2c1bba8ae2576",
+  "config_hash": "gitblob:59d8a17b36e14796c67989ec97595acbeaf791a0",
+  "authority_contract_version": "schema1:gitblob:42c7b9bf8993bcf737926dbe4168777fdf2555e0"
+}
