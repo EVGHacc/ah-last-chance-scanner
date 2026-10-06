@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-06",
   "weekday": "Tuesday",
-  "scheduledSlot": "21:39",
-  "scheduledAt": "2026-10-06T21:39:00+02:00",
-  "rawScheduledSlot": "21:39",
-  "rawScheduledAt": "2026-10-06T21:39:00+02:00",
-  "startedAt": "2026-10-06T21:39:00.246337+02:00",
-  "completedAt": "2026-10-06T21:39:04.550540+02:00",
-  "checkedAt": "2026-10-06T21:39:04.550540+02:00",
+  "scheduledSlot": "21:40",
+  "scheduledAt": "2026-10-06T21:40:00+02:00",
+  "rawScheduledSlot": "21:40",
+  "rawScheduledAt": "2026-10-06T21:40:00+02:00",
+  "startedAt": "2026-10-06T21:40:00.245668+02:00",
+  "completedAt": "2026-10-06T21:40:05.154322+02:00",
+  "checkedAt": "2026-10-06T21:40:05.154322+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -5388,18 +5388,6 @@
       ],
       "bakery": [
         {
-          "productId": 417147,
-          "title": "AH Vloerbrood meergranen heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 4,
-          "priceWas": "2.69",
-          "priceNow": "1.61",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 590399,
           "title": "AH Broodje burger augurk tomatensaus",
           "brand": "AH",
@@ -5409,6 +5397,18 @@
           "stock": 3,
           "priceWas": "1.59",
           "priceNow": "0.95",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 417147,
+          "title": "AH Vloerbrood meergranen heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-06"
         },
         {
