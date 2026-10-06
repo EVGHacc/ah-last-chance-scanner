@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-06",
   "weekday": "Tuesday",
-  "scheduledSlot": "18:15",
-  "scheduledAt": "2026-10-06T18:15:00+02:00",
-  "rawScheduledSlot": "18:15",
-  "rawScheduledAt": "2026-10-06T18:15:00+02:00",
-  "startedAt": "2026-10-06T18:15:00.239741+02:00",
-  "completedAt": "2026-10-06T18:15:05.437003+02:00",
-  "checkedAt": "2026-10-06T18:15:05.437003+02:00",
+  "scheduledSlot": "18:18",
+  "scheduledAt": "2026-10-06T18:18:00+02:00",
+  "rawScheduledSlot": "18:18",
+  "rawScheduledAt": "2026-10-06T18:18:00+02:00",
+  "startedAt": "2026-10-06T18:18:00.439567+02:00",
+  "completedAt": "2026-10-06T18:18:04.910839+02:00",
+  "checkedAt": "2026-10-06T18:18:04.910839+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -32,8 +32,8 @@
       "bakeryItems": 6,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 10,
-      "all70Stock": 35.0,
+      "all70Items": 11,
+      "all70Stock": 36.0,
       "all70": [
         {
           "productId": 583591,
@@ -45,6 +45,18 @@
           "stock": 1,
           "priceWas": "1.29",
           "priceNow": "0.39",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 122314,
+          "title": "AH Gerookt ontbijtspek stukje",
+          "brand": "AH",
+          "size": "ca. 240 g",
+          "category": "Vleeswaren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -388,8 +400,8 @@
       "bakeryItems": 7,
       "bakery70Items": 1,
       "bakery70Stock": 3.0,
-      "all70Items": 16,
-      "all70Stock": 55.0,
+      "all70Items": 17,
+      "all70Stock": 58.0,
       "all70": [
         {
           "productId": 624587,
@@ -425,6 +437,18 @@
           "stock": 1,
           "priceWas": "2.99",
           "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 367764,
+          "title": "Johma Garnalen salade",
+          "brand": "Johma",
+          "size": "175 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 3,
+          "priceWas": "3.75",
+          "priceNow": "1.13",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -893,16 +917,64 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 175,
-      "meatItems": 12,
-      "meat70Items": 0,
-      "meat70Stock": 0,
-      "bakeryItems": 10,
+      "totalBargainItems": 129,
+      "meatItems": 11,
+      "meat70Items": 2,
+      "meat70Stock": 3.0,
+      "bakeryItems": 6,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 12,
-      "all70Stock": 49.0,
+      "all70Items": 21,
+      "all70Stock": 60.0,
       "all70": [
+        {
+          "productId": 611653,
+          "title": "AH Slaverrijker quinoa",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.19",
+          "priceNow": "0.66",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 612632,
+          "title": "AH Slaverrijker peulvruchten bonenmix cajun",
+          "brand": "AH",
+          "size": "120 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.39",
+          "priceNow": "0.72",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 612923,
+          "title": "AH Komkommer met partydip",
+          "brand": "AH",
+          "size": "105 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.35",
+          "priceNow": "0.71",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 443204,
+          "title": "AH Pompoen lasagneblad",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.59",
+          "priceNow": "1.08",
+          "markdownExpirationDate": "2026-10-06"
+        },
         {
           "productId": 611679,
           "title": "AH Salade specialiteit kip teriyaki",
@@ -913,6 +985,30 @@
           "stock": 5,
           "priceWas": "2.99",
           "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 620805,
+          "title": "AH Ovenschotel sticky bites sweet garlic",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "6.99",
+          "priceNow": "2.10",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 418196,
+          "title": "AH Ovenschotel beenham honing mosterd",
+          "brand": "AH",
+          "size": "ca. 600 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "8.99",
+          "priceNow": "2.70",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -928,6 +1024,18 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
+          "productId": 122314,
+          "title": "AH Gerookt ontbijtspek stukje",
+          "brand": "AH",
+          "size": "ca. 240 g",
+          "category": "Vleeswaren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
           "productId": 213365,
           "title": "Heks'nkaas Origineel",
           "brand": "Heks'nkaas",
@@ -940,15 +1048,15 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 601479,
-          "title": "AH Slagroom vol & romig",
-          "brand": "AH",
-          "size": "0,7 l",
+          "productId": 186724,
+          "title": "Optimel Drinkyoghurt limited edition",
+          "brand": "Optimel",
+          "size": "1 l",
           "category": "Zuivel, eieren",
           "discountPct": 70,
-          "stock": 1,
-          "priceWas": "7.99",
-          "priceNow": "2.40",
+          "stock": 2,
+          "priceWas": "2.29",
+          "priceNow": "0.69",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -961,6 +1069,42 @@
           "stock": 1,
           "priceWas": "2.49",
           "priceNow": "0.75",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 440376,
+          "title": "Den Eelder Geitenmelk",
+          "brand": "Den Eelder",
+          "size": "0,75 l",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "0.57",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 114696,
+          "title": "Alpro Cooking soya",
+          "brand": "Alpro",
+          "size": "250 ml",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "0.57",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 487062,
+          "title": "Chocomel 0% suiker toegevoegd",
+          "brand": "Chocomel",
+          "size": "250 ml",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.39",
+          "priceNow": "0.42",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -1024,18 +1168,6 @@
           "markdownExpirationDate": "2026-10-12"
         },
         {
-          "productId": 577548,
-          "title": "Grand' Italia Sugocasa verdure",
-          "brand": "Grand' Italia",
-          "size": "690 g",
-          "category": "Pasta, rijst, wereldkeuken",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "3.59",
-          "priceNow": "1.08",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 217466,
           "title": "Swirl Vuilniszakken met fixeerband 35 liter",
           "brand": "Swirl",
@@ -1055,22 +1187,22 @@
           "brand": "AH",
           "size": "300 g",
           "category": "Vlees",
-          "discountPct": 40,
+          "discountPct": 70,
           "stock": 2,
           "priceWas": "6.99",
-          "priceNow": "4.19",
+          "priceNow": "2.10",
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 589124,
-          "title": "AH Scharrel kipdijfiletblokjes",
+          "productId": 418196,
+          "title": "AH Ovenschotel beenham honing mosterd",
           "brand": "AH",
-          "size": "300 g",
+          "size": "ca. 600 g",
           "category": "Vlees",
-          "discountPct": 40,
+          "discountPct": 70,
           "stock": 1,
-          "priceWas": "3.99",
-          "priceNow": "2.39",
+          "priceWas": "8.99",
+          "priceNow": "2.70",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -1083,18 +1215,6 @@
           "stock": 1,
           "priceWas": "3.59",
           "priceNow": "2.15",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 418196,
-          "title": "AH Ovenschotel beenham honing mosterd",
-          "brand": "AH",
-          "size": "ca. 600 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "8.99",
-          "priceNow": "5.39",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -1208,18 +1328,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 515734,
-          "title": "AH Kokosmakroon",
-          "brand": "AH",
-          "size": "4 stuks",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "3.39",
-          "priceNow": "1.91",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 170056,
           "title": "AH Bitterkoeken",
           "brand": "AH",
@@ -1278,42 +1386,6 @@
           "priceWas": "4.19",
           "priceNow": "2.51",
           "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 580174,
-          "title": "Koopmans Brood uit de pan Italiaans",
-          "brand": "Koopmans",
-          "size": "400 g",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 587853,
-          "title": "AH Glutenvrij Desembrood maanzaad",
-          "brand": "AH Glutenvrij",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 50,
-          "stock": 7,
-          "priceWas": "4.99",
-          "priceNow": "2.50",
-          "markdownExpirationDate": "2026-10-18"
-        },
-        {
-          "productId": 587852,
-          "title": "AH Glutenvrij Desembrood pompoen- & zonnebloempitten",
-          "brand": "AH Glutenvrij",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "4.99",
-          "priceNow": "2.99",
-          "markdownExpirationDate": "2026-10-18"
         }
       ]
     },
@@ -1321,7 +1393,7 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 110,
+      "totalBargainItems": 109,
       "meatItems": 11,
       "meat70Items": 0,
       "meat70Stock": 0,
@@ -1593,8 +1665,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 153,
-      "meatItems": 21,
+      "totalBargainItems": 150,
+      "meatItems": 20,
       "meat70Items": 0,
       "meat70Stock": 0,
       "bakeryItems": 4,
@@ -1903,18 +1975,6 @@
           "stock": 1,
           "priceWas": "10.49",
           "priceNow": "7.87",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 232235,
-          "title": "AH Excellent Fazantborstfilet",
-          "brand": "AH Excellent",
-          "size": "ca. 200 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "6.60",
-          "priceNow": "4.95",
           "markdownExpirationDate": "2026-10-07"
         },
         {
