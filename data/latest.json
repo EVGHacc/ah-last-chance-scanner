@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-06",
   "weekday": "Tuesday",
-  "scheduledSlot": "21:30",
-  "scheduledAt": "2026-10-06T21:30:00+02:00",
-  "rawScheduledSlot": "21:30",
-  "rawScheduledAt": "2026-10-06T21:30:00+02:00",
-  "startedAt": "2026-10-06T21:30:00.219348+02:00",
-  "completedAt": "2026-10-06T21:30:04.415279+02:00",
-  "checkedAt": "2026-10-06T21:30:04.415279+02:00",
+  "scheduledSlot": "21:33",
+  "scheduledAt": "2026-10-06T21:33:00+02:00",
+  "rawScheduledSlot": "21:33",
+  "rawScheduledAt": "2026-10-06T21:33:00+02:00",
+  "startedAt": "2026-10-06T21:33:00.208363+02:00",
+  "completedAt": "2026-10-06T21:33:04.416438+02:00",
+  "checkedAt": "2026-10-06T21:33:04.416438+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -33,7 +33,7 @@
       "bakery70Items": 1,
       "bakery70Stock": 3.0,
       "all70Items": 39,
-      "all70Stock": 85.0,
+      "all70Stock": 84.0,
       "all70": [
         {
           "productId": 475828,
@@ -180,18 +180,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 127588,
-          "title": "AH Verse ananas, appel grootverpakking",
-          "brand": "AH",
-          "size": "360 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.99",
-          "priceNow": "1.20",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 229094,
           "title": "AH Sable pitloze blauwe druiven",
           "brand": "AH",
@@ -201,6 +189,18 @@
           "stock": 2,
           "priceWas": "3.29",
           "priceNow": "0.99",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 127588,
+          "title": "AH Verse ananas, appel grootverpakking",
+          "brand": "AH",
+          "size": "360 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -3709,15 +3709,15 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 137,
-      "meatItems": 9,
+      "totalBargainItems": 135,
+      "meatItems": 8,
       "meat70Items": 4,
       "meat70Stock": 8.0,
       "bakeryItems": 41,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
-      "all70Items": 38,
-      "all70Stock": 56.0,
+      "all70Items": 39,
+      "all70Stock": 57.0,
       "all70": [
         {
           "productId": 80568,
@@ -4152,6 +4152,18 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
+          "productId": 599861,
+          "title": "Ritter Sport Choco cubes for you",
+          "brand": "Ritter Sport",
+          "size": "176 g",
+          "category": "Koek, snoep, chocolade",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.29",
+          "priceNow": "1.29",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 563553,
           "title": "Peijnenburg Ontbijtkoek volkoren gesneden",
           "brand": "Peijnenburg",
@@ -4224,18 +4236,6 @@
           "priceWas": "4.99",
           "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 187570,
-          "title": "AH Sukadelap",
-          "brand": "AH",
-          "size": "ca. 700 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "15.39",
-          "priceNow": "11.54",
-          "markdownExpirationDate": "2026-10-07"
         },
         {
           "productId": 130251,
