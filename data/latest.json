@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-06",
   "weekday": "Tuesday",
-  "scheduledSlot": "20:20",
-  "scheduledAt": "2026-10-06T20:20:00+02:00",
-  "rawScheduledSlot": "20:20",
-  "rawScheduledAt": "2026-10-06T20:20:00+02:00",
-  "startedAt": "2026-10-06T20:20:00.254123+02:00",
-  "completedAt": "2026-10-06T20:20:04.849956+02:00",
-  "checkedAt": "2026-10-06T20:20:04.849956+02:00",
+  "scheduledSlot": "20:21",
+  "scheduledAt": "2026-10-06T20:21:00+02:00",
+  "rawScheduledSlot": "20:21",
+  "rawScheduledAt": "2026-10-06T20:21:00+02:00",
+  "startedAt": "2026-10-06T20:21:00.248380+02:00",
+  "completedAt": "2026-10-06T20:21:04.487877+02:00",
+  "checkedAt": "2026-10-06T20:21:04.487877+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -5640,18 +5640,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 597345,
-          "title": "AH Pretzel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "0.65",
-          "priceNow": "0.49",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 230715,
           "title": "AH Italiaanse bol wit",
           "brand": "AH",
@@ -5685,6 +5673,18 @@
           "stock": 5,
           "priceWas": "1.19",
           "priceNow": "0.89",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 597345,
+          "title": "AH Pretzel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "0.65",
+          "priceNow": "0.49",
           "markdownExpirationDate": "2026-10-06"
         },
         {
