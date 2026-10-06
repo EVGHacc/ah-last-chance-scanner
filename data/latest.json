@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-06",
   "weekday": "Tuesday",
-  "scheduledSlot": "20:42",
-  "scheduledAt": "2026-10-06T20:42:00+02:00",
-  "rawScheduledSlot": "20:42",
-  "rawScheduledAt": "2026-10-06T20:42:00+02:00",
-  "startedAt": "2026-10-06T20:42:00.230472+02:00",
-  "completedAt": "2026-10-06T20:42:04.859393+02:00",
-  "checkedAt": "2026-10-06T20:42:04.859393+02:00",
+  "scheduledSlot": "20:45",
+  "scheduledAt": "2026-10-06T20:45:00+02:00",
+  "rawScheduledSlot": "20:45",
+  "rawScheduledAt": "2026-10-06T20:45:00+02:00",
+  "startedAt": "2026-10-06T20:45:00.240930+02:00",
+  "completedAt": "2026-10-06T20:45:04.242883+02:00",
+  "checkedAt": "2026-10-06T20:45:04.242883+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,15 +25,15 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 194,
-      "meatItems": 10,
-      "meat70Items": 6,
-      "meat70Stock": 10.0,
-      "bakeryItems": 50,
+      "totalBargainItems": 193,
+      "meatItems": 9,
+      "meat70Items": 5,
+      "meat70Stock": 9.0,
+      "bakeryItems": 49,
       "bakery70Items": 1,
       "bakery70Stock": 3.0,
-      "all70Items": 43,
-      "all70Stock": 97.0,
+      "all70Items": 42,
+      "all70Stock": 96.0,
       "all70": [
         {
           "productId": 475828,
@@ -324,18 +324,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 4033,
-          "title": "AH Ribkarbonade",
-          "brand": "AH",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.66",
-          "priceNow": "0.80",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 619324,
           "title": "AH Burger smokey 2 stuks",
           "brand": "AH",
@@ -578,18 +566,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 4033,
-          "title": "AH Ribkarbonade",
-          "brand": "AH",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.66",
-          "priceNow": "0.80",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 619324,
           "title": "AH Burger smokey 2 stuks",
           "brand": "AH",
@@ -826,7 +802,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 4,
+          "stock": 3,
           "priceWas": "1.19",
           "priceNow": "0.89",
           "markdownExpirationDate": "2026-10-06"
@@ -838,7 +814,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 4,
+          "stock": 3,
           "priceWas": "2.39",
           "priceNow": "1.79",
           "markdownExpirationDate": "2026-10-06"
@@ -916,18 +892,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 230787,
-          "title": "AH Les pains triomphe half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "1.29",
-          "priceNow": "0.97",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 584032,
           "title": "AH Rond wit sesam heel",
           "brand": "AH",
@@ -952,18 +916,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 606777,
-          "title": "AH Borek kip gyros",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.19",
-          "priceNow": "0.89",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 561017,
           "title": "AH Tijger tarwe maïs heel",
           "brand": "AH",
@@ -973,6 +925,18 @@
           "stock": 1,
           "priceWas": "1.99",
           "priceNow": "1.49",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 230787,
+          "title": "AH Les pains triomphe half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.29",
+          "priceNow": "0.97",
           "markdownExpirationDate": "2026-10-06"
         },
         {
