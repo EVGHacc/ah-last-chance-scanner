@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-06",
   "weekday": "Tuesday",
-  "scheduledSlot": "19:03",
-  "scheduledAt": "2026-10-06T19:03:00+02:00",
-  "rawScheduledSlot": "19:03",
-  "rawScheduledAt": "2026-10-06T19:03:00+02:00",
-  "startedAt": "2026-10-06T19:03:00.236202+02:00",
-  "completedAt": "2026-10-06T19:03:04.437945+02:00",
-  "checkedAt": "2026-10-06T19:03:04.437945+02:00",
+  "scheduledSlot": "19:05",
+  "scheduledAt": "2026-10-06T19:05:00+02:00",
+  "rawScheduledSlot": "19:05",
+  "rawScheduledAt": "2026-10-06T19:05:00+02:00",
+  "startedAt": "2026-10-06T19:05:00.245968+02:00",
+  "completedAt": "2026-10-06T19:05:06.796853+02:00",
+  "checkedAt": "2026-10-06T19:05:06.796853+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,15 +25,15 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 123,
-      "meatItems": 11,
-      "meat70Items": 3,
-      "meat70Stock": 7.0,
+      "totalBargainItems": 121,
+      "meatItems": 10,
+      "meat70Items": 2,
+      "meat70Stock": 6.0,
       "bakeryItems": 6,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 18,
-      "all70Stock": 51.0,
+      "all70Items": 17,
+      "all70Stock": 50.0,
       "all70": [
         {
           "productId": 612632,
@@ -105,18 +105,6 @@
           "stock": 3,
           "priceWas": "4.72",
           "priceNow": "1.42",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 619329,
-          "title": "AH Gegrilde halve kip naturel",
-          "brand": "AH",
-          "size": "ca. 650 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "8.70",
-          "priceNow": "2.61",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -275,18 +263,6 @@
           "stock": 3,
           "priceWas": "4.72",
           "priceNow": "1.42",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 619329,
-          "title": "AH Gegrilde halve kip naturel",
-          "brand": "AH",
-          "size": "ca. 650 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "8.70",
-          "priceNow": "2.61",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -1899,13 +1875,13 @@
       "fetched": true,
       "totalBargainItems": 106,
       "meatItems": 9,
-      "meat70Items": 0,
-      "meat70Stock": 0,
+      "meat70Items": 1,
+      "meat70Stock": 2.0,
       "bakeryItems": 4,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
-      "all70Items": 11,
-      "all70Stock": 22.0,
+      "all70Items": 17,
+      "all70Stock": 30.0,
       "all70": [
         {
           "productId": 612923,
@@ -1917,6 +1893,18 @@
           "stock": 2,
           "priceWas": "2.35",
           "priceNow": "0.71",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 399177,
+          "title": "AH Pompoensoep verspakket",
+          "brand": "AH",
+          "size": "6 pers | 35 min",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "4.99",
+          "priceNow": "1.50",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -1932,6 +1920,42 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
+          "productId": 600641,
+          "title": "AH Gesneden verspakket chicken tortilla's",
+          "brand": "AH",
+          "size": "4 pers | 20 min",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "7.59",
+          "priceNow": "2.28",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 627041,
+          "title": "AH Gesneden verspakket nacho bowl Mex stijl",
+          "brand": "AH",
+          "size": "1,01 kg",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.99",
+          "priceNow": "2.10",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 155600,
+          "title": "AH Aardappelschijfjes",
+          "brand": "AH",
+          "size": "600 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.19",
+          "priceNow": "0.36",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
           "productId": 611679,
           "title": "AH Salade specialiteit kip teriyaki",
           "brand": "AH",
@@ -1941,6 +1965,18 @@
           "stock": 3,
           "priceWas": "2.99",
           "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 531864,
+          "title": "AH Scharrel kipfilet plakjes gerookt",
+          "brand": "AH",
+          "size": "ca. 155 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "3.69",
+          "priceNow": "1.11",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -1965,6 +2001,18 @@
           "stock": 1,
           "priceWas": "2.29",
           "priceNow": "0.69",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 556297,
+          "title": "AH Trifle aardbei",
+          "brand": "AH",
+          "size": "110 g",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.99",
+          "priceNow": "0.60",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -2042,6 +2090,18 @@
       ],
       "items": [
         {
+          "productId": 531864,
+          "title": "AH Scharrel kipfilet plakjes gerookt",
+          "brand": "AH",
+          "size": "ca. 155 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "3.69",
+          "priceNow": "1.11",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
           "productId": 385506,
           "title": "AH Biologisch Gerookte kipfilet",
           "brand": "AH Biologisch",
@@ -2051,18 +2111,6 @@
           "stock": 4,
           "priceWas": "4.72",
           "priceNow": "2.83",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 531864,
-          "title": "AH Scharrel kipfilet plakjes gerookt",
-          "brand": "AH",
-          "size": "ca. 155 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "3.69",
-          "priceNow": "2.21",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -2207,13 +2255,13 @@
       "fetched": true,
       "totalBargainItems": 143,
       "meatItems": 19,
-      "meat70Items": 1,
-      "meat70Stock": 15.0,
+      "meat70Items": 2,
+      "meat70Stock": 16.0,
       "bakeryItems": 4,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 17,
-      "all70Stock": 58.0,
+      "all70Items": 26,
+      "all70Stock": 75.0,
       "all70": [
         {
           "productId": 624587,
@@ -2225,6 +2273,30 @@
           "stock": 2,
           "priceWas": "4.49",
           "priceNow": "1.35",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 41078,
+          "title": "AH Gesneden uien",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "1.79",
+          "priceNow": "0.54",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 200547,
+          "title": "AH Salie",
+          "brand": "AH",
+          "size": "15 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "1.29",
+          "priceNow": "0.39",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -2252,6 +2324,30 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
+          "productId": 308528,
+          "title": "AH Wrap gerookte zalm",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "4.40",
+          "priceNow": "1.32",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 135028,
+          "title": "AH Sandwich tonijnsalade",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "3.50",
+          "priceNow": "1.05",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
           "productId": 390005,
           "title": "AH Salade specialiteit rundvlees",
           "brand": "AH",
@@ -2261,6 +2357,42 @@
           "stock": 2,
           "priceWas": "2.99",
           "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 610791,
+          "title": "AH Saladbowl pulled chicken",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.49",
+          "priceNow": "1.95",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 331125,
+          "title": "AH Volkoren sandwich mozarella tomaat",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.50",
+          "priceNow": "1.05",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 365984,
+          "title": "AH Volkoren sandwich old amsterdam",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.50",
+          "priceNow": "1.05",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -2286,6 +2418,18 @@
           "priceWas": "3.49",
           "priceNow": "1.05",
           "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 385506,
+          "title": "AH Biologisch Gerookte kipfilet",
+          "brand": "AH Biologisch",
+          "size": "ca. 125 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.72",
+          "priceNow": "1.42",
+          "markdownExpirationDate": "2026-10-06"
         },
         {
           "productId": 477571,
@@ -2418,9 +2562,33 @@
           "priceWas": "0.95",
           "priceNow": "0.29",
           "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 585990,
+          "title": "AH Protein kwark bar mango",
+          "brand": "AH",
+          "size": "46 g",
+          "category": "Tussendoortjes",
+          "discountPct": 70,
+          "stock": 5,
+          "priceWas": "0.95",
+          "priceNow": "0.29",
+          "markdownExpirationDate": "2026-10-07"
         }
       ],
       "items": [
+        {
+          "productId": 385506,
+          "title": "AH Biologisch Gerookte kipfilet",
+          "brand": "AH Biologisch",
+          "size": "ca. 125 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.72",
+          "priceNow": "1.42",
+          "markdownExpirationDate": "2026-10-06"
+        },
         {
           "productId": 619338,
           "title": "AH Kip boomstammetjes",
@@ -2455,18 +2623,6 @@
           "stock": 1,
           "priceWas": "4.89",
           "priceNow": "2.93",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 385506,
-          "title": "AH Biologisch Gerookte kipfilet",
-          "brand": "AH Biologisch",
-          "size": "ca. 125 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "4.72",
-          "priceNow": "2.83",
           "markdownExpirationDate": "2026-10-06"
         },
         {
