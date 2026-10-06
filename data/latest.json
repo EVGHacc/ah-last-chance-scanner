@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-06",
   "weekday": "Tuesday",
-  "scheduledSlot": "21:27",
-  "scheduledAt": "2026-10-06T21:27:00+02:00",
-  "rawScheduledSlot": "21:27",
-  "rawScheduledAt": "2026-10-06T21:27:00+02:00",
-  "startedAt": "2026-10-06T21:27:00.242207+02:00",
-  "completedAt": "2026-10-06T21:27:04.516026+02:00",
-  "checkedAt": "2026-10-06T21:27:04.516026+02:00",
+  "scheduledSlot": "21:30",
+  "scheduledAt": "2026-10-06T21:30:00+02:00",
+  "rawScheduledSlot": "21:30",
+  "rawScheduledAt": "2026-10-06T21:30:00+02:00",
+  "startedAt": "2026-10-06T21:30:00.219348+02:00",
+  "completedAt": "2026-10-06T21:30:04.415279+02:00",
+  "checkedAt": "2026-10-06T21:30:04.415279+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2609,15 +2609,15 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 213,
-      "meatItems": 9,
-      "meat70Items": 4,
-      "meat70Stock": 5.0,
+      "totalBargainItems": 210,
+      "meatItems": 8,
+      "meat70Items": 3,
+      "meat70Stock": 4.0,
       "bakeryItems": 40,
       "bakery70Items": 1,
       "bakery70Stock": 2.0,
-      "all70Items": 45,
-      "all70Stock": 90.0,
+      "all70Items": 42,
+      "all70Stock": 79.0,
       "all70": [
         {
           "productId": 111314,
@@ -2653,18 +2653,6 @@
           "stock": 1,
           "priceWas": "2.69",
           "priceNow": "0.81",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 611653,
-          "title": "AH Slaverrijker quinoa",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.19",
-          "priceNow": "0.66",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -2737,18 +2725,6 @@
           "stock": 1,
           "priceWas": "1.59",
           "priceNow": "0.48",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 475828,
-          "title": "AH Minikriel kruidenboter",
-          "brand": "AH",
-          "size": "450 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "1.29",
-          "priceNow": "0.39",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -2917,18 +2893,6 @@
           "stock": 1,
           "priceWas": "8.99",
           "priceNow": "2.70",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 531878,
-          "title": "AH Scharrel kipdrumsticks",
-          "brand": "AH",
-          "size": "1 kg",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.89",
-          "priceNow": "2.07",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -3112,18 +3076,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 448248,
-          "title": "Huls Drentse kosterworst",
-          "brand": "Huls",
-          "size": "100 g",
-          "category": "Borrel, chips, snacks",
-          "discountPct": 70,
-          "stock": 10,
-          "priceWas": "2.99",
-          "priceNow": "0.90",
-          "markdownExpirationDate": "2026-10-12"
-        },
-        {
           "productId": 62658,
           "title": "AH Mini cervelaat",
           "brand": "AH",
@@ -3131,6 +3083,18 @@
           "category": "Borrel, chips, snacks",
           "discountPct": 70,
           "stock": 4,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-12"
+        },
+        {
+          "productId": 448248,
+          "title": "Huls Drentse kosterworst",
+          "brand": "Huls",
+          "size": "100 g",
+          "category": "Borrel, chips, snacks",
+          "discountPct": 70,
+          "stock": 2,
           "priceWas": "2.99",
           "priceNow": "0.90",
           "markdownExpirationDate": "2026-10-12"
@@ -3183,18 +3147,6 @@
           "stock": 1,
           "priceWas": "8.99",
           "priceNow": "2.70",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 531878,
-          "title": "AH Scharrel kipdrumsticks",
-          "brand": "AH",
-          "size": "1 kg",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.89",
-          "priceNow": "2.07",
           "markdownExpirationDate": "2026-10-06"
         },
         {
