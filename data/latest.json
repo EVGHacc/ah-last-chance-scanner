@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-06",
   "weekday": "Tuesday",
-  "scheduledSlot": "20:50",
-  "scheduledAt": "2026-10-06T20:50:00+02:00",
-  "rawScheduledSlot": "20:50",
-  "rawScheduledAt": "2026-10-06T20:50:00+02:00",
-  "startedAt": "2026-10-06T20:50:00.210556+02:00",
-  "completedAt": "2026-10-06T20:50:06.865661+02:00",
-  "checkedAt": "2026-10-06T20:50:06.865661+02:00",
+  "scheduledSlot": "20:51",
+  "scheduledAt": "2026-10-06T20:51:00+02:00",
+  "rawScheduledSlot": "20:51",
+  "rawScheduledAt": "2026-10-06T20:51:00+02:00",
+  "startedAt": "2026-10-06T20:51:00.406057+02:00",
+  "completedAt": "2026-10-06T20:51:04.639152+02:00",
+  "checkedAt": "2026-10-06T20:51:04.639152+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -26,14 +26,14 @@
       "store": "AH Blekersvaartweg",
       "fetched": true,
       "totalBargainItems": 195,
-      "meatItems": 11,
-      "meat70Items": 5,
-      "meat70Stock": 9.0,
-      "bakeryItems": 49,
+      "meatItems": 12,
+      "meat70Items": 6,
+      "meat70Stock": 10.0,
+      "bakeryItems": 47,
       "bakery70Items": 1,
       "bakery70Stock": 3.0,
-      "all70Items": 42,
-      "all70Stock": 96.0,
+      "all70Items": 43,
+      "all70Stock": 97.0,
       "all70": [
         {
           "productId": 475828,
@@ -324,6 +324,18 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
+          "productId": 619339,
+          "title": "AH Scharrel krokante kipfiletschnitzel",
+          "brand": "AH",
+          "size": "600 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "7.99",
+          "priceNow": "2.40",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
           "productId": 619324,
           "title": "AH Burger smokey 2 stuks",
           "brand": "AH",
@@ -563,6 +575,18 @@
           "stock": 3,
           "priceWas": "4.72",
           "priceNow": "1.42",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 619339,
+          "title": "AH Scharrel krokante kipfiletschnitzel",
+          "brand": "AH",
+          "size": "600 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "7.99",
+          "priceNow": "2.40",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -820,18 +844,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 467677,
-          "title": "AH Kip loempia börek",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.19",
-          "priceNow": "0.89",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 230786,
           "title": "AH Les pains triomphe heel",
           "brand": "AH",
@@ -904,15 +916,15 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 487304,
-          "title": "AH Liefde & Passie OerDesem pompoen",
-          "brand": "AH Liefde & Passie",
+          "productId": 467677,
+          "title": "AH Kip loempia börek",
+          "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
           "stock": 2,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
+          "priceWas": "1.19",
+          "priceNow": "0.89",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -940,27 +952,15 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 561017,
-          "title": "AH Tijger tarwe maïs heel",
-          "brand": "AH",
+          "productId": 487304,
+          "title": "AH Liefde & Passie OerDesem pompoen",
+          "brand": "AH Liefde & Passie",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
           "stock": 1,
-          "priceWas": "1.99",
-          "priceNow": "1.49",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 230787,
-          "title": "AH Les pains triomphe half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.29",
-          "priceNow": "0.97",
+          "priceWas": "3.19",
+          "priceNow": "2.39",
           "markdownExpirationDate": "2026-10-06"
         },
         {
