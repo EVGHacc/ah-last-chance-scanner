@@ -63,14 +63,16 @@ class AshbyBatchDeveloperTests(unittest.TestCase):
         self.assertEqual(row["coverage"],"verified_complete")
         self.assertEqual(row["provider_unique_jobs"],1)
         self.assertEqual(row["first_party_unique_jobs"],2)
-        self.assertEqual(row["unique_jobs"],2)
-        self.assertEqual(row["reconciled_first_party_only_ids"],[ident(1)])
-        first_party=next(j for j in row["jobs"] if j["job_id"]==ident(1))
-        self.assertEqual(first_party["title"],"First-party reconciled role")
-        self.assertIn("Lead a control programme.",first_party["summary"])
-        self.assertIn("Amsterdam",first_party["location"])
-        self.assertEqual(first_party["record_source"],"first_party_reconciled")
-        self.assertEqual(row["evidence_kind"],"official_complete_payload_plus_first_party_reconciled")
+        # Ashby's complete provider payload is authoritative. The asynchronous
+        # first-party HTML sample is drift diagnostics only and must never be
+        # merged into the production inventory.
+        self.assertEqual(row["unique_jobs"],1)
+        self.assertEqual(row["first_party_only_jobs"],1)
+        self.assertTrue(row["first_party_drift_detected"])
+        self.assertEqual(row["reconciled_first_party_only_ids"],[])
+        self.assertEqual(len(row["jobs"]),1)
+        self.assertEqual(row["jobs"][0]["record_source"],"ashby_public_api")
+        self.assertEqual(row["evidence_kind"],"provider_complete_payload")
 
     def test_hash_is_stable_for_complete_inventory(self):
         first=run_batch(lambda url: payload(url.rsplit("/",1)[-1],2),lambda url: html_for(url,2))
