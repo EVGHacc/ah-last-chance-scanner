@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        provider: [lever, smartrecruiters, eightfold, auditcarriere]
+        provider: [greenhouse, lever, smartrecruiters, eightfold, auditcarriere]
     runs-on: ubuntu-latest
     timeout-minutes: 20
     defaults:
@@ -53,6 +53,10 @@ jobs:
           PROVIDER: ${{ matrix.provider }}
         run: |
           case "$PROVIDER" in
+            greenhouse)
+              python -m unittest discover -s tests/qa -p 'test_greenhouse*.py' -v
+              python -m unittest discover -s tests/qa -p 'test_transport_resilience.py' -v
+              ;;
             lever)
               python -m unittest discover -s tests/qa -p 'test_lever*.py' -v
               python -m unittest discover -s tests/qa -p 'test_transport_resilience.py' -v
