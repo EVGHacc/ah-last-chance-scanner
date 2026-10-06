@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-06",
   "weekday": "Tuesday",
-  "scheduledSlot": "21:25",
-  "scheduledAt": "2026-10-06T21:25:00+02:00",
-  "rawScheduledSlot": "21:25",
-  "rawScheduledAt": "2026-10-06T21:25:00+02:00",
-  "startedAt": "2026-10-06T21:25:00.431057+02:00",
-  "completedAt": "2026-10-06T21:25:04.900382+02:00",
-  "checkedAt": "2026-10-06T21:25:04.900382+02:00",
+  "scheduledSlot": "21:27",
+  "scheduledAt": "2026-10-06T21:27:00+02:00",
+  "rawScheduledSlot": "21:27",
+  "rawScheduledAt": "2026-10-06T21:27:00+02:00",
+  "startedAt": "2026-10-06T21:27:00.242207+02:00",
+  "completedAt": "2026-10-06T21:27:04.516026+02:00",
+  "checkedAt": "2026-10-06T21:27:04.516026+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -3757,15 +3757,15 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 138,
+      "totalBargainItems": 137,
       "meatItems": 9,
       "meat70Items": 4,
       "meat70Stock": 8.0,
       "bakeryItems": 41,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
-      "all70Items": 39,
-      "all70Stock": 57.0,
+      "all70Items": 38,
+      "all70Stock": 56.0,
       "all70": [
         {
           "productId": 80568,
@@ -3957,18 +3957,6 @@
           "stock": 1,
           "priceWas": "1.19",
           "priceNow": "0.36",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 238969,
-          "title": "AH Munt",
-          "brand": "AH",
-          "size": "15 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "1.29",
-          "priceNow": "0.39",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -5628,18 +5616,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 182711,
-          "title": "AH Les pains bastille heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 6,
-          "priceWas": "2.39",
-          "priceNow": "1.79",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 487305,
           "title": "AH Liefde & Passie Spelt volkoren brood",
           "brand": "AH Liefde & Passie",
@@ -5649,6 +5625,18 @@
           "stock": 6,
           "priceWas": "3.19",
           "priceNow": "2.39",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 182711,
+          "title": "AH Les pains bastille heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 5,
+          "priceWas": "2.39",
+          "priceNow": "1.79",
           "markdownExpirationDate": "2026-10-06"
         },
         {
