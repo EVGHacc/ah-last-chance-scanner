@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provider": "greenhouse",
-  "generated_at": "2026-10-05T23:01:37.568197+00:00",
+  "generated_at": "2026-10-06T01:05:27.347226+00:00",
   "configured_sources": 5,
   "verified_complete": 5,
   "failed": 0,
@@ -9353,20 +9353,20 @@
           "record_source": "greenhouse_job_board_api"
         }
       ],
-      "checked_at": "2026-10-05T23:01:35.573081+00:00",
+      "checked_at": "2026-10-06T01:05:26.013803+00:00",
       "error": null
     },
     {
       "name": "Ripple",
       "board": "ripple",
       "coverage": "verified_complete",
-      "unique_jobs": 128,
-      "authoritative_total": 128,
+      "unique_jobs": 129,
+      "authoritative_total": 129,
       "exhausted": true,
       "evidence_kind": "greenhouse_meta_total_reconciled",
       "endpoint": "https://boards-api.greenhouse.io/v1/boards/ripple/jobs?content=true",
       "first_party_evidence_url": "https://ripple.com/careers/all-jobs/",
-      "jobs_sha256": "6610c1213ba5bf739840e887168b2645f51ef042dd44e39fe0677caf4d7a1495",
+      "jobs_sha256": "a9764a580f03104c5945b4bf6f8b8ed1572c54229d3a9069d2f2bdd932f88515",
       "jobs": [
         {
           "job_id": "8042882",
@@ -10318,6 +10318,19 @@
           "record_source": "greenhouse_job_board_api"
         },
         {
+          "job_id": "8247091",
+          "title": "Senior Professional Services Consultant",
+          "location": "São Paulo, Brazil",
+          "summary": "At Ripple, we’re building a world where value moves like information does today. It’s big, it’s bold, and we’re already doing it.",
+          "job_url": "https://ripple.com/careers/all-jobs/job/8247091?gh_jid=8247091",
+          "apply_url": "https://ripple.com/careers/all-jobs/job/8247091?gh_jid=8247091",
+          "department": "Service & Delivery",
+          "office": "Sao Paulo, Brazil",
+          "published_at": "2026-10-05T20:40:24-04:00",
+          "updated_at": "2026-10-05T20:41:55-04:00",
+          "record_source": "greenhouse_job_board_api"
+        },
+        {
           "job_id": "8180173",
           "title": "Senior Ripple Trading and Markets Analyst",
           "location": "Miami, FL, United States",
@@ -11033,7 +11046,7 @@
           "record_source": "greenhouse_job_board_api"
         }
       ],
-      "checked_at": "2026-10-05T23:01:36.429608+00:00",
+      "checked_at": "2026-10-06T01:05:26.736798+00:00",
       "error": null
     },
     {
@@ -11686,7 +11699,7 @@
           "record_source": "greenhouse_job_board_api"
         }
       ],
-      "checked_at": "2026-10-05T23:01:36.805105+00:00",
+      "checked_at": "2026-10-06T01:05:26.965036+00:00",
       "error": null
     },
     {
@@ -11701,7 +11714,7 @@
       "first_party_evidence_url": "https://remote.com/openings",
       "jobs_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "jobs": [],
-      "checked_at": "2026-10-05T23:01:37.090827+00:00",
+      "checked_at": "2026-10-06T01:05:27.084191+00:00",
       "error": null
     },
     {
@@ -12809,7 +12822,7 @@
           "record_source": "greenhouse_job_board_api"
         }
       ],
-      "checked_at": "2026-10-05T23:01:37.199442+00:00",
+      "checked_at": "2026-10-06T01:05:27.158650+00:00",
       "error": null
     }
   ]
