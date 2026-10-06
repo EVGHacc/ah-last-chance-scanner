@@ -962,8 +962,8 @@
         },
         "smartrecruiters": {
           "status": "PROVEN",
-          "evidence_url": "https://careers.smartrecruiters.com/Varrlyn/",
-          "checked_at": "2026-10-03T08:45:00Z"
+          "evidence_url": "https://api.smartrecruiters.com/v1/companies/Varrlyn/postings",
+          "checked_at": "2026-10-06T18:45:00Z"
         },
         "eightfold": {
           "status": "UNKNOWN",
@@ -1446,8 +1446,8 @@
         },
         "smartrecruiters": {
           "status": "PROVEN",
-          "evidence_url": "https://careers.smartrecruiters.com/Visa",
-          "checked_at": "2026-10-03T15:27:00Z"
+          "evidence_url": "https://api.smartrecruiters.com/v1/companies/Visa/postings",
+          "checked_at": "2026-10-06T18:45:00Z"
         },
         "eightfold": {
           "status": "UNKNOWN",
@@ -1585,6 +1585,11 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "ashby": {
+          "status": "PROVEN",
+          "evidence_url": "https://jobs.ashbyhq.com/openai",
+          "checked_at": "2026-10-06T18:45:00Z"
         }
       }
     },
@@ -1629,6 +1634,11 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "ashby": {
+          "status": "PROVEN",
+          "evidence_url": "https://jobs.ashbyhq.com/mollie",
+          "checked_at": "2026-10-06T18:45:00Z"
         }
       }
     },
@@ -1688,8 +1698,8 @@
         },
         "smartrecruiters": {
           "status": "PROVEN",
-          "evidence_url": "https://jobs.smartrecruiters.com/Wise/",
-          "checked_at": "2026-10-03T15:27:00Z"
+          "evidence_url": "https://api.smartrecruiters.com/v1/companies/Wise/postings",
+          "checked_at": "2026-10-06T18:45:00Z"
         },
         "eightfold": {
           "status": "UNKNOWN",
@@ -1717,6 +1727,11 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "personio": {
+          "status": "PROVEN",
+          "evidence_url": "https://coinmerce.jobs.personio.com/",
+          "checked_at": "2026-10-06T18:45:00Z"
         }
       }
     },
@@ -1761,6 +1776,11 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "breezy": {
+          "status": "PROVEN",
+          "evidence_url": "https://zero-hash.breezy.hr/",
+          "checked_at": "2026-10-06T18:45:00Z"
         }
       }
     },
@@ -1805,6 +1825,11 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "greenhouse": {
+          "status": "PROVEN",
+          "evidence_url": "https://boards-api.greenhouse.io/v1/boards/payhawk/jobs?content=true",
+          "checked_at": "2026-10-06T18:45:00Z"
         }
       }
     },
@@ -1827,6 +1852,11 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "greenhouse": {
+          "status": "PROVEN",
+          "evidence_url": "https://boards-api.greenhouse.io/v1/boards/stripe/jobs?content=true",
+          "checked_at": "2026-10-06T18:45:00Z"
         }
       }
     },
@@ -1893,6 +1923,11 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "greenhouse": {
+          "status": "PROVEN",
+          "evidence_url": "https://boards-api.greenhouse.io/v1/boards/remotecom/jobs?content=true",
+          "checked_at": "2026-10-06T18:45:00Z"
         }
       }
     },
@@ -1915,6 +1950,11 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "ashby": {
+          "status": "PROVEN",
+          "evidence_url": "https://jobs.ashbyhq.com/airwallex",
+          "checked_at": "2026-10-06T18:45:00Z"
         }
       }
     },
@@ -1981,6 +2021,11 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "greenhouse": {
+          "status": "PROVEN",
+          "evidence_url": "https://boards-api.greenhouse.io/v1/boards/ripple/jobs?content=true",
+          "checked_at": "2026-10-06T18:45:00Z"
         }
       }
     },
@@ -2025,6 +2070,11 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "ashby": {
+          "status": "PROVEN",
+          "evidence_url": "https://jobs.ashbyhq.com/checkout.com",
+          "checked_at": "2026-10-06T18:45:00Z"
         }
       }
     },
@@ -2057,8 +2107,8 @@
       "platforms": {
         "lever": {
           "status": "PROVEN",
-          "evidence_url": "https://jobs.eu.lever.co/pnlfin/",
-          "checked_at": "2026-10-03T08:45:00Z"
+          "evidence_url": "https://api.lever.co/v0/postings/pnlfin",
+          "checked_at": "2026-10-06T18:45:00Z"
         },
         "smartrecruiters": {
           "status": "UNKNOWN",
@@ -2091,6 +2141,11 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "greenhouse": {
+          "status": "PROVEN",
+          "evidence_url": "https://boards-api.greenhouse.io/v1/boards/tide/jobs?content=true",
+          "checked_at": "2026-10-06T18:45:00Z"
         }
       }
     },
@@ -2300,7 +2355,7 @@
         "auditcarriere": {
           "status": "PROVEN",
           "evidence_url": "https://www.auditcarriere.nl/vacatures?page=1",
-          "checked_at": "2026-10-06T07:29:18.637Z"
+          "checked_at": "2026-10-06T18:45:00Z"
         },
         "lever": {
           "status": "UNKNOWN",
