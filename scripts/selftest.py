@@ -44,6 +44,35 @@ assert persist.exact_canonical_obs(obs())
 assert not persist.exact_canonical_obs(obs(raw_slot='17:33',canonical_slot='17:30'))
 assert not persist.exact_canonical_obs(obs(canonical_delay=241))
 
+# Persistence must retain each genuine observation as a directly readable,
+# immutable per-slot historical file for future analysis.
+with tempfile.TemporaryDirectory() as td:
+    cwd=os.getcwd()
+    try:
+        os.chdir(td)
+        Path('data').mkdir()
+        sample=obs()
+        sample.update({'schemaVersion':5,'weekday':'Sunday',
+                       'scheduledAt':'2026-09-13T17:30:00+02:00',
+                       'rawScheduledAt':'2026-09-13T17:30:00+02:00'})
+        Path('data/latest.json').write_text(json.dumps(sample),encoding='utf-8')
+        persist.main()
+        saved=Path('data/raw/2026-09-13/1730.json')
+        assert saved.is_file()
+        assert json.loads(saved.read_text(encoding='utf-8'))['rawScheduledSlot']=='17:30'
+        # Same measurement is idempotent.
+        persist.main()
+        # A different observation may never overwrite historical evidence.
+        sample['checkedAt']='2026-09-13T17:30:11+02:00'
+        Path('data/latest.json').write_text(json.dumps(sample),encoding='utf-8')
+        try:
+            persist.main()
+            raise AssertionError('historical slot overwrite accepted')
+        except SystemExit as exc:
+            assert 'weigert' in str(exc)
+    finally:
+        os.chdir(cwd)
+
 points=session.points_for(datetime(2026,9,13,12,0,tzinfo=ZoneInfo('Europe/Amsterdam')))
 assert len(points)==141 and points[0].strftime('%H:%M')=='17:30' and points[-1].strftime('%H:%M')=='22:30'
 assert sum(session.raw_due(p.hour*60+p.minute) for p in points)==101
