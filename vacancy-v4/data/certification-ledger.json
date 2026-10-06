@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "target_count": 105,
+  "target_count": 106,
   "certified_coverage": 10,
   "updated_at": "2026-10-06T18:42:33.392731+00:00",
   "records": [
@@ -2319,6 +2319,26 @@
       "source_id": "job_board::AuditCarriere",
       "kind": "job_board",
       "name": "AuditCarriere"
+    },
+    {
+      "provider": null,
+      "source": "employer::Booking.com",
+      "certification": "UNPROVEN",
+      "health": "STALE",
+      "accepted_proofs": [],
+      "consecutive_green_proofs": 0,
+      "certification_provenance": null,
+      "adapter_version": null,
+      "code_commit_sha": null,
+      "config_hash": null,
+      "authority_contract_version": null,
+      "certified_job_count": null,
+      "freshness_at": null,
+      "revocation_reason": null,
+      "revoked_at": null,
+      "source_id": "employer::Booking.com",
+      "kind": "employer",
+      "name": "Booking.com"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_manifest_count": 105,
+  "source_manifest_count": 106,
   "source_manifest_path": "vacancy-v4/config/sources.json",
   "note": "Initial durable map. PROVEN only when current v4 manifest itself contains direct ATS evidence; UNKNOWN requires active first-party research and is never equivalent to DISPROVEN.",
   "sources": [
@@ -2308,6 +2308,33 @@
           "checked_at": null
         },
         "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "eightfold": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        }
+      }
+    },
+    {
+      "name": "Booking.com",
+      "kind": "employer",
+      "official_domain": "careers.booking.com",
+      "platforms": {
+        "lever": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "smartrecruiters": {
+          "status": "UNKNOWN",
+          "evidence_url": null,
+          "checked_at": null
+        },
+        "greenhouse": {
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null

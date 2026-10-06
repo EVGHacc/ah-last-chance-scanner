@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "target_count": 105,
+  "target_count": 106,
   "sources": [
     {
       "kind": "recruiter",
@@ -1012,6 +1012,18 @@
         "https://www.auditcarriere.nl/vacatures?page=1"
       ],
       "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Booking.com",
+      "official_domain": "careers.booking.com",
+      "seed_urls": [
+        "https://careers.booking.com/",
+        "https://careers.booking.com/search"
+      ],
+      "allowed_domains": [
+        "booking.com"
+      ]
     }
   ]
 }
