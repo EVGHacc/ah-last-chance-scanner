@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-06",
   "weekday": "Tuesday",
-  "scheduledSlot": "21:21",
-  "scheduledAt": "2026-10-06T21:21:00+02:00",
-  "rawScheduledSlot": "21:21",
-  "rawScheduledAt": "2026-10-06T21:21:00+02:00",
-  "startedAt": "2026-10-06T21:21:00.217318+02:00",
-  "completedAt": "2026-10-06T21:21:04.324141+02:00",
-  "checkedAt": "2026-10-06T21:21:04.324141+02:00",
+  "scheduledSlot": "21:24",
+  "scheduledAt": "2026-10-06T21:24:00+02:00",
+  "rawScheduledSlot": "21:24",
+  "rawScheduledAt": "2026-10-06T21:24:00+02:00",
+  "startedAt": "2026-10-06T21:24:00.280676+02:00",
+  "completedAt": "2026-10-06T21:24:04.666586+02:00",
+  "checkedAt": "2026-10-06T21:24:04.666586+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 213,
+      "totalBargainItems": 214,
       "meatItems": 22,
       "meat70Items": 4,
       "meat70Stock": 8.0,
@@ -1329,15 +1329,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 239,
-      "meatItems": 14,
-      "meat70Items": 2,
-      "meat70Stock": 4.0,
+      "totalBargainItems": 237,
+      "meatItems": 13,
+      "meat70Items": 1,
+      "meat70Stock": 3.0,
       "bakeryItems": 49,
       "bakery70Items": 1,
       "bakery70Stock": 3.0,
-      "all70Items": 45,
-      "all70Stock": 93.0,
+      "all70Items": 43,
+      "all70Stock": 91.0,
       "all70": [
         {
           "productId": 597263,
@@ -1664,18 +1664,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 531858,
-          "title": "AH Scharrel kippensoeppakket met groente",
-          "brand": "AH",
-          "size": "ca. 600 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.61",
-          "priceNow": "1.38",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 367764,
           "title": "Johma Garnalen salade",
           "brand": "Johma",
@@ -1685,18 +1673,6 @@
           "stock": 3,
           "priceWas": "3.75",
           "priceNow": "1.13",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 571233,
-          "title": "AH Pangasiusfilet",
-          "brand": "AH",
-          "size": "ca. 350 g",
-          "category": "Vis",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "3.99",
-          "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -1891,18 +1867,6 @@
           "stock": 3,
           "priceWas": "4.11",
           "priceNow": "1.23",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 531858,
-          "title": "AH Scharrel kippensoeppakket met groente",
-          "brand": "AH",
-          "size": "ca. 600 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.61",
-          "priceNow": "1.38",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -4456,18 +4420,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 584032,
-          "title": "AH Rond wit sesam heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "1.89",
-          "priceNow": "1.13",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 561013,
           "title": "AH Liefde & Passie Meergranen",
           "brand": "AH Liefde & Passie",
@@ -4513,6 +4465,18 @@
           "stock": 2,
           "priceWas": "1.45",
           "priceNow": "0.87",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 584032,
+          "title": "AH Rond wit sesam heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "1.13",
           "markdownExpirationDate": "2026-10-06"
         },
         {
