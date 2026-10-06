@@ -75,6 +75,23 @@ def verify(root=Path("data"), now=None, require_complete=False):
             except (ValueError, TypeError, KeyError, AttributeError, json.JSONDecodeError):
                 bad += 1
 
+    # Cross-check durable per-slot archive when present. It is intentionally
+    # independent from the growing JSONL and makes future historical analysis
+    # resilient to large-file/API retrieval limitations.
+    slot_root = root / "raw" / day
+    if slot_root.is_dir():
+        durable_raw=set()
+        for path in slot_root.glob("*.json"):
+            try:
+                item=json.loads(path.read_text(encoding="utf-8"))
+                if item.get("date")==day and item.get("valid") is True and item.get("authMode")=="user-refresh":
+                    slot=item.get("rawScheduledSlot")
+                    if slot in RAW: durable_raw.add(slot)
+            except (ValueError, TypeError, json.JSONDecodeError, OSError):
+                bad += 1
+        if durable_raw and not durable_raw.issubset(seen_raw):
+            raise AssertionError("Durable per-slot archive disagrees with source JSONL")
+
     listed_raw = status.get("rawSeen") or []
     listed_can = status.get("canonicalSeen") or []
     inconsistencies = []
