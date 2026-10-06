@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-06",
   "weekday": "Tuesday",
-  "scheduledSlot": "20:06",
-  "scheduledAt": "2026-10-06T20:06:00+02:00",
-  "rawScheduledSlot": "20:06",
-  "rawScheduledAt": "2026-10-06T20:06:00+02:00",
-  "startedAt": "2026-10-06T20:06:00.241477+02:00",
-  "completedAt": "2026-10-06T20:06:04.529087+02:00",
-  "checkedAt": "2026-10-06T20:06:04.529087+02:00",
+  "scheduledSlot": "20:09",
+  "scheduledAt": "2026-10-06T20:09:00+02:00",
+  "rawScheduledSlot": "20:09",
+  "rawScheduledAt": "2026-10-06T20:09:00+02:00",
+  "startedAt": "2026-10-06T20:09:00.292507+02:00",
+  "completedAt": "2026-10-06T20:09:04.843846+02:00",
+  "checkedAt": "2026-10-06T20:09:04.843846+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 179,
+      "totalBargainItems": 180,
       "meatItems": 10,
       "meat70Items": 6,
       "meat70Stock": 10.0,
@@ -1221,15 +1221,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 243,
+      "totalBargainItems": 242,
       "meatItems": 14,
       "meat70Items": 2,
       "meat70Stock": 4.0,
       "bakeryItems": 50,
       "bakery70Items": 1,
       "bakery70Stock": 3.0,
-      "all70Items": 48,
-      "all70Stock": 100.0,
+      "all70Items": 47,
+      "all70Stock": 99.0,
       "all70": [
         {
           "productId": 597263,
@@ -1301,18 +1301,6 @@
           "stock": 2,
           "priceWas": "1.99",
           "priceNow": "0.60",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 548919,
-          "title": "AH Mosterdsoep verspakket",
-          "brand": "AH",
-          "size": "6 pers | 35 min",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.99",
-          "priceNow": "1.50",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -2076,18 +2064,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 561021,
-          "title": "AH Vloer waldkorn heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 487301,
           "title": "AH Rond volkoren heel",
           "brand": "AH",
@@ -2133,6 +2109,18 @@
           "stock": 1,
           "priceWas": "2.39",
           "priceNow": "1.79",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 561021,
+          "title": "AH Vloer waldkorn heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -5676,18 +5664,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 230738,
-          "title": "AH Koffiebroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "0.69",
-          "priceNow": "0.52",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 561016,
           "title": "AH Tijger tarwe maïs half",
           "brand": "AH",
@@ -5721,6 +5697,18 @@
           "stock": 3,
           "priceWas": "1.59",
           "priceNow": "1.19",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 230738,
+          "title": "AH Koffiebroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "0.69",
+          "priceNow": "0.52",
           "markdownExpirationDate": "2026-10-06"
         },
         {
