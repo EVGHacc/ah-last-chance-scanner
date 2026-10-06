@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-06",
   "weekday": "Tuesday",
-  "scheduledSlot": "20:57",
-  "scheduledAt": "2026-10-06T20:57:00+02:00",
-  "rawScheduledSlot": "20:57",
-  "rawScheduledAt": "2026-10-06T20:57:00+02:00",
-  "startedAt": "2026-10-06T20:57:00.244379+02:00",
-  "completedAt": "2026-10-06T20:57:04.904291+02:00",
-  "checkedAt": "2026-10-06T20:57:04.904291+02:00",
+  "scheduledSlot": "21:00",
+  "scheduledAt": "2026-10-06T21:00:00+02:00",
+  "rawScheduledSlot": "21:00",
+  "rawScheduledAt": "2026-10-06T21:00:00+02:00",
+  "startedAt": "2026-10-06T21:00:00.268076+02:00",
+  "completedAt": "2026-10-06T21:00:04.795247+02:00",
+  "checkedAt": "2026-10-06T21:00:04.795247+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,11 +25,11 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 201,
+      "totalBargainItems": 200,
       "meatItems": 18,
       "meat70Items": 6,
       "meat70Stock": 10.0,
-      "bakeryItems": 47,
+      "bakeryItems": 46,
       "bakery70Items": 1,
       "bakery70Stock": 3.0,
       "all70Items": 43,
@@ -1024,18 +1024,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 487304,
-          "title": "AH Liefde & Passie OerDesem pompoen",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 410181,
           "title": "AH Kip paprikabroodje",
           "brand": "AH",
@@ -1936,7 +1924,7 @@
           "size": "720 g",
           "category": "Vlees",
           "discountPct": 40,
-          "stock": 4,
+          "stock": 3,
           "priceWas": "6.99",
           "priceNow": "4.19",
           "markdownExpirationDate": "2026-10-07"
@@ -4612,18 +4600,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 561021,
-          "title": "AH Vloer waldkorn heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 417147,
           "title": "AH Vloerbrood meergranen heel",
           "brand": "AH",
@@ -4657,6 +4633,18 @@
           "stock": 2,
           "priceWas": "1.45",
           "priceNow": "1.09",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 561021,
+          "title": "AH Vloer waldkorn heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -4717,18 +4705,6 @@
           "stock": 2,
           "priceWas": "1.39",
           "priceNow": "1.18",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 231924,
-          "title": "AH Chocoladebroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.59",
-          "priceNow": "0.50",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -4825,6 +4801,18 @@
           "stock": 1,
           "priceWas": "0.69",
           "priceNow": "0.59",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 231924,
+          "title": "AH Chocoladebroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.59",
+          "priceNow": "0.50",
           "markdownExpirationDate": "2026-10-06"
         },
         {
