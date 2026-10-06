@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-06",
   "weekday": "Tuesday",
-  "scheduledSlot": "21:18",
-  "scheduledAt": "2026-10-06T21:18:00+02:00",
-  "rawScheduledSlot": "21:18",
-  "rawScheduledAt": "2026-10-06T21:18:00+02:00",
-  "startedAt": "2026-10-06T21:18:00.239616+02:00",
-  "completedAt": "2026-10-06T21:18:04.501867+02:00",
-  "checkedAt": "2026-10-06T21:18:04.501867+02:00",
+  "scheduledSlot": "21:20",
+  "scheduledAt": "2026-10-06T21:20:00+02:00",
+  "rawScheduledSlot": "21:20",
+  "rawScheduledAt": "2026-10-06T21:20:00+02:00",
+  "startedAt": "2026-10-06T21:20:00.244636+02:00",
+  "completedAt": "2026-10-06T21:20:04.633642+02:00",
+  "checkedAt": "2026-10-06T21:20:04.633642+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,8 +25,8 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 212,
-      "meatItems": 21,
+      "totalBargainItems": 213,
+      "meatItems": 22,
       "meat70Items": 4,
       "meat70Stock": 8.0,
       "bakeryItems": 46,
@@ -686,6 +686,18 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
+          "productId": 561331,
+          "title": "AH Gemengd gehakt",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.59",
+          "priceNow": "2.69",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 477885,
           "title": "AH Scharrel kipflakes kebab",
           "brand": "AH",
@@ -832,18 +844,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 230842,
-          "title": "AH Liefde & Passie Spelt",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 5,
-          "priceWas": "3.19",
-          "priceNow": "1.91",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 417148,
           "title": "AH Vloerbrood volkoren heel",
           "brand": "AH",
@@ -853,6 +853,18 @@
           "stock": 4,
           "priceWas": "2.69",
           "priceNow": "1.61",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 230842,
+          "title": "AH Liefde & Passie Spelt",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 4,
+          "priceWas": "3.19",
+          "priceNow": "1.91",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -3781,28 +3793,16 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 139,
+      "totalBargainItems": 138,
       "meatItems": 9,
       "meat70Items": 4,
       "meat70Stock": 8.0,
       "bakeryItems": 41,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
-      "all70Items": 40,
-      "all70Stock": 60.0,
+      "all70Items": 39,
+      "all70Stock": 57.0,
       "all70": [
-        {
-          "productId": 238969,
-          "title": "AH Munt",
-          "brand": "AH",
-          "size": "15 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "1.29",
-          "priceNow": "0.39",
-          "markdownExpirationDate": "2026-10-06"
-        },
         {
           "productId": 80568,
           "title": "AH Hutspot",
@@ -3996,6 +3996,18 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
+          "productId": 238969,
+          "title": "AH Munt",
+          "brand": "AH",
+          "size": "15 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.29",
+          "priceNow": "0.39",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
           "productId": 379923,
           "title": "AH Courgette spaghetti",
           "brand": "AH",
@@ -4041,18 +4053,6 @@
           "stock": 1,
           "priceWas": "2.49",
           "priceNow": "0.75",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 215318,
-          "title": "AH Witte druiven pitloos",
-          "brand": "AH",
-          "size": "250 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "1.99",
-          "priceNow": "0.60",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -4881,11 +4881,11 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 159,
+      "totalBargainItems": 158,
       "meatItems": 17,
       "meat70Items": 2,
       "meat70Stock": 18.0,
-      "bakeryItems": 43,
+      "bakeryItems": 42,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 38,
@@ -5688,18 +5688,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 230715,
-          "title": "AH Italiaanse bol wit",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "0.49",
-          "priceNow": "0.37",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 561016,
           "title": "AH Tijger tarwe maïs half",
           "brand": "AH",
@@ -5745,6 +5733,18 @@
           "stock": 3,
           "priceWas": "0.99",
           "priceNow": "0.74",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 230715,
+          "title": "AH Italiaanse bol wit",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "0.49",
+          "priceNow": "0.37",
           "markdownExpirationDate": "2026-10-06"
         },
         {
@@ -5889,18 +5889,6 @@
           "stock": 2,
           "priceWas": "2.69",
           "priceNow": "2.02",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 362217,
-          "title": "AH Speltbol",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "0.59",
-          "priceNow": "0.44",
           "markdownExpirationDate": "2026-10-06"
         },
         {
