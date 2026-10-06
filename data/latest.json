@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-06",
   "weekday": "Tuesday",
-  "scheduledSlot": "19:20",
-  "scheduledAt": "2026-10-06T19:20:00+02:00",
-  "rawScheduledSlot": "19:20",
-  "rawScheduledAt": "2026-10-06T19:20:00+02:00",
-  "startedAt": "2026-10-06T19:20:00.245493+02:00",
-  "completedAt": "2026-10-06T19:20:05.732656+02:00",
-  "checkedAt": "2026-10-06T19:20:05.732656+02:00",
+  "scheduledSlot": "19:21",
+  "scheduledAt": "2026-10-06T19:21:00+02:00",
+  "rawScheduledSlot": "19:21",
+  "rawScheduledAt": "2026-10-06T19:21:00+02:00",
+  "startedAt": "2026-10-06T19:21:00.221449+02:00",
+  "completedAt": "2026-10-06T19:21:04.369396+02:00",
+  "checkedAt": "2026-10-06T19:21:04.369396+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1445,15 +1445,15 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 177,
+      "totalBargainItems": 175,
       "meatItems": 9,
       "meat70Items": 4,
       "meat70Stock": 5.0,
       "bakeryItems": 10,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 47,
-      "all70Stock": 93.0,
+      "all70Items": 45,
+      "all70Stock": 89.0,
       "all70": [
         {
           "productId": 111314,
@@ -1732,30 +1732,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 120328,
-          "title": "AH Bapao kipsate",
-          "brand": "AH",
-          "size": "115 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "1.29",
-          "priceNow": "0.39",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
-          "productId": 597762,
-          "title": "AH Verse pinsa pepperoni",
-          "brand": "AH",
-          "size": "376 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "5.99",
-          "priceNow": "1.80",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 624572,
           "title": "AH Uit eigen keuken kip korma",
           "brand": "AH",
@@ -1864,18 +1840,6 @@
           "markdownExpirationDate": "2026-10-06"
         },
         {
-          "productId": 186724,
-          "title": "Optimel Drinkyoghurt limited edition",
-          "brand": "Optimel",
-          "size": "1 l",
-          "category": "Zuivel, eieren",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "2.29",
-          "priceNow": "0.69",
-          "markdownExpirationDate": "2026-10-06"
-        },
-        {
           "productId": 601479,
           "title": "AH Slagroom vol & romig",
           "brand": "AH",
@@ -1933,6 +1897,18 @@
           "stock": 1,
           "priceWas": "1.39",
           "priceNow": "0.42",
+          "markdownExpirationDate": "2026-10-06"
+        },
+        {
+          "productId": 186724,
+          "title": "Optimel Drinkyoghurt limited edition",
+          "brand": "Optimel",
+          "size": "1 l",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.29",
+          "priceNow": "0.69",
           "markdownExpirationDate": "2026-10-06"
         },
         {
