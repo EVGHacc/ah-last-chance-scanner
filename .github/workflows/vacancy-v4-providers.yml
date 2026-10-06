@@ -168,12 +168,12 @@ jobs:
           data_dir=pathlib.Path("data")
           ledger_path=data_dir/"certification-ledger.json"
           manifest=json.loads(pathlib.Path("config/sources.json").read_text())
-          if manifest.get("target_count")!=104 or len(manifest.get("sources",[]))!=104:
+          if manifest.get("target_count")!=105 or len(manifest.get("sources",[]))!=105:
               raise SystemExit("manifest is not exact 105")
 
           if ledger_path.exists():
               ledger=json.loads(ledger_path.read_text())
-              if ledger.get("target_count")!=104:
+              if ledger.get("target_count")!=105:
                   raise SystemExit("invalid existing certification ledger")
               records=ledger["records"]
           else:
