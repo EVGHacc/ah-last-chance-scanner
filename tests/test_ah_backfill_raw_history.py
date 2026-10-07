@@ -2,7 +2,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
-from scripts.backfill_raw_history import expected_raw_slots, validate_observation, verify_backfill
+from scripts.backfill_raw_history import expected_raw_slots, validate_observation, verify_backfill, find_commit
 
 class BackfillRawHistoryTests(unittest.TestCase):
     def sample(self, slot):
@@ -25,7 +25,7 @@ class BackfillRawHistoryTests(unittest.TestCase):
         o["authMode"]="anonymous"
         with self.assertRaises(AssertionError): validate_observation(o,"2026-10-06","17:39")
 
-    def test_verify_requires_exact_files(self):
+    def test_find_commit_uses_exact_subject_filter_after_literal_grep(self):\n        import unittest.mock as mock\n        rows="aaa\\tAH scan 2026-10-06 17:39\\nbbb\\tAH scan 2026-10-06 17:39 extra"\n        with mock.patch("scripts.backfill_raw_history.git",return_value=rows):\n            self.assertEqual("aaa",find_commit("2026-10-06","17:39"))\n\n    def test_verify_requires_exact_files(self):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td)
             for slot in expected_raw_slots():
