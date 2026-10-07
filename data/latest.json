@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "20:35",
-  "scheduledAt": "2026-10-07T20:35:00+02:00",
-  "rawScheduledSlot": "20:35",
-  "rawScheduledAt": "2026-10-07T20:35:00+02:00",
-  "startedAt": "2026-10-07T20:35:00.358601+02:00",
-  "completedAt": "2026-10-07T20:35:05.135485+02:00",
-  "checkedAt": "2026-10-07T20:35:05.135485+02:00",
+  "scheduledSlot": "20:36",
+  "scheduledAt": "2026-10-07T20:36:00+02:00",
+  "rawScheduledSlot": "20:36",
+  "rawScheduledAt": "2026-10-07T20:36:00+02:00",
+  "startedAt": "2026-10-07T20:36:00.419455+02:00",
+  "completedAt": "2026-10-07T20:36:05.697409+02:00",
+  "checkedAt": "2026-10-07T20:36:05.697409+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -33,7 +33,7 @@
       "bakery70Items": 1,
       "bakery70Stock": 3.0,
       "all70Items": 36,
-      "all70Stock": 71.0,
+      "all70Stock": 70.0,
       "all70": [
         {
           "productId": 578948,
@@ -210,7 +210,7 @@
           "size": "450 g",
           "category": "Maaltijden, salades",
           "discountPct": 70,
-          "stock": 2,
+          "stock": 1,
           "priceWas": "5.99",
           "priceNow": "1.80",
           "markdownExpirationDate": "2026-10-07"
@@ -3680,18 +3680,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 230787,
-          "title": "AH Les pains triomphe half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 6,
-          "priceWas": "1.29",
-          "priceNow": "0.97",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 577447,
           "title": "AH Everything bol",
           "brand": "AH",
@@ -3725,6 +3713,18 @@
           "stock": 5,
           "priceWas": "0.69",
           "priceNow": "0.52",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 230787,
+          "title": "AH Les pains triomphe half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 5,
+          "priceWas": "1.29",
+          "priceNow": "0.97",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -6030,7 +6030,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 20,
+          "stock": 18,
           "priceWas": "0.99",
           "priceNow": "0.74",
           "markdownExpirationDate": "2026-10-07"
@@ -6264,18 +6264,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 459347,
-          "title": "AH Tijgerbol wit",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "0.35",
-          "priceNow": "0.30",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 440472,
           "title": "AH Kaas ruitbroodje wit",
           "brand": "AH",
@@ -6384,18 +6372,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 417148,
-          "title": "AH Vloerbrood volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "2.69",
-          "priceNow": "2.29",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 277519,
           "title": "AH Vloerbrood volkoren half",
           "brand": "AH",
@@ -6468,6 +6444,18 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
+          "productId": 459347,
+          "title": "AH Tijgerbol wit",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.35",
+          "priceNow": "0.30",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 230740,
           "title": "AH Praliné chocolade croissant",
           "brand": "AH",
@@ -6482,6 +6470,18 @@
         {
           "productId": 417144,
           "title": "AH Vloerbrood wit heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "2.29",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 417148,
+          "title": "AH Vloerbrood volkoren heel",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
