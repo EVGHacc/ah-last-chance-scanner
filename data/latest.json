@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "20:57",
-  "scheduledAt": "2026-10-07T20:57:00+02:00",
-  "rawScheduledSlot": "20:57",
-  "rawScheduledAt": "2026-10-07T20:57:00+02:00",
-  "startedAt": "2026-10-07T20:57:00.340463+02:00",
-  "completedAt": "2026-10-07T20:57:05.175797+02:00",
-  "checkedAt": "2026-10-07T20:57:05.175797+02:00",
+  "scheduledSlot": "21:00",
+  "scheduledAt": "2026-10-07T21:00:00+02:00",
+  "rawScheduledSlot": "21:00",
+  "rawScheduledAt": "2026-10-07T21:00:00+02:00",
+  "startedAt": "2026-10-07T21:00:00.372339+02:00",
+  "completedAt": "2026-10-07T21:00:05.593204+02:00",
+  "checkedAt": "2026-10-07T21:00:05.593204+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1281,11 +1281,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 235,
+      "totalBargainItems": 234,
       "meatItems": 13,
       "meat70Items": 2,
       "meat70Stock": 6.0,
-      "bakeryItems": 48,
+      "bakeryItems": 47,
       "bakery70Items": 1,
       "bakery70Stock": 2.0,
       "all70Items": 48,
@@ -2481,18 +2481,6 @@
           "stock": 1,
           "priceWas": "1.39",
           "priceNow": "1.18",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 467677,
-          "title": "AH Kip loempia börek",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.19",
-          "priceNow": "1.01",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -4177,28 +4165,16 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 137,
-      "meatItems": 12,
-      "meat70Items": 3,
-      "meat70Stock": 4.0,
-      "bakeryItems": 40,
+      "totalBargainItems": 133,
+      "meatItems": 10,
+      "meat70Items": 1,
+      "meat70Stock": 2.0,
+      "bakeryItems": 39,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 30,
-      "all70Stock": 42.0,
+      "all70Items": 28,
+      "all70Stock": 37.0,
       "all70": [
-        {
-          "productId": 395952,
-          "title": "AH Bloemkool- en broccoliroosjes",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "2.59",
-          "priceNow": "0.78",
-          "markdownExpirationDate": "2026-10-07"
-        },
         {
           "productId": 123186,
           "title": "AH Gesneden kastanjechampignons",
@@ -4272,6 +4248,18 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
+          "productId": 395952,
+          "title": "AH Bloemkool- en broccoliroosjes",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.59",
+          "priceNow": "0.78",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 404283,
           "title": "AH Gesneden rode uien",
           "brand": "AH",
@@ -4281,18 +4269,6 @@
           "stock": 1,
           "priceWas": "1.89",
           "priceNow": "0.57",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 612927,
-          "title": "AH Ananas sticks",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "3.99",
-          "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -4317,6 +4293,18 @@
           "stock": 2,
           "priceWas": "3.29",
           "priceNow": "0.99",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 612927,
+          "title": "AH Ananas sticks",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -4389,30 +4377,6 @@
           "stock": 2,
           "priceWas": "3.99",
           "priceNow": "0.90",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 620796,
-          "title": "AH Ovenschotel kipfilet champignon room",
-          "brand": "AH",
-          "size": "430 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.99",
-          "priceNow": "2.10",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 620808,
-          "title": "AH Ovenschotel kipfilet tomaat mozzarella",
-          "brand": "AH",
-          "size": "470 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.99",
-          "priceNow": "2.10",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -4559,30 +4523,6 @@
           "stock": 2,
           "priceWas": "3.99",
           "priceNow": "0.90",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 620796,
-          "title": "AH Ovenschotel kipfilet champignon room",
-          "brand": "AH",
-          "size": "430 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.99",
-          "priceNow": "2.10",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 620808,
-          "title": "AH Ovenschotel kipfilet tomaat mozzarella",
-          "brand": "AH",
-          "size": "470 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.99",
-          "priceNow": "2.10",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -4960,18 +4900,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 515766,
-          "title": "AH Kaasstengel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 487298,
           "title": "AH Rond volkoren half",
           "brand": "AH",
@@ -4996,6 +4924,18 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
+          "productId": 515766,
+          "title": "AH Kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 561017,
           "title": "AH Tijger tarwe maïs heel",
           "brand": "AH",
@@ -5005,18 +4945,6 @@
           "stock": 2,
           "priceWas": "1.99",
           "priceNow": "1.69",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 440472,
-          "title": "AH Kaas ruitbroodje wit",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.49",
-          "priceNow": "0.42",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -5080,18 +5008,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 182711,
-          "title": "AH Les pains bastille heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "2.39",
-          "priceNow": "2.03",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 561021,
           "title": "AH Vloer waldkorn heel",
           "brand": "AH",
@@ -5101,6 +5017,18 @@
           "stock": 1,
           "priceWas": "2.69",
           "priceNow": "2.29",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 440472,
+          "title": "AH Kaas ruitbroodje wit",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.49",
+          "priceNow": "0.42",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -5922,7 +5850,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 18,
+          "stock": 16,
           "priceWas": "0.99",
           "priceNow": "0.74",
           "markdownExpirationDate": "2026-10-07"
@@ -6060,18 +5988,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 577444,
-          "title": "AH Worstenbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.39",
-          "priceNow": "1.04",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 606050,
           "title": "AH Liefde & Passie Desem pistolet mais pompoen",
           "brand": "AH Liefde & Passie",
@@ -6093,6 +6009,18 @@
           "stock": 3,
           "priceWas": "2.69",
           "priceNow": "2.02",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 577444,
+          "title": "AH Worstenbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.39",
+          "priceNow": "1.04",
           "markdownExpirationDate": "2026-10-07"
         },
         {
