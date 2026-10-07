@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "20:55",
-  "scheduledAt": "2026-10-07T20:55:00+02:00",
-  "rawScheduledSlot": "20:55",
-  "rawScheduledAt": "2026-10-07T20:55:00+02:00",
-  "startedAt": "2026-10-07T20:55:00.349399+02:00",
-  "completedAt": "2026-10-07T20:55:05.184984+02:00",
-  "checkedAt": "2026-10-07T20:55:05.184984+02:00",
+  "scheduledSlot": "20:57",
+  "scheduledAt": "2026-10-07T20:57:00+02:00",
+  "rawScheduledSlot": "20:57",
+  "rawScheduledAt": "2026-10-07T20:57:00+02:00",
+  "startedAt": "2026-10-07T20:57:00.340463+02:00",
+  "completedAt": "2026-10-07T20:57:05.175797+02:00",
+  "checkedAt": "2026-10-07T20:57:05.175797+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1281,15 +1281,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 236,
-      "meatItems": 14,
-      "meat70Items": 3,
-      "meat70Stock": 8.0,
+      "totalBargainItems": 235,
+      "meatItems": 13,
+      "meat70Items": 2,
+      "meat70Stock": 6.0,
       "bakeryItems": 48,
       "bakery70Items": 1,
       "bakery70Stock": 2.0,
-      "all70Items": 49,
-      "all70Stock": 77.0,
+      "all70Items": 48,
+      "all70Stock": 75.0,
       "all70": [
         {
           "productId": 185200,
@@ -1640,18 +1640,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 483907,
-          "title": "AH Varkensslavink 4 stuks",
-          "brand": "AH",
-          "size": "4 stuks",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.99",
-          "priceNow": "1.20",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 238950,
           "title": "AH Rundersoepvlees",
           "brand": "AH",
@@ -1894,18 +1882,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 483907,
-          "title": "AH Varkensslavink 4 stuks",
-          "brand": "AH",
-          "size": "4 stuks",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.99",
-          "priceNow": "1.20",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 238950,
           "title": "AH Rundersoepvlees",
           "brand": "AH",
@@ -2064,18 +2040,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 606074,
-          "title": "AH Pistache croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "1.29",
-          "priceNow": "0.77",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 584031,
           "title": "AH Rond wit sesam half",
           "brand": "AH",
@@ -2097,6 +2061,18 @@
           "stock": 2,
           "priceWas": "1.09",
           "priceNow": "0.65",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 606074,
+          "title": "AH Pistache croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "1.29",
+          "priceNow": "0.77",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -2157,18 +2133,6 @@
           "stock": 4,
           "priceWas": "0.59",
           "priceNow": "0.44",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 606092,
-          "title": "AH Empanada Samosa",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.39",
-          "priceNow": "1.04",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -2349,6 +2313,18 @@
           "stock": 1,
           "priceWas": "2.69",
           "priceNow": "2.02",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 606092,
+          "title": "AH Empanada Samosa",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.39",
+          "priceNow": "1.04",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -5205,11 +5181,11 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 187,
+      "totalBargainItems": 186,
       "meatItems": 19,
       "meat70Items": 3,
       "meat70Stock": 17.0,
-      "bakeryItems": 46,
+      "bakeryItems": 45,
       "bakery70Items": 1,
       "bakery70Stock": 6.0,
       "all70Items": 37,
@@ -6369,18 +6345,6 @@
           "stock": 1,
           "priceWas": "2.69",
           "priceNow": "2.29",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 425912,
-          "title": "AH Focaccia pepperoni",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.59",
-          "priceNow": "1.35",
           "markdownExpirationDate": "2026-10-07"
         },
         {
