@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "18:42",
-  "scheduledAt": "2026-10-07T18:42:00+02:00",
-  "rawScheduledSlot": "18:42",
-  "rawScheduledAt": "2026-10-07T18:42:00+02:00",
-  "startedAt": "2026-10-07T18:43:15.427249+02:00",
-  "completedAt": "2026-10-07T18:43:19.393997+02:00",
-  "checkedAt": "2026-10-07T18:43:19.393997+02:00",
+  "scheduledSlot": "18:45",
+  "scheduledAt": "2026-10-07T18:45:00+02:00",
+  "rawScheduledSlot": "18:45",
+  "rawScheduledAt": "2026-10-07T18:45:00+02:00",
+  "startedAt": "2026-10-07T18:46:15.468323+02:00",
+  "completedAt": "2026-10-07T18:46:19.404227+02:00",
+  "checkedAt": "2026-10-07T18:46:19.404227+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 132,
+      "totalBargainItems": 131,
       "meatItems": 11,
       "meat70Items": 5,
       "meat70Stock": 12.0,
@@ -33,7 +33,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 20,
-      "all70Stock": 56.0,
+      "all70Stock": 53.0,
       "all70": [
         {
           "productId": 578948,
@@ -132,18 +132,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 621429,
-          "title": "AH Excellent Gerookte zalm met rode biet",
-          "brand": "AH Excellent",
-          "size": "ca. 80 g",
-          "category": "Vis",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.99",
-          "priceNow": "1.02",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 620802,
           "title": "AH Ovenschotel garnalen in curry kokossaus",
           "brand": "AH",
@@ -153,6 +141,18 @@
           "stock": 1,
           "priceWas": "6.99",
           "priceNow": "2.10",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 621429,
+          "title": "AH Excellent Gerookte zalm met rode biet",
+          "brand": "AH Excellent",
+          "size": "ca. 80 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.02",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -174,7 +174,7 @@
           "size": "150 g",
           "category": "Vegetarisch, vegan en plantaardig",
           "discountPct": 70,
-          "stock": 4,
+          "stock": 2,
           "priceWas": "2.99",
           "priceNow": "0.90",
           "markdownExpirationDate": "2026-10-08"
@@ -507,9 +507,9 @@
       "meat70Stock": 29.0,
       "bakeryItems": 8,
       "bakery70Items": 1,
-      "bakery70Stock": 3.0,
+      "bakery70Stock": 2.0,
       "all70Items": 35,
-      "all70Stock": 89.0,
+      "all70Stock": 87.0,
       "all70": [
         {
           "productId": 185200,
@@ -782,7 +782,7 @@
           "size": "160 g",
           "category": "Vleeswaren",
           "discountPct": 70,
-          "stock": 2,
+          "stock": 1,
           "priceWas": "2.29",
           "priceNow": "0.69",
           "markdownExpirationDate": "2026-10-09"
@@ -878,7 +878,7 @@
           "size": "300 g",
           "category": "Bakkerij",
           "discountPct": 70,
-          "stock": 3,
+          "stock": 2,
           "priceWas": "1.85",
           "priceNow": "0.56",
           "markdownExpirationDate": "2026-10-08"
@@ -1158,7 +1158,7 @@
           "size": "300 g",
           "category": "Bakkerij",
           "discountPct": 70,
-          "stock": 3,
+          "stock": 2,
           "priceWas": "1.85",
           "priceNow": "0.56",
           "markdownExpirationDate": "2026-10-08"
@@ -2217,7 +2217,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 134,
+      "totalBargainItems": 135,
       "meatItems": 22,
       "meat70Items": 1,
       "meat70Stock": 15.0,
