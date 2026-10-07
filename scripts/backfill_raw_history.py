@@ -28,7 +28,7 @@ def validate_observation(o,date,slot):
 
 def find_commit(date,slot):
     subject=f"AH scan {date} {slot}"
-    out=git("log","--all","--format=%H%x09%s","--fixed-strings","--grep",f"^{subject}$")
+    out=git("log","--all","--format=%H%x09%s","--fixed-strings","--grep",subject)
     matches=[line.split("\t",1)[0] for line in out.splitlines() if line.endswith("\t"+subject)]
     if len(matches)!=1:
         raise AssertionError(f"{slot}: expected exactly one immutable scan commit, got {len(matches)}")
