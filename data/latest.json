@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "18:36",
-  "scheduledAt": "2026-10-07T18:36:00+02:00",
-  "rawScheduledSlot": "18:36",
-  "rawScheduledAt": "2026-10-07T18:36:00+02:00",
-  "startedAt": "2026-10-07T18:37:15.405510+02:00",
-  "completedAt": "2026-10-07T18:37:19.398105+02:00",
-  "checkedAt": "2026-10-07T18:37:19.398105+02:00",
+  "scheduledSlot": "18:39",
+  "scheduledAt": "2026-10-07T18:39:00+02:00",
+  "rawScheduledSlot": "18:39",
+  "rawScheduledAt": "2026-10-07T18:39:00+02:00",
+  "startedAt": "2026-10-07T18:40:15.477631+02:00",
+  "completedAt": "2026-10-07T18:40:19.478664+02:00",
+  "checkedAt": "2026-10-07T18:40:19.478664+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -33,7 +33,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 20,
-      "all70Stock": 57.0,
+      "all70Stock": 56.0,
       "all70": [
         {
           "productId": 578948,
@@ -132,18 +132,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 620802,
-          "title": "AH Ovenschotel garnalen in curry kokossaus",
-          "brand": "AH",
-          "size": "325 g",
-          "category": "Vis",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "6.99",
-          "priceNow": "2.10",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 621429,
           "title": "AH Excellent Gerookte zalm met rode biet",
           "brand": "AH Excellent",
@@ -153,6 +141,18 @@
           "stock": 2,
           "priceWas": "3.99",
           "priceNow": "1.02",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 620802,
+          "title": "AH Ovenschotel garnalen in curry kokossaus",
+          "brand": "AH",
+          "size": "325 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.99",
+          "priceNow": "2.10",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -1909,7 +1909,7 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 105,
+      "totalBargainItems": 104,
       "meatItems": 13,
       "meat70Items": 1,
       "meat70Stock": 2.0,
@@ -2217,8 +2217,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 131,
-      "meatItems": 21,
+      "totalBargainItems": 132,
+      "meatItems": 22,
       "meat70Items": 1,
       "meat70Stock": 15.0,
       "bakeryItems": 5,
@@ -2503,6 +2503,18 @@
           "stock": 1,
           "priceWas": "16.49",
           "priceNow": "12.37",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 507416,
+          "title": "Streeckgenoten Shoarmareepjes",
+          "brand": "Streeckgenoten",
+          "size": "450 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "6.49",
+          "priceNow": "4.12",
           "markdownExpirationDate": "2026-10-08"
         },
         {
