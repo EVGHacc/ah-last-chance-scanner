@@ -61,7 +61,7 @@ export function verifyFeedbackToken(token){
   if(sig.length!==expected.length||!crypto.timingSafeEqual(Buffer.from(sig),Buffer.from(expected)))return null;
   try{const p=JSON.parse(Buffer.from(body,"base64url").toString("utf8"));if(!p.source||!p.job_id||!p.label||!BUTTON_LABELS.has(p.label))return null;return p}catch{return null}
 }
-function feedbackPage(ok,message){return `<!doctype html><meta name="viewport" content="width=device-width"><title>Vacaturefeedback</title><main style="font-family:system-ui;max-width:38rem;margin:4rem auto;padding:1rem"><h1>${ok?"Feedback opgeslagen":"Feedback niet verwerkt"}</h1><p>${safe(message)}</p></main>`}
+function feedbackPage(ok,message,token=""){const form=token?`<form method="post" style="margin-top:1.5rem"><input type="hidden" name="t" value="${safe(token)}"><button type="submit" style="font:inherit;padding:.7rem 1rem">Feedback bevestigen</button></form>`:"";return `<!doctype html><meta name="viewport" content="width=device-width"><title>Vacaturefeedback</title><main style="font-family:system-ui;max-width:38rem;margin:4rem auto;padding:1rem"><h1>${ok?"Vacaturefeedback":"Feedback niet verwerkt"}</h1><p>${safe(message)}</p>${form}</main>`}
 
 async function rawBody(req){const chunks=[];for await(const chunk of req)chunks.push(Buffer.isBuffer(chunk)?chunk:Buffer.from(chunk));return Buffer.concat(chunks).toString("utf8")}
 export default async function handler(req,res){
@@ -87,14 +87,20 @@ export default async function handler(req,res){
     try{
       const u=new URL(req.url,"https://feedback.invalid"),p=verifyFeedbackToken(u.searchParams.get("t"));
       if(!p)return res.status(400).send(feedbackPage(false,"De feedbacklink is ongeldig of beschadigd."));
-      const record={source:p.source,job_id:String(p.job_id),label:p.label,received_at:new Date().toISOString(),message_id:"link:"+crypto.createHash("sha256").update(u.searchParams.get("t")).digest("hex"),source_url:p.source_url||""};
-      const status=await persist(record);
-      return res.status(200).send(feedbackPage(true,status==="duplicate"?"Deze feedback was al opgeslagen.":"Dank. Deze feedback wordt begrensd meegenomen in toekomstige matchscores."));
+      return res.status(200).send(feedbackPage(true,"Keuze: "+p.label+". Bevestig om deze voorkeur op te slaan.",u.searchParams.get("t")));
     }catch{return res.status(500).send(feedbackPage(false,"Opslaan is mislukt."))}
   }
   if(req.method!=="POST")return res.status(405).send("method not allowed");
   try{
     const raw=await rawBody(req);
+    const ct=String(req.headers["content-type"]||"");
+    if(ct.includes("application/x-www-form-urlencoded")){
+      const token=new URLSearchParams(raw).get("t"),p=verifyFeedbackToken(token);
+      if(!p)return res.status(400).send(feedbackPage(false,"De feedbacklink is ongeldig of beschadigd."));
+      const record={source:p.source,job_id:String(p.job_id),label:p.label,received_at:new Date().toISOString(),message_id:"link:"+crypto.createHash("sha256").update(token).digest("hex"),source_url:p.source_url||""};
+      const status=await persist(record);
+      return res.status(200).send(feedbackPage(true,status==="duplicate"?"Deze feedback was al opgeslagen.":"Dank. Deze feedback wordt begrensd meegenomen in toekomstige matchscores."));
+    }
     const resend=new Resend(process.env.RESEND_API_KEY);
     const event=resend.webhooks.verify({payload:raw,headers:{"svix-id":req.headers["svix-id"],"svix-timestamp":req.headers["svix-timestamp"],"svix-signature":req.headers["svix-signature"]},secret:process.env.RESEND_WEBHOOK_SECRET});
     if(event.type!=="email.received")return res.status(200).send("ignored");
