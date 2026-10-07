@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "19:27",
-  "scheduledAt": "2026-10-07T19:27:00+02:00",
-  "rawScheduledSlot": "19:27",
-  "rawScheduledAt": "2026-10-07T19:27:00+02:00",
-  "startedAt": "2026-10-07T19:27:00.353432+02:00",
-  "completedAt": "2026-10-07T19:27:04.865625+02:00",
-  "checkedAt": "2026-10-07T19:27:04.865625+02:00",
+  "scheduledSlot": "19:30",
+  "scheduledAt": "2026-10-07T19:30:00+02:00",
+  "rawScheduledSlot": "19:30",
+  "rawScheduledAt": "2026-10-07T19:30:00+02:00",
+  "startedAt": "2026-10-07T19:30:00.410276+02:00",
+  "completedAt": "2026-10-07T19:30:07.228210+02:00",
+  "checkedAt": "2026-10-07T19:30:07.228210+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,8 +25,8 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 144,
-      "meatItems": 15,
+      "totalBargainItems": 147,
+      "meatItems": 17,
       "meat70Items": 8,
       "meat70Stock": 16.0,
       "bakeryItems": 7,
@@ -578,6 +578,18 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
+          "productId": 619340,
+          "title": "AH Scharrel kip cordon bleu voordeel",
+          "brand": "AH",
+          "size": "750 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 4,
+          "priceWas": "9.69",
+          "priceNow": "5.81",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 4041,
           "title": "AH Schouderkarbonade",
           "brand": "AH",
@@ -599,6 +611,18 @@
           "stock": 1,
           "priceWas": "6.50",
           "priceNow": "4.88",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 619307,
+          "title": "AH Roerbakvlees Indische stijl",
+          "brand": "AH",
+          "size": "ca. 300 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "2.54",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -741,15 +765,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 151,
+      "totalBargainItems": 213,
       "meatItems": 17,
       "meat70Items": 6,
-      "meat70Stock": 31.0,
-      "bakeryItems": 6,
+      "meat70Stock": 30.0,
+      "bakeryItems": 8,
       "bakery70Items": 1,
       "bakery70Stock": 2.0,
-      "all70Items": 40,
-      "all70Stock": 85.0,
+      "all70Items": 59,
+      "all70Stock": 111.0,
       "all70": [
         {
           "productId": 185200,
@@ -758,7 +782,7 @@
           "size": "150 g",
           "category": "Groente, aardappelen",
           "discountPct": 70,
-          "stock": 7,
+          "stock": 6,
           "priceWas": "2.69",
           "priceNow": "0.81",
           "markdownExpirationDate": "2026-10-07"
@@ -773,6 +797,42 @@
           "stock": 2,
           "priceWas": "1.49",
           "priceNow": "0.45",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 611642,
+          "title": "AH Basilicum",
+          "brand": "AH",
+          "size": "22 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.29",
+          "priceNow": "0.39",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 611859,
+          "title": "AH Biologisch Veldsla",
+          "brand": "AH Biologisch",
+          "size": "40 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.55",
+          "priceNow": "0.47",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 612925,
+          "title": "AH Snoepgroentemix met hummus",
+          "brand": "AH",
+          "size": "340 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.35",
+          "priceNow": "1.31",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -860,6 +920,18 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 610088,
+          "title": "AH Vers geperste smoothie avocado komkommer",
+          "brand": "AH",
+          "size": "0,75 l",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 285947,
           "title": "AH Vers geperst sap sinaasappel aardbei",
           "brand": "AH",
@@ -881,6 +953,18 @@
           "stock": 2,
           "priceWas": "2.99",
           "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 612931,
+          "title": "AH Fruitmix bramen frambozen",
+          "brand": "AH",
+          "size": "250 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.99",
+          "priceNow": "1.50",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -932,6 +1016,102 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
+          "productId": 578787,
+          "title": "AH Terra Plantaardig stoommaaltijd gyoza bowl",
+          "brand": "AH Terra",
+          "size": "450 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "5.99",
+          "priceNow": "1.80",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 591997,
+          "title": "AH Pasta pittige kip XL",
+          "brand": "AH",
+          "size": "550 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "5.99",
+          "priceNow": "1.80",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 591998,
+          "title": "AH Kip parelcouscous L",
+          "brand": "AH",
+          "size": "450 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "5.49",
+          "priceNow": "1.65",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 597739,
+          "title": "AH Macaroni ham-kaas",
+          "brand": "AH",
+          "size": "450 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 597740,
+          "title": "AH Penne arrabiata",
+          "brand": "AH",
+          "size": "450 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 597752,
+          "title": "AH Uit eigen keuken butter chicken",
+          "brand": "AH",
+          "size": "450 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.49",
+          "priceNow": "1.95",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 610812,
+          "title": "AH Noedels kip hoisin",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.49",
+          "priceNow": "1.35",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 610801,
+          "title": "AH S Mexicaanse stijl",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 155467,
           "title": "AH Tomaat mozzarella L",
           "brand": "AH",
@@ -968,6 +1148,18 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
+          "productId": 610802,
+          "title": "AH Kip saté M",
+          "brand": "AH",
+          "size": "265 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.49",
+          "priceNow": "1.35",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 364883,
           "title": "AH Greenfields Hachee",
           "brand": "AH Greenfields",
@@ -986,7 +1178,7 @@
           "size": "4 stuks",
           "category": "Vlees",
           "discountPct": 70,
-          "stock": 4,
+          "stock": 3,
           "priceWas": "3.99",
           "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-07"
@@ -1040,6 +1232,18 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
+          "productId": 587632,
+          "title": "AH Roerbak zalmblokjes",
+          "brand": "AH",
+          "size": "ca. 200 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.63",
+          "priceNow": "1.99",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 620827,
           "title": "AH Zalmnuggets",
           "brand": "AH",
@@ -1086,6 +1290,18 @@
           "priceWas": "5.99",
           "priceNow": "1.80",
           "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 612625,
+          "title": "AH Terra Plantaardige spinazierondo",
+          "brand": "AH Terra",
+          "size": "180 g",
+          "category": "Vegetarisch, vegan en plantaardig",
+          "discountPct": 70,
+          "stock": 4,
+          "priceWas": "1.79",
+          "priceNow": "0.54",
+          "markdownExpirationDate": "2026-10-10"
         },
         {
           "productId": 543186,
@@ -1148,13 +1364,25 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 585874,
+          "title": "Melkunie Breaker lemon cheesecake yoghurt",
+          "brand": "Melkunie",
+          "size": "200 g",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.69",
+          "priceNow": "0.51",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 438675,
           "title": "De Zaanse Hoeve Halfvolle yoghurt",
           "brand": "De Zaanse Hoeve",
           "size": "1 l",
           "category": "Zuivel, eieren",
           "discountPct": 70,
-          "stock": 2,
+          "stock": 1,
           "priceWas": "0.89",
           "priceNow": "0.27",
           "markdownExpirationDate": "2026-10-07"
@@ -1220,6 +1448,30 @@
           "markdownExpirationDate": "2026-10-14"
         },
         {
+          "productId": 604140,
+          "title": "YEEHRIGHT Biscuitspread",
+          "brand": "YEEHRIGHT",
+          "size": "330 g",
+          "category": "Ontbijtgranen, beleg",
+          "discountPct": 70,
+          "stock": 7,
+          "priceWas": "4.99",
+          "priceNow": "1.50",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 563629,
+          "title": "Hero Fruitspread gember",
+          "brand": "Hero",
+          "size": "350 g",
+          "category": "Ontbijtgranen, beleg",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.29",
+          "priceNow": "0.99",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 455917,
           "title": "Perla Huisblends Dolce gusto compatible cappucino",
           "brand": "Perla Huisblends",
@@ -1252,7 +1504,7 @@
           "size": "4 stuks",
           "category": "Vlees",
           "discountPct": 70,
-          "stock": 4,
+          "stock": 3,
           "priceWas": "3.99",
           "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-07"
@@ -1452,6 +1704,18 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 606747,
+          "title": "Dr. Oetker Deco drip choco smaak",
+          "brand": "Dr. Oetker",
+          "size": "80 g",
+          "category": "Bakkerij",
+          "discountPct": 50,
+          "stock": 6,
+          "priceWas": "4.19",
+          "priceNow": "2.10",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 515786,
           "title": "AH Mix voor hartige taart",
           "brand": "AH",
@@ -1510,6 +1774,18 @@
           "priceWas": "1.89",
           "priceNow": "1.42",
           "markdownExpirationDate": "2026-10-14"
+        },
+        {
+          "productId": 603833,
+          "title": "Bolletje Proteïne beschuit",
+          "brand": "Bolletje",
+          "size": "13 stuks",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 7,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
+          "markdownExpirationDate": "2026-10-25"
         }
       ]
     },
