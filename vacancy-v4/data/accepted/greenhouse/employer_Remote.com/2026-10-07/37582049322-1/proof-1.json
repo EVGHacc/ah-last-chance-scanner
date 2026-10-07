@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "accepted": true,
+  "release_allowed": true,
+  "release_gates": {
+    "release_allowed": true,
+    "failed_gates": [],
+    "evaluated_gates": {
+      "unit_tests": true,
+      "contract_tests": true,
+      "independent_qa": true,
+      "canary": true,
+      "live_proof": true,
+      "authority_contract": true,
+      "persistence_safety": true
+    }
+  },
+  "run_id": "37582049322-1:greenhouse:employer::Remote.com:proof-1",
+  "provider": "greenhouse",
+  "source_id": "employer::Remote.com",
+  "source": {
+    "name": "Remote.com",
+    "board": "remotecom",
+    "coverage": "verified_complete",
+    "unique_jobs": 0,
+    "authoritative_total": 0,
+    "exhausted": true,
+    "evidence_kind": "greenhouse_meta_total_reconciled",
+    "endpoint": "https://boards-api.greenhouse.io/v1/boards/remotecom/jobs?content=true",
+    "first_party_evidence_url": "https://remote.com/openings",
+    "jobs_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "jobs": [],
+    "checked_at": "2026-10-07T06:32:39.606099+00:00",
+    "error": null
+  },
+  "batch_generated_at": "2026-10-07T06:32:40.233400+00:00",
+  "workflow_run_id": "37582049322",
+  "workflow_run_attempt": 1,
+  "code_commit_sha": "6c3f2caa1a46d0853461b1c3057518558dbfbc02",
+  "adapter_version": "47ce30062dceef269ea00539e37a695b9a7957fa",
+  "config_hash": "9db2386d836fadec302a321ca69db49e77175c2049b3a2bb1d46486025cc9e11",
+  "authority_contract_version": "schema1:506c08344017a29c4d8862b34b11983bdbbf0508935e42133d464eb8bccd03b9"
+}
