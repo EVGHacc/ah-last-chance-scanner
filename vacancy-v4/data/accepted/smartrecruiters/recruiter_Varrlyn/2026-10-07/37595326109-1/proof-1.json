@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "accepted": true,
+  "release_allowed": true,
+  "release_gates": {
+    "release_allowed": true,
+    "failed_gates": [],
+    "evaluated_gates": {
+      "unit_tests": true,
+      "contract_tests": true,
+      "independent_qa": true,
+      "canary": true,
+      "live_proof": true,
+      "authority_contract": true,
+      "persistence_safety": true
+    }
+  },
+  "run_id": "37595326109-1:smartrecruiters:recruiter::Varrlyn:proof-1",
+  "provider": "smartrecruiters",
+  "source_id": "recruiter::Varrlyn",
+  "source": {
+    "name": "Varrlyn",
+    "company_identifier": "Varrlyn",
+    "coverage": "verified_complete",
+    "unique_jobs": 4,
+    "authoritative_total": 4,
+    "exhausted": true,
+    "evidence_kind": "smartrecruiters_totalFound_reconciled",
+    "first_party_evidence_url": "https://careers.smartrecruiters.com/Varrlyn/",
+    "jobs_sha256": "a4002822968b6d2e0c4e610e0a2de191ff3678da1512de0d611538682db2ebca",
+    "jobs": [
+      {
+        "job_id": "744000151007151",
+        "title": "(Sr) Business Analyst – Finance, Credit Risk, Payments & Regulatory Change",
+        "summary": "<p><strong>Breng financiële processen, risicomanagement en technologie bij elkaar</strong></p><p>Nieuwe regelgeving, veranderende betaalstromen, strengere kredietrisicokaders en verouderde systemen zorgen voor omvangrijke transformaties binnen banken en vermogensbeheerders. Succesvolle verandering begint met iemand die het volledige proces begrijpt en busine",
+        "job_url": "https://jobs.smartrecruiters.com/Varrlyn/744000151007151--sr-business-analyst-finance-credit-risk-payments-regulatory-change",
+        "apply_url": "https://jobs.smartrecruiters.com/Varrlyn/744000151007151--sr-business-analyst-finance-credit-risk-payments-regulatory-change?oga=true",
+        "record_source": "smartrecruiters_posting_api"
+      },
+      {
+        "job_id": "744000151009119",
+        "title": "(Sr) Data Engineer – Finance, Credit Risk & Regulatory Reporting",
+        "summary": "<p><strong>Maak financiële en kredietrisicodata betrouwbaar, schaalbaar en bruikbaar</strong></p><p>Banken en vermogensbeheerders moeten volledig kunnen vertrouwen op hun data. Voor financiële sturing, kredietrisicomodellen, kapitaalberekeningen en rapportages aan toezichthouders. Dat vraagt om data-engineers die verder kijken dan techniek alleen.</p><p>Als ",
+        "job_url": "https://jobs.smartrecruiters.com/Varrlyn/744000151009119--sr-data-engineer-finance-credit-risk-regulatory-reporting",
+        "apply_url": "https://jobs.smartrecruiters.com/Varrlyn/744000151009119--sr-data-engineer-finance-credit-risk-regulatory-reporting?oga=true",
+        "record_source": "smartrecruiters_posting_api"
+      },
+      {
+        "job_id": "744000151314955",
+        "title": "AI Developer – Multi-Agent Systems & Generative AI",
+        "summary": "<p>Voor een innovatief R&amp;D-project zoeken we een <strong>AI Developer</strong> die wil werken aan slimme AI-oplossingen die daadwerkelijk in de praktijk worden toegepast. Je gaat aan de slag met een <strong>multi-agent systeem</strong>, waarin verschillende AI-agents samenwerken om complexe taken uit te voeren.</p><p>Een bijzonder onderdeel van het proje",
+        "job_url": "https://jobs.smartrecruiters.com/Varrlyn/744000151314955-ai-developer-multi-agent-systems-generative-ai",
+        "apply_url": "https://jobs.smartrecruiters.com/Varrlyn/744000151314955-ai-developer-multi-agent-systems-generative-ai?oga=true",
+        "record_source": "smartrecruiters_posting_api"
+      },
+      {
+        "job_id": "744000151008259",
+        "title": "Azure / DevOps Engineer – Financial platforms",
+        "summary": "<p><strong>Zorg dat bedrijfskritische financiële platformen altijd blijven presteren</strong></p><p>Binnen banking en asset management moeten applicaties voor Finance, Credit Risk, Payments en Regulatory Reporting continu beschikbaar, veilig en controleerbaar zijn. Een storing kan direct gevolgen hebben voor transacties, risicoberekeningen, financiële rappor",
+        "job_url": "https://jobs.smartrecruiters.com/Varrlyn/744000151008259-azure-devops-engineer-financial-platforms",
+        "apply_url": "https://jobs.smartrecruiters.com/Varrlyn/744000151008259-azure-devops-engineer-financial-platforms?oga=true",
+        "record_source": "smartrecruiters_posting_api"
+      }
+    ],
+    "checked_at": "2026-10-07T08:40:41.367978+00:00",
+    "error": null
+  },
+  "batch_generated_at": "2026-10-07T08:43:48.194132+00:00",
+  "workflow_run_id": "37595326109",
+  "workflow_run_attempt": 1,
+  "code_commit_sha": "3e8ce81c0b1b36b995f36cfb9336f02e7f2713fb",
+  "adapter_version": "8a3cc61ebddf5fbec4e6b91330bf8ab14adf3d2a",
+  "config_hash": "ba271aa223d8a65caf82881e8b4058e52298f5658de686fa95257cb0640fd9f7",
+  "authority_contract_version": "schema1:506c08344017a29c4d8862b34b11983bdbbf0508935e42133d464eb8bccd03b9"
+}

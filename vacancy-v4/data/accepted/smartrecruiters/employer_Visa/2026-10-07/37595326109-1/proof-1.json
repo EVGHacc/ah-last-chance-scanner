@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "accepted": true,
+  "release_allowed": true,
+  "release_gates": {
+    "release_allowed": true,
+    "failed_gates": [],
+    "evaluated_gates": {
+      "unit_tests": true,
+      "contract_tests": true,
+      "independent_qa": true,
+      "canary": true,
+      "live_proof": true,
+      "authority_contract": true,
+      "persistence_safety": true
+    }
+  },
+  "run_id": "37595326109-1:smartrecruiters:employer::Visa:proof-1",
+  "provider": "smartrecruiters",
+  "source_id": "employer::Visa",
+  "source": {
+    "name": "Visa",
+    "company_identifier": "Visa",
+    "coverage": "verified_complete",
+    "unique_jobs": 0,
+    "authoritative_total": 0,
+    "exhausted": true,
+    "evidence_kind": "smartrecruiters_totalFound_reconciled",
+    "first_party_evidence_url": "https://careers.smartrecruiters.com/Visa",
+    "jobs_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "jobs": [],
+    "checked_at": "2026-10-07T08:43:47.824530+00:00",
+    "error": null
+  },
+  "batch_generated_at": "2026-10-07T08:43:48.194132+00:00",
+  "workflow_run_id": "37595326109",
+  "workflow_run_attempt": 1,
+  "code_commit_sha": "3e8ce81c0b1b36b995f36cfb9336f02e7f2713fb",
+  "adapter_version": "8a3cc61ebddf5fbec4e6b91330bf8ab14adf3d2a",
+  "config_hash": "ba271aa223d8a65caf82881e8b4058e52298f5658de686fa95257cb0640fd9f7",
+  "authority_contract_version": "schema1:506c08344017a29c4d8862b34b11983bdbbf0508935e42133d464eb8bccd03b9"
+}
