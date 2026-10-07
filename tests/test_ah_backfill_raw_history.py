@@ -35,7 +35,7 @@ class BackfillRawHistoryTests(unittest.TestCase):
         with mock.patch("scripts.backfill_raw_history.git",return_value=rows):
             self.assertEqual("aaa",find_commit("2026-10-06","17:39"))
 
-    def test_verify_requires_exact_files(self):
+    def test_backfill_marker_path_is_repository_tracked(self):\n        self.assertTrue(Path("data/raw-history-backfill.marker").exists())\n\n    def test_verify_requires_exact_files(self):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td)
             for slot in expected_raw_slots():

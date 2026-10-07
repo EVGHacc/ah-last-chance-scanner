@@ -87,7 +87,7 @@ def main():
             if path.exists():
                 old=json.loads(path.read_text(encoding="utf-8"))
                 assert old.get("checkedAt")==obs.get("checkedAt"), f"{slot}: refusing overwrite"
-            else: path.write_text(payload,encoding="utf-8")
+            else: path.write_text(payload,encoding="utf-8")\n        Path("data/raw-history-backfill.marker").write_text(a.date+"\\n",encoding="utf-8")
     report=verify_backfill(root,a.date)
     cross_check_jsonl(a.date,root)
     cross_check_historical_views(a.date)
