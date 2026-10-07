@@ -38,7 +38,7 @@ def run_batch(fetcher=None,config_path=DEFAULT_CONFIG):
         try:
             jobs,total=inventory(row["company_identifier"],transport)
             records=sorted((_record(j) for j in jobs),key=lambda j:(j["title"].casefold(),j["job_id"]))
-            if len(records)!=total or len({j["job_id"] for j in records})!=len(records): raise ValueError("persisted inventory mismatch")
+            if len(records)!=total or len({j["job_id"] for j in records})!=len(records): raise ValueError("persisted inventory mismatch")\n            if not records: raise ValueError("zero inventory requires independent first-party corroboration; possible stale provider route")
             digest=hashlib.sha256(json.dumps(records,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
             results.append({"name":row["name"],"company_identifier":row["company_identifier"],"coverage":Coverage.VERIFIED_COMPLETE.value,"unique_jobs":len(records),"authoritative_total":total,"exhausted":True,"evidence_kind":"smartrecruiters_totalFound_reconciled","first_party_evidence_url":row["first_party_evidence_url"],"jobs_sha256":digest,"jobs":records,"checked_at":checked_at,"error":None})
         except Exception as exc:
