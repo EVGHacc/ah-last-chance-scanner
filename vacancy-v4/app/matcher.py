@@ -12,12 +12,17 @@ DOMAIN_TERMS = {
     "governance": 2, "non-financial risk": 3, "risk assurance": 3,
     "controls": 2, "control": 1, "trust & safety": 2, "responsible ai": 2,
     "risk assessment": 2, "monitoring": 1, "testing": 1,
+    "risk management": 2, "risicomanagement": 2, "internal control": 2,
+    "interne beheersing": 2, "internal auditor": 3, "internal auditor it": 3,
+    "auditor": 2, "audit manager": 3, "integral risk": 2, "integraal risicomanagement": 3,
 }
 SENIOR_TERMS = {
     "chief": 4, "cco": 4, "cro": 4, "mlro": 4, "head": 4, "director": 4,
     "senior manager": 3, "lead": 2, "group lead": 3, "officer": 1,
+    "audit manager": 3, "senior internal auditor": 3, "teamlead": 3,
+    "domain expert": 2, "senior riskmanager": 3, "senior risk manager": 3,
 }
-LOCATION_TERMS = ("amsterdam", "netherlands", "london", "remote")
+LOCATION_TERMS = ("amsterdam", "amstelveen", "haarlem", "heemstede", "netherlands", "nl", "london", "remote", "hybride", "hybrid")
 NEGATIVE_TERMS = ("intern", "internship", "graduate", "junior", "associate")
 TECHNICAL_TERMS = ("engineer","engineering","developer","software","data scientist","machine learning","architect","technical","technology")
 MANAGEMENT_TERMS = ("chief","cco","cro","mlro","head","director","senior manager","manager","lead","people manager","team lead")
@@ -59,9 +64,9 @@ def _features(job: dict) -> dict:
 
 
 def score_job(employer: str, job: dict, source: str="", feedback_records: list[dict] | None=None) -> Match:
-    text=_text(job); title=str(job.get("title") or ""); location=str(job.get("location") or job.get("office") or "")
+    text=_text(job); title=str(job.get("title") or ""); title_text=title.casefold(); location=str(job.get("location") or job.get("office") or "")
     domain=[term for term in DOMAIN_TERMS if term in text]
-    senior=[term for term in SENIOR_TERMS if term in text]
+    senior=[term for term in SENIOR_TERMS if term in title_text]
     negative=[term for term in NEGATIVE_TERMS if re.search(rf"\b{re.escape(term)}\b", title.casefold())]
     loc_ok=any(term in location.casefold() for term in LOCATION_TERMS)
 
