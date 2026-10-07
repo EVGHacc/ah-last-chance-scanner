@@ -87,7 +87,8 @@ export default async function handler(req,res){
     if(u.searchParams.get("source")&&u.searchParams.get("job_id")&&u.searchParams.get("label")){
       const source=u.searchParams.get("source"),job_id=u.searchParams.get("job_id"),label=u.searchParams.get("label"),source_url=u.searchParams.get("source_url")||"";
       if(!BUTTON_LABELS.has(label)||!/^[A-Za-z0-9_-]{3,128}$/.test(job_id))return res.status(400).send(feedbackPage(false,"Ongeldige feedbackkeuze."));
-      const token=signFeedbackToken({source,job_id,source_url,label});
+      const snapshot={title:u.searchParams.get("title")||"",summary:u.searchParams.get("summary")||"",description:u.searchParams.get("description")||"",department:u.searchParams.get("department")||"",team:u.searchParams.get("team")||"",office:u.searchParams.get("office")||"",location:u.searchParams.get("location")||""};
+      const token=signFeedbackToken({source,job_id,source_url,label,features:feedbackFeatures(snapshot)});
       return res.status(200).send(feedbackPage(true,"Keuze: "+label+". Bevestig om deze voorkeur op te slaan.",token));
     }
   }
