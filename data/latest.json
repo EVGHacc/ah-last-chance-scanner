@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "18:12",
-  "scheduledAt": "2026-10-07T18:12:00+02:00",
-  "rawScheduledSlot": "18:12",
-  "rawScheduledAt": "2026-10-07T18:12:00+02:00",
-  "startedAt": "2026-10-07T18:13:15.424254+02:00",
-  "completedAt": "2026-10-07T18:13:19.700580+02:00",
-  "checkedAt": "2026-10-07T18:13:19.700580+02:00",
+  "scheduledSlot": "18:15",
+  "scheduledAt": "2026-10-07T18:15:00+02:00",
+  "rawScheduledSlot": "18:15",
+  "rawScheduledAt": "2026-10-07T18:15:00+02:00",
+  "startedAt": "2026-10-07T18:16:15.458140+02:00",
+  "completedAt": "2026-10-07T18:16:20.107496+02:00",
+  "checkedAt": "2026-10-07T18:16:20.107496+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -32,8 +32,8 @@
       "bakeryItems": 7,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 10,
-      "all70Stock": 34.0,
+      "all70Items": 11,
+      "all70Stock": 36.0,
       "all70": [
         {
           "productId": 493545,
@@ -154,6 +154,18 @@
           "priceWas": "0.95",
           "priceNow": "0.29",
           "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 607334,
+          "title": "Appelsientje Kids fruitdrink framboos 6-pack",
+          "brand": "Appelsientje",
+          "size": "1,2 l",
+          "category": "Frisdrank, sappen, water",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "3.49",
+          "priceNow": "1.05",
+          "markdownExpirationDate": "2026-10-09"
         }
       ],
       "items": [
@@ -881,16 +893,88 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 171,
+      "totalBargainItems": 184,
       "meatItems": 19,
-      "meat70Items": 1,
-      "meat70Stock": 5.0,
-      "bakeryItems": 8,
+      "meat70Items": 7,
+      "meat70Stock": 15.0,
+      "bakeryItems": 9,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 16,
-      "all70Stock": 63.0,
+      "all70Items": 27,
+      "all70Stock": 81.0,
       "all70": [
+        {
+          "productId": 238928,
+          "title": "AH Biologisch Schouderkarbonade",
+          "brand": "AH Biologisch",
+          "size": "ca. 425 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 4,
+          "priceWas": "7.07",
+          "priceNow": "1.80",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 495643,
+          "title": "AH Gehaktschnitzel hongaarse stijl",
+          "brand": "AH",
+          "size": "4 stuks",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "3.79",
+          "priceNow": "1.14",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 603421,
+          "title": "AH Gevulde gehaktballen met stroganoffsaus",
+          "brand": "AH",
+          "size": "250 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.99",
+          "priceNow": "1.50",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 620800,
+          "title": "AH Ovenschotel gehaktballetjes tomatensaus",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.99",
+          "priceNow": "2.10",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 619309,
+          "title": "AH Excellent Runder bavette steak",
+          "brand": "AH Excellent",
+          "size": "ca. 200 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "9.00",
+          "priceNow": "2.70",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 232235,
+          "title": "AH Excellent Fazantborstfilet",
+          "brand": "AH Excellent",
+          "size": "ca. 200 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.60",
+          "priceNow": "1.98",
+          "markdownExpirationDate": "2026-10-07"
+        },
         {
           "productId": 397576,
           "title": "AH Runderrookworst",
@@ -902,6 +986,42 @@
           "priceWas": "4.49",
           "priceNow": "1.35",
           "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 587647,
+          "title": "AH Roerbak zalm pangasius garnalen zeezout",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.69",
+          "priceNow": "2.01",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 577214,
+          "title": "AH Terra Biologisch falafel courgette",
+          "brand": "AH Terra",
+          "size": "150 g",
+          "category": "Vegetarisch, vegan en plantaardig",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 620798,
+          "title": "AH Ovenschotel vega kipballetjes Italiaans",
+          "brand": "AH",
+          "size": "455 g",
+          "category": "Vegetarisch, vegan en plantaardig",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.29",
+          "priceNow": "1.89",
+          "markdownExpirationDate": "2026-10-07"
         },
         {
           "productId": 508003,
@@ -1012,6 +1132,18 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
+          "productId": 611663,
+          "title": "AH Shiitake spicy marinade",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Borrel, chips, snacks",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.49",
+          "priceNow": "1.05",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 33050,
           "title": "AH Cervelaat fijn",
           "brand": "AH",
@@ -1022,6 +1154,18 @@
           "priceWas": "2.99",
           "priceNow": "0.90",
           "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 582832,
+          "title": "AH Borrelnoten sour cream smaak",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Borrel, chips, snacks",
+          "discountPct": 70,
+          "stock": 4,
+          "priceWas": "1.65",
+          "priceNow": "0.50",
+          "markdownExpirationDate": "2026-10-09"
         },
         {
           "productId": 62658,
@@ -1091,10 +1235,70 @@
           "brand": "AH Biologisch",
           "size": "ca. 425 g",
           "category": "Vlees",
-          "discountPct": 40,
+          "discountPct": 70,
           "stock": 4,
           "priceWas": "7.07",
-          "priceNow": "3.61",
+          "priceNow": "1.80",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 495643,
+          "title": "AH Gehaktschnitzel hongaarse stijl",
+          "brand": "AH",
+          "size": "4 stuks",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "3.79",
+          "priceNow": "1.14",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 603421,
+          "title": "AH Gevulde gehaktballen met stroganoffsaus",
+          "brand": "AH",
+          "size": "250 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.99",
+          "priceNow": "1.50",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 620800,
+          "title": "AH Ovenschotel gehaktballetjes tomatensaus",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.99",
+          "priceNow": "2.10",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 619309,
+          "title": "AH Excellent Runder bavette steak",
+          "brand": "AH Excellent",
+          "size": "ca. 200 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "9.00",
+          "priceNow": "2.70",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 232235,
+          "title": "AH Excellent Fazantborstfilet",
+          "brand": "AH Excellent",
+          "size": "ca. 200 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.60",
+          "priceNow": "1.98",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -1134,30 +1338,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 495643,
-          "title": "AH Gehaktschnitzel hongaarse stijl",
-          "brand": "AH",
-          "size": "4 stuks",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "3.79",
-          "priceNow": "2.27",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 603421,
-          "title": "AH Gevulde gehaktballen met stroganoffsaus",
-          "brand": "AH",
-          "size": "250 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "4.99",
-          "priceNow": "2.99",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 436750,
           "title": "AH Biologisch Mager rundergehakt",
           "brand": "AH Biologisch",
@@ -1170,30 +1350,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 620800,
-          "title": "AH Ovenschotel gehaktballetjes tomatensaus",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "6.99",
-          "priceNow": "4.19",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 619309,
-          "title": "AH Excellent Runder bavette steak",
-          "brand": "AH Excellent",
-          "size": "ca. 200 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "9.00",
-          "priceNow": "5.40",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 425633,
           "title": "AH Varkensribeye naturel",
           "brand": "AH",
@@ -1203,18 +1359,6 @@
           "stock": 1,
           "priceWas": "4.49",
           "priceNow": "2.69",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 232235,
-          "title": "AH Excellent Fazantborstfilet",
-          "brand": "AH Excellent",
-          "size": "ca. 200 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "6.60",
-          "priceNow": "3.96",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -1349,6 +1493,18 @@
           "stock": 4,
           "priceWas": "1.59",
           "priceNow": "0.95",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 580174,
+          "title": "Koopmans Brood uit de pan Italiaans",
+          "brand": "Koopmans",
+          "size": "400 g",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-11"
         },
         {
