@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "20:21",
-  "scheduledAt": "2026-10-07T20:21:00+02:00",
-  "rawScheduledSlot": "20:21",
-  "rawScheduledAt": "2026-10-07T20:21:00+02:00",
-  "startedAt": "2026-10-07T20:21:00.338441+02:00",
-  "completedAt": "2026-10-07T20:21:05.665670+02:00",
-  "checkedAt": "2026-10-07T20:21:05.665670+02:00",
+  "scheduledSlot": "20:24",
+  "scheduledAt": "2026-10-07T20:24:00+02:00",
+  "rawScheduledSlot": "20:24",
+  "rawScheduledAt": "2026-10-07T20:24:00+02:00",
+  "startedAt": "2026-10-07T20:24:00.345247+02:00",
+  "completedAt": "2026-10-07T20:24:05.444022+02:00",
+  "checkedAt": "2026-10-07T20:24:05.444022+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -33,7 +33,7 @@
       "bakery70Items": 1,
       "bakery70Stock": 3.0,
       "all70Items": 36,
-      "all70Stock": 72.0,
+      "all70Stock": 71.0,
       "all70": [
         {
           "productId": 578948,
@@ -324,18 +324,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 523368,
-          "title": "AH Biologisch Zalmfilet op huid",
-          "brand": "AH Biologisch",
-          "size": "ca. 175 g",
-          "category": "Vis",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "5.99",
-          "priceNow": "1.80",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 621429,
           "title": "AH Excellent Gerookte zalm met rode biet",
           "brand": "AH Excellent",
@@ -345,6 +333,18 @@
           "stock": 1,
           "priceWas": "3.99",
           "priceNow": "1.02",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 523368,
+          "title": "AH Biologisch Zalmfilet op huid",
+          "brand": "AH Biologisch",
+          "size": "ca. 175 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "5.99",
+          "priceNow": "1.80",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -748,18 +748,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 487305,
-          "title": "AH Liefde & Passie Spelt volkoren brood",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 6,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 230724,
           "title": "AH Saucijzenbroodje",
           "brand": "AH",
@@ -786,6 +774,18 @@
         {
           "productId": 417146,
           "title": "AH Liefde & Passie OerDesem San Francisco",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 5,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 487305,
+          "title": "AH Liefde & Passie Spelt volkoren brood",
           "brand": "AH Liefde & Passie",
           "size": "per stuk",
           "category": "Bakkerij",
