@@ -73,6 +73,12 @@ export default async function handler(req,res){
       const host=req.headers["x-forwarded-host"]||req.headers.host,proto=req.headers["x-forwarded-proto"]||"https";
       return res.status(200).json(feedbackLinks({source,job_id,source_url},proto+"://"+host));
     }
+    if(u.searchParams.get("source")&&u.searchParams.get("job_id")&&u.searchParams.get("label")){
+      const source=u.searchParams.get("source"),job_id=u.searchParams.get("job_id"),label=u.searchParams.get("label"),source_url=u.searchParams.get("source_url")||"";
+      if(!BUTTON_LABELS.has(label)||!/^[A-Za-z0-9_-]{3,128}$/.test(job_id))return res.status(400).send(feedbackPage(false,"Ongeldige feedbackkeuze."));
+      const token=signFeedbackToken({source,job_id,source_url,label});
+      return res.status(200).send(feedbackPage(true,"Keuze: "+label+". Bevestig om deze voorkeur op te slaan.",token));
+    }
   }
   if(req.method==="POST" && req.headers["x-feedback-link-request"]==="1"){
     try{
