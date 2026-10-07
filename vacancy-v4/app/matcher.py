@@ -29,7 +29,7 @@ EXECUTIVE_SENIORITY = ("chief", "cco", "cro", "mlro", "head", "director")
 
 def _has_term(text: str, term: str) -> bool:
     """Match complete tokens/phrases, not substrings such as cco in accountant."""
-    return re.search(rf"(?<!\\w){re.escape(term)}(?!\\w)", text) is not None
+    return re.search(rf"(?<!\w){re.escape(term)}(?!\w)", text) is not None
 TECHNICAL_TERMS = ("engineer","engineering","developer","software","data scientist","machine learning","architect","technical","technology")
 MANAGEMENT_TERMS = ("chief","cco","cro","mlro","head","director","senior manager","manager","lead","people manager","team lead")
 
