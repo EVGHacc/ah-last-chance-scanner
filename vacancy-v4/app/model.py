@@ -31,6 +31,7 @@ class InventoryProof:
             if self.authoritative_total is None and self.evidence_kind not in {
                 "pagination_exhausted",
                 "official_complete_payload",
+                "provider_complete_payload",
                 "official_complete_payload_plus_first_party_reconciled",
             }:
                 raise ValueError("verified_complete requires exhaustive official inventory proof")
