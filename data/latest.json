@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "19:36",
-  "scheduledAt": "2026-10-07T19:36:00+02:00",
-  "rawScheduledSlot": "19:36",
-  "rawScheduledAt": "2026-10-07T19:36:00+02:00",
-  "startedAt": "2026-10-07T19:36:00.334524+02:00",
-  "completedAt": "2026-10-07T19:36:04.810867+02:00",
-  "checkedAt": "2026-10-07T19:36:04.810867+02:00",
+  "scheduledSlot": "19:39",
+  "scheduledAt": "2026-10-07T19:39:00+02:00",
+  "rawScheduledSlot": "19:39",
+  "rawScheduledAt": "2026-10-07T19:39:00+02:00",
+  "startedAt": "2026-10-07T19:39:00.353863+02:00",
+  "completedAt": "2026-10-07T19:39:05.118990+02:00",
+  "checkedAt": "2026-10-07T19:39:05.118990+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 153,
+      "totalBargainItems": 157,
       "meatItems": 17,
       "meat70Items": 8,
       "meat70Stock": 16.0,
@@ -789,15 +789,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 211,
+      "totalBargainItems": 210,
       "meatItems": 17,
       "meat70Items": 6,
       "meat70Stock": 30.0,
       "bakeryItems": 8,
       "bakery70Items": 1,
       "bakery70Stock": 2.0,
-      "all70Items": 63,
-      "all70Stock": 115.0,
+      "all70Items": 62,
+      "all70Stock": 114.0,
       "all70": [
         {
           "productId": 185200,
@@ -1073,18 +1073,6 @@
           "stock": 1,
           "priceWas": "2.89",
           "priceNow": "0.87",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 48679,
-          "title": "AH Nederlandse aardbeien",
-          "brand": "AH",
-          "size": "250 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.59",
-          "priceNow": "0.60",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -3417,15 +3405,15 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 156,
-      "meatItems": 23,
-      "meat70Items": 5,
-      "meat70Stock": 20.0,
+      "totalBargainItems": 153,
+      "meatItems": 21,
+      "meat70Items": 4,
+      "meat70Stock": 19.0,
       "bakeryItems": 5,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 42,
-      "all70Stock": 86.0,
+      "all70Items": 40,
+      "all70Stock": 81.0,
       "all70": [
         {
           "productId": 435438,
@@ -3680,18 +3668,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 597760,
-          "title": "AH Verse pinsa caprese",
-          "brand": "AH",
-          "size": "360 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "5.99",
-          "priceNow": "1.80",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 415365,
           "title": "AH Sushi edo",
           "brand": "AH",
@@ -3734,7 +3710,7 @@
           "size": "241 g",
           "category": "Maaltijden, salades",
           "discountPct": 70,
-          "stock": 2,
+          "stock": 1,
           "priceWas": "5.99",
           "priceNow": "1.80",
           "markdownExpirationDate": "2026-10-08"
@@ -3800,18 +3776,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 620816,
-          "title": "AH Oven scharrel kippendijen coq au vin",
-          "brand": "AH",
-          "size": "480 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.29",
-          "priceNow": "1.89",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 619300,
           "title": "AH Terra Plantaardige burger met bonen",
           "brand": "AH Terra",
@@ -3830,7 +3794,7 @@
           "size": "180 g",
           "category": "Vegetarisch, vegan en plantaardig",
           "discountPct": 70,
-          "stock": 2,
+          "stock": 1,
           "priceWas": "3.79",
           "priceNow": "1.14",
           "markdownExpirationDate": "2026-10-08"
@@ -3982,18 +3946,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 620816,
-          "title": "AH Oven scharrel kippendijen coq au vin",
-          "brand": "AH",
-          "size": "480 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.29",
-          "priceNow": "1.89",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 603420,
           "title": "AH Gevulde gehaktballen met satesmaak",
           "brand": "AH",
@@ -4087,18 +4039,6 @@
           "stock": 1,
           "priceWas": "6.49",
           "priceNow": "4.87",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
-          "productId": 626381,
-          "title": "AH Scharrel kipdijfilet",
-          "brand": "AH",
-          "size": "240 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "3.69",
-          "priceNow": "2.77",
           "markdownExpirationDate": "2026-10-08"
         },
         {
