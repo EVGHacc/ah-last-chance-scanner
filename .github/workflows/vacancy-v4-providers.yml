@@ -34,7 +34,9 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_*.py' -v
 
       - name: Vacancy match-engine regression gate
-        run: python -m unittest discover -s tests/unit -p 'test_matcher.py' -v
+        run: |
+          python -m unittest discover -s tests/unit -p 'test_matcher.py' -v
+          python -m unittest discover -s tests/unit -p 'test_feedback.py' -v
 
       - name: Shared certification and transport tests
         run: |
