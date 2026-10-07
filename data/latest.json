@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "21:18",
-  "scheduledAt": "2026-10-07T21:18:00+02:00",
-  "rawScheduledSlot": "21:18",
-  "rawScheduledAt": "2026-10-07T21:18:00+02:00",
-  "startedAt": "2026-10-07T21:18:00.389672+02:00",
-  "completedAt": "2026-10-07T21:18:05.984670+02:00",
-  "checkedAt": "2026-10-07T21:18:05.984670+02:00",
+  "scheduledSlot": "21:20",
+  "scheduledAt": "2026-10-07T21:20:00+02:00",
+  "rawScheduledSlot": "21:20",
+  "rawScheduledAt": "2026-10-07T21:20:00+02:00",
+  "startedAt": "2026-10-07T21:20:00.379923+02:00",
+  "completedAt": "2026-10-07T21:20:05.436956+02:00",
+  "checkedAt": "2026-10-07T21:20:05.436956+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -5150,10 +5150,10 @@
       "meat70Items": 3,
       "meat70Stock": 17.0,
       "bakeryItems": 42,
-      "bakery70Items": 1,
-      "bakery70Stock": 6.0,
-      "all70Items": 37,
-      "all70Stock": 80.0,
+      "bakery70Items": 2,
+      "bakery70Stock": 7.0,
+      "all70Items": 39,
+      "all70Stock": 82.0,
       "all70": [
         {
           "productId": 517597,
@@ -5564,6 +5564,18 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
+          "productId": 458903,
+          "title": "AH Kaiserbroodjes",
+          "brand": "AH",
+          "size": "10 stuks",
+          "category": "Bakkerij",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "0.57",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 199395,
           "title": "AH Knabbelbacon",
           "brand": "AH",
@@ -5585,6 +5597,18 @@
           "stock": 1,
           "priceWas": "3.59",
           "priceNow": "1.08",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 413087,
+          "title": "Johma Oudekaas-pesto salade",
+          "brand": "Johma",
+          "size": "175 g",
+          "category": "Borrel, chips, snacks",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.69",
+          "priceNow": "1.11",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -5844,6 +5868,18 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
+          "productId": 458903,
+          "title": "AH Kaiserbroodjes",
+          "brand": "AH",
+          "size": "10 stuks",
+          "category": "Bakkerij",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "0.57",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 168184,
           "title": "AH Tijger wit heel",
           "brand": "AH",
@@ -5889,18 +5925,6 @@
           "stock": 2,
           "priceWas": "0.89",
           "priceNow": "0.53",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 458903,
-          "title": "AH Kaiserbroodjes",
-          "brand": "AH",
-          "size": "10 stuks",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "1.89",
-          "priceNow": "1.13",
           "markdownExpirationDate": "2026-10-07"
         },
         {
