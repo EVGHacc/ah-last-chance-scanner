@@ -73,11 +73,15 @@ def score_job(employer: str, job: dict, source: str="", feedback_records: list[d
     text=_text(job); title=str(job.get("title") or ""); title_text=title.casefold(); location=str(job.get("location") or job.get("office") or "")
     domain=[term for term in DOMAIN_TERMS if _has_term(text,term)]
     senior=[term for term in SENIOR_TERMS if _has_term(title_text,term)]
+    description_senior=[term for term in SENIOR_TERMS if _has_term(text,term)]
     negative=[term for term in NEGATIVE_TERMS if re.search(rf"\b{re.escape(term)}\b", title.casefold())]
     loc_ok=any(term in location.casefold() for term in LOCATION_TERMS)
 
     domain_score=min(5, max((DOMAIN_TERMS[t] for t in domain), default=0) + (1 if len(domain)>=2 else 0) + (1 if len(domain)>=4 else 0))
-    senior_score=min(3, max((SENIOR_TERMS[t] for t in senior), default=0))
+    # Explicit executive scope in the description can establish seniority for generic titles.
+    # Keep title seniority primary, but allow documented director/head/chief scope to score.
+    senior_evidence = senior or [t for t in description_senior if t in EXECUTIVE_SENIORITY]
+    senior_score=min(3, max((SENIOR_TERMS[t] for t in senior_evidence), default=0))
     location_score=2 if loc_ok else 0
     base=domain_score+senior_score+location_score-(4 if negative else 0)
 
