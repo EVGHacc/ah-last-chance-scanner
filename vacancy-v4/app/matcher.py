@@ -4,7 +4,7 @@ Coverage/certification and matching are deliberately separate concerns.
 """
 from dataclasses import dataclass
 import re
-from app.feedback import feedback_adjustment
+from app.feedback import feedback_adjustment, feature_feedback_adjustment
 
 DOMAIN_TERMS = {
     "aml": 3, "anti-money laundering": 3, "financial crime": 3, "fincrime": 3,
@@ -18,7 +18,7 @@ SENIOR_TERMS = {
     "senior manager": 3, "lead": 2, "group lead": 3, "officer": 1,
 }
 LOCATION_TERMS = ("amsterdam", "netherlands", "london", "remote")
-NEGATIVE_TERMS = ("intern", "internship", "graduate", "junior", "associate")
+NEGATIVE_TERMS = ("intern", "internship", "graduate", "junior", "associate")\nTECHNICAL_TERMS = ("engineer","engineering","developer","software","data scientist","machine learning","architect","technical","technology")\nMANAGEMENT_TERMS = ("chief","cco","cro","mlro","head","director","senior manager","manager","lead","people manager","team lead")
 
 
 @dataclass(frozen=True)
@@ -59,7 +59,7 @@ def score_job(employer: str, job: dict, source: str="", feedback_records: list[d
 
     why=tuple(domain[:4]+senior[:2])
     limiters=() if loc_ok else ("location outside Amsterdam/Netherlands/London/fully remote preference",)
-    mismatch=tuple(negative)
+    mismatch=tuple(negative)+learned_reasons
     url=str(job.get("apply_url") or job.get("job_url") or "")
     return Match(employer,str(job.get("job_id") or ""),title,location,url,score,why,limiters,mismatch)
 
