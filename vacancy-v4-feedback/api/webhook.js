@@ -41,10 +41,12 @@ async function persist(record){
   }
   throw new Error("feedback ledger contention");
 }
+export const config={api:{bodyParser:false}};
+async function rawBody(req){const chunks=[];for await(const chunk of req)chunks.push(Buffer.isBuffer(chunk)?chunk:Buffer.from(chunk));return Buffer.concat(chunks).toString("utf8")}
 export default async function handler(req,res){
   if(req.method!=="POST")return res.status(405).send("method not allowed");
   try{
-    const raw=typeof req.body==="string"?req.body:JSON.stringify(req.body);
+    const raw=await rawBody(req);
     const resend=new Resend(process.env.RESEND_API_KEY);
     const event=resend.webhooks.verify({payload:raw,headers:{"svix-id":req.headers["svix-id"],"svix-timestamp":req.headers["svix-timestamp"],"svix-signature":req.headers["svix-signature"]},secret:process.env.RESEND_WEBHOOK_SECRET});
     if(event.type!=="email.received")return res.status(200).send("ignored");
