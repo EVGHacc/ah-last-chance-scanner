@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "20:48",
-  "scheduledAt": "2026-10-07T20:48:00+02:00",
-  "rawScheduledSlot": "20:48",
-  "rawScheduledAt": "2026-10-07T20:48:00+02:00",
-  "startedAt": "2026-10-07T20:48:00.391016+02:00",
-  "completedAt": "2026-10-07T20:48:05.556433+02:00",
-  "checkedAt": "2026-10-07T20:48:05.556433+02:00",
+  "scheduledSlot": "20:50",
+  "scheduledAt": "2026-10-07T20:50:00+02:00",
+  "rawScheduledSlot": "20:50",
+  "rawScheduledAt": "2026-10-07T20:50:00+02:00",
+  "startedAt": "2026-10-07T20:50:00.352389+02:00",
+  "completedAt": "2026-10-07T20:50:05.589127+02:00",
+  "checkedAt": "2026-10-07T20:50:05.589127+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2681,11 +2681,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 223,
+      "totalBargainItems": 222,
       "meatItems": 16,
       "meat70Items": 10,
       "meat70Stock": 17.0,
-      "bakeryItems": 58,
+      "bakeryItems": 57,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "all70Items": 56,
@@ -3941,18 +3941,6 @@
           "stock": 2,
           "priceWas": "1.59",
           "priceNow": "1.19",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 606073,
-          "title": "AH Kruidenkaas snack",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "0.89",
-          "priceNow": "0.67",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -6096,18 +6084,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 182711,
-          "title": "AH Les pains bastille heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "2.39",
-          "priceNow": "1.79",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 231537,
           "title": "AH Les pains bastille half",
           "brand": "AH",
@@ -6144,6 +6120,18 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
+          "productId": 182711,
+          "title": "AH Les pains bastille heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "2.39",
+          "priceNow": "1.79",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 561017,
           "title": "AH Tijger tarwe maïs heel",
           "brand": "AH",
@@ -6165,18 +6153,6 @@
           "stock": 3,
           "priceWas": "1.39",
           "priceNow": "1.04",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 606491,
-          "title": "AH Taco snack",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "0.89",
-          "priceNow": "0.67",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -6213,6 +6189,18 @@
           "stock": 2,
           "priceWas": "1.59",
           "priceNow": "1.19",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 606491,
+          "title": "AH Taco snack",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.89",
+          "priceNow": "0.67",
           "markdownExpirationDate": "2026-10-07"
         },
         {
