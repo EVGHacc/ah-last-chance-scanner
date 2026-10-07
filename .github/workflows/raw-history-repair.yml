@@ -1,0 +1,47 @@
+name: AH Raw History Repair
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/backfill_raw_history.py'
+      - 'tests/test_ah_backfill_raw_history.py'
+      - '.github/workflows/raw-history-repair.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ah-raw-history-repair
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Regression test repair logic
+        run: python -m unittest tests.test_ah_backfill_raw_history -v
+      - name: Backfill from immutable scan commits
+        run: python scripts/backfill_raw_history.py --date 2026-10-06
+      - name: Verify exact durable set
+        run: python scripts/backfill_raw_history.py --date 2026-10-06 --verify-only
+      - name: Commit durable history
+        run: |
+          if git diff --quiet -- data/raw/2026-10-06; then
+            echo "No history changes required"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/raw/2026-10-06
+          test "$(git diff --cached --name-only | wc -l)" -eq 98
+          git commit -m "Backfill 98 immutable AH observations for 2026-10-06"
+          git push
