@@ -80,7 +80,9 @@ def run_batch(fetcher=None,config_path=DEFAULT_CONFIG):
         try:
             inv=inventory(source,row["board"],lambda _:transport(endpoint(row["board"])))
             records=sorted((_record(j) for j in inv.jobs),key=lambda j:(j["title"].casefold(),j["job_id"]))
-            if not records:\n                raise ValueError("zero inventory requires independent first-party corroboration; possible stale provider route")\n            proof=InventoryProof(
+            if not records:
+                raise ValueError("zero inventory requires independent first-party corroboration; possible stale provider route")
+            proof=InventoryProof(
                 source=source,
                 coverage=Coverage.VERIFIED_COMPLETE,
                 unique_jobs=len(records),
