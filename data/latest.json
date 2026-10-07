@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "20:30",
-  "scheduledAt": "2026-10-07T20:30:00+02:00",
-  "rawScheduledSlot": "20:30",
-  "rawScheduledAt": "2026-10-07T20:30:00+02:00",
-  "startedAt": "2026-10-07T20:30:00.378795+02:00",
-  "completedAt": "2026-10-07T20:30:06.462046+02:00",
-  "checkedAt": "2026-10-07T20:30:06.462046+02:00",
+  "scheduledSlot": "20:33",
+  "scheduledAt": "2026-10-07T20:33:00+02:00",
+  "rawScheduledSlot": "20:33",
+  "rawScheduledAt": "2026-10-07T20:33:00+02:00",
+  "startedAt": "2026-10-07T20:33:00.357448+02:00",
+  "completedAt": "2026-10-07T20:33:05.297019+02:00",
+  "checkedAt": "2026-10-07T20:33:05.297019+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1288,8 +1288,8 @@
       "bakeryItems": 49,
       "bakery70Items": 1,
       "bakery70Stock": 2.0,
-      "all70Items": 52,
-      "all70Stock": 87.0,
+      "all70Items": 53,
+      "all70Stock": 88.0,
       "all70": [
         {
           "productId": 185200,
@@ -1829,6 +1829,18 @@
           "stock": 1,
           "priceWas": "1.59",
           "priceNow": "0.48",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 233528,
+          "title": "Den Eelder Boeren vanillevla",
+          "brand": "Den Eelder",
+          "size": "1 l",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.39",
+          "priceNow": "0.72",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -2681,7 +2693,7 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 222,
+      "totalBargainItems": 223,
       "meatItems": 16,
       "meat70Items": 10,
       "meat70Stock": 17.0,
@@ -4268,8 +4280,8 @@
       "bakeryItems": 41,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 29,
-      "all70Stock": 43.0,
+      "all70Items": 30,
+      "all70Stock": 44.0,
       "all70": [
         {
           "productId": 395952,
@@ -4324,6 +4336,18 @@
           "title": "AH Bloemkool broccoli kleinverpakking",
           "brand": "AH",
           "size": "200 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.99",
+          "priceNow": "0.60",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 378693,
+          "title": "AH Champignons gesneden",
+          "brand": "AH",
+          "size": "250 g",
           "category": "Groente, aardappelen",
           "discountPct": 70,
           "stock": 1,
@@ -5056,18 +5080,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 487301,
-          "title": "AH Rond volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "1.89",
-          "priceNow": "1.61",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 125034,
           "title": "AH Les pains Boulogne half",
           "brand": "AH",
@@ -5101,6 +5113,18 @@
           "stock": 2,
           "priceWas": "0.49",
           "priceNow": "0.42",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 487301,
+          "title": "AH Rond volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "1.89",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -6264,18 +6288,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 577447,
-          "title": "AH Everything bol",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "0.79",
-          "priceNow": "0.67",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 230724,
           "title": "AH Saucijzenbroodje",
           "brand": "AH",
@@ -6309,6 +6321,18 @@
           "stock": 3,
           "priceWas": "3.19",
           "priceNow": "2.71",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 577447,
+          "title": "AH Everything bol",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "0.79",
+          "priceNow": "0.67",
           "markdownExpirationDate": "2026-10-07"
         },
         {
