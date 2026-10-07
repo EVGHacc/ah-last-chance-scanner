@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "target_count": 106,
-  "certified_coverage": 10,
-  "updated_at": "2026-10-07T15:01:02.800152+00:00",
+  "certified_coverage": 14,
+  "updated_at": "2026-10-07T15:01:33.285789+00:00",
   "records": [
     {
       "provider": null,
@@ -1537,19 +1537,25 @@
       "name": "Meta"
     },
     {
-      "provider": null,
+      "provider": "ashby",
       "source": "employer::OpenAI",
-      "certification": "UNPROVEN",
-      "health": "STALE",
-      "accepted_proofs": [],
-      "consecutive_green_proofs": 0,
-      "certification_provenance": null,
-      "adapter_version": null,
-      "code_commit_sha": null,
-      "config_hash": null,
-      "authority_contract_version": null,
-      "certified_job_count": null,
-      "freshness_at": null,
+      "certification": "CERTIFIED",
+      "health": "HEALTHY",
+      "accepted_proofs": [
+        "37640241831-1:ashby:employer::OpenAI:proof-1",
+        "37640241831-1:ashby:employer::OpenAI:proof-2"
+      ],
+      "consecutive_green_proofs": 2,
+      "certification_provenance": [
+        "37640241831-1:ashby:employer::OpenAI:proof-1",
+        "37640241831-1:ashby:employer::OpenAI:proof-2"
+      ],
+      "adapter_version": "7faffc74a44a43cd0e29f5c2a9eba35fb8e0da90",
+      "code_commit_sha": "39eacccee7eb78c730bc5a0799bdd8e88099795a",
+      "config_hash": "f028de8ac2fd849120685b2adfa5da110ed9980d83dbca02f9ad02ba533ff06e",
+      "authority_contract_version": "schema1:506c08344017a29c4d8862b34b11983bdbbf0508935e42133d464eb8bccd03b9",
+      "certified_job_count": 823,
+      "freshness_at": "2026-10-07T14:51:51.975987+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "employer::OpenAI",
@@ -1577,19 +1583,25 @@
       "name": "Microsoft"
     },
     {
-      "provider": null,
+      "provider": "ashby",
       "source": "employer::Mollie",
-      "certification": "UNPROVEN",
-      "health": "STALE",
-      "accepted_proofs": [],
-      "consecutive_green_proofs": 0,
-      "certification_provenance": null,
-      "adapter_version": null,
-      "code_commit_sha": null,
-      "config_hash": null,
-      "authority_contract_version": null,
-      "certified_job_count": null,
-      "freshness_at": null,
+      "certification": "CERTIFIED",
+      "health": "HEALTHY",
+      "accepted_proofs": [
+        "37640241831-1:ashby:employer::Mollie:proof-1",
+        "37640241831-1:ashby:employer::Mollie:proof-2"
+      ],
+      "consecutive_green_proofs": 2,
+      "certification_provenance": [
+        "37640241831-1:ashby:employer::Mollie:proof-1",
+        "37640241831-1:ashby:employer::Mollie:proof-2"
+      ],
+      "adapter_version": "7faffc74a44a43cd0e29f5c2a9eba35fb8e0da90",
+      "code_commit_sha": "39eacccee7eb78c730bc5a0799bdd8e88099795a",
+      "config_hash": "f028de8ac2fd849120685b2adfa5da110ed9980d83dbca02f9ad02ba533ff06e",
+      "authority_contract_version": "schema1:506c08344017a29c4d8862b34b11983bdbbf0508935e42133d464eb8bccd03b9",
+      "certified_job_count": 46,
+      "freshness_at": "2026-10-07T14:51:52.398169+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "employer::Mollie",
@@ -1957,19 +1969,25 @@
       "name": "Remote.com"
     },
     {
-      "provider": null,
+      "provider": "ashby",
       "source": "employer::Airwallex",
-      "certification": "UNPROVEN",
-      "health": "STALE",
-      "accepted_proofs": [],
-      "consecutive_green_proofs": 0,
-      "certification_provenance": null,
-      "adapter_version": null,
-      "code_commit_sha": null,
-      "config_hash": null,
-      "authority_contract_version": null,
-      "certified_job_count": null,
-      "freshness_at": null,
+      "certification": "CERTIFIED",
+      "health": "HEALTHY",
+      "accepted_proofs": [
+        "37640241831-1:ashby:employer::Airwallex:proof-1",
+        "37640241831-1:ashby:employer::Airwallex:proof-2"
+      ],
+      "consecutive_green_proofs": 2,
+      "certification_provenance": [
+        "37640241831-1:ashby:employer::Airwallex:proof-1",
+        "37640241831-1:ashby:employer::Airwallex:proof-2"
+      ],
+      "adapter_version": "7faffc74a44a43cd0e29f5c2a9eba35fb8e0da90",
+      "code_commit_sha": "39eacccee7eb78c730bc5a0799bdd8e88099795a",
+      "config_hash": "f028de8ac2fd849120685b2adfa5da110ed9980d83dbca02f9ad02ba533ff06e",
+      "authority_contract_version": "schema1:506c08344017a29c4d8862b34b11983bdbbf0508935e42133d464eb8bccd03b9",
+      "certified_job_count": 540,
+      "freshness_at": "2026-10-07T14:51:52.794330+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "employer::Airwallex",
@@ -2079,19 +2097,25 @@
       "name": "Thunes"
     },
     {
-      "provider": null,
+      "provider": "ashby",
       "source": "employer::Checkout.com",
-      "certification": "UNPROVEN",
-      "health": "STALE",
-      "accepted_proofs": [],
-      "consecutive_green_proofs": 0,
-      "certification_provenance": null,
-      "adapter_version": null,
-      "code_commit_sha": null,
-      "config_hash": null,
-      "authority_contract_version": null,
-      "certified_job_count": null,
-      "freshness_at": null,
+      "certification": "CERTIFIED",
+      "health": "HEALTHY",
+      "accepted_proofs": [
+        "37640241831-1:ashby:employer::Checkout.com:proof-1",
+        "37640241831-1:ashby:employer::Checkout.com:proof-2"
+      ],
+      "consecutive_green_proofs": 2,
+      "certification_provenance": [
+        "37640241831-1:ashby:employer::Checkout.com:proof-1",
+        "37640241831-1:ashby:employer::Checkout.com:proof-2"
+      ],
+      "adapter_version": "7faffc74a44a43cd0e29f5c2a9eba35fb8e0da90",
+      "code_commit_sha": "39eacccee7eb78c730bc5a0799bdd8e88099795a",
+      "config_hash": "f028de8ac2fd849120685b2adfa5da110ed9980d83dbca02f9ad02ba533ff06e",
+      "authority_contract_version": "schema1:506c08344017a29c4d8862b34b11983bdbbf0508935e42133d464eb8bccd03b9",
+      "certified_job_count": 174,
+      "freshness_at": "2026-10-07T14:51:53.087372+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "employer::Checkout.com",
@@ -2181,19 +2205,21 @@
         "37639447689-1:lever:employer::Finom:proof-1",
         "37639447689-1:lever:employer::Finom:proof-2",
         "37640187784-1:lever:employer::Finom:proof-1",
-        "37640187784-1:lever:employer::Finom:proof-2"
+        "37640187784-1:lever:employer::Finom:proof-2",
+        "37640241831-1:lever:employer::Finom:proof-1",
+        "37640241831-1:lever:employer::Finom:proof-2"
       ],
-      "consecutive_green_proofs": 58,
+      "consecutive_green_proofs": 60,
       "certification_provenance": [
-        "37640187784-1:lever:employer::Finom:proof-1",
-        "37640187784-1:lever:employer::Finom:proof-2"
+        "37640241831-1:lever:employer::Finom:proof-1",
+        "37640241831-1:lever:employer::Finom:proof-2"
       ],
       "adapter_version": "07ddb14df2f887ec42896348e664719f6d3e3702",
-      "code_commit_sha": "ae826cd0332ad44feeab747fcda1b739a50a86fc",
+      "code_commit_sha": "39eacccee7eb78c730bc5a0799bdd8e88099795a",
       "config_hash": "a31ac116986e8c0baa90cf6c2f277113ccce74ea2f28225dc2af503a75cfbfdf",
       "authority_contract_version": "schema1:506c08344017a29c4d8862b34b11983bdbbf0508935e42133d464eb8bccd03b9",
       "certified_job_count": 77,
-      "freshness_at": "2026-10-07T14:51:32.128974+00:00",
+      "freshness_at": "2026-10-07T14:51:54.810589+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "employer::Finom",
@@ -2449,19 +2475,21 @@
         "37639447689-1:auditcarriere:job_board::AuditCarriere:proof-1",
         "37639447689-1:auditcarriere:job_board::AuditCarriere:proof-2",
         "37640187784-1:auditcarriere:job_board::AuditCarriere:proof-1",
-        "37640187784-1:auditcarriere:job_board::AuditCarriere:proof-2"
+        "37640187784-1:auditcarriere:job_board::AuditCarriere:proof-2",
+        "37640241831-1:auditcarriere:job_board::AuditCarriere:proof-1",
+        "37640241831-1:auditcarriere:job_board::AuditCarriere:proof-2"
       ],
-      "consecutive_green_proofs": 22,
+      "consecutive_green_proofs": 24,
       "certification_provenance": [
-        "37640187784-1:auditcarriere:job_board::AuditCarriere:proof-1",
-        "37640187784-1:auditcarriere:job_board::AuditCarriere:proof-2"
+        "37640241831-1:auditcarriere:job_board::AuditCarriere:proof-1",
+        "37640241831-1:auditcarriere:job_board::AuditCarriere:proof-2"
       ],
       "adapter_version": "2d386ff1a48c4d73135ff4d3e515af918d64b7d0",
-      "code_commit_sha": "ae826cd0332ad44feeab747fcda1b739a50a86fc",
+      "code_commit_sha": "39eacccee7eb78c730bc5a0799bdd8e88099795a",
       "config_hash": "ddffaf543e8c54603cf6feaa319dc63ce3ebce7f98af25fc472e109dd0b02fbf",
       "authority_contract_version": "schema1:506c08344017a29c4d8862b34b11983bdbbf0508935e42133d464eb8bccd03b9",
       "certified_job_count": 140,
-      "freshness_at": "2026-10-07T14:57:50.961315+00:00",
+      "freshness_at": "2026-10-07T14:58:20.140397+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "job_board::AuditCarriere",
