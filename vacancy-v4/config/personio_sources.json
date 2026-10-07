@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "provider": "personio",
+  "sources": [
+    {
+      "name": "Coinmerce",
+      "board_url": "https://coinmerce.jobs.personio.com",
+      "feed_url": "https://coinmerce.jobs.personio.com/xml?language=en",
+      "first_party_evidence_url": "https://coinmerce.jobs.personio.com/"
+    }
+  ]
+}
