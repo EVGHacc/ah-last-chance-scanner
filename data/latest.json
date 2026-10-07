@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "19:57",
-  "scheduledAt": "2026-10-07T19:57:00+02:00",
-  "rawScheduledSlot": "19:57",
-  "rawScheduledAt": "2026-10-07T19:57:00+02:00",
-  "startedAt": "2026-10-07T19:57:00.353236+02:00",
-  "completedAt": "2026-10-07T19:57:06.422690+02:00",
-  "checkedAt": "2026-10-07T19:57:06.422690+02:00",
+  "scheduledSlot": "20:00",
+  "scheduledAt": "2026-10-07T20:00:00+02:00",
+  "rawScheduledSlot": "20:00",
+  "rawScheduledAt": "2026-10-07T20:00:00+02:00",
+  "startedAt": "2026-10-07T20:00:00.352061+02:00",
+  "completedAt": "2026-10-07T20:00:06.830403+02:00",
+  "checkedAt": "2026-10-07T20:00:06.830403+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2184,18 +2184,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 417144,
-          "title": "AH Vloerbrood wit heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 466494,
           "title": "AH Meerzaden croissant",
           "brand": "AH",
@@ -2277,6 +2265,18 @@
           "stock": 2,
           "priceWas": "1.29",
           "priceNow": "0.97",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 417144,
+          "title": "AH Vloerbrood wit heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
           "markdownExpirationDate": "2026-10-07"
         },
         {
