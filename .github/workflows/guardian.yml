@@ -8,7 +8,7 @@ on:
       - 'scripts/guardian.py'
   schedule:
     # Redundant pre-evening starters. Both UTC variants cover CET/CEST.
-    # The local-time gate below admits only 16:55-17:40 Europe/Amsterdam.
+    # The local-time gate below admits the full 16:55-22:30 Europe/Amsterdam production window.
     - cron: '55 14,15,16 * * *'
     - cron: '5,15,25,35 15,16 * * *'
   workflow_dispatch:
@@ -38,7 +38,7 @@ jobs:
           from zoneinfo import ZoneInfo
           n=datetime.now(ZoneInfo("Europe/Amsterdam"))
           m=n.hour*60+n.minute
-          run=(16*60+55 <= m <= 17*60+40)
+          run=(16*60+55 <= m <= 22*60+30)
           with open(os.environ["GITHUB_OUTPUT"],"a") as f:
               f.write(f"run={str(run).lower()}\n")
           print("Amsterdam",n.isoformat(),"guardian start admitted",run)
