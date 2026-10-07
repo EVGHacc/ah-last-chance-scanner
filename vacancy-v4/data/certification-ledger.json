@@ -2,7 +2,7 @@
   "schema_version": 1,
   "target_count": 106,
   "certified_coverage": 10,
-  "updated_at": "2026-10-07T14:31:55.913152+00:00",
+  "updated_at": "2026-10-07T14:55:18.768561+00:00",
   "records": [
     {
       "provider": null,
@@ -2177,19 +2177,21 @@
         "37595830771-1:lever:employer::Finom:proof-1",
         "37595830771-1:lever:employer::Finom:proof-2",
         "37604431845-1:lever:employer::Finom:proof-1",
-        "37604431845-1:lever:employer::Finom:proof-2"
+        "37604431845-1:lever:employer::Finom:proof-2",
+        "37639447689-1:lever:employer::Finom:proof-1",
+        "37639447689-1:lever:employer::Finom:proof-2"
       ],
-      "consecutive_green_proofs": 54,
+      "consecutive_green_proofs": 56,
       "certification_provenance": [
-        "37604431845-1:lever:employer::Finom:proof-1",
-        "37604431845-1:lever:employer::Finom:proof-2"
+        "37639447689-1:lever:employer::Finom:proof-1",
+        "37639447689-1:lever:employer::Finom:proof-2"
       ],
       "adapter_version": "07ddb14df2f887ec42896348e664719f6d3e3702",
-      "code_commit_sha": "55ac0fd237d03549236d51b888540d64625ec202",
+      "code_commit_sha": "ae826cd0332ad44feeab747fcda1b739a50a86fc",
       "config_hash": "a31ac116986e8c0baa90cf6c2f277113ccce74ea2f28225dc2af503a75cfbfdf",
       "authority_contract_version": "schema1:506c08344017a29c4d8862b34b11983bdbbf0508935e42133d464eb8bccd03b9",
-      "certified_job_count": 78,
-      "freshness_at": "2026-10-07T10:00:27.940171+00:00",
+      "certified_job_count": 77,
+      "freshness_at": "2026-10-07T14:46:13.615948+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "employer::Finom",
@@ -2441,19 +2443,21 @@
         "37595830771-1:auditcarriere:job_board::AuditCarriere:proof-1",
         "37595830771-1:auditcarriere:job_board::AuditCarriere:proof-2",
         "37604431845-1:auditcarriere:job_board::AuditCarriere:proof-1",
-        "37604431845-1:auditcarriere:job_board::AuditCarriere:proof-2"
+        "37604431845-1:auditcarriere:job_board::AuditCarriere:proof-2",
+        "37639447689-1:auditcarriere:job_board::AuditCarriere:proof-1",
+        "37639447689-1:auditcarriere:job_board::AuditCarriere:proof-2"
       ],
-      "consecutive_green_proofs": 18,
+      "consecutive_green_proofs": 20,
       "certification_provenance": [
-        "37604431845-1:auditcarriere:job_board::AuditCarriere:proof-1",
-        "37604431845-1:auditcarriere:job_board::AuditCarriere:proof-2"
+        "37639447689-1:auditcarriere:job_board::AuditCarriere:proof-1",
+        "37639447689-1:auditcarriere:job_board::AuditCarriere:proof-2"
       ],
       "adapter_version": "2d386ff1a48c4d73135ff4d3e515af918d64b7d0",
-      "code_commit_sha": "55ac0fd237d03549236d51b888540d64625ec202",
+      "code_commit_sha": "ae826cd0332ad44feeab747fcda1b739a50a86fc",
       "config_hash": "ddffaf543e8c54603cf6feaa319dc63ce3ebce7f98af25fc472e109dd0b02fbf",
       "authority_contract_version": "schema1:506c08344017a29c4d8862b34b11983bdbbf0508935e42133d464eb8bccd03b9",
       "certified_job_count": 140,
-      "freshness_at": "2026-10-07T10:05:16.163889+00:00",
+      "freshness_at": "2026-10-07T14:51:29.701430+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "job_board::AuditCarriere",
