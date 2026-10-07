@@ -32,7 +32,7 @@ def _proof(source: Source, jobs):
         unique_jobs=len(jobs),
         authoritative_total=None,
         exhausted=True,
-        evidence_kind="official_complete_payload",
+        evidence_kind="provider_complete_payload",
     )
     proof.validate()
     return proof
