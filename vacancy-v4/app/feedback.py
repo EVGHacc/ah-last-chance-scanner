@@ -15,6 +15,8 @@ LABEL_WEIGHTS = {
     "too_junior": -2,
     "wrong_location": -3,
     "too_technical": -1,
+    "insufficient_experience": -2,
+    "no_management_role": -2,
     "good_domain_fit": 1,
     "good_seniority": 1,
 }
@@ -22,7 +24,8 @@ PHRASES = (
     ("niet relevant", "not_relevant"), ("not relevant", "not_relevant"),
     ("te junior", "too_junior"), ("wrong location", "wrong_location"),
     ("verkeerde locatie", "wrong_location"), ("te technisch", "too_technical"),
-    ("too technical", "too_technical"), ("goede inhoudelijke fit", "good_domain_fit"),
+    ("too technical", "too_technical"), ("onvoldoende ervaring", "insufficient_experience"),
+    ("geen management rol", "no_management_role"), ("goede inhoudelijke fit", "good_domain_fit"),
     ("good fit", "good_domain_fit"), ("goede senioriteit", "good_seniority"),
     ("relevant", "relevant"),
 )
