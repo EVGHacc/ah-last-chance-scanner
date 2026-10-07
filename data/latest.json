@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "17:57",
-  "scheduledAt": "2026-10-07T17:57:00+02:00",
-  "rawScheduledSlot": "17:57",
-  "rawScheduledAt": "2026-10-07T17:57:00+02:00",
-  "startedAt": "2026-10-07T17:58:15.427523+02:00",
-  "completedAt": "2026-10-07T17:58:19.241002+02:00",
-  "checkedAt": "2026-10-07T17:58:19.241002+02:00",
+  "scheduledSlot": "18:00",
+  "scheduledAt": "2026-10-07T18:00:00+02:00",
+  "rawScheduledSlot": "18:00",
+  "rawScheduledAt": "2026-10-07T18:00:00+02:00",
+  "startedAt": "2026-10-07T18:01:15.560850+02:00",
+  "completedAt": "2026-10-07T18:01:19.447462+02:00",
+  "checkedAt": "2026-10-07T18:01:19.447462+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -381,15 +381,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 224,
+      "totalBargainItems": 223,
       "meatItems": 19,
-      "meat70Items": 0,
-      "meat70Stock": 0,
+      "meat70Items": 1,
+      "meat70Stock": 1.0,
       "bakeryItems": 8,
       "bakery70Items": 1,
       "bakery70Stock": 3.0,
-      "all70Items": 12,
-      "all70Stock": 33.0,
+      "all70Items": 13,
+      "all70Stock": 34.0,
       "all70": [
         {
           "productId": 435435,
@@ -414,6 +414,18 @@
           "priceWas": "4.49",
           "priceNow": "1.35",
           "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 412503,
+          "title": "AH BBQ spareribs zoet",
+          "brand": "AH",
+          "size": "ca. 720 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "10.36",
+          "priceNow": "3.11",
+          "markdownExpirationDate": "2026-10-07"
         },
         {
           "productId": 612625,
@@ -538,6 +550,18 @@
       ],
       "items": [
         {
+          "productId": 412503,
+          "title": "AH BBQ spareribs zoet",
+          "brand": "AH",
+          "size": "ca. 720 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "10.36",
+          "priceNow": "3.11",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 364883,
           "title": "AH Greenfields Hachee",
           "brand": "AH Greenfields",
@@ -607,18 +631,6 @@
           "stock": 1,
           "priceWas": "6.89",
           "priceNow": "4.13",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 412503,
-          "title": "AH BBQ spareribs zoet",
-          "brand": "AH",
-          "size": "ca. 720 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "10.36",
-          "priceNow": "6.22",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -876,8 +888,8 @@
       "bakeryItems": 9,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 17,
-      "all70Stock": 67.0,
+      "all70Items": 18,
+      "all70Stock": 68.0,
       "all70": [
         {
           "productId": 397576,
@@ -925,6 +937,18 @@
           "stock": 3,
           "priceWas": "1.59",
           "priceNow": "0.48",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 121581,
+          "title": "Optimel Drinkyoghurt aardbei-kers",
+          "brand": "Optimel",
+          "size": "1 l",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.99",
+          "priceNow": "0.30",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -1737,7 +1761,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 125,
+      "totalBargainItems": 124,
       "meatItems": 11,
       "meat70Items": 1,
       "meat70Stock": 15.0,
