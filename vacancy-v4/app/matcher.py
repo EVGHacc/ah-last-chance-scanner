@@ -85,7 +85,8 @@ def score_job(employer: str, job: dict, source: str="", feedback_records: list[d
     # are normally below target unless the title itself signals executive/head/director
     # scope or another explicit high-seniority designation.
     executive=any(_has_term(title_text,t) for t in EXECUTIVE_SENIORITY)
-    too_junior=any(_has_term(title_text,t) for t in TOO_JUNIOR_SENIORITY) and not executive
+    description_executive=any(_has_term(text,t) for t in EXECUTIVE_SENIORITY)
+    too_junior=any(_has_term(title_text,t) for t in TOO_JUNIOR_SENIORITY) and not (executive or description_executive)
     if too_junior:
         base-=3
 
