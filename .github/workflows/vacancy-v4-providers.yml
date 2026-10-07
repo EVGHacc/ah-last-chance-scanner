@@ -172,13 +172,14 @@ jobs:
           data_dir=pathlib.Path("data")
           ledger_path=data_dir/"certification-ledger.json"
           manifest=json.loads(pathlib.Path("config/sources.json").read_text())
-          if manifest.get("target_count")!=105 or len(manifest.get("sources",[]))!=105:
-              raise SystemExit("manifest is not exact 105")
+          target_count=manifest.get("target_count")
+          if not isinstance(target_count,int) or target_count<=0 or len(manifest.get("sources",[]))!=target_count:
+              raise SystemExit("manifest target_count does not match live source count")
 
           if ledger_path.exists():
               ledger=json.loads(ledger_path.read_text())
-              if ledger.get("target_count")!=105:
-                  raise SystemExit("invalid existing certification ledger")
+              if ledger.get("target_count")!=target_count:
+                  raise SystemExit("certification ledger target_count does not match live manifest")
               records=ledger["records"]
           else:
               records=[]
@@ -273,14 +274,14 @@ jobs:
           ordered=[by_id[f'{s["kind"]}::{s["name"]}'] for s in manifest["sources"]]
           ledger={
               "schema_version":1,
-              "target_count":105,
+              "target_count":target_count,
               "certified_coverage":certified_count(ordered),
               "updated_at":datetime.now(timezone.utc).isoformat(),
               "records":ordered
           }
           ledger_path.parent.mkdir(parents=True,exist_ok=True)
           ledger_path.write_text(json.dumps(ledger,ensure_ascii=False,indent=2)+"\n")
-          print(json.dumps({"promoted_sources":promoted,"certified_coverage":ledger["certified_coverage"],"target":105}))
+          print(json.dumps({"promoted_sources":promoted,"certified_coverage":ledger["certified_coverage"],"target":target_count}))
           PY
       - name: Commit accepted evidence and ledger
         run: |
