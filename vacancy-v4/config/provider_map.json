@@ -1209,6 +1209,13 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "workday": {
+          "status": "PROVEN",
+          "evidence_url": "https://mufgub.wd3.myworkdayjobs.com/en-US/MUFG-Careers",
+          "checked_at": "2026-10-07T00:01:56Z",
+          "route_type": "ats",
+          "reason": "First-party careers/job route verified during classification sweep"
         }
       }
     },
@@ -1421,6 +1428,13 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "direct_job_board": {
+          "status": "PROVEN",
+          "evidence_url": "https://www.nn-careers.com/en/",
+          "checked_at": "2026-10-07T00:01:56Z",
+          "route_type": "first_party_job_board",
+          "reason": "First-party careers/job route verified during classification sweep"
         }
       }
     },
@@ -1470,6 +1484,13 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "direct_job_board": {
+          "status": "PROVEN",
+          "evidence_url": "https://search.jobs.barclays/en/search-jobs/",
+          "checked_at": "2026-10-07T00:01:56Z",
+          "route_type": "first_party_job_board",
+          "reason": "First-party careers/job route verified during classification sweep"
         }
       }
     },
@@ -1549,6 +1570,13 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "direct_job_board": {
+          "status": "PROVEN",
+          "evidence_url": "https://careers.americanexpress.com/en/sites/CX_1/jobs",
+          "checked_at": "2026-10-07T00:01:56Z",
+          "route_type": "first_party_job_board",
+          "reason": "First-party careers/job route verified during classification sweep"
         }
       }
     },
@@ -1649,6 +1677,13 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "direct_job_board": {
+          "status": "PROVEN",
+          "evidence_url": "https://careers.google.com/jobs/",
+          "checked_at": "2026-10-07T00:01:56Z",
+          "route_type": "first_party_job_board",
+          "reason": "First-party careers/job route verified during classification sweep"
         }
       }
     },
@@ -1698,6 +1733,13 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "direct_job_board": {
+          "status": "PROVEN",
+          "evidence_url": "https://www.metacareers.com/jobs/",
+          "checked_at": "2026-10-07T00:01:56Z",
+          "route_type": "first_party_job_board",
+          "reason": "First-party careers/job route verified during classification sweep"
         }
       }
     },
@@ -2352,6 +2394,13 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "direct_job_board": {
+          "status": "PROVEN",
+          "evidence_url": "https://careers.ibanfirst.com/",
+          "checked_at": "2026-10-07T00:01:56Z",
+          "route_type": "first_party_job_board",
+          "reason": "First-party careers/job route verified during classification sweep"
         }
       }
     },
