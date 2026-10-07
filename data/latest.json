@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "19:39",
-  "scheduledAt": "2026-10-07T19:39:00+02:00",
-  "rawScheduledSlot": "19:39",
-  "rawScheduledAt": "2026-10-07T19:39:00+02:00",
-  "startedAt": "2026-10-07T19:39:00.353863+02:00",
-  "completedAt": "2026-10-07T19:39:05.118990+02:00",
-  "checkedAt": "2026-10-07T19:39:05.118990+02:00",
+  "scheduledSlot": "19:40",
+  "scheduledAt": "2026-10-07T19:40:00+02:00",
+  "rawScheduledSlot": "19:40",
+  "rawScheduledAt": "2026-10-07T19:40:00+02:00",
+  "startedAt": "2026-10-07T19:40:00.362143+02:00",
+  "completedAt": "2026-10-07T19:40:05.006074+02:00",
+  "checkedAt": "2026-10-07T19:40:05.006074+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -33,7 +33,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 38,
-      "all70Stock": 78.0,
+      "all70Stock": 77.0,
       "all70": [
         {
           "productId": 578948,
@@ -192,18 +192,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 578787,
-          "title": "AH Terra Plantaardig stoommaaltijd gyoza bowl",
-          "brand": "AH Terra",
-          "size": "450 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "5.99",
-          "priceNow": "1.80",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 563781,
           "title": "AH Pasta kip kebab M",
           "brand": "AH",
@@ -213,6 +201,18 @@
           "stock": 2,
           "priceWas": "4.49",
           "priceNow": "1.35",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 578787,
+          "title": "AH Terra Plantaardig stoommaaltijd gyoza bowl",
+          "brand": "AH Terra",
+          "size": "450 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "5.99",
+          "priceNow": "1.80",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -3405,52 +3405,16 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 153,
-      "meatItems": 21,
+      "totalBargainItems": 149,
+      "meatItems": 20,
       "meat70Items": 4,
-      "meat70Stock": 19.0,
+      "meat70Stock": 18.0,
       "bakeryItems": 5,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 40,
-      "all70Stock": 81.0,
+      "all70Items": 37,
+      "all70Stock": 78.0,
       "all70": [
-        {
-          "productId": 435438,
-          "title": "AH Jonge bladsla veldsla kleinverpakking",
-          "brand": "AH",
-          "size": "50 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "1.39",
-          "priceNow": "0.42",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 139463,
-          "title": "AH Rauwkost paprika",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "2.49",
-          "priceNow": "0.75",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 455363,
-          "title": "AH Oven & airfryer courgette rode paprika",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "2.89",
-          "priceNow": "0.87",
-          "markdownExpirationDate": "2026-10-07"
-        },
         {
           "productId": 517597,
           "title": "AH IJsbergsla fijngesneden",
@@ -3464,18 +3428,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 185200,
-          "title": "AH Gemengde salade",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "2.69",
-          "priceNow": "0.81",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 582606,
           "title": "AH Biologisch Uiensoep verspakket",
           "brand": "AH Biologisch",
@@ -3485,18 +3437,6 @@
           "stock": 1,
           "priceWas": "5.99",
           "priceNow": "1.80",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 611653,
-          "title": "AH Slaverrijker quinoa",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.19",
-          "priceNow": "0.66",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -3570,6 +3510,30 @@
           "priceWas": "5.79",
           "priceNow": "1.74",
           "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 185200,
+          "title": "AH Gemengde salade",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 6,
+          "priceWas": "2.69",
+          "priceNow": "0.81",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 435438,
+          "title": "AH Jonge bladsla veldsla kleinverpakking",
+          "brand": "AH",
+          "size": "50 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.39",
+          "priceNow": "0.42",
+          "markdownExpirationDate": "2026-10-08"
         },
         {
           "productId": 544086,
@@ -3740,18 +3704,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 383505,
-          "title": "AH Excellent Black angus burger",
-          "brand": "AH Excellent",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "5.49",
-          "priceNow": "1.65",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 436756,
           "title": "AH Biologisch Hamburger 2 stuks",
           "brand": "AH Biologisch",
@@ -3773,6 +3725,18 @@
           "stock": 1,
           "priceWas": "6.49",
           "priceNow": "1.95",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 383505,
+          "title": "AH Excellent Black angus burger",
+          "brand": "AH Excellent",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "5.49",
+          "priceNow": "1.65",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -3910,18 +3874,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 383505,
-          "title": "AH Excellent Black angus burger",
-          "brand": "AH Excellent",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "5.49",
-          "priceNow": "1.65",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 436756,
           "title": "AH Biologisch Hamburger 2 stuks",
           "brand": "AH Biologisch",
@@ -3946,15 +3898,15 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 603420,
-          "title": "AH Gevulde gehaktballen met satesmaak",
-          "brand": "AH",
-          "size": "250 g",
+          "productId": 383505,
+          "title": "AH Excellent Black angus burger",
+          "brand": "AH Excellent",
+          "size": "2 stuks",
           "category": "Vlees",
-          "discountPct": 40,
+          "discountPct": 70,
           "stock": 1,
-          "priceWas": "4.99",
-          "priceNow": "2.99",
+          "priceWas": "5.49",
+          "priceNow": "1.65",
           "markdownExpirationDate": "2026-10-07"
         },
         {
