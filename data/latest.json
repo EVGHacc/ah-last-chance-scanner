@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "19:50",
-  "scheduledAt": "2026-10-07T19:50:00+02:00",
-  "rawScheduledSlot": "19:50",
-  "rawScheduledAt": "2026-10-07T19:50:00+02:00",
-  "startedAt": "2026-10-07T19:50:00.351020+02:00",
-  "completedAt": "2026-10-07T19:50:05.578655+02:00",
-  "checkedAt": "2026-10-07T19:50:05.578655+02:00",
+  "scheduledSlot": "19:51",
+  "scheduledAt": "2026-10-07T19:51:00+02:00",
+  "rawScheduledSlot": "19:51",
+  "rawScheduledAt": "2026-10-07T19:51:00+02:00",
+  "startedAt": "2026-10-07T19:51:00.329282+02:00",
+  "completedAt": "2026-10-07T19:51:06.432438+02:00",
+  "checkedAt": "2026-10-07T19:51:06.432438+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2945,40 +2945,16 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 227,
+      "totalBargainItems": 223,
       "meatItems": 16,
       "meat70Items": 10,
       "meat70Stock": 17.0,
-      "bakeryItems": 61,
-      "bakery70Items": 2,
-      "bakery70Stock": 7.0,
-      "all70Items": 58,
-      "all70Stock": 126.0,
+      "bakeryItems": 59,
+      "bakery70Items": 1,
+      "bakery70Stock": 1.0,
+      "all70Items": 55,
+      "all70Stock": 113.0,
       "all70": [
-        {
-          "productId": 418286,
-          "title": "AH Slamelange rodebiet",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "2.69",
-          "priceNow": "0.81",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 221221,
-          "title": "AH Salademix",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "1.49",
-          "priceNow": "0.45",
-          "markdownExpirationDate": "2026-10-07"
-        },
         {
           "productId": 96399,
           "title": "AH Eikenblad slamelange",
@@ -3016,15 +2992,27 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 494448,
-          "title": "AH Macaroni spaghetti groente",
+          "productId": 418286,
+          "title": "AH Slamelange rodebiet",
           "brand": "AH",
-          "size": "450 g",
+          "size": "150 g",
           "category": "Groente, aardappelen",
           "discountPct": 70,
           "stock": 1,
-          "priceWas": "1.89",
-          "priceNow": "0.57",
+          "priceWas": "2.69",
+          "priceNow": "0.81",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 221221,
+          "title": "AH Salademix",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.49",
+          "priceNow": "0.45",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -3037,18 +3025,6 @@
           "stock": 1,
           "priceWas": "1.79",
           "priceNow": "0.54",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 520310,
-          "title": "AH Verse appel aardbei blauwe bes",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "2.49",
-          "priceNow": "0.75",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -3172,18 +3148,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 365984,
-          "title": "AH Volkoren sandwich old amsterdam",
-          "brand": "AH",
-          "size": "2 stuks",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.50",
-          "priceNow": "1.05",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 579426,
           "title": "AH Oude kaas L",
           "brand": "AH",
@@ -3241,6 +3205,18 @@
           "stock": 1,
           "priceWas": "5.59",
           "priceNow": "1.38",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 365984,
+          "title": "AH Volkoren sandwich old amsterdam",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.50",
+          "priceNow": "1.05",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -3518,18 +3494,6 @@
           "priceWas": "0.99",
           "priceNow": "0.30",
           "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 170056,
-          "title": "AH Bitterkoeken",
-          "brand": "AH",
-          "size": "4 stuks",
-          "category": "Bakkerij",
-          "discountPct": 70,
-          "stock": 6,
-          "priceWas": "2.99",
-          "priceNow": "0.67",
-          "markdownExpirationDate": "2026-10-08"
         },
         {
           "productId": 609162,
@@ -4388,18 +4352,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 362217,
-          "title": "AH Speltbol",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.59",
-          "priceNow": "0.50",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 574950,
           "title": "AH Pizza donut jalapeño cheddar",
           "brand": "AH",
@@ -4470,18 +4422,6 @@
           "priceWas": "1.89",
           "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 170056,
-          "title": "AH Bitterkoeken",
-          "brand": "AH",
-          "size": "4 stuks",
-          "category": "Bakkerij",
-          "discountPct": 70,
-          "stock": 6,
-          "priceWas": "2.99",
-          "priceNow": "0.67",
-          "markdownExpirationDate": "2026-10-08"
         },
         {
           "productId": 515786,
