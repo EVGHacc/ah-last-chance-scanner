@@ -65,6 +65,15 @@ function feedbackPage(ok,message){return `<!doctype html><meta name="viewport" c
 
 async function rawBody(req){const chunks=[];for await(const chunk of req)chunks.push(Buffer.isBuffer(chunk)?chunk:Buffer.from(chunk));return Buffer.concat(chunks).toString("utf8")}
 export default async function handler(req,res){
+  if(req.method==="GET"){
+    const u=new URL(req.url,"https://feedback.invalid");
+    if(u.searchParams.get("mode")==="links"){
+      const source=u.searchParams.get("source"),job_id=u.searchParams.get("job_id"),source_url=u.searchParams.get("source_url")||"";
+      if(!source||!job_id||!/^[A-Za-z0-9_-]{3,128}$/.test(job_id))return res.status(400).json({error:"invalid identity"});
+      const host=req.headers["x-forwarded-host"]||req.headers.host,proto=req.headers["x-forwarded-proto"]||"https";
+      return res.status(200).json(feedbackLinks({source,job_id,source_url},proto+"://"+host));
+    }
+  }
   if(req.method==="POST" && req.headers["x-feedback-link-request"]==="1"){
     try{
       const raw=await rawBody(req), body=JSON.parse(raw||"{}");
