@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "21:05",
-  "scheduledAt": "2026-10-07T21:05:00+02:00",
-  "rawScheduledSlot": "21:05",
-  "rawScheduledAt": "2026-10-07T21:05:00+02:00",
-  "startedAt": "2026-10-07T21:05:00.359150+02:00",
-  "completedAt": "2026-10-07T21:05:08.549825+02:00",
-  "checkedAt": "2026-10-07T21:05:08.549825+02:00",
+  "scheduledSlot": "21:06",
+  "scheduledAt": "2026-10-07T21:06:00+02:00",
+  "rawScheduledSlot": "21:06",
+  "rawScheduledAt": "2026-10-07T21:06:00+02:00",
+  "startedAt": "2026-10-07T21:06:00.361880+02:00",
+  "completedAt": "2026-10-07T21:06:06.378970+02:00",
+  "checkedAt": "2026-10-07T21:06:06.378970+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2376,18 +2376,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 230710,
-          "title": "AH Ham kaas croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 468259,
           "title": "AH Kaneelbroodje",
           "brand": "AH",
@@ -2421,6 +2409,18 @@
           "stock": 3,
           "priceWas": "0.28",
           "priceNow": "0.24",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 230710,
+          "title": "AH Ham kaas croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -5808,18 +5808,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 606074,
-          "title": "AH Pistache croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 5,
-          "priceWas": "1.29",
-          "priceNow": "0.77",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 168184,
           "title": "AH Tijger wit heel",
           "brand": "AH",
@@ -5841,6 +5829,18 @@
           "stock": 4,
           "priceWas": "1.99",
           "priceNow": "1.19",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 606074,
+          "title": "AH Pistache croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 3,
+          "priceWas": "1.29",
+          "priceNow": "0.77",
           "markdownExpirationDate": "2026-10-07"
         },
         {
