@@ -24,6 +24,12 @@ SENIOR_TERMS = {
 }
 LOCATION_TERMS = ("amsterdam", "amstelveen", "haarlem", "heemstede", "netherlands", "nl", "london", "remote", "hybride", "hybrid")
 NEGATIVE_TERMS = ("intern", "internship", "graduate", "junior", "associate")
+TOO_JUNIOR_SENIORITY = ("manager", "senior manager")
+EXECUTIVE_SENIORITY = ("chief", "cco", "cro", "mlro", "head", "director")
+
+def _has_term(text: str, term: str) -> bool:
+    """Match complete tokens/phrases, not substrings such as cco in accountant."""
+    return re.search(rf"(?<!\\w){re.escape(term)}(?!\\w)", text) is not None
 TECHNICAL_TERMS = ("engineer","engineering","developer","software","data scientist","machine learning","architect","technical","technology")
 MANAGEMENT_TERMS = ("chief","cco","cro","mlro","head","director","senior manager","manager","lead","people manager","team lead")
 
@@ -55,7 +61,7 @@ def _features(job: dict) -> dict:
     title=str(job.get("title") or "").casefold()
     location=str(job.get("location") or job.get("office") or "").casefold()
     return {
-        "domains": [term for term in DOMAIN_TERMS if term in text],
+        "domains": [term for term in DOMAIN_TERMS if _has_term(text,term)],
         "technical": any(term in text for term in TECHNICAL_TERMS),
         "junior": any(re.search(rf"\b{re.escape(term)}\b", title) for term in NEGATIVE_TERMS),
         "management": any(term in text for term in MANAGEMENT_TERMS),
@@ -65,8 +71,8 @@ def _features(job: dict) -> dict:
 
 def score_job(employer: str, job: dict, source: str="", feedback_records: list[dict] | None=None) -> Match:
     text=_text(job); title=str(job.get("title") or ""); title_text=title.casefold(); location=str(job.get("location") or job.get("office") or "")
-    domain=[term for term in DOMAIN_TERMS if term in text]
-    senior=[term for term in SENIOR_TERMS if term in title_text]
+    domain=[term for term in DOMAIN_TERMS if _has_term(text,term)]
+    senior=[term for term in SENIOR_TERMS if _has_term(title_text,term)]
     negative=[term for term in NEGATIVE_TERMS if re.search(rf"\b{re.escape(term)}\b", title.casefold())]
     loc_ok=any(term in location.casefold() for term in LOCATION_TERMS)
 
@@ -75,6 +81,14 @@ def score_job(employer: str, job: dict, source: str="", feedback_records: list[d
     location_score=2 if loc_ok else 0
     base=domain_score+senior_score+location_score-(4 if negative else 0)
 
+    # User target is senior leadership/expert level. Plain Manager/Senior Manager roles
+    # are normally below target unless the title itself signals executive/head/director
+    # scope or another explicit high-seniority designation.
+    executive=any(_has_term(title_text,t) for t in EXECUTIVE_SENIORITY)
+    too_junior=any(_has_term(title_text,t) for t in TOO_JUNIOR_SENIORITY) and not executive
+    if too_junior:
+        base-=3
+
     records=feedback_records or []
     exact=feedback_adjustment(source,str(job.get("job_id") or ""),records) if source else 0
     learned,learned_reasons=feature_feedback_adjustment(_features(job),records)
@@ -82,7 +96,7 @@ def score_job(employer: str, job: dict, source: str="", feedback_records: list[d
 
     why=tuple(domain[:4]+senior[:2])
     limiters=() if loc_ok else ("location outside Amsterdam/Netherlands/London/fully remote preference",)
-    mismatch=tuple(negative)+learned_reasons
+    mismatch=tuple(negative)+(("seniority: manager/senior manager normally below target",) if too_junior else ())+learned_reasons
     url=str(job.get("apply_url") or job.get("job_url") or "")
     return Match(employer,str(job.get("job_id") or ""),title,location,url,score,why,limiters,mismatch)
 
