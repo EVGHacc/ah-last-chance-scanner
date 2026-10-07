@@ -70,7 +70,7 @@ class AshbyBatchIndependentQA(unittest.TestCase):
         self.assertEqual(states["OpenAI"],"verified_complete")
         self.assertEqual(states["Mollie"],"verified_complete")
 
-    def test_unreconciled_first_party_only_job_fails_closed(self):
+    def test_first_party_only_is_temporal_drift_diagnostic(self):
         extra="00000000-0000-4000-8000-999999999999"
         def html(url):
             if url=="https://jobs.mollie.com/vacancies":
@@ -80,9 +80,12 @@ class AshbyBatchIndependentQA(unittest.TestCase):
             return matching_html(url)
         result=run_batch(lambda url: good(url.rsplit("/",1)[-1]),html)
         row=next(x for x in result["sources"] if x["name"]=="Mollie")
-        self.assertEqual(row["coverage"],"unproven")
-        self.assertEqual(row["jobs"],[])
-        self.assertIn("not live/apply-linked",row["error"])
+        self.assertEqual(row["coverage"],"verified_complete")
+        self.assertEqual(row["unique_jobs"],1)
+        self.assertEqual(row["first_party_only_jobs"],1)
+        self.assertTrue(row["first_party_drift_detected"])
+        self.assertEqual(row["reconciled_first_party_only_ids"],[])
+        self.assertEqual(row["jobs"][0]["record_source"],"ashby_public_api")
 
     def test_every_green_source_has_persisted_title_and_summary_per_job(self):
         result=run_batch(lambda url: good(url.rsplit("/",1)[-1]),matching_html)
