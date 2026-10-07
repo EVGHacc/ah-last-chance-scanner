@@ -499,6 +499,13 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "direct_job_board": {
+          "status": "NO_PUBLIC_BOARD",
+          "evidence_url": "https://www.egonzehnder.com/join-us",
+          "checked_at": "2026-10-07T03:57:04Z",
+          "route_type": "no_public_board",
+          "reason": "First-party page directs client-role candidates to submit a CV to its leadership database; published open roles described there are internal firm roles"
         }
       }
     },
@@ -521,6 +528,13 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "direct_job_board": {
+          "status": "PROVEN",
+          "evidence_url": "https://www.ferocia.nl/jobboard",
+          "checked_at": "2026-10-07T03:57:04Z",
+          "route_type": "first_party_job_board",
+          "reason": "First-party Jobboard lists current vacancies and assignments with detail links"
         }
       }
     },
@@ -565,6 +579,13 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "direct_job_board": {
+          "status": "PROVEN",
+          "evidence_url": "https://www.globalfintechtalent.com/fintechjobs",
+          "checked_at": "2026-10-07T03:57:04Z",
+          "route_type": "first_party_job_board",
+          "reason": "First-party Fintech Jobs page exposes Jobs navigation and Explore All Jobs route"
         }
       }
     },
@@ -638,6 +659,13 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "direct_job_board": {
+          "status": "PROVEN",
+          "evidence_url": "https://www.hanamiinternational.com/jobs",
+          "checked_at": "2026-10-07T03:57:04Z",
+          "route_type": "first_party_job_board",
+          "reason": "First-party site exposes a dedicated Jobs route and candidate application flow"
         }
       }
     },
@@ -996,6 +1024,13 @@
           "status": "UNKNOWN",
           "evidence_url": null,
           "checked_at": null
+        },
+        "direct_job_board": {
+          "status": "NO_PUBLIC_BOARD",
+          "evidence_url": "https://www.russellreynolds.com/en/about/careers",
+          "checked_at": "2026-10-07T03:57:04Z",
+          "route_type": "no_public_board",
+          "reason": "First-party careers page directs candidates for client executive/board opportunities to register interest/submit a CV rather than a public client vacancy board"
         }
       }
     },
