@@ -1,11 +1,11 @@
 {
   "run_date": "2026-10-07",
   "target_expected": 104,
-  "target_proven": 20,
-  "vacancy_coverage_percent": 19.2,
+  "target_proven": 22,
+  "vacancy_coverage_percent": 21.2,
   "match_audit": {
-    "candidate_count": 368,
-    "matched_count": 368,
+    "candidate_count": 367,
+    "matched_count": 367,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -86,7 +86,7 @@
     {
       "name": "EU Remote jobs",
       "kind": "employer",
-      "coverage": "partial",
+      "coverage": "unproven",
       "status": "official_site_scanned"
     },
     {
@@ -136,12 +136,6 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_ats_scanned"
-    },
-    {
-      "name": "Mastercard",
-      "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_site_scanned"
     },
     {
       "name": "McKinsey",
@@ -234,6 +228,12 @@
       "status": "official_site_scanned"
     },
     {
+      "name": "State Street",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
       "name": "Stripe",
       "kind": "employer",
       "coverage": "partial",
@@ -248,7 +248,7 @@
     {
       "name": "Thunes",
       "kind": "employer",
-      "coverage": "partial",
+      "coverage": "unproven",
       "status": "official_site_scanned"
     },
     {
@@ -262,12 +262,6 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
-    },
-    {
-      "name": "Visa",
-      "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_ats_scanned"
     },
     {
       "name": "Wise",
@@ -354,12 +348,6 @@
       "status": "official_site_scanned"
     },
     {
-      "name": "Cowen Partners",
-      "kind": "recruiter",
-      "coverage": "partial",
-      "status": "no_public_vacancy_board"
-    },
-    {
       "name": "De Vroed Ten Thierry",
       "kind": "recruiter",
       "coverage": "partial",
@@ -428,8 +416,8 @@
     {
       "name": "Michael Page",
       "kind": "recruiter",
-      "coverage": "unproven",
-      "status": "technical_failure"
+      "coverage": "partial",
+      "status": "official_site_scanned"
     },
     {
       "name": "Morgan McKinley",
@@ -520,7 +508,6 @@
     "DB Contractors UK",
     "McKinsey",
     "Rabobank",
-    "Michael Page",
     "Risk Talent Associates",
     "Robert Walters Interim",
     "Selby Jennings"
