@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "18:50",
-  "scheduledAt": "2026-10-07T18:50:00+02:00",
-  "rawScheduledSlot": "18:50",
-  "rawScheduledAt": "2026-10-07T18:50:00+02:00",
-  "startedAt": "2026-10-07T18:51:15.432380+02:00",
-  "completedAt": "2026-10-07T18:51:20.125358+02:00",
-  "checkedAt": "2026-10-07T18:51:20.125358+02:00",
+  "scheduledSlot": "18:51",
+  "scheduledAt": "2026-10-07T18:51:00+02:00",
+  "rawScheduledSlot": "18:51",
+  "rawScheduledAt": "2026-10-07T18:51:00+02:00",
+  "startedAt": "2026-10-07T18:52:15.688661+02:00",
+  "completedAt": "2026-10-07T18:52:19.668456+02:00",
+  "checkedAt": "2026-10-07T18:52:19.668456+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -501,7 +501,7 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 218,
+      "totalBargainItems": 217,
       "meatItems": 18,
       "meat70Items": 5,
       "meat70Stock": 29.0,
@@ -1253,15 +1253,15 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 167,
+      "totalBargainItems": 181,
       "meatItems": 18,
       "meat70Items": 6,
       "meat70Stock": 13.0,
-      "bakeryItems": 8,
+      "bakeryItems": 9,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 24,
-      "all70Stock": 74.0,
+      "all70Items": 26,
+      "all70Stock": 78.0,
       "all70": [
         {
           "productId": 238928,
@@ -1348,6 +1348,18 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
+          "productId": 577214,
+          "title": "AH Terra Biologisch falafel courgette",
+          "brand": "AH Terra",
+          "size": "150 g",
+          "category": "Vegetarisch, vegan en plantaardig",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 620798,
           "title": "AH Ovenschotel vega kipballetjes Italiaans",
           "brand": "AH",
@@ -1408,18 +1420,6 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
-          "productId": 515264,
-          "title": "AH Terra Plantaardige salade kipkerrie",
-          "brand": "AH Terra",
-          "size": "150 g",
-          "category": "Zuivel, eieren",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "2.39",
-          "priceNow": "0.72",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
           "productId": 613338,
           "title": "AH Kefir vanillesmaak",
           "brand": "AH",
@@ -1429,6 +1429,18 @@
           "stock": 3,
           "priceWas": "1.59",
           "priceNow": "0.48",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 515264,
+          "title": "AH Terra Plantaardige salade kipkerrie",
+          "brand": "AH Terra",
+          "size": "150 g",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "2.39",
+          "priceNow": "0.72",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -1490,6 +1502,18 @@
           "priceWas": "2.99",
           "priceNow": "0.90",
           "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 582832,
+          "title": "AH Borrelnoten sour cream smaak",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Borrel, chips, snacks",
+          "discountPct": 70,
+          "stock": 4,
+          "priceWas": "1.65",
+          "priceNow": "0.50",
+          "markdownExpirationDate": "2026-10-09"
         },
         {
           "productId": 62658,
@@ -1805,6 +1829,18 @@
           "stock": 4,
           "priceWas": "1.59",
           "priceNow": "0.95",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 580174,
+          "title": "Koopmans Brood uit de pan Italiaans",
+          "brand": "Koopmans",
+          "size": "400 g",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -2181,7 +2217,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 141,
+      "totalBargainItems": 142,
       "meatItems": 22,
       "meat70Items": 1,
       "meat70Stock": 15.0,
