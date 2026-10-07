@@ -1,0 +1,42 @@
+name: Vacancy v4 Personio proof pair
+on:
+  workflow_dispatch:
+  push:
+    branches: [vacancy-v4-clean-sheet]
+    paths:
+      - 'vacancy-v4/app/personio_batch.py'
+      - 'vacancy-v4/tests/unit/test_personio_batch.py'
+      - '.github/workflows/vacancy-v4-personio.yml'
+permissions:
+  contents: read
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: vacancy-v4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Independent unit and regression tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Consecutive production proofs
+        run: |
+          python - <<'PY'
+          import json,pathlib,sys
+          from app.personio_batch import run_batch
+          for i in (1,2):
+              r=run_batch()
+              pathlib.Path(f'personio-proof-{i}.json').write_text(json.dumps(r,indent=2)+'\n')
+              print(f'proof {i}: {r["verified_complete"]}/{r["configured_sources"]}, failed={r["failed"]}')
+              if r['failed'] or r['verified_complete']!=r['configured_sources']: sys.exit(1)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: personio-proof-pair-${{ github.run_id }}
+          path: vacancy-v4/personio-proof-*.json
+          retention-days: 90
