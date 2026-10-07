@@ -5,7 +5,7 @@ const labels=[
   ["niet relevant","not_relevant"],["not relevant","not_relevant"],
   ["te junior","too_junior"],["verkeerde locatie","wrong_location"],
   ["wrong location","wrong_location"],["te technisch","too_technical"],
-  ["too technical","too_technical"],["goede inhoudelijke fit","good_domain_fit"],
+  ["too technical","too_technical"],["onvoldoende ervaring","insufficient_experience"],["geen management rol","no_management_role"],["goede inhoudelijke fit","good_domain_fit"],
   ["good fit","good_domain_fit"],["goede senioriteit","good_seniority"],
   ["relevant","relevant"],
 ];
@@ -42,7 +42,7 @@ async function persist(record){
   throw new Error("feedback ledger contention");
 }
 export const config={api:{bodyParser:false}};
-const BUTTON_LABELS=new Set(["relevant","not_relevant","too_junior","wrong_location","too_technical","good_domain_fit","good_seniority"]);
+const BUTTON_LABELS=new Set(["relevant","not_relevant","too_junior","wrong_location","too_technical","insufficient_experience","no_management_role","good_domain_fit","good_seniority"]);
 function safe(v=""){return String(v).replace(/[<>&"']/g,ch=>({"<":"&lt;",">":"&gt;","&":"&amp;","\"":"&quot;","'":"&#39;"}[ch]))}
 export function signFeedbackToken(payload){
   const secret=process.env.FEEDBACK_LINK_SECRET;if(!secret)throw new Error("feedback signing not configured");
@@ -63,6 +63,7 @@ export function verifyFeedbackToken(token){
 }
 function feedbackPage(ok,message,token=""){const form=token?`<form method="post" style="margin-top:1.5rem"><input type="hidden" name="t" value="${safe(token)}"><button type="submit" style="font:inherit;padding:.7rem 1rem">Feedback bevestigen</button></form>`:"";return `<!doctype html><meta name="viewport" content="width=device-width"><title>Vacaturefeedback</title><main style="font-family:system-ui;max-width:38rem;margin:4rem auto;padding:1rem"><h1>${ok?"Vacaturefeedback":"Feedback niet verwerkt"}</h1><p>${safe(message)}</p>${form}</main>`}
 
+function categoryPage(source,job_id,source_url){return `<!doctype html><meta name="viewport" content="width=device-width"><title>Nieuwe feedbackcategorie</title><main style="font-family:system-ui;max-width:38rem;margin:4rem auto;padding:1rem"><h1>Nieuwe categorie toevoegen</h1><p>Beschrijf kort waarom deze vacature niet goed past. Dit wordt opgeslagen als voorstel en verandert de matchscore pas nadat de categorie expliciet in het model is opgenomen.</p><form method="post"><input type="hidden" name="action" value="custom_category"><input type="hidden" name="source" value="${safe(source)}"><input type="hidden" name="job_id" value="${safe(job_id)}"><input type="hidden" name="source_url" value="${safe(source_url)}"><input name="custom_label" maxlength="160" required style="font:inherit;padding:.7rem;width:100%;box-sizing:border-box"><button type="submit" style="font:inherit;padding:.7rem 1rem;margin-top:1rem">Categorie opslaan</button></form></main>`}
 async function rawBody(req){const chunks=[];for await(const chunk of req)chunks.push(Buffer.isBuffer(chunk)?chunk:Buffer.from(chunk));return Buffer.concat(chunks).toString("utf8")}
 export default async function handler(req,res){
   if(req.method==="GET"){
@@ -72,6 +73,11 @@ export default async function handler(req,res){
       if(!source||!job_id||!/^[A-Za-z0-9_-]{3,128}$/.test(job_id))return res.status(400).json({error:"invalid identity"});
       const host=req.headers["x-forwarded-host"]||req.headers.host,proto=req.headers["x-forwarded-proto"]||"https";
       return res.status(200).json(feedbackLinks({source,job_id,source_url},proto+"://"+host));
+    }
+    if(u.searchParams.get("source")&&u.searchParams.get("job_id")&&u.searchParams.get("action")==="add_category"){
+      const source=u.searchParams.get("source"),job_id=u.searchParams.get("job_id"),source_url=u.searchParams.get("source_url")||"";
+      if(!/^[A-Za-z0-9_-]{3,128}$/.test(job_id))return res.status(400).send(feedbackPage(false,"Ongeldige vacature-identiteit."));
+      return res.status(200).send(categoryPage(source,job_id,source_url));
     }
     if(u.searchParams.get("source")&&u.searchParams.get("job_id")&&u.searchParams.get("label")){
       const source=u.searchParams.get("source"),job_id=u.searchParams.get("job_id"),label=u.searchParams.get("label"),source_url=u.searchParams.get("source_url")||"";
@@ -101,7 +107,16 @@ export default async function handler(req,res){
     const raw=await rawBody(req);
     const ct=String(req.headers["content-type"]||"");
     if(ct.includes("application/x-www-form-urlencoded")){
-      const token=new URLSearchParams(raw).get("t"),p=verifyFeedbackToken(token);
+      const form=new URLSearchParams(raw);
+      if(form.get("action")==="custom_category"){
+        const source=form.get("source"),job_id=form.get("job_id"),source_url=form.get("source_url")||"",custom_label=(form.get("custom_label")||"").trim();
+        if(!source||!/^[A-Za-z0-9_-]{3,128}$/.test(job_id)||custom_label.length<2||custom_label.length>160)return res.status(400).send(feedbackPage(false,"Ongeldige nieuwe categorie."));
+        const identity=source+"|"+job_id+"|"+custom_label.toLowerCase();
+        const record={source,job_id:String(job_id),label:"custom_category",custom_label,received_at:new Date().toISOString(),message_id:"custom:"+crypto.createHash("sha256").update(identity).digest("hex"),source_url};
+        const status=await persist(record);
+        return res.status(200).send(feedbackPage(true,status==="duplicate"?"Deze categorie was al voorgesteld.":"Dank. De nieuwe categorie is opgeslagen als voorstel."));
+      }
+      const token=form.get("t"),p=verifyFeedbackToken(token);
       if(!p)return res.status(400).send(feedbackPage(false,"De feedbacklink is ongeldig of beschadigd."));
       const record={source:p.source,job_id:String(p.job_id),label:p.label,received_at:new Date().toISOString(),message_id:"link:"+crypto.createHash("sha256").update(token).digest("hex"),source_url:p.source_url||""};
       const status=await persist(record);
