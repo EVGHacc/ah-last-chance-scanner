@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "20:40",
-  "scheduledAt": "2026-10-07T20:40:00+02:00",
-  "rawScheduledSlot": "20:40",
-  "rawScheduledAt": "2026-10-07T20:40:00+02:00",
-  "startedAt": "2026-10-07T20:40:00.329062+02:00",
-  "completedAt": "2026-10-07T20:40:06.637771+02:00",
-  "checkedAt": "2026-10-07T20:40:06.637771+02:00",
+  "scheduledSlot": "20:42",
+  "scheduledAt": "2026-10-07T20:42:00+02:00",
+  "rawScheduledSlot": "20:42",
+  "rawScheduledAt": "2026-10-07T20:42:00+02:00",
+  "startedAt": "2026-10-07T20:42:00.398503+02:00",
+  "completedAt": "2026-10-07T20:42:05.808513+02:00",
+  "checkedAt": "2026-10-07T20:42:05.808513+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -4281,7 +4281,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 30,
-      "all70Stock": 43.0,
+      "all70Stock": 42.0,
       "all70": [
         {
           "productId": 395952,
@@ -4392,18 +4392,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 229094,
-          "title": "AH Sable pitloze blauwe druiven",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "3.29",
-          "priceNow": "0.99",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 215318,
           "title": "AH Witte druiven pitloos",
           "brand": "AH",
@@ -4413,6 +4401,18 @@
           "stock": 2,
           "priceWas": "1.99",
           "priceNow": "0.60",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 229094,
+          "title": "AH Sable pitloze blauwe druiven",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "3.29",
+          "priceNow": "0.99",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -5289,7 +5289,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 189,
+      "totalBargainItems": 190,
       "meatItems": 19,
       "meat70Items": 3,
       "meat70Stock": 17.0,
