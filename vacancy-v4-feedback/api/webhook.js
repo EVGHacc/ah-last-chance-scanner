@@ -42,8 +42,47 @@ async function persist(record){
   throw new Error("feedback ledger contention");
 }
 export const config={api:{bodyParser:false}};
+const BUTTON_LABELS=new Set(["relevant","not_relevant","too_junior","wrong_location","too_technical","good_domain_fit","good_seniority"]);
+function safe(v=""){return String(v).replace(/[<>&"']/g,ch=>({"<":"&lt;",">":"&gt;","&":"&amp;","\"":"&quot;","'":"&#39;"}[ch]))}
+export function signFeedbackToken(payload){
+  const secret=process.env.FEEDBACK_LINK_SECRET;if(!secret)throw new Error("feedback signing not configured");
+  const body=Buffer.from(JSON.stringify(payload)).toString("base64url");
+  const sig=crypto.createHmac("sha256",secret).update(body).digest("base64url");
+  return body+"."+sig;
+}
+export function feedbackLinks({source,job_id,source_url=""},baseUrl){
+  const base=String(baseUrl||"").replace(/\/$/,"");
+  return Object.fromEntries([...BUTTON_LABELS].map(label=>[label,base+"/api/webhook?t="+encodeURIComponent(signFeedbackToken({source:String(source),job_id:String(job_id),source_url,label}))]));
+}
+export function verifyFeedbackToken(token){
+  const secret=process.env.FEEDBACK_LINK_SECRET;if(!secret||!token)return null;
+  const [body,sig]=String(token).split(".");if(!body||!sig)return null;
+  const expected=crypto.createHmac("sha256",secret).update(body).digest("base64url");
+  if(sig.length!==expected.length||!crypto.timingSafeEqual(Buffer.from(sig),Buffer.from(expected)))return null;
+  try{const p=JSON.parse(Buffer.from(body,"base64url").toString("utf8"));if(!p.source||!p.job_id||!p.label||!BUTTON_LABELS.has(p.label))return null;return p}catch{return null}
+}
+function feedbackPage(ok,message){return `<!doctype html><meta name="viewport" content="width=device-width"><title>Vacaturefeedback</title><main style="font-family:system-ui;max-width:38rem;margin:4rem auto;padding:1rem"><h1>${ok?"Feedback opgeslagen":"Feedback niet verwerkt"}</h1><p>${safe(message)}</p></main>`}
+
 async function rawBody(req){const chunks=[];for await(const chunk of req)chunks.push(Buffer.isBuffer(chunk)?chunk:Buffer.from(chunk));return Buffer.concat(chunks).toString("utf8")}
 export default async function handler(req,res){
+  if(req.method==="POST" && req.headers["x-feedback-link-request"]==="1"){
+    try{
+      const raw=await rawBody(req), body=JSON.parse(raw||"{}");
+      if(!body.source||!body.job_id)return res.status(400).json({error:"source and job_id required"});
+      const host=req.headers["x-forwarded-host"]||req.headers.host;
+      const proto=req.headers["x-forwarded-proto"]||"https";
+      return res.status(200).json(feedbackLinks(body,proto+"://"+host));
+    }catch{return res.status(400).json({error:"invalid request"})}
+  }
+  if(req.method==="GET"){
+    try{
+      const u=new URL(req.url,"https://feedback.invalid"),p=verifyFeedbackToken(u.searchParams.get("t"));
+      if(!p)return res.status(400).send(feedbackPage(false,"De feedbacklink is ongeldig of beschadigd."));
+      const record={source:p.source,job_id:String(p.job_id),label:p.label,received_at:new Date().toISOString(),message_id:"link:"+crypto.createHash("sha256").update(u.searchParams.get("t")).digest("hex"),source_url:p.source_url||""};
+      const status=await persist(record);
+      return res.status(200).send(feedbackPage(true,status==="duplicate"?"Deze feedback was al opgeslagen.":"Dank. Deze feedback wordt begrensd meegenomen in toekomstige matchscores."));
+    }catch{return res.status(500).send(feedbackPage(false,"Opslaan is mislukt."))}
+  }
   if(req.method!=="POST")return res.status(405).send("method not allowed");
   try{
     const raw=await rawBody(req);
