@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "22:20",
-  "scheduledAt": "2026-10-07T22:20:00+02:00",
-  "rawScheduledSlot": "22:20",
-  "rawScheduledAt": "2026-10-07T22:20:00+02:00",
-  "startedAt": "2026-10-07T22:20:00.388591+02:00",
-  "completedAt": "2026-10-07T22:20:05.360317+02:00",
-  "checkedAt": "2026-10-07T22:20:05.360317+02:00",
+  "scheduledSlot": "22:21",
+  "scheduledAt": "2026-10-07T22:21:00+02:00",
+  "rawScheduledSlot": "22:21",
+  "rawScheduledAt": "2026-10-07T22:21:00+02:00",
+  "startedAt": "2026-10-07T22:21:00.357410+02:00",
+  "completedAt": "2026-10-07T22:21:05.838090+02:00",
+  "checkedAt": "2026-10-07T22:21:05.838090+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1101,15 +1101,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 184,
-      "meatItems": 11,
+      "totalBargainItems": 223,
+      "meatItems": 13,
       "meat70Items": 2,
       "meat70Stock": 6.0,
-      "bakeryItems": 32,
+      "bakeryItems": 37,
       "bakery70Items": 1,
       "bakery70Stock": 2.0,
-      "all70Items": 41,
-      "all70Stock": 68.0,
+      "all70Items": 47,
+      "all70Stock": 74.0,
       "all70": [
         {
           "productId": 185200,
@@ -1145,6 +1145,18 @@
           "stock": 2,
           "priceWas": "1.49",
           "priceNow": "0.45",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 574721,
+          "title": "AH Gesneden verspakket tex-mex burrito's",
+          "brand": "AH",
+          "size": "2-3 pers|35 min",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.99",
+          "priceNow": "2.10",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -1280,6 +1292,18 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
+          "productId": 435435,
+          "title": "AH Wokgroente Thais grootverpakking",
+          "brand": "AH",
+          "size": "600 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 285947,
           "title": "AH Vers geperst sap sinaasappel aardbei",
           "brand": "AH",
@@ -1321,6 +1345,30 @@
           "brand": "AH",
           "size": "225 g",
           "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 591997,
+          "title": "AH Pasta pittige kip XL",
+          "brand": "AH",
+          "size": "550 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "5.99",
+          "priceNow": "1.80",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 597739,
+          "title": "AH Macaroni ham-kaas",
+          "brand": "AH",
+          "size": "450 g",
+          "category": "Maaltijden, salades",
           "discountPct": 70,
           "stock": 1,
           "priceWas": "2.99",
@@ -1508,6 +1556,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 585874,
+          "title": "Melkunie Breaker lemon cheesecake yoghurt",
+          "brand": "Melkunie",
+          "size": "200 g",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.69",
+          "priceNow": "0.51",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 438675,
           "title": "De Zaanse Hoeve Halfvolle yoghurt",
           "brand": "De Zaanse Hoeve",
@@ -1592,6 +1652,18 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 563629,
+          "title": "Hero Fruitspread gember",
+          "brand": "Hero",
+          "size": "350 g",
+          "category": "Ontbijtgranen, beleg",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.29",
+          "priceNow": "0.99",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 455917,
           "title": "Perla Huisblends Dolce gusto compatible cappucino",
           "brand": "Perla Huisblends",
@@ -1654,6 +1726,18 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 4041,
+          "title": "AH Schouderkarbonade",
+          "brand": "AH",
+          "size": "ca. 427 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 6,
+          "priceWas": "4.46",
+          "priceNow": "2.84",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 619339,
           "title": "AH Scharrel krokante kipfiletschnitzel",
           "brand": "AH",
@@ -1687,6 +1771,18 @@
           "stock": 2,
           "priceWas": "4.95",
           "priceNow": "2.96",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 3986,
+          "title": "AH Speklap",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.39",
+          "priceNow": "2.54",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -1776,6 +1872,18 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
+          "productId": 584031,
+          "title": "AH Rond wit sesam half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.59",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 231536,
           "title": "AH Tijger wit half",
           "brand": "AH",
@@ -1809,6 +1917,18 @@
           "stock": 2,
           "priceWas": "3.19",
           "priceNow": "1.91",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 595350,
+          "title": "AH Biologisch Batard volkoren zonnepit heel",
+          "brand": "AH Biologisch",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -1857,6 +1977,18 @@
           "stock": 3,
           "priceWas": "1.45",
           "priceNow": "1.09",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 571174,
+          "title": "AH Jalapeño kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -1917,6 +2049,18 @@
           "stock": 2,
           "priceWas": "1.45",
           "priceNow": "1.09",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 590397,
+          "title": "AH Kipnuggetbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -2013,6 +2157,18 @@
           "stock": 3,
           "priceWas": "0.59",
           "priceNow": "0.50",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 230710,
+          "title": "AH Ham kaas croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-07"
         },
         {
