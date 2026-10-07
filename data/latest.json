@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-07",
   "weekday": "Wednesday",
-  "scheduledSlot": "19:51",
-  "scheduledAt": "2026-10-07T19:51:00+02:00",
-  "rawScheduledSlot": "19:51",
-  "rawScheduledAt": "2026-10-07T19:51:00+02:00",
-  "startedAt": "2026-10-07T19:51:00.329282+02:00",
-  "completedAt": "2026-10-07T19:51:06.432438+02:00",
-  "checkedAt": "2026-10-07T19:51:06.432438+02:00",
+  "scheduledSlot": "19:54",
+  "scheduledAt": "2026-10-07T19:54:00+02:00",
+  "rawScheduledSlot": "19:54",
+  "rawScheduledAt": "2026-10-07T19:54:00+02:00",
+  "startedAt": "2026-10-07T19:54:00.364231+02:00",
+  "completedAt": "2026-10-07T19:54:05.926701+02:00",
+  "checkedAt": "2026-10-07T19:54:05.926701+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1356,12 +1356,12 @@
       "totalBargainItems": 254,
       "meatItems": 17,
       "meat70Items": 6,
-      "meat70Stock": 26.0,
+      "meat70Stock": 16.0,
       "bakeryItems": 52,
       "bakery70Items": 1,
       "bakery70Stock": 2.0,
       "all70Items": 62,
-      "all70Stock": 110.0,
+      "all70Stock": 100.0,
       "all70": [
         {
           "productId": 185200,
@@ -1790,7 +1790,7 @@
           "size": "ca. 500 g",
           "category": "Vlees",
           "discountPct": 70,
-          "stock": 18,
+          "stock": 8,
           "priceWas": "11.49",
           "priceNow": "3.45",
           "markdownExpirationDate": "2026-10-07"
@@ -2116,7 +2116,7 @@
           "size": "ca. 500 g",
           "category": "Vlees",
           "discountPct": 70,
-          "stock": 18,
+          "stock": 8,
           "priceWas": "11.49",
           "priceNow": "3.45",
           "markdownExpirationDate": "2026-10-07"
@@ -2388,18 +2388,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 125035,
-          "title": "AH Les pains boulogne heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "2.39",
-          "priceNow": "1.79",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 417144,
           "title": "AH Vloerbrood wit heel",
           "brand": "AH",
@@ -2529,6 +2517,18 @@
           "stock": 1,
           "priceWas": "2.69",
           "priceNow": "2.02",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
+          "productId": 125035,
+          "title": "AH Les pains boulogne heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.39",
+          "priceNow": "1.79",
           "markdownExpirationDate": "2026-10-07"
         },
         {
@@ -5296,18 +5296,6 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
-          "productId": 230786,
-          "title": "AH Les pains triomphe heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "2.39",
-          "priceNow": "2.03",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
           "productId": 230842,
           "title": "AH Liefde & Passie Spelt",
           "brand": "AH Liefde & Passie",
@@ -5500,6 +5488,18 @@
           "markdownExpirationDate": "2026-10-07"
         },
         {
+          "productId": 230786,
+          "title": "AH Les pains triomphe heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "2.39",
+          "priceNow": "2.03",
+          "markdownExpirationDate": "2026-10-07"
+        },
+        {
           "productId": 954,
           "title": "AH Paneermeel naturel beschuit",
           "brand": "AH",
@@ -5541,11 +5541,11 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 192,
+      "totalBargainItems": 191,
       "meatItems": 20,
       "meat70Items": 4,
       "meat70Stock": 18.0,
-      "bakeryItems": 49,
+      "bakeryItems": 48,
       "bakery70Items": 1,
       "bakery70Stock": 6.0,
       "all70Items": 37,
@@ -6333,18 +6333,6 @@
           "stock": 6,
           "priceWas": "0.69",
           "priceNow": "0.52",
-          "markdownExpirationDate": "2026-10-07"
-        },
-        {
-          "productId": 487301,
-          "title": "AH Rond volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "1.89",
-          "priceNow": "1.42",
           "markdownExpirationDate": "2026-10-07"
         },
         {
