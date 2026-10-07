@@ -29,7 +29,42 @@ class MatcherTests(unittest.TestCase):
              "location":"Amsterdam","summary":"Financial crime AML sanctions","apply_url":"https://example/jobs/4"}
         self.assertEqual(len(rank_inventory("Wise",[job,dict(job)])),1)
 
-    def test_technical_feedback_penalizes_similar_future_job(self):\n        job={"job_id":"new","title":"Compliance Technology Lead","location":"London","summary":"Technical engineering controls for AML compliance","apply_url":"https://example/jobs/new"}\n        base=score_job("Wise",job).score\n        rows=[{"source":"Wise","job_id":"old","label":"too_technical"}]\n        self.assertEqual(score_job("Wise",job,source="Wise",feedback_records=rows).score,base-1)\n\n    def test_technical_feedback_does_not_penalize_nontechnical_job(self):\n        job={"job_id":"new2","title":"Compliance Director","location":"London","summary":"AML sanctions governance","apply_url":"https://example/jobs/new2"}\n        base=score_job("Wise",job).score\n        rows=[{"source":"Wise","job_id":"old","label":"too_technical"}]\n        self.assertEqual(score_job("Wise",job,source="Wise",feedback_records=rows).score,base)\n\n    def test_irrelevant_role_is_not_reported(self):
+    def test_technical_feedback_penalizes_similar_future_job(self):
+        job={"job_id":"new","title":"Compliance Technology Lead","location":"London","summary":"Technical engineering controls for AML compliance","apply_url":"https://example/jobs/new"}
+        base=score_job("Wise",job).score
+        rows=[{"source":"Wise","job_id":"old","label":"too_technical"}]
+        self.assertEqual(score_job("Wise",job,source="Wise",feedback_records=rows).score,base-1)
+
+    def test_technical_feedback_does_not_penalize_nontechnical_job(self):
+        job={"job_id":"new2","title":"Compliance Director","location":"London","summary":"AML sanctions governance","apply_url":"https://example/jobs/new2"}
+        base=score_job("Wise",job).score
+        rows=[{"source":"Wise","job_id":"old","label":"too_technical"}]
+        self.assertEqual(score_job("Wise",job,source="Wise",feedback_records=rows).score,base)
+
+    def test_no_management_feedback_penalizes_future_ic_role(self):
+        job={"job_id":"new3","title":"Compliance Officer","location":"London","summary":"AML sanctions governance","apply_url":"https://example/jobs/new3"}
+        base=score_job("Wise",job).score
+        rows=[{"source":"Wise","job_id":"old","label":"no_management_role"}]
+        adjusted=score_job("Wise",job,source="Wise",feedback_records=rows)
+        self.assertEqual(adjusted.score,base-2)
+        self.assertIn("feedback: non-management roles",adjusted.mismatch)
+
+    def test_domain_feedback_requires_persisted_feature_overlap(self):
+        job={"job_id":"new4","title":"Scheme Compliance Director","location":"London","summary":"payment scheme compliance governance","apply_url":"https://example/jobs/new4"}
+        base=score_job("Wise",job).score
+        rows=[{"source":"Wise","job_id":"old","label":"insufficient_experience","features":{"domains":["compliance"]}}]
+        self.assertEqual(score_job("Wise",job,source="Wise",feedback_records=rows).score,base-1)
+
+    def test_positive_domain_feedback_prevents_negative_domain_generalisation(self):
+        job={"job_id":"new5","title":"Compliance Director","location":"London","summary":"AML compliance governance","apply_url":"https://example/jobs/new5"}
+        base=score_job("Wise",job).score
+        rows=[
+            {"source":"Wise","job_id":"bad","label":"not_relevant","features":{"domains":["compliance"]}},
+            {"source":"Wise","job_id":"good","label":"relevant","features":{"domains":["compliance"]}},
+        ]
+        self.assertEqual(score_job("Wise",job,source="Wise",feedback_records=rows).score,base)
+
+    def test_irrelevant_role_is_not_reported(self):
         job={"job_id":"5","title":"Account Executive","location":"London","summary":"Enterprise sales","apply_url":"https://example/jobs/5"}
         self.assertEqual(rank_inventory("Stripe",[job]),[])
 
