@@ -18,7 +18,9 @@ SENIOR_TERMS = {
     "senior manager": 3, "lead": 2, "group lead": 3, "officer": 1,
 }
 LOCATION_TERMS = ("amsterdam", "netherlands", "london", "remote")
-NEGATIVE_TERMS = ("intern", "internship", "graduate", "junior", "associate")\nTECHNICAL_TERMS = ("engineer","engineering","developer","software","data scientist","machine learning","architect","technical","technology")\nMANAGEMENT_TERMS = ("chief","cco","cro","mlro","head","director","senior manager","manager","lead","people manager","team lead")
+NEGATIVE_TERMS = ("intern", "internship", "graduate", "junior", "associate")
+TECHNICAL_TERMS = ("engineer","engineering","developer","software","data scientist","machine learning","architect","technical","technology")
+MANAGEMENT_TERMS = ("chief","cco","cro","mlro","head","director","senior manager","manager","lead","people manager","team lead")
 
 
 @dataclass(frozen=True)
@@ -43,6 +45,19 @@ def _text(job):
     return " ".join(str(job.get(k) or "") for k in fields).casefold()
 
 
+def _features(job: dict) -> dict:
+    text=_text(job)
+    title=str(job.get("title") or "").casefold()
+    location=str(job.get("location") or job.get("office") or "").casefold()
+    return {
+        "domains": [term for term in DOMAIN_TERMS if term in text],
+        "technical": any(term in text for term in TECHNICAL_TERMS),
+        "junior": any(re.search(rf"\b{re.escape(term)}\b", title) for term in NEGATIVE_TERMS),
+        "management": any(term in text for term in MANAGEMENT_TERMS),
+        "outside_location": not any(term in location for term in LOCATION_TERMS),
+    }
+
+
 def score_job(employer: str, job: dict, source: str="", feedback_records: list[dict] | None=None) -> Match:
     text=_text(job); title=str(job.get("title") or ""); location=str(job.get("location") or job.get("office") or "")
     domain=[term for term in DOMAIN_TERMS if term in text]
@@ -54,8 +69,11 @@ def score_job(employer: str, job: dict, source: str="", feedback_records: list[d
     senior_score=min(3, max((SENIOR_TERMS[t] for t in senior), default=0))
     location_score=2 if loc_ok else 0
     base=domain_score+senior_score+location_score-(4 if negative else 0)
-    preference=feedback_adjustment(source,str(job.get("job_id") or ""),feedback_records or []) if source else 0
-    score=max(1, min(10, base+preference))
+
+    records=feedback_records or []
+    exact=feedback_adjustment(source,str(job.get("job_id") or ""),records) if source else 0
+    learned,learned_reasons=feature_feedback_adjustment(_features(job),records)
+    score=max(1, min(10, base+exact+learned))
 
     why=tuple(domain[:4]+senior[:2])
     limiters=() if loc_ok else ("location outside Amsterdam/Netherlands/London/fully remote preference",)
