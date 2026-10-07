@@ -24,6 +24,11 @@ export function identity(text=""){
   return {source:u.hostname.toLowerCase(),job_id:jobId,source_url:url};
 }
 function senderAddress(v=""){ const m=v.match(/<([^>]+)>/); return (m?m[1]:v).trim().toLowerCase(); }
+function feedbackFeatures(p){
+  const text=[p.title,p.summary,p.description,p.department,p.team,p.office,p.location].filter(Boolean).join(" ").toLowerCase();
+  const domains=["aml","anti-money laundering","financial crime","fincrime","sanctions","compliance","regulatory","internal audit","governance","non-financial risk","risk assurance","controls","trust & safety","responsible ai"].filter(x=>text.includes(x));
+  return {domains,technical:["engineer","engineering","developer","software","data scientist","machine learning","architect","technical","technology"].some(x=>text.includes(x)),junior:["intern","internship","graduate","junior","associate"].some(x=>new RegExp("\\b"+x+"\\b").test((p.title||"").toLowerCase())),management:["chief","cco","cro","mlro","head","director","senior manager","manager","lead","people manager","team lead"].some(x=>text.includes(x)),outside_location:!["amsterdam","netherlands","london","remote"].some(x=>(p.location||p.office||"").toLowerCase().includes(x))};
+}
 async function persist(record){
   const repo=process.env.GITHUB_REPOSITORY, branch=process.env.GITHUB_BRANCH||"vacancy-v4-clean-sheet";
   if(!repo||!process.env.GITHUB_TOKEN) throw new Error("github persistence not configured");
@@ -118,7 +123,7 @@ export default async function handler(req,res){
       }
       const token=form.get("t"),p=verifyFeedbackToken(token);
       if(!p)return res.status(400).send(feedbackPage(false,"De feedbacklink is ongeldig of beschadigd."));
-      const record={source:p.source,job_id:String(p.job_id),label:p.label,received_at:new Date().toISOString(),message_id:"link:"+crypto.createHash("sha256").update(token).digest("hex"),source_url:p.source_url||""};
+      const record={source:p.source,job_id:String(p.job_id),label:p.label,received_at:new Date().toISOString(),message_id:"link:"+crypto.createHash("sha256").update(token).digest("hex"),source_url:p.source_url||"",features:p.features||{}};
       const status=await persist(record);
       return res.status(200).send(feedbackPage(true,status==="duplicate"?"Deze feedback was al opgeslagen.":"Dank. Deze feedback wordt begrensd meegenomen in toekomstige matchscores."));
     }
