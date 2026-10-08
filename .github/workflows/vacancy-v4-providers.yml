@@ -237,6 +237,10 @@ jobs:
               adapter_version=subprocess.check_output(["git","rev-parse",f"HEAD:vacancy-v4/{adapter.as_posix()}"],text=True).strip()
               config_hash=hashlib.sha256(cfg.read_bytes()).hexdigest()
               authority_version=f'schema{authority_doc.get("schema_version")}:{hashlib.sha256(authority.read_bytes()).hexdigest()}'
+              first_names={s["name"] for s in batch1["sources"]}
+              second_names={s["name"] for s in batch2["sources"]}
+              if first_names != second_names:
+                  raise SystemExit(f"{provider}: proof pair source sets differ")
               second={s["name"]:s for s in batch2["sources"]}
               for s1 in batch1["sources"]:
                   name=s1["name"]; s2=second.get(name)
