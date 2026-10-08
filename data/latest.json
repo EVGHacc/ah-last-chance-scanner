@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "21:27",
-  "scheduledAt": "2026-10-08T21:27:00+02:00",
-  "rawScheduledSlot": "21:27",
-  "rawScheduledAt": "2026-10-08T21:27:00+02:00",
-  "startedAt": "2026-10-08T21:27:00.403686+02:00",
-  "completedAt": "2026-10-08T21:27:05.111492+02:00",
-  "checkedAt": "2026-10-08T21:27:05.111492+02:00",
+  "scheduledSlot": "21:30",
+  "scheduledAt": "2026-10-08T21:30:00+02:00",
+  "rawScheduledSlot": "21:30",
+  "rawScheduledAt": "2026-10-08T21:30:00+02:00",
+  "startedAt": "2026-10-08T21:30:00.377225+02:00",
+  "completedAt": "2026-10-08T21:30:06.294776+02:00",
+  "checkedAt": "2026-10-08T21:30:06.294776+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -4713,7 +4713,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 204,
+      "totalBargainItems": 207,
       "meatItems": 27,
       "meat70Items": 5,
       "meat70Stock": 5.0,
@@ -4721,7 +4721,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 54,
-      "all70Stock": 85.0,
+      "all70Stock": 84.0,
       "all70": [
         {
           "productId": 185200,
@@ -4952,18 +4952,6 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
-          "productId": 447161,
-          "title": "AH Verse watermeloen",
-          "brand": "AH",
-          "size": "325 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "3.89",
-          "priceNow": "1.17",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
           "productId": 594137,
           "title": "AH Verse watermeloen",
           "brand": "AH",
@@ -4985,6 +4973,18 @@
           "stock": 2,
           "priceWas": "2.49",
           "priceNow": "0.75",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 447161,
+          "title": "AH Verse watermeloen",
+          "brand": "AH",
+          "size": "325 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "3.89",
+          "priceNow": "1.17",
           "markdownExpirationDate": "2026-10-08"
         },
         {
