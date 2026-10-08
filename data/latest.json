@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "17:40",
-  "scheduledAt": "2026-10-08T17:40:00+02:00",
-  "rawScheduledSlot": "17:40",
-  "rawScheduledAt": "2026-10-08T17:40:00+02:00",
-  "startedAt": "2026-10-08T17:40:00.435655+02:00",
-  "completedAt": "2026-10-08T17:40:04.967899+02:00",
-  "checkedAt": "2026-10-08T17:40:04.967899+02:00",
+  "scheduledSlot": "17:42",
+  "scheduledAt": "2026-10-08T17:42:00+02:00",
+  "rawScheduledSlot": "17:42",
+  "rawScheduledAt": "2026-10-08T17:42:00+02:00",
+  "startedAt": "2026-10-08T17:42:00.411951+02:00",
+  "completedAt": "2026-10-08T17:42:04.650246+02:00",
+  "checkedAt": "2026-10-08T17:42:04.650246+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1038,18 +1038,6 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
-          "productId": 169238,
-          "title": "AH Runderhamburger 2st",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "3.45",
-          "priceNow": "2.07",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
           "productId": 619324,
           "title": "AH Burger smokey 2 stuks",
           "brand": "AH",
@@ -1083,6 +1071,18 @@
           "stock": 1,
           "priceWas": "10.99",
           "priceNow": "6.59",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 169238,
+          "title": "AH Runderhamburger 2st",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "3.45",
+          "priceNow": "2.07",
           "markdownExpirationDate": "2026-10-08"
         },
         {
