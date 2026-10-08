@@ -58,7 +58,7 @@ def accept_green_proof(record: dict, proof: dict, *, release_allowed: bool) -> d
 
     # A proof for an already certified source refreshes health, not certification.
     was_certified = record.get("certification") == "CERTIFIED"
-    if record.get("accepted_proofs") and not was_certified:
+    if record.get("consecutive_green_proofs", 0) > 0 and not was_certified:
         previous = (record.get("adapter_version"), record.get("code_commit_sha"),
                     record.get("config_hash"), record.get("authority_contract_version"))
         current = tuple(proof[key] for key in ("adapter_version", "code_commit_sha",
