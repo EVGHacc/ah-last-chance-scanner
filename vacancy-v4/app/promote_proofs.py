@@ -37,8 +37,7 @@ def main():
         provider=p1.name.removesuffix("-proof-1.json")
         p2=proof_dir/f"{provider}-proof-2.json"
         if not p2.exists():
-            print(f"{provider}: no complete proof pair; skip promotion")
-            continue
+            raise SystemExit(f"{provider}: incomplete production proof pair")
         batch1=validate(p1); batch2=validate(p2)
         if batch1.get("provider")!=provider or batch2.get("provider")!=provider:
             raise SystemExit(f"{provider}: provider mismatch")
