@@ -93,7 +93,7 @@ jobs:
           files=list(root.rglob("manual-match-report.json"))
           unique={}
           if not files:
-              raise SystemExit("No provider reports; refuse empty digest")
+              print("No successful provider reports; zero matches, degraded scan")
           for file in files:
               data=json.loads(file.read_text())
               for match in data.get("matches",[]):
@@ -102,13 +102,14 @@ jobs:
           output={
               "generated_at":datetime.datetime.now(datetime.timezone.utc).isoformat(),
               "provider_reports":len(files),
+              "degraded":len(files)<8,
               "unique_matches":len(unique),
               "matches":sorted(unique.values(),key=lambda m:(-m["score"],m["employer"],m["title"])),
               "notification_status":"not_sent",
           }
           pathlib.Path("combined-v4-report.json").write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\n")
           with open(pathlib.Path(__import__("os").environ["GITHUB_STEP_SUMMARY"]),"a") as out:
-              out.write(f"## Vacancy v4 matching\nProvider reports: {len(files)}\n\nUnique matches: {len(unique)}\n\nEmail: delivery attempted in subsequent step.\n")
+              out.write(f"## Vacancy v4 matching\\nProvider reports: {len(files)}/8\\n\\nUnique matches: {len(unique)}\\n\\nEmail: delivery attempted in subsequent step.\\n")
           PY
       - uses: actions/upload-artifact@v4
         with:
@@ -131,7 +132,7 @@ jobs:
               raise SystemExit("Email configuration missing: "+", ".join(missing))
           report=json.load(open("combined-v4-report.json"))
           matches=report["matches"]
-          lines=[f"Vacancy v4: {len(matches)} matched vacancies from {report['provider_reports']} successful provider reports.", ""]
+          lines=[f"Vacancy v4: {len(matches)} matched vacancies from {report['provider_reports']}/8 successful provider reports.", ""]
           for m in matches[:40]:
               lines.append(f"[{m['score']}/10] {m['title']} — {m['employer']} ({m['location']})")
               lines.append(m["url"])
