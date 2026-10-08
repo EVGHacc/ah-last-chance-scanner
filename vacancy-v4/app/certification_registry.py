@@ -56,6 +56,16 @@ def accept_green_proof(record: dict, proof: dict, *, release_allowed: bool) -> d
     if proof["run_id"] in record.get("accepted_proofs", []):
         raise ValueError("proof run_id already accepted")
 
+    # A proof for an already certified source refreshes health, not certification.
+    was_certified = record.get("certification") == "CERTIFIED"
+    if record.get("accepted_proofs") and not was_certified:
+        previous = (record.get("adapter_version"), record.get("code_commit_sha"),
+                    record.get("config_hash"), record.get("authority_contract_version"))
+        current = tuple(proof[key] for key in ("adapter_version", "code_commit_sha",
+                                                "config_hash", "authority_contract_version"))
+        if previous != current:
+            raise ValueError("proof provenance changed between consecutive green proofs")
+
     out = deepcopy(record)
     out["accepted_proofs"] = [*out.get("accepted_proofs", []), proof["run_id"]]
     out["consecutive_green_proofs"] = out.get("consecutive_green_proofs", 0) + 1
@@ -65,10 +75,11 @@ def accept_green_proof(record: dict, proof: dict, *, release_allowed: bool) -> d
     out["authority_contract_version"] = proof["authority_contract_version"]
     out["freshness_at"] = proof["accepted_at"]
     out["health"] = "HEALTHY"
-    if out["consecutive_green_proofs"] >= 2:
+    if was_certified or out["consecutive_green_proofs"] >= 2:
         out["certification"] = "CERTIFIED"
         out["certified_job_count"] = proof["unique_jobs"]
-        out["certification_provenance"] = out["accepted_proofs"][-2:]
+        if not was_certified:
+            out["certification_provenance"] = out["accepted_proofs"][-2:]
         out["revocation_reason"] = None
         out["revoked_at"] = None
     else:
