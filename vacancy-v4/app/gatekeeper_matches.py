@@ -12,8 +12,10 @@ def build_report(raw, audit, *, feedback=None, receipts=None, live_checks=None):
         if parsed.scheme != "https" or not parsed.netloc:
             raise ValueError("vacancy URL must use HTTPS")
         if key in seen:
-            if seen[key]["url"] != url:
-                raise ValueError("conflicting URL for duplicate job")
+            previous=seen[key]
+            if (previous["url"] != url or previous["title"] != match["title"] or
+                previous["employer"] != match["employer"] or previous["score"] != match["score"]):
+                raise ValueError("conflicting data for duplicate job")
             continue
         fb = sorted([f for f in (feedback or []) if str(f.get("source","")).casefold() == key[0]
                      and str(f.get("job_id")) == job_id], key=lambda f:f.get("received_at",""))
