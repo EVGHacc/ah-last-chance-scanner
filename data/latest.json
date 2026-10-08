@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "20:45",
-  "scheduledAt": "2026-10-08T20:45:00+02:00",
-  "rawScheduledSlot": "20:45",
-  "rawScheduledAt": "2026-10-08T20:45:00+02:00",
-  "startedAt": "2026-10-08T20:45:00.393075+02:00",
-  "completedAt": "2026-10-08T20:45:05.015195+02:00",
-  "checkedAt": "2026-10-08T20:45:05.015195+02:00",
+  "scheduledSlot": "20:48",
+  "scheduledAt": "2026-10-08T20:48:00+02:00",
+  "rawScheduledSlot": "20:48",
+  "rawScheduledAt": "2026-10-08T20:48:00+02:00",
+  "startedAt": "2026-10-08T20:48:00.466416+02:00",
+  "completedAt": "2026-10-08T20:48:05.053156+02:00",
+  "checkedAt": "2026-10-08T20:48:05.053156+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,15 +25,15 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 195,
+      "totalBargainItems": 202,
       "meatItems": 11,
       "meat70Items": 6,
       "meat70Stock": 9.0,
-      "bakeryItems": 45,
+      "bakeryItems": 46,
       "bakery70Items": 2,
       "bakery70Stock": 4.0,
-      "all70Items": 47,
-      "all70Stock": 82.0,
+      "all70Items": 50,
+      "all70Stock": 89.0,
       "all70": [
         {
           "productId": 187844,
@@ -238,6 +238,18 @@
           "priceWas": "3.99",
           "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 563781,
+          "title": "AH Pasta kip kebab M",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "4.49",
+          "priceNow": "1.35",
+          "markdownExpirationDate": "2026-10-08"
         },
         {
           "productId": 610800,
@@ -504,6 +516,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 575364,
+          "title": "AH Magere yoghurt aardbei",
+          "brand": "AH",
+          "size": "1 l",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.45",
+          "priceNow": "0.44",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 138503,
           "title": "Campina Botergoud gezouten roomboter",
           "brand": "Campina",
@@ -514,6 +538,18 @@
           "priceWas": "3.39",
           "priceNow": "1.02",
           "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 607351,
+          "title": "AH Terra Plantaardige salade alternatief tonijn",
+          "brand": "AH Terra",
+          "size": "150 g",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 4,
+          "priceWas": "2.39",
+          "priceNow": "0.72",
+          "markdownExpirationDate": "2026-10-10"
         },
         {
           "productId": 590397,
@@ -1045,6 +1081,18 @@
           "stock": 1,
           "priceWas": "0.89",
           "priceNow": "0.67",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 606777,
+          "title": "AH Borek kip gyros",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.19",
+          "priceNow": "0.89",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -4797,8 +4845,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 188,
-      "meatItems": 20,
+      "totalBargainItems": 190,
+      "meatItems": 22,
       "meat70Items": 5,
       "meat70Stock": 5.0,
       "bakeryItems": 43,
@@ -5566,6 +5614,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 436763,
+          "title": "AH Biologisch Slavink",
+          "brand": "AH Biologisch",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "3.99",
+          "priceNow": "2.54",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 620805,
           "title": "AH Ovenschotel sticky bites sweet garlic",
           "brand": "AH",
@@ -5635,6 +5695,18 @@
           "stock": 1,
           "priceWas": "3.99",
           "priceNow": "2.99",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 199712,
+          "title": "AH Rundervink 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "2.54",
           "markdownExpirationDate": "2026-10-09"
         },
         {
