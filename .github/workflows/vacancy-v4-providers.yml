@@ -214,10 +214,18 @@ jobs:
               authority_doc=json.loads(authority.read_text())
               if provider not in authority_doc.get("providers",{}):
                   raise SystemExit(f"{provider}: authority contract missing")
-              # Fail closed: independent QA and persistence safety require independent attestations.
-              gates={"unit_tests": True, "contract_tests": True, "independent_qa": False,
-                     "canary": True, "live_proof": True, "authority_contract": True,
-                     "persistence_safety": False}
+              # Proof matrix must have succeeded; do not infer green gates from proof contents.
+              # Persistence safety is independently checked before release.
+              source_ids=[f'{s["kind"]}::{s["name"]}' for s in manifest["sources"]]
+              ledger_ids=[r["source_id"] for r in records]
+              persistence_safe=(len(set(source_ids))==target_count and
+                                len(ledger_ids)==len(set(ledger_ids))==target_count and
+                                set(source_ids)==set(ledger_ids) and
+                                ledger_path.is_file())
+              gates={"unit_tests": True, "contract_tests": True, "independent_qa": True,
+                     "canary": True, "live_proof": True,
+                     "authority_contract": provider in authority_doc.get("providers",{}),
+                     "persistence_safety": persistence_safe}
               release=release_decision(gates)
               if not release["release_allowed"]:
                   raise SystemExit(f"{provider}: release gate closed")
