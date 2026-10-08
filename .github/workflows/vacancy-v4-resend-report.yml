@@ -76,7 +76,11 @@ jobs:
                   print("Resend accepted daily digest; email_id="+body["id"])
           except urllib.error.HTTPError as error:
               details=error.read(4096).decode("utf-8","replace")
-              # Resend error body contains validation details, not the authorization header.
-              print(f"Resend rejected daily digest (HTTP {error.code}): {details}")
+              try:
+                  parsed=json.loads(details)
+                  safe={key:parsed.get(key) for key in ("name","message","statusCode") if key in parsed}
+              except ValueError:
+                  safe={"message":"Resend returned a non-JSON error response"}
+              print(f"Resend rejected daily digest (HTTP {error.code}): {json.dumps(safe)}")
               raise SystemExit(1)
           PY
