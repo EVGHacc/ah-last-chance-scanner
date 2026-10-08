@@ -1,5 +1,6 @@
 import unittest
-from app.gatekeeper_report import audit_classification, build_report
+from app.gatekeeper_report import audit_classification
+from app.gatekeeper_matches import build_report
 
 def fixtures():
     manifest={"target_count":113,"sources":[{"kind":"employer","name":f"Employer {i}"} for i in range(113)]}
