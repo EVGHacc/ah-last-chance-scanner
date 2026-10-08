@@ -1,0 +1,82 @@
+name: Vacancy v4 resend existing report
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_run_id:
+        description: 'Existing successful combined-report run ID'
+        required: true
+        default: '37793929445'
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  resend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download existing combined report (no provider scans)
+        uses: actions/download-artifact@v4
+        with:
+          name: vacancy-v4-combined-${{ inputs.source_run_id }}
+          run-id: ${{ inputs.source_run_id }}
+          github-token: ${{ github.token }}
+          path: .
+      - name: Validate cached report
+        run: |
+          python - <<'PY'
+          import json
+          with open("combined-v4-report.json") as handle:
+              report=json.load(handle)
+          assert isinstance(report.get("matches"),list), "Invalid cached report"
+          print(f"Reusing {len(report['matches'])} existing matches without rescanning providers")
+          PY
+      - name: Email combined report through Resend
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_REPORT_TO: ${{ secrets.RESEND_REPORT_TO }}
+          RESEND_REPORT_FROM: ${{ secrets.RESEND_REPORT_FROM }}
+        run: |
+          python - <<'PY'
+          import json,os,urllib.request,urllib.error,datetime
+          required=("RESEND_API_KEY","RESEND_REPORT_TO","RESEND_REPORT_FROM")
+          missing=[key for key in required if not os.environ.get(key)]
+          if missing:
+              raise SystemExit("Email configuration missing: "+", ".join(missing))
+          report=json.load(open("combined-v4-report.json"))
+          matches=report["matches"]
+          lines=[f"Vacancy v4: {len(matches)} matched vacancies from {report['provider_reports']}/8 successful provider reports.", ""]
+          for m in matches[:40]:
+              lines.append(f"[{m['score']}/10] {m['title']} — {m['employer']} ({m['location']})")
+              lines.append(m["url"])
+          if len(matches)>40:
+              lines.append(f"... and {len(matches)-40} further matches in the GitHub report.")
+          lines.append("")
+          lines.append("Note: reports from failed providers are excluded; these are not necessarily all vacancies.")
+          payload={
+              "from":os.environ["RESEND_REPORT_FROM"],
+              "to":[os.environ["RESEND_REPORT_TO"]],
+              "reply_to":"vacatures@ueveloucri.resend.app",
+              "subject":f"Vacancy v4 | {len(matches)} matches | {datetime.date.today().isoformat()}",
+              "text":"\\n".join(lines)
+          }
+          request=urllib.request.Request(
+              "https://api.resend.com/emails",
+              data=json.dumps(payload).encode(),
+              headers={"Authorization":"Bearer "+os.environ["RESEND_API_KEY"],"Content-Type":"application/json"},
+              method="POST",
+          )
+          try:
+              with urllib.request.urlopen(request,timeout=30) as response:
+                  body=json.load(response)
+                  if response.status not in (200,201) or not body.get("id"):
+                      raise SystemExit("Resend did not acknowledge daily digest")
+                  print("Resend accepted daily digest; email_id="+body["id"])
+          except urllib.error.HTTPError as error:
+              details=error.read(4096).decode("utf-8","replace")
+              # Resend error body contains validation details, not the authorization header.
+              print(f"Resend rejected daily digest (HTTP {error.code}): {details}")
+              raise SystemExit(1)
+          PY
