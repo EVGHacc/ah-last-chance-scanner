@@ -144,6 +144,7 @@ jobs:
           payload={
               "from":os.environ["RESEND_REPORT_FROM"],
               "to":[os.environ["RESEND_REPORT_TO"]],
+              "reply_to":"vacatures@ueveloucri.resend.app",
               "subject":f"Vacancy v4 | {len(matches)} matches | {datetime.date.today().isoformat()}",
               "text":"\\n".join(lines)
           }
