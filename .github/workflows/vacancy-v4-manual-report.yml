@@ -1,4 +1,4 @@
-name: Vacancy v4 manual match report
+name: Vacancy v4 automated match report
 
 on:
   schedule:
@@ -30,7 +30,7 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
         run: |
-          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$(TZ=Europe/Amsterdam date +%H:%M)" = "08:30" ]; then
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$(TZ=Europe/Amsterdam date +%H)" = "08" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
           else
             echo "run=false" >> "$GITHUB_OUTPUT"
@@ -61,10 +61,52 @@ jobs:
           PY
           python -m app.manual_report --snapshot manual-inventory.json --output manual-match-report.json
       - name: Upload report for review
-        if: steps.localtime.outputs.run == 'true'
+        if: steps.localtime.outputs.run == 'true' && (github.event_name == 'schedule' || matrix.provider == inputs.provider)
         uses: actions/upload-artifact@v4
         with:
           name: vacancy-v4-match-report-${{ matrix.provider }}-${{ github.run_id }}
           path: vacancy-v4/manual-match-report.json
           if-no-files-found: error
           retention-days: 14
+
+  consolidate:
+    name: Consolidate provider reports
+    needs: [report]
+    if: always() && needs.report.result != 'skipped'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: vacancy-v4-match-report-*-${{ github.run_id }}
+          path: provider-reports
+      - name: Produce combined match report
+        run: |
+          python - <<'PY'
+          import json,pathlib,datetime
+          root=pathlib.Path("provider-reports")
+          files=list(root.rglob("manual-match-report.json"))
+          unique={}
+          for file in files:
+              data=json.loads(file.read_text())
+              for match in data.get("matches",[]):
+                  key=(match["source"],match["job_id"])
+                  unique[key]=match
+          output={
+              "generated_at":datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              "provider_reports":len(files),
+              "unique_matches":len(unique),
+              "matches":sorted(unique.values(),key=lambda m:(-m["score"],m["employer"],m["title"])),
+              "notification_status":"not_sent",
+          }
+          pathlib.Path("combined-v4-report.json").write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\\n")
+          with open(pathlib.Path(__import__("os").environ["GITHUB_STEP_SUMMARY"]),"a") as out:
+              out.write(f"## Vacancy v4 matching\\nProvider reports: {len(files)}\\n\\nUnique matches: {len(unique)}\\n\\nEmail: not sent (delivery gate not certified).\\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vacancy-v4-combined-${{ github.run_id }}
+          path: combined-v4-report.json
+          retention-days: 30
