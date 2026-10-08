@@ -9,6 +9,7 @@ from app.certification_registry import (
     accept_green_proof,
     apply_health,
     new_record,
+    record_failed_recertification,
     revoke,
 )
 
@@ -39,6 +40,19 @@ class CertificationRegistryTests(unittest.TestCase):
         changed["config_hash"] = "different"
         with self.assertRaisesRegex(ValueError, "provenance changed"):
             accept_green_proof(first, changed, release_allowed=True)
+
+    def test_failed_proof_breaks_chain_and_allows_new_version(self):
+        first = accept_green_proof(new_record("ashby", "openai"), proof("r1"), release_allowed=True)
+        reset = record_failed_recertification(first)
+        changed = proof("r2")
+        changed["config_hash"] = "new-config"
+        second = accept_green_proof(reset, changed, release_allowed=True)
+        self.assertEqual(second["certification"], "VERIFYING")
+        third = proof("r3")
+        third["config_hash"] = "new-config"
+        certified = accept_green_proof(second, third, release_allowed=True)
+        self.assertEqual(certified["certification"], "CERTIFIED")
+        self.assertEqual(certified["certification_provenance"], ["r2", "r3"])
 
     def test_reproof_preserves_certification_provenance(self):
         first = accept_green_proof(new_record("ashby", "openai"), proof("r1"), release_allowed=True)
