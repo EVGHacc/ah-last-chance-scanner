@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "20:21",
-  "scheduledAt": "2026-10-08T20:21:00+02:00",
-  "rawScheduledSlot": "20:21",
-  "rawScheduledAt": "2026-10-08T20:21:00+02:00",
-  "startedAt": "2026-10-08T20:21:00.399330+02:00",
-  "completedAt": "2026-10-08T20:21:05.266500+02:00",
-  "checkedAt": "2026-10-08T20:21:05.266500+02:00",
+  "scheduledSlot": "20:24",
+  "scheduledAt": "2026-10-08T20:24:00+02:00",
+  "rawScheduledSlot": "20:24",
+  "rawScheduledAt": "2026-10-08T20:24:00+02:00",
+  "startedAt": "2026-10-08T20:24:00.400507+02:00",
+  "completedAt": "2026-10-08T20:24:06.319211+02:00",
+  "checkedAt": "2026-10-08T20:24:06.319211+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 203,
+      "totalBargainItems": 202,
       "meatItems": 11,
       "meat70Items": 6,
       "meat70Stock": 9.0,
@@ -1317,15 +1317,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 201,
+      "totalBargainItems": 225,
       "meatItems": 19,
       "meat70Items": 5,
       "meat70Stock": 13.0,
-      "bakeryItems": 41,
+      "bakeryItems": 45,
       "bakery70Items": 2,
       "bakery70Stock": 3.0,
-      "all70Items": 39,
-      "all70Stock": 85.0,
+      "all70Items": 44,
+      "all70Stock": 90.0,
       "all70": [
         {
           "productId": 117618,
@@ -1397,6 +1397,18 @@
           "stock": 2,
           "priceWas": "1.59",
           "priceNow": "0.48",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 590148,
+          "title": "AH Basismix Italiaans",
+          "brand": "AH",
+          "size": "600 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.99",
+          "priceNow": "0.60",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -1712,6 +1724,18 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 585938,
+          "title": "Optimel Proteine extra framboos aardbei",
+          "brand": "Optimel",
+          "size": "330 ml",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.79",
+          "priceNow": "0.54",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 605235,
           "title": "Optimel Proteine extra mango sinaasappel",
           "brand": "Optimel",
@@ -1784,6 +1808,30 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 563629,
+          "title": "Hero Fruitspread gember",
+          "brand": "Hero",
+          "size": "350 g",
+          "category": "Ontbijtgranen, beleg",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.29",
+          "priceNow": "0.99",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 563653,
+          "title": "Flower Farm Pindakaas zonder palmolie",
+          "brand": "Flower Farm",
+          "size": "350 g",
+          "category": "Ontbijtgranen, beleg",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.59",
+          "priceNow": "1.08",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 455917,
           "title": "Perla Huisblends Dolce gusto compatible cappucino",
           "brand": "Perla Huisblends",
@@ -1793,6 +1841,18 @@
           "stock": 1,
           "priceWas": "3.99",
           "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 576688,
+          "title": "DubbelFrisss Boost appel & perzik 6-pack",
+          "brand": "DubbelFrisss",
+          "size": " 6 x 0,2 l",
+          "category": "Frisdrank, sappen, water",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
           "markdownExpirationDate": "2026-10-09"
         }
       ],
@@ -2064,6 +2124,18 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 584031,
+          "title": "AH Rond wit sesam half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.59",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 606491,
           "title": "AH Taco snack",
           "brand": "AH",
@@ -2208,6 +2280,18 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 574950,
+          "title": "AH Pizza donut jalapeño cheddar",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 606074,
           "title": "AH Pistache croissant",
           "brand": "AH",
@@ -2347,6 +2431,30 @@
           "category": "Bakkerij",
           "discountPct": 15,
           "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 571174,
+          "title": "AH Jalapeño kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 230704,
+          "title": "AH Kaasbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
           "priceWas": "0.99",
           "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-08"
@@ -2525,7 +2633,7 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 198,
+      "totalBargainItems": 200,
       "meatItems": 12,
       "meat70Items": 10,
       "meat70Stock": 17.0,
@@ -3805,7 +3913,7 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 132,
+      "totalBargainItems": 131,
       "meatItems": 10,
       "meat70Items": 2,
       "meat70Stock": 2.0,
@@ -4689,7 +4797,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 185,
+      "totalBargainItems": 186,
       "meatItems": 15,
       "meat70Items": 4,
       "meat70Stock": 5.0,
@@ -5392,7 +5500,7 @@
           "size": "ca. 660 g",
           "category": "Vlees",
           "discountPct": 25,
-          "stock": 10,
+          "stock": 12,
           "priceWas": "4.69",
           "priceNow": "3.17",
           "markdownExpirationDate": "2026-10-09"
