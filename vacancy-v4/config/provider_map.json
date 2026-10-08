@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_manifest_count": 106,
+  "source_manifest_count": 113,
   "source_manifest_path": "vacancy-v4/config/sources.json",
   "note": "Initial durable map. PROVEN only when current v4 manifest itself contains direct ATS evidence; UNKNOWN requires active first-party research and is never equivalent to DISPROVEN.",
   "sources": [
@@ -2868,6 +2868,48 @@
           "checked_at": "2026-10-06T19:05:00Z"
         }
       }
+    },
+    {
+      "name": "Worldpay",
+      "kind": "employer",
+      "official_domain": "worldpay.com",
+      "platforms": {}
+    },
+    {
+      "name": "CM.com",
+      "kind": "employer",
+      "official_domain": "cm.com",
+      "platforms": {}
+    },
+    {
+      "name": "Uber",
+      "kind": "employer",
+      "official_domain": "uber.com",
+      "platforms": {}
+    },
+    {
+      "name": "CCV",
+      "kind": "employer",
+      "official_domain": "ccv.eu",
+      "platforms": {}
+    },
+    {
+      "name": "Buckaroo",
+      "kind": "employer",
+      "official_domain": "buckaroo.nl",
+      "platforms": {}
+    },
+    {
+      "name": "Online Payment Platform",
+      "kind": "employer",
+      "official_domain": "onlinepaymentplatform.com",
+      "platforms": {}
+    },
+    {
+      "name": "Intersolve",
+      "kind": "employer",
+      "official_domain": "intersolve.com",
+      "platforms": {}
     }
   ]
 }
