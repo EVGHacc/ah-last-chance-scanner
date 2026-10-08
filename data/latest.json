@@ -2,18 +2,18 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "19:25",
-  "scheduledAt": "2026-10-08T19:25:00+02:00",
-  "rawScheduledSlot": "19:25",
-  "rawScheduledAt": "2026-10-08T19:25:00+02:00",
-  "startedAt": "2026-10-08T19:25:00.409821+02:00",
-  "completedAt": "2026-10-08T19:25:04.608363+02:00",
-  "checkedAt": "2026-10-08T19:25:04.608363+02:00",
+  "scheduledSlot": "19:27",
+  "scheduledAt": "2026-10-08T19:27:00+02:00",
+  "rawScheduledSlot": "19:27",
+  "rawScheduledAt": "2026-10-08T19:27:00+02:00",
+  "startedAt": "2026-10-08T19:27:00.431464+02:00",
+  "completedAt": "2026-10-08T19:27:04.322000+02:00",
+  "checkedAt": "2026-10-08T19:27:04.322000+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
   "valid": true,
-  "official1925": true,
+  "official1925": false,
   "authMode": "user-refresh",
   "authTokenSource": "cache",
   "categories": [
@@ -25,8 +25,8 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 152,
-      "meatItems": 10,
+      "totalBargainItems": 155,
+      "meatItems": 12,
       "meat70Items": 7,
       "meat70Stock": 11.0,
       "bakeryItems": 8,
@@ -710,6 +710,18 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 619311,
+          "title": "AH Stoofvlees",
+          "brand": "AH",
+          "size": "ca. 500 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "10.00",
+          "priceNow": "7.50",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 619321,
           "title": "AH Gemengd gehakt",
           "brand": "AH",
@@ -719,6 +731,18 @@
           "stock": 1,
           "priceWas": "8.99",
           "priceNow": "6.74",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 364883,
+          "title": "AH Greenfields Hachee",
+          "brand": "AH Greenfields",
+          "size": "ca. 500 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "11.49",
+          "priceNow": "8.62",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -3053,7 +3077,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 52,
-      "all70Stock": 86.0,
+      "all70Stock": 85.0,
       "all70": [
         {
           "productId": 185200,
@@ -3512,18 +3536,6 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
-          "productId": 416296,
-          "title": "AH Kabeljauwfilet",
-          "brand": "AH",
-          "size": "ca. 250 g",
-          "category": "Vis",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "8.99",
-          "priceNow": "2.70",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
           "productId": 523368,
           "title": "AH Biologisch Zalmfilet op huid",
           "brand": "AH Biologisch",
@@ -3533,6 +3545,18 @@
           "stock": 2,
           "priceWas": "5.99",
           "priceNow": "1.80",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 416296,
+          "title": "AH Kabeljauwfilet",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "8.99",
+          "priceNow": "2.70",
           "markdownExpirationDate": "2026-10-08"
         },
         {
