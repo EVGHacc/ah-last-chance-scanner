@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "provider": "ashby",
-  "generated_at": "2026-10-07T21:39:29.536211+00:00",
+  "generated_at": "2026-10-08T08:50:43.234703+00:00",
   "configured_sources": 4,
   "verified_complete": 4,
   "failed": 0,
@@ -10,20 +10,20 @@
       "name": "OpenAI",
       "board": "openai",
       "coverage": "verified_complete",
-      "raw_jobs": 817,
+      "raw_jobs": 816,
       "unlisted_jobs": 0,
-      "provider_unique_jobs": 817,
+      "provider_unique_jobs": 816,
       "first_party_unique_jobs": null,
       "first_party_only_jobs": 0,
       "reconciled_first_party_only_ids": [],
       "first_party_drift_detected": false,
       "provider_only_jobs": 0,
-      "unique_jobs": 817,
+      "unique_jobs": 816,
       "exhausted": true,
       "evidence_kind": "provider_complete_payload",
       "endpoint": "https://api.ashbyhq.com/posting-api/job-board/openai",
       "first_party_evidence_url": "https://openai.com/careers/search/",
-      "jobs_sha256": "a1043b5a32fee22d31b69bc8b1e75376aeed1d5c9ea421eb90f3cca59f1c092d",
+      "jobs_sha256": "ffdf3298ffcf651e3fd7520de28e22f6e6981d87b428130875bab2e358b2abe3",
       "jobs": [
         {
           "job_id": "e2afdede-a222-4825-b2fc-fec439a7c893",
@@ -422,15 +422,15 @@
           "record_source": "ashby_public_api"
         },
         {
-          "job_id": "18f58952-c242-4562-8732-073a0ae8029e",
+          "job_id": "d00f2e0a-af1f-4d21-b9e8-129b079b2c42",
           "title": "Account Director, Large Enterprise - Tokyo",
           "location": "Tokyo, Japan",
           "summary": "About the team OpenAI’s mission is to build safe artificial general intelligence (AGI) which benefits all of humanity. This long-term undertaking brings the world’s best scientists, engineers, and business professionals into one lab together to accomplish this.",
-          "job_url": "https://jobs.ashbyhq.com/openai/18f58952-c242-4562-8732-073a0ae8029e",
-          "apply_url": "https://jobs.ashbyhq.com/openai/18f58952-c242-4562-8732-073a0ae8029e/application",
+          "job_url": "https://jobs.ashbyhq.com/openai/d00f2e0a-af1f-4d21-b9e8-129b079b2c42",
+          "apply_url": "https://jobs.ashbyhq.com/openai/d00f2e0a-af1f-4d21-b9e8-129b079b2c42/application",
           "department": "Go To Market",
           "team": "Sales",
-          "published_at": "2026-01-23T00:17:18.483+00:00",
+          "published_at": "2026-10-08T04:17:03.180+00:00",
           "record_source": "ashby_public_api"
         },
         {
@@ -443,6 +443,18 @@
           "department": "Go To Market",
           "team": "Sales",
           "published_at": "2026-06-24T00:26:34.020+00:00",
+          "record_source": "ashby_public_api"
+        },
+        {
+          "job_id": "772faf37-f0a0-4ea2-9f94-f9ea2c4a8914",
+          "title": "Account Director, Manufacturing- Tokyo",
+          "location": "Tokyo, Japan",
+          "summary": "About the team OpenAI’s mission is to build safe artificial general intelligence (AGI) which benefits all of humanity. This long-term undertaking brings the world’s best scientists, engineers, and business professionals into one lab together to accomplish this.",
+          "job_url": "https://jobs.ashbyhq.com/openai/772faf37-f0a0-4ea2-9f94-f9ea2c4a8914",
+          "apply_url": "https://jobs.ashbyhq.com/openai/772faf37-f0a0-4ea2-9f94-f9ea2c4a8914/application",
+          "department": "Go To Market",
+          "team": "Sales",
+          "published_at": "2026-10-08T04:16:26.057+00:00",
           "record_source": "ashby_public_api"
         },
         {
@@ -494,18 +506,6 @@
           "record_source": "ashby_public_api"
         },
         {
-          "job_id": "0b428c6d-7c06-4feb-82b6-5bbe5cda2a18",
-          "title": "Account Director, Startups",
-          "location": "São Paulo",
-          "summary": "About the Team OpenAI’s mission is to build safe artificial general intelligence (AGI) which benefits all of humanity. This long-term undertaking brings the world’s best scientists, engineers, and business professionals into one lab together to accomplish this.",
-          "job_url": "https://jobs.ashbyhq.com/openai/0b428c6d-7c06-4feb-82b6-5bbe5cda2a18",
-          "apply_url": "https://jobs.ashbyhq.com/openai/0b428c6d-7c06-4feb-82b6-5bbe5cda2a18/application",
-          "department": "Go To Market",
-          "team": "Sales",
-          "published_at": "2026-08-31T21:22:23.258+00:00",
-          "record_source": "ashby_public_api"
-        },
-        {
           "job_id": "9c5161d9-6b13-4a88-b8b9-f17857965897",
           "title": "Account Director, Startups",
           "location": "Stockholm, Sweden",
@@ -551,6 +551,18 @@
           "department": "Go To Market",
           "team": "Sales",
           "published_at": "2026-08-24T06:22:18.564+00:00",
+          "record_source": "ashby_public_api"
+        },
+        {
+          "job_id": "848c5e55-422c-4797-add4-22e0e6511a47",
+          "title": "Accounting Manager",
+          "location": "San Francisco",
+          "summary": "About the Team OpenAI’s Controllership team provides accurate, timely, and decision-useful financial information while building the processes, systems, and controls needed to support a rapidly growing global business. Our Accounting Operations team owns core accounting and close activities and drives improvements that help our finance organization scale.",
+          "job_url": "https://jobs.ashbyhq.com/openai/848c5e55-422c-4797-add4-22e0e6511a47",
+          "apply_url": "https://jobs.ashbyhq.com/openai/848c5e55-422c-4797-add4-22e0e6511a47/application",
+          "department": "Finance",
+          "team": "Finance",
+          "published_at": "2026-10-08T01:38:48.962+00:00",
           "record_source": "ashby_public_api"
         },
         {
@@ -1367,6 +1379,18 @@
           "department": "Go To Market",
           "team": "Technical Success",
           "published_at": "2026-07-08T23:04:02.851+00:00",
+          "record_source": "ashby_public_api"
+        },
+        {
+          "job_id": "02ec1893-17df-420c-8d19-48eca8edd884",
+          "title": "Applied AI Engineer, Codex",
+          "location": "Singapore",
+          "summary": "About the team The Applied AI Engineering (Codex) team helps customers adopt OpenAI's coding tools throughout their software development lifecycle. We act as trusted technical partners, guiding engineering teams as they integrate Codex into their projects and workflows.",
+          "job_url": "https://jobs.ashbyhq.com/openai/02ec1893-17df-420c-8d19-48eca8edd884",
+          "apply_url": "https://jobs.ashbyhq.com/openai/02ec1893-17df-420c-8d19-48eca8edd884/application",
+          "department": "Go To Market",
+          "team": "Technical Success",
+          "published_at": "2026-10-08T07:11:08.268+00:00",
           "record_source": "ashby_public_api"
         },
         {
@@ -6026,30 +6050,6 @@
           "record_source": "ashby_public_api"
         },
         {
-          "job_id": "978a22a5-0f0f-4da7-811e-a4b2b2fbe659",
-          "title": "Product Policy Research and Advisory Partnerships",
-          "location": "New York City",
-          "summary": "About the Team The Product Policy team is responsible for the development, implementation, enforcement, and communication of the policies that govern use of OpenAI’s services, including ChatGPT, GPTs, the GPT Store, Codex, and the OpenAI API.",
-          "job_url": "https://jobs.ashbyhq.com/openai/978a22a5-0f0f-4da7-811e-a4b2b2fbe659",
-          "apply_url": "https://jobs.ashbyhq.com/openai/978a22a5-0f0f-4da7-811e-a4b2b2fbe659/application",
-          "department": "Product Policy",
-          "team": "Product Policy",
-          "published_at": "2026-08-14T16:41:37.064+00:00",
-          "record_source": "ashby_public_api"
-        },
-        {
-          "job_id": "c37587c4-39f3-40e0-b73c-c8bb55a7cd05",
-          "title": "Program Manager - IT Operations",
-          "location": "San Francisco",
-          "summary": "About the Team The Employee Technology & Experience (ETX) team is responsible for delivering a world-class internal technology experience that enables employees to do their best work. We support and operate the employee-facing systems that keep the company moving quickly and efficiently.",
-          "job_url": "https://jobs.ashbyhq.com/openai/c37587c4-39f3-40e0-b73c-c8bb55a7cd05",
-          "apply_url": "https://jobs.ashbyhq.com/openai/c37587c4-39f3-40e0-b73c-c8bb55a7cd05/application",
-          "department": "IT",
-          "team": "IT",
-          "published_at": "2026-08-26T19:42:41.292+00:00",
-          "record_source": "ashby_public_api"
-        },
-        {
           "job_id": "3ed37e51-40dc-4d17-8219-d3500af8892c",
           "title": "Program Manager, Business Marketing",
           "location": "San Francisco",
@@ -7070,6 +7070,18 @@
           "record_source": "ashby_public_api"
         },
         {
+          "job_id": "5280c9d2-8090-47d1-a881-1fec37c90e64",
+          "title": "Senior Manager, Occupancy Planning & Workplace Strategy",
+          "location": "San Francisco",
+          "summary": "ABOUT THE TEAM OpenAI’s Real Estate & Workplace (REW) team creates and operates the spaces that support our people and our mission. Within REW, the Strategic Occupancy Planning team connects business needs, workplace strategy, and space data to help shape where and how our teams work.",
+          "job_url": "https://jobs.ashbyhq.com/openai/5280c9d2-8090-47d1-a881-1fec37c90e64",
+          "apply_url": "https://jobs.ashbyhq.com/openai/5280c9d2-8090-47d1-a881-1fec37c90e64/application",
+          "department": "Workplace",
+          "team": "Workplace",
+          "published_at": "2026-10-07T23:18:16.850+00:00",
+          "record_source": "ashby_public_api"
+        },
+        {
           "job_id": "8a50f878-5252-4f65-ad84-80ae2dc5637e",
           "title": "Senior Manager, Technical Revenue Accounting, Ads",
           "location": "San Francisco",
@@ -7259,6 +7271,18 @@
           "department": "Security",
           "team": "Security",
           "published_at": "2026-06-25T17:30:54.205+00:00",
+          "record_source": "ashby_public_api"
+        },
+        {
+          "job_id": "cc6475e6-f71d-4f51-8d9d-4eb5a7822395",
+          "title": "Senior Technical Recruiter, Consumer Devices - Singapore",
+          "location": "Singapore",
+          "summary": "About the Team The Consumer Devices organization at OpenAI builds products that bring advanced AI into the physical world. Our teams span hardware, software, design, research, and operations, working together to deliver thoughtfully crafted products at global scale.",
+          "job_url": "https://jobs.ashbyhq.com/openai/cc6475e6-f71d-4f51-8d9d-4eb5a7822395",
+          "apply_url": "https://jobs.ashbyhq.com/openai/cc6475e6-f71d-4f51-8d9d-4eb5a7822395/application",
+          "department": "Consumer Devices",
+          "team": "G&A",
+          "published_at": "2026-10-07T22:05:42.589+00:00",
           "record_source": "ashby_public_api"
         },
         {
@@ -8750,18 +8774,6 @@
           "record_source": "ashby_public_api"
         },
         {
-          "job_id": "5f3a6397-47ac-4ef0-9ca9-cd358851a6b9",
-          "title": "Strategic Delivery Lead, Intelligence Community",
-          "location": "Washington, DC",
-          "summary": "About the team The OpenAI for Government team is a mission-driven group bringing frontier AI to the U.S. Intelligence Community (IC) and broader national security enterprise.",
-          "job_url": "https://jobs.ashbyhq.com/openai/5f3a6397-47ac-4ef0-9ca9-cd358851a6b9",
-          "apply_url": "https://jobs.ashbyhq.com/openai/5f3a6397-47ac-4ef0-9ca9-cd358851a6b9/application",
-          "department": "OpenAI for Gov",
-          "team": "OpenAI for Gov",
-          "published_at": "2026-08-23T04:26:49.729+00:00",
-          "record_source": "ashby_public_api"
-        },
-        {
           "job_id": "a1d8f659-c652-42df-968e-008298b733e5",
           "title": "Strategic Finance Lead, Corporate Finance and Capital Strategy",
           "location": "San Francisco",
@@ -9710,18 +9722,6 @@
           "record_source": "ashby_public_api"
         },
         {
-          "job_id": "26e8c199-7dcb-4144-b263-f35220421a6d",
-          "title": "Trust & Safety Ads Operations Analyst, Data",
-          "location": "San Francisco",
-          "summary": "About the Team At OpenAI, Trust & Safety Operations is central to protecting OpenAI’s platform, customers, and the public from abuse.",
-          "job_url": "https://jobs.ashbyhq.com/openai/26e8c199-7dcb-4144-b263-f35220421a6d",
-          "apply_url": "https://jobs.ashbyhq.com/openai/26e8c199-7dcb-4144-b263-f35220421a6d/application",
-          "department": "User Operations",
-          "team": "Trust & Safety",
-          "published_at": "2026-08-28T16:21:10.531+00:00",
-          "record_source": "ashby_public_api"
-        },
-        {
           "job_id": "c9e9e3a5-fb93-4162-b876-6266016819c0",
           "title": "Trust & Safety Ads Operations Analyst, Programs",
           "location": "San Francisco",
@@ -9755,18 +9755,6 @@
           "department": "Global Affairs",
           "team": "Global Affairs",
           "published_at": "2026-07-31T00:19:06.792+00:00",
-          "record_source": "ashby_public_api"
-        },
-        {
-          "job_id": "af508ed6-e657-44df-beb8-3c31ae73492b",
-          "title": "User Safety & Risk Operations Analyst - Global Response (Weekend Shift)",
-          "location": "Singapore",
-          "summary": "ABOUT THE TEAM At OpenAI, our Trust, Safety & Risk Operations teams safeguard our products, users, and the company from abuse, fraud, scams, regulatory non-compliance, and other emerging risks.",
-          "job_url": "https://jobs.ashbyhq.com/openai/af508ed6-e657-44df-beb8-3c31ae73492b",
-          "apply_url": "https://jobs.ashbyhq.com/openai/af508ed6-e657-44df-beb8-3c31ae73492b/application",
-          "department": "User Operations",
-          "team": "Trust & Safety",
-          "published_at": "2026-08-11T21:43:51.599+00:00",
           "record_source": "ashby_public_api"
         },
         {
@@ -9830,7 +9818,7 @@
           "record_source": "ashby_public_api"
         }
       ],
-      "checked_at": "2026-10-07T21:39:28.186254+00:00",
+      "checked_at": "2026-10-08T08:50:41.728674+00:00",
       "error": null
     },
     {
@@ -10405,27 +10393,27 @@
           "record_source": "ashby_public_api"
         }
       ],
-      "checked_at": "2026-10-07T21:39:28.818189+00:00",
+      "checked_at": "2026-10-08T08:50:42.291482+00:00",
       "error": null
     },
     {
       "name": "Airwallex",
       "board": "airwallex",
       "coverage": "verified_complete",
-      "raw_jobs": 539,
+      "raw_jobs": 536,
       "unlisted_jobs": 0,
-      "provider_unique_jobs": 539,
+      "provider_unique_jobs": 536,
       "first_party_unique_jobs": null,
       "first_party_only_jobs": 0,
       "reconciled_first_party_only_ids": [],
       "first_party_drift_detected": false,
       "provider_only_jobs": 0,
-      "unique_jobs": 539,
+      "unique_jobs": 536,
       "exhausted": true,
       "evidence_kind": "provider_complete_payload",
       "endpoint": "https://api.ashbyhq.com/posting-api/job-board/airwallex",
       "first_party_evidence_url": "https://careers.airwallex.com/jobs/",
-      "jobs_sha256": "56ebb4d0868ee6fd05b7c8c6347f4e80e04a03116059afa452493ca2b65fed60",
+      "jobs_sha256": "ce79030a92d3f15b55762597052d38456ed314eb50cb5bd8a8761aaf43218ce7",
       "jobs": [
         {
           "job_id": "0248185e-80e7-49e5-bef2-269323b4c0c4",
@@ -13200,18 +13188,6 @@
           "record_source": "ashby_public_api"
         },
         {
-          "job_id": "efb5bfb6-a623-483f-94a1-cba1cfc4e207",
-          "title": "Manager, Venture Partnerships",
-          "location": "CN - Shenzhen",
-          "summary": "ABOUT AIRWALLEX Airwallex is the AI-native financial operating system for a real-time, intelligent economy. More than 675,000 businesses, including McLaren Racing, Qantas, SHEIN, and TikTok, use us, directly or through our platform partners, to run their financial operations or build and monetize financial products of their own.",
-          "job_url": "https://jobs.ashbyhq.com/airwallex/efb5bfb6-a623-483f-94a1-cba1cfc4e207",
-          "apply_url": "https://jobs.ashbyhq.com/airwallex/efb5bfb6-a623-483f-94a1-cba1cfc4e207/application",
-          "department": "Enterprise Business",
-          "team": "Enterprise Business",
-          "published_at": "2026-01-13T03:57:32.701+00:00",
-          "record_source": "ashby_public_api"
-        },
-        {
           "job_id": "f66897bd-2b57-4dbb-9d9f-5594861e3ebf",
           "title": "Partner Integrations Manager, Agentic",
           "location": "US - San Francisco",
@@ -14046,8 +14022,8 @@
           "summary": "ABOUT AIRWALLEX Airwallex is the AI-native financial operating system for a real-time, intelligent economy. More than 675,000 businesses, including McLaren Racing, Qantas, SHEIN, and TikTok, use us, directly or through our platform partners, to run their financial operations or build and monetize financial products of their own.",
           "job_url": "https://jobs.ashbyhq.com/airwallex/9dbc96e0-64dc-468e-bc70-f3d11bf195c7",
           "apply_url": "https://jobs.ashbyhq.com/airwallex/9dbc96e0-64dc-468e-bc70-f3d11bf195c7/application",
-          "department": "Operations",
-          "team": "Financial Operations",
+          "department": "Finance & Corporate Development",
+          "team": "Regulatory Reporting Operations",
           "published_at": "2026-09-21T06:21:52.871+00:00",
           "record_source": "ashby_public_api"
         },
@@ -14424,6 +14400,18 @@
           "record_source": "ashby_public_api"
         },
         {
+          "job_id": "0b33e6d7-6310-4850-9990-93d15232847f",
+          "title": "Senior Director, Enterprise, UK, France, Southern Europe",
+          "location": "UK - London",
+          "summary": "ABOUT AIRWALLEX Airwallex is the AI-native financial operating system for a real-time, intelligent economy. More than 675,000 businesses, including McLaren Racing, Qantas, SHEIN, and TikTok, use us, directly or through our platform partners, to run their financial operations or build and monetize financial products of their own.",
+          "job_url": "https://jobs.ashbyhq.com/airwallex/0b33e6d7-6310-4850-9990-93d15232847f",
+          "apply_url": "https://jobs.ashbyhq.com/airwallex/0b33e6d7-6310-4850-9990-93d15232847f/application",
+          "department": "Enterprise Business",
+          "team": "Sales, Enterprise",
+          "published_at": "2026-10-08T07:12:32.920+00:00",
+          "record_source": "ashby_public_api"
+        },
+        {
           "job_id": "0694215e-c0b3-48fe-a326-52504ff21b6b",
           "title": "Senior Employment Counsel - EMEA",
           "location": "UK - London",
@@ -14689,7 +14677,7 @@
         },
         {
           "job_id": "0c466f77-19ee-47d5-bc88-7200f27fbe02",
-          "title": "Senior Manager, Global Quality Assurance (AML/KYC/TM/Underwriting/Fraud Risk)",
+          "title": "Senior Manager, Global Quality Assurance (AML/KYC/TM/Fraud Risk)",
           "location": "SG - Singapore",
           "summary": "ABOUT AIRWALLEX Airwallex is the AI-native financial operating system for a real-time, intelligent economy. More than 675,000 businesses, including McLaren Racing, Qantas, SHEIN, and TikTok, use us, directly or through our platform partners, to run their financial operations or build and monetize financial products of their own.",
           "job_url": "https://jobs.ashbyhq.com/airwallex/0c466f77-19ee-47d5-bc88-7200f27fbe02",
@@ -15060,18 +15048,6 @@
           "record_source": "ashby_public_api"
         },
         {
-          "job_id": "9f576536-733d-45fa-afef-e05d91fec61e",
-          "title": "Senior Product Manager, AI Risk & Fraud Intelligence",
-          "location": "US - San Francisco",
-          "summary": "ABOUT AIRWALLEX Airwallex is the AI-native financial operating system for a real-time, intelligent economy. More than 675,000 businesses, including McLaren Racing, Qantas, SHEIN, and TikTok, use us, directly or through our platform partners, to run their financial operations or build and monetize financial products of their own.",
-          "job_url": "https://jobs.ashbyhq.com/airwallex/9f576536-733d-45fa-afef-e05d91fec61e",
-          "apply_url": "https://jobs.ashbyhq.com/airwallex/9f576536-733d-45fa-afef-e05d91fec61e/application",
-          "department": "Product",
-          "team": "Product",
-          "published_at": "2026-08-18T01:26:40.695+00:00",
-          "record_source": "ashby_public_api"
-        },
-        {
           "job_id": "6c55b41b-824b-46cd-8590-b9e83eaa5de6",
           "title": "Senior Product Manager, AI Risk & Onboarding",
           "location": "SG - Singapore",
@@ -15144,18 +15120,6 @@
           "record_source": "ashby_public_api"
         },
         {
-          "job_id": "008b91f6-61ad-40ae-a736-646ac171bf3d",
-          "title": "Senior Product Manager, Payment Fraud",
-          "location": "SG - Singapore",
-          "summary": "ABOUT AIRWALLEX Airwallex is the AI-native financial operating system for a real-time, intelligent economy. More than 675,000 businesses, including McLaren Racing, Qantas, SHEIN, and TikTok, use us, directly or through our platform partners, to run their financial operations or build and monetize financial products of their own.",
-          "job_url": "https://jobs.ashbyhq.com/airwallex/008b91f6-61ad-40ae-a736-646ac171bf3d",
-          "apply_url": "https://jobs.ashbyhq.com/airwallex/008b91f6-61ad-40ae-a736-646ac171bf3d/application",
-          "department": "Product",
-          "team": "Product",
-          "published_at": "2026-03-11T02:15:49.807+00:00",
-          "record_source": "ashby_public_api"
-        },
-        {
           "job_id": "63e23642-7e0c-4e6c-a993-184dc0f39c5e",
           "title": "Senior Product Manager, Regulatory Reporting",
           "location": "SG - Singapore",
@@ -15177,42 +15141,6 @@
           "department": "Product",
           "team": "T0 Finance",
           "published_at": "2026-06-29T02:52:37.908+00:00",
-          "record_source": "ashby_public_api"
-        },
-        {
-          "job_id": "3206c402-a71a-4b1e-ab9a-a92c096220b0",
-          "title": "Senior Product Manager, Transaction Monitoring",
-          "location": "SG - Singapore",
-          "summary": "ABOUT AIRWALLEX Airwallex is the AI-native financial operating system for a real-time, intelligent economy. More than 675,000 businesses, including McLaren Racing, Qantas, SHEIN, and TikTok, use us, directly or through our platform partners, to run their financial operations or build and monetize financial products of their own.",
-          "job_url": "https://jobs.ashbyhq.com/airwallex/3206c402-a71a-4b1e-ab9a-a92c096220b0",
-          "apply_url": "https://jobs.ashbyhq.com/airwallex/3206c402-a71a-4b1e-ab9a-a92c096220b0/application",
-          "department": "Product",
-          "team": "Product",
-          "published_at": "2026-05-06T08:40:38.680+00:00",
-          "record_source": "ashby_public_api"
-        },
-        {
-          "job_id": "ab403b72-21e8-4a95-ab8a-a10660a8b9a9",
-          "title": "Senior Product Manager, Transaction Monitoring",
-          "location": "US - San Francisco",
-          "summary": "ABOUT AIRWALLEX Airwallex is the AI-native financial operating system for a real-time, intelligent economy. More than 675,000 businesses, including McLaren Racing, Qantas, SHEIN, and TikTok, use us, directly or through our platform partners, to run their financial operations or build and monetize financial products of their own.",
-          "job_url": "https://jobs.ashbyhq.com/airwallex/ab403b72-21e8-4a95-ab8a-a10660a8b9a9",
-          "apply_url": "https://jobs.ashbyhq.com/airwallex/ab403b72-21e8-4a95-ab8a-a10660a8b9a9/application",
-          "department": "Product",
-          "team": "Product",
-          "published_at": "2026-08-04T02:13:21.264+00:00",
-          "record_source": "ashby_public_api"
-        },
-        {
-          "job_id": "0702ce79-c6d2-4c31-81dd-f643d21dbe7f",
-          "title": "Senior Product Manager, Transaction Risk",
-          "location": "SG - Singapore",
-          "summary": "ABOUT AIRWALLEX Airwallex is the AI-native financial operating system for a real-time, intelligent economy. More than 675,000 businesses, including McLaren Racing, Qantas, SHEIN, and TikTok, use us, directly or through our platform partners, to run their financial operations or build and monetize financial products of their own.",
-          "job_url": "https://jobs.ashbyhq.com/airwallex/0702ce79-c6d2-4c31-81dd-f643d21dbe7f",
-          "apply_url": "https://jobs.ashbyhq.com/airwallex/0702ce79-c6d2-4c31-81dd-f643d21dbe7f/application",
-          "department": "Product",
-          "team": "Product",
-          "published_at": "2026-05-06T08:39:06.876+00:00",
           "record_source": "ashby_public_api"
         },
         {
@@ -15381,18 +15309,6 @@
           "department": "Engineering",
           "team": "Business Accounts",
           "published_at": "2026-05-06T10:17:08.873+00:00",
-          "record_source": "ashby_public_api"
-        },
-        {
-          "job_id": "9774f068-d9de-4197-980b-a98311e90366",
-          "title": "Senior Software Engineer (Frontend), Identity & User Security",
-          "location": "SG - Singapore",
-          "summary": "ABOUT AIRWALLEX Airwallex is the AI-native financial operating system for a real-time, intelligent economy. More than 675,000 businesses, including McLaren Racing, Qantas, SHEIN, and TikTok, use us, directly or through our platform partners, to run their financial operations or build and monetize financial products of their own.",
-          "job_url": "https://jobs.ashbyhq.com/airwallex/9774f068-d9de-4197-980b-a98311e90366",
-          "apply_url": "https://jobs.ashbyhq.com/airwallex/9774f068-d9de-4197-980b-a98311e90366/application",
-          "department": "Engineering",
-          "team": "Org & Identity",
-          "published_at": "2026-02-11T14:14:53.204+00:00",
           "record_source": "ashby_public_api"
         },
         {
@@ -15669,6 +15585,18 @@
           "department": "Engineering",
           "team": "Lending",
           "published_at": "2026-06-22T08:57:49.334+00:00",
+          "record_source": "ashby_public_api"
+        },
+        {
+          "job_id": "89fccb81-c8cc-4769-be0c-9ed078e1a03b",
+          "title": "Senior Software Engineer, Machine Learning Platform",
+          "location": "SG - Singapore",
+          "summary": "ABOUT AIRWALLEX Airwallex is the AI-native financial operating system for a real-time, intelligent economy. More than 675,000 businesses, including McLaren Racing, Qantas, SHEIN, and TikTok, use us, directly or through our platform partners, to run their financial operations or build and monetize financial products of their own.",
+          "job_url": "https://jobs.ashbyhq.com/airwallex/89fccb81-c8cc-4769-be0c-9ed078e1a03b",
+          "apply_url": "https://jobs.ashbyhq.com/airwallex/89fccb81-c8cc-4769-be0c-9ed078e1a03b/application",
+          "department": "Engineering",
+          "team": "Risk Platform",
+          "published_at": "2026-10-08T06:45:55.384+00:00",
           "record_source": "ashby_public_api"
         },
         {
@@ -16032,6 +15960,18 @@
           "record_source": "ashby_public_api"
         },
         {
+          "job_id": "d0e0e281-5bc4-4d6a-a82a-8f56c2a0cd10",
+          "title": "Solution Engineer, JP",
+          "location": "JP - Tokyo",
+          "summary": "ABOUT AIRWALLEX Airwallex is the AI-native financial operating system for a real-time, intelligent economy. More than 675,000 businesses, including McLaren Racing, Qantas, SHEIN, and TikTok, use us, directly or through our platform partners, to run their financial operations or build and monetize financial products of their own.",
+          "job_url": "https://jobs.ashbyhq.com/airwallex/d0e0e281-5bc4-4d6a-a82a-8f56c2a0cd10",
+          "apply_url": "https://jobs.ashbyhq.com/airwallex/d0e0e281-5bc4-4d6a-a82a-8f56c2a0cd10/application",
+          "department": "Merchant Services",
+          "team": "Solutions Engineering",
+          "published_at": "2026-10-08T03:07:04.721+00:00",
+          "record_source": "ashby_public_api"
+        },
+        {
           "job_id": "f9531500-512d-4fce-922c-97e7045e76ff",
           "title": "Solutions Architect - Payments",
           "location": "US - New York",
@@ -16281,6 +16221,18 @@
           "department": "Design",
           "team": "Product Design",
           "published_at": "2026-03-01T22:23:01.677+00:00",
+          "record_source": "ashby_public_api"
+        },
+        {
+          "job_id": "5c2b3a16-52d3-4c3e-b3b1-c6deab07911f",
+          "title": "Staff Product Designer, Design Systems",
+          "location": "AU - Melbourne",
+          "summary": "ABOUT AIRWALLEX Airwallex is the AI-native financial operating system for a real-time, intelligent economy. More than 675,000 businesses, including McLaren Racing, Qantas, SHEIN, and TikTok, use us, directly or through our platform partners, to run their financial operations or build and monetize financial products of their own.",
+          "job_url": "https://jobs.ashbyhq.com/airwallex/5c2b3a16-52d3-4c3e-b3b1-c6deab07911f",
+          "apply_url": "https://jobs.ashbyhq.com/airwallex/5c2b3a16-52d3-4c3e-b3b1-c6deab07911f/application",
+          "department": "Design",
+          "team": "Product Design",
+          "published_at": "2026-10-08T04:01:58.847+00:00",
           "record_source": "ashby_public_api"
         },
         {
@@ -16896,27 +16848,27 @@
           "record_source": "ashby_public_api"
         }
       ],
-      "checked_at": "2026-10-07T21:39:29.108107+00:00",
+      "checked_at": "2026-10-08T08:50:42.829457+00:00",
       "error": null
     },
     {
       "name": "Checkout.com",
       "board": "checkout.com",
       "coverage": "verified_complete",
-      "raw_jobs": 168,
+      "raw_jobs": 169,
       "unlisted_jobs": 0,
-      "provider_unique_jobs": 168,
+      "provider_unique_jobs": 169,
       "first_party_unique_jobs": null,
       "first_party_only_jobs": 0,
       "reconciled_first_party_only_ids": [],
       "first_party_drift_detected": false,
       "provider_only_jobs": 0,
-      "unique_jobs": 168,
+      "unique_jobs": 169,
       "exhausted": true,
       "evidence_kind": "provider_complete_payload",
       "endpoint": "https://api.ashbyhq.com/posting-api/job-board/checkout.com",
       "first_party_evidence_url": "https://www.checkout.com/jobs",
-      "jobs_sha256": "755c9126d6d1c8d04577bd82caed477f44783f2c6b706c95ecc5dc75d0b4da6e",
+      "jobs_sha256": "afa15aea4a40081ad2969582867a3cecbc7baedb1be5a50e4b4c11f88031613f",
       "jobs": [
         {
           "job_id": "3fa7c84c-712f-45a2-b865-4094d519de41",
@@ -17155,7 +17107,7 @@
           "apply_url": "https://jobs.ashbyhq.com/checkout.com/99a7095a-a27a-421d-b421-a02b0aa4ada9/application",
           "department": "All Departments",
           "team": "Solutions engineering",
-          "published_at": "2026-10-05T14:14:15.913+00:00",
+          "published_at": "2026-10-08T08:45:44.595+00:00",
           "record_source": "ashby_public_api"
         },
         {
@@ -17256,14 +17208,14 @@
         },
         {
           "job_id": "e9960d73-c6d2-4f92-b6ec-d9caa1ae4e19",
-          "title": "Director, Strategic Accounts Business Development",
+          "title": "Director, Strategic Account Management",
           "location": "San Francisco",
           "summary": "Company Description We’re http://checkout.comCheckout.com http://Checkout.com. You might not know our name, but companies like eBay, Spotify, Klarna, Uber, and Sony do, because we’re behind many of the digital experiences you use every day.",
           "job_url": "https://jobs.ashbyhq.com/checkout.com/e9960d73-c6d2-4f92-b6ec-d9caa1ae4e19",
           "apply_url": "https://jobs.ashbyhq.com/checkout.com/e9960d73-c6d2-4f92-b6ec-d9caa1ae4e19/application",
           "department": "All Departments",
           "team": "Strategic accounts",
-          "published_at": "2026-10-06T13:57:41.736+00:00",
+          "published_at": "2026-10-08T01:30:45.865+00:00",
           "record_source": "ashby_public_api"
         },
         {
@@ -18791,6 +18743,18 @@
           "record_source": "ashby_public_api"
         },
         {
+          "job_id": "7595a4c3-bb2d-4a61-a106-39338549f6da",
+          "title": "Specialist,Technical Account Management",
+          "location": "Shanghai",
+          "summary": "Company Description We’re http://checkout.comCheckout.com http://Checkout.com. You might not know our name, but companies like eBay, Spotify, Klarna, Uber, and Sony do, because we’re behind many of the digital experiences you use every day.",
+          "job_url": "https://jobs.ashbyhq.com/checkout.com/7595a4c3-bb2d-4a61-a106-39338549f6da",
+          "apply_url": "https://jobs.ashbyhq.com/checkout.com/7595a4c3-bb2d-4a61-a106-39338549f6da/application",
+          "department": "All Departments",
+          "team": "TAM",
+          "published_at": "2026-10-08T04:58:11.382+00:00",
+          "record_source": "ashby_public_api"
+        },
+        {
           "job_id": "d77b34ad-20f9-4926-a29e-493d4749a90f",
           "title": "Staff Engineer, AI/ML",
           "location": "London",
@@ -18935,7 +18899,7 @@
           "record_source": "ashby_public_api"
         }
       ],
-      "checked_at": "2026-10-07T21:39:29.412175+00:00",
+      "checked_at": "2026-10-08T08:50:43.127666+00:00",
       "error": null
     }
   ]
