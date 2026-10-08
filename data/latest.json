@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "19:05",
-  "scheduledAt": "2026-10-08T19:05:00+02:00",
-  "rawScheduledSlot": "19:05",
-  "rawScheduledAt": "2026-10-08T19:05:00+02:00",
-  "startedAt": "2026-10-08T19:05:00.417395+02:00",
-  "completedAt": "2026-10-08T19:05:05.700396+02:00",
-  "checkedAt": "2026-10-08T19:05:05.700396+02:00",
+  "scheduledSlot": "19:06",
+  "scheduledAt": "2026-10-08T19:06:00+02:00",
+  "rawScheduledSlot": "19:06",
+  "rawScheduledAt": "2026-10-08T19:06:00+02:00",
+  "startedAt": "2026-10-08T19:06:00.384255+02:00",
+  "completedAt": "2026-10-08T19:06:04.742903+02:00",
+  "checkedAt": "2026-10-08T19:06:04.742903+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,16 +25,28 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 102,
-      "meatItems": 6,
-      "meat70Items": 4,
-      "meat70Stock": 5.0,
-      "bakeryItems": 5,
+      "totalBargainItems": 140,
+      "meatItems": 9,
+      "meat70Items": 5,
+      "meat70Stock": 6.0,
+      "bakeryItems": 8,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 24,
-      "all70Stock": 42.0,
+      "all70Items": 30,
+      "all70Stock": 56.0,
       "all70": [
+        {
+          "productId": 603430,
+          "title": "AH Aardappel ovenschaal Koreaanse stijl",
+          "brand": "AH",
+          "size": "450 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "2.39",
+          "priceNow": "0.72",
+          "markdownExpirationDate": "2026-10-08"
+        },
         {
           "productId": 611650,
           "title": "AH Slaverrijker spitskool/wortel",
@@ -180,6 +192,18 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 597944,
+          "title": "AH Biologisch Varkensschnitzel",
+          "brand": "AH Biologisch",
+          "size": "ca. 260 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.50",
+          "priceNow": "1.95",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 619307,
           "title": "AH Roerbakvlees Indische stijl",
           "brand": "AH",
@@ -213,6 +237,30 @@
           "stock": 1,
           "priceWas": "3.69",
           "priceNow": "1.11",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 587632,
+          "title": "AH Roerbak zalmblokjes",
+          "brand": "AH",
+          "size": "ca. 200 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.63",
+          "priceNow": "1.99",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 587654,
+          "title": "AH Doradefilet royal op huid",
+          "brand": "AH",
+          "size": "ca. 230 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "8.47",
+          "priceNow": "2.16",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -250,6 +298,18 @@
           "priceWas": "2.29",
           "priceNow": "0.69",
           "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 575364,
+          "title": "AH Magere yoghurt aardbei",
+          "brand": "AH",
+          "size": "1 l",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.45",
+          "priceNow": "0.44",
+          "markdownExpirationDate": "2026-10-08"
         },
         {
           "productId": 138503,
@@ -312,6 +372,18 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 603896,
+          "title": "Chiaverini Sinaasappelmarmelade",
+          "brand": "Chiaverini",
+          "size": "320 g",
+          "category": "Ontbijtgranen, beleg",
+          "discountPct": 70,
+          "stock": 8,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 607334,
           "title": "Appelsientje Kids fruitdrink framboos 6-pack",
           "brand": "Appelsientje",
@@ -335,6 +407,18 @@
           "stock": 2,
           "priceWas": "9.69",
           "priceNow": "2.91",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 597944,
+          "title": "AH Biologisch Varkensschnitzel",
+          "brand": "AH Biologisch",
+          "size": "ca. 260 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.50",
+          "priceNow": "1.95",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -374,6 +458,18 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 4041,
+          "title": "AH Schouderkarbonade",
+          "brand": "AH",
+          "size": "ca. 427 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 4,
+          "priceWas": "4.46",
+          "priceNow": "2.28",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 507416,
           "title": "Streeckgenoten Shoarmareepjes",
           "brand": "Streeckgenoten",
@@ -384,6 +480,18 @@
           "priceWas": "6.49",
           "priceNow": "3.29",
           "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 580671,
+          "title": "AH Slagersrookworst Gelders",
+          "brand": "AH",
+          "size": "100 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "1.55",
+          "priceNow": "0.93",
+          "markdownExpirationDate": "2026-10-10"
         },
         {
           "productId": 229795,
@@ -448,6 +556,18 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
+          "productId": 580174,
+          "title": "Koopmans Brood uit de pan Italiaans",
+          "brand": "Koopmans",
+          "size": "400 g",
+          "category": "Bakkerij",
+          "discountPct": 50,
+          "stock": 4,
+          "priceWas": "2.69",
+          "priceNow": "1.35",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 370644,
           "title": "Dr. Oetker Mug cake stracciatella",
           "brand": "Dr. Oetker",
@@ -458,6 +578,30 @@
           "priceWas": "1.59",
           "priceNow": "0.95",
           "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 578706,
+          "title": "AH Eierkoeken volkoren",
+          "brand": "AH",
+          "size": "360 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
+          "markdownExpirationDate": "2026-10-12"
+        },
+        {
+          "productId": 603833,
+          "title": "Bolletje Proteïne beschuit",
+          "brand": "Bolletje",
+          "size": "13 stuks",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 14,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
+          "markdownExpirationDate": "2026-10-25"
         }
       ]
     },
@@ -1905,7 +2049,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 16,
-      "all70Stock": 24.0,
+      "all70Stock": 23.0,
       "all70": [
         {
           "productId": 574721,
@@ -1914,7 +2058,7 @@
           "size": "2-3 pers|35 min",
           "category": "Groente, aardappelen",
           "discountPct": 70,
-          "stock": 4,
+          "stock": 3,
           "priceWas": "6.99",
           "priceNow": "2.10",
           "markdownExpirationDate": "2026-10-08"
@@ -2265,7 +2409,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 110,
+      "totalBargainItems": 111,
       "meatItems": 9,
       "meat70Items": 2,
       "meat70Stock": 3.0,
