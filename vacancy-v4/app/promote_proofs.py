@@ -140,3 +140,7 @@ def main():
     ledger_path.parent.mkdir(parents=True,exist_ok=True)
     ledger_path.write_text(json.dumps(ledger,ensure_ascii=False,indent=2)+"\n")
     print(json.dumps({"promoted_sources":promoted,"certified_coverage":ledger["certified_coverage"],"target":target_count}))
+
+
+if __name__ == "__main__":
+    main()
