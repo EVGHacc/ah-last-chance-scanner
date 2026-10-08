@@ -13,6 +13,11 @@ on:
 permissions:
   contents: read
 
+# Serialize proof/promotion runs so immutable evidence and ledger writes cannot race.
+concurrency:
+  group: vacancy-v4-provider-certification
+  cancel-in-progress: false
+
 jobs:
   proof:
     strategy:
