@@ -10,7 +10,7 @@ def load(rel):
 
 class BreezyAuthorityContractTests(unittest.TestCase):
     def test_authority_and_manifest_mapping(self):
-        authority = load("config/provider_authority.json")
+        authority = load("config/breezy_authority.json")
         self.assertEqual(authority["schema_version"], 1)
         provider = authority["providers"]["breezy"]
         self.assertIn("first-party", provider["authority"])
