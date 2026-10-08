@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "18:10",
-  "scheduledAt": "2026-10-08T18:10:00+02:00",
-  "rawScheduledSlot": "18:10",
-  "rawScheduledAt": "2026-10-08T18:10:00+02:00",
-  "startedAt": "2026-10-08T18:10:00.443521+02:00",
-  "completedAt": "2026-10-08T18:10:05.138869+02:00",
-  "checkedAt": "2026-10-08T18:10:05.138869+02:00",
+  "scheduledSlot": "18:12",
+  "scheduledAt": "2026-10-08T18:12:00+02:00",
+  "rawScheduledSlot": "18:12",
+  "rawScheduledAt": "2026-10-08T18:12:00+02:00",
+  "startedAt": "2026-10-08T18:12:00.409113+02:00",
+  "completedAt": "2026-10-08T18:12:04.596642+02:00",
+  "checkedAt": "2026-10-08T18:12:04.596642+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -140,7 +140,7 @@
           "size": "750 g",
           "category": "Vlees",
           "discountPct": 40,
-          "stock": 3,
+          "stock": 2,
           "priceWas": "9.69",
           "priceNow": "5.81",
           "markdownExpirationDate": "2026-10-08"
@@ -333,15 +333,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 170,
-      "meatItems": 18,
+      "totalBargainItems": 202,
+      "meatItems": 20,
       "meat70Items": 1,
       "meat70Stock": 2.0,
       "bakeryItems": 7,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 10,
-      "all70Stock": 26.0,
+      "all70Items": 14,
+      "all70Stock": 30.0,
       "all70": [
         {
           "productId": 435435,
@@ -404,6 +404,18 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 585938,
+          "title": "Optimel Proteine extra framboos aardbei",
+          "brand": "Optimel",
+          "size": "330 ml",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.79",
+          "priceNow": "0.54",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 605235,
           "title": "Optimel Proteine extra mango sinaasappel",
           "brand": "Optimel",
@@ -452,6 +464,30 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 563629,
+          "title": "Hero Fruitspread gember",
+          "brand": "Hero",
+          "size": "350 g",
+          "category": "Ontbijtgranen, beleg",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.29",
+          "priceNow": "0.99",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 563653,
+          "title": "Flower Farm Pindakaas zonder palmolie",
+          "brand": "Flower Farm",
+          "size": "350 g",
+          "category": "Ontbijtgranen, beleg",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.59",
+          "priceNow": "1.08",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 455917,
           "title": "Perla Huisblends Dolce gusto compatible cappucino",
           "brand": "Perla Huisblends",
@@ -462,9 +498,33 @@
           "priceWas": "3.99",
           "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 576688,
+          "title": "DubbelFrisss Boost appel & perzik 6-pack",
+          "brand": "DubbelFrisss",
+          "size": " 6 x 0,2 l",
+          "category": "Frisdrank, sappen, water",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-09"
         }
       ],
       "items": [
+        {
+          "productId": 4041,
+          "title": "AH Schouderkarbonade",
+          "brand": "AH",
+          "size": "ca. 427 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 5,
+          "priceWas": "4.46",
+          "priceNow": "2.28",
+          "markdownExpirationDate": "2026-10-08"
+        },
         {
           "productId": 619339,
           "title": "AH Scharrel krokante kipfiletschnitzel",
@@ -511,6 +571,18 @@
           "stock": 8,
           "priceWas": "2.29",
           "priceNow": "1.37",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 3986,
+          "title": "AH Speklap",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 3,
+          "priceWas": "3.39",
+          "priceNow": "2.03",
           "markdownExpirationDate": "2026-10-09"
         },
         {
