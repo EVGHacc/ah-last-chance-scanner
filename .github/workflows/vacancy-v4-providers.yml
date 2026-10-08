@@ -172,10 +172,7 @@ jobs:
           PROOF_CODE_SHA: ${{ github.sha }}
         run: |
           cd vacancy-v4
-          PYTHONPATH=. python - <<'PY'
-          from app.promote_proofs import main
-          main()
-          PY
+          PYTHONPATH=. python -m app.promote_proofs
       - name: Commit accepted evidence and ledger
         run: |
           set -euo pipefail
