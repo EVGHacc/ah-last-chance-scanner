@@ -141,7 +141,7 @@ jobs:
   promote:
     name: Promote fully green proofs
     needs: [proof]
-    if: always()
+    if: ${{ needs.proof.result == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
@@ -214,7 +214,10 @@ jobs:
               authority_doc=json.loads(authority.read_text())
               if provider not in authority_doc.get("providers",{}):
                   raise SystemExit(f"{provider}: authority contract missing")
-              gates={k:True for k in ("unit_tests","contract_tests","independent_qa","canary","live_proof","authority_contract","persistence_safety")}
+              # Fail closed: independent QA and persistence safety require independent attestations.
+              gates={"unit_tests": True, "contract_tests": True, "independent_qa": False,
+                     "canary": True, "live_proof": True, "authority_contract": True,
+                     "persistence_safety": False}
               release=release_decision(gates)
               if not release["release_allowed"]:
                   raise SystemExit(f"{provider}: release gate closed")
@@ -260,6 +263,7 @@ jobs:
                       }
                       (target/f"proof-{number}.json").write_text(json.dumps(envelope,ensure_ascii=False,indent=2)+"\n")
                   rec=by_id[sid]
+                  previous_certification=rec["certification"]
                   rec["provider"]=provider
                   for number,source in ((1,s1),(2,s2)):
                       proof={
@@ -274,7 +278,8 @@ jobs:
                       rec=accept_green_proof(rec,proof,release_allowed=True)
                   rec.update({"source_id":sid,"kind":src["kind"],"name":name,"provider":provider})
                   by_id[sid]=rec
-                  promoted+=1
+                  if previous_certification != "CERTIFIED" and rec["certification"] == "CERTIFIED":
+                      promoted+=1
                   print(f'{provider}/{name}: {rec["certification"]} jobs={rec["certified_job_count"]}')
 
           ordered=[by_id[f'{s["kind"]}::{s["name"]}'] for s in manifest["sources"]]
