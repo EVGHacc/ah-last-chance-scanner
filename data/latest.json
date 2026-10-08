@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "19:57",
-  "scheduledAt": "2026-10-08T19:57:00+02:00",
-  "rawScheduledSlot": "19:57",
-  "rawScheduledAt": "2026-10-08T19:57:00+02:00",
-  "startedAt": "2026-10-08T19:57:00.411511+02:00",
-  "completedAt": "2026-10-08T19:57:05.097969+02:00",
-  "checkedAt": "2026-10-08T19:57:05.097969+02:00",
+  "scheduledSlot": "20:00",
+  "scheduledAt": "2026-10-08T20:00:00+02:00",
+  "rawScheduledSlot": "20:00",
+  "rawScheduledAt": "2026-10-08T20:00:00+02:00",
+  "startedAt": "2026-10-08T20:00:00.415870+02:00",
+  "completedAt": "2026-10-08T20:00:05.320252+02:00",
+  "checkedAt": "2026-10-08T20:00:05.320252+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,15 +25,15 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 206,
+      "totalBargainItems": 205,
       "meatItems": 12,
       "meat70Items": 7,
       "meat70Stock": 10.0,
       "bakeryItems": 47,
       "bakery70Items": 2,
       "bakery70Stock": 4.0,
-      "all70Items": 51,
-      "all70Stock": 86.0,
+      "all70Items": 50,
+      "all70Stock": 85.0,
       "all70": [
         {
           "productId": 187844,
@@ -441,18 +441,6 @@
           "stock": 1,
           "priceWas": "6.63",
           "priceNow": "1.99",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
-          "productId": 587654,
-          "title": "AH Doradefilet royal op huid",
-          "brand": "AH",
-          "size": "ca. 230 g",
-          "category": "Vis",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "8.47",
-          "priceNow": "2.16",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -2424,18 +2412,6 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
-          "productId": 231924,
-          "title": "AH Chocoladebroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.59",
-          "priceNow": "0.50",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
           "productId": 417144,
           "title": "AH Vloerbrood wit heel",
           "brand": "AH",
@@ -2517,6 +2493,18 @@
           "stock": 1,
           "priceWas": "1.49",
           "priceNow": "1.27",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 231924,
+          "title": "AH Chocoladebroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.59",
+          "priceNow": "0.50",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -3969,7 +3957,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 42,
-      "all70Stock": 56.0,
+      "all70Stock": 55.0,
       "all70": [
         {
           "productId": 41080,
@@ -4017,18 +4005,6 @@
           "stock": 2,
           "priceWas": "5.79",
           "priceNow": "1.74",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
-          "productId": 185768,
-          "title": "AH Luxe wok Japans champignons peultjes",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "2.99",
-          "priceNow": "0.90",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -4161,6 +4137,18 @@
           "stock": 1,
           "priceWas": "7.59",
           "priceNow": "2.28",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 185768,
+          "title": "AH Luxe wok Japans champignons peultjes",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -4821,7 +4809,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 176,
+      "totalBargainItems": 179,
       "meatItems": 15,
       "meat70Items": 4,
       "meat70Stock": 5.0,
@@ -6000,18 +5988,6 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
-          "productId": 417144,
-          "title": "AH Vloerbrood wit heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "2.69",
-          "priceNow": "2.29",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
           "productId": 475819,
           "title": "AH Kaiserbroodje volkoren",
           "brand": "AH",
@@ -6081,6 +6057,18 @@
           "stock": 1,
           "priceWas": "1.09",
           "priceNow": "0.93",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 417144,
+          "title": "AH Vloerbrood wit heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "2.29",
           "markdownExpirationDate": "2026-10-08"
         },
         {
