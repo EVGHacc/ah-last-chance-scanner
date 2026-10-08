@@ -35,7 +35,13 @@ class BackfillRawHistoryTests(unittest.TestCase):
         with mock.patch("scripts.backfill_raw_history.git",return_value=rows):
             self.assertEqual("aaa",find_commit("2026-10-06","17:39"))
 
-    def test_backfill_marker_path_is_repository_tracked(self):\n        self.assertTrue(Path("data/raw-history-backfill.marker").exists())\n\n    def test_verify_requires_exact_files(self):
+    def test_repair_workflow_stages_new_files_before_diff(self):
+        wf=Path(".github/workflows/raw-history-repair.yml").read_text(encoding="utf-8")
+        self.assertIn("git add data/raw/2026-10-06",wf)
+        self.assertIn("git diff --cached --quiet",wf)
+        self.assertLess(wf.index("git add data/raw/2026-10-06"),wf.index("git diff --cached --quiet"))
+
+    def test_verify_requires_exact_files(self):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td)
             for slot in expected_raw_slots():
