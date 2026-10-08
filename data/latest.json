@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "21:57",
-  "scheduledAt": "2026-10-08T21:57:00+02:00",
-  "rawScheduledSlot": "21:57",
-  "rawScheduledAt": "2026-10-08T21:57:00+02:00",
-  "startedAt": "2026-10-08T21:57:00.393837+02:00",
-  "completedAt": "2026-10-08T21:57:05.109563+02:00",
-  "checkedAt": "2026-10-08T21:57:05.109563+02:00",
+  "scheduledSlot": "22:00",
+  "scheduledAt": "2026-10-08T22:00:00+02:00",
+  "rawScheduledSlot": "22:00",
+  "rawScheduledAt": "2026-10-08T22:00:00+02:00",
+  "startedAt": "2026-10-08T22:00:00.398163+02:00",
+  "completedAt": "2026-10-08T22:00:04.705154+02:00",
+  "checkedAt": "2026-10-08T22:00:04.705154+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 165,
+      "totalBargainItems": 164,
       "meatItems": 9,
       "meat70Items": 5,
       "meat70Stock": 6.0,
@@ -965,7 +965,7 @@
       "bakery70Items": 2,
       "bakery70Stock": 2.0,
       "all70Items": 45,
-      "all70Stock": 82.0,
+      "all70Stock": 81.0,
       "all70": [
         {
           "productId": 117618,
@@ -1148,18 +1148,6 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
-          "productId": 236874,
-          "title": "AH Poffertjes",
-          "brand": "AH",
-          "size": "24 stuks",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "1.89",
-          "priceNow": "0.57",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
           "productId": 597778,
           "title": "AH Uit eigen keuken roti kip",
           "brand": "AH",
@@ -1205,6 +1193,18 @@
           "stock": 1,
           "priceWas": "5.49",
           "priceNow": "1.65",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 236874,
+          "title": "AH Poffertjes",
+          "brand": "AH",
+          "size": "24 stuks",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "0.57",
           "markdownExpirationDate": "2026-10-08"
         },
         {
