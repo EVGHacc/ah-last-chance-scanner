@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "19:54",
-  "scheduledAt": "2026-10-08T19:54:00+02:00",
-  "rawScheduledSlot": "19:54",
-  "rawScheduledAt": "2026-10-08T19:54:00+02:00",
-  "startedAt": "2026-10-08T19:54:00.464370+02:00",
-  "completedAt": "2026-10-08T19:54:05.029199+02:00",
-  "checkedAt": "2026-10-08T19:54:05.029199+02:00",
+  "scheduledSlot": "19:55",
+  "scheduledAt": "2026-10-08T19:55:00+02:00",
+  "rawScheduledSlot": "19:55",
+  "rawScheduledAt": "2026-10-08T19:55:00+02:00",
+  "startedAt": "2026-10-08T19:55:00.426400+02:00",
+  "completedAt": "2026-10-08T19:55:05.109795+02:00",
+  "checkedAt": "2026-10-08T19:55:05.109795+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1042,7 +1042,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
-          "stock": 6,
+          "stock": 5,
           "priceWas": "0.99",
           "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-08"
@@ -1084,18 +1084,6 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
-          "productId": 425912,
-          "title": "AH Focaccia pepperoni",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "1.59",
-          "priceNow": "1.35",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
           "productId": 429658,
           "title": "AH Spinazie feta börek",
           "brand": "AH",
@@ -1117,6 +1105,18 @@
           "stock": 3,
           "priceWas": "0.99",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 425912,
+          "title": "AH Focaccia pepperoni",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 3,
+          "priceWas": "1.59",
+          "priceNow": "1.35",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -2705,11 +2705,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 191,
+      "totalBargainItems": 185,
       "meatItems": 12,
       "meat70Items": 10,
       "meat70Stock": 17.0,
-      "bakeryItems": 53,
+      "bakeryItems": 52,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 40,
@@ -3725,18 +3725,6 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.84",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
-          "productId": 574950,
-          "title": "AH Pizza donut jalapeño cheddar",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.49",
-          "priceNow": "1.27",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -4852,8 +4840,8 @@
       "bakeryItems": 47,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 53,
-      "all70Stock": 86.0,
+      "all70Items": 52,
+      "all70Stock": 84.0,
       "all70": [
         {
           "productId": 185200,
@@ -5105,18 +5093,6 @@
           "stock": 2,
           "priceWas": "2.49",
           "priceNow": "0.75",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
-          "productId": 133713,
-          "title": "AH Verse ananas stukjes",
-          "brand": "AH",
-          "size": "250 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "2.89",
-          "priceNow": "0.87",
           "markdownExpirationDate": "2026-10-08"
         },
         {
