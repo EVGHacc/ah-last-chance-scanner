@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "19:21",
-  "scheduledAt": "2026-10-08T19:21:00+02:00",
-  "rawScheduledSlot": "19:21",
-  "rawScheduledAt": "2026-10-08T19:21:00+02:00",
-  "startedAt": "2026-10-08T19:21:00.391629+02:00",
-  "completedAt": "2026-10-08T19:21:05.935477+02:00",
-  "checkedAt": "2026-10-08T19:21:05.935477+02:00",
+  "scheduledSlot": "19:24",
+  "scheduledAt": "2026-10-08T19:24:00+02:00",
+  "rawScheduledSlot": "19:24",
+  "rawScheduledAt": "2026-10-08T19:24:00+02:00",
+  "startedAt": "2026-10-08T19:24:00.442331+02:00",
+  "completedAt": "2026-10-08T19:24:04.570044+02:00",
+  "checkedAt": "2026-10-08T19:24:04.570044+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,8 +25,8 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 151,
-      "meatItems": 9,
+      "totalBargainItems": 152,
+      "meatItems": 10,
       "meat70Items": 7,
       "meat70Stock": 11.0,
       "bakeryItems": 8,
@@ -708,6 +708,18 @@
           "priceWas": "3.69",
           "priceNow": "1.11",
           "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 619321,
+          "title": "AH Gemengd gehakt",
+          "brand": "AH",
+          "size": "1 kg",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "8.99",
+          "priceNow": "6.74",
+          "markdownExpirationDate": "2026-10-09"
         },
         {
           "productId": 580671,
@@ -1673,15 +1685,15 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 149,
-      "meatItems": 12,
-      "meat70Items": 10,
-      "meat70Stock": 17.0,
-      "bakeryItems": 9,
+      "totalBargainItems": 120,
+      "meatItems": 11,
+      "meat70Items": 9,
+      "meat70Stock": 15.0,
+      "bakeryItems": 6,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 42,
-      "all70Stock": 100.0,
+      "all70Items": 38,
+      "all70Stock": 92.0,
       "all70": [
         {
           "productId": 624589,
@@ -1828,30 +1840,6 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
-          "productId": 597739,
-          "title": "AH Macaroni ham-kaas",
-          "brand": "AH",
-          "size": "450 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.99",
-          "priceNow": "0.90",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
-          "productId": 597790,
-          "title": "AH Verse pizza Amerikaans cheese onion",
-          "brand": "AH",
-          "size": "460 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.99",
-          "priceNow": "2.10",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
           "productId": 3986,
           "title": "AH Speklap",
           "brand": "AH",
@@ -1861,18 +1849,6 @@
           "stock": 5,
           "priceWas": "3.39",
           "priceNow": "1.02",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
-          "productId": 597950,
-          "title": "AH Biologisch Hamburger 4 stuks",
-          "brand": "AH Biologisch",
-          "size": "400 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "6.99",
-          "priceNow": "2.10",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -2104,18 +2080,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 582832,
-          "title": "AH Borrelnoten sour cream smaak",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Borrel, chips, snacks",
-          "discountPct": 70,
-          "stock": 4,
-          "priceWas": "1.65",
-          "priceNow": "0.50",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 62658,
           "title": "AH Mini cervelaat",
           "brand": "AH",
@@ -2199,18 +2163,6 @@
           "stock": 5,
           "priceWas": "3.39",
           "priceNow": "1.02",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
-          "productId": 597950,
-          "title": "AH Biologisch Hamburger 4 stuks",
-          "brand": "AH Biologisch",
-          "size": "400 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "6.99",
-          "priceNow": "2.10",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -2348,18 +2300,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 580174,
-          "title": "Koopmans Brood uit de pan Italiaans",
-          "brand": "Koopmans",
-          "size": "400 g",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "2.69",
-          "priceNow": "1.61",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 606746,
           "title": "Dr. Oetker Deco drip pistache smaak",
           "brand": "Dr. Oetker",
@@ -2418,30 +2358,6 @@
           "priceWas": "2.59",
           "priceNow": "1.94",
           "markdownExpirationDate": "2026-10-15"
-        },
-        {
-          "productId": 587853,
-          "title": "AH Glutenvrij Desembrood maanzaad",
-          "brand": "AH Glutenvrij",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 50,
-          "stock": 7,
-          "priceWas": "4.99",
-          "priceNow": "2.50",
-          "markdownExpirationDate": "2026-10-18"
-        },
-        {
-          "productId": 587852,
-          "title": "AH Glutenvrij Desembrood pompoen- & zonnebloempitten",
-          "brand": "AH Glutenvrij",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "4.99",
-          "priceNow": "2.99",
-          "markdownExpirationDate": "2026-10-18"
         }
       ]
     },
@@ -3033,7 +2949,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 114,
+      "totalBargainItems": 116,
       "meatItems": 9,
       "meat70Items": 4,
       "meat70Stock": 5.0,
