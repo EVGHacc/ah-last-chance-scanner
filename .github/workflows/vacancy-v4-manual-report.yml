@@ -126,7 +126,7 @@ jobs:
           RESEND_REPORT_FROM: ${{ secrets.RESEND_REPORT_FROM }}
         run: |
           python - <<'PY'
-          import json,os,urllib.request,datetime
+          import json,os,urllib.request,urllib.error,datetime
           required=("RESEND_API_KEY","RESEND_REPORT_TO","RESEND_REPORT_FROM")
           missing=[key for key in required if not os.environ.get(key)]
           if missing:
@@ -154,9 +154,15 @@ jobs:
               headers={"Authorization":"Bearer "+os.environ["RESEND_API_KEY"],"Content-Type":"application/json"},
               method="POST",
           )
-          with urllib.request.urlopen(request,timeout=30) as response:
-              body=json.load(response)
-              if response.status not in (200,201) or not body.get("id"):
-                  raise SystemExit("Resend did not acknowledge daily digest")
-              print("Resend accepted daily digest; email_id="+body["id"])
+          try:
+              with urllib.request.urlopen(request,timeout=30) as response:
+                  body=json.load(response)
+                  if response.status not in (200,201) or not body.get("id"):
+                      raise SystemExit("Resend did not acknowledge daily digest")
+                  print("Resend accepted daily digest; email_id="+body["id"])
+          except urllib.error.HTTPError as error:
+              details=error.read(4096).decode("utf-8","replace")
+              # Resend error body contains validation details, not the authorization header.
+              print(f"Resend rejected daily digest (HTTP {error.code}): {details}")
+              raise SystemExit(1)
           PY
