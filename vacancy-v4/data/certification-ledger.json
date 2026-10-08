@@ -2,7 +2,7 @@
   "schema_version": 1,
   "target_count": 113,
   "certified_coverage": 14,
-  "updated_at": "2026-10-08T14:46:23.077556+00:00",
+  "updated_at": "2026-10-08T14:47:33.523988+00:00",
   "records": [
     {
       "provider": null,
@@ -1575,9 +1575,11 @@
         "37793320627-1:ashby:employer::OpenAI:proof-1",
         "37793320627-1:ashby:employer::OpenAI:proof-2",
         "37793305286-1:ashby:employer::OpenAI:proof-1",
-        "37793305286-1:ashby:employer::OpenAI:proof-2"
+        "37793305286-1:ashby:employer::OpenAI:proof-2",
+        "37793457014-1:ashby:employer::OpenAI:proof-1",
+        "37793457014-1:ashby:employer::OpenAI:proof-2"
       ],
-      "consecutive_green_proofs": 34,
+      "consecutive_green_proofs": 36,
       "certification_provenance": [
         "37783330264-1:ashby:employer::OpenAI:proof-1",
         "37783330264-1:ashby:employer::OpenAI:proof-2"
@@ -1587,7 +1589,7 @@
       "config_hash": "f028de8ac2fd849120685b2adfa5da110ed9980d83dbca02f9ad02ba533ff06e",
       "authority_contract_version": "schema1:7b6cf70b02212f845209e934dfd2eef283094cf07451b69e8edc94068566130f",
       "certified_job_count": 816,
-      "freshness_at": "2026-10-08T14:32:45.696805+00:00",
+      "freshness_at": "2026-10-08T14:33:47.475902+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "employer::OpenAI",
@@ -1653,9 +1655,11 @@
         "37793320627-1:ashby:employer::Mollie:proof-1",
         "37793320627-1:ashby:employer::Mollie:proof-2",
         "37793305286-1:ashby:employer::Mollie:proof-1",
-        "37793305286-1:ashby:employer::Mollie:proof-2"
+        "37793305286-1:ashby:employer::Mollie:proof-2",
+        "37793457014-1:ashby:employer::Mollie:proof-1",
+        "37793457014-1:ashby:employer::Mollie:proof-2"
       ],
-      "consecutive_green_proofs": 34,
+      "consecutive_green_proofs": 36,
       "certification_provenance": [
         "37783330264-1:ashby:employer::Mollie:proof-1",
         "37783330264-1:ashby:employer::Mollie:proof-2"
@@ -1665,7 +1669,7 @@
       "config_hash": "f028de8ac2fd849120685b2adfa5da110ed9980d83dbca02f9ad02ba533ff06e",
       "authority_contract_version": "schema1:7b6cf70b02212f845209e934dfd2eef283094cf07451b69e8edc94068566130f",
       "certified_job_count": 47,
-      "freshness_at": "2026-10-08T14:32:46.136060+00:00",
+      "freshness_at": "2026-10-08T14:33:48.094241+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "employer::Mollie",
@@ -2071,9 +2075,11 @@
         "37793320627-1:ashby:employer::Airwallex:proof-1",
         "37793320627-1:ashby:employer::Airwallex:proof-2",
         "37793305286-1:ashby:employer::Airwallex:proof-1",
-        "37793305286-1:ashby:employer::Airwallex:proof-2"
+        "37793305286-1:ashby:employer::Airwallex:proof-2",
+        "37793457014-1:ashby:employer::Airwallex:proof-1",
+        "37793457014-1:ashby:employer::Airwallex:proof-2"
       ],
-      "consecutive_green_proofs": 34,
+      "consecutive_green_proofs": 36,
       "certification_provenance": [
         "37783330264-1:ashby:employer::Airwallex:proof-1",
         "37783330264-1:ashby:employer::Airwallex:proof-2"
@@ -2083,7 +2089,7 @@
       "config_hash": "f028de8ac2fd849120685b2adfa5da110ed9980d83dbca02f9ad02ba533ff06e",
       "authority_contract_version": "schema1:7b6cf70b02212f845209e934dfd2eef283094cf07451b69e8edc94068566130f",
       "certified_job_count": 536,
-      "freshness_at": "2026-10-08T14:32:46.226680+00:00",
+      "freshness_at": "2026-10-08T14:33:48.467876+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "employer::Airwallex",
@@ -2231,9 +2237,11 @@
         "37793320627-1:ashby:employer::Checkout.com:proof-1",
         "37793320627-1:ashby:employer::Checkout.com:proof-2",
         "37793305286-1:ashby:employer::Checkout.com:proof-1",
-        "37793305286-1:ashby:employer::Checkout.com:proof-2"
+        "37793305286-1:ashby:employer::Checkout.com:proof-2",
+        "37793457014-1:ashby:employer::Checkout.com:proof-1",
+        "37793457014-1:ashby:employer::Checkout.com:proof-2"
       ],
-      "consecutive_green_proofs": 34,
+      "consecutive_green_proofs": 36,
       "certification_provenance": [
         "37783330264-1:ashby:employer::Checkout.com:proof-1",
         "37783330264-1:ashby:employer::Checkout.com:proof-2"
@@ -2243,7 +2251,7 @@
       "config_hash": "f028de8ac2fd849120685b2adfa5da110ed9980d83dbca02f9ad02ba533ff06e",
       "authority_contract_version": "schema1:7b6cf70b02212f845209e934dfd2eef283094cf07451b69e8edc94068566130f",
       "certified_job_count": 167,
-      "freshness_at": "2026-10-08T14:32:46.511745+00:00",
+      "freshness_at": "2026-10-08T14:33:48.922491+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "employer::Checkout.com",
@@ -2367,9 +2375,11 @@
         "37793320627-1:lever:employer::Finom:proof-1",
         "37793320627-1:lever:employer::Finom:proof-2",
         "37793305286-1:lever:employer::Finom:proof-1",
-        "37793305286-1:lever:employer::Finom:proof-2"
+        "37793305286-1:lever:employer::Finom:proof-2",
+        "37793457014-1:lever:employer::Finom:proof-1",
+        "37793457014-1:lever:employer::Finom:proof-2"
       ],
-      "consecutive_green_proofs": 92,
+      "consecutive_green_proofs": 94,
       "certification_provenance": [
         "37783330264-1:lever:employer::Finom:proof-1",
         "37783330264-1:lever:employer::Finom:proof-2"
@@ -2379,7 +2389,7 @@
       "config_hash": "a31ac116986e8c0baa90cf6c2f277113ccce74ea2f28225dc2af503a75cfbfdf",
       "authority_contract_version": "schema1:7b6cf70b02212f845209e934dfd2eef283094cf07451b69e8edc94068566130f",
       "certified_job_count": 84,
-      "freshness_at": "2026-10-08T14:32:49.537692+00:00",
+      "freshness_at": "2026-10-08T14:33:49.348641+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "employer::Finom",
@@ -2669,9 +2679,11 @@
         "37793320627-1:auditcarriere:job_board::AuditCarriere:proof-1",
         "37793320627-1:auditcarriere:job_board::AuditCarriere:proof-2",
         "37793305286-1:auditcarriere:job_board::AuditCarriere:proof-1",
-        "37793305286-1:auditcarriere:job_board::AuditCarriere:proof-2"
+        "37793305286-1:auditcarriere:job_board::AuditCarriere:proof-2",
+        "37793457014-1:auditcarriere:job_board::AuditCarriere:proof-1",
+        "37793457014-1:auditcarriere:job_board::AuditCarriere:proof-2"
       ],
-      "consecutive_green_proofs": 56,
+      "consecutive_green_proofs": 58,
       "certification_provenance": [
         "37783330264-1:auditcarriere:job_board::AuditCarriere:proof-1",
         "37783330264-1:auditcarriere:job_board::AuditCarriere:proof-2"
@@ -2681,7 +2693,7 @@
       "config_hash": "ddffaf543e8c54603cf6feaa319dc63ce3ebce7f98af25fc472e109dd0b02fbf",
       "authority_contract_version": "schema1:7b6cf70b02212f845209e934dfd2eef283094cf07451b69e8edc94068566130f",
       "certified_job_count": 142,
-      "freshness_at": "2026-10-08T14:40:18.537902+00:00",
+      "freshness_at": "2026-10-08T14:42:18.560030+00:00",
       "revocation_reason": null,
       "revoked_at": null,
       "source_id": "job_board::AuditCarriere",
