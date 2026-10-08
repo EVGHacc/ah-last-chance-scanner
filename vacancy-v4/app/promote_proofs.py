@@ -69,8 +69,14 @@ def main():
         authority_version=f'schema{authority_doc.get("schema_version")}:{hashlib.sha256(authority.read_bytes()).hexdigest()}'
         first_names={s["name"] for s in batch1["sources"]}
         second_names={s["name"] for s in batch2["sources"]}
+        configured_sources=json.loads(cfg.read_text()).get("sources",[])
+        configured_names=[s["name"] for s in configured_sources]
+        if len(configured_names)!=len(set(configured_names)) or not configured_names:
+            raise SystemExit(f"{provider}: invalid provider configuration identities")
         if first_names != second_names:
             raise SystemExit(f"{provider}: proof pair source sets differ")
+        if first_names != set(configured_names):
+            raise SystemExit(f"{provider}: proofs do not cover every configured source")
         second={s["name"]:s for s in batch2["sources"]}
         for s1 in batch1["sources"]:
             name=s1["name"]; s2=second.get(name)
