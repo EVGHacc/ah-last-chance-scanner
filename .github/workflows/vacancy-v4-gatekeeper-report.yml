@@ -1,10 +1,24 @@
-name: Vacancy v4 gatekeeper report
-on: workflow_dispatch
+name: Vacancy v4 independent cached-report QA
+on:
+  workflow_dispatch:
+  push:
+    branches: [vacancy-v4-clean-sheet]
+    paths:
+      - 'vacancy-v4/app/gatekeeper_*.py'
+      - 'vacancy-v4/tests/unit/test_gatekeeper_report.py'
+      - '.github/workflows/vacancy-v4-gatekeeper-report.yml'
 permissions:
   contents: read
+  actions: read
 jobs:
   gatekeeper:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - run: echo 'Gatekeeper workflow ready'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Independent regression tests
+        working-directory: vacancy-v4
+        run: python -m unittest discover -s tests/unit -p 'test_gatekeeper_report.py' -v
