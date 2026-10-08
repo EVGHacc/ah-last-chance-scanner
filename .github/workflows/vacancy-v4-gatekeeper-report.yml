@@ -1,0 +1,10 @@
+name: Vacancy v4 gatekeeper report
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  gatekeeper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo 'Gatekeeper workflow ready'
