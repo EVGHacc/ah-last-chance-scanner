@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "21:30",
-  "scheduledAt": "2026-10-08T21:30:00+02:00",
-  "rawScheduledSlot": "21:30",
-  "rawScheduledAt": "2026-10-08T21:30:00+02:00",
-  "startedAt": "2026-10-08T21:30:00.377225+02:00",
-  "completedAt": "2026-10-08T21:30:06.294776+02:00",
-  "checkedAt": "2026-10-08T21:30:06.294776+02:00",
+  "scheduledSlot": "21:33",
+  "scheduledAt": "2026-10-08T21:33:00+02:00",
+  "rawScheduledSlot": "21:33",
+  "rawScheduledAt": "2026-10-08T21:33:00+02:00",
+  "startedAt": "2026-10-08T21:33:00.394833+02:00",
+  "completedAt": "2026-10-08T21:33:05.435979+02:00",
+  "checkedAt": "2026-10-08T21:33:05.435979+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1822,6 +1822,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 165535,
+          "title": "AH Scharrel kipfilet gerookt",
+          "brand": "AH",
+          "size": "ca. 140 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 4,
+          "priceWas": "2.88",
+          "priceNow": "1.73",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 3986,
           "title": "AH Speklap",
           "brand": "AH",
@@ -1831,18 +1843,6 @@
           "stock": 2,
           "priceWas": "3.39",
           "priceNow": "2.03",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 165535,
-          "title": "AH Scharrel kipfilet gerookt",
-          "brand": "AH",
-          "size": "ca. 140 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "2.88",
-          "priceNow": "2.16",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -3284,18 +3284,6 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
-          "productId": 230724,
-          "title": "AH Saucijzenbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 8,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
           "productId": 468259,
           "title": "AH Kaneelbroodje",
           "brand": "AH",
@@ -3305,6 +3293,18 @@
           "stock": 7,
           "priceWas": "0.59",
           "priceNow": "0.44",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 230724,
+          "title": "AH Saucijzenbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 6,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -4713,7 +4713,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 207,
+      "totalBargainItems": 208,
       "meatItems": 27,
       "meat70Items": 5,
       "meat70Stock": 5.0,
