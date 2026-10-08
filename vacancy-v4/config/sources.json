@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "target_count": 106,
+  "target_count": 113,
   "sources": [
     {
       "kind": "recruiter",
@@ -1024,6 +1024,77 @@
       "allowed_domains": [
         "booking.com"
       ]
+    },
+    {
+      "kind": "employer",
+      "name": "Worldpay",
+      "official_domain": "worldpay.com",
+      "seed_urls": [
+        "https://jobs.worldpay.com/"
+      ],
+      "allowed_domains": [
+        "jobs.worldpay.com"
+      ]
+    },
+    {
+      "kind": "employer",
+      "name": "CM.com",
+      "official_domain": "cm.com",
+      "seed_urls": [
+        "https://jobs.cm.com/all-jobs"
+      ],
+      "allowed_domains": [
+        "jobs.cm.com"
+      ]
+    },
+    {
+      "kind": "employer",
+      "name": "Uber",
+      "official_domain": "uber.com",
+      "seed_urls": [
+        "https://jobs.uber.com/en/locations/amsterdam/?id=432"
+      ],
+      "allowed_domains": [
+        "jobs.uber.com"
+      ]
+    },
+    {
+      "kind": "employer",
+      "name": "CCV",
+      "official_domain": "ccv.eu",
+      "seed_urls": [
+        "https://www.ccv.eu/nl/over-ccv/werken-bij-ccv/vacatures"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Buckaroo",
+      "official_domain": "buckaroo.nl",
+      "seed_urls": [
+        "https://www.buckaroo.nl/over-buckaroo/vacatures"
+      ],
+      "allowed_domains": []
+    },
+    {
+      "kind": "employer",
+      "name": "Online Payment Platform",
+      "official_domain": "onlinepaymentplatform.com",
+      "seed_urls": [
+        "https://jobs.onlinepaymentplatform.com/"
+      ],
+      "allowed_domains": [
+        "jobs.onlinepaymentplatform.com"
+      ]
+    },
+    {
+      "kind": "employer",
+      "name": "Intersolve",
+      "official_domain": "intersolve.com",
+      "seed_urls": [
+        "https://www.intersolve.com/nl/jobs"
+      ],
+      "allowed_domains": []
     }
   ]
 }
