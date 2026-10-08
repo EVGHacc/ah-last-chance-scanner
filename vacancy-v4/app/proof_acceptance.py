@@ -8,7 +8,15 @@ def validate(path):
     p=json.loads(Path(path).read_text(encoding="utf-8"))
     if p.get("configured_sources",0)<=0 or p.get("failed")!=0 or p.get("verified_complete")!=p.get("configured_sources"):
         raise ValueError("proof batch not fully accepted")
-    for s in p["sources"]:
+    sources = p.get("sources")
+    if not isinstance(sources, list) or len(sources) != p["configured_sources"]:
+        raise ValueError("source count mismatch")
+    names = [s.get("name") for s in sources if isinstance(s, dict)]
+    if len(names) != len(sources) or any(not isinstance(n, str) or not n.strip() for n in names):
+        raise ValueError("source identity missing")
+    if len(set(names)) != len(names):
+        raise ValueError("duplicate source identity")
+    for s in sources:
         jobs=s.get("jobs")
         if not isinstance(jobs,list) or len(jobs)!=s.get("unique_jobs"):
             raise ValueError("job count mismatch")
