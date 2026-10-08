@@ -13,6 +13,22 @@ class ManifestTests(unittest.TestCase):
         self.assertEqual(len(sources), data["target_count"])
         self.assertEqual(len({(s.kind, s.name) for s in sources}), data["target_count"])
 
+    def test_all_persistent_registries_match_manifest(self):
+        manifest = json.loads((ROOT / "config" / "sources.json").read_text(encoding="utf-8"))
+        mapping = json.loads((ROOT / "config" / "provider_map.json").read_text(encoding="utf-8"))
+        ledger = json.loads((ROOT / "data" / "certification-ledger.json").read_text(encoding="utf-8"))
+        identities = lambda rows: [(row["kind"], row["name"]) for row in rows]
+        expected = set(identities(manifest["sources"]))
+        self.assertEqual(len(expected), manifest["target_count"])
+        for rows in (mapping["sources"], ledger["records"]):
+            actual = identities(rows)
+            self.assertEqual(len(actual), len(set(actual)))
+            self.assertEqual(set(actual), expected)
+        self.assertEqual(mapping["source_manifest_count"], manifest["target_count"])
+        self.assertEqual(ledger["target_count"], manifest["target_count"])
+        self.assertEqual(ledger["certified_coverage"],
+                         sum(r["certification"] == "CERTIFIED" for r in ledger["records"]))
+
     def test_v2_exclusions_are_not_targets(self):
         names = {s.name for s in load_sources()}
         self.assertNotIn("DB Contractors UK", names)
