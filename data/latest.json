@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "18:25",
-  "scheduledAt": "2026-10-08T18:25:00+02:00",
-  "rawScheduledSlot": "18:25",
-  "rawScheduledAt": "2026-10-08T18:25:00+02:00",
-  "startedAt": "2026-10-08T18:25:00.379383+02:00",
-  "completedAt": "2026-10-08T18:25:05.944541+02:00",
-  "checkedAt": "2026-10-08T18:25:05.944541+02:00",
+  "scheduledSlot": "18:27",
+  "scheduledAt": "2026-10-08T18:27:00+02:00",
+  "rawScheduledSlot": "18:27",
+  "rawScheduledAt": "2026-10-08T18:27:00+02:00",
+  "startedAt": "2026-10-08T18:27:00.414343+02:00",
+  "completedAt": "2026-10-08T18:27:05.363730+02:00",
+  "checkedAt": "2026-10-08T18:27:05.363730+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -357,15 +357,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 149,
+      "totalBargainItems": 199,
       "meatItems": 20,
       "meat70Items": 1,
       "meat70Stock": 2.0,
-      "bakeryItems": 5,
+      "bakeryItems": 7,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 8,
-      "all70Stock": 18.0,
+      "all70Items": 15,
+      "all70Stock": 31.0,
       "all70": [
         {
           "productId": 435435,
@@ -440,6 +440,30 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 585938,
+          "title": "Optimel Proteine extra framboos aardbei",
+          "brand": "Optimel",
+          "size": "330 ml",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.79",
+          "priceNow": "0.54",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 605235,
+          "title": "Optimel Proteine extra mango sinaasappel",
+          "brand": "Optimel",
+          "size": "330 ml",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.79",
+          "priceNow": "0.54",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 613338,
           "title": "AH Kefir vanillesmaak",
           "brand": "AH",
@@ -452,6 +476,54 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 605659,
+          "title": "Daelmans Stroopwafels mini's",
+          "brand": "Daelmans",
+          "size": "200 g",
+          "category": "Koek, snoep, chocolade",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 604140,
+          "title": "YEEHRIGHT Biscuitspread",
+          "brand": "YEEHRIGHT",
+          "size": "330 g",
+          "category": "Ontbijtgranen, beleg",
+          "discountPct": 70,
+          "stock": 7,
+          "priceWas": "4.99",
+          "priceNow": "1.50",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 563629,
+          "title": "Hero Fruitspread gember",
+          "brand": "Hero",
+          "size": "350 g",
+          "category": "Ontbijtgranen, beleg",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.29",
+          "priceNow": "0.99",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 563653,
+          "title": "Flower Farm Pindakaas zonder palmolie",
+          "brand": "Flower Farm",
+          "size": "350 g",
+          "category": "Ontbijtgranen, beleg",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.59",
+          "priceNow": "1.08",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 455917,
           "title": "Perla Huisblends Dolce gusto compatible cappucino",
           "brand": "Perla Huisblends",
@@ -461,6 +533,18 @@
           "stock": 1,
           "priceWas": "3.99",
           "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 576688,
+          "title": "DubbelFrisss Boost appel & perzik 6-pack",
+          "brand": "DubbelFrisss",
+          "size": " 6 x 0,2 l",
+          "category": "Frisdrank, sappen, water",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
           "markdownExpirationDate": "2026-10-09"
         }
       ],
@@ -708,6 +792,18 @@
       ],
       "bakery": [
         {
+          "productId": 606747,
+          "title": "Dr. Oetker Deco drip choco smaak",
+          "brand": "Dr. Oetker",
+          "size": "80 g",
+          "category": "Bakkerij",
+          "discountPct": 50,
+          "stock": 6,
+          "priceWas": "4.19",
+          "priceNow": "2.10",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 515786,
           "title": "AH Mix voor hartige taart",
           "brand": "AH",
@@ -766,6 +862,18 @@
           "priceWas": "2.99",
           "priceNow": "2.24",
           "markdownExpirationDate": "2026-10-14"
+        },
+        {
+          "productId": 603833,
+          "title": "Bolletje Proteïne beschuit",
+          "brand": "Bolletje",
+          "size": "13 stuks",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 7,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
+          "markdownExpirationDate": "2026-10-25"
         }
       ]
     },
