@@ -1,0 +1,46 @@
+name: Vacancy v4 manual match report
+
+on:
+  workflow_dispatch:
+    inputs:
+      provider:
+        description: 'Provider inventory to scan'
+        required: true
+        type: choice
+        options: [ashby, greenhouse, lever, smartrecruiters, eightfold, auditcarriere, personio, breezy]
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build live provider inventory and matching report
+        working-directory: vacancy-v4
+        env:
+          PROVIDER: ${{ inputs.provider }}
+        run: |
+          python - <<'PY'
+          import importlib, json, os, pathlib, sys
+          provider = os.environ["PROVIDER"]
+          module = importlib.import_module(f"app.{provider}_batch")
+          result = module.run_batch()
+          if result.get("failed") or result.get("verified_complete") != result.get("configured_sources"):
+              raise SystemExit("Provider inventory incomplete; no report or email")
+          snapshot = pathlib.Path("manual-inventory.json")
+          snapshot.write_text(json.dumps(result, ensure_ascii=False), encoding="utf-8")
+          PY
+          python -m app.manual_report --snapshot manual-inventory.json --output manual-match-report.json
+      - name: Upload report for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: vacancy-v4-manual-match-report-${{ github.run_id }}
+          path: vacancy-v4/manual-match-report.json
+          if-no-files-found: error
+          retention-days: 14
