@@ -1,6 +1,9 @@
 name: Vacancy v4 automated match report
 
 on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/vacancy-v4-manual-report.yml']
   schedule:
     # 08:30 Europe/Amsterdam across DST changes; gate below selects local time.
     - cron: '30 6,7 * * 1-5'
@@ -18,7 +21,7 @@ permissions:
 jobs:
   report:
     runs-on: ubuntu-latest
-    if: github.event_name == 'schedule' || github.event.inputs.provider != ''
+    if: github.event_name != 'workflow_dispatch' || github.event.inputs.provider != ''
     strategy:
       fail-fast: false
       matrix:
@@ -30,7 +33,7 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
         run: |
-          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$(TZ=Europe/Amsterdam date +%H)" = "08" ]; then
+          if [ "$EVENT_NAME" != "schedule" ] || [ "$(TZ=Europe/Amsterdam date +%H)" = "08" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
           else
             echo "run=false" >> "$GITHUB_OUTPUT"
@@ -44,7 +47,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Build live provider inventory and matching report
-        if: steps.localtime.outputs.run == 'true' && (github.event_name == 'schedule' || matrix.provider == inputs.provider)
+        if: steps.localtime.outputs.run == 'true' && (github.event_name != 'workflow_dispatch' || matrix.provider == inputs.provider)
         working-directory: vacancy-v4
         env:
           PROVIDER: ${{ github.event_name == 'workflow_dispatch' && inputs.provider || matrix.provider }}
@@ -61,7 +64,7 @@ jobs:
           PY
           python -m app.manual_report --snapshot manual-inventory.json --output manual-match-report.json
       - name: Upload report for review
-        if: steps.localtime.outputs.run == 'true' && (github.event_name == 'schedule' || matrix.provider == inputs.provider)
+        if: steps.localtime.outputs.run == 'true' && (github.event_name != 'workflow_dispatch' || matrix.provider == inputs.provider)
         uses: actions/upload-artifact@v4
         with:
           name: vacancy-v4-match-report-${{ matrix.provider }}-${{ github.run_id }}
@@ -114,7 +117,7 @@ jobs:
           retention-days: 30
 
       - name: Email combined report through Resend
-        if: github.event_name == 'schedule'
+        if: github.event_name == 'schedule' || github.event_name == 'push'
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           RESEND_REPORT_TO: ${{ secrets.RESEND_REPORT_TO }}
