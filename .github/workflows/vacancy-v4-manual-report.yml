@@ -18,6 +18,7 @@ permissions:
 jobs:
   report:
     runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.event.inputs.provider != ''
     strategy:
       fail-fast: false
       matrix:
@@ -43,7 +44,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Build live provider inventory and matching report
-        if: steps.localtime.outputs.run == 'true'
+        if: steps.localtime.outputs.run == 'true' && (github.event_name == 'schedule' || matrix.provider == inputs.provider)
         working-directory: vacancy-v4
         env:
           PROVIDER: ${{ github.event_name == 'workflow_dispatch' && inputs.provider || matrix.provider }}
