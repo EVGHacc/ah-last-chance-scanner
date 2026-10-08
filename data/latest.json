@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "19:10",
-  "scheduledAt": "2026-10-08T19:10:00+02:00",
-  "rawScheduledSlot": "19:10",
-  "rawScheduledAt": "2026-10-08T19:10:00+02:00",
-  "startedAt": "2026-10-08T19:10:00.463502+02:00",
-  "completedAt": "2026-10-08T19:10:04.369940+02:00",
-  "checkedAt": "2026-10-08T19:10:04.369940+02:00",
+  "scheduledSlot": "19:12",
+  "scheduledAt": "2026-10-08T19:12:00+02:00",
+  "rawScheduledSlot": "19:12",
+  "rawScheduledAt": "2026-10-08T19:12:00+02:00",
+  "startedAt": "2026-10-08T19:12:00.448961+02:00",
+  "completedAt": "2026-10-08T19:12:04.542706+02:00",
+  "checkedAt": "2026-10-08T19:12:04.542706+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -609,11 +609,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 125,
+      "totalBargainItems": 135,
       "meatItems": 16,
       "meat70Items": 1,
       "meat70Stock": 2.0,
-      "bakeryItems": 3,
+      "bakeryItems": 4,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 16,
@@ -1042,6 +1042,18 @@
           "priceWas": "3.29",
           "priceNow": "2.47",
           "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 449956,
+          "title": "Patak's Mini naan garlic & coriander",
+          "brand": "Patak's",
+          "size": "4 stuks",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "2.24",
+          "markdownExpirationDate": "2026-10-14"
         }
       ]
     },
@@ -1049,15 +1061,15 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 126,
+      "totalBargainItems": 149,
       "meatItems": 12,
       "meat70Items": 10,
       "meat70Stock": 17.0,
-      "bakeryItems": 6,
+      "bakeryItems": 9,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 41,
-      "all70Stock": 97.0,
+      "all70Items": 42,
+      "all70Stock": 101.0,
       "all70": [
         {
           "productId": 624589,
@@ -1480,6 +1492,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 582832,
+          "title": "AH Borrelnoten sour cream smaak",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Borrel, chips, snacks",
+          "discountPct": 70,
+          "stock": 4,
+          "priceWas": "1.65",
+          "priceNow": "0.50",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 62658,
           "title": "AH Mini cervelaat",
           "brand": "AH",
@@ -1712,6 +1736,18 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
+          "productId": 580174,
+          "title": "Koopmans Brood uit de pan Italiaans",
+          "brand": "Koopmans",
+          "size": "400 g",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 606746,
           "title": "Dr. Oetker Deco drip pistache smaak",
           "brand": "Dr. Oetker",
@@ -1770,6 +1806,30 @@
           "priceWas": "2.59",
           "priceNow": "1.94",
           "markdownExpirationDate": "2026-10-15"
+        },
+        {
+          "productId": 587853,
+          "title": "AH Glutenvrij Desembrood maanzaad",
+          "brand": "AH Glutenvrij",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 50,
+          "stock": 7,
+          "priceWas": "4.99",
+          "priceNow": "2.50",
+          "markdownExpirationDate": "2026-10-18"
+        },
+        {
+          "productId": 587852,
+          "title": "AH Glutenvrij Desembrood pompoen- & zonnebloempitten",
+          "brand": "AH Glutenvrij",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "4.99",
+          "priceNow": "2.99",
+          "markdownExpirationDate": "2026-10-18"
         }
       ]
     },
