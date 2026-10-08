@@ -30,6 +30,8 @@ class MatchOverviewTests(unittest.TestCase):
         self.assertEqual(row["live_link_status"], "not_checked")
         self.assertEqual(result["coverage_status"], "partial")
         self.assertIn("Head of Compliance", markdown_report(result))
+        self.assertIn("## Feedbackhistorie", markdown_report(result))
+        self.assertIn("too_junior [bericht 2]", markdown_report(result))
 
     def test_duplicate_identity_fails_closed(self):
         snapshot = sample()
