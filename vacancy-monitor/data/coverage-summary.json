@@ -1,11 +1,11 @@
 {
   "run_date": "2026-10-08",
   "target_expected": 104,
-  "target_proven": 21,
-  "vacancy_coverage_percent": 20.2,
+  "target_proven": 19,
+  "vacancy_coverage_percent": 18.3,
   "match_audit": {
-    "candidate_count": 312,
-    "matched_count": 312,
+    "candidate_count": 199,
+    "matched_count": 199,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -234,6 +234,12 @@
       "status": "official_site_scanned"
     },
     {
+      "name": "State Street",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
       "name": "Stripe",
       "kind": "employer",
       "coverage": "partial",
@@ -242,8 +248,8 @@
     {
       "name": "Surepay",
       "kind": "employer",
-      "coverage": "partial",
-      "status": "official_ats_scanned"
+      "coverage": "unproven",
+      "status": "technical_failure"
     },
     {
       "name": "Thunes",
@@ -262,6 +268,12 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
+    },
+    {
+      "name": "Visa",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_ats_scanned"
     },
     {
       "name": "Wise",
@@ -514,6 +526,7 @@
     "DB Contractors UK",
     "McKinsey",
     "Rabobank",
+    "Surepay",
     "Risk Talent Associates",
     "Robert Walters Interim",
     "Selby Jennings"
