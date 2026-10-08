@@ -1,6 +1,9 @@
 name: Vacancy v4 manual match report
 
 on:
+  schedule:
+    # 08:30 Europe/Amsterdam across DST changes; gate below selects local time.
+    - cron: '30 6,7 * * 1-5'
   workflow_dispatch:
     inputs:
       provider:
@@ -15,18 +18,35 @@ permissions:
 jobs:
   report:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        provider: [ashby, greenhouse, lever, smartrecruiters, eightfold, auditcarriere, personio, breezy]
     timeout-minutes: 25
     steps:
+      - name: Only run at 08:30 Amsterdam on schedule
+        id: localtime
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$(TZ=Europe/Amsterdam date +%H:%M)" = "08:30" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/checkout@v4
+        if: steps.localtime.outputs.run == 'true'
         with:
           ref: vacancy-v4-clean-sheet
       - uses: actions/setup-python@v5
+        if: steps.localtime.outputs.run == 'true'
         with:
           python-version: '3.12'
       - name: Build live provider inventory and matching report
+        if: steps.localtime.outputs.run == 'true'
         working-directory: vacancy-v4
         env:
-          PROVIDER: ${{ inputs.provider }}
+          PROVIDER: ${{ github.event_name == 'workflow_dispatch' && inputs.provider || matrix.provider }}
         run: |
           python - <<'PY'
           import importlib, json, os, pathlib, sys
@@ -40,9 +60,10 @@ jobs:
           PY
           python -m app.manual_report --snapshot manual-inventory.json --output manual-match-report.json
       - name: Upload report for review
+        if: steps.localtime.outputs.run == 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: vacancy-v4-manual-match-report-${{ github.run_id }}
+          name: vacancy-v4-match-report-${{ matrix.provider }}-${{ github.run_id }}
           path: vacancy-v4/manual-match-report.json
           if-no-files-found: error
           retention-days: 14
