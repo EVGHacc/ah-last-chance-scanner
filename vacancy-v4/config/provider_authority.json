@@ -37,6 +37,12 @@
       "reconciliation": "every position id unique; full feed parsed; each first-party job title and live /job/{id}/apply link validated; jobs length equals feed positions",
       "zero_inventory": "uncorroborated zero is not a green proof",
       "first_party_evidence": "pinned Personio careers host and XML route; no slug guessing"
+    },
+    "breezy": {
+      "authority": "complete first-party Breezy public /json inventory on a pinned HTTPS board",
+      "reconciliation": "public /json must return a nonempty list; unique position ids and first-party /p/{id} job URLs; every live detail must match its title, contain a substantive summary, and expose the exact first-party /apply route; unique count equals JSON list length",
+      "zero_inventory": "uncorroborated zero is not a green proof",
+      "first_party_evidence": "official Zerohash careers board explicitly authorizes applications via zero-hash.breezy.hr; pinned board and feed URL in breezy_sources.json"
     }
   }
 }
