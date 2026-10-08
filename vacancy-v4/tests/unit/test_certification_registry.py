@@ -33,6 +33,20 @@ class CertificationRegistryTests(unittest.TestCase):
         self.assertEqual(second["certification"], "CERTIFIED")
         self.assertEqual(second["certification_provenance"], ["r1", "r2"])
 
+    def test_changed_provenance_cannot_complete_two_proofs(self):
+        first = accept_green_proof(new_record("ashby", "openai"), proof("r1"), release_allowed=True)
+        changed = proof("r2")
+        changed["config_hash"] = "different"
+        with self.assertRaisesRegex(ValueError, "provenance changed"):
+            accept_green_proof(first, changed, release_allowed=True)
+
+    def test_reproof_preserves_certification_provenance(self):
+        first = accept_green_proof(new_record("ashby", "openai"), proof("r1"), release_allowed=True)
+        certified = accept_green_proof(first, proof("r2"), release_allowed=True)
+        refreshed = accept_green_proof(certified, proof("r3"), release_allowed=True)
+        self.assertEqual(refreshed["certification"], "CERTIFIED")
+        self.assertEqual(refreshed["certification_provenance"], ["r1", "r2"])
+
     def test_transient_health_degradation_does_not_revoke_certification(self):
         record = accept_green_proof(new_record("ashby", "openai"), proof("r1"), release_allowed=True)
         record = accept_green_proof(record, proof("r2"), release_allowed=True)
