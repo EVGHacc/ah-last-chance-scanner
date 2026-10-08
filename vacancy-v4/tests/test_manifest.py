@@ -30,10 +30,23 @@ class ManifestTests(unittest.TestCase):
         by_name = {s.name: s for s in load_sources()}
         self.assertIn("ING", by_name)
         self.assertIn("Rabobank", by_name)
-        self.assertNotIn("Uber", by_name)
         self.assertIn("AuditCarriere", by_name)
         self.assertEqual(by_name["AuditCarriere"].kind, "job_board")
         self.assertEqual(by_name["AuditCarriere"].official_domain, "auditcarriere.nl")
+
+        expected_vbin_employers = {
+            "Worldpay": "worldpay.com",
+            "CM.com": "cm.com",
+            "Uber": "uber.com",
+            "CCV": "ccv.eu",
+            "Buckaroo": "buckaroo.nl",
+            "Online Payment Platform": "onlinepaymentplatform.com",
+            "Intersolve": "intersolve.com",
+        }
+        for name, domain in expected_vbin_employers.items():
+            self.assertIn(name, by_name)
+            self.assertEqual(by_name[name].kind, "employer")
+            self.assertEqual(by_name[name].official_domain, domain)
 
 if __name__ == "__main__":
     unittest.main()
