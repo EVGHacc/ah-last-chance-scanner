@@ -202,7 +202,10 @@ jobs:
 
           by_id={r["source_id"]:r for r in records}
           promoted=0
-          for p1 in sorted(proof_dir.glob("*-proof-1.json")):
+          proof_pairs=sorted(proof_dir.glob("*-proof-1.json"))
+          if not proof_pairs:
+              raise SystemExit("no production proof artifacts: promotion cannot succeed")
+          for p1 in proof_pairs:
               provider=p1.name.removesuffix("-proof-1.json")
               p2=proof_dir/f"{provider}-proof-2.json"
               if not p2.exists():
