@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "provider": "breezy",
+  "sources": [
+    {
+      "name": "Zerohash",
+      "board_url": "https://zero-hash.breezy.hr",
+      "feed_url": "https://zero-hash.breezy.hr/json",
+      "first_party_evidence_url": "https://zero-hash.breezy.hr/"
+    }
+  ]
+}
