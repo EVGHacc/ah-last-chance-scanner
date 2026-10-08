@@ -88,6 +88,13 @@ def markdown_report(overview):
                 row["feedback"], len(row["feedback_history"]), row["notification_status"],
                 f"[Link]({row['vacancy_url']})"]
         lines.append("| " + " | ".join(safe(x) for x in cols) + " |")
+    lines.extend(["", "## Feedbackhistorie"])
+    for row in overview["matches"]:
+        if not row["feedback_history"]:
+            continue
+        lines.append(f"### {safe(row['employer'])} — {safe(row['title'])} ({safe(row['job_id'])})")
+        for item in row["feedback_history"]:
+            lines.append(f"- {safe(item['received_at'])}: {safe(item['label'])} [bericht {safe(item['message_id'])}]")
     return "\n".join(lines) + "\n"
 
 
