@@ -2,9 +2,6 @@ name: Vacancy v4 automated match report
 # Run-on-push: end-to-end retry requested 2026-10-08; validate provider failures and email credentials.
 
 on:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/vacancy-v4-manual-report.yml']
   schedule:
     # 08:30 Europe/Amsterdam across DST changes; gate below selects local time.
     - cron: '30 6,7 * * 1-5'
