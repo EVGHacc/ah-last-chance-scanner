@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "17:33",
-  "scheduledAt": "2026-10-08T17:33:00+02:00",
-  "rawScheduledSlot": "17:33",
-  "rawScheduledAt": "2026-10-08T17:33:00+02:00",
-  "startedAt": "2026-10-08T17:33:00.417093+02:00",
-  "completedAt": "2026-10-08T17:33:04.688055+02:00",
-  "checkedAt": "2026-10-08T17:33:04.688055+02:00",
+  "scheduledSlot": "17:35",
+  "scheduledAt": "2026-10-08T17:35:00+02:00",
+  "rawScheduledSlot": "17:35",
+  "rawScheduledAt": "2026-10-08T17:35:00+02:00",
+  "startedAt": "2026-10-08T17:35:00.455126+02:00",
+  "completedAt": "2026-10-08T17:35:04.907525+02:00",
+  "checkedAt": "2026-10-08T17:35:04.907525+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -333,15 +333,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 211,
+      "totalBargainItems": 209,
       "meatItems": 21,
       "meat70Items": 1,
-      "meat70Stock": 3.0,
+      "meat70Stock": 2.0,
       "bakeryItems": 7,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 14,
-      "all70Stock": 31.0,
+      "all70Stock": 30.0,
       "all70": [
         {
           "productId": 435435,
@@ -374,7 +374,7 @@
           "size": "250 g",
           "category": "Vlees",
           "discountPct": 70,
-          "stock": 3,
+          "stock": 2,
           "priceWas": "4.49",
           "priceNow": "1.35",
           "markdownExpirationDate": "2026-10-10"
@@ -622,18 +622,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 620812,
-          "title": "AH Ovenschotel scharrel kipfilet Koreaans",
-          "brand": "AH",
-          "size": "440 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "6.49",
-          "priceNow": "4.87",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 626382,
           "title": "AH Scharrel kipdijfilet",
           "brand": "AH",
@@ -679,6 +667,18 @@
           "stock": 1,
           "priceWas": "6.79",
           "priceNow": "5.09",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 620812,
+          "title": "AH Ovenschotel scharrel kipfilet Koreaans",
+          "brand": "AH",
+          "size": "440 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "6.49",
+          "priceNow": "4.87",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -736,7 +736,7 @@
           "size": "250 g",
           "category": "Vlees",
           "discountPct": 70,
-          "stock": 3,
+          "stock": 2,
           "priceWas": "4.49",
           "priceNow": "1.35",
           "markdownExpirationDate": "2026-10-10"
@@ -1164,7 +1164,7 @@
           "size": "275 g",
           "category": "Vlees",
           "discountPct": 40,
-          "stock": 5,
+          "stock": 4,
           "priceWas": "1.99",
           "priceNow": "1.19",
           "markdownExpirationDate": "2026-10-11"
@@ -1533,15 +1533,15 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 120,
+      "totalBargainItems": 119,
       "meatItems": 13,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 6,
-      "bakery70Items": 1,
-      "bakery70Stock": 1.0,
-      "all70Items": 4,
-      "all70Stock": 10.0,
+      "bakeryItems": 5,
+      "bakery70Items": 0,
+      "bakery70Stock": 0,
+      "all70Items": 3,
+      "all70Stock": 9.0,
       "all70": [
         {
           "productId": 611680,
@@ -1578,18 +1578,6 @@
           "priceWas": "2.39",
           "priceNow": "0.72",
           "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 170056,
-          "title": "AH Bitterkoeken",
-          "brand": "AH",
-          "size": "4 stuks",
-          "category": "Bakkerij",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.99",
-          "priceNow": "0.67",
-          "markdownExpirationDate": "2026-10-08"
         }
       ],
       "items": [
@@ -1751,18 +1739,6 @@
         }
       ],
       "bakery": [
-        {
-          "productId": 170056,
-          "title": "AH Bitterkoeken",
-          "brand": "AH",
-          "size": "4 stuks",
-          "category": "Bakkerij",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.99",
-          "priceNow": "0.67",
-          "markdownExpirationDate": "2026-10-08"
-        },
         {
           "productId": 606680,
           "title": "AH Panini kip BBQ",
