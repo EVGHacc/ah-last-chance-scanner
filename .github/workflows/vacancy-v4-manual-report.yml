@@ -1,4 +1,5 @@
 name: Vacancy v4 automated match report
+# Run-on-push: end-to-end retry requested 2026-10-08; validate provider failures and email credentials.
 
 on:
   push:
