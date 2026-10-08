@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "18:45",
-  "scheduledAt": "2026-10-08T18:45:00+02:00",
-  "rawScheduledSlot": "18:45",
-  "rawScheduledAt": "2026-10-08T18:45:00+02:00",
-  "startedAt": "2026-10-08T18:45:00.430395+02:00",
-  "completedAt": "2026-10-08T18:45:05.216223+02:00",
-  "checkedAt": "2026-10-08T18:45:05.216223+02:00",
+  "scheduledSlot": "18:48",
+  "scheduledAt": "2026-10-08T18:48:00+02:00",
+  "rawScheduledSlot": "18:48",
+  "rawScheduledAt": "2026-10-08T18:48:00+02:00",
+  "startedAt": "2026-10-08T18:48:00.438706+02:00",
+  "completedAt": "2026-10-08T18:48:04.644855+02:00",
+  "checkedAt": "2026-10-08T18:48:04.644855+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2061,8 +2061,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 111,
-      "meatItems": 10,
+      "totalBargainItems": 110,
+      "meatItems": 9,
       "meat70Items": 2,
       "meat70Stock": 3.0,
       "bakeryItems": 5,
@@ -2254,18 +2254,6 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
-          "productId": 465748,
-          "title": "AH Biologisch Rookworst",
-          "brand": "AH Biologisch",
-          "size": "250 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "3.99",
-          "priceNow": "2.99",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 385506,
           "title": "AH Biologisch Gerookte kipfilet",
           "brand": "AH Biologisch",
@@ -2278,6 +2266,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 465748,
+          "title": "AH Biologisch Rookworst",
+          "brand": "AH Biologisch",
+          "size": "250 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "3.99",
+          "priceNow": "2.99",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 580671,
           "title": "AH Slagersrookworst Gelders",
           "brand": "AH",
@@ -2287,18 +2287,6 @@
           "stock": 2,
           "priceWas": "1.55",
           "priceNow": "0.93",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 160782,
-          "title": "AH Rookworst",
-          "brand": "AH",
-          "size": "250 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "2.99",
-          "priceNow": "2.24",
           "markdownExpirationDate": "2026-10-10"
         },
         {
