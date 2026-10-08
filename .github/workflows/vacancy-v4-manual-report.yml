@@ -89,6 +89,8 @@ jobs:
           root=pathlib.Path("provider-reports")
           files=list(root.rglob("manual-match-report.json"))
           unique={}
+          if not files:
+              raise SystemExit("No provider reports; refuse empty digest")
           for file in files:
               data=json.loads(file.read_text())
               for match in data.get("matches",[]):
@@ -101,12 +103,54 @@ jobs:
               "matches":sorted(unique.values(),key=lambda m:(-m["score"],m["employer"],m["title"])),
               "notification_status":"not_sent",
           }
-          pathlib.Path("combined-v4-report.json").write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\\n")
+          pathlib.Path("combined-v4-report.json").write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\n")
           with open(pathlib.Path(__import__("os").environ["GITHUB_STEP_SUMMARY"]),"a") as out:
-              out.write(f"## Vacancy v4 matching\\nProvider reports: {len(files)}\\n\\nUnique matches: {len(unique)}\\n\\nEmail: not sent (delivery gate not certified).\\n")
+              out.write(f"## Vacancy v4 matching\nProvider reports: {len(files)}\n\nUnique matches: {len(unique)}\n\nEmail: delivery attempted in subsequent step.\n")
           PY
       - uses: actions/upload-artifact@v4
         with:
           name: vacancy-v4-combined-${{ github.run_id }}
           path: combined-v4-report.json
           retention-days: 30
+
+      - name: Email combined report through Resend
+        if: github.event_name == 'schedule'
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_REPORT_TO: ${{ secrets.RESEND_REPORT_TO }}
+          RESEND_REPORT_FROM: ${{ secrets.RESEND_REPORT_FROM }}
+        run: |
+          python - <<'PY'
+          import json,os,urllib.request,datetime
+          required=("RESEND_API_KEY","RESEND_REPORT_TO","RESEND_REPORT_FROM")
+          missing=[key for key in required if not os.environ.get(key)]
+          if missing:
+              raise SystemExit("Email configuration missing: "+", ".join(missing))
+          report=json.load(open("combined-v4-report.json"))
+          matches=report["matches"]
+          lines=[f"Vacancy v4: {len(matches)} matched vacancies from {report['provider_reports']} successful provider reports.", ""]
+          for m in matches[:40]:
+              lines.append(f"[{m['score']}/10] {m['title']} — {m['employer']} ({m['location']})")
+              lines.append(m["url"])
+          if len(matches)>40:
+              lines.append(f"... and {len(matches)-40} further matches in the GitHub report.")
+          lines.append("")
+          lines.append("Note: reports from failed providers are excluded; these are not necessarily all vacancies.")
+          payload={
+              "from":os.environ["RESEND_REPORT_FROM"],
+              "to":[os.environ["RESEND_REPORT_TO"]],
+              "subject":f"Vacancy v4 | {len(matches)} matches | {datetime.date.today().isoformat()}",
+              "text":"\\n".join(lines)
+          }
+          request=urllib.request.Request(
+              "https://api.resend.com/emails",
+              data=json.dumps(payload).encode(),
+              headers={"Authorization":"Bearer "+os.environ["RESEND_API_KEY"],"Content-Type":"application/json"},
+              method="POST",
+          )
+          with urllib.request.urlopen(request,timeout=30) as response:
+              body=json.load(response)
+              if response.status not in (200,201) or not body.get("id"):
+                  raise SystemExit("Resend did not acknowledge daily digest")
+              print("Resend accepted daily digest; email_id="+body["id"])
+          PY
