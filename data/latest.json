@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "18:18",
-  "scheduledAt": "2026-10-08T18:18:00+02:00",
-  "rawScheduledSlot": "18:18",
-  "rawScheduledAt": "2026-10-08T18:18:00+02:00",
-  "startedAt": "2026-10-08T18:18:00.390621+02:00",
-  "completedAt": "2026-10-08T18:18:05.021000+02:00",
-  "checkedAt": "2026-10-08T18:18:05.021000+02:00",
+  "scheduledSlot": "18:20",
+  "scheduledAt": "2026-10-08T18:20:00+02:00",
+  "rawScheduledSlot": "18:20",
+  "rawScheduledAt": "2026-10-08T18:20:00+02:00",
+  "startedAt": "2026-10-08T18:20:00.395307+02:00",
+  "completedAt": "2026-10-08T18:20:04.434641+02:00",
+  "checkedAt": "2026-10-08T18:20:04.434641+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -357,28 +357,16 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 200,
-      "meatItems": 20,
+      "totalBargainItems": 145,
+      "meatItems": 18,
       "meat70Items": 1,
       "meat70Stock": 2.0,
-      "bakeryItems": 7,
+      "bakeryItems": 5,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 15,
-      "all70Stock": 31.0,
+      "all70Items": 6,
+      "all70Stock": 16.0,
       "all70": [
-        {
-          "productId": 435435,
-          "title": "AH Wokgroente Thais grootverpakking",
-          "brand": "AH",
-          "size": "600 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.99",
-          "priceNow": "0.90",
-          "markdownExpirationDate": "2026-10-08"
-        },
         {
           "productId": 38088,
           "title": "AH Rundvleessalade",
@@ -402,18 +390,6 @@
           "priceWas": "4.49",
           "priceNow": "1.35",
           "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 543391,
-          "title": "AH Gegrilde beenham",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vleeswaren",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.79",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-10-08"
         },
         {
           "productId": 543186,
@@ -440,30 +416,6 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
-          "productId": 585938,
-          "title": "Optimel Proteine extra framboos aardbei",
-          "brand": "Optimel",
-          "size": "330 ml",
-          "category": "Zuivel, eieren",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "1.79",
-          "priceNow": "0.54",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
-          "productId": 605235,
-          "title": "Optimel Proteine extra mango sinaasappel",
-          "brand": "Optimel",
-          "size": "330 ml",
-          "category": "Zuivel, eieren",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "1.79",
-          "priceNow": "0.54",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
           "productId": 613338,
           "title": "AH Kefir vanillesmaak",
           "brand": "AH",
@@ -473,54 +425,6 @@
           "stock": 1,
           "priceWas": "1.59",
           "priceNow": "0.48",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
-          "productId": 605659,
-          "title": "Daelmans Stroopwafels mini's",
-          "brand": "Daelmans",
-          "size": "200 g",
-          "category": "Koek, snoep, chocolade",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.99",
-          "priceNow": "0.90",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
-          "productId": 604140,
-          "title": "YEEHRIGHT Biscuitspread",
-          "brand": "YEEHRIGHT",
-          "size": "330 g",
-          "category": "Ontbijtgranen, beleg",
-          "discountPct": 70,
-          "stock": 7,
-          "priceWas": "4.99",
-          "priceNow": "1.50",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
-          "productId": 563629,
-          "title": "Hero Fruitspread gember",
-          "brand": "Hero",
-          "size": "350 g",
-          "category": "Ontbijtgranen, beleg",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "3.29",
-          "priceNow": "0.99",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
-          "productId": 563653,
-          "title": "Flower Farm Pindakaas zonder palmolie",
-          "brand": "Flower Farm",
-          "size": "350 g",
-          "category": "Ontbijtgranen, beleg",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "3.59",
-          "priceNow": "1.08",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -534,33 +438,9 @@
           "priceWas": "3.99",
           "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 576688,
-          "title": "DubbelFrisss Boost appel & perzik 6-pack",
-          "brand": "DubbelFrisss",
-          "size": " 6 x 0,2 l",
-          "category": "Frisdrank, sappen, water",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.99",
-          "priceNow": "0.90",
-          "markdownExpirationDate": "2026-10-09"
         }
       ],
       "items": [
-        {
-          "productId": 4041,
-          "title": "AH Schouderkarbonade",
-          "brand": "AH",
-          "size": "ca. 427 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 5,
-          "priceWas": "4.46",
-          "priceNow": "2.28",
-          "markdownExpirationDate": "2026-10-08"
-        },
         {
           "productId": 619339,
           "title": "AH Scharrel krokante kipfiletschnitzel",
@@ -607,18 +487,6 @@
           "stock": 8,
           "priceWas": "2.29",
           "priceNow": "1.37",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 3986,
-          "title": "AH Speklap",
-          "brand": "AH",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "3.39",
-          "priceNow": "2.03",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -828,18 +696,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 550410,
-          "title": "AH Kokosrasp",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "2.19",
-          "priceNow": "1.64",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 561865,
           "title": "Koopmans Plaatcake appelkruimel",
           "brand": "Koopmans",
@@ -862,18 +718,6 @@
           "priceWas": "2.99",
           "priceNow": "2.24",
           "markdownExpirationDate": "2026-10-14"
-        },
-        {
-          "productId": 603833,
-          "title": "Bolletje Proteïne beschuit",
-          "brand": "Bolletje",
-          "size": "13 stuks",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 7,
-          "priceWas": "1.49",
-          "priceNow": "1.12",
-          "markdownExpirationDate": "2026-10-25"
         }
       ]
     },
@@ -1417,7 +1261,7 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 124,
+      "totalBargainItems": 123,
       "meatItems": 10,
       "meat70Items": 0,
       "meat70Stock": 0,
@@ -1780,7 +1624,7 @@
           "size": "750 g",
           "category": "Vlees",
           "discountPct": 40,
-          "stock": 3,
+          "stock": 2,
           "priceWas": "9.69",
           "priceNow": "5.81",
           "markdownExpirationDate": "2026-10-08"
