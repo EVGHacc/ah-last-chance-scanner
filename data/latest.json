@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "17:45",
-  "scheduledAt": "2026-10-08T17:45:00+02:00",
-  "rawScheduledSlot": "17:45",
-  "rawScheduledAt": "2026-10-08T17:45:00+02:00",
-  "startedAt": "2026-10-08T17:45:00.421485+02:00",
-  "completedAt": "2026-10-08T17:45:04.571209+02:00",
-  "checkedAt": "2026-10-08T17:45:04.571209+02:00",
+  "scheduledSlot": "17:48",
+  "scheduledAt": "2026-10-08T17:48:00+02:00",
+  "rawScheduledSlot": "17:48",
+  "rawScheduledAt": "2026-10-08T17:48:00+02:00",
+  "startedAt": "2026-10-08T17:48:00.396876+02:00",
+  "completedAt": "2026-10-08T17:48:05.627544+02:00",
+  "checkedAt": "2026-10-08T17:48:05.627544+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -333,8 +333,8 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 207,
-      "meatItems": 21,
+      "totalBargainItems": 205,
+      "meatItems": 20,
       "meat70Items": 1,
       "meat70Stock": 2.0,
       "bakeryItems": 7,
@@ -559,18 +559,6 @@
           "stock": 2,
           "priceWas": "4.95",
           "priceNow": "2.37",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
-          "productId": 531832,
-          "title": "AH Scharrel kipdijfilet reepjes",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "4.99",
-          "priceNow": "2.99",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -865,7 +853,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 12,
-      "all70Stock": 45.0,
+      "all70Stock": 49.0,
       "all70": [
         {
           "productId": 397576,
@@ -994,10 +982,10 @@
           "size": "150 g",
           "category": "Pasta, rijst, wereldkeuken",
           "discountPct": 70,
-          "stock": 1,
+          "stock": 5,
           "priceWas": "1.49",
           "priceNow": "0.45",
-          "markdownExpirationDate": "2026-10-08"
+          "markdownExpirationDate": "2026-10-14"
         },
         {
           "productId": 217466,
