@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "19:12",
-  "scheduledAt": "2026-10-08T19:12:00+02:00",
-  "rawScheduledSlot": "19:12",
-  "rawScheduledAt": "2026-10-08T19:12:00+02:00",
-  "startedAt": "2026-10-08T19:12:00.448961+02:00",
-  "completedAt": "2026-10-08T19:12:04.542706+02:00",
-  "checkedAt": "2026-10-08T19:12:04.542706+02:00",
+  "scheduledSlot": "19:15",
+  "scheduledAt": "2026-10-08T19:15:00+02:00",
+  "rawScheduledSlot": "19:15",
+  "rawScheduledAt": "2026-10-08T19:15:00+02:00",
+  "startedAt": "2026-10-08T19:15:00.446840+02:00",
+  "completedAt": "2026-10-08T19:15:04.331416+02:00",
+  "checkedAt": "2026-10-08T19:15:04.331416+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 143,
+      "totalBargainItems": 146,
       "meatItems": 9,
       "meat70Items": 5,
       "meat70Stock": 6.0,
@@ -609,15 +609,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 135,
-      "meatItems": 16,
+      "totalBargainItems": 190,
+      "meatItems": 19,
       "meat70Items": 1,
       "meat70Stock": 2.0,
-      "bakeryItems": 4,
+      "bakeryItems": 7,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 16,
-      "all70Stock": 46.0,
+      "all70Items": 26,
+      "all70Stock": 63.0,
       "all70": [
         {
           "productId": 117618,
@@ -668,6 +668,18 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 435435,
+          "title": "AH Wokgroente Thais grootverpakking",
+          "brand": "AH",
+          "size": "600 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 612924,
           "title": "AH Paprika rood geel met baba ganoush",
           "brand": "AH",
@@ -701,6 +713,18 @@
           "stock": 4,
           "priceWas": "1.89",
           "priceNow": "0.57",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 531273,
+          "title": "AH Stoommaaltijd tortellini formaggio XL",
+          "brand": "AH",
+          "size": "555 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "6.99",
+          "priceNow": "2.10",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -764,6 +788,18 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 543391,
+          "title": "AH Gegrilde beenham",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vleeswaren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.79",
+          "priceNow": "0.84",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 543186,
           "title": "AH Leverworst",
           "brand": "AH",
@@ -788,6 +824,30 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
+          "productId": 585938,
+          "title": "Optimel Proteine extra framboos aardbei",
+          "brand": "Optimel",
+          "size": "330 ml",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.79",
+          "priceNow": "0.54",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 605235,
+          "title": "Optimel Proteine extra mango sinaasappel",
+          "brand": "Optimel",
+          "size": "330 ml",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.79",
+          "priceNow": "0.54",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 613338,
           "title": "AH Kefir vanillesmaak",
           "brand": "AH",
@@ -797,6 +857,54 @@
           "stock": 1,
           "priceWas": "1.59",
           "priceNow": "0.48",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 605659,
+          "title": "Daelmans Stroopwafels mini's",
+          "brand": "Daelmans",
+          "size": "200 g",
+          "category": "Koek, snoep, chocolade",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 604140,
+          "title": "YEEHRIGHT Biscuitspread",
+          "brand": "YEEHRIGHT",
+          "size": "330 g",
+          "category": "Ontbijtgranen, beleg",
+          "discountPct": 70,
+          "stock": 7,
+          "priceWas": "4.99",
+          "priceNow": "1.50",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 563629,
+          "title": "Hero Fruitspread gember",
+          "brand": "Hero",
+          "size": "350 g",
+          "category": "Ontbijtgranen, beleg",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.29",
+          "priceNow": "0.99",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 563653,
+          "title": "Flower Farm Pindakaas zonder palmolie",
+          "brand": "Flower Farm",
+          "size": "350 g",
+          "category": "Ontbijtgranen, beleg",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.59",
+          "priceNow": "1.08",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -810,9 +918,33 @@
           "priceWas": "3.99",
           "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 576688,
+          "title": "DubbelFrisss Boost appel & perzik 6-pack",
+          "brand": "DubbelFrisss",
+          "size": " 6 x 0,2 l",
+          "category": "Frisdrank, sappen, water",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-09"
         }
       ],
       "items": [
+        {
+          "productId": 4041,
+          "title": "AH Schouderkarbonade",
+          "brand": "AH",
+          "size": "ca. 427 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 5,
+          "priceWas": "4.46",
+          "priceNow": "2.28",
+          "markdownExpirationDate": "2026-10-08"
+        },
         {
           "productId": 619339,
           "title": "AH Scharrel krokante kipfiletschnitzel",
@@ -823,6 +955,18 @@
           "stock": 3,
           "priceWas": "7.99",
           "priceNow": "4.79",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 436755,
+          "title": "AH Biologisch Rundervink",
+          "brand": "AH Biologisch",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "4.99",
+          "priceNow": "2.54",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -847,6 +991,18 @@
           "stock": 8,
           "priceWas": "2.29",
           "priceNow": "1.37",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 3986,
+          "title": "AH Speklap",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 3,
+          "priceWas": "3.39",
+          "priceNow": "2.03",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -1008,6 +1164,18 @@
       ],
       "bakery": [
         {
+          "productId": 606747,
+          "title": "Dr. Oetker Deco drip choco smaak",
+          "brand": "Dr. Oetker",
+          "size": "80 g",
+          "category": "Bakkerij",
+          "discountPct": 50,
+          "stock": 6,
+          "priceWas": "4.19",
+          "priceNow": "2.10",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 515786,
           "title": "AH Mix voor hartige taart",
           "brand": "AH",
@@ -1029,6 +1197,18 @@
           "stock": 2,
           "priceWas": "1.99",
           "priceNow": "1.49",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 550410,
+          "title": "AH Kokosrasp",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.19",
+          "priceNow": "1.64",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -1054,6 +1234,18 @@
           "priceWas": "2.99",
           "priceNow": "2.24",
           "markdownExpirationDate": "2026-10-14"
+        },
+        {
+          "productId": 603833,
+          "title": "Bolletje Proteïne beschuit",
+          "brand": "Bolletje",
+          "size": "13 stuks",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 7,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
+          "markdownExpirationDate": "2026-10-25"
         }
       ]
     },
