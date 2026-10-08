@@ -1,0 +1,33 @@
+name: Vacancy v4 notification tests
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - vacancy-v4-clean-sheet
+    paths:
+      - 'vacancy-v4/app/notifications.py'
+      - 'vacancy-v4/app/resend_dispatch.py'
+      - 'vacancy-v4/app/notify_runner.py'
+      - 'vacancy-v4/tests/unit/test_notifications.py'
+      - 'vacancy-v4/tests/unit/test_resend_dispatch.py'
+      - 'vacancy-v4/tests/unit/test_notify_runner.py'
+      - '.github/workflows/vacancy-v4-notifications-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  notification-unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v4 notification tests
+        run: |
+          cd vacancy-v4
+          python -m unittest discover -s tests/unit -p 'test_notifications.py' -v
+          python -m unittest discover -s tests/unit -p 'test_resend_dispatch.py' -v
+          python -m unittest discover -s tests/unit -p 'test_notify_runner.py' -v
