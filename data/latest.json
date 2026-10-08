@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-08",
   "weekday": "Thursday",
-  "scheduledSlot": "20:30",
-  "scheduledAt": "2026-10-08T20:30:00+02:00",
-  "rawScheduledSlot": "20:30",
-  "rawScheduledAt": "2026-10-08T20:30:00+02:00",
-  "startedAt": "2026-10-08T20:30:00.472858+02:00",
-  "completedAt": "2026-10-08T20:30:05.272489+02:00",
-  "checkedAt": "2026-10-08T20:30:05.272489+02:00",
+  "scheduledSlot": "20:33",
+  "scheduledAt": "2026-10-08T20:33:00+02:00",
+  "rawScheduledSlot": "20:33",
+  "rawScheduledAt": "2026-10-08T20:33:00+02:00",
+  "startedAt": "2026-10-08T20:33:00.415764+02:00",
+  "completedAt": "2026-10-08T20:33:05.108907+02:00",
+  "checkedAt": "2026-10-08T20:33:05.108907+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -32,8 +32,8 @@
       "bakeryItems": 46,
       "bakery70Items": 2,
       "bakery70Stock": 4.0,
-      "all70Items": 49,
-      "all70Stock": 84.0,
+      "all70Items": 50,
+      "all70Stock": 89.0,
       "all70": [
         {
           "productId": 187844,
@@ -141,6 +141,18 @@
           "stock": 1,
           "priceWas": "4.89",
           "priceNow": "1.47",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 594137,
+          "title": "AH Verse watermeloen",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 5,
+          "priceWas": "2.49",
+          "priceNow": "0.75",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -1096,18 +1108,6 @@
           "markdownExpirationDate": "2026-10-08"
         },
         {
-          "productId": 230710,
-          "title": "AH Ham kaas croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 5,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-10-08"
-        },
-        {
           "productId": 606046,
           "title": "AH Turks broodje",
           "brand": "AH",
@@ -1127,6 +1127,18 @@
           "category": "Bakkerij",
           "discountPct": 15,
           "stock": 4,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 230710,
+          "title": "AH Ham kaas croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 3,
           "priceWas": "0.99",
           "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-08"
@@ -1324,8 +1336,8 @@
       "bakeryItems": 45,
       "bakery70Items": 2,
       "bakery70Stock": 2.0,
-      "all70Items": 44,
-      "all70Stock": 89.0,
+      "all70Items": 45,
+      "all70Stock": 90.0,
       "all70": [
         {
           "productId": 117618,
@@ -1745,6 +1757,18 @@
           "stock": 1,
           "priceWas": "1.79",
           "priceNow": "0.54",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 537095,
+          "title": "Kalverliefde Biologische volle melk",
+          "brand": "Kalverliefde",
+          "size": "1 l",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.49",
+          "priceNow": "0.75",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -2640,8 +2664,8 @@
       "bakeryItems": 53,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 40,
-      "all70Stock": 97.0,
+      "all70Items": 42,
+      "all70Stock": 99.0,
       "all70": [
         {
           "productId": 624589,
@@ -2920,6 +2944,18 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 163826,
+          "title": "Galbani Mozzarella mini",
+          "brand": "Galbani",
+          "size": "260 g",
+          "category": "Kaas",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.79",
+          "priceNow": "0.84",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
           "productId": 500013,
           "title": "AH Zaanlander 3 jaar 48+ schuitje",
           "brand": "AH Zaanlander",
@@ -3097,6 +3133,18 @@
           "stock": 1,
           "priceWas": "4.49",
           "priceNow": "1.35",
+          "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 517414,
+          "title": "AH Roomboter gevulde koeken mini",
+          "brand": "AH",
+          "size": "360 g",
+          "category": "Koek, snoep, chocolade",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.15",
+          "priceNow": "0.65",
           "markdownExpirationDate": "2026-10-08"
         },
         {
@@ -4797,8 +4845,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 185,
-      "meatItems": 15,
+      "totalBargainItems": 186,
+      "meatItems": 16,
       "meat70Items": 4,
       "meat70Stock": 5.0,
       "bakeryItems": 45,
@@ -5492,6 +5540,18 @@
           "priceWas": "3.47",
           "priceNow": "1.77",
           "markdownExpirationDate": "2026-10-08"
+        },
+        {
+          "productId": 619311,
+          "title": "AH Stoofvlees",
+          "brand": "AH",
+          "size": "ca. 500 g",
+          "category": "Vlees",
+          "discountPct": 35,
+          "stock": 2,
+          "priceWas": "10.00",
+          "priceNow": "6.50",
+          "markdownExpirationDate": "2026-10-09"
         },
         {
           "productId": 165537,
