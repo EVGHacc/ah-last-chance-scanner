@@ -1,11 +1,11 @@
 {
-  "run_date": "2026-10-08",
+  "run_date": "2026-10-09",
   "target_expected": 104,
-  "target_proven": 21,
-  "vacancy_coverage_percent": 20.2,
+  "target_proven": 23,
+  "vacancy_coverage_percent": 22.1,
   "match_audit": {
-    "candidate_count": 489,
-    "matched_count": 489,
+    "candidate_count": 533,
+    "matched_count": 533,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -130,12 +130,6 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_ats_scanned"
-    },
-    {
-      "name": "Mastercard",
-      "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_site_scanned"
     },
     {
       "name": "McKinsey",
@@ -343,12 +337,6 @@
     },
     {
       "name": "Cowen Partners",
-      "kind": "recruiter",
-      "coverage": "partial",
-      "status": "no_public_vacancy_board"
-    },
-    {
-      "name": "CPI",
       "kind": "recruiter",
       "coverage": "partial",
       "status": "no_public_vacancy_board"
