@@ -3,6 +3,7 @@ import hashlib,json,os,pathlib,re,subprocess
 from datetime import datetime,timezone
 from app.proof_acceptance import validate
 from app.release_gate import release_decision
+from app.ci_step_attestation import provider_release_gates
 from app.certification_registry import new_record,accept_green_proof,certified_count
 
 
@@ -57,10 +58,13 @@ def main():
                           len(ledger_ids)==len(set(ledger_ids))==target_count and
                           set(source_ids)==set(ledger_ids) and
                           ledger_path.is_file())
-        gates={"unit_tests": True, "contract_tests": True, "independent_qa": True,
-               "canary": True, "live_proof": True,
-               "authority_contract": provider in authority_doc.get("providers",{}),
-               "persistence_safety": persistence_safe}
+        gates=provider_release_gates(
+            provider, int(os.environ["PROOF_RUN_ID"]),
+            int(os.environ["PROOF_RUN_ATTEMPT"]), os.environ["PROOF_CODE_SHA"])
+        gates.update({
+            "authority_contract": provider in authority_doc.get("providers",{}),
+            "persistence_safety": persistence_safe,
+        })
         release=release_decision(gates)
         if not release["release_allowed"]:
             raise SystemExit(f"{provider}: release gate closed")
