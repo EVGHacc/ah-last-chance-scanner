@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "19:00",
-  "scheduledAt": "2026-10-09T19:00:00+02:00",
-  "rawScheduledSlot": "19:00",
-  "rawScheduledAt": "2026-10-09T19:00:00+02:00",
-  "startedAt": "2026-10-09T19:01:15.472632+02:00",
-  "completedAt": "2026-10-09T19:01:19.384119+02:00",
-  "checkedAt": "2026-10-09T19:01:19.384119+02:00",
+  "scheduledSlot": "19:03",
+  "scheduledAt": "2026-10-09T19:03:00+02:00",
+  "rawScheduledSlot": "19:03",
+  "rawScheduledAt": "2026-10-09T19:03:00+02:00",
+  "startedAt": "2026-10-09T19:04:15.474413+02:00",
+  "completedAt": "2026-10-09T19:04:19.658775+02:00",
+  "checkedAt": "2026-10-09T19:04:19.658775+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -27,13 +27,13 @@
       "fetched": true,
       "totalBargainItems": 106,
       "meatItems": 5,
-      "meat70Items": 0,
-      "meat70Stock": 0,
+      "meat70Items": 1,
+      "meat70Stock": 1.0,
       "bakeryItems": 8,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 12,
-      "all70Stock": 44.0,
+      "all70Items": 13,
+      "all70Stock": 45.0,
       "all70": [
         {
           "productId": 624589,
@@ -81,6 +81,18 @@
           "stock": 1,
           "priceWas": "2.89",
           "priceNow": "0.87",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 531864,
+          "title": "AH Scharrel kipfilet plakjes gerookt",
+          "brand": "AH",
+          "size": "ca. 155 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.69",
+          "priceNow": "1.11",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -182,6 +194,18 @@
       ],
       "items": [
         {
+          "productId": 531864,
+          "title": "AH Scharrel kipfilet plakjes gerookt",
+          "brand": "AH",
+          "size": "ca. 155 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.69",
+          "priceNow": "1.11",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 619306,
           "title": "AH Scharrel kipgehakt voordeel",
           "brand": "AH",
@@ -191,18 +215,6 @@
           "stock": 1,
           "priceWas": "10.99",
           "priceNow": "6.59",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 531864,
-          "title": "AH Scharrel kipfilet plakjes gerookt",
-          "brand": "AH",
-          "size": "ca. 155 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "3.69",
-          "priceNow": "2.21",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -353,7 +365,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 33,
-      "all70Stock": 85.0,
+      "all70Stock": 83.0,
       "all70": [
         {
           "productId": 525235,
@@ -380,18 +392,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 112214,
-          "title": "AH Verse ananas, appel, mango en druif",
-          "brand": "AH",
-          "size": "230 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 4,
-          "priceWas": "2.89",
-          "priceNow": "0.87",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 612933,
           "title": "AH Fruitmix blauwe bessen aardbeien 2-vak",
           "brand": "AH",
@@ -413,6 +413,18 @@
           "stock": 2,
           "priceWas": "2.49",
           "priceNow": "0.75",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 112214,
+          "title": "AH Verse ananas, appel, mango en druif",
+          "brand": "AH",
+          "size": "230 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "2.89",
+          "priceNow": "0.87",
           "markdownExpirationDate": "2026-10-09"
         },
         {
