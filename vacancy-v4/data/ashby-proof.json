@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "provider": "ashby",
-  "generated_at": "2026-10-09T01:42:13.004323+00:00",
+  "generated_at": "2026-10-09T05:53:58.387688+00:00",
   "configured_sources": 4,
   "verified_complete": 4,
   "failed": 0,
@@ -23,7 +23,7 @@
       "evidence_kind": "provider_complete_payload",
       "endpoint": "https://api.ashbyhq.com/posting-api/job-board/openai",
       "first_party_evidence_url": "https://openai.com/careers/search/",
-      "jobs_sha256": "334358a5e5a835e3cf6baec3a0b1b114f09df6a7756695bef20e9dfdd46c309f",
+      "jobs_sha256": "34d075f36a19d770bd5b42f831c5dae358498ed0796e3b85310387e3accaa073",
       "jobs": [
         {
           "job_id": "e2afdede-a222-4825-b2fc-fec439a7c893",
@@ -131,6 +131,18 @@
           "department": "Go To Market",
           "team": "Sales",
           "published_at": "2026-08-27T21:14:08.420+00:00",
+          "record_source": "ashby_public_api"
+        },
+        {
+          "job_id": "e8cb6c67-0b73-4be8-a35c-775c99c1c638",
+          "title": "Account Director, Cyber",
+          "location": "San Francisco",
+          "summary": "ABOUT THE TEAM OpenAI’s mission is to build safe artificial general intelligence (AGI) that benefits all of humanity. This long-term undertaking brings the world’s best scientists, engineers, and business professionals together in one lab.",
+          "job_url": "https://jobs.ashbyhq.com/openai/e8cb6c67-0b73-4be8-a35c-775c99c1c638",
+          "apply_url": "https://jobs.ashbyhq.com/openai/e8cb6c67-0b73-4be8-a35c-775c99c1c638/application",
+          "department": "Go To Market",
+          "team": "Sales",
+          "published_at": "2026-10-09T02:54:42.713+00:00",
           "record_source": "ashby_public_api"
         },
         {
@@ -8834,18 +8846,6 @@
           "record_source": "ashby_public_api"
         },
         {
-          "job_id": "1dc6d2b7-e89f-4d76-8b26-c085b6f4d827",
-          "title": "Strategic Pursuits Lead",
-          "location": "San Francisco",
-          "summary": "ABOUT THE TEAM OpenAI’s mission is to build safe artificial general intelligence (AGI) that benefits all of humanity. Achieving this requires bringing together world-class scientists, engineers, and business leaders to translate frontier research into real-world impact.",
-          "job_url": "https://jobs.ashbyhq.com/openai/1dc6d2b7-e89f-4d76-8b26-c085b6f4d827",
-          "apply_url": "https://jobs.ashbyhq.com/openai/1dc6d2b7-e89f-4d76-8b26-c085b6f4d827/application",
-          "department": "Go To Market",
-          "team": "Sales",
-          "published_at": "2026-09-09T16:48:58.185+00:00",
-          "record_source": "ashby_public_api"
-        },
-        {
           "job_id": "ba36fd95-2474-4986-98a6-5280c4e41bd3",
           "title": "Strategic Sourcing Lead, Professional Services – Human Data",
           "location": "San Francisco",
@@ -9567,7 +9567,7 @@
         },
         {
           "job_id": "fe7039ce-51e2-4cfa-9ea5-507eb7a0eee1",
-          "title": "Technical Program Manager, Robotics Facilities",
+          "title": "Technical Program Manager, Robotics Infrastructure",
           "location": "San Francisco",
           "summary": "About the Team Our Robotics team is focused on unlocking general-purpose robotics and pushing towards AGI-level intelligence in dynamic, real-world settings. Working across the entire model stack, we integrate cutting-edge hardware and software to explore a broad range of robotic form factors.",
           "job_url": "https://jobs.ashbyhq.com/openai/fe7039ce-51e2-4cfa-9ea5-507eb7a0eee1",
@@ -9818,7 +9818,7 @@
           "record_source": "ashby_public_api"
         }
       ],
-      "checked_at": "2026-10-09T01:42:11.297125+00:00",
+      "checked_at": "2026-10-09T05:53:56.755960+00:00",
       "error": null
     },
     {
@@ -10393,7 +10393,7 @@
           "record_source": "ashby_public_api"
         }
       ],
-      "checked_at": "2026-10-09T01:42:12.033446+00:00",
+      "checked_at": "2026-10-09T05:53:57.366179+00:00",
       "error": null
     },
     {
@@ -16800,7 +16800,7 @@
           "record_source": "ashby_public_api"
         }
       ],
-      "checked_at": "2026-10-09T01:42:12.469389+00:00",
+      "checked_at": "2026-10-09T05:53:57.765017+00:00",
       "error": null
     },
     {
@@ -18743,7 +18743,7 @@
           "record_source": "ashby_public_api"
         }
       ],
-      "checked_at": "2026-10-09T01:42:12.819840+00:00",
+      "checked_at": "2026-10-09T05:53:58.231988+00:00",
       "error": null
     }
   ]
