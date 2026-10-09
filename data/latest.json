@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "20:25",
-  "scheduledAt": "2026-10-09T20:25:00+02:00",
-  "rawScheduledSlot": "20:25",
-  "rawScheduledAt": "2026-10-09T20:25:00+02:00",
-  "startedAt": "2026-10-09T20:26:15.445985+02:00",
-  "completedAt": "2026-10-09T20:26:20.242924+02:00",
-  "checkedAt": "2026-10-09T20:26:20.242924+02:00",
+  "scheduledSlot": "20:27",
+  "scheduledAt": "2026-10-09T20:27:00+02:00",
+  "rawScheduledSlot": "20:27",
+  "rawScheduledAt": "2026-10-09T20:27:00+02:00",
+  "startedAt": "2026-10-09T20:28:15.453754+02:00",
+  "completedAt": "2026-10-09T20:28:20.363261+02:00",
+  "checkedAt": "2026-10-09T20:28:20.363261+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 165,
+      "totalBargainItems": 168,
       "meatItems": 5,
       "meat70Items": 2,
       "meat70Stock": 2.0,
@@ -885,15 +885,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 244,
+      "totalBargainItems": 254,
       "meatItems": 24,
       "meat70Items": 3,
       "meat70Stock": 9.0,
-      "bakeryItems": 56,
+      "bakeryItems": 57,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 49,
-      "all70Stock": 99.0,
+      "all70Items": 52,
+      "all70Stock": 102.0,
       "all70": [
         {
           "productId": 525235,
@@ -917,6 +917,18 @@
           "stock": 2,
           "priceWas": "6.99",
           "priceNow": "2.10",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 441710,
+          "title": "AH Buitenbeentjes Kastanjechampignons",
+          "brand": "AH Buitenbeentjes",
+          "size": "300 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "0.57",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -1292,6 +1304,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 571233,
+          "title": "AH Pangasiusfilet",
+          "brand": "AH",
+          "size": "ca. 350 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 55994,
           "title": "AH Rivierkreeftjes",
           "brand": "AH",
@@ -1314,6 +1338,18 @@
           "priceWas": "2.99",
           "priceNow": "0.90",
           "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 570163,
+          "title": "Valess Vegetarische chick'n filet",
+          "brand": "Valess",
+          "size": "180 g",
+          "category": "Vegetarisch, vegan en plantaardig",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-11"
         },
         {
           "productId": 543186,
@@ -1881,6 +1917,18 @@
           "stock": 4,
           "priceWas": "3.19",
           "priceNow": "2.39",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 571174,
+          "title": "AH Jalapeño kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -4833,15 +4881,15 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 207,
+      "totalBargainItems": 206,
       "meatItems": 30,
       "meat70Items": 7,
       "meat70Stock": 11.0,
       "bakeryItems": 29,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 42,
-      "all70Stock": 68.0,
+      "all70Items": 41,
+      "all70Stock": 67.0,
       "all70": [
         {
           "productId": 627043,
@@ -5273,18 +5321,6 @@
           "stock": 1,
           "priceWas": "6.99",
           "priceNow": "1.57",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 612627,
-          "title": "AH Terra Plantaardige Toscaanse carré",
-          "brand": "AH Terra",
-          "size": "160 g",
-          "category": "Vegetarisch, vegan en plantaardig",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.49",
-          "priceNow": "0.75",
           "markdownExpirationDate": "2026-10-09"
         },
         {
