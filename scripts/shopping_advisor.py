@@ -9,6 +9,24 @@ DATA = Path("data")
 HISTORY = DATA / "central/derived/combined_70_lifetimes.json"
 PRIORITY = ("kipfilet", "kipdij", "gehakt", "hamburger", "schnitzel", "worst", "kipborrel")
 MIN_STOCK = 2
+FEEDBACK_PATH = DATA / "preferences" / "offer_feedback.jsonl"
+
+def feedback_preferences(path=FEEDBACK_PATH):
+    scores = {}
+    if not path.exists():
+        return scores
+    for line in path.read_text(encoding="utf-8").splitlines():
+        try:
+            row = json.loads(line)
+            if row.get("vote") not in ("interesting", "not_interesting"):
+                continue
+            key = str(row.get("productId") or "")
+            if key:
+                scores[key] = max(-3, min(3, scores.get(key, 0) + (1 if row["vote"] == "interesting" else -1)))
+        except (ValueError, TypeError):
+            continue
+    return scores
+
 
 def priority(title):
     t = title.casefold()
@@ -41,7 +59,8 @@ def other_category_highlights(store):
     return rows[:5]
 
 
-def advise(observation, historical=None):
+def advise(observation, historical=None, preferences=None):
+    preferences = feedback_preferences() if preferences is None else preferences
     if not (observation.get("valid") is True and observation.get("status") in ("OK", "OK_ZERO_ROWS")
             and observation.get("authMode") == "user-refresh"
             and "Vlees" in (observation.get("categories") or [])
@@ -56,7 +75,7 @@ def advise(observation, historical=None):
         items = [i for i in store.get("items") or [] if eligible(i, day)]
         items.sort(key=lambda i: (i["markdownExpirationDate"] == day.isoformat(),
                                   float(i.get("discountPct") or 0) >= 70,
-                                  priority(i.get("title") or ""),
+                                  priority(i.get("title") or "") + preferences.get(str(i.get("productId") or ""), 0),
                                   float(i.get("stock") or 0)), reverse=True)
         now70 = [i for i in items if float(i.get("discountPct") or 0) >= 70 and i["markdownExpirationDate"] == day.isoformat()]
         pipeline = [i for i in items if 25 <= float(i.get("discountPct") or 0) < 70 and i["markdownExpirationDate"] == day.isoformat()]
@@ -66,12 +85,12 @@ def advise(observation, historical=None):
         stores.append({"storeId": sid, "store": store.get("store"), "70_stock": sum(float(i["stock"]) for i in now70),
                        "pipeline_stock": sum(float(i["stock"]) for i in pipeline),
                        "multiple_pack_candidates": len(items),
-                       "products": items[:8],
+                       "products": [{**i, "feedback": {"productId": i.get("productId"), "choices": ["interesting", "not_interesting"]}} for i in items[:8]],
                        "other_category_highlights": other_category_highlights(store),
                        "historical_70_episodes": hist.get("episodes_70", 0),
                        "historical_disappearance_within_30m": hist.get("gone_within_30m"),
                        "score": round(sum(float(i["stock"]) * (2 if float(i.get("discountPct") or 0) >= 70 else .5)
-                                          * (1 + .1 * priority(i.get("title") or "")) for i in items
+                                          * (1 + .1 * (priority(i.get("title") or "") + preferences.get(str(i.get("productId") or ""), 0))) for i in items
                                           if i["markdownExpirationDate"] == day.isoformat()), 2)})
     stores.sort(key=lambda s: s["score"], reverse=True)
     return {"source": "current valid AH observation + labeled historical stock-lifetime data",
