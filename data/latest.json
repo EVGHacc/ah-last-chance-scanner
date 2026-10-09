@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "20:00",
-  "scheduledAt": "2026-10-09T20:00:00+02:00",
-  "rawScheduledSlot": "20:00",
-  "rawScheduledAt": "2026-10-09T20:00:00+02:00",
-  "startedAt": "2026-10-09T20:01:15.466999+02:00",
-  "completedAt": "2026-10-09T20:01:19.493191+02:00",
-  "checkedAt": "2026-10-09T20:01:19.493191+02:00",
+  "scheduledSlot": "20:03",
+  "scheduledAt": "2026-10-09T20:03:00+02:00",
+  "rawScheduledSlot": "20:03",
+  "rawScheduledAt": "2026-10-09T20:03:00+02:00",
+  "startedAt": "2026-10-09T20:04:15.381727+02:00",
+  "completedAt": "2026-10-09T20:04:19.985375+02:00",
+  "checkedAt": "2026-10-09T20:04:19.985375+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 138,
+      "totalBargainItems": 140,
       "meatItems": 5,
       "meat70Items": 2,
       "meat70Stock": 2.0,
@@ -861,15 +861,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 229,
-      "meatItems": 7,
+      "totalBargainItems": 232,
+      "meatItems": 10,
       "meat70Items": 5,
       "meat70Stock": 11.0,
       "bakeryItems": 55,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 55,
-      "all70Stock": 107.0,
+      "all70Stock": 106.0,
       "all70": [
         {
           "productId": 593055,
@@ -905,18 +905,6 @@
           "stock": 2,
           "priceWas": "6.99",
           "priceNow": "2.10",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 206455,
-          "title": "AH Paddenstoelen voor pasta en risotto",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.09",
-          "priceNow": "0.93",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -1001,6 +989,18 @@
           "stock": 1,
           "priceWas": "1.59",
           "priceNow": "0.48",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 206455,
+          "title": "AH Paddenstoelen voor pasta en risotto",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.09",
+          "priceNow": "0.93",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -1606,6 +1606,30 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 620795,
+          "title": "AH Ovenschotel kipdijfilet Aziatische stijl",
+          "brand": "AH",
+          "size": "355 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "6.99",
+          "priceNow": "5.24",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 620813,
+          "title": "AH Ovenschotel kipdrumsticks sweet chili",
+          "brand": "AH",
+          "size": "600 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "6.29",
+          "priceNow": "4.72",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 229795,
           "title": "AH Magere rookworst",
           "brand": "AH",
@@ -1615,6 +1639,18 @@
           "stock": 13,
           "priceWas": "1.99",
           "priceNow": "1.19",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 160750,
+          "title": "AH Krabbetjes",
+          "brand": "AH",
+          "size": "ca. 360 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 6,
+          "priceWas": "3.60",
+          "priceNow": "2.70",
           "markdownExpirationDate": "2026-10-11"
         }
       ],
@@ -1728,18 +1764,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 230787,
-          "title": "AH Les pains triomphe half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.29",
-          "priceNow": "0.97",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 590399,
           "title": "AH Broodje burger augurk tomatensaus",
           "brand": "AH",
@@ -1845,6 +1869,18 @@
           "stock": 2,
           "priceWas": "1.89",
           "priceNow": "1.42",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 230787,
+          "title": "AH Les pains triomphe half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.29",
+          "priceNow": "0.97",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -4773,15 +4809,15 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 206,
-      "meatItems": 28,
-      "meat70Items": 8,
-      "meat70Stock": 15.0,
+      "totalBargainItems": 208,
+      "meatItems": 30,
+      "meat70Items": 9,
+      "meat70Stock": 16.0,
       "bakeryItems": 30,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 47,
-      "all70Stock": 79.0,
+      "all70Items": 48,
+      "all70Stock": 80.0,
       "all70": [
         {
           "productId": 627043,
@@ -5228,6 +5264,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 465748,
+          "title": "AH Biologisch Rookworst",
+          "brand": "AH Biologisch",
+          "size": "250 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 232141,
           "title": "AH Schouderkarbonade",
           "brand": "AH",
@@ -5434,6 +5482,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 465748,
+          "title": "AH Biologisch Rookworst",
+          "brand": "AH Biologisch",
+          "size": "250 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 232141,
           "title": "AH Schouderkarbonade",
           "brand": "AH",
@@ -5443,18 +5503,6 @@
           "stock": 1,
           "priceWas": "5.18",
           "priceNow": "1.55",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 465748,
-          "title": "AH Biologisch Rookworst",
-          "brand": "AH Biologisch",
-          "size": "250 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "3.99",
-          "priceNow": "2.39",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -5494,6 +5542,18 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 3994,
+          "title": "AH Greenfields Runder riblap",
+          "brand": "AH Greenfields",
+          "size": "ca. 755 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 11,
+          "priceWas": "15.49",
+          "priceNow": "11.62",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 160750,
           "title": "AH Krabbetjes",
           "brand": "AH",
@@ -5515,6 +5575,18 @@
           "stock": 4,
           "priceWas": "2.99",
           "priceNow": "2.24",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 33636,
+          "title": "AH Excellent Scharrel eendenborstfilet",
+          "brand": "AH Excellent",
+          "size": "ca. 280 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "8.40",
+          "priceNow": "4.72",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -5626,18 +5698,6 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 33636,
-          "title": "AH Excellent Scharrel eendenborstfilet",
-          "brand": "AH Excellent",
-          "size": "ca. 280 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "8.40",
-          "priceNow": "4.72",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 507416,
           "title": "Streeckgenoten Shoarmareepjes",
           "brand": "Streeckgenoten",
@@ -5683,6 +5743,18 @@
           "stock": 1,
           "priceWas": "8.75",
           "priceNow": "6.56",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 364883,
+          "title": "AH Greenfields Hachee",
+          "brand": "AH Greenfields",
+          "size": "ca. 500 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "11.49",
+          "priceNow": "8.62",
           "markdownExpirationDate": "2026-10-10"
         }
       ],
