@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "22:03",
-  "scheduledAt": "2026-10-09T22:03:00+02:00",
-  "rawScheduledSlot": "22:03",
-  "rawScheduledAt": "2026-10-09T22:03:00+02:00",
-  "startedAt": "2026-10-09T22:03:00.215442+02:00",
-  "completedAt": "2026-10-09T22:03:05.643694+02:00",
-  "checkedAt": "2026-10-09T22:03:05.643694+02:00",
+  "scheduledSlot": "22:05",
+  "scheduledAt": "2026-10-09T22:05:00+02:00",
+  "rawScheduledSlot": "22:05",
+  "rawScheduledAt": "2026-10-09T22:05:00+02:00",
+  "startedAt": "2026-10-09T22:05:00.237401+02:00",
+  "completedAt": "2026-10-09T22:05:05.577115+02:00",
+  "checkedAt": "2026-10-09T22:05:05.577115+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,11 +25,11 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 184,
+      "totalBargainItems": 179,
       "meatItems": 19,
       "meat70Items": 1,
       "meat70Stock": 1.0,
-      "bakeryItems": 36,
+      "bakeryItems": 31,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 24,
@@ -556,30 +556,6 @@
       ],
       "bakery": [
         {
-          "productId": 417146,
-          "title": "AH Liefde & Passie OerDesem San Francisco",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 6,
-          "priceWas": "3.19",
-          "priceNow": "1.91",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 417148,
-          "title": "AH Vloerbrood volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 6,
-          "priceWas": "2.69",
-          "priceNow": "1.61",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 230786,
           "title": "AH Les pains triomphe heel",
           "brand": "AH",
@@ -592,18 +568,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 590096,
-          "title": "AH Liefde & Passie Biologisch OerDesem blond",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 5,
-          "priceWas": "3.29",
-          "priceNow": "1.97",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 606777,
           "title": "AH Borek kip gyros",
           "brand": "AH",
@@ -613,6 +577,18 @@
           "stock": 4,
           "priceWas": "1.19",
           "priceNow": "0.71",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 417148,
+          "title": "AH Vloerbrood volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 3,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -676,18 +652,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 230842,
-          "title": "AH Liefde & Passie Spelt",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 125034,
           "title": "AH Les pains Boulogne half",
           "brand": "AH",
@@ -700,18 +664,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 544584,
-          "title": "AH Liefde & Passie OerDesem Spelt boekweit",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 487305,
           "title": "AH Liefde & Passie Spelt volkoren brood",
           "brand": "AH Liefde & Passie",
@@ -719,18 +671,6 @@
           "category": "Bakkerij",
           "discountPct": 25,
           "stock": 3,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 578301,
-          "title": "AH Liefde & Passie OerDesem zonne rogge",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
           "priceWas": "3.19",
           "priceNow": "2.39",
           "markdownExpirationDate": "2026-10-09"
@@ -3661,7 +3601,7 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 147,
+      "totalBargainItems": 146,
       "meatItems": 20,
       "meat70Items": 4,
       "meat70Stock": 4.0,
