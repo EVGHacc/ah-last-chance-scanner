@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "19:27",
-  "scheduledAt": "2026-10-09T19:27:00+02:00",
-  "rawScheduledSlot": "19:27",
-  "rawScheduledAt": "2026-10-09T19:27:00+02:00",
-  "startedAt": "2026-10-09T19:28:15.400006+02:00",
-  "completedAt": "2026-10-09T19:28:19.458403+02:00",
-  "checkedAt": "2026-10-09T19:28:19.458403+02:00",
+  "scheduledSlot": "19:30",
+  "scheduledAt": "2026-10-09T19:30:00+02:00",
+  "rawScheduledSlot": "19:30",
+  "rawScheduledAt": "2026-10-09T19:30:00+02:00",
+  "startedAt": "2026-10-09T19:31:15.445755+02:00",
+  "completedAt": "2026-10-09T19:31:20.450879+02:00",
+  "checkedAt": "2026-10-09T19:31:20.450879+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -27,13 +27,13 @@
       "fetched": true,
       "totalBargainItems": 105,
       "meatItems": 5,
-      "meat70Items": 1,
-      "meat70Stock": 1.0,
+      "meat70Items": 2,
+      "meat70Stock": 2.0,
       "bakeryItems": 8,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 28,
-      "all70Stock": 76.0,
+      "all70Items": 30,
+      "all70Stock": 79.0,
       "all70": [
         {
           "productId": 41080,
@@ -252,6 +252,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 619306,
+          "title": "AH Scharrel kipgehakt voordeel",
+          "brand": "AH",
+          "size": "1 kg",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "10.99",
+          "priceNow": "3.30",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 531864,
           "title": "AH Scharrel kipfilet plakjes gerookt",
           "brand": "AH",
@@ -261,6 +273,18 @@
           "stock": 1,
           "priceWas": "3.69",
           "priceNow": "1.11",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 587657,
+          "title": "AH Geelvintonijn",
+          "brand": "AH",
+          "size": "ca. 150 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "5.69",
+          "priceNow": "1.71",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -374,6 +398,18 @@
       ],
       "items": [
         {
+          "productId": 619306,
+          "title": "AH Scharrel kipgehakt voordeel",
+          "brand": "AH",
+          "size": "1 kg",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "10.99",
+          "priceNow": "3.30",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 531864,
           "title": "AH Scharrel kipfilet plakjes gerookt",
           "brand": "AH",
@@ -383,18 +419,6 @@
           "stock": 1,
           "priceWas": "3.69",
           "priceNow": "1.11",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 619306,
-          "title": "AH Scharrel kipgehakt voordeel",
-          "brand": "AH",
-          "size": "1 kg",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "10.99",
-          "priceNow": "6.59",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -544,9 +568,21 @@
       "bakeryItems": 6,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 50,
-      "all70Stock": 102.0,
+      "all70Items": 55,
+      "all70Stock": 108.0,
       "all70": [
+        {
+          "productId": 593055,
+          "title": "AH Tagliatelle met roomsaus verspakket",
+          "brand": "AH",
+          "size": "4 pers | 25 min",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "5.99",
+          "priceNow": "1.80",
+          "markdownExpirationDate": "2026-10-09"
+        },
         {
           "productId": 525235,
           "title": "AH Gesneden verspakket traybake gnocchi",
@@ -557,6 +593,18 @@
           "stock": 2,
           "priceWas": "7.59",
           "priceNow": "2.28",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 495901,
+          "title": "AH Gesneden verspakket nasi",
+          "brand": "AH",
+          "size": "2-3 pers|15 min",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "6.99",
+          "priceNow": "2.10",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -584,6 +632,30 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 579957,
+          "title": "AH Gesneden verspakket snelle stamppot",
+          "brand": "AH",
+          "size": "2 pers | 20 min",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.89",
+          "priceNow": "2.07",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 588946,
+          "title": "AH Wokgroente oosters",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "0.81",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 107669,
           "title": "AH Biologisch Waterkers",
           "brand": "AH Biologisch",
@@ -605,6 +677,18 @@
           "stock": 1,
           "priceWas": "6.99",
           "priceNow": "2.10",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 491171,
+          "title": "AH Prei-kerrie soep verspakket",
+          "brand": "AH",
+          "size": "6 pers | 35 min",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.99",
+          "priceNow": "1.50",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -776,18 +860,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 210755,
-          "title": "AH Uit eigen keuken stamppot witlof",
-          "brand": "AH",
-          "size": "540 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 4,
-          "priceWas": "5.59",
-          "priceNow": "1.38",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 155647,
           "title": "AH Russisch-eislaatje",
           "brand": "AH",
@@ -797,6 +869,18 @@
           "stock": 3,
           "priceWas": "1.25",
           "priceNow": "0.38",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 210755,
+          "title": "AH Uit eigen keuken stamppot witlof",
+          "brand": "AH",
+          "size": "540 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 3,
+          "priceWas": "5.59",
+          "priceNow": "1.38",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -2961,7 +3045,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 149,
+      "totalBargainItems": 153,
       "meatItems": 14,
       "meat70Items": 8,
       "meat70Stock": 15.0,
