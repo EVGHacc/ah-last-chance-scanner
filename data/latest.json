@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "18:15",
-  "scheduledAt": "2026-10-09T18:15:00+02:00",
-  "rawScheduledSlot": "18:15",
-  "rawScheduledAt": "2026-10-09T18:15:00+02:00",
-  "startedAt": "2026-10-09T18:16:15.409653+02:00",
-  "completedAt": "2026-10-09T18:16:19.229777+02:00",
-  "checkedAt": "2026-10-09T18:16:19.229777+02:00",
+  "scheduledSlot": "18:18",
+  "scheduledAt": "2026-10-09T18:18:00+02:00",
+  "rawScheduledSlot": "18:18",
+  "rawScheduledAt": "2026-10-09T18:18:00+02:00",
+  "startedAt": "2026-10-09T18:19:15.461129+02:00",
+  "completedAt": "2026-10-09T18:19:18.943146+02:00",
+  "checkedAt": "2026-10-09T18:19:18.943146+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -32,9 +32,21 @@
       "bakeryItems": 8,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 9,
-      "all70Stock": 37.0,
+      "all70Items": 11,
+      "all70Stock": 42.0,
       "all70": [
+        {
+          "productId": 624589,
+          "title": "AH Ovengroente broccoli biet",
+          "brand": "AH",
+          "size": "420 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 3,
+          "priceWas": "4.49",
+          "priceNow": "1.35",
+          "markdownExpirationDate": "2026-10-09"
+        },
         {
           "productId": 126394,
           "title": "AH Rode bessen",
@@ -82,6 +94,18 @@
           "priceWas": "2.99",
           "priceNow": "0.90",
           "markdownExpirationDate": "2026-10-12"
+        },
+        {
+          "productId": 515178,
+          "title": "AH Excellent Gekleurde scharreleieren",
+          "brand": "AH Excellent",
+          "size": "6 stuks",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "2.49",
+          "priceNow": "0.75",
+          "markdownExpirationDate": "2026-10-09"
         },
         {
           "productId": 613317,
@@ -316,8 +340,8 @@
       "bakeryItems": 6,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 18,
-      "all70Stock": 45.0,
+      "all70Items": 21,
+      "all70Stock": 49.0,
       "all70": [
         {
           "productId": 525235,
@@ -365,6 +389,18 @@
           "stock": 2,
           "priceWas": "2.89",
           "priceNow": "0.87",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 161792,
+          "title": "Westland Zalm slaatje",
+          "brand": "Westland",
+          "size": "140 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.25",
+          "priceNow": "0.38",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -485,6 +521,30 @@
           "stock": 2,
           "priceWas": "1.99",
           "priceNow": "0.60",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 211717,
+          "title": "Johma Kip-kerrie salade",
+          "brand": "Johma",
+          "size": "175 g",
+          "category": "Borrel, chips, snacks",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "3.19",
+          "priceNow": "0.96",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 457235,
+          "title": "AH Ongezouten macadamia's geroosterd",
+          "brand": "AH",
+          "size": "140 g",
+          "category": "Borrel, chips, snacks",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.99",
+          "priceNow": "1.50",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -1528,8 +1588,8 @@
       "bakeryItems": 3,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 7,
-      "all70Stock": 17.0,
+      "all70Items": 8,
+      "all70Stock": 19.0,
       "all70": [
         {
           "productId": 611680,
@@ -1541,6 +1601,18 @@
           "stock": 2,
           "priceWas": "3.49",
           "priceNow": "1.05",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 587647,
+          "title": "AH Roerbak zalm pangasius garnalen zeezout",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "6.69",
+          "priceNow": "2.01",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -1780,7 +1852,7 @@
           "size": "ca. 360 g",
           "category": "Vlees",
           "discountPct": 25,
-          "stock": 3,
+          "stock": 2,
           "priceWas": "5.99",
           "priceNow": "4.49",
           "markdownExpirationDate": "2026-10-10"
