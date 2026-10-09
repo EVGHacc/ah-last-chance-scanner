@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "21:03",
-  "scheduledAt": "2026-10-09T21:03:00+02:00",
-  "rawScheduledSlot": "21:03",
-  "rawScheduledAt": "2026-10-09T21:03:00+02:00",
-  "startedAt": "2026-10-09T21:04:15.489856+02:00",
-  "completedAt": "2026-10-09T21:04:19.925997+02:00",
-  "checkedAt": "2026-10-09T21:04:19.925997+02:00",
+  "scheduledSlot": "21:05",
+  "scheduledAt": "2026-10-09T21:05:00+02:00",
+  "rawScheduledSlot": "21:05",
+  "rawScheduledAt": "2026-10-09T21:05:00+02:00",
+  "startedAt": "2026-10-09T21:06:15.385453+02:00",
+  "completedAt": "2026-10-09T21:06:19.846306+02:00",
+  "checkedAt": "2026-10-09T21:06:19.846306+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -33,7 +33,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 31,
-      "all70Stock": 80.0,
+      "all70Stock": 79.0,
       "all70": [
         {
           "productId": 617528,
@@ -294,7 +294,7 @@
           "size": "ca. 150 g",
           "category": "Vis",
           "discountPct": 70,
-          "stock": 2,
+          "stock": 1,
           "priceWas": "5.69",
           "priceNow": "1.71",
           "markdownExpirationDate": "2026-10-09"
@@ -2813,15 +2813,15 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 195,
+      "totalBargainItems": 194,
       "meatItems": 11,
       "meat70Items": 9,
       "meat70Stock": 13.0,
       "bakeryItems": 47,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 53,
-      "all70Stock": 139.0,
+      "all70Items": 52,
+      "all70Stock": 138.0,
       "all70": [
         {
           "productId": 418286,
@@ -2869,18 +2869,6 @@
           "stock": 1,
           "priceWas": "1.09",
           "priceNow": "0.33",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 624587,
-          "title": "AH Ovengroente bloemkool champignon",
-          "brand": "AH",
-          "size": "430 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.49",
-          "priceNow": "1.35",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -5145,15 +5133,15 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 196,
-      "meatItems": 28,
-      "meat70Items": 5,
-      "meat70Stock": 7.0,
+      "totalBargainItems": 195,
+      "meatItems": 27,
+      "meat70Items": 4,
+      "meat70Stock": 6.0,
       "bakeryItems": 27,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 35,
-      "all70Stock": 52.0,
+      "all70Items": 34,
+      "all70Stock": 51.0,
       "all70": [
         {
           "productId": 627043,
@@ -5528,18 +5516,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 620816,
-          "title": "AH Oven scharrel kippendijen coq au vin",
-          "brand": "AH",
-          "size": "480 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.29",
-          "priceNow": "1.89",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 436763,
           "title": "AH Biologisch Slavink",
           "brand": "AH Biologisch",
@@ -5611,18 +5587,6 @@
           "stock": 1,
           "priceWas": "6.79",
           "priceNow": "2.04",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 620816,
-          "title": "AH Oven scharrel kippendijen coq au vin",
-          "brand": "AH",
-          "size": "480 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.29",
-          "priceNow": "1.89",
           "markdownExpirationDate": "2026-10-09"
         },
         {
