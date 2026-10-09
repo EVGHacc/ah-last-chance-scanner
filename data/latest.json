@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "19:54",
-  "scheduledAt": "2026-10-09T19:54:00+02:00",
-  "rawScheduledSlot": "19:54",
-  "rawScheduledAt": "2026-10-09T19:54:00+02:00",
-  "startedAt": "2026-10-09T19:55:15.416943+02:00",
-  "completedAt": "2026-10-09T19:55:20.861080+02:00",
-  "checkedAt": "2026-10-09T19:55:20.861080+02:00",
+  "scheduledSlot": "19:55",
+  "scheduledAt": "2026-10-09T19:55:00+02:00",
+  "rawScheduledSlot": "19:55",
+  "rawScheduledAt": "2026-10-09T19:55:00+02:00",
+  "startedAt": "2026-10-09T19:56:15.386021+02:00",
+  "completedAt": "2026-10-09T19:56:19.971042+02:00",
+  "checkedAt": "2026-10-09T19:56:19.971042+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 138,
+      "totalBargainItems": 139,
       "meatItems": 5,
       "meat70Items": 2,
       "meat70Stock": 2.0,
@@ -885,7 +885,7 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 223,
+      "totalBargainItems": 224,
       "meatItems": 6,
       "meat70Items": 5,
       "meat70Stock": 11.0,
@@ -2309,15 +2309,15 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 186,
+      "totalBargainItems": 197,
       "meatItems": 12,
       "meat70Items": 10,
       "meat70Stock": 15.0,
-      "bakeryItems": 45,
+      "bakeryItems": 50,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 52,
-      "all70Stock": 138.0,
+      "all70Items": 54,
+      "all70Stock": 141.0,
       "all70": [
         {
           "productId": 418286,
@@ -2413,6 +2413,18 @@
           "stock": 1,
           "priceWas": "2.49",
           "priceNow": "0.75",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 495901,
+          "title": "AH Gesneden verspakket nasi",
+          "brand": "AH",
+          "size": "2-3 pers|15 min",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.99",
+          "priceNow": "2.10",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -2761,6 +2773,18 @@
           "stock": 1,
           "priceWas": "3.99",
           "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 457607,
+          "title": "Galbani Di latte di bufala maxi",
+          "brand": "Galbani",
+          "size": "380 g",
+          "category": "Kaas",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "4.69",
+          "priceNow": "1.41",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -3128,6 +3152,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 487301,
+          "title": "AH Rond volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 6,
+          "priceWas": "1.89",
+          "priceNow": "1.42",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 574950,
           "title": "AH Pizza donut jalapeño cheddar",
           "brand": "AH",
@@ -3176,6 +3212,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 230786,
+          "title": "AH Les pains triomphe heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "2.39",
+          "priceNow": "1.79",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 590399,
           "title": "AH Broodje burger augurk tomatensaus",
           "brand": "AH",
@@ -3197,6 +3245,18 @@
           "stock": 3,
           "priceWas": "3.19",
           "priceNow": "2.39",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 417147,
+          "title": "AH Vloerbrood meergranen heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -3416,6 +3476,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 230859,
+          "title": "AH Kaas croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 577444,
           "title": "AH Worstenbroodje",
           "brand": "AH",
@@ -3509,6 +3581,18 @@
           "stock": 1,
           "priceWas": "3.19",
           "priceNow": "2.71",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 417148,
+          "title": "AH Vloerbrood volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "2.29",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -3637,11 +3721,11 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 170,
+      "totalBargainItems": 169,
       "meatItems": 20,
       "meat70Items": 4,
       "meat70Stock": 4.0,
-      "bakeryItems": 32,
+      "bakeryItems": 31,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 41,
@@ -4438,7 +4522,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 2,
+          "stock": 1,
           "priceWas": "1.89",
           "priceNow": "1.42",
           "markdownExpirationDate": "2026-10-09"
@@ -4672,18 +4756,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 230726,
-          "title": "AH Maple pecan vlechtbrood",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.59",
-          "priceNow": "0.50",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 451137,
           "title": "AH Focaccia mozzarella",
           "brand": "AH",
@@ -4773,8 +4845,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 200,
-      "meatItems": 21,
+      "totalBargainItems": 201,
+      "meatItems": 22,
       "meat70Items": 8,
       "meat70Stock": 15.0,
       "bakeryItems": 31,
@@ -5479,6 +5551,18 @@
           "stock": 2,
           "priceWas": "1.55",
           "priceNow": "0.93",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 210607,
+          "title": "AH Shoarma",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 14,
+          "priceWas": "4.95",
+          "priceNow": "2.96",
           "markdownExpirationDate": "2026-10-10"
         },
         {
