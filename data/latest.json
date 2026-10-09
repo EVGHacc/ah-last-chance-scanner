@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "19:21",
-  "scheduledAt": "2026-10-09T19:21:00+02:00",
-  "rawScheduledSlot": "19:21",
-  "rawScheduledAt": "2026-10-09T19:21:00+02:00",
-  "startedAt": "2026-10-09T19:22:15.384753+02:00",
-  "completedAt": "2026-10-09T19:22:19.018561+02:00",
-  "checkedAt": "2026-10-09T19:22:19.018561+02:00",
+  "scheduledSlot": "19:24",
+  "scheduledAt": "2026-10-09T19:24:00+02:00",
+  "rawScheduledSlot": "19:24",
+  "rawScheduledAt": "2026-10-09T19:24:00+02:00",
+  "startedAt": "2026-10-09T19:25:15.449141+02:00",
+  "completedAt": "2026-10-09T19:25:28.990818+02:00",
+  "checkedAt": "2026-10-09T19:25:28.990818+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -25,15 +25,15 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 106,
+      "totalBargainItems": 105,
       "meatItems": 5,
       "meat70Items": 1,
       "meat70Stock": 1.0,
       "bakeryItems": 8,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 29,
-      "all70Stock": 77.0,
+      "all70Items": 28,
+      "all70Stock": 76.0,
       "all70": [
         {
           "productId": 41080,
@@ -321,18 +321,6 @@
           "stock": 2,
           "priceWas": "2.49",
           "priceNow": "0.75",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 613317,
-          "title": "AH Terra Soja gurt aardbei",
-          "brand": "AH Terra",
-          "size": "0,75 l",
-          "category": "Zuivel, eieren",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "1.59",
-          "priceNow": "0.48",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -2221,15 +2209,15 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 126,
-      "meatItems": 16,
-      "meat70Items": 3,
-      "meat70Stock": 3.0,
+      "totalBargainItems": 142,
+      "meatItems": 20,
+      "meat70Items": 4,
+      "meat70Stock": 4.0,
       "bakeryItems": 2,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 36,
-      "all70Stock": 56.0,
+      "all70Items": 39,
+      "all70Stock": 61.0,
       "all70": [
         {
           "productId": 133277,
@@ -2265,6 +2253,18 @@
           "stock": 3,
           "priceWas": "1.99",
           "priceNow": "0.60",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 238974,
+          "title": "AH Tijm",
+          "brand": "AH",
+          "size": "15 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 3,
+          "priceWas": "1.29",
+          "priceNow": "0.39",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -2361,18 +2361,6 @@
           "stock": 1,
           "priceWas": "2.25",
           "priceNow": "0.68",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 434655,
-          "title": "AH Burrito's verspakket",
-          "brand": "AH",
-          "size": "4 pers | 25 min",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "5.79",
-          "priceNow": "1.74",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -2508,6 +2496,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 221485,
+          "title": "AH Kip ketjap L",
+          "brand": "AH",
+          "size": "450 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "5.49",
+          "priceNow": "1.65",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 203229,
           "title": "Bieze Rauwkost 4 seizoenen",
           "brand": "Bieze",
@@ -2544,6 +2544,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 385506,
+          "title": "AH Biologisch Gerookte kipfilet",
+          "brand": "AH Biologisch",
+          "size": "ca. 125 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.72",
+          "priceNow": "1.42",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 519409,
           "title": "Wahid Halal kipmerguez",
           "brand": "Wahid",
@@ -2565,6 +2577,18 @@
           "stock": 1,
           "priceWas": "5.69",
           "priceNow": "1.71",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 213759,
+          "title": "AH Zalmfilet à la minute",
+          "brand": "AH",
+          "size": "ca. 225 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.13",
+          "priceNow": "1.38",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -2690,6 +2714,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 385506,
+          "title": "AH Biologisch Gerookte kipfilet",
+          "brand": "AH Biologisch",
+          "size": "ca. 125 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.72",
+          "priceNow": "1.42",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 519409,
           "title": "Wahid Halal kipmerguez",
           "brand": "Wahid",
@@ -2699,6 +2735,18 @@
           "stock": 1,
           "priceWas": "4.99",
           "priceNow": "1.50",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 531893,
+          "title": "AH Scharrel gerookte kipfiletflakes",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discountPct": 35,
+          "stock": 1,
+          "priceWas": "3.69",
+          "priceNow": "2.40",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -2738,6 +2786,18 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 238948,
+          "title": "AH Nasi bami vlees",
+          "brand": "AH",
+          "size": "ca. 300 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "3.47",
+          "priceNow": "1.77",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 187588,
           "title": "AH Runderbraadworst",
           "brand": "AH",
@@ -2771,6 +2831,18 @@
           "stock": 2,
           "priceWas": "3.99",
           "priceNow": "2.54",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 531858,
+          "title": "AH Scharrel kippensoeppakket met groente",
+          "brand": "AH",
+          "size": "ca. 600 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "4.61",
+          "priceNow": "3.46",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -2889,15 +2961,15 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 148,
+      "totalBargainItems": 146,
       "meatItems": 14,
       "meat70Items": 8,
       "meat70Stock": 15.0,
       "bakeryItems": 3,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 50,
-      "all70Stock": 85.0,
+      "all70Items": 48,
+      "all70Stock": 81.0,
       "all70": [
         {
           "productId": 627043,
@@ -3450,30 +3522,6 @@
           "priceWas": "3.99",
           "priceNow": "0.90",
           "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 611661,
-          "title": "AH Kastanjechampignon knoflook tijm",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Borrel, chips, snacks",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "2.99",
-          "priceNow": "0.90",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 611663,
-          "title": "AH Shiitake spicy marinade",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Borrel, chips, snacks",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.49",
-          "priceNow": "1.05",
-          "markdownExpirationDate": "2026-10-09"
         },
         {
           "productId": 104110,
