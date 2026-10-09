@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "18:27",
-  "scheduledAt": "2026-10-09T18:27:00+02:00",
-  "rawScheduledSlot": "18:27",
-  "rawScheduledAt": "2026-10-09T18:27:00+02:00",
-  "startedAt": "2026-10-09T18:28:15.446438+02:00",
-  "completedAt": "2026-10-09T18:28:19.390799+02:00",
-  "checkedAt": "2026-10-09T18:28:19.390799+02:00",
+  "scheduledSlot": "18:30",
+  "scheduledAt": "2026-10-09T18:30:00+02:00",
+  "rawScheduledSlot": "18:30",
+  "rawScheduledAt": "2026-10-09T18:30:00+02:00",
+  "startedAt": "2026-10-09T18:31:15.464604+02:00",
+  "completedAt": "2026-10-09T18:31:19.009984+02:00",
+  "checkedAt": "2026-10-09T18:31:19.009984+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -32,8 +32,8 @@
       "bakeryItems": 8,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 11,
-      "all70Stock": 42.0,
+      "all70Items": 12,
+      "all70Stock": 44.0,
       "all70": [
         {
           "productId": 624589,
@@ -45,6 +45,18 @@
           "stock": 3,
           "priceWas": "4.49",
           "priceNow": "1.35",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 612930,
+          "title": "AH Ananas met dip",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "2.49",
+          "priceNow": "0.75",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -335,13 +347,13 @@
       "fetched": true,
       "totalBargainItems": 170,
       "meatItems": 8,
-      "meat70Items": 1,
-      "meat70Stock": 4.0,
+      "meat70Items": 2,
+      "meat70Stock": 8.0,
       "bakeryItems": 6,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 21,
-      "all70Stock": 49.0,
+      "all70Items": 30,
+      "all70Stock": 81.0,
       "all70": [
         {
           "productId": 525235,
@@ -365,6 +377,78 @@
           "stock": 1,
           "priceWas": "6.99",
           "priceNow": "2.10",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 112214,
+          "title": "AH Verse ananas, appel, mango en druif",
+          "brand": "AH",
+          "size": "230 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 4,
+          "priceWas": "2.89",
+          "priceNow": "0.87",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 612933,
+          "title": "AH Fruitmix blauwe bessen aardbeien 2-vak",
+          "brand": "AH",
+          "size": "250 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 3,
+          "priceWas": "4.49",
+          "priceNow": "1.35",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 612930,
+          "title": "AH Ananas met dip",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "2.49",
+          "priceNow": "0.75",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 612926,
+          "title": "AH Appel met granoladip",
+          "brand": "AH",
+          "size": "115 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.29",
+          "priceNow": "0.69",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 435208,
+          "title": "AH Mozzarella tomaat S",
+          "brand": "AH",
+          "size": "210 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 8,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 193241,
+          "title": "AH Appel kip M",
+          "brand": "AH",
+          "size": "310 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 4,
+          "priceWas": "4.79",
+          "priceNow": "1.44",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -392,6 +476,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 128129,
+          "title": "AH Basis tonijn ei L",
+          "brand": "AH",
+          "size": "450 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 161792,
           "title": "Westland Zalm slaatje",
           "brand": "Westland",
@@ -413,6 +509,18 @@
           "stock": 4,
           "priceWas": "2.88",
           "priceNow": "0.86",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 169422,
+          "title": "AH Varkensbraadworst 2st",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 4,
+          "priceWas": "2.29",
+          "priceNow": "0.69",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -485,6 +593,18 @@
           "stock": 4,
           "priceWas": "2.79",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 221095,
+          "title": "Campina Magere yoghurt",
+          "brand": "Campina",
+          "size": "1 l",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 4,
+          "priceWas": "1.69",
+          "priceNow": "0.51",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -615,22 +735,10 @@
           "brand": "AH",
           "size": "2 stuks",
           "category": "Vlees",
-          "discountPct": 40,
+          "discountPct": 70,
           "stock": 4,
           "priceWas": "2.29",
-          "priceNow": "1.37",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 199713,
-          "title": "AH Slavink",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "2.49",
-          "priceNow": "1.27",
+          "priceNow": "0.69",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -655,6 +763,18 @@
           "stock": 1,
           "priceWas": "6.49",
           "priceNow": "3.89",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 199713,
+          "title": "AH Slavink",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "2.49",
+          "priceNow": "1.27",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -1569,7 +1689,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 147,
+      "totalBargainItems": 150,
       "meatItems": 15,
       "meat70Items": 0,
       "meat70Stock": 0,
