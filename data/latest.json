@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "20:30",
-  "scheduledAt": "2026-10-09T20:30:00+02:00",
-  "rawScheduledSlot": "20:30",
-  "rawScheduledAt": "2026-10-09T20:30:00+02:00",
-  "startedAt": "2026-10-09T20:31:15.471670+02:00",
-  "completedAt": "2026-10-09T20:31:20.758088+02:00",
-  "checkedAt": "2026-10-09T20:31:20.758088+02:00",
+  "scheduledSlot": "20:33",
+  "scheduledAt": "2026-10-09T20:33:00+02:00",
+  "rawScheduledSlot": "20:33",
+  "rawScheduledAt": "2026-10-09T20:33:00+02:00",
+  "startedAt": "2026-10-09T20:34:15.408886+02:00",
+  "completedAt": "2026-10-09T20:34:20.049431+02:00",
+  "checkedAt": "2026-10-09T20:34:20.049431+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -32,8 +32,8 @@
       "bakeryItems": 36,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 29,
-      "all70Stock": 73.0,
+      "all70Items": 30,
+      "all70Stock": 75.0,
       "all70": [
         {
           "productId": 617528,
@@ -165,6 +165,18 @@
           "stock": 2,
           "priceWas": "2.49",
           "priceNow": "0.75",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 127588,
+          "title": "AH Verse ananas, appel grootverpakking",
+          "brand": "AH",
+          "size": "360 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -2537,11 +2549,11 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 197,
+      "totalBargainItems": 196,
       "meatItems": 11,
       "meat70Items": 9,
       "meat70Stock": 13.0,
-      "bakeryItems": 49,
+      "bakeryItems": 48,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 54,
@@ -3488,18 +3500,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 561016,
-          "title": "AH Tijger tarwe maïs half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.09",
-          "priceNow": "0.82",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 417146,
           "title": "AH Liefde & Passie OerDesem San Francisco",
           "brand": "AH Liefde & Passie",
@@ -3569,6 +3569,18 @@
           "stock": 2,
           "priceWas": "0.59",
           "priceNow": "0.44",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 561016,
+          "title": "AH Tijger tarwe maïs half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.09",
+          "priceNow": "0.82",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -3701,18 +3713,6 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.84",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 230725,
-          "title": "AH Roomboter appelflap",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.89",
-          "priceNow": "0.76",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -4929,15 +4929,15 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 202,
+      "totalBargainItems": 199,
       "meatItems": 28,
       "meat70Items": 5,
       "meat70Stock": 7.0,
-      "bakeryItems": 29,
+      "bakeryItems": 28,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 37,
-      "all70Stock": 60.0,
+      "all70Items": 36,
+      "all70Stock": 53.0,
       "all70": [
         {
           "productId": 627043,
@@ -5264,6 +5264,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 415356,
+          "title": "AH Sushi sumire",
+          "brand": "AH",
+          "size": "241 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "5.99",
+          "priceNow": "1.80",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 626382,
           "title": "AH Scharrel kipdijfilet",
           "brand": "AH",
@@ -5333,30 +5345,6 @@
           "stock": 1,
           "priceWas": "6.99",
           "priceNow": "1.57",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 601547,
-          "title": "Lindahls Yoghurt crunchy chocolade",
-          "brand": "Lindahls",
-          "size": "254 g",
-          "category": "Zuivel, eieren",
-          "discountPct": 70,
-          "stock": 4,
-          "priceWas": "2.39",
-          "priceNow": "0.72",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 613317,
-          "title": "AH Terra Soja gurt aardbei",
-          "brand": "AH Terra",
-          "size": "0,75 l",
-          "category": "Zuivel, eieren",
-          "discountPct": 70,
-          "stock": 4,
-          "priceWas": "1.59",
-          "priceNow": "0.48",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -5949,18 +5937,6 @@
           "stock": 1,
           "priceWas": "1.39",
           "priceNow": "1.18",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 230731,
-          "title": "AH Triangel meergranen bruin",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.69",
-          "priceNow": "0.59",
           "markdownExpirationDate": "2026-10-09"
         },
         {
