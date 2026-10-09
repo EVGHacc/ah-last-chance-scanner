@@ -9,7 +9,7 @@ from app.proof_acceptance import validate
 class ProofAcceptanceTests(unittest.TestCase):
     def _write(self,job):
         payload={"configured_sources":1,"failed":0,"verified_complete":1,
-                 "sources":[{"name":"OpenAI","unique_jobs":1,"jobs":[job]}]}
+                 "sources":[{"name":"OpenAI","coverage":"verified_complete","unique_jobs":1,"jobs":[job]}]}
         f=tempfile.NamedTemporaryFile(mode="w",suffix=".json",delete=False)
         json.dump(payload,f);f.close();return Path(f.name)
     def test_accepts_short_summary_canonical_model(self):
