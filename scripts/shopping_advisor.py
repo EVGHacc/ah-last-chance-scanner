@@ -23,6 +23,24 @@ def eligible(item, day):
     except (ValueError, TypeError):
         return False
 
+def other_category_highlights(store):
+    """Only observed 70%-off non-meat offers, prioritizing multiple packs."""
+    rows = []
+    for item in store.get("all70") or []:
+        if item.get("category") in ("Vlees", "Vleeswaren"):
+            continue
+        try:
+            stock = float(item.get("stock") or 0)
+            discount = float(item.get("discountPct") or 0)
+        except (TypeError, ValueError):
+            continue
+        if stock < 2 or discount < 70:
+            continue
+        rows.append({k: item.get(k) for k in ("productId", "title", "category", "stock", "discountPct", "priceNow", "markdownExpirationDate")})
+    rows.sort(key=lambda x: (-float(x["stock"]), str(x.get("title") or "")))
+    return rows[:5]
+
+
 def advise(observation, historical=None):
     if not (observation.get("valid") is True and observation.get("status") in ("OK", "OK_ZERO_ROWS")
             and observation.get("authMode") == "user-refresh"
@@ -49,6 +67,7 @@ def advise(observation, historical=None):
                        "pipeline_stock": sum(float(i["stock"]) for i in pipeline),
                        "multiple_pack_candidates": len(items),
                        "products": items[:8],
+                       "other_category_highlights": other_category_highlights(store),
                        "historical_70_episodes": hist.get("episodes_70", 0),
                        "historical_disappearance_within_30m": hist.get("gone_within_30m"),
                        "score": round(sum(float(i["stock"]) * (2 if float(i.get("discountPct") or 0) >= 70 else .5)
@@ -69,6 +88,8 @@ def self_test():
     assert result["stores"][0]["pipeline_stock"] == 4
     assert result["stores"][0]["70_stock"] == 0
     assert result["stores"][0]["multiple_pack_candidates"] == 1
+    obs["stores"][0]["all70"] = [{"title":"Groente","category":"Groente, aardappelen","stock":3,"discountPct":70}, {"title":"Vleeswaren","category":"Vleeswaren","stock":9,"discountPct":70}]
+    assert len(advise(obs)["stores"][0]["other_category_highlights"]) == 1
     obs["valid"] = False
     try: advise(obs)
     except ValueError: pass
