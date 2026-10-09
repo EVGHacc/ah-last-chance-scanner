@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "20:42",
-  "scheduledAt": "2026-10-09T20:42:00+02:00",
-  "rawScheduledSlot": "20:42",
-  "rawScheduledAt": "2026-10-09T20:42:00+02:00",
-  "startedAt": "2026-10-09T20:43:15.407004+02:00",
-  "completedAt": "2026-10-09T20:43:20.086250+02:00",
-  "checkedAt": "2026-10-09T20:43:20.086250+02:00",
+  "scheduledSlot": "20:45",
+  "scheduledAt": "2026-10-09T20:45:00+02:00",
+  "rawScheduledSlot": "20:45",
+  "rawScheduledAt": "2026-10-09T20:45:00+02:00",
+  "startedAt": "2026-10-09T20:46:15.396934+02:00",
+  "completedAt": "2026-10-09T20:46:20.358353+02:00",
+  "checkedAt": "2026-10-09T20:46:20.358353+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -25,8 +25,8 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 177,
-      "meatItems": 5,
+      "totalBargainItems": 180,
+      "meatItems": 8,
       "meat70Items": 2,
       "meat70Stock": 2.0,
       "bakeryItems": 36,
@@ -451,10 +451,46 @@
           "brand": "AH",
           "size": "250 g",
           "category": "Vlees",
-          "discountPct": 25,
+          "discountPct": 40,
           "stock": 1,
           "priceWas": "2.99",
-          "priceNow": "2.24",
+          "priceNow": "1.79",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 619347,
+          "title": "AH Scharrel kipbraadworsten 2 stuks",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "1.99",
+          "priceNow": "1.49",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 531858,
+          "title": "AH Scharrel kippensoeppakket met groente",
+          "brand": "AH",
+          "size": "ca. 600 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "4.61",
+          "priceNow": "3.46",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 619338,
+          "title": "AH Kip boomstammetjes",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "4.50",
+          "priceNow": "3.38",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -909,15 +945,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 269,
+      "totalBargainItems": 276,
       "meatItems": 24,
       "meat70Items": 3,
       "meat70Stock": 9.0,
       "bakeryItems": 57,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 56,
-      "all70Stock": 109.0,
+      "all70Items": 57,
+      "all70Stock": 110.0,
       "all70": [
         {
           "productId": 525235,
@@ -1062,6 +1098,18 @@
           "priceWas": "1.99",
           "priceNow": "0.60",
           "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 166560,
+          "title": "AH Erwtensoep verspakket",
+          "brand": "AH",
+          "size": "6 pers | 90 min",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-10"
         },
         {
           "productId": 612933,
@@ -1858,6 +1906,18 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
+          "productId": 160750,
+          "title": "AH Krabbetjes",
+          "brand": "AH",
+          "size": "ca. 360 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 6,
+          "priceWas": "3.60",
+          "priceNow": "2.16",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 561333,
           "title": "AH Gemengd gehakt",
           "brand": "AH",
@@ -1867,18 +1927,6 @@
           "stock": 9,
           "priceWas": "4.59",
           "priceNow": "3.44",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 160750,
-          "title": "AH Krabbetjes",
-          "brand": "AH",
-          "size": "ca. 360 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 6,
-          "priceWas": "3.60",
-          "priceNow": "2.70",
           "markdownExpirationDate": "2026-10-11"
         }
       ],
@@ -3949,15 +3997,15 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 155,
+      "totalBargainItems": 154,
       "meatItems": 20,
       "meat70Items": 4,
       "meat70Stock": 4.0,
       "bakeryItems": 28,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 32,
-      "all70Stock": 53.0,
+      "all70Items": 31,
+      "all70Stock": 52.0,
       "all70": [
         {
           "productId": 133277,
@@ -4101,18 +4149,6 @@
           "stock": 1,
           "priceWas": "1.29",
           "priceNow": "0.39",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 455363,
-          "title": "AH Oven & airfryer courgette rode paprika",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.89",
-          "priceNow": "0.87",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -4929,15 +4965,15 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 190,
+      "totalBargainItems": 196,
       "meatItems": 28,
       "meat70Items": 5,
       "meat70Stock": 7.0,
-      "bakeryItems": 25,
+      "bakeryItems": 27,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 33,
-      "all70Stock": 48.0,
+      "all70Items": 35,
+      "all70Stock": 52.0,
       "all70": [
         {
           "productId": 627043,
@@ -5120,18 +5156,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 594142,
-          "title": "AH Verse cantaloupe meloen",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.49",
-          "priceNow": "0.75",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 544086,
           "title": "AH Verse mango",
           "brand": "AH",
@@ -5168,6 +5192,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 594142,
+          "title": "AH Verse cantaloupe meloen",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 3,
+          "priceWas": "2.49",
+          "priceNow": "0.75",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 405210,
           "title": "AH Pesto parelcouscous S",
           "brand": "AH",
@@ -5177,6 +5213,30 @@
           "stock": 2,
           "priceWas": "3.49",
           "priceNow": "1.05",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 563781,
+          "title": "AH Pasta kip kebab M",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.49",
+          "priceNow": "1.35",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 574834,
+          "title": "AH Pasta kip avocado M",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.49",
+          "priceNow": "1.35",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -5772,18 +5832,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 231924,
-          "title": "AH Chocoladebroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "0.59",
-          "priceNow": "0.50",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 440472,
           "title": "AH Kaas ruitbroodje wit",
           "brand": "AH",
@@ -5868,6 +5916,30 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 571174,
+          "title": "AH Jalapeño kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 577444,
+          "title": "AH Worstenbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "1.39",
+          "priceNow": "1.18",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 230740,
           "title": "AH Praliné chocolade croissant",
           "brand": "AH",
@@ -5889,6 +5961,18 @@
           "stock": 1,
           "priceWas": "2.39",
           "priceNow": "2.03",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 231924,
+          "title": "AH Chocoladebroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.59",
+          "priceNow": "0.50",
           "markdownExpirationDate": "2026-10-09"
         },
         {
