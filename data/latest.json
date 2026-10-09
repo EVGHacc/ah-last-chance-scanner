@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "20:48",
-  "scheduledAt": "2026-10-09T20:48:00+02:00",
-  "rawScheduledSlot": "20:48",
-  "rawScheduledAt": "2026-10-09T20:48:00+02:00",
-  "startedAt": "2026-10-09T20:49:15.460210+02:00",
-  "completedAt": "2026-10-09T20:49:20.054584+02:00",
-  "checkedAt": "2026-10-09T20:49:20.054584+02:00",
+  "scheduledSlot": "20:50",
+  "scheduledAt": "2026-10-09T20:50:00+02:00",
+  "rawScheduledSlot": "20:50",
+  "rawScheduledAt": "2026-10-09T20:50:00+02:00",
+  "startedAt": "2026-10-09T20:51:15.399712+02:00",
+  "completedAt": "2026-10-09T20:51:19.834430+02:00",
+  "checkedAt": "2026-10-09T20:51:19.834430+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -25,8 +25,8 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 186,
-      "meatItems": 13,
+      "totalBargainItems": 191,
+      "meatItems": 18,
       "meat70Items": 2,
       "meat70Stock": 2.0,
       "bakeryItems": 36,
@@ -470,6 +470,18 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 436877,
+          "title": "AH Biologisch Rundergehakt balletjes",
+          "brand": "AH Biologisch",
+          "size": "12 stuks",
+          "category": "Vlees",
+          "discountPct": 35,
+          "stock": 1,
+          "priceWas": "6.49",
+          "priceNow": "4.22",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 619347,
           "title": "AH Scharrel kipbraadworsten 2 stuks",
           "brand": "AH",
@@ -482,6 +494,18 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 619325,
+          "title": "AH Rundergehakt Italiaanse stijl",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "4.99",
+          "priceNow": "2.24",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 531858,
           "title": "AH Scharrel kippensoeppakket met groente",
           "brand": "AH",
@@ -491,6 +515,18 @@
           "stock": 2,
           "priceWas": "4.61",
           "priceNow": "3.46",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 610029,
+          "title": "AH Partyburger",
+          "brand": "AH",
+          "size": "720 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "6.99",
+          "priceNow": "5.24",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -527,6 +563,30 @@
           "stock": 1,
           "priceWas": "3.99",
           "priceNow": "2.99",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 619307,
+          "title": "AH Roerbakvlees Indische stijl",
+          "brand": "AH",
+          "size": "ca. 300 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "2.54",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 556724,
+          "title": "AH Scharrel kipburger jalapeño 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.85",
+          "priceNow": "2.14",
           "markdownExpirationDate": "2026-10-10"
         },
         {
