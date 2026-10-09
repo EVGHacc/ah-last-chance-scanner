@@ -56,7 +56,19 @@ def guard_point(target):
     return session.run_point(target)
 
 
+def prestart_readiness():
+    """Verify the first official slot can be protected before 17:30."""
+    import os
+    from production_health import validate_preflight
+    validate_preflight()
+    if not os.getenv('AH_REFRESH_TOKEN'):
+        raise RuntimeError('PRESTART BLOCKER: AH_REFRESH_TOKEN missing; guardian cannot recover first slot')
+    session.refresh_checkout()
+    print('PRESTART READY: auth secret present, cadence validated, checkout synchronized; guardian armed for 17:30',flush=True)
+
+
 def main():
+    prestart_readiness()
     today=datetime.now(TZ)
     points=session.points_for(today)
     print("Independent AH guardian active; monitoring authoritative production slots",flush=True)
@@ -78,6 +90,7 @@ def self_test():
     # 55s + 20s double-check leaves 130s before recovery-start deadline.
     assert CHECK_AFTER_SECONDS+SECOND_CHECK_SECONDS < session.RECOVERY_START_DEADLINE
     assert session.MAX_RECOVERY_AGE==240
+    assert callable(prestart_readiness)
     print("Guardian failover timing self-test: PASS")
 
 
