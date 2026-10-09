@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "19:30",
-  "scheduledAt": "2026-10-09T19:30:00+02:00",
-  "rawScheduledSlot": "19:30",
-  "rawScheduledAt": "2026-10-09T19:30:00+02:00",
-  "startedAt": "2026-10-09T19:31:15.445755+02:00",
-  "completedAt": "2026-10-09T19:31:20.450879+02:00",
-  "checkedAt": "2026-10-09T19:31:20.450879+02:00",
+  "scheduledSlot": "19:33",
+  "scheduledAt": "2026-10-09T19:33:00+02:00",
+  "rawScheduledSlot": "19:33",
+  "rawScheduledAt": "2026-10-09T19:33:00+02:00",
+  "startedAt": "2026-10-09T19:34:15.390046+02:00",
+  "completedAt": "2026-10-09T19:34:19.446823+02:00",
+  "checkedAt": "2026-10-09T19:34:19.446823+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -2300,8 +2300,8 @@
       "bakeryItems": 2,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 39,
-      "all70Stock": 61.0,
+      "all70Items": 43,
+      "all70Stock": 66.0,
       "all70": [
         {
           "productId": 133277,
@@ -2361,6 +2361,18 @@
           "stock": 2,
           "priceWas": "1.39",
           "priceNow": "0.42",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 395939,
+          "title": "AH Boerenkool kleinverpakking",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "1.69",
+          "priceNow": "0.51",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -2436,6 +2448,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 455363,
+          "title": "AH Oven & airfryer courgette rode paprika",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.89",
+          "priceNow": "0.87",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 168091,
           "title": "AH Veldsla grootverpakking",
           "brand": "AH",
@@ -2481,6 +2505,18 @@
           "stock": 1,
           "priceWas": "2.59",
           "priceNow": "0.78",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 395954,
+          "title": "AH Broccoli",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.49",
+          "priceNow": "0.75",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -2577,6 +2613,18 @@
           "stock": 1,
           "priceWas": "6.49",
           "priceNow": "1.95",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 610812,
+          "title": "AH Noedels kip hoisin",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.49",
+          "priceNow": "1.35",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -3045,15 +3093,15 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 153,
+      "totalBargainItems": 156,
       "meatItems": 14,
       "meat70Items": 8,
       "meat70Stock": 15.0,
       "bakeryItems": 3,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 48,
-      "all70Stock": 81.0,
+      "all70Items": 50,
+      "all70Stock": 83.0,
       "all70": [
         {
           "productId": 627043,
@@ -3212,6 +3260,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 395953,
+          "title": "AH Bloemkoolroosjes",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.49",
+          "priceNow": "0.75",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 447161,
           "title": "AH Verse watermeloen",
           "brand": "AH",
@@ -3240,6 +3300,18 @@
           "title": "AH Verse cantaloupe meloen",
           "brand": "AH",
           "size": "150 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.49",
+          "priceNow": "0.75",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 544086,
+          "title": "AH Verse mango",
+          "brand": "AH",
+          "size": "120 g",
           "category": "Fruit, verse sappen",
           "discountPct": 70,
           "stock": 1,
