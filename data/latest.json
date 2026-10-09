@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "20:09",
-  "scheduledAt": "2026-10-09T20:09:00+02:00",
-  "rawScheduledSlot": "20:09",
-  "rawScheduledAt": "2026-10-09T20:09:00+02:00",
-  "startedAt": "2026-10-09T20:10:15.439270+02:00",
-  "completedAt": "2026-10-09T20:10:19.532786+02:00",
-  "checkedAt": "2026-10-09T20:10:19.532786+02:00",
+  "scheduledSlot": "20:10",
+  "scheduledAt": "2026-10-09T20:10:00+02:00",
+  "rawScheduledSlot": "20:10",
+  "rawScheduledAt": "2026-10-09T20:10:00+02:00",
+  "startedAt": "2026-10-09T20:11:15.385632+02:00",
+  "completedAt": "2026-10-09T20:11:19.854221+02:00",
+  "checkedAt": "2026-10-09T20:11:19.854221+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -3428,18 +3428,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 230738,
-          "title": "AH Koffiebroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "0.69",
-          "priceNow": "0.59",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 230710,
           "title": "AH Ham kaas croissant",
           "brand": "AH",
@@ -3461,6 +3449,18 @@
           "stock": 3,
           "priceWas": "0.59",
           "priceNow": "0.50",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 230738,
+          "title": "AH Koffiebroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 3,
+          "priceWas": "0.69",
+          "priceNow": "0.59",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -4450,7 +4450,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 40,
-          "stock": 5,
+          "stock": 3,
           "priceWas": "2.69",
           "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-09"
