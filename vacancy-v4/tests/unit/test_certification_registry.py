@@ -68,6 +68,23 @@ class CertificationRegistryTests(unittest.TestCase):
         self.assertEqual(degraded["certification"], "CERTIFIED")
         self.assertEqual(degraded["health"], "DEGRADED")
 
+    def test_zero_or_invalid_inventory_rejected_at_state_machine_boundary(self):
+        for jobs in (0, -1, True, False, "1", 1.0):
+            with self.subTest(jobs=jobs):
+                record = new_record("ashby", "openai")
+                with self.assertRaisesRegex(ValueError, "positive integer unique_jobs"):
+                    accept_green_proof(record, proof("r1", jobs=jobs), release_allowed=True)
+                self.assertEqual(record["certification"], "UNPROVEN")
+                self.assertEqual(record["accepted_proofs"], [])
+
+    def test_invalid_reproof_cannot_refresh_existing_certification(self):
+        first = accept_green_proof(new_record("ashby", "openai"), proof("r1"), release_allowed=True)
+        certified = accept_green_proof(first, proof("r2"), release_allowed=True)
+        with self.assertRaisesRegex(ValueError, "positive integer unique_jobs"):
+            accept_green_proof(certified, proof("r3", jobs=0), release_allowed=True)
+        self.assertEqual(certified["certified_job_count"], 3)
+        self.assertEqual(certified["accepted_proofs"], ["r1", "r2"])
+
     def test_closed_release_gate_cannot_accept_proof(self):
         with self.assertRaisesRegex(ValueError, "release gate closed"):
             accept_green_proof(new_record("ashby", "openai"), proof("r1"), release_allowed=False)

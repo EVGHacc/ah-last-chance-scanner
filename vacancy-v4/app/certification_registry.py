@@ -53,6 +53,11 @@ def accept_green_proof(record: dict, proof: dict, *, release_allowed: bool) -> d
     )
     if any(proof.get(key) in (None, "") for key in required):
         raise ValueError("proof provenance incomplete")
+    # The certification ledger must reject invalid inventories even if a caller
+    # accidentally skips full proof-batch validation. bool is an int subclass.
+    count = proof.get("unique_jobs")
+    if type(count) is not int or count <= 0:
+        raise ValueError("accepted proof requires positive integer unique_jobs")
     if proof["run_id"] in record.get("accepted_proofs", []):
         raise ValueError("proof run_id already accepted")
 
