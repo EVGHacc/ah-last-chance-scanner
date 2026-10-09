@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "19:18",
-  "scheduledAt": "2026-10-09T19:18:00+02:00",
-  "rawScheduledSlot": "19:18",
-  "rawScheduledAt": "2026-10-09T19:18:00+02:00",
-  "startedAt": "2026-10-09T19:19:15.421872+02:00",
-  "completedAt": "2026-10-09T19:19:20.189550+02:00",
-  "checkedAt": "2026-10-09T19:19:20.189550+02:00",
+  "scheduledSlot": "19:20",
+  "scheduledAt": "2026-10-09T19:20:00+02:00",
+  "rawScheduledSlot": "19:20",
+  "rawScheduledAt": "2026-10-09T19:20:00+02:00",
+  "startedAt": "2026-10-09T19:21:15.422295+02:00",
+  "completedAt": "2026-10-09T19:21:28.120871+02:00",
+  "checkedAt": "2026-10-09T19:21:28.120871+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -557,7 +557,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 50,
-      "all70Stock": 103.0,
+      "all70Stock": 102.0,
       "all70": [
         {
           "productId": 525235,
@@ -776,18 +776,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 210755,
-          "title": "AH Uit eigen keuken stamppot witlof",
-          "brand": "AH",
-          "size": "540 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 5,
-          "priceWas": "5.59",
-          "priceNow": "1.38",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 193241,
           "title": "AH Appel kip M",
           "brand": "AH",
@@ -797,6 +785,18 @@
           "stock": 4,
           "priceWas": "4.79",
           "priceNow": "1.44",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 210755,
+          "title": "AH Uit eigen keuken stamppot witlof",
+          "brand": "AH",
+          "size": "540 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 4,
+          "priceWas": "5.59",
+          "priceNow": "1.38",
           "markdownExpirationDate": "2026-10-09"
         },
         {
