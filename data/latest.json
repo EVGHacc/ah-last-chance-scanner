@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "18:30",
-  "scheduledAt": "2026-10-09T18:30:00+02:00",
-  "rawScheduledSlot": "18:30",
-  "rawScheduledAt": "2026-10-09T18:30:00+02:00",
-  "startedAt": "2026-10-09T18:31:15.464604+02:00",
-  "completedAt": "2026-10-09T18:31:19.009984+02:00",
-  "checkedAt": "2026-10-09T18:31:19.009984+02:00",
+  "scheduledSlot": "18:33",
+  "scheduledAt": "2026-10-09T18:33:00+02:00",
+  "rawScheduledSlot": "18:33",
+  "rawScheduledAt": "2026-10-09T18:33:00+02:00",
+  "startedAt": "2026-10-09T18:34:15.402012+02:00",
+  "completedAt": "2026-10-09T18:34:18.919186+02:00",
+  "checkedAt": "2026-10-09T18:34:18.919186+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -1359,14 +1359,38 @@
       "fetched": true,
       "totalBargainItems": 146,
       "meatItems": 21,
-      "meat70Items": 0,
-      "meat70Stock": 0,
+      "meat70Items": 1,
+      "meat70Stock": 1.0,
       "bakeryItems": 2,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 3,
-      "all70Stock": 4.0,
+      "all70Items": 11,
+      "all70Stock": 14.0,
       "all70": [
+        {
+          "productId": 525249,
+          "title": "AH Luxe wok Japans",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 3,
+          "priceWas": "3.59",
+          "priceNow": "1.08",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 612924,
+          "title": "AH Paprika rood geel met baba ganoush",
+          "brand": "AH",
+          "size": "95 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.19",
+          "priceNow": "0.66",
+          "markdownExpirationDate": "2026-10-09"
+        },
         {
           "productId": 203229,
           "title": "Bieze Rauwkost 4 seizoenen",
@@ -1378,6 +1402,18 @@
           "priceWas": "1.99",
           "priceNow": "0.60",
           "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 519409,
+          "title": "Wahid Halal kipmerguez",
+          "brand": "Wahid",
+          "size": "per stuk",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.99",
+          "priceNow": "1.50",
+          "markdownExpirationDate": "2026-10-09"
         },
         {
           "productId": 601547,
@@ -1392,6 +1428,30 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 613316,
+          "title": "AH Terra Soja gurt perzik",
+          "brand": "AH Terra",
+          "size": "0,75 l",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.59",
+          "priceNow": "0.48",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 441199,
+          "title": "Campina Halfvolle melk voordeelverpakking",
+          "brand": "Campina",
+          "size": "1,5 l",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "0.57",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 111138,
           "title": "AH Amandelen ongezouten",
           "brand": "AH",
@@ -1402,9 +1462,57 @@
           "priceWas": "3.99",
           "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 611661,
+          "title": "AH Kastanjechampignon knoflook tijm",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Borrel, chips, snacks",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 611663,
+          "title": "AH Shiitake spicy marinade",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Borrel, chips, snacks",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.49",
+          "priceNow": "1.05",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 104110,
+          "title": "AH Zoete stoofpeertjes",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Soepen, sauzen, kruiden, olie",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.39",
+          "priceNow": "1.02",
+          "markdownExpirationDate": "2026-10-09"
         }
       ],
       "items": [
+        {
+          "productId": 519409,
+          "title": "Wahid Halal kipmerguez",
+          "brand": "Wahid",
+          "size": "per stuk",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.99",
+          "priceNow": "1.50",
+          "markdownExpirationDate": "2026-10-09"
+        },
         {
           "productId": 622558,
           "title": "AH Gehaktballetjes Indische stijl",
@@ -1439,18 +1547,6 @@
           "stock": 1,
           "priceWas": "4.72",
           "priceNow": "2.83",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 519409,
-          "title": "Wahid Halal kipmerguez",
-          "brand": "Wahid",
-          "size": "per stuk",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "4.99",
-          "priceNow": "2.99",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -1689,16 +1785,28 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 150,
+      "totalBargainItems": 151,
       "meatItems": 15,
-      "meat70Items": 0,
-      "meat70Stock": 0,
+      "meat70Items": 1,
+      "meat70Stock": 5.0,
       "bakeryItems": 3,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 8,
-      "all70Stock": 19.0,
+      "all70Items": 13,
+      "all70Stock": 36.0,
       "all70": [
+        {
+          "productId": 627043,
+          "title": "AH Gesneden verspakket vegetarische shoarma",
+          "brand": "AH",
+          "size": "2 pers | 15 min",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 7,
+          "priceWas": "6.99",
+          "priceNow": "2.10",
+          "markdownExpirationDate": "2026-10-09"
+        },
         {
           "productId": 611680,
           "title": "Westland Luxe ei schotel",
@@ -1712,6 +1820,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 531872,
+          "title": "AH Scharrel kipburger gepaneerd 4 stuks",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 5,
+          "priceWas": "5.49",
+          "priceNow": "1.65",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 587647,
           "title": "AH Roerbak zalm pangasius garnalen zeezout",
           "brand": "AH",
@@ -1721,6 +1841,18 @@
           "stock": 2,
           "priceWas": "6.69",
           "priceNow": "2.01",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 612627,
+          "title": "AH Terra Plantaardige Toscaanse carré",
+          "brand": "AH Terra",
+          "size": "160 g",
+          "category": "Vegetarisch, vegan en plantaardig",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.49",
+          "priceNow": "0.75",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -1784,6 +1916,30 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 611661,
+          "title": "AH Kastanjechampignon knoflook tijm",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Borrel, chips, snacks",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "2.99",
+          "priceNow": "0.90",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 611663,
+          "title": "AH Shiitake spicy marinade",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Borrel, chips, snacks",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "3.49",
+          "priceNow": "1.05",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 516971,
           "title": "Doritos Naturel tortilla chips",
           "brand": "Doritos",
@@ -1803,10 +1959,10 @@
           "brand": "AH",
           "size": "400 g",
           "category": "Vlees",
-          "discountPct": 40,
+          "discountPct": 70,
           "stock": 5,
           "priceWas": "5.49",
-          "priceNow": "3.29",
+          "priceNow": "1.65",
           "markdownExpirationDate": "2026-10-09"
         },
         {
