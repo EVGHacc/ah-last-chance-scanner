@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "19:51",
-  "scheduledAt": "2026-10-09T19:51:00+02:00",
-  "rawScheduledSlot": "19:51",
-  "rawScheduledAt": "2026-10-09T19:51:00+02:00",
-  "startedAt": "2026-10-09T19:52:15.380287+02:00",
-  "completedAt": "2026-10-09T19:52:19.696860+02:00",
-  "checkedAt": "2026-10-09T19:52:19.696860+02:00",
+  "scheduledSlot": "19:54",
+  "scheduledAt": "2026-10-09T19:54:00+02:00",
+  "rawScheduledSlot": "19:54",
+  "rawScheduledAt": "2026-10-09T19:54:00+02:00",
+  "startedAt": "2026-10-09T19:55:15.416943+02:00",
+  "completedAt": "2026-10-09T19:55:20.861080+02:00",
+  "checkedAt": "2026-10-09T19:55:20.861080+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -25,28 +25,16 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 136,
+      "totalBargainItems": 138,
       "meatItems": 5,
       "meat70Items": 2,
       "meat70Stock": 2.0,
       "bakeryItems": 36,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 30,
-      "all70Stock": 79.0,
+      "all70Items": 29,
+      "all70Stock": 73.0,
       "all70": [
-        {
-          "productId": 41080,
-          "title": "AH Roerbakgroente Italiaans",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 6,
-          "priceWas": "2.29",
-          "priceNow": "0.69",
-          "markdownExpirationDate": "2026-10-09"
-        },
         {
           "productId": 617528,
           "title": "AH Broccoliroosjes",
@@ -897,11 +885,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 221,
+      "totalBargainItems": 223,
       "meatItems": 6,
       "meat70Items": 5,
       "meat70Stock": 11.0,
-      "bakeryItems": 57,
+      "bakeryItems": 56,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 55,
@@ -1980,18 +1968,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 451137,
-          "title": "AH Focaccia mozzarella",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "1.29",
-          "priceNow": "1.10",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 466494,
           "title": "AH Meerzaden croissant",
           "brand": "AH",
@@ -2004,15 +1980,15 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 425912,
-          "title": "AH Focaccia pepperoni",
+          "productId": 451137,
+          "title": "AH Focaccia mozzarella",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
           "stock": 3,
-          "priceWas": "1.59",
-          "priceNow": "1.35",
+          "priceWas": "1.29",
+          "priceNow": "1.10",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -2100,6 +2076,18 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
+          "productId": 425912,
+          "title": "AH Focaccia pepperoni",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "1.59",
+          "priceNow": "1.35",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
           "productId": 230859,
           "title": "AH Kaas croissant",
           "brand": "AH",
@@ -2157,18 +2145,6 @@
           "stock": 1,
           "priceWas": "1.29",
           "priceNow": "1.10",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 606048,
-          "title": "AH Liefde & Passie Desem pistolet wit",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -2333,15 +2309,15 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 198,
+      "totalBargainItems": 186,
       "meatItems": 12,
       "meat70Items": 10,
       "meat70Stock": 15.0,
-      "bakeryItems": 51,
+      "bakeryItems": 45,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 54,
-      "all70Stock": 141.0,
+      "all70Items": 52,
+      "all70Stock": 138.0,
       "all70": [
         {
           "productId": 418286,
@@ -2437,18 +2413,6 @@
           "stock": 1,
           "priceWas": "2.49",
           "priceNow": "0.75",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 495901,
-          "title": "AH Gesneden verspakket nasi",
-          "brand": "AH",
-          "size": "2-3 pers|15 min",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.99",
-          "priceNow": "2.10",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -2797,18 +2761,6 @@
           "stock": 1,
           "priceWas": "3.99",
           "priceNow": "1.20",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 457607,
-          "title": "Galbani Di latte di bufala maxi",
-          "brand": "Galbani",
-          "size": "380 g",
-          "category": "Kaas",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "4.69",
-          "priceNow": "1.41",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -3176,18 +3128,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 487301,
-          "title": "AH Rond volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 6,
-          "priceWas": "1.89",
-          "priceNow": "1.42",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 574950,
           "title": "AH Pizza donut jalapeño cheddar",
           "brand": "AH",
@@ -3236,18 +3176,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 230786,
-          "title": "AH Les pains triomphe heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "2.39",
-          "priceNow": "1.79",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 590399,
           "title": "AH Broodje burger augurk tomatensaus",
           "brand": "AH",
@@ -3269,18 +3197,6 @@
           "stock": 3,
           "priceWas": "3.19",
           "priceNow": "2.39",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 417147,
-          "title": "AH Vloerbrood meergranen heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -3353,18 +3269,6 @@
           "stock": 4,
           "priceWas": "0.69",
           "priceNow": "0.59",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 230859,
-          "title": "AH Kaas croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -3524,18 +3428,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 584031,
-          "title": "AH Rond wit sesam half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 590397,
           "title": "AH Kipnuggetbroodje",
           "brand": "AH",
@@ -3617,18 +3509,6 @@
           "stock": 1,
           "priceWas": "3.19",
           "priceNow": "2.71",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
-          "productId": 417148,
-          "title": "AH Vloerbrood volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "2.69",
-          "priceNow": "2.29",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -4893,8 +4773,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 197,
-      "meatItems": 19,
+      "totalBargainItems": 200,
+      "meatItems": 21,
       "meat70Items": 8,
       "meat70Stock": 15.0,
       "bakeryItems": 31,
@@ -5602,6 +5482,18 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 160750,
+          "title": "AH Krabbetjes",
+          "brand": "AH",
+          "size": "ca. 360 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "3.60",
+          "priceNow": "2.70",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 531832,
           "title": "AH Scharrel kipdijfilet reepjes",
           "brand": "AH",
@@ -5611,6 +5503,18 @@
           "stock": 3,
           "priceWas": "4.99",
           "priceNow": "3.74",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 619307,
+          "title": "AH Roerbakvlees Indische stijl",
+          "brand": "AH",
+          "size": "ca. 300 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "3.99",
+          "priceNow": "2.54",
           "markdownExpirationDate": "2026-10-10"
         },
         {
