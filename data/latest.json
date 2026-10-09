@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-09",
   "weekday": "Friday",
-  "scheduledSlot": "18:51",
-  "scheduledAt": "2026-10-09T18:51:00+02:00",
-  "rawScheduledSlot": "18:51",
-  "rawScheduledAt": "2026-10-09T18:51:00+02:00",
-  "startedAt": "2026-10-09T18:52:15.379542+02:00",
-  "completedAt": "2026-10-09T18:52:28.690680+02:00",
-  "checkedAt": "2026-10-09T18:52:28.690680+02:00",
+  "scheduledSlot": "18:54",
+  "scheduledAt": "2026-10-09T18:54:00+02:00",
+  "rawScheduledSlot": "18:54",
+  "rawScheduledAt": "2026-10-09T18:54:00+02:00",
+  "startedAt": "2026-10-09T18:55:15.453122+02:00",
+  "completedAt": "2026-10-09T18:55:19.011678+02:00",
+  "checkedAt": "2026-10-09T18:55:19.011678+02:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -353,7 +353,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 30,
-      "all70Stock": 81.0,
+      "all70Stock": 78.0,
       "all70": [
         {
           "productId": 525235,
@@ -464,18 +464,6 @@
           "markdownExpirationDate": "2026-10-09"
         },
         {
-          "productId": 38088,
-          "title": "AH Rundvleessalade",
-          "brand": "AH",
-          "size": "600 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "2.89",
-          "priceNow": "0.87",
-          "markdownExpirationDate": "2026-10-09"
-        },
-        {
           "productId": 128129,
           "title": "AH Basis tonijn ei L",
           "brand": "AH",
@@ -485,6 +473,18 @@
           "stock": 2,
           "priceWas": "3.99",
           "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-09"
+        },
+        {
+          "productId": 38088,
+          "title": "AH Rundvleessalade",
+          "brand": "AH",
+          "size": "600 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.89",
+          "priceNow": "0.87",
           "markdownExpirationDate": "2026-10-09"
         },
         {
@@ -554,7 +554,7 @@
           "size": "150 g",
           "category": "Vleeswaren",
           "discountPct": 70,
-          "stock": 7,
+          "stock": 6,
           "priceWas": "1.69",
           "priceNow": "0.51",
           "markdownExpirationDate": "2026-10-09"
@@ -578,7 +578,7 @@
           "size": "ca. 125 g",
           "category": "Vleeswaren",
           "discountPct": 70,
-          "stock": 4,
+          "stock": 3,
           "priceWas": "1.79",
           "priceNow": "0.54",
           "markdownExpirationDate": "2026-10-11"
