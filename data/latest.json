@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-10",
   "weekday": "Saturday",
-  "scheduledSlot": "21:18",
-  "scheduledAt": "2026-10-10T21:18:00+02:00",
-  "rawScheduledSlot": "21:18",
-  "rawScheduledAt": "2026-10-10T21:18:00+02:00",
-  "startedAt": "2026-10-10T21:18:00.401866+02:00",
-  "completedAt": "2026-10-10T21:18:06.349987+02:00",
-  "checkedAt": "2026-10-10T21:18:06.349987+02:00",
+  "scheduledSlot": "21:20",
+  "scheduledAt": "2026-10-10T21:20:00+02:00",
+  "rawScheduledSlot": "21:20",
+  "rawScheduledAt": "2026-10-10T21:20:00+02:00",
+  "startedAt": "2026-10-10T21:20:00.392151+02:00",
+  "completedAt": "2026-10-10T21:20:04.084698+02:00",
+  "checkedAt": "2026-10-10T21:20:04.084698+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -4864,18 +4864,6 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 168184,
-          "title": "AH Tijger wit heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 4,
-          "priceWas": "1.99",
-          "priceNow": "1.19",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 277519,
           "title": "AH Vloerbrood volkoren half",
           "brand": "AH",
@@ -4885,6 +4873,18 @@
           "stock": 4,
           "priceWas": "1.45",
           "priceNow": "0.87",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 168184,
+          "title": "AH Tijger wit heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 3,
+          "priceWas": "1.99",
+          "priceNow": "1.19",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -5234,10 +5234,10 @@
       "meat70Items": 7,
       "meat70Stock": 21.0,
       "bakeryItems": 35,
-      "bakery70Items": 2,
-      "bakery70Stock": 3.0,
-      "all70Items": 56,
-      "all70Stock": 119.0,
+      "bakery70Items": 3,
+      "bakery70Stock": 5.0,
+      "all70Items": 57,
+      "all70Stock": 121.0,
       "all70": [
         {
           "productId": 41156,
@@ -5864,6 +5864,18 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 458903,
+          "title": "AH Kaiserbroodjes",
+          "brand": "AH",
+          "size": "10 stuks",
+          "category": "Bakkerij",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "1.89",
+          "priceNow": "0.57",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 485003,
           "title": "AH Roomboter cakeplakjes naturel",
           "brand": "AH",
@@ -6204,6 +6216,18 @@
       ],
       "bakery": [
         {
+          "productId": 458903,
+          "title": "AH Kaiserbroodjes",
+          "brand": "AH",
+          "size": "10 stuks",
+          "category": "Bakkerij",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "1.89",
+          "priceNow": "0.57",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 485003,
           "title": "AH Roomboter cakeplakjes naturel",
           "brand": "AH",
@@ -6321,18 +6345,6 @@
           "stock": 2,
           "priceWas": "1.09",
           "priceNow": "0.65",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 458903,
-          "title": "AH Kaiserbroodjes",
-          "brand": "AH",
-          "size": "10 stuks",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "1.89",
-          "priceNow": "1.13",
           "markdownExpirationDate": "2026-10-10"
         },
         {
