@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-10",
   "weekday": "Saturday",
-  "scheduledSlot": "21:33",
-  "scheduledAt": "2026-10-10T21:33:00+02:00",
-  "rawScheduledSlot": "21:33",
-  "rawScheduledAt": "2026-10-10T21:33:00+02:00",
-  "startedAt": "2026-10-10T21:33:00.387842+02:00",
-  "completedAt": "2026-10-10T21:33:05.436118+02:00",
-  "checkedAt": "2026-10-10T21:33:05.436118+02:00",
+  "scheduledSlot": "21:35",
+  "scheduledAt": "2026-10-10T21:35:00+02:00",
+  "rawScheduledSlot": "21:35",
+  "rawScheduledAt": "2026-10-10T21:35:00+02:00",
+  "startedAt": "2026-10-10T21:35:00.394991+02:00",
+  "completedAt": "2026-10-10T21:35:05.148016+02:00",
+  "checkedAt": "2026-10-10T21:35:05.148016+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -5020,18 +5020,6 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 411164,
-          "title": "AH Kaas uienbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "1.39",
-          "priceNow": "1.04",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 603533,
           "title": "AH Kip mango snack",
           "brand": "AH",
@@ -5041,6 +5029,18 @@
           "stock": 1,
           "priceWas": "1.49",
           "priceNow": "1.12",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 411164,
+          "title": "AH Kaas uienbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.39",
+          "priceNow": "1.04",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -5062,7 +5062,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
-          "stock": 6,
+          "stock": 5,
           "priceWas": "0.99",
           "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-10"
