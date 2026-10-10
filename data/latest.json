@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-10",
   "weekday": "Saturday",
-  "scheduledSlot": "20:40",
-  "scheduledAt": "2026-10-10T20:40:00+02:00",
-  "rawScheduledSlot": "20:40",
-  "rawScheduledAt": "2026-10-10T20:40:00+02:00",
-  "startedAt": "2026-10-10T20:40:00.394150+02:00",
-  "completedAt": "2026-10-10T20:40:05.210674+02:00",
-  "checkedAt": "2026-10-10T20:40:05.210674+02:00",
+  "scheduledSlot": "20:42",
+  "scheduledAt": "2026-10-10T20:42:00+02:00",
+  "rawScheduledSlot": "20:42",
+  "rawScheduledAt": "2026-10-10T20:42:00+02:00",
+  "startedAt": "2026-10-10T20:42:00.428556+02:00",
+  "completedAt": "2026-10-10T20:42:04.829938+02:00",
+  "checkedAt": "2026-10-10T20:42:04.829938+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1392,12 +1392,12 @@
       "totalBargainItems": 221,
       "meatItems": 19,
       "meat70Items": 13,
-      "meat70Stock": 21.0,
+      "meat70Stock": 19.0,
       "bakeryItems": 51,
       "bakery70Items": 3,
       "bakery70Stock": 13.0,
       "all70Items": 65,
-      "all70Stock": 209.0,
+      "all70Stock": 207.0,
       "all70": [
         {
           "productId": 41080,
@@ -1772,18 +1772,6 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 531872,
-          "title": "AH Scharrel kipburger gepaneerd 4 stuks",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 4,
-          "priceWas": "5.49",
-          "priceNow": "1.65",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 619341,
           "title": "AH Scharrel kipfilet blokjes voordeel",
           "brand": "AH",
@@ -1793,6 +1781,18 @@
           "stock": 2,
           "priceWas": "13.49",
           "priceNow": "4.05",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 531872,
+          "title": "AH Scharrel kipburger gepaneerd 4 stuks",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "5.49",
+          "priceNow": "1.65",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -2194,18 +2194,6 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 531872,
-          "title": "AH Scharrel kipburger gepaneerd 4 stuks",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 4,
-          "priceWas": "5.49",
-          "priceNow": "1.65",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 619341,
           "title": "AH Scharrel kipfilet blokjes voordeel",
           "brand": "AH",
@@ -2215,6 +2203,18 @@
           "stock": 2,
           "priceWas": "13.49",
           "priceNow": "4.05",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 531872,
+          "title": "AH Scharrel kipburger gepaneerd 4 stuks",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "5.49",
+          "priceNow": "1.65",
           "markdownExpirationDate": "2026-10-10"
         },
         {
