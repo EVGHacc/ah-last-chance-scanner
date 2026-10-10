@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-10",
   "weekday": "Saturday",
-  "scheduledSlot": "22:24",
-  "scheduledAt": "2026-10-10T22:24:00+02:00",
-  "rawScheduledSlot": "22:24",
-  "rawScheduledAt": "2026-10-10T22:24:00+02:00",
-  "startedAt": "2026-10-10T22:24:00.404516+02:00",
-  "completedAt": "2026-10-10T22:24:04.514706+02:00",
-  "checkedAt": "2026-10-10T22:24:04.514706+02:00",
+  "scheduledSlot": "22:25",
+  "scheduledAt": "2026-10-10T22:25:00+02:00",
+  "rawScheduledSlot": "22:25",
+  "rawScheduledAt": "2026-10-10T22:25:00+02:00",
+  "startedAt": "2026-10-10T22:25:00.424060+02:00",
+  "completedAt": "2026-10-10T22:25:04.984302+02:00",
+  "checkedAt": "2026-10-10T22:25:04.984302+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,15 +25,15 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 150,
-      "meatItems": 10,
-      "meat70Items": 4,
-      "meat70Stock": 5.0,
-      "bakeryItems": 34,
+      "totalBargainItems": 176,
+      "meatItems": 11,
+      "meat70Items": 5,
+      "meat70Stock": 8.0,
+      "bakeryItems": 47,
       "bakery70Items": 1,
       "bakery70Stock": 2.0,
-      "all70Items": 30,
-      "all70Stock": 77.0,
+      "all70Items": 35,
+      "all70Stock": 89.0,
       "all70": [
         {
           "productId": 164108,
@@ -204,6 +204,30 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 624577,
+          "title": "AH Stamppot bloemkool broccoli",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.99",
+          "priceNow": "1.50",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 475648,
+          "title": "AH Terra Couscous falafel M",
+          "brand": "AH Terra",
+          "size": "305 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.49",
+          "priceNow": "1.35",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 580671,
           "title": "AH Slagersrookworst Gelders",
           "brand": "AH",
@@ -252,6 +276,18 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 229795,
+          "title": "AH Magere rookworst",
+          "brand": "AH",
+          "size": "275 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 3,
+          "priceWas": "1.99",
+          "priceNow": "0.60",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 587666,
           "title": "AH Krokante zalmburger",
           "brand": "AH",
@@ -273,6 +309,18 @@
           "stock": 1,
           "priceWas": "5.69",
           "priceNow": "1.71",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 213759,
+          "title": "AH Zalmfilet à la minute",
+          "brand": "AH",
+          "size": "ca. 225 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.13",
+          "priceNow": "1.38",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -394,6 +442,18 @@
           "priceWas": "3.99",
           "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 217464,
+          "title": "Swirl Vuilniszakken met fixeerband 20 liter",
+          "brand": "Swirl",
+          "size": "15 stuks",
+          "category": "Huishouden",
+          "discountPct": 70,
+          "stock": 6,
+          "priceWas": "3.75",
+          "priceNow": "1.13",
+          "markdownExpirationDate": "2026-10-11"
         }
       ],
       "items": [
@@ -444,6 +504,18 @@
           "priceWas": "4.61",
           "priceNow": "1.38",
           "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 229795,
+          "title": "AH Magere rookworst",
+          "brand": "AH",
+          "size": "275 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 3,
+          "priceWas": "1.99",
+          "priceNow": "0.60",
+          "markdownExpirationDate": "2026-10-11"
         },
         {
           "productId": 620805,
@@ -532,6 +604,18 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 252839,
+          "title": "AH Vloerbrood meergranen half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 18,
+          "priceWas": "1.45",
+          "priceNow": "0.87",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 561021,
           "title": "AH Vloer waldkorn heel",
           "brand": "AH",
@@ -541,6 +625,18 @@
           "stock": 14,
           "priceWas": "2.69",
           "priceNow": "1.61",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 487305,
+          "title": "AH Liefde & Passie Spelt volkoren brood",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 9,
+          "priceWas": "3.19",
+          "priceNow": "1.91",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -556,6 +652,18 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 241458,
+          "title": "AH Vloerbrood wit half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 6,
+          "priceWas": "1.45",
+          "priceNow": "0.87",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 597345,
           "title": "AH Pretzel",
           "brand": "AH",
@@ -565,6 +673,18 @@
           "stock": 5,
           "priceWas": "0.65",
           "priceNow": "0.39",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 561013,
+          "title": "AH Liefde & Passie Meergranen",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 4,
+          "priceWas": "2.89",
+          "priceNow": "1.73",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -606,6 +726,18 @@
         {
           "productId": 417144,
           "title": "AH Vloerbrood wit heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 417147,
+          "title": "AH Vloerbrood meergranen heel",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
@@ -661,6 +793,18 @@
           "stock": 6,
           "priceWas": "0.69",
           "priceNow": "0.52",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 362217,
+          "title": "AH Speltbol",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 6,
+          "priceWas": "0.59",
+          "priceNow": "0.44",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -724,6 +868,30 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 365995,
+          "title": "AH Luxe roomboter croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "1.19",
+          "priceNow": "0.89",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 467677,
+          "title": "AH Kip loempia börek",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "1.19",
+          "priceNow": "0.89",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 168184,
           "title": "AH Tijger wit heel",
           "brand": "AH",
@@ -745,6 +913,18 @@
           "stock": 2,
           "priceWas": "1.99",
           "priceNow": "1.49",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 425912,
+          "title": "AH Focaccia pepperoni",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.59",
+          "priceNow": "1.19",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -781,6 +961,18 @@
           "stock": 1,
           "priceWas": "1.09",
           "priceNow": "0.82",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 417148,
+          "title": "AH Vloerbrood volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -854,6 +1046,42 @@
           "priceWas": "0.99",
           "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 230715,
+          "title": "AH Italiaanse bol wit",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.49",
+          "priceNow": "0.42",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 475819,
+          "title": "AH Kaiserbroodje volkoren",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.28",
+          "priceNow": "0.24",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 370644,
+          "title": "Dr. Oetker Mug cake stracciatella",
+          "brand": "Dr. Oetker",
+          "size": "60 g",
+          "category": "Bakkerij",
+          "discountPct": 50,
+          "stock": 9,
+          "priceWas": "1.59",
+          "priceNow": "0.80",
+          "markdownExpirationDate": "2026-10-11"
         },
         {
           "productId": 606747,
