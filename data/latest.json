@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-10",
   "weekday": "Saturday",
-  "scheduledSlot": "22:18",
-  "scheduledAt": "2026-10-10T22:18:00+02:00",
-  "rawScheduledSlot": "22:18",
-  "rawScheduledAt": "2026-10-10T22:18:00+02:00",
-  "startedAt": "2026-10-10T22:18:00.703325+02:00",
-  "completedAt": "2026-10-10T22:18:05.408300+02:00",
-  "checkedAt": "2026-10-10T22:18:05.408300+02:00",
+  "scheduledSlot": "22:20",
+  "scheduledAt": "2026-10-10T22:20:00+02:00",
+  "rawScheduledSlot": "22:20",
+  "rawScheduledAt": "2026-10-10T22:20:00+02:00",
+  "startedAt": "2026-10-10T22:20:00.382334+02:00",
+  "completedAt": "2026-10-10T22:20:04.871345+02:00",
+  "checkedAt": "2026-10-10T22:20:04.871345+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1161,15 +1161,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 215,
-      "meatItems": 17,
-      "meat70Items": 11,
-      "meat70Stock": 15.0,
+      "totalBargainItems": 194,
+      "meatItems": 15,
+      "meat70Items": 9,
+      "meat70Stock": 13.0,
       "bakeryItems": 48,
       "bakery70Items": 3,
       "bakery70Stock": 13.0,
-      "all70Items": 63,
-      "all70Stock": 193.0,
+      "all70Items": 54,
+      "all70Stock": 168.0,
       "all70": [
         {
           "productId": 41080,
@@ -1265,18 +1265,6 @@
           "stock": 1,
           "priceWas": "7.59",
           "priceNow": "2.28",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 611859,
-          "title": "AH Biologisch Veldsla",
-          "brand": "AH Biologisch",
-          "size": "40 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "1.55",
-          "priceNow": "0.47",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -1376,30 +1364,6 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 544086,
-          "title": "AH Verse mango",
-          "brand": "AH",
-          "size": "120 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "2.49",
-          "priceNow": "0.75",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 612927,
-          "title": "AH Ananas sticks",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "3.99",
-          "priceNow": "1.20",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 285947,
           "title": "AH Vers geperst sap sinaasappel aardbei",
           "brand": "AH",
@@ -1448,18 +1412,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 623362,
-          "title": "AH Borrelbrood saucijs luxe topping",
-          "brand": "AH",
-          "size": "270 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "2.99",
-          "priceNow": "0.90",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 238918,
           "title": "AH Uit eigen keuken stamppot andijvie",
           "brand": "AH",
@@ -1493,18 +1445,6 @@
           "stock": 2,
           "priceWas": "3.99",
           "priceNow": "1.20",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 610805,
-          "title": "AH M baba ganoush",
-          "brand": "AH",
-          "size": "285 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "4.49",
-          "priceNow": "1.35",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -1553,30 +1493,6 @@
           "stock": 2,
           "priceWas": "5.99",
           "priceNow": "1.80",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 619338,
-          "title": "AH Kip boomstammetjes",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.50",
-          "priceNow": "1.35",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 620813,
-          "title": "AH Ovenschotel kipdrumsticks sweet chili",
-          "brand": "AH",
-          "size": "600 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.29",
-          "priceNow": "1.89",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -1664,18 +1580,6 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 620823,
-          "title": "AH Excellent Wilde sockeye zalm",
-          "brand": "AH Excellent",
-          "size": "ca. 150 g",
-          "category": "Vis",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "7.99",
-          "priceNow": "2.04",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 48962,
           "title": "AH Haring met uitjes",
           "brand": "AH",
@@ -1733,18 +1637,6 @@
           "stock": 1,
           "priceWas": "3.69",
           "priceNow": "1.11",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 620843,
-          "title": "AH Terra Plantaardige rulgehakt",
-          "brand": "AH Terra",
-          "size": "200 g",
-          "category": "Vegetarisch, vegan en plantaardig",
-          "discountPct": 70,
-          "stock": 11,
-          "priceWas": "1.55",
-          "priceNow": "0.47",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -1951,30 +1843,6 @@
           "stock": 2,
           "priceWas": "5.99",
           "priceNow": "1.80",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 619338,
-          "title": "AH Kip boomstammetjes",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.50",
-          "priceNow": "1.35",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 620813,
-          "title": "AH Ovenschotel kipdrumsticks sweet chili",
-          "brand": "AH",
-          "size": "600 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.29",
-          "priceNow": "1.89",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -2717,15 +2585,15 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 150,
+      "totalBargainItems": 145,
       "meatItems": 2,
       "meat70Items": 1,
       "meat70Stock": 1.0,
-      "bakeryItems": 28,
+      "bakeryItems": 27,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 23,
-      "all70Stock": 56.0,
+      "all70Items": 22,
+      "all70Stock": 55.0,
       "all70": [
         {
           "productId": 185765,
@@ -2845,18 +2713,6 @@
           "stock": 1,
           "priceWas": "4.50",
           "priceNow": "1.35",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 572429,
-          "title": "AH Terra Tempeh",
-          "brand": "AH Terra",
-          "size": "395 g",
-          "category": "Vegetarisch, vegan en plantaardig",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.29",
-          "priceNow": "0.69",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -3161,18 +3017,6 @@
           "stock": 2,
           "priceWas": "0.35",
           "priceNow": "0.30",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 574950,
-          "title": "AH Pizza donut jalapeño cheddar",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.49",
-          "priceNow": "1.27",
           "markdownExpirationDate": "2026-10-10"
         },
         {
