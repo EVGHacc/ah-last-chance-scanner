@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-10",
   "weekday": "Saturday",
-  "scheduledSlot": "21:27",
-  "scheduledAt": "2026-10-10T21:27:00+02:00",
-  "rawScheduledSlot": "21:27",
-  "rawScheduledAt": "2026-10-10T21:27:00+02:00",
-  "startedAt": "2026-10-10T21:27:00.421560+02:00",
-  "completedAt": "2026-10-10T21:27:05.126197+02:00",
-  "checkedAt": "2026-10-10T21:27:05.126197+02:00",
+  "scheduledSlot": "21:30",
+  "scheduledAt": "2026-10-10T21:30:00+02:00",
+  "rawScheduledSlot": "21:30",
+  "rawScheduledAt": "2026-10-10T21:30:00+02:00",
+  "startedAt": "2026-10-10T21:30:00.426683+02:00",
+  "completedAt": "2026-10-10T21:30:04.861512+02:00",
+  "checkedAt": "2026-10-10T21:30:04.861512+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -3925,11 +3925,11 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 166,
+      "totalBargainItems": 165,
       "meatItems": 18,
       "meat70Items": 7,
       "meat70Stock": 19.0,
-      "bakeryItems": 35,
+      "bakeryItems": 34,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 52,
@@ -4996,18 +4996,6 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 411164,
-          "title": "AH Kaas uienbroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.39",
-          "priceNow": "1.04",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 571174,
           "title": "AH Jalapeño kaasstengel",
           "brand": "AH",
@@ -5056,6 +5044,18 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 411164,
+          "title": "AH Kaas uienbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.39",
+          "priceNow": "1.04",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 603533,
           "title": "AH Kip mango snack",
           "brand": "AH",
@@ -5065,18 +5065,6 @@
           "stock": 1,
           "priceWas": "1.49",
           "priceNow": "1.12",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 606074,
-          "title": "AH Pistache croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.29",
-          "priceNow": "0.97",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -5205,11 +5193,11 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 194,
+      "totalBargainItems": 193,
       "meatItems": 24,
       "meat70Items": 7,
       "meat70Stock": 21.0,
-      "bakeryItems": 35,
+      "bakeryItems": 34,
       "bakery70Items": 3,
       "bakery70Stock": 5.0,
       "all70Items": 57,
@@ -6420,18 +6408,6 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 231924,
-          "title": "AH Chocoladebroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "0.59",
-          "priceNow": "0.44",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 571174,
           "title": "AH Jalapeño kaasstengel",
           "brand": "AH",
@@ -6456,6 +6432,18 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 231924,
+          "title": "AH Chocoladebroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "0.59",
+          "priceNow": "0.44",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 417147,
           "title": "AH Vloerbrood meergranen heel",
           "brand": "AH",
@@ -6477,18 +6465,6 @@
           "stock": 3,
           "priceWas": "1.89",
           "priceNow": "1.42",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 230738,
-          "title": "AH Koffiebroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "0.69",
-          "priceNow": "0.52",
           "markdownExpirationDate": "2026-10-10"
         },
         {
