@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-10",
   "weekday": "Saturday",
-  "scheduledSlot": "20:03",
-  "scheduledAt": "2026-10-10T20:03:00+02:00",
-  "rawScheduledSlot": "20:03",
-  "rawScheduledAt": "2026-10-10T20:03:00+02:00",
-  "startedAt": "2026-10-10T20:03:00.393317+02:00",
-  "completedAt": "2026-10-10T20:03:04.796432+02:00",
-  "checkedAt": "2026-10-10T20:03:04.796432+02:00",
+  "scheduledSlot": "20:05",
+  "scheduledAt": "2026-10-10T20:05:00+02:00",
+  "rawScheduledSlot": "20:05",
+  "rawScheduledAt": "2026-10-10T20:05:00+02:00",
+  "startedAt": "2026-10-10T20:05:00.407505+02:00",
+  "completedAt": "2026-10-10T20:05:04.788044+02:00",
+  "checkedAt": "2026-10-10T20:05:04.788044+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1389,11 +1389,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 222,
+      "totalBargainItems": 221,
       "meatItems": 19,
       "meat70Items": 13,
       "meat70Stock": 21.0,
-      "bakeryItems": 52,
+      "bakeryItems": 51,
       "bakery70Items": 3,
       "bakery70Stock": 13.0,
       "all70Items": 65,
@@ -2841,18 +2841,6 @@
           "stock": 1,
           "priceWas": "1.49",
           "priceNow": "1.27",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 606050,
-          "title": "AH Liefde & Passie Desem pistolet mais pompoen",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -5261,7 +5249,7 @@
       "bakery70Items": 2,
       "bakery70Stock": 3.0,
       "all70Items": 57,
-      "all70Stock": 124.0,
+      "all70Stock": 123.0,
       "all70": [
         {
           "productId": 41156,
@@ -5516,18 +5504,6 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 612927,
-          "title": "AH Ananas sticks",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.99",
-          "priceNow": "1.20",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 612930,
           "title": "AH Ananas met dip",
           "brand": "AH",
@@ -5561,6 +5537,18 @@
           "stock": 2,
           "priceWas": "2.49",
           "priceNow": "0.75",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 612927,
+          "title": "AH Ananas sticks",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -6094,18 +6082,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 4044,
-          "title": "AH Varkenshaas",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "3.99",
-          "priceNow": "2.99",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 210608,
           "title": "AH Shoarma",
           "brand": "AH",
@@ -6163,6 +6139,18 @@
           "stock": 2,
           "priceWas": "11.49",
           "priceNow": "8.62",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 4044,
+          "title": "AH Varkenshaas",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "2.99",
           "markdownExpirationDate": "2026-10-11"
         },
         {
