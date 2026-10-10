@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-10",
   "weekday": "Saturday",
-  "scheduledSlot": "20:12",
-  "scheduledAt": "2026-10-10T20:12:00+02:00",
-  "rawScheduledSlot": "20:12",
-  "rawScheduledAt": "2026-10-10T20:12:00+02:00",
-  "startedAt": "2026-10-10T20:12:00.421410+02:00",
-  "completedAt": "2026-10-10T20:12:04.678988+02:00",
-  "checkedAt": "2026-10-10T20:12:04.678988+02:00",
+  "scheduledSlot": "20:15",
+  "scheduledAt": "2026-10-10T20:15:00+02:00",
+  "rawScheduledSlot": "20:15",
+  "rawScheduledAt": "2026-10-10T20:15:00+02:00",
+  "startedAt": "2026-10-10T20:15:00.414658+02:00",
+  "completedAt": "2026-10-10T20:15:05.685947+02:00",
+  "checkedAt": "2026-10-10T20:15:05.685947+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -758,18 +758,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 465748,
-          "title": "AH Biologisch Rookworst",
-          "brand": "AH Biologisch",
-          "size": "250 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "3.99",
-          "priceNow": "2.99",
-          "markdownExpirationDate": "2026-10-13"
-        },
-        {
           "productId": 620854,
           "title": "AH Scharrel kipflakes BBQ",
           "brand": "AH",
@@ -791,6 +779,18 @@
           "stock": 1,
           "priceWas": "2.88",
           "priceNow": "2.16",
+          "markdownExpirationDate": "2026-10-13"
+        },
+        {
+          "productId": 465748,
+          "title": "AH Biologisch Rookworst",
+          "brand": "AH Biologisch",
+          "size": "250 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "2.99",
           "markdownExpirationDate": "2026-10-13"
         }
       ],
@@ -6486,7 +6486,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
-          "stock": 14,
+          "stock": 12,
           "priceWas": "0.99",
           "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-10"
