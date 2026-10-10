@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-10",
   "weekday": "Saturday",
-  "scheduledSlot": "20:42",
-  "scheduledAt": "2026-10-10T20:42:00+02:00",
-  "rawScheduledSlot": "20:42",
-  "rawScheduledAt": "2026-10-10T20:42:00+02:00",
-  "startedAt": "2026-10-10T20:42:00.428556+02:00",
-  "completedAt": "2026-10-10T20:42:04.829938+02:00",
-  "checkedAt": "2026-10-10T20:42:04.829938+02:00",
+  "scheduledSlot": "20:45",
+  "scheduledAt": "2026-10-10T20:45:00+02:00",
+  "rawScheduledSlot": "20:45",
+  "rawScheduledAt": "2026-10-10T20:45:00+02:00",
+  "startedAt": "2026-10-10T20:45:00.403592+02:00",
+  "completedAt": "2026-10-10T20:45:04.716953+02:00",
+  "checkedAt": "2026-10-10T20:45:04.716953+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2568,18 +2568,6 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 574950,
-          "title": "AH Pizza donut jalapeño cheddar",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "1.49",
-          "priceNow": "1.12",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 230704,
           "title": "AH Kaasbroodje",
           "brand": "AH",
@@ -2640,15 +2628,15 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 411164,
-          "title": "AH Kaas uienbroodje",
+          "productId": 574950,
+          "title": "AH Pizza donut jalapeño cheddar",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 2,
-          "priceWas": "1.39",
-          "priceNow": "1.04",
+          "stock": 1,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -2721,6 +2709,18 @@
           "stock": 1,
           "priceWas": "2.39",
           "priceNow": "1.79",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 411164,
+          "title": "AH Kaas uienbroodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.39",
+          "priceNow": "1.04",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -4840,18 +4840,6 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 230726,
-          "title": "AH Maple pecan vlechtbrood",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 6,
-          "priceWas": "0.59",
-          "priceNow": "0.44",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 487301,
           "title": "AH Rond volkoren heel",
           "brand": "AH",
@@ -4933,6 +4921,18 @@
           "stock": 5,
           "priceWas": "3.19",
           "priceNow": "2.39",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 230726,
+          "title": "AH Maple pecan vlechtbrood",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "0.59",
+          "priceNow": "0.44",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -5229,7 +5229,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 195,
+      "totalBargainItems": 194,
       "meatItems": 24,
       "meat70Items": 7,
       "meat70Stock": 21.0,
