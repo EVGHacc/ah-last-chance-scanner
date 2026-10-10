@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-10",
   "weekday": "Saturday",
-  "scheduledSlot": "20:33",
-  "scheduledAt": "2026-10-10T20:33:00+02:00",
-  "rawScheduledSlot": "20:33",
-  "rawScheduledAt": "2026-10-10T20:33:00+02:00",
-  "startedAt": "2026-10-10T20:33:00.425291+02:00",
-  "completedAt": "2026-10-10T20:33:05.703063+02:00",
-  "checkedAt": "2026-10-10T20:33:05.703063+02:00",
+  "scheduledSlot": "20:35",
+  "scheduledAt": "2026-10-10T20:35:00+02:00",
+  "rawScheduledSlot": "20:35",
+  "rawScheduledAt": "2026-10-10T20:35:00+02:00",
+  "startedAt": "2026-10-10T20:35:00.441449+02:00",
+  "completedAt": "2026-10-10T20:35:04.806639+02:00",
+  "checkedAt": "2026-10-10T20:35:04.806639+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -3548,18 +3548,6 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 230725,
-          "title": "AH Roomboter appelflap",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 6,
-          "priceWas": "0.89",
-          "priceNow": "0.67",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 125035,
           "title": "AH Les pains boulogne heel",
           "brand": "AH",
@@ -3569,6 +3557,18 @@
           "stock": 4,
           "priceWas": "2.39",
           "priceNow": "1.79",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 230725,
+          "title": "AH Roomboter appelflap",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "0.89",
+          "priceNow": "0.67",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -5241,8 +5241,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 197,
-      "meatItems": 25,
+      "totalBargainItems": 196,
+      "meatItems": 24,
       "meat70Items": 7,
       "meat70Stock": 21.0,
       "bakeryItems": 36,
@@ -6034,18 +6034,6 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 619341,
-          "title": "AH Scharrel kipfilet blokjes voordeel",
-          "brand": "AH",
-          "size": "1 kg",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "13.49",
-          "priceNow": "8.09",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 549766,
           "title": "AH Rundergehakt",
           "brand": "AH",
@@ -6372,18 +6360,6 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 487301,
-          "title": "AH Rond volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "1.89",
-          "priceNow": "1.42",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 571174,
           "title": "AH Jalapeño kaasstengel",
           "brand": "AH",
@@ -6393,18 +6369,6 @@
           "stock": 3,
           "priceWas": "0.99",
           "priceNow": "0.74",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 603533,
-          "title": "AH Kip mango snack",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.49",
-          "priceNow": "1.12",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -6456,6 +6420,30 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
+          "productId": 487301,
+          "title": "AH Rond volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "1.89",
+          "priceNow": "1.42",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 603533,
+          "title": "AH Kip mango snack",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
           "productId": 231536,
           "title": "AH Tijger wit half",
           "brand": "AH",
@@ -6498,7 +6486,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
-          "stock": 12,
+          "stock": 11,
           "priceWas": "0.99",
           "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-10"
