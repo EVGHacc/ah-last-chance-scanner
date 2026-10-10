@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-10",
   "weekday": "Saturday",
-  "scheduledSlot": "20:27",
-  "scheduledAt": "2026-10-10T20:27:00+02:00",
-  "rawScheduledSlot": "20:27",
-  "rawScheduledAt": "2026-10-10T20:27:00+02:00",
-  "startedAt": "2026-10-10T20:27:00.398799+02:00",
-  "completedAt": "2026-10-10T20:27:05.125568+02:00",
-  "checkedAt": "2026-10-10T20:27:05.125568+02:00",
+  "scheduledSlot": "20:30",
+  "scheduledAt": "2026-10-10T20:30:00+02:00",
+  "rawScheduledSlot": "20:30",
+  "rawScheduledAt": "2026-10-10T20:30:00+02:00",
+  "startedAt": "2026-10-10T20:30:00.392926+02:00",
+  "completedAt": "2026-10-10T20:30:04.435371+02:00",
+  "checkedAt": "2026-10-10T20:30:04.435371+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,15 +25,15 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 195,
+      "totalBargainItems": 193,
       "meatItems": 16,
       "meat70Items": 10,
       "meat70Stock": 13.0,
       "bakeryItems": 51,
       "bakery70Items": 1,
       "bakery70Stock": 2.0,
-      "all70Items": 47,
-      "all70Stock": 91.0,
+      "all70Items": 45,
+      "all70Stock": 89.0,
       "all70": [
         {
           "productId": 624589,
@@ -105,18 +105,6 @@
           "stock": 1,
           "priceWas": "1.99",
           "priceNow": "0.60",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 624587,
-          "title": "AH Ovengroente bloemkool champignon",
-          "brand": "AH",
-          "size": "430 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.49",
-          "priceNow": "1.35",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -453,18 +441,6 @@
           "stock": 1,
           "priceWas": "5.99",
           "priceNow": "1.53",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
-          "productId": 620825,
-          "title": "AH Vishapje Spaanse stijl",
-          "brand": "AH",
-          "size": "ca. 200 g",
-          "category": "Vis",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.49",
-          "priceNow": "1.35",
           "markdownExpirationDate": "2026-10-10"
         },
         {
@@ -868,18 +844,6 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 523679,
-          "title": "AH Pastel de nata",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "0.65",
-          "priceNow": "0.39",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 417144,
           "title": "AH Vloerbrood wit heel",
           "brand": "AH",
@@ -901,6 +865,18 @@
           "stock": 1,
           "priceWas": "2.69",
           "priceNow": "1.61",
+          "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 523679,
+          "title": "AH Pastel de nata",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "0.65",
+          "priceNow": "0.39",
           "markdownExpirationDate": "2026-10-10"
         },
         {
