@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-10",
   "weekday": "Saturday",
-  "scheduledSlot": "21:30",
-  "scheduledAt": "2026-10-10T21:30:00+02:00",
-  "rawScheduledSlot": "21:30",
-  "rawScheduledAt": "2026-10-10T21:30:00+02:00",
-  "startedAt": "2026-10-10T21:30:00.426683+02:00",
-  "completedAt": "2026-10-10T21:30:04.861512+02:00",
-  "checkedAt": "2026-10-10T21:30:04.861512+02:00",
+  "scheduledSlot": "21:33",
+  "scheduledAt": "2026-10-10T21:33:00+02:00",
+  "rawScheduledSlot": "21:33",
+  "rawScheduledAt": "2026-10-10T21:33:00+02:00",
+  "startedAt": "2026-10-10T21:33:00.387842+02:00",
+  "completedAt": "2026-10-10T21:33:05.436118+02:00",
+  "checkedAt": "2026-10-10T21:33:05.436118+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -3005,15 +3005,15 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 170,
-      "meatItems": 6,
-      "meat70Items": 4,
-      "meat70Stock": 5.0,
+      "totalBargainItems": 168,
+      "meatItems": 5,
+      "meat70Items": 3,
+      "meat70Stock": 3.0,
       "bakeryItems": 37,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 32,
-      "all70Stock": 76.0,
+      "all70Items": 30,
+      "all70Stock": 65.0,
       "all70": [
         {
           "productId": 185765,
@@ -3112,37 +3112,25 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 544086,
-          "title": "AH Verse mango",
-          "brand": "AH",
-          "size": "120 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 4,
-          "priceWas": "2.49",
-          "priceNow": "0.75",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 80585,
           "title": "AH Pitloze witte druiven",
           "brand": "AH",
           "size": "500 g",
           "category": "Fruit, verse sappen",
           "discountPct": 70,
-          "stock": 4,
+          "stock": 3,
           "priceWas": "2.59",
           "priceNow": "0.78",
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 612930,
-          "title": "AH Ananas met dip",
+          "productId": 544086,
+          "title": "AH Verse mango",
           "brand": "AH",
-          "size": "150 g",
+          "size": "120 g",
           "category": "Fruit, verse sappen",
           "discountPct": 70,
-          "stock": 3,
+          "stock": 2,
           "priceWas": "2.49",
           "priceNow": "0.75",
           "markdownExpirationDate": "2026-10-10"
@@ -3196,18 +3184,6 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 531874,
-          "title": "AH Scharrel kipchipolata gekruid",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "4.50",
-          "priceNow": "1.35",
-          "markdownExpirationDate": "2026-10-10"
-        },
-        {
           "productId": 619338,
           "title": "AH Kip boomstammetjes",
           "brand": "AH",
@@ -3232,14 +3208,14 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 397576,
-          "title": "AH Runderrookworst",
+          "productId": 531874,
+          "title": "AH Scharrel kipchipolata gekruid",
           "brand": "AH",
-          "size": "250 g",
+          "size": "300 g",
           "category": "Vlees",
           "discountPct": 70,
           "stock": 1,
-          "priceWas": "4.49",
+          "priceWas": "4.50",
           "priceNow": "1.35",
           "markdownExpirationDate": "2026-10-10"
         },
@@ -3346,7 +3322,7 @@
           "size": "150 g",
           "category": "Borrel, chips, snacks",
           "discountPct": 70,
-          "stock": 5,
+          "stock": 3,
           "priceWas": "3.99",
           "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-13"
@@ -3382,7 +3358,7 @@
           "size": "400 g",
           "category": "Koek, snoep, chocolade",
           "discountPct": 70,
-          "stock": 4,
+          "stock": 3,
           "priceWas": "2.29",
           "priceNow": "0.69",
           "markdownExpirationDate": "2026-10-12"
@@ -3401,18 +3377,6 @@
         }
       ],
       "items": [
-        {
-          "productId": 531874,
-          "title": "AH Scharrel kipchipolata gekruid",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "4.50",
-          "priceNow": "1.35",
-          "markdownExpirationDate": "2026-10-10"
-        },
         {
           "productId": 619338,
           "title": "AH Kip boomstammetjes",
@@ -3438,14 +3402,14 @@
           "markdownExpirationDate": "2026-10-10"
         },
         {
-          "productId": 397576,
-          "title": "AH Runderrookworst",
+          "productId": 531874,
+          "title": "AH Scharrel kipchipolata gekruid",
           "brand": "AH",
-          "size": "250 g",
+          "size": "300 g",
           "category": "Vlees",
           "discountPct": 70,
           "stock": 1,
-          "priceWas": "4.49",
+          "priceWas": "4.50",
           "priceNow": "1.35",
           "markdownExpirationDate": "2026-10-10"
         },
@@ -3932,8 +3896,8 @@
       "bakeryItems": 34,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 52,
-      "all70Stock": 96.0,
+      "all70Items": 53,
+      "all70Stock": 97.0,
       "all70": [
         {
           "productId": 395939,
@@ -4546,6 +4510,18 @@
           "priceWas": "1.99",
           "priceNow": "0.60",
           "markdownExpirationDate": "2026-10-10"
+        },
+        {
+          "productId": 467573,
+          "title": "AH Paprika rijstzoutjes gezouten",
+          "brand": "AH",
+          "size": "125 g",
+          "category": "Borrel, chips, snacks",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.19",
+          "priceNow": "0.96",
+          "markdownExpirationDate": "2026-10-11"
         },
         {
           "productId": 599781,
