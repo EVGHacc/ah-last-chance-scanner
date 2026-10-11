@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-11",
   "weekday": "Sunday",
-  "scheduledSlot": "19:48",
-  "scheduledAt": "2026-10-11T19:48:00+02:00",
-  "rawScheduledSlot": "19:48",
-  "rawScheduledAt": "2026-10-11T19:48:00+02:00",
-  "startedAt": "2026-10-11T19:48:00.356552+02:00",
-  "completedAt": "2026-10-11T19:48:05.021722+02:00",
-  "checkedAt": "2026-10-11T19:48:05.021722+02:00",
+  "scheduledSlot": "19:50",
+  "scheduledAt": "2026-10-11T19:50:00+02:00",
+  "rawScheduledSlot": "19:50",
+  "rawScheduledAt": "2026-10-11T19:50:00+02:00",
+  "startedAt": "2026-10-11T19:50:00.381255+02:00",
+  "completedAt": "2026-10-11T19:50:06.076721+02:00",
+  "checkedAt": "2026-10-11T19:50:06.076721+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1740,18 +1740,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 417144,
-          "title": "AH Vloerbrood wit heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 241458,
           "title": "AH Vloerbrood wit half",
           "brand": "AH",
@@ -1881,6 +1869,18 @@
           "stock": 1,
           "priceWas": "2.19",
           "priceNow": "1.64",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 417144,
+          "title": "AH Vloerbrood wit heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -4253,7 +4253,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 42,
-      "all70Stock": 90.0,
+      "all70Stock": 87.0,
       "all70": [
         {
           "productId": 133277,
@@ -4262,7 +4262,7 @@
           "size": "400 g",
           "category": "Groente, aardappelen",
           "discountPct": 70,
-          "stock": 11,
+          "stock": 9,
           "priceWas": "2.29",
           "priceNow": "0.69",
           "markdownExpirationDate": "2026-10-11"
@@ -4658,7 +4658,7 @@
           "size": "ca. 275 g",
           "category": "Vis",
           "discountPct": 70,
-          "stock": 2,
+          "stock": 1,
           "priceWas": "5.50",
           "priceNow": "1.65",
           "markdownExpirationDate": "2026-10-11"
