@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-11",
   "weekday": "Sunday",
-  "scheduledSlot": "19:03",
-  "scheduledAt": "2026-10-11T19:03:00+02:00",
-  "rawScheduledSlot": "19:03",
-  "rawScheduledAt": "2026-10-11T19:03:00+02:00",
-  "startedAt": "2026-10-11T19:03:00.415403+02:00",
-  "completedAt": "2026-10-11T19:03:04.871111+02:00",
-  "checkedAt": "2026-10-11T19:03:04.871111+02:00",
+  "scheduledSlot": "19:05",
+  "scheduledAt": "2026-10-11T19:05:00+02:00",
+  "rawScheduledSlot": "19:05",
+  "rawScheduledAt": "2026-10-11T19:05:00+02:00",
+  "startedAt": "2026-10-11T19:05:00.360405+02:00",
+  "completedAt": "2026-10-11T19:05:04.980917+02:00",
+  "checkedAt": "2026-10-11T19:05:04.980917+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1680,18 +1680,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 561020,
-          "title": "AH Vloer waldkorn half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "1.45",
-          "priceNow": "1.09",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 231536,
           "title": "AH Tijger wit half",
           "brand": "AH",
@@ -1773,6 +1761,18 @@
           "stock": 1,
           "priceWas": "1.59",
           "priceNow": "1.19",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 561020,
+          "title": "AH Vloer waldkorn half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.45",
+          "priceNow": "1.09",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -3892,9 +3892,21 @@
       "bakeryItems": 1,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 11,
-      "all70Stock": 29.0,
+      "all70Items": 13,
+      "all70Stock": 33.0,
       "all70": [
+        {
+          "productId": 525240,
+          "title": "AH Gesneden verspakket pita gyros",
+          "brand": "AH",
+          "size": "2 pers | 15 min",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "5.79",
+          "priceNow": "1.74",
+          "markdownExpirationDate": "2026-10-11"
+        },
         {
           "productId": 612941,
           "title": "AH Verse rode appel",
@@ -3905,6 +3917,18 @@
           "stock": 3,
           "priceWas": "2.49",
           "priceNow": "0.75",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 605437,
+          "title": "Soosh Zalmforel teriyaki onigiri",
+          "brand": "Soosh",
+          "size": "125 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 3,
+          "priceWas": "3.75",
+          "priceNow": "1.13",
           "markdownExpirationDate": "2026-10-11"
         },
         {
