@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-11",
   "weekday": "Sunday",
-  "scheduledSlot": "19:12",
-  "scheduledAt": "2026-10-11T19:12:00+02:00",
-  "rawScheduledSlot": "19:12",
-  "rawScheduledAt": "2026-10-11T19:12:00+02:00",
-  "startedAt": "2026-10-11T19:12:00.395382+02:00",
-  "completedAt": "2026-10-11T19:12:04.855075+02:00",
-  "checkedAt": "2026-10-11T19:12:04.855075+02:00",
+  "scheduledSlot": "19:15",
+  "scheduledAt": "2026-10-11T19:15:00+02:00",
+  "rawScheduledSlot": "19:15",
+  "rawScheduledAt": "2026-10-11T19:15:00+02:00",
+  "startedAt": "2026-10-11T19:15:00.374147+02:00",
+  "completedAt": "2026-10-11T19:15:04.559050+02:00",
+  "checkedAt": "2026-10-11T19:15:04.559050+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -3273,7 +3273,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 21,
-      "all70Stock": 52.0,
+      "all70Stock": 51.0,
       "all70": [
         {
           "productId": 53313,
@@ -3384,18 +3384,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 612934,
-          "title": "AH Fruitmix aardbeien frambozen",
-          "brand": "AH",
-          "size": "250 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "4.49",
-          "priceNow": "1.35",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 612940,
           "title": "AH Frambozen dadels amandel",
           "brand": "AH",
@@ -3417,6 +3405,18 @@
           "stock": 1,
           "priceWas": "2.49",
           "priceNow": "0.75",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 612934,
+          "title": "AH Fruitmix aardbeien frambozen",
+          "brand": "AH",
+          "size": "250 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.49",
+          "priceNow": "1.35",
           "markdownExpirationDate": "2026-10-11"
         },
         {
