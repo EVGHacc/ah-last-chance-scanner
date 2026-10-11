@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-11",
   "weekday": "Sunday",
-  "scheduledSlot": "19:10",
-  "scheduledAt": "2026-10-11T19:10:00+02:00",
-  "rawScheduledSlot": "19:10",
-  "rawScheduledAt": "2026-10-11T19:10:00+02:00",
-  "startedAt": "2026-10-11T19:10:00.412360+02:00",
-  "completedAt": "2026-10-11T19:10:04.644803+02:00",
-  "checkedAt": "2026-10-11T19:10:04.644803+02:00",
+  "scheduledSlot": "19:12",
+  "scheduledAt": "2026-10-11T19:12:00+02:00",
+  "rawScheduledSlot": "19:12",
+  "rawScheduledAt": "2026-10-11T19:12:00+02:00",
+  "startedAt": "2026-10-11T19:12:00.395382+02:00",
+  "completedAt": "2026-10-11T19:12:04.855075+02:00",
+  "checkedAt": "2026-10-11T19:12:04.855075+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2057,15 +2057,15 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 208,
+      "totalBargainItems": 204,
       "meatItems": 11,
       "meat70Items": 5,
       "meat70Stock": 8.0,
       "bakeryItems": 47,
       "bakery70Items": 1,
       "bakery70Stock": 4.0,
-      "all70Items": 44,
-      "all70Stock": 89.0,
+      "all70Items": 41,
+      "all70Stock": 84.0,
       "all70": [
         {
           "productId": 4074,
@@ -2086,7 +2086,7 @@
           "size": "200 g",
           "category": "Groente, aardappelen",
           "discountPct": 70,
-          "stock": 3,
+          "stock": 2,
           "priceWas": "1.99",
           "priceNow": "0.60",
           "markdownExpirationDate": "2026-10-11"
@@ -2188,18 +2188,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 395953,
-          "title": "AH Bloemkoolroosjes",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.49",
-          "priceNow": "0.75",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 48679,
           "title": "AH Nederlandse aardbeien",
           "brand": "AH",
@@ -2224,18 +2212,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 126394,
-          "title": "AH Rode bessen",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.99",
-          "priceNow": "1.20",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 133713,
           "title": "AH Verse ananas stukjes",
           "brand": "AH",
@@ -2245,6 +2221,18 @@
           "stock": 2,
           "priceWas": "2.89",
           "priceNow": "0.87",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 126394,
+          "title": "AH Rode bessen",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -2416,18 +2404,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 1516,
-          "title": "AH Magere melk",
-          "brand": "AH",
-          "size": "1 l",
-          "category": "Zuivel, eieren",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "1.19",
-          "priceNow": "0.36",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 585917,
           "title": "AH Protein kwark met yoghurt vanillesmaak",
           "brand": "AH",
@@ -2449,18 +2425,6 @@
           "stock": 1,
           "priceWas": "0.95",
           "priceNow": "0.29",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 173998,
-          "title": "Blije Kip eieren Biologische eieren",
-          "brand": "Blije Kip eieren",
-          "size": "6 stuks",
-          "category": "Zuivel, eieren",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "3.99",
-          "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -2724,7 +2688,7 @@
           "size": "225 g",
           "category": "Vlees",
           "discountPct": 25,
-          "stock": 3,
+          "stock": 2,
           "priceWas": "3.99",
           "priceNow": "2.99",
           "markdownExpirationDate": "2026-10-14"
