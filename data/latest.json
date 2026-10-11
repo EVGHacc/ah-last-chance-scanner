@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-11",
   "weekday": "Sunday",
-  "scheduledSlot": "19:21",
-  "scheduledAt": "2026-10-11T19:21:00+02:00",
-  "rawScheduledSlot": "19:21",
-  "rawScheduledAt": "2026-10-11T19:21:00+02:00",
-  "startedAt": "2026-10-11T19:21:00.424807+02:00",
-  "completedAt": "2026-10-11T19:21:04.975590+02:00",
-  "checkedAt": "2026-10-11T19:21:04.975590+02:00",
+  "scheduledSlot": "19:24",
+  "scheduledAt": "2026-10-11T19:24:00+02:00",
+  "rawScheduledSlot": "19:24",
+  "rawScheduledAt": "2026-10-11T19:24:00+02:00",
+  "startedAt": "2026-10-11T19:24:00.395157+02:00",
+  "completedAt": "2026-10-11T19:24:04.385579+02:00",
+  "checkedAt": "2026-10-11T19:24:04.385579+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,11 +25,11 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 152,
+      "totalBargainItems": 148,
       "meatItems": 7,
       "meat70Items": 1,
       "meat70Stock": 2.0,
-      "bakeryItems": 38,
+      "bakeryItems": 34,
       "bakery70Items": 2,
       "bakery70Stock": 4.0,
       "all70Items": 33,
@@ -616,18 +616,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 523679,
-          "title": "AH Pastel de nata",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "0.65",
-          "priceNow": "0.39",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 584032,
           "title": "AH Rond wit sesam heel",
           "brand": "AH",
@@ -808,30 +796,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 230726,
-          "title": "AH Maple pecan vlechtbrood",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "0.59",
-          "priceNow": "0.44",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 230738,
-          "title": "AH Koffiebroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "0.69",
-          "priceNow": "0.52",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 417144,
           "title": "AH Vloerbrood wit heel",
           "brand": "AH",
@@ -880,27 +844,15 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 230740,
-          "title": "AH Praliné chocolade croissant",
+          "productId": 561016,
+          "title": "AH Tijger tarwe maïs half",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
           "stock": 1,
-          "priceWas": "1.39",
-          "priceNow": "1.18",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 561017,
-          "title": "AH Tijger tarwe maïs heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.99",
-          "priceNow": "1.69",
+          "priceWas": "1.09",
+          "priceNow": "0.93",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -2417,15 +2369,15 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 203,
+      "totalBargainItems": 202,
       "meatItems": 10,
       "meat70Items": 6,
       "meat70Stock": 12.0,
       "bakeryItems": 47,
       "bakery70Items": 1,
       "bakery70Stock": 4.0,
-      "all70Items": 48,
-      "all70Stock": 95.0,
+      "all70Items": 47,
+      "all70Stock": 93.0,
       "all70": [
         {
           "productId": 4074,
@@ -2437,18 +2389,6 @@
           "stock": 3,
           "priceWas": "1.79",
           "priceNow": "0.54",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 617528,
-          "title": "AH Broccoliroosjes",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "1.99",
-          "priceNow": "0.60",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -4457,7 +4397,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 42,
-      "all70Stock": 88.0,
+      "all70Stock": 87.0,
       "all70": [
         {
           "productId": 133277,
@@ -4844,18 +4784,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 213759,
-          "title": "AH Zalmfilet à la minute",
-          "brand": "AH",
-          "size": "ca. 225 g",
-          "category": "Vis",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "6.13",
-          "priceNow": "1.38",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 613110,
           "title": "AH Gerookte forel haasjes",
           "brand": "AH",
@@ -4877,6 +4805,18 @@
           "stock": 1,
           "priceWas": "5.29",
           "priceNow": "1.59",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 213759,
+          "title": "AH Zalmfilet à la minute",
+          "brand": "AH",
+          "size": "ca. 225 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.13",
+          "priceNow": "1.38",
           "markdownExpirationDate": "2026-10-11"
         },
         {
