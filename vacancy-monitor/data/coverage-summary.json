@@ -1,8 +1,8 @@
 {
   "run_date": "2026-10-11",
   "target_expected": 104,
-  "target_proven": 24,
-  "vacancy_coverage_percent": 23.1,
+  "target_proven": 23,
+  "vacancy_coverage_percent": 22.1,
   "match_audit": {
     "candidate_count": 533,
     "matched_count": 533,
@@ -68,7 +68,7 @@
     {
       "name": "Commerzbank",
       "kind": "employer",
-      "coverage": "unproven",
+      "coverage": "partial",
       "status": "official_site_scanned"
     },
     {
@@ -334,6 +334,12 @@
       "kind": "recruiter",
       "coverage": "partial",
       "status": "official_site_scanned"
+    },
+    {
+      "name": "Cowen Partners",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "no_public_vacancy_board"
     },
     {
       "name": "De Vroed Ten Thierry",
