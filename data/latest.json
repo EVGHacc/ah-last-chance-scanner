@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-11",
   "weekday": "Sunday",
-  "scheduledSlot": "20:24",
-  "scheduledAt": "2026-10-11T20:24:00+02:00",
-  "rawScheduledSlot": "20:24",
-  "rawScheduledAt": "2026-10-11T20:24:00+02:00",
-  "startedAt": "2026-10-11T20:24:00.389514+02:00",
-  "completedAt": "2026-10-11T20:24:05.063913+02:00",
-  "checkedAt": "2026-10-11T20:24:05.063913+02:00",
+  "scheduledSlot": "20:25",
+  "scheduledAt": "2026-10-11T20:25:00+02:00",
+  "rawScheduledSlot": "20:25",
+  "rawScheduledAt": "2026-10-11T20:25:00+02:00",
+  "startedAt": "2026-10-11T20:25:00.420391+02:00",
+  "completedAt": "2026-10-11T20:25:04.772920+02:00",
+  "checkedAt": "2026-10-11T20:25:04.772920+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2761,15 +2761,15 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 158,
+      "totalBargainItems": 157,
       "meatItems": 18,
       "meat70Items": 5,
       "meat70Stock": 6.0,
       "bakeryItems": 42,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 40,
-      "all70Stock": 77.0,
+      "all70Items": 39,
+      "all70Stock": 76.0,
       "all70": [
         {
           "productId": 53313,
@@ -3201,18 +3201,6 @@
           "stock": 1,
           "priceWas": "5.99",
           "priceNow": "1.53",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 621648,
-          "title": "AH Fishcakes",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vis",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "3.99",
-          "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -4632,18 +4620,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 475819,
-          "title": "AH Kaiserbroodje volkoren",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 10,
-          "priceWas": "0.28",
-          "priceNow": "0.21",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 182711,
           "title": "AH Les pains bastille heel",
           "brand": "AH",
@@ -4665,6 +4641,18 @@
           "stock": 6,
           "priceWas": "0.69",
           "priceNow": "0.52",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 475819,
+          "title": "AH Kaiserbroodje volkoren",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 6,
+          "priceWas": "0.28",
+          "priceNow": "0.21",
           "markdownExpirationDate": "2026-10-11"
         },
         {
