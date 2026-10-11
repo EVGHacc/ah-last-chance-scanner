@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-11",
   "weekday": "Sunday",
-  "scheduledSlot": "18:48",
-  "scheduledAt": "2026-10-11T18:48:00+02:00",
-  "rawScheduledSlot": "18:48",
-  "rawScheduledAt": "2026-10-11T18:48:00+02:00",
-  "startedAt": "2026-10-11T18:48:00.362382+02:00",
-  "completedAt": "2026-10-11T18:48:04.264453+02:00",
-  "checkedAt": "2026-10-11T18:48:04.264453+02:00",
+  "scheduledSlot": "18:50",
+  "scheduledAt": "2026-10-11T18:50:00+02:00",
+  "rawScheduledSlot": "18:50",
+  "rawScheduledAt": "2026-10-11T18:50:00+02:00",
+  "startedAt": "2026-10-11T18:50:00.380012+02:00",
+  "completedAt": "2026-10-11T18:50:06.212534+02:00",
+  "checkedAt": "2026-10-11T18:50:06.212534+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -777,15 +777,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 209,
+      "totalBargainItems": 207,
       "meatItems": 10,
       "meat70Items": 3,
       "meat70Stock": 3.0,
-      "bakeryItems": 58,
+      "bakeryItems": 57,
       "bakery70Items": 4,
-      "bakery70Stock": 16.0,
-      "all70Items": 32,
-      "all70Stock": 92.0,
+      "bakery70Stock": 14.0,
+      "all70Items": 31,
+      "all70Stock": 89.0,
       "all70": [
         {
           "productId": 226376,
@@ -1064,18 +1064,6 @@
           "markdownExpirationDate": "2026-10-14"
         },
         {
-          "productId": 118131,
-          "title": "AH Vanillevla",
-          "brand": "AH",
-          "size": "1 l",
-          "category": "Zuivel, eieren",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "1.59",
-          "priceNow": "0.48",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 196621,
           "title": "Melkunie Rum rozijnen vla",
           "brand": "Melkunie",
@@ -1112,18 +1100,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 487298,
-          "title": "AH Rond volkoren half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "0.99",
-          "priceNow": "0.30",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 487301,
           "title": "AH Rond volkoren heel",
           "brand": "AH",
@@ -1136,13 +1112,25 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
+          "productId": 487298,
+          "title": "AH Rond volkoren half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.30",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 199399,
           "title": "AH Pensee koek",
           "brand": "AH",
           "size": "280 g",
           "category": "Bakkerij",
           "discountPct": 70,
-          "stock": 3,
+          "stock": 2,
           "priceWas": "3.39",
           "priceNow": "0.76",
           "markdownExpirationDate": "2026-10-14"
@@ -1308,18 +1296,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 487298,
-          "title": "AH Rond volkoren half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "0.99",
-          "priceNow": "0.30",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 487301,
           "title": "AH Rond volkoren heel",
           "brand": "AH",
@@ -1329,6 +1305,18 @@
           "stock": 2,
           "priceWas": "1.89",
           "priceNow": "0.57",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 487298,
+          "title": "AH Rond volkoren half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.30",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -1776,18 +1764,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 230710,
-          "title": "AH Ham kaas croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 561020,
           "title": "AH Vloer waldkorn half",
           "brand": "AH",
@@ -1962,7 +1938,7 @@
           "size": "280 g",
           "category": "Bakkerij",
           "discountPct": 70,
-          "stock": 3,
+          "stock": 2,
           "priceWas": "3.39",
           "priceNow": "0.76",
           "markdownExpirationDate": "2026-10-14"
@@ -3453,7 +3429,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 91,
+      "totalBargainItems": 84,
       "meatItems": 8,
       "meat70Items": 0,
       "meat70Stock": 0,
