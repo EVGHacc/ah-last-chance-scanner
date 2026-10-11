@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-11",
   "weekday": "Sunday",
-  "scheduledSlot": "18:27",
-  "scheduledAt": "2026-10-11T18:27:00+02:00",
-  "rawScheduledSlot": "18:27",
-  "rawScheduledAt": "2026-10-11T18:27:00+02:00",
-  "startedAt": "2026-10-11T18:27:00.415107+02:00",
-  "completedAt": "2026-10-11T18:27:04.537819+02:00",
-  "checkedAt": "2026-10-11T18:27:04.537819+02:00",
+  "scheduledSlot": "18:30",
+  "scheduledAt": "2026-10-11T18:30:00+02:00",
+  "rawScheduledSlot": "18:30",
+  "rawScheduledAt": "2026-10-11T18:30:00+02:00",
+  "startedAt": "2026-10-11T18:30:00.381307+02:00",
+  "completedAt": "2026-10-11T18:30:05.301344+02:00",
+  "checkedAt": "2026-10-11T18:30:05.301344+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -741,15 +741,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 213,
-      "meatItems": 11,
-      "meat70Items": 4,
-      "meat70Stock": 5.0,
-      "bakeryItems": 59,
+      "totalBargainItems": 210,
+      "meatItems": 10,
+      "meat70Items": 3,
+      "meat70Stock": 3.0,
+      "bakeryItems": 58,
       "bakery70Items": 4,
       "bakery70Stock": 16.0,
-      "all70Items": 28,
-      "all70Stock": 93.0,
+      "all70Items": 26,
+      "all70Stock": 81.0,
       "all70": [
         {
           "productId": 627052,
@@ -812,34 +812,10 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 620811,
-          "title": "AH Ovenschotel kipfilet knoflook roomsaus",
-          "brand": "AH",
-          "size": "420 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "6.99",
-          "priceNow": "2.10",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 620795,
           "title": "AH Ovenschotel kipdijfilet Aziatische stijl",
           "brand": "AH",
           "size": "355 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.99",
-          "priceNow": "2.10",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 620799,
-          "title": "AH Ovenschotel gehaktballetjes satesaus",
-          "brand": "AH",
-          "size": "375 g",
           "category": "Vlees",
           "discountPct": 70,
           "stock": 1,
@@ -860,27 +836,27 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
+          "productId": 620811,
+          "title": "AH Ovenschotel kipfilet knoflook roomsaus",
+          "brand": "AH",
+          "size": "420 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.99",
+          "priceNow": "2.10",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 213759,
           "title": "AH Zalmfilet à la minute",
           "brand": "AH",
           "size": "ca. 225 g",
           "category": "Vis",
           "discountPct": 70,
-          "stock": 7,
+          "stock": 3,
           "priceWas": "6.13",
           "priceNow": "1.38",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 620824,
-          "title": "AH Visfrietjes",
-          "brand": "AH",
-          "size": "ca. 200 g",
-          "category": "Vis",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "3.99",
-          "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -986,7 +962,7 @@
           "size": "1 l",
           "category": "Zuivel, eieren",
           "discountPct": 70,
-          "stock": 2,
+          "stock": 1,
           "priceWas": "1.59",
           "priceNow": "0.48",
           "markdownExpirationDate": "2026-10-11"
@@ -998,7 +974,7 @@
           "size": "1 l",
           "category": "Zuivel, eieren",
           "discountPct": 70,
-          "stock": 2,
+          "stock": 1,
           "priceWas": "2.29",
           "priceNow": "0.69",
           "markdownExpirationDate": "2026-10-11"
@@ -1070,10 +1046,10 @@
           "size": "160 g",
           "category": "Borrel, chips, snacks",
           "discountPct": 70,
-          "stock": 4,
+          "stock": 1,
           "priceWas": "3.99",
           "priceNow": "1.20",
-          "markdownExpirationDate": "2026-10-12"
+          "markdownExpirationDate": "2026-10-14"
         },
         {
           "productId": 1018,
@@ -1090,18 +1066,6 @@
       ],
       "items": [
         {
-          "productId": 620811,
-          "title": "AH Ovenschotel kipfilet knoflook roomsaus",
-          "brand": "AH",
-          "size": "420 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "6.99",
-          "priceNow": "2.10",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 620795,
           "title": "AH Ovenschotel kipdijfilet Aziatische stijl",
           "brand": "AH",
@@ -1114,10 +1078,10 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 620799,
-          "title": "AH Ovenschotel gehaktballetjes satesaus",
+          "productId": 620800,
+          "title": "AH Ovenschotel gehaktballetjes tomatensaus",
           "brand": "AH",
-          "size": "375 g",
+          "size": "400 g",
           "category": "Vlees",
           "discountPct": 70,
           "stock": 1,
@@ -1126,10 +1090,10 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 620800,
-          "title": "AH Ovenschotel gehaktballetjes tomatensaus",
+          "productId": 620811,
+          "title": "AH Ovenschotel kipfilet knoflook roomsaus",
           "brand": "AH",
-          "size": "400 g",
+          "size": "420 g",
           "category": "Vlees",
           "discountPct": 70,
           "stock": 1,
@@ -1848,18 +1812,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 277519,
-          "title": "AH Vloerbrood volkoren half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "1.45",
-          "priceNow": "1.23",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 466494,
           "title": "AH Meerzaden croissant",
           "brand": "AH",
@@ -1937,7 +1889,7 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 207,
+      "totalBargainItems": 208,
       "meatItems": 12,
       "meat70Items": 2,
       "meat70Stock": 2.0,
