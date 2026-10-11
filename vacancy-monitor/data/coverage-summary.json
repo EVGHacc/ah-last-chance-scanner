@@ -4,8 +4,8 @@
   "target_proven": 23,
   "vacancy_coverage_percent": 22.1,
   "match_audit": {
-    "candidate_count": 533,
-    "matched_count": 533,
+    "candidate_count": 532,
+    "matched_count": 532,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -164,8 +164,8 @@
     {
       "name": "MUFG",
       "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_site_scanned"
+      "coverage": "partial",
+      "status": "official_ats_scanned"
     },
     {
       "name": "N26",
