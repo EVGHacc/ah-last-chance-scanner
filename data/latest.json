@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-11",
   "weekday": "Sunday",
-  "scheduledSlot": "20:03",
-  "scheduledAt": "2026-10-11T20:03:00+02:00",
-  "rawScheduledSlot": "20:03",
-  "rawScheduledAt": "2026-10-11T20:03:00+02:00",
-  "startedAt": "2026-10-11T20:03:00.362258+02:00",
-  "completedAt": "2026-10-11T20:03:04.703448+02:00",
-  "checkedAt": "2026-10-11T20:03:04.703448+02:00",
+  "scheduledSlot": "20:05",
+  "scheduledAt": "2026-10-11T20:05:00+02:00",
+  "rawScheduledSlot": "20:05",
+  "rawScheduledAt": "2026-10-11T20:05:00+02:00",
+  "startedAt": "2026-10-11T20:05:00.431427+02:00",
+  "completedAt": "2026-10-11T20:05:05.017824+02:00",
+  "checkedAt": "2026-10-11T20:05:05.017824+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -597,15 +597,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 188,
+      "totalBargainItems": 184,
       "meatItems": 6,
       "meat70Items": 4,
       "meat70Stock": 4.0,
-      "bakeryItems": 55,
+      "bakeryItems": 53,
       "bakery70Items": 3,
       "bakery70Stock": 12.0,
-      "all70Items": 41,
-      "all70Stock": 100.0,
+      "all70Items": 39,
+      "all70Stock": 98.0,
       "all70": [
         {
           "productId": 185765,
@@ -677,18 +677,6 @@
           "stock": 1,
           "priceWas": "5.99",
           "priceNow": "1.80",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 117618,
-          "title": "AH Broccoli, wortel, bloemkool",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.69",
-          "priceNow": "0.81",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -821,18 +809,6 @@
           "stock": 1,
           "priceWas": "1.35",
           "priceNow": "0.41",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 210755,
-          "title": "AH Uit eigen keuken stamppot witlof",
-          "brand": "AH",
-          "size": "540 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "5.59",
-          "priceNow": "1.38",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -1254,7 +1230,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 40,
-          "stock": 8,
+          "stock": 7,
           "priceWas": "0.99",
           "priceNow": "0.59",
           "markdownExpirationDate": "2026-10-11"
@@ -1272,13 +1248,25 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
+          "productId": 475819,
+          "title": "AH Kaiserbroodje volkoren",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 5,
+          "priceWas": "0.28",
+          "priceNow": "0.17",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 362217,
           "title": "AH Speltbol",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 40,
-          "stock": 6,
+          "stock": 5,
           "priceWas": "0.59",
           "priceNow": "0.35",
           "markdownExpirationDate": "2026-10-11"
@@ -1290,21 +1278,9 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 40,
-          "stock": 5,
+          "stock": 4,
           "priceWas": "0.79",
           "priceNow": "0.47",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 475819,
-          "title": "AH Kaiserbroodje volkoren",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 5,
-          "priceWas": "0.28",
-          "priceNow": "0.17",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -1320,18 +1296,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 125034,
-          "title": "AH Les pains Boulogne half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 4,
-          "priceWas": "1.29",
-          "priceNow": "0.77",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 606103,
           "title": "AH Kip grillworst snack",
           "brand": "AH",
@@ -1341,6 +1305,18 @@
           "stock": 3,
           "priceWas": "1.49",
           "priceNow": "0.89",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 125034,
+          "title": "AH Les pains Boulogne half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 3,
+          "priceWas": "1.29",
+          "priceNow": "0.77",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -1377,18 +1353,6 @@
           "stock": 1,
           "priceWas": "1.89",
           "priceNow": "1.13",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 125035,
-          "title": "AH Les pains boulogne heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "2.39",
-          "priceNow": "1.43",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -1617,18 +1581,6 @@
           "stock": 1,
           "priceWas": "1.59",
           "priceNow": "1.19",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 561020,
-          "title": "AH Vloer waldkorn half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.45",
-          "priceNow": "1.09",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -4065,7 +4017,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 127,
+      "totalBargainItems": 128,
       "meatItems": 7,
       "meat70Items": 6,
       "meat70Stock": 8.0,
