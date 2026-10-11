@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-11",
   "weekday": "Sunday",
-  "scheduledSlot": "19:36",
-  "scheduledAt": "2026-10-11T19:36:00+02:00",
-  "rawScheduledSlot": "19:36",
-  "rawScheduledAt": "2026-10-11T19:36:00+02:00",
-  "startedAt": "2026-10-11T19:36:00.364556+02:00",
-  "completedAt": "2026-10-11T19:36:04.693637+02:00",
-  "checkedAt": "2026-10-11T19:36:04.693637+02:00",
+  "scheduledSlot": "19:39",
+  "scheduledAt": "2026-10-11T19:39:00+02:00",
+  "rawScheduledSlot": "19:39",
+  "rawScheduledAt": "2026-10-11T19:39:00+02:00",
+  "startedAt": "2026-10-11T19:39:00.419381+02:00",
+  "completedAt": "2026-10-11T19:39:04.848453+02:00",
+  "checkedAt": "2026-10-11T19:39:04.848453+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1824,18 +1824,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 606046,
-          "title": "AH Turks broodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 10,
-          "priceWas": "0.99",
-          "priceNow": "0.59",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 467677,
           "title": "AH Kip loempia börek",
           "brand": "AH",
@@ -1845,6 +1833,18 @@
           "stock": 9,
           "priceWas": "1.19",
           "priceNow": "0.71",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 606046,
+          "title": "AH Turks broodje",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 8,
+          "priceWas": "0.99",
+          "priceNow": "0.59",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -4301,7 +4301,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 42,
-      "all70Stock": 91.0,
+      "all70Stock": 90.0,
       "all70": [
         {
           "productId": 133277,
@@ -4544,18 +4544,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 520310,
-          "title": "AH Verse appel aardbei blauwe bes",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "2.49",
-          "priceNow": "0.75",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 447161,
           "title": "AH Verse watermeloen",
           "brand": "AH",
@@ -4565,6 +4553,18 @@
           "stock": 1,
           "priceWas": "3.89",
           "priceNow": "1.17",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 520310,
+          "title": "AH Verse appel aardbei blauwe bes",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.49",
+          "priceNow": "0.75",
           "markdownExpirationDate": "2026-10-11"
         },
         {
