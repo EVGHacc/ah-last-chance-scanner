@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-11",
   "weekday": "Sunday",
-  "scheduledSlot": "18:39",
-  "scheduledAt": "2026-10-11T18:39:00+02:00",
-  "rawScheduledSlot": "18:39",
-  "rawScheduledAt": "2026-10-11T18:39:00+02:00",
-  "startedAt": "2026-10-11T18:39:00.430366+02:00",
-  "completedAt": "2026-10-11T18:39:05.195553+02:00",
-  "checkedAt": "2026-10-11T18:39:05.195553+02:00",
+  "scheduledSlot": "18:40",
+  "scheduledAt": "2026-10-11T18:40:00+02:00",
+  "rawScheduledSlot": "18:40",
+  "rawScheduledAt": "2026-10-11T18:40:00+02:00",
+  "startedAt": "2026-10-11T18:40:00.385829+02:00",
+  "completedAt": "2026-10-11T18:40:05.204688+02:00",
+  "checkedAt": "2026-10-11T18:40:05.204688+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2510,7 +2510,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 35,
-          "stock": 9,
+          "stock": 8,
           "priceWas": "0.28",
           "priceNow": "0.18",
           "markdownExpirationDate": "2026-10-11"
@@ -2840,18 +2840,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 231536,
-          "title": "AH Tijger wit half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "1.09",
-          "priceNow": "0.93",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 561017,
           "title": "AH Tijger tarwe maïs heel",
           "brand": "AH",
@@ -2921,6 +2909,18 @@
           "stock": 1,
           "priceWas": "0.59",
           "priceNow": "0.50",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 231536,
+          "title": "AH Tijger wit half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "1.09",
+          "priceNow": "0.93",
           "markdownExpirationDate": "2026-10-11"
         },
         {
