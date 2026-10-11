@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-11",
   "weekday": "Sunday",
-  "scheduledSlot": "19:09",
-  "scheduledAt": "2026-10-11T19:09:00+02:00",
-  "rawScheduledSlot": "19:09",
-  "rawScheduledAt": "2026-10-11T19:09:00+02:00",
-  "startedAt": "2026-10-11T19:09:00.395193+02:00",
-  "completedAt": "2026-10-11T19:09:05.094626+02:00",
-  "checkedAt": "2026-10-11T19:09:05.094626+02:00",
+  "scheduledSlot": "19:10",
+  "scheduledAt": "2026-10-11T19:10:00+02:00",
+  "rawScheduledSlot": "19:10",
+  "rawScheduledAt": "2026-10-11T19:10:00+02:00",
+  "startedAt": "2026-10-11T19:10:00.412360+02:00",
+  "completedAt": "2026-10-11T19:10:04.644803+02:00",
+  "checkedAt": "2026-10-11T19:10:04.644803+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,15 +25,15 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 154,
-      "meatItems": 9,
-      "meat70Items": 3,
-      "meat70Stock": 8.0,
+      "totalBargainItems": 152,
+      "meatItems": 7,
+      "meat70Items": 1,
+      "meat70Stock": 2.0,
       "bakeryItems": 38,
       "bakery70Items": 2,
       "bakery70Stock": 4.0,
-      "all70Items": 16,
-      "all70Stock": 46.0,
+      "all70Items": 14,
+      "all70Stock": 40.0,
       "all70": [
         {
           "productId": 565684,
@@ -69,30 +69,6 @@
           "stock": 1,
           "priceWas": "4.99",
           "priceNow": "1.50",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 436749,
-          "title": "AH Biologisch Rundertartaar",
-          "brand": "AH Biologisch",
-          "size": "300 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 4,
-          "priceWas": "6.49",
-          "priceNow": "1.95",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 436758,
-          "title": "AH Biologisch Duitse biefstuk",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "5.49",
-          "priceNow": "1.65",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -229,30 +205,6 @@
         }
       ],
       "items": [
-        {
-          "productId": 436749,
-          "title": "AH Biologisch Rundertartaar",
-          "brand": "AH Biologisch",
-          "size": "300 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 4,
-          "priceWas": "6.49",
-          "priceNow": "1.95",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 436758,
-          "title": "AH Biologisch Duitse biefstuk",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "5.49",
-          "priceNow": "1.65",
-          "markdownExpirationDate": "2026-10-11"
-        },
         {
           "productId": 619315,
           "title": "AH Schnitzel 6 stuks",
@@ -472,18 +424,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 365995,
-          "title": "AH Luxe roomboter croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.19",
-          "priceNow": "0.89",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 571174,
           "title": "AH Jalapeño kaasstengel",
           "brand": "AH",
@@ -565,6 +505,18 @@
           "stock": 2,
           "priceWas": "1.29",
           "priceNow": "0.97",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 365995,
+          "title": "AH Luxe roomboter croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.19",
+          "priceNow": "0.89",
           "markdownExpirationDate": "2026-10-11"
         },
         {
