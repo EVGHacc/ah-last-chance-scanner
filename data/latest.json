@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-11",
   "weekday": "Sunday",
-  "scheduledSlot": "18:21",
-  "scheduledAt": "2026-10-11T18:21:00+02:00",
-  "rawScheduledSlot": "18:21",
-  "rawScheduledAt": "2026-10-11T18:21:00+02:00",
-  "startedAt": "2026-10-11T18:21:00.360049+02:00",
-  "completedAt": "2026-10-11T18:21:04.776071+02:00",
-  "checkedAt": "2026-10-11T18:21:04.776071+02:00",
+  "scheduledSlot": "18:24",
+  "scheduledAt": "2026-10-11T18:24:00+02:00",
+  "rawScheduledSlot": "18:24",
+  "rawScheduledAt": "2026-10-11T18:24:00+02:00",
+  "startedAt": "2026-10-11T18:24:00.386618+02:00",
+  "completedAt": "2026-10-11T18:24:04.865583+02:00",
+  "checkedAt": "2026-10-11T18:24:04.865583+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -400,18 +400,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 230786,
-          "title": "AH Les pains triomphe heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "2.39",
-          "priceNow": "1.79",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 365995,
           "title": "AH Luxe roomboter croissant",
           "brand": "AH",
@@ -496,13 +484,25 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
+          "productId": 230786,
+          "title": "AH Les pains triomphe heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "2.39",
+          "priceNow": "1.79",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 459347,
           "title": "AH Tijgerbol wit",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
-          "stock": 10,
+          "stock": 8,
           "priceWas": "0.35",
           "priceNow": "0.30",
           "markdownExpirationDate": "2026-10-11"
@@ -741,7 +741,7 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 216,
+      "totalBargainItems": 215,
       "meatItems": 12,
       "meat70Items": 4,
       "meat70Stock": 5.0,
@@ -2286,18 +2286,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 192050,
-          "title": "AH Greenfields Rundergehakt",
-          "brand": "AH Greenfields",
-          "size": "300 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 4,
-          "priceWas": "5.99",
-          "priceNow": "3.59",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 531848,
           "title": "AH Scharrel kipdijfilet",
           "brand": "AH",
@@ -2307,6 +2295,18 @@
           "stock": 4,
           "priceWas": "8.85",
           "priceNow": "5.31",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 192050,
+          "title": "AH Greenfields Rundergehakt",
+          "brand": "AH Greenfields",
+          "size": "300 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 3,
+          "priceWas": "5.99",
+          "priceNow": "3.59",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -2965,11 +2965,11 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 114,
-      "meatItems": 19,
+      "totalBargainItems": 123,
+      "meatItems": 20,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 1,
+      "bakeryItems": 2,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 2,
@@ -3011,6 +3011,18 @@
           "stock": 2,
           "priceWas": "9.99",
           "priceNow": "5.99",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
+          "productId": 581558,
+          "title": "Cucina Spicy chicken wings",
+          "brand": "Cucina",
+          "size": "ca. 400 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "12.48",
+          "priceNow": "7.49",
           "markdownExpirationDate": "2026-10-11"
         },
         {
@@ -3231,6 +3243,18 @@
         }
       ],
       "bakery": [
+        {
+          "productId": 954,
+          "title": "AH Paneermeel naturel beschuit",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "0.69",
+          "priceNow": "0.41",
+          "markdownExpirationDate": "2026-10-11"
+        },
         {
           "productId": 449955,
           "title": "Patak's Mini naan plain",
