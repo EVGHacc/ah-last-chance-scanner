@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-11",
   "weekday": "Sunday",
-  "scheduledSlot": "18:10",
-  "scheduledAt": "2026-10-11T18:10:00+02:00",
-  "rawScheduledSlot": "18:10",
-  "rawScheduledAt": "2026-10-11T18:10:00+02:00",
-  "startedAt": "2026-10-11T18:10:00.367992+02:00",
-  "completedAt": "2026-10-11T18:10:04.518496+02:00",
-  "checkedAt": "2026-10-11T18:10:04.518496+02:00",
+  "scheduledSlot": "18:12",
+  "scheduledAt": "2026-10-11T18:12:00+02:00",
+  "rawScheduledSlot": "18:12",
+  "rawScheduledAt": "2026-10-11T18:12:00+02:00",
+  "startedAt": "2026-10-11T18:12:00.368415+02:00",
+  "completedAt": "2026-10-11T18:12:12.540140+02:00",
+  "checkedAt": "2026-10-11T18:12:12.540140+02:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,15 +25,15 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 155,
+      "totalBargainItems": 157,
       "meatItems": 4,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 37,
+      "bakeryItems": 36,
       "bakery70Items": 2,
       "bakery70Stock": 4.0,
-      "all70Items": 9,
-      "all70Stock": 33.0,
+      "all70Items": 10,
+      "all70Stock": 34.0,
       "all70": [
         {
           "productId": 565684,
@@ -69,6 +69,18 @@
           "stock": 1,
           "priceWas": "4.99",
           "priceNow": "1.50",
+          "markdownExpirationDate": "2026-10-12"
+        },
+        {
+          "productId": 620828,
+          "title": "AH Excellent Scholfilet",
+          "brand": "AH Excellent",
+          "size": "ca. 120 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.02",
           "markdownExpirationDate": "2026-10-12"
         },
         {
@@ -568,18 +580,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 417147,
-          "title": "AH Vloerbrood meergranen heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "2.69",
-          "priceNow": "2.29",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 417148,
           "title": "AH Vloerbrood volkoren heel",
           "brand": "AH",
@@ -645,11 +645,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 216,
+      "totalBargainItems": 214,
       "meatItems": 12,
       "meat70Items": 1,
       "meat70Stock": 2.0,
-      "bakeryItems": 59,
+      "bakeryItems": 57,
       "bakery70Items": 4,
       "bakery70Stock": 16.0,
       "all70Items": 23,
@@ -1488,18 +1488,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 125035,
-          "title": "AH Les pains boulogne heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "2.39",
-          "priceNow": "2.03",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 451137,
           "title": "AH Focaccia mozzarella",
           "brand": "AH",
@@ -1584,18 +1572,6 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
-          "productId": 590096,
-          "title": "AH Liefde & Passie Biologisch OerDesem blond",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "3.29",
-          "priceNow": "2.80",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
           "productId": 590399,
           "title": "AH Broodje burger augurk tomatensaus",
           "brand": "AH",
@@ -1656,6 +1632,18 @@
           "markdownExpirationDate": "2026-10-11"
         },
         {
+          "productId": 125035,
+          "title": "AH Les pains boulogne heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "2.39",
+          "priceNow": "2.03",
+          "markdownExpirationDate": "2026-10-11"
+        },
+        {
           "productId": 230724,
           "title": "AH Saucijzenbroodje",
           "brand": "AH",
@@ -1701,18 +1689,6 @@
           "stock": 1,
           "priceWas": "0.79",
           "priceNow": "0.67",
-          "markdownExpirationDate": "2026-10-11"
-        },
-        {
-          "productId": 230842,
-          "title": "AH Liefde & Passie Spelt",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "3.19",
-          "priceNow": "2.71",
           "markdownExpirationDate": "2026-10-11"
         },
         {
