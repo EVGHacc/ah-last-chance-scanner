@@ -47,11 +47,12 @@ def decision(now, status, runs):
             elapsed = (now - created.astimezone(TZ)).total_seconds()
         except (KeyError, ValueError, TypeError):
             continue
-        if elapsed < 0 or elapsed > COOLDOWN_SECONDS:
+        if elapsed < 0:
             continue
         if run.get("status") in ("queued", "in_progress", "waiting", "pending", "requested"):
             return "active-run"
-        return "cooldown"
+        if elapsed <= COOLDOWN_SECONDS:
+            return "cooldown"
     return "dispatch"
 
 
@@ -102,6 +103,9 @@ def self_test():
                "status": "in_progress"}]
     assert decision(now, {}, active) == "active-run"
     assert decision(now, {}, [{**active[0], "status": "completed"}]) == "cooldown"
+    old_active = [{**active[0], "created_at": "2026-10-11T15:40:00Z"}]
+    assert decision(now, {}, old_active) == "active-run", "never duplicate an old active session"
+    assert decision(now, {}, [{**old_active[0], "status": "completed"}]) == "dispatch"
     assert decision(datetime(2026, 10, 11, 23, 0, tzinfo=TZ), {}, []) == "outside-window"
     print("external recovery tests: PASS")
 
