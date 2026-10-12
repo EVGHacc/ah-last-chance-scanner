@@ -15,22 +15,26 @@ export function normalize(text=""){
   return null;
 }
 export function identity(text=""){
-  const url=(text.match(/https?:\/\/[^\s<>"']+/)||[])[0];
-  if(!url) return null;
-  let u; try{u=new URL(url)}catch{return null}
-  const parts=u.pathname.split("/").filter(Boolean);
-  // SmartRecruiters Wise URLs have numeric IDs followed by a title slug.
-  // Mollie uses UUIDs. Bind replies to the actual official provider ID.
-  let jobId;
-  if(u.hostname.toLowerCase()==="jobs.smartrecruiters.com" && parts[0]==="Wise"){
-    jobId=parts[1]?.match(/^([0-9]{5,24})-/)?.[1];
-  }else if(u.hostname.toLowerCase()==="jobs.mollie.com" && parts[0]==="vacancies"){
-    jobId=parts[1]?.match(/^[0-9a-fA-F]{8}-[0-9a-fA-F-]{27,}$/)?.[0];
-  }else{
-    jobId=(parts.findLast?.(p=>/\d{6,}/.test(p))||parts.at(-1)||"").match(/[A-Za-z0-9_-]{6,}/)?.[0];
+  // Prefer verified official vacancy URLs, never an arbitrary first link in
+  // an email footer or tracking pixel. Retain legacy fallback for v4 replies.
+  const links=[...text.matchAll(/https?:\/\/[^\s<>"']+/g)].map(m=>m[0].replace(/[),.;]+$/,""));
+  for(const url of links){
+    let u; try{u=new URL(url)}catch{continue}
+    if(u.protocol!=="https:")continue;
+    const host=u.hostname.toLowerCase();
+    const parts=u.pathname.split("/").filter(Boolean);
+    let jobId=null;
+    if(host==="jobs.smartrecruiters.com" && parts[0]==="Wise"){
+      jobId=parts[1]?.match(/^([0-9]{5,24})-/)?.[1];
+    }else if(host==="jobs.mollie.com" && parts[0]==="vacancies"){
+      jobId=parts[1]?.match(/^[0-9a-fA-F]{8}-[0-9a-fA-F-]{27,}$/)?.[0];
+    }else if(host!=="jobs.smartrecruiters.com" && host!=="jobs.mollie.com"){
+      // Legacy v4 records may use other official ATS domains.
+      jobId=(parts.findLast?.(p=>/\d{6,}/.test(p))||parts.at(-1)||"").match(/[A-Za-z0-9_-]{6,}/)?.[0];
+    }
+    if(jobId)return {source:host,job_id:jobId,source_url:url};
   }
-  if(!jobId) return null;
-  return {source:u.hostname.toLowerCase(),job_id:jobId,source_url:url};
+  return null;
 }
 function senderAddress(v=""){ const m=v.match(/<([^>]+)>/); return (m?m[1]:v).trim().toLowerCase(); }
 async function persist(record){
