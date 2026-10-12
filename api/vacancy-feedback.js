@@ -68,7 +68,7 @@ export default async function handler(req,res){
     // The official vacancy URL is embedded in rich v5 mails. In a reply,
     // preserve the original quoted body when Resend exposes HTML only.
     const text=mail.text||mail.html?.replace(/<[^>]*>/g," ")||"";
-    const label=normalize(text), id=identity(text);
+    const firstReply=text.split(/\n\s*(?:On .+ wrote:|Op .+ schreef:|From:|Van:|-----Original Message-----|_{5,})/i)[0];\n    const label=normalize(firstReply), id=identity(text);
     if(!label||!id)return res.status(200).send("review");
     // Preserve v4 behavior. Tag verified Wise/Mollie replies so v5 can
     // reconcile them without confusing them with older v4 feedback.
