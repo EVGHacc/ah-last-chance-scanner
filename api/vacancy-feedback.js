@@ -55,7 +55,12 @@ export default async function handler(req,res){
     const text=mail.text||"";
     const label=normalize(text), id=identity(text);
     if(!label||!id)return res.status(200).send("review");
-    const record={source:id.source,job_id:id.job_id,label,received_at:new Date().toISOString(),message_id:event.data.email_id,source_url:id.source_url};
+    // Preserve v4 behavior. Tag verified Wise/Mollie replies so v5 can
+    // reconcile them without confusing them with older v4 feedback.
+    const v5Source=id.source==="jobs.smartrecruiters.com"?"Wise":
+      id.source==="jobs.mollie.com"?"Mollie":null;
+    const record={source:id.source,job_id:id.job_id,label,received_at:new Date().toISOString(),message_id:event.data.email_id,source_url:id.source_url,
+      ...(v5Source?{v5_source:v5Source,feedback_schema:"v5-compatible"}:{})};
     const status=await persist(record);
     return res.status(200).json({status});
   }catch(e){return res.status(400).send("invalid webhook")}
