@@ -1,6 +1,6 @@
 import crypto from "node:crypto";
 const CHOICES={relevant:"Relevant",too_junior:"Te junior",wrong_location:"Verkeerde locatie",too_technical:"Te technisch",not_relevant:"Niet relevant"};
-const enc=x=>Buffer.from(x).toString("base64url");
+
 function verify(token){
  const secret=process.env.FEEDBACK_LINK_SECRET;
  if(!secret||Buffer.byteLength(secret)<32)throw Error("unconfigured");
@@ -44,7 +44,7 @@ export default async function handler(req,res){
  res.setHeader("X-Content-Type-Options","nosniff");
  if(!["GET","POST"].includes(req.method))return res.status(405).send("Method not allowed");
  let p,token;
- try{token=req.method==="GET"?req.query?.token:req.body?.token;p=verify(token)}
+ try{token=req.method==="GET"?req.query?.token:(typeof req.body==="string"?new URLSearchParams(req.body).get("token"):req.body?.token);p=verify(token)}
  catch{return res.status(400).send("Ongeldige of verlopen feedbacklink.");}
  if(req.method==="GET"){
   res.setHeader("Content-Type","text/html; charset=utf-8");
@@ -52,7 +52,7 @@ export default async function handler(req,res){
  }
  try{
   // Vercel may parse application/x-www-form-urlencoded form submissions.
-  if(!req.body||typeof req.body.token!=="string")return res.status(400).send("Invalid form");
+  if(typeof req.body==="string"){const parsed=new URLSearchParams(req.body);if(parsed.get("token")!==token) return res.status(400).send("Invalid form");}\n  if(!token)return res.status(400).send("Invalid form");
   const status=await save(p,token);
   return res.status(200).send(status==="stored"?"Feedback opgeslagen. Bedankt.":"Feedback was al opgeslagen.");
  }catch{return res.status(503).send("Opslaan mislukt; probeer later opnieuw.");}
