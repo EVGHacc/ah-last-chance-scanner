@@ -19,7 +19,16 @@ export function identity(text=""){
   if(!url) return null;
   let u; try{u=new URL(url)}catch{return null}
   const parts=u.pathname.split("/").filter(Boolean);
-  const jobId=(parts.findLast?.(p=>/\d{6,}/.test(p))||parts.at(-1)||"").match(/[A-Za-z0-9_-]{6,}/)?.[0];
+  // SmartRecruiters Wise URLs have numeric IDs followed by a title slug.
+  // Mollie uses UUIDs. Bind replies to the actual official provider ID.
+  let jobId;
+  if(u.hostname.toLowerCase()==="jobs.smartrecruiters.com" && parts[0]==="Wise"){
+    jobId=parts[1]?.match(/^([0-9]{5,24})-/)?.[1];
+  }else if(u.hostname.toLowerCase()==="jobs.mollie.com" && parts[0]==="vacancies"){
+    jobId=parts[1]?.match(/^[0-9a-fA-F]{8}-[0-9a-fA-F-]{27,}$/)?.[0];
+  }else{
+    jobId=(parts.findLast?.(p=>/\\d{6,}/.test(p))||parts.at(-1)||"").match(/[A-Za-z0-9_-]{6,}/)?.[0];
+  }
   if(!jobId) return null;
   return {source:u.hostname.toLowerCase(),job_id:jobId,source_url:url};
 }
