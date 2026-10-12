@@ -1,1 +1,16 @@
-{"functions":{"api/vacancy-feedback.js":{"maxDuration":10}}}
+{
+  "functions": {
+    "api/vacancy-feedback.js": {
+      "maxDuration": 10
+    },
+    "api/feedback.js": {
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/feedback",
+      "destination": "/api/feedback"
+    }
+  ]
+}
