@@ -27,7 +27,7 @@ export function identity(text=""){
   }else if(u.hostname.toLowerCase()==="jobs.mollie.com" && parts[0]==="vacancies"){
     jobId=parts[1]?.match(/^[0-9a-fA-F]{8}-[0-9a-fA-F-]{27,}$/)?.[0];
   }else{
-    jobId=(parts.findLast?.(p=>/\\d{6,}/.test(p))||parts.at(-1)||"").match(/[A-Za-z0-9_-]{6,}/)?.[0];
+    jobId=(parts.findLast?.(p=>/\d{6,}/.test(p))||parts.at(-1)||"").match(/[A-Za-z0-9_-]{6,}/)?.[0];
   }
   if(!jobId) return null;
   return {source:u.hostname.toLowerCase(),job_id:jobId,source_url:url};
