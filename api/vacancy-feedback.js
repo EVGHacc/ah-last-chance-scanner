@@ -61,7 +61,9 @@ export default async function handler(req,res){
     if(event.type!=="email.received")return res.status(200).send("ignored");
     if(senderAddress(event.data.from)!==(process.env.ALLOWED_SENDER||"").toLowerCase())return res.status(200).send("rejected");
     const {data:mail,error}=await resend.emails.receiving.get(event.data.email_id); if(error)throw error;
-    const text=mail.text||"";
+    // The official vacancy URL is embedded in rich v5 mails. In a reply,
+    // preserve the original quoted body when Resend exposes HTML only.
+    const text=mail.text||mail.html?.replace(/<[^>]*>/g," ")||"";
     const label=normalize(text), id=identity(text);
     if(!label||!id)return res.status(200).send("review");
     // Preserve v4 behavior. Tag verified Wise/Mollie replies so v5 can
