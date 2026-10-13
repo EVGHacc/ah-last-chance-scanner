@@ -4,8 +4,8 @@
   "target_proven": 23,
   "vacancy_coverage_percent": 22.1,
   "match_audit": {
-    "candidate_count": 530,
-    "matched_count": 530,
+    "candidate_count": 531,
+    "matched_count": 531,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -338,8 +338,8 @@
     {
       "name": "Cowen Partners",
       "kind": "recruiter",
-      "coverage": "partial",
-      "status": "no_public_vacancy_board"
+      "coverage": "unproven",
+      "status": "technical_failure"
     },
     {
       "name": "De Vroed Ten Thierry",
@@ -503,6 +503,7 @@
     "McKinsey",
     "Rabobank",
     "Surepay",
+    "Cowen Partners",
     "Risk Talent Associates",
     "Robert Walters Interim",
     "Selby Jennings"
