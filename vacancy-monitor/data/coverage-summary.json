@@ -1,11 +1,11 @@
 {
   "run_date": "2026-10-13",
   "target_expected": 104,
-  "target_proven": 23,
-  "vacancy_coverage_percent": 22.1,
+  "target_proven": 20,
+  "vacancy_coverage_percent": 19.2,
   "match_audit": {
-    "candidate_count": 530,
-    "matched_count": 530,
+    "candidate_count": 365,
+    "matched_count": 365,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -110,8 +110,8 @@
     {
       "name": "JP Morgan Chase",
       "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_site_scanned"
+      "coverage": "partial",
+      "status": "official_ats_scanned"
     },
     {
       "name": "Kroll",
@@ -130,6 +130,12 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_ats_scanned"
+    },
+    {
+      "name": "Mastercard",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
     },
     {
       "name": "McKinsey",
@@ -222,6 +228,12 @@
       "status": "official_site_scanned"
     },
     {
+      "name": "State Street",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
       "name": "Stripe",
       "kind": "employer",
       "coverage": "partial",
@@ -250,6 +262,12 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
+    },
+    {
+      "name": "Visa",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_ats_scanned"
     },
     {
       "name": "Wise",
@@ -296,7 +314,7 @@
     {
       "name": "Black Swan Group",
       "kind": "recruiter",
-      "coverage": "partial",
+      "coverage": "unproven",
       "status": "official_site_scanned"
     },
     {
@@ -368,7 +386,7 @@
     {
       "name": "Finatal",
       "kind": "recruiter",
-      "coverage": "partial",
+      "coverage": "unproven",
       "status": "official_site_scanned"
     },
     {
@@ -428,7 +446,7 @@
     {
       "name": "Oliver James",
       "kind": "recruiter",
-      "coverage": "partial",
+      "coverage": "unproven",
       "status": "official_site_scanned"
     },
     {
@@ -470,7 +488,7 @@
     {
       "name": "Taylor Root",
       "kind": "recruiter",
-      "coverage": "partial",
+      "coverage": "unproven",
       "status": "official_site_scanned"
     },
     {
