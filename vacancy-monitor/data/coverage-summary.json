@@ -4,8 +4,8 @@
   "target_proven": 20,
   "vacancy_coverage_percent": 19.2,
   "match_audit": {
-    "candidate_count": 327,
-    "matched_count": 327,
+    "candidate_count": 360,
+    "matched_count": 360,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -136,12 +136,6 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_ats_scanned"
-    },
-    {
-      "name": "Mastercard",
-      "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_site_scanned"
     },
     {
       "name": "McKinsey",
@@ -420,6 +414,12 @@
       "status": "official_site_scanned"
     },
     {
+      "name": "Lime Search",
+      "kind": "recruiter",
+      "coverage": "unproven",
+      "status": "technical_failure"
+    },
+    {
       "name": "Matchd",
       "kind": "recruiter",
       "coverage": "partial",
@@ -521,6 +521,7 @@
     "McKinsey",
     "Rabobank",
     "Surepay",
+    "Lime Search",
     "Risk Talent Associates",
     "Robert Walters Interim",
     "Selby Jennings"
