@@ -1,11 +1,11 @@
 {
-  "run_date": "2026-10-15",
+  "run_date": "2026-10-16",
   "target_expected": 104,
   "target_proven": 20,
   "vacancy_coverage_percent": 19.2,
   "match_audit": {
-    "candidate_count": 360,
-    "matched_count": 360,
+    "candidate_count": 443,
+    "matched_count": 443,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -78,12 +78,6 @@
       "status": "official_site_scanned"
     },
     {
-      "name": "Deutsche Bank",
-      "kind": "employer",
-      "coverage": "partial",
-      "status": "official_site_scanned"
-    },
-    {
       "name": "EU Remote jobs",
       "kind": "employer",
       "coverage": "partial",
@@ -136,6 +130,12 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_ats_scanned"
+    },
+    {
+      "name": "Mastercard",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
     },
     {
       "name": "McKinsey",
@@ -204,6 +204,12 @@
       "status": "official_site_scanned"
     },
     {
+      "name": "PayPal",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
+    },
+    {
       "name": "Rabobank",
       "kind": "employer",
       "coverage": "unproven",
@@ -226,12 +232,6 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
-    },
-    {
-      "name": "State Street",
-      "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_ats_scanned"
     },
     {
       "name": "Stripe",
@@ -262,6 +262,12 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
+    },
+    {
+      "name": "Visa",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_ats_scanned"
     },
     {
       "name": "Wise",
@@ -414,12 +420,6 @@
       "status": "official_site_scanned"
     },
     {
-      "name": "Lime Search",
-      "kind": "recruiter",
-      "coverage": "unproven",
-      "status": "technical_failure"
-    },
-    {
       "name": "Matchd",
       "kind": "recruiter",
       "coverage": "partial",
@@ -464,8 +464,8 @@
     {
       "name": "Robert Walters Interim",
       "kind": "recruiter",
-      "coverage": "unproven",
-      "status": "technical_failure"
+      "coverage": "partial",
+      "status": "official_site_scanned"
     },
     {
       "name": "Russell Reynolds Associates",
@@ -521,9 +521,7 @@
     "McKinsey",
     "Rabobank",
     "Surepay",
-    "Lime Search",
     "Risk Talent Associates",
-    "Robert Walters Interim",
     "Selby Jennings"
   ]
 }
