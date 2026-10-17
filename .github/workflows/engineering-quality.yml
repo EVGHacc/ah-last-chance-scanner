@@ -41,16 +41,17 @@ jobs:
         id: scope
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
         run: |
           python - <<'PY'
           import os, subprocess
           base=os.environ.get('BASE_SHA','')
-          head=os.environ.get('GITHUB_SHA','HEAD')
+          head=os.environ['HEAD_SHA']
           if not base or set(base)=={'0'}:
               files=[]
               shared=True
           else:
-              files=subprocess.check_output(['git','diff','--name-only',base,head],text=True).splitlines()
+              files=subprocess.check_output(['git','diff','--name-only',base+'...'+head],text=True).splitlines()
               shared=any(p.startswith(('engineering/','.github/workflows/')) or p.startswith('scripts/engineering_') or p.startswith('tests/test_engineering_') or p.startswith('tests/test_workflow_') for p in files)
           ah=shared or any(p=='scanner.py' or p.startswith('scripts/') or p.startswith('tests/test_ah_') for p in files)
           vacancy=shared or any(p.startswith('vacancy-monitor/') or p.startswith('tests/test_vacancy_') for p in files)
@@ -80,7 +81,8 @@ jobs:
         if: github.event_name != 'workflow_dispatch'
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
-        run: python scripts/engineering_gate.py --base "$BASE_SHA" --head "$GITHUB_SHA"
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: python scripts/engineering_gate.py --base "$BASE_SHA" --head "$HEAD_SHA"
 
   ah-tests:
     needs: changes
