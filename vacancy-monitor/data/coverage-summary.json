@@ -1,11 +1,11 @@
 {
-  "run_date": "2026-10-21",
+  "run_date": "2026-10-22",
   "target_expected": 104,
-  "target_proven": 21,
-  "vacancy_coverage_percent": 20.2,
+  "target_proven": 19,
+  "vacancy_coverage_percent": 18.3,
   "match_audit": {
-    "candidate_count": 376,
-    "matched_count": 376,
+    "candidate_count": 444,
+    "matched_count": 444,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -204,6 +204,12 @@
       "status": "official_site_scanned"
     },
     {
+      "name": "PayPal",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
+    },
+    {
       "name": "Rabobank",
       "kind": "employer",
       "coverage": "unproven",
@@ -228,12 +234,6 @@
       "status": "official_site_scanned"
     },
     {
-      "name": "State Street",
-      "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_ats_scanned"
-    },
-    {
       "name": "Stripe",
       "kind": "employer",
       "coverage": "partial",
@@ -247,6 +247,12 @@
     },
     {
       "name": "Thunes",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Triodos Bank",
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
@@ -344,8 +350,8 @@
     {
       "name": "Corbulo",
       "kind": "recruiter",
-      "coverage": "unproven",
-      "status": "technical_failure"
+      "coverage": "partial",
+      "status": "official_site_scanned"
     },
     {
       "name": "Cowen Partners",
@@ -368,8 +374,8 @@
     {
       "name": "Ebbinge",
       "kind": "recruiter",
-      "coverage": "unproven",
-      "status": "technical_failure"
+      "coverage": "partial",
+      "status": "official_site_scanned"
     },
     {
       "name": "Ferocia",
@@ -444,6 +450,12 @@
       "status": "no_public_vacancy_board"
     },
     {
+      "name": "Oliver James",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
       "name": "PaymentGenes",
       "kind": "recruiter",
       "coverage": "unproven",
@@ -488,8 +500,8 @@
     {
       "name": "Vroom",
       "kind": "recruiter",
-      "coverage": "unproven",
-      "status": "technical_failure"
+      "coverage": "partial",
+      "status": "official_site_scanned"
     },
     {
       "name": "Xanthic",
@@ -518,12 +530,9 @@
     "Surepay",
     "Boer & Croon",
     "Confius",
-    "Corbulo",
-    "Ebbinge",
     "Lime Search",
     "Risk Talent Associates",
     "Robert Walters Interim",
-    "Selby Jennings",
-    "Vroom"
+    "Selby Jennings"
   ]
 }
