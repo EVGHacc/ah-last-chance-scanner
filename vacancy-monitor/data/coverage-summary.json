@@ -1,11 +1,11 @@
 {
   "run_date": "2026-10-21",
   "target_expected": 104,
-  "target_proven": 22,
-  "vacancy_coverage_percent": 21.2,
+  "target_proven": 15,
+  "vacancy_coverage_percent": 14.4,
   "match_audit": {
-    "candidate_count": 424,
-    "matched_count": 424,
+    "candidate_count": 383,
+    "matched_count": 383,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -188,7 +188,7 @@
     {
       "name": "NN Bank",
       "kind": "employer",
-      "coverage": "partial",
+      "coverage": "unproven",
       "status": "official_site_scanned"
     },
     {
@@ -208,6 +208,12 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
+    },
+    {
+      "name": "PayPal",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
     },
     {
       "name": "Rabobank",
@@ -267,7 +273,7 @@
       "name": "Wise",
       "kind": "employer",
       "coverage": "partial",
-      "status": "official_site_scanned"
+      "status": "official_ats_scanned"
     },
     {
       "name": "Worldline",
@@ -297,13 +303,13 @@
       "name": "ARC",
       "kind": "recruiter",
       "coverage": "unproven",
-      "status": "official_site_scanned"
+      "status": "technical_failure"
     },
     {
       "name": "Barclay Simpson",
       "kind": "recruiter",
-      "coverage": "partial",
-      "status": "official_site_scanned"
+      "coverage": "unproven",
+      "status": "technical_failure"
     },
     {
       "name": "Black Swan Group",
@@ -314,8 +320,8 @@
     {
       "name": "Boer & Croon",
       "kind": "recruiter",
-      "coverage": "partial",
-      "status": "official_site_scanned"
+      "coverage": "unproven",
+      "status": "technical_failure"
     },
     {
       "name": "Brightstone",
@@ -338,20 +344,32 @@
     {
       "name": "Compliance People",
       "kind": "recruiter",
-      "coverage": "partial",
-      "status": "official_site_scanned"
+      "coverage": "unproven",
+      "status": "technical_failure"
+    },
+    {
+      "name": "Confius",
+      "kind": "recruiter",
+      "coverage": "unproven",
+      "status": "technical_failure"
     },
     {
       "name": "Corbulo",
       "kind": "recruiter",
-      "coverage": "partial",
-      "status": "official_site_scanned"
+      "coverage": "unproven",
+      "status": "technical_failure"
     },
     {
       "name": "Cowen Partners",
       "kind": "recruiter",
       "coverage": "partial",
       "status": "no_public_vacancy_board"
+    },
+    {
+      "name": "CPI",
+      "kind": "recruiter",
+      "coverage": "unproven",
+      "status": "technical_failure"
     },
     {
       "name": "De Vroed Ten Thierry",
@@ -376,6 +394,12 @@
       "kind": "recruiter",
       "coverage": "partial",
       "status": "official_site_scanned"
+    },
+    {
+      "name": "Financial Assets",
+      "kind": "recruiter",
+      "coverage": "unproven",
+      "status": "technical_failure"
     },
     {
       "name": "Finatal",
@@ -414,6 +438,12 @@
       "status": "official_site_scanned"
     },
     {
+      "name": "Lime Search",
+      "kind": "recruiter",
+      "coverage": "unproven",
+      "status": "technical_failure"
+    },
+    {
       "name": "Matchd",
       "kind": "recruiter",
       "coverage": "partial",
@@ -436,6 +466,12 @@
       "kind": "recruiter",
       "coverage": "partial",
       "status": "no_public_vacancy_board"
+    },
+    {
+      "name": "Oliver James",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "official_site_scanned"
     },
     {
       "name": "PaymentGenes",
@@ -474,6 +510,12 @@
       "status": "no_public_vacancy_board"
     },
     {
+      "name": "Staatsen",
+      "kind": "recruiter",
+      "coverage": "unproven",
+      "status": "technical_failure"
+    },
+    {
       "name": "Taylor Root",
       "kind": "recruiter",
       "coverage": "partial",
@@ -482,8 +524,8 @@
     {
       "name": "Vroom",
       "kind": "recruiter",
-      "coverage": "partial",
-      "status": "official_site_scanned"
+      "coverage": "unproven",
+      "status": "technical_failure"
     },
     {
       "name": "Xanthic",
@@ -509,8 +551,19 @@
     "McKinsey",
     "Rabobank",
     "Surepay",
+    "ARC",
+    "Barclay Simpson",
+    "Boer & Croon",
+    "Compliance People",
+    "Confius",
+    "Corbulo",
+    "CPI",
+    "Financial Assets",
+    "Lime Search",
     "Risk Talent Associates",
     "Robert Walters Interim",
-    "Selby Jennings"
+    "Selby Jennings",
+    "Staatsen",
+    "Vroom"
   ]
 }
