@@ -4,8 +4,8 @@
   "target_proven": 22,
   "vacancy_coverage_percent": 21.2,
   "match_audit": {
-    "candidate_count": 405,
-    "matched_count": 405,
+    "candidate_count": 394,
+    "matched_count": 394,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -132,6 +132,12 @@
       "status": "official_ats_scanned"
     },
     {
+      "name": "Mastercard",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
       "name": "McKinsey",
       "kind": "employer",
       "coverage": "unproven",
@@ -207,7 +213,7 @@
       "name": "Revolut",
       "kind": "employer",
       "coverage": "unproven",
-      "status": "technical_failure"
+      "status": "official_site_scanned"
     },
     {
       "name": "Ripple",
@@ -250,12 +256,6 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
-    },
-    {
-      "name": "Visa",
-      "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_ats_scanned"
     },
     {
       "name": "Wise",
@@ -508,7 +508,6 @@
     "DB Contractors UK",
     "McKinsey",
     "Rabobank",
-    "Revolut",
     "Surepay",
     "Risk Talent Associates",
     "Robert Walters Interim",
