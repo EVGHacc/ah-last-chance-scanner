@@ -1,11 +1,11 @@
 {
-  "run_date": "2026-10-27",
+  "run_date": "2026-10-28",
   "target_expected": 104,
-  "target_proven": 20,
-  "vacancy_coverage_percent": 19.2,
+  "target_proven": 22,
+  "vacancy_coverage_percent": 21.2,
   "match_audit": {
-    "candidate_count": 154,
-    "matched_count": 154,
+    "candidate_count": 405,
+    "matched_count": 405,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -132,12 +132,6 @@
       "status": "official_ats_scanned"
     },
     {
-      "name": "Mastercard",
-      "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_site_scanned"
-    },
-    {
       "name": "McKinsey",
       "kind": "employer",
       "coverage": "unproven",
@@ -160,12 +154,6 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
-    },
-    {
-      "name": "Morgan Stanley",
-      "kind": "employer",
-      "coverage": "partial",
-      "status": "official_ats_scanned"
     },
     {
       "name": "MUFG",
@@ -219,7 +207,7 @@
       "name": "Revolut",
       "kind": "employer",
       "coverage": "unproven",
-      "status": "official_site_scanned"
+      "status": "technical_failure"
     },
     {
       "name": "Ripple",
@@ -232,12 +220,6 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
-    },
-    {
-      "name": "State Street",
-      "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_ats_scanned"
     },
     {
       "name": "Stripe",
@@ -268,6 +250,12 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
+    },
+    {
+      "name": "Visa",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_ats_scanned"
     },
     {
       "name": "Wise",
@@ -362,8 +350,8 @@
     {
       "name": "De Vroed Ten Thierry",
       "kind": "recruiter",
-      "coverage": "unproven",
-      "status": "official_site_scanned"
+      "coverage": "partial",
+      "status": "no_public_vacancy_board"
     },
     {
       "name": "DPA",
@@ -520,6 +508,7 @@
     "DB Contractors UK",
     "McKinsey",
     "Rabobank",
+    "Revolut",
     "Surepay",
     "Risk Talent Associates",
     "Robert Walters Interim",
