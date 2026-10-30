@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-30",
   "weekday": "Friday",
-  "scheduledSlot": "21:12",
-  "scheduledAt": "2026-10-30T21:12:00+01:00",
-  "rawScheduledSlot": "21:12",
-  "rawScheduledAt": "2026-10-30T21:12:00+01:00",
-  "startedAt": "2026-10-30T21:12:00.302502+01:00",
-  "completedAt": "2026-10-30T21:12:04.864622+01:00",
-  "checkedAt": "2026-10-30T21:12:04.864622+01:00",
+  "scheduledSlot": "21:15",
+  "scheduledAt": "2026-10-30T21:15:00+01:00",
+  "rawScheduledSlot": "21:15",
+  "rawScheduledAt": "2026-10-30T21:15:00+01:00",
+  "startedAt": "2026-10-30T21:15:00.496681+01:00",
+  "completedAt": "2026-10-30T21:15:05.332962+01:00",
+  "checkedAt": "2026-10-30T21:15:05.332962+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -33,7 +33,7 @@
       "bakery70Items": 1,
       "bakery70Stock": 3.0,
       "all70Items": 34,
-      "all70Stock": 64.0,
+      "all70Stock": 62.0,
       "all70": [
         {
           "productId": 221221,
@@ -144,22 +144,22 @@
           "markdownExpirationDate": "2026-10-30"
         },
         {
-          "productId": 612929,
-          "title": "AH Mango met dip",
+          "productId": 586040,
+          "title": "AH Ananas, papaja, mango",
           "brand": "AH",
-          "size": "140 g",
+          "size": "130 g",
           "category": "Fruit, verse sappen",
           "discountPct": 70,
-          "stock": 3,
+          "stock": 2,
           "priceWas": "2.49",
           "priceNow": "0.75",
           "markdownExpirationDate": "2026-10-30"
         },
         {
-          "productId": 586040,
-          "title": "AH Ananas, papaja, mango",
+          "productId": 612929,
+          "title": "AH Mango met dip",
           "brand": "AH",
-          "size": "130 g",
+          "size": "140 g",
           "category": "Fruit, verse sappen",
           "discountPct": 70,
           "stock": 2,
@@ -177,18 +177,6 @@
           "stock": 2,
           "priceWas": "2.59",
           "priceNow": "0.78",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 447161,
-          "title": "AH Verse watermeloen",
-          "brand": "AH",
-          "size": "325 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.89",
-          "priceNow": "1.17",
           "markdownExpirationDate": "2026-10-30"
         },
         {
@@ -213,6 +201,18 @@
           "stock": 1,
           "priceWas": "1.99",
           "priceNow": "0.60",
+          "markdownExpirationDate": "2026-10-30"
+        },
+        {
+          "productId": 447161,
+          "title": "AH Verse watermeloen",
+          "brand": "AH",
+          "size": "325 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.89",
+          "priceNow": "1.17",
           "markdownExpirationDate": "2026-10-30"
         },
         {
@@ -892,18 +892,6 @@
           "markdownExpirationDate": "2026-10-30"
         },
         {
-          "productId": 606103,
-          "title": "AH Kip grillworst snack",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.49",
-          "priceNow": "1.12",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
           "productId": 590096,
           "title": "AH Liefde & Passie Biologisch OerDesem blond",
           "brand": "AH Liefde & Passie",
@@ -937,6 +925,18 @@
           "stock": 2,
           "priceWas": "1.39",
           "priceNow": "1.04",
+          "markdownExpirationDate": "2026-10-30"
+        },
+        {
+          "productId": 606103,
+          "title": "AH Kip grillworst snack",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.49",
+          "priceNow": "1.12",
           "markdownExpirationDate": "2026-10-30"
         },
         {
