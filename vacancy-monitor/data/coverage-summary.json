@@ -1,11 +1,11 @@
 {
   "run_date": "2026-10-30",
   "target_expected": 104,
-  "target_proven": 22,
-  "vacancy_coverage_percent": 21.2,
+  "target_proven": 24,
+  "vacancy_coverage_percent": 23.1,
   "match_audit": {
-    "candidate_count": 302,
-    "matched_count": 302,
+    "candidate_count": 357,
+    "matched_count": 357,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -156,12 +156,6 @@
       "status": "official_site_scanned"
     },
     {
-      "name": "Morgan Stanley",
-      "kind": "employer",
-      "coverage": "partial",
-      "status": "official_ats_scanned"
-    },
-    {
       "name": "MUFG",
       "kind": "employer",
       "coverage": "partial",
@@ -228,6 +222,12 @@
       "status": "official_site_scanned"
     },
     {
+      "name": "State Street",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_ats_scanned"
+    },
+    {
       "name": "Stripe",
       "kind": "employer",
       "coverage": "partial",
@@ -241,12 +241,6 @@
     },
     {
       "name": "Thunes",
-      "kind": "employer",
-      "coverage": "partial",
-      "status": "official_site_scanned"
-    },
-    {
-      "name": "Triodos Bank",
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
@@ -430,12 +424,6 @@
       "kind": "recruiter",
       "coverage": "partial",
       "status": "no_public_vacancy_board"
-    },
-    {
-      "name": "Oliver James",
-      "kind": "recruiter",
-      "coverage": "partial",
-      "status": "official_site_scanned"
     },
     {
       "name": "PaymentGenes",
