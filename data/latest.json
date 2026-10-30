@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-30",
   "weekday": "Friday",
-  "scheduledSlot": "21:55",
-  "scheduledAt": "2026-10-30T21:55:00+01:00",
-  "rawScheduledSlot": "21:55",
-  "rawScheduledAt": "2026-10-30T21:55:00+01:00",
-  "startedAt": "2026-10-30T21:55:00.287893+01:00",
-  "completedAt": "2026-10-30T21:55:04.273982+01:00",
-  "checkedAt": "2026-10-30T21:55:04.273982+01:00",
+  "scheduledSlot": "21:57",
+  "scheduledAt": "2026-10-30T21:57:00+01:00",
+  "rawScheduledSlot": "21:57",
+  "rawScheduledAt": "2026-10-30T21:57:00+01:00",
+  "startedAt": "2026-10-30T21:57:00.259212+01:00",
+  "completedAt": "2026-10-30T21:57:04.736098+01:00",
+  "checkedAt": "2026-10-30T21:57:04.736098+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,11 +25,11 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 165,
+      "totalBargainItems": 164,
       "meatItems": 10,
       "meat70Items": 1,
       "meat70Stock": 1.0,
-      "bakeryItems": 32,
+      "bakeryItems": 31,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 29,
@@ -580,18 +580,6 @@
           "markdownExpirationDate": "2026-10-30"
         },
         {
-          "productId": 523679,
-          "title": "AH Pastel de nata",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "0.65",
-          "priceNow": "0.39",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
           "productId": 515766,
           "title": "AH Kaasstengel",
           "brand": "AH",
@@ -601,18 +589,6 @@
           "stock": 15,
           "priceWas": "0.99",
           "priceNow": "0.74",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 230725,
-          "title": "AH Roomboter appelflap",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 6,
-          "priceWas": "0.89",
-          "priceNow": "0.67",
           "markdownExpirationDate": "2026-10-30"
         },
         {
@@ -661,6 +637,18 @@
           "stock": 4,
           "priceWas": "2.39",
           "priceNow": "1.79",
+          "markdownExpirationDate": "2026-10-30"
+        },
+        {
+          "productId": 230725,
+          "title": "AH Roomboter appelflap",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 4,
+          "priceWas": "0.89",
+          "priceNow": "0.67",
           "markdownExpirationDate": "2026-10-30"
         },
         {
@@ -897,11 +885,11 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 140,
+      "totalBargainItems": 133,
       "meatItems": 2,
       "meat70Items": 2,
       "meat70Stock": 4.0,
-      "bakeryItems": 28,
+      "bakeryItems": 21,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 42,
@@ -1452,30 +1440,6 @@
           "markdownExpirationDate": "2026-10-30"
         },
         {
-          "productId": 606492,
-          "title": "AH Liefde & Passie Biologisch desem pistolet meerzaden",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 4,
-          "priceWas": "1.09",
-          "priceNow": "0.65",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 606050,
-          "title": "AH Liefde & Passie Desem pistolet mais pompoen",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 4,
-          "priceWas": "0.99",
-          "priceNow": "0.59",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
           "productId": 417147,
           "title": "AH Vloerbrood meergranen heel",
           "brand": "AH",
@@ -1557,42 +1521,6 @@
           "stock": 1,
           "priceWas": "2.39",
           "priceNow": "1.43",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 537022,
-          "title": "AH Pizzabroodje kaas-groente",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "1.19",
-          "priceNow": "0.89",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 606048,
-          "title": "AH Liefde & Passie Desem pistolet wit",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 230738,
-          "title": "AH Koffiebroodje",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "0.69",
-          "priceNow": "0.52",
           "markdownExpirationDate": "2026-10-30"
         },
         {
@@ -1680,18 +1608,6 @@
           "markdownExpirationDate": "2026-10-30"
         },
         {
-          "productId": 451137,
-          "title": "AH Focaccia mozzarella",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.29",
-          "priceNow": "0.97",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
           "productId": 561021,
           "title": "AH Vloer waldkorn heel",
           "brand": "AH",
@@ -1725,18 +1641,6 @@
           "stock": 2,
           "priceWas": "0.59",
           "priceNow": "0.50",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 606047,
-          "title": "AH Pistolet volkoren",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 1,
-          "priceWas": "0.28",
-          "priceNow": "0.24",
           "markdownExpirationDate": "2026-10-30"
         },
         {
