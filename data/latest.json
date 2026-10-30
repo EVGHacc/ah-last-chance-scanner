@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-30",
   "weekday": "Friday",
-  "scheduledSlot": "22:10",
-  "scheduledAt": "2026-10-30T22:10:00+01:00",
-  "rawScheduledSlot": "22:10",
-  "rawScheduledAt": "2026-10-30T22:10:00+01:00",
-  "startedAt": "2026-10-30T22:10:00.290403+01:00",
-  "completedAt": "2026-10-30T22:10:04.572721+01:00",
-  "checkedAt": "2026-10-30T22:10:04.572721+01:00",
+  "scheduledSlot": "22:12",
+  "scheduledAt": "2026-10-30T22:12:00+01:00",
+  "rawScheduledSlot": "22:12",
+  "rawScheduledAt": "2026-10-30T22:12:00+01:00",
+  "startedAt": "2026-10-30T22:12:00.274169+01:00",
+  "completedAt": "2026-10-30T22:12:04.337875+01:00",
+  "checkedAt": "2026-10-30T22:12:04.337875+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -520,18 +520,6 @@
           "markdownExpirationDate": "2026-10-30"
         },
         {
-          "productId": 417144,
-          "title": "AH Vloerbrood wit heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 3,
-          "priceWas": "2.69",
-          "priceNow": "1.61",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
           "productId": 584031,
           "title": "AH Rond wit sesam half",
           "brand": "AH",
@@ -577,6 +565,18 @@
           "stock": 1,
           "priceWas": "0.28",
           "priceNow": "0.17",
+          "markdownExpirationDate": "2026-10-30"
+        },
+        {
+          "productId": 417144,
+          "title": "AH Vloerbrood wit heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "2.69",
+          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-30"
         },
         {
