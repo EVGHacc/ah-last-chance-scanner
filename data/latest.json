@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-30",
   "weekday": "Friday",
-  "scheduledSlot": "22:21",
-  "scheduledAt": "2026-10-30T22:21:00+01:00",
-  "rawScheduledSlot": "22:21",
-  "rawScheduledAt": "2026-10-30T22:21:00+01:00",
-  "startedAt": "2026-10-30T22:21:00.283521+01:00",
-  "completedAt": "2026-10-30T22:21:03.904918+01:00",
-  "checkedAt": "2026-10-30T22:21:03.904918+01:00",
+  "scheduledSlot": "22:24",
+  "scheduledAt": "2026-10-30T22:24:00+01:00",
+  "rawScheduledSlot": "22:24",
+  "rawScheduledAt": "2026-10-30T22:24:00+01:00",
+  "startedAt": "2026-10-30T22:24:00.265615+01:00",
+  "completedAt": "2026-10-30T22:24:04.989247+01:00",
+  "checkedAt": "2026-10-30T22:24:04.989247+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -3200,15 +3200,15 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 133,
+      "totalBargainItems": 119,
       "meatItems": 17,
       "meat70Items": 4,
       "meat70Stock": 4.0,
-      "bakeryItems": 10,
+      "bakeryItems": 9,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 30,
-      "all70Stock": 55.0,
+      "all70Items": 28,
+      "all70Stock": 53.0,
       "all70": [
         {
           "productId": 517597,
@@ -3244,18 +3244,6 @@
           "stock": 2,
           "priceWas": "1.89",
           "priceNow": "0.57",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 574721,
-          "title": "AH Gesneden verspakket tex-mex burrito's",
-          "brand": "AH",
-          "size": "2-3 pers|35 min",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.99",
-          "priceNow": "2.10",
           "markdownExpirationDate": "2026-10-30"
         },
         {
@@ -3557,18 +3545,6 @@
           "priceWas": "5.25",
           "priceNow": "1.28",
           "markdownExpirationDate": "2026-10-31"
-        },
-        {
-          "productId": 571225,
-          "title": "AH Kabeljauwschnitzel 2 stuks",
-          "brand": "AH",
-          "size": "180 g",
-          "category": "Vis",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.99",
-          "priceNow": "0.76",
-          "markdownExpirationDate": "2026-10-30"
         }
       ],
       "items": [
@@ -3824,18 +3800,6 @@
           "stock": 3,
           "priceWas": "2.39",
           "priceNow": "1.79",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 577447,
-          "title": "AH Everything bol",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "0.79",
-          "priceNow": "0.59",
           "markdownExpirationDate": "2026-10-30"
         },
         {
