@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-30",
   "weekday": "Friday",
-  "scheduledSlot": "21:25",
-  "scheduledAt": "2026-10-30T21:25:00+01:00",
-  "rawScheduledSlot": "21:25",
-  "rawScheduledAt": "2026-10-30T21:25:00+01:00",
-  "startedAt": "2026-10-30T21:25:00.281666+01:00",
-  "completedAt": "2026-10-30T21:25:04.621611+01:00",
-  "checkedAt": "2026-10-30T21:25:04.621611+01:00",
+  "scheduledSlot": "21:27",
+  "scheduledAt": "2026-10-30T21:27:00+01:00",
+  "rawScheduledSlot": "21:27",
+  "rawScheduledAt": "2026-10-30T21:27:00+01:00",
+  "startedAt": "2026-10-30T21:27:00.294242+01:00",
+  "completedAt": "2026-10-30T21:27:04.280233+01:00",
+  "checkedAt": "2026-10-30T21:27:04.280233+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1000,18 +1000,6 @@
           "markdownExpirationDate": "2026-10-30"
         },
         {
-          "productId": 487301,
-          "title": "AH Rond volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "1.89",
-          "priceNow": "1.42",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
           "productId": 365995,
           "title": "AH Luxe roomboter croissant",
           "brand": "AH",
@@ -1045,6 +1033,18 @@
           "stock": 1,
           "priceWas": "1.19",
           "priceNow": "0.89",
+          "markdownExpirationDate": "2026-10-30"
+        },
+        {
+          "productId": 487301,
+          "title": "AH Rond volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "1.89",
+          "priceNow": "1.42",
           "markdownExpirationDate": "2026-10-30"
         },
         {
@@ -3193,15 +3193,15 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 149,
+      "totalBargainItems": 148,
       "meatItems": 10,
       "meat70Items": 4,
       "meat70Stock": 6.0,
       "bakeryItems": 39,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 41,
-      "all70Stock": 66.0,
+      "all70Items": 40,
+      "all70Stock": 63.0,
       "all70": [
         {
           "productId": 611643,
@@ -3444,30 +3444,6 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
-          "productId": 128128,
-          "title": "AH Basis gegrilde kip L",
-          "brand": "AH",
-          "size": "450 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.45",
-          "priceNow": "1.04",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 128131,
-          "title": "AH Boeren mix M",
-          "brand": "AH",
-          "size": "280 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "4.19",
-          "priceNow": "1.26",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
           "productId": 132574,
           "title": "AH Walnoot geitenkaas L",
           "brand": "AH",
@@ -3525,6 +3501,18 @@
           "stock": 1,
           "priceWas": "3.99",
           "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-30"
+        },
+        {
+          "productId": 128128,
+          "title": "AH Basis gegrilde kip L",
+          "brand": "AH",
+          "size": "450 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.45",
+          "priceNow": "1.04",
           "markdownExpirationDate": "2026-10-30"
         },
         {
