@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-30",
   "weekday": "Friday",
-  "scheduledSlot": "21:00",
-  "scheduledAt": "2026-10-30T21:00:00+01:00",
-  "rawScheduledSlot": "21:00",
-  "rawScheduledAt": "2026-10-30T21:00:00+01:00",
-  "startedAt": "2026-10-30T21:01:15.697155+01:00",
-  "completedAt": "2026-10-30T21:01:21.193063+01:00",
-  "checkedAt": "2026-10-30T21:01:21.193063+01:00",
+  "scheduledSlot": "21:03",
+  "scheduledAt": "2026-10-30T21:03:00+01:00",
+  "rawScheduledSlot": "21:03",
+  "rawScheduledAt": "2026-10-30T21:03:00+01:00",
+  "startedAt": "2026-10-30T21:04:15.686043+01:00",
+  "completedAt": "2026-10-30T21:04:21.162735+01:00",
+  "checkedAt": "2026-10-30T21:04:21.162735+01:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -2804,18 +2804,6 @@
           "markdownExpirationDate": "2026-10-30"
         },
         {
-          "productId": 230726,
-          "title": "AH Maple pecan vlechtbrood",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 7,
-          "priceWas": "0.59",
-          "priceNow": "0.44",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
           "productId": 597345,
           "title": "AH Pretzel",
           "brand": "AH",
@@ -2849,6 +2837,18 @@
           "stock": 5,
           "priceWas": "1.49",
           "priceNow": "1.12",
+          "markdownExpirationDate": "2026-10-30"
+        },
+        {
+          "productId": 230726,
+          "title": "AH Maple pecan vlechtbrood",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 5,
+          "priceWas": "0.59",
+          "priceNow": "0.44",
           "markdownExpirationDate": "2026-10-30"
         },
         {
