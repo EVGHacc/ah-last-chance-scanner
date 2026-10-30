@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-30",
   "weekday": "Friday",
-  "scheduledSlot": "21:51",
-  "scheduledAt": "2026-10-30T21:51:00+01:00",
-  "rawScheduledSlot": "21:51",
-  "rawScheduledAt": "2026-10-30T21:51:00+01:00",
-  "startedAt": "2026-10-30T21:51:00.314710+01:00",
-  "completedAt": "2026-10-30T21:51:04.221764+01:00",
-  "checkedAt": "2026-10-30T21:51:04.221764+01:00",
+  "scheduledSlot": "21:54",
+  "scheduledAt": "2026-10-30T21:54:00+01:00",
+  "rawScheduledSlot": "21:54",
+  "rawScheduledAt": "2026-10-30T21:54:00+01:00",
+  "startedAt": "2026-10-30T21:54:00.273945+01:00",
+  "completedAt": "2026-10-30T21:54:04.297290+01:00",
+  "checkedAt": "2026-10-30T21:54:04.297290+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,28 +25,16 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 170,
+      "totalBargainItems": 165,
       "meatItems": 10,
       "meat70Items": 1,
       "meat70Stock": 1.0,
       "bakeryItems": 32,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 34,
-      "all70Stock": 57.0,
+      "all70Items": 29,
+      "all70Stock": 47.0,
       "all70": [
-        {
-          "productId": 221221,
-          "title": "AH Salademix",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 7,
-          "priceWas": "1.49",
-          "priceNow": "0.45",
-          "markdownExpirationDate": "2026-10-30"
-        },
         {
           "productId": 629501,
           "title": "AH Gesneden verspakket pinda noedels bowl",
@@ -93,30 +81,6 @@
           "stock": 1,
           "priceWas": "4.99",
           "priceNow": "1.50",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 624587,
-          "title": "AH Ovengroente bloemkool champignon",
-          "brand": "AH",
-          "size": "430 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.49",
-          "priceNow": "1.35",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 473867,
-          "title": "AH Goulashsoep verspakket",
-          "brand": "AH",
-          "size": "6 pers | 30 min",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.89",
-          "priceNow": "0.90",
           "markdownExpirationDate": "2026-10-30"
         },
         {
@@ -174,7 +138,7 @@
           "size": "500 ml",
           "category": "Fruit, verse sappen",
           "discountPct": 70,
-          "stock": 2,
+          "stock": 1,
           "priceWas": "2.59",
           "priceNow": "0.78",
           "markdownExpirationDate": "2026-10-30"
@@ -252,18 +216,6 @@
           "markdownExpirationDate": "2026-10-30"
         },
         {
-          "productId": 610812,
-          "title": "AH Noedels kip hoisin",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.49",
-          "priceNow": "1.35",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
           "productId": 623362,
           "title": "AH Borrelbrood saucijs luxe topping",
           "brand": "AH",
@@ -312,18 +264,6 @@
           "markdownExpirationDate": "2026-10-30"
         },
         {
-          "productId": 231693,
-          "title": "AH Uramaki",
-          "brand": "AH",
-          "size": "201 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.99",
-          "priceNow": "1.50",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
           "productId": 227237,
           "title": "AH Stoommaaltijd kip rozemarijn",
           "brand": "AH",
@@ -334,6 +274,18 @@
           "priceWas": "6.99",
           "priceNow": "1.50",
           "markdownExpirationDate": "2026-10-30"
+        },
+        {
+          "productId": 231693,
+          "title": "AH Uramaki",
+          "brand": "AH",
+          "size": "201 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 3,
+          "priceWas": "4.99",
+          "priceNow": "1.50",
+          "markdownExpirationDate": "2026-10-31"
         },
         {
           "productId": 619330,
@@ -357,18 +309,6 @@
           "stock": 1,
           "priceWas": "2.19",
           "priceNow": "0.66",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 48962,
-          "title": "AH Haring met uitjes",
-          "brand": "AH",
-          "size": "3 stuks",
-          "category": "Vis",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "3.29",
-          "priceNow": "0.99",
           "markdownExpirationDate": "2026-10-30"
         },
         {
