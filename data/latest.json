@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-30",
   "weekday": "Friday",
-  "scheduledSlot": "22:05",
-  "scheduledAt": "2026-10-30T22:05:00+01:00",
-  "rawScheduledSlot": "22:05",
-  "rawScheduledAt": "2026-10-30T22:05:00+01:00",
-  "startedAt": "2026-10-30T22:05:00.266714+01:00",
-  "completedAt": "2026-10-30T22:05:03.988514+01:00",
-  "checkedAt": "2026-10-30T22:05:03.988514+01:00",
+  "scheduledSlot": "22:06",
+  "scheduledAt": "2026-10-30T22:06:00+01:00",
+  "rawScheduledSlot": "22:06",
+  "rawScheduledAt": "2026-10-30T22:06:00+01:00",
+  "startedAt": "2026-10-30T22:06:00.269823+01:00",
+  "completedAt": "2026-10-30T22:06:04.182560+01:00",
+  "checkedAt": "2026-10-30T22:06:04.182560+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,15 +25,15 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 163,
+      "totalBargainItems": 137,
       "meatItems": 10,
       "meat70Items": 1,
       "meat70Stock": 1.0,
-      "bakeryItems": 31,
+      "bakeryItems": 27,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 29,
-      "all70Stock": 47.0,
+      "all70Items": 23,
+      "all70Stock": 37.0,
       "all70": [
         {
           "productId": 629501,
@@ -57,18 +57,6 @@
           "stock": 3,
           "priceWas": "1.59",
           "priceNow": "0.48",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 579957,
-          "title": "AH Gesneden verspakket snelle stamppot",
-          "brand": "AH",
-          "size": "2 pers | 20 min",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "6.89",
-          "priceNow": "2.07",
           "markdownExpirationDate": "2026-10-30"
         },
         {
@@ -103,18 +91,6 @@
           "category": "Fruit, verse sappen",
           "discountPct": 70,
           "stock": 3,
-          "priceWas": "2.49",
-          "priceNow": "0.75",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 586040,
-          "title": "AH Ananas, papaja, mango",
-          "brand": "AH",
-          "size": "130 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 2,
           "priceWas": "2.49",
           "priceNow": "0.75",
           "markdownExpirationDate": "2026-10-30"
@@ -202,18 +178,6 @@
           "priceWas": "3.99",
           "priceNow": "1.20",
           "markdownExpirationDate": "2026-10-31"
-        },
-        {
-          "productId": 595144,
-          "title": "AH Bapao pittig rundvlees",
-          "brand": "AH",
-          "size": "115 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "1.29",
-          "priceNow": "0.39",
-          "markdownExpirationDate": "2026-10-30"
         },
         {
           "productId": 623362,
@@ -312,18 +276,6 @@
           "markdownExpirationDate": "2026-10-30"
         },
         {
-          "productId": 564862,
-          "title": "AH Terra Plantaardige burger",
-          "brand": "AH Terra",
-          "size": "227 g",
-          "category": "Vegetarisch, vegan en plantaardig",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.99",
-          "priceNow": "0.90",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
           "productId": 620857,
           "title": "AH Ovenschotel vega kip pesto",
           "brand": "AH",
@@ -346,30 +298,6 @@
           "priceWas": "3.49",
           "priceNow": "1.05",
           "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 599749,
-          "title": "Natrue Haver barista 0% suiker",
-          "brand": "Natrue",
-          "size": "1 l",
-          "category": "Zuivel, eieren",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "2.39",
-          "priceNow": "0.72",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 599750,
-          "title": "Oatly! Matcha haverdrank",
-          "brand": "Oatly!",
-          "size": "1 l",
-          "category": "Zuivel, eieren",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.79",
-          "priceNow": "1.14",
-          "markdownExpirationDate": "2026-11-01"
         },
         {
           "productId": 556751,
@@ -532,18 +460,6 @@
           "markdownExpirationDate": "2026-10-30"
         },
         {
-          "productId": 584031,
-          "title": "AH Rond wit sesam half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "0.99",
-          "priceNow": "0.59",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
           "productId": 606049,
           "title": "AH Liefde & Passie Desem pistolet volkoren",
           "brand": "AH Liefde & Passie",
@@ -601,18 +517,6 @@
           "stock": 6,
           "priceWas": "0.59",
           "priceNow": "0.44",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 230710,
-          "title": "AH Ham kaas croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 5,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
           "markdownExpirationDate": "2026-10-30"
         },
         {
@@ -685,30 +589,6 @@
           "stock": 4,
           "priceWas": "0.79",
           "priceNow": "0.59",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 578301,
-          "title": "AH Liefde & Passie OerDesem zonne rogge",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "3.19",
-          "priceNow": "2.39",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 590096,
-          "title": "AH Liefde & Passie Biologisch OerDesem blond",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "3.29",
-          "priceNow": "2.47",
           "markdownExpirationDate": "2026-10-30"
         },
         {
