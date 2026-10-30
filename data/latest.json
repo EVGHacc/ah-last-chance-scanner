@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-30",
   "weekday": "Friday",
-  "scheduledSlot": "20:45",
-  "scheduledAt": "2026-10-30T20:45:00+01:00",
-  "rawScheduledSlot": "20:45",
-  "rawScheduledAt": "2026-10-30T20:45:00+01:00",
-  "startedAt": "2026-10-30T20:46:15.681536+01:00",
-  "completedAt": "2026-10-30T20:46:20.362598+01:00",
-  "checkedAt": "2026-10-30T20:46:20.362598+01:00",
+  "scheduledSlot": "20:48",
+  "scheduledAt": "2026-10-30T20:48:00+01:00",
+  "rawScheduledSlot": "20:48",
+  "rawScheduledAt": "2026-10-30T20:48:00+01:00",
+  "startedAt": "2026-10-30T20:49:15.754939+01:00",
+  "completedAt": "2026-10-30T20:49:19.624734+01:00",
+  "checkedAt": "2026-10-30T20:49:19.624734+01:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -26,7 +26,7 @@
       "store": "AH Blekersvaartweg",
       "fetched": true,
       "totalBargainItems": 178,
-      "meatItems": 3,
+      "meatItems": 4,
       "meat70Items": 1,
       "meat70Stock": 1.0,
       "bakeryItems": 46,
@@ -479,6 +479,18 @@
           "stock": 1,
           "priceWas": "3.79",
           "priceNow": "2.84",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 531825,
+          "title": "AH Scharrel kipfilet",
+          "brand": "AH",
+          "size": "800 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "9.55",
+          "priceNow": "7.16",
           "markdownExpirationDate": "2026-10-31"
         }
       ],
@@ -1692,18 +1704,6 @@
           "markdownExpirationDate": "2026-10-30"
         },
         {
-          "productId": 277519,
-          "title": "AH Vloerbrood volkoren half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "1.45",
-          "priceNow": "1.09",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
           "productId": 230738,
           "title": "AH Koffiebroodje",
           "brand": "AH",
@@ -1742,6 +1742,18 @@
         {
           "productId": 252839,
           "title": "AH Vloerbrood meergranen half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "1.45",
+          "priceNow": "1.09",
+          "markdownExpirationDate": "2026-10-30"
+        },
+        {
+          "productId": 277519,
+          "title": "AH Vloerbrood volkoren half",
           "brand": "AH",
           "size": "per stuk",
           "category": "Bakkerij",
@@ -1961,15 +1973,15 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 165,
+      "totalBargainItems": 163,
       "meatItems": 7,
       "meat70Items": 7,
       "meat70Stock": 7.0,
-      "bakeryItems": 50,
+      "bakeryItems": 49,
       "bakery70Items": 1,
-      "bakery70Stock": 3.0,
-      "all70Items": 46,
-      "all70Stock": 88.0,
+      "bakery70Stock": 1.0,
+      "all70Items": 45,
+      "all70Stock": 85.0,
       "all70": [
         {
           "productId": 230848,
@@ -2284,18 +2296,6 @@
           "markdownExpirationDate": "2026-10-30"
         },
         {
-          "productId": 628025,
-          "title": "AH Pittige kip L",
-          "brand": "AH",
-          "size": "450 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.99",
-          "priceNow": "1.50",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
           "productId": 132574,
           "title": "AH Walnoot geitenkaas L",
           "brand": "AH",
@@ -2494,7 +2494,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 70,
-          "stock": 3,
+          "stock": 1,
           "priceWas": "1.59",
           "priceNow": "0.48",
           "markdownExpirationDate": "2026-10-30"
@@ -2618,7 +2618,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 70,
-          "stock": 3,
+          "stock": 1,
           "priceWas": "1.59",
           "priceNow": "0.48",
           "markdownExpirationDate": "2026-10-30"
@@ -2657,18 +2657,6 @@
           "stock": 4,
           "priceWas": "1.49",
           "priceNow": "0.89",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 595350,
-          "title": "AH Biologisch Batard volkoren zonnepit heel",
-          "brand": "AH Biologisch",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "2.69",
-          "priceNow": "1.61",
           "markdownExpirationDate": "2026-10-30"
         },
         {
@@ -3225,7 +3213,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 43,
-      "all70Stock": 70.0,
+      "all70Stock": 69.0,
       "all70": [
         {
           "productId": 611643,
@@ -3249,18 +3237,6 @@
           "stock": 2,
           "priceWas": "1.09",
           "priceNow": "0.33",
-          "markdownExpirationDate": "2026-10-30"
-        },
-        {
-          "productId": 629501,
-          "title": "AH Gesneden verspakket pinda noedels bowl",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "4.99",
-          "priceNow": "1.50",
           "markdownExpirationDate": "2026-10-30"
         },
         {
@@ -3309,6 +3285,18 @@
           "stock": 1,
           "priceWas": "2.19",
           "priceNow": "0.66",
+          "markdownExpirationDate": "2026-10-30"
+        },
+        {
+          "productId": 629501,
+          "title": "AH Gesneden verspakket pinda noedels bowl",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.99",
+          "priceNow": "1.50",
           "markdownExpirationDate": "2026-10-30"
         },
         {
