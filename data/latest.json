@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-31",
   "weekday": "Saturday",
-  "scheduledSlot": "19:54",
-  "scheduledAt": "2026-10-31T19:54:00+01:00",
-  "rawScheduledSlot": "19:54",
-  "rawScheduledAt": "2026-10-31T19:54:00+01:00",
-  "startedAt": "2026-10-31T19:55:15.432617+01:00",
-  "completedAt": "2026-10-31T19:55:19.074073+01:00",
-  "checkedAt": "2026-10-31T19:55:19.074073+01:00",
+  "scheduledSlot": "19:55",
+  "scheduledAt": "2026-10-31T19:55:00+01:00",
+  "rawScheduledSlot": "19:55",
+  "rawScheduledAt": "2026-10-31T19:55:00+01:00",
+  "startedAt": "2026-10-31T19:56:15.426502+01:00",
+  "completedAt": "2026-10-31T19:56:19.437580+01:00",
+  "checkedAt": "2026-10-31T19:56:19.437580+01:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 135,
+      "totalBargainItems": 136,
       "meatItems": 5,
       "meat70Items": 5,
       "meat70Stock": 9.0,
@@ -33,7 +33,7 @@
       "bakery70Items": 1,
       "bakery70Stock": 5.0,
       "all70Items": 37,
-      "all70Stock": 85.0,
+      "all70Stock": 84.0,
       "all70": [
         {
           "productId": 230848,
@@ -180,18 +180,6 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
-          "productId": 628019,
-          "title": "AH Saladbowl biet geitenkaas",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "6.49",
-          "priceNow": "1.65",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
           "productId": 128129,
           "title": "AH Basis tonijn ei L",
           "brand": "AH",
@@ -201,6 +189,18 @@
           "stock": 2,
           "priceWas": "3.99",
           "priceNow": "1.20",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 628019,
+          "title": "AH Saladbowl biet geitenkaas",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.49",
+          "priceNow": "1.65",
           "markdownExpirationDate": "2026-10-31"
         },
         {
@@ -993,15 +993,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 135,
-      "meatItems": 2,
-      "meat70Items": 1,
-      "meat70Stock": 8.0,
+      "totalBargainItems": 148,
+      "meatItems": 4,
+      "meat70Items": 3,
+      "meat70Stock": 12.0,
       "bakeryItems": 36,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 42,
-      "all70Stock": 115.0,
+      "all70Items": 48,
+      "all70Stock": 134.0,
       "all70": [
         {
           "productId": 67690,
@@ -1013,6 +1013,18 @@
           "stock": 7,
           "priceWas": "1.99",
           "priceNow": "0.60",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 494450,
+          "title": "AH Bami groente",
+          "brand": "AH",
+          "size": "450 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 6,
+          "priceWas": "1.89",
+          "priceNow": "0.57",
           "markdownExpirationDate": "2026-10-31"
         },
         {
@@ -1244,6 +1256,18 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
+          "productId": 210755,
+          "title": "AH Uit eigen keuken stamppot witlof",
+          "brand": "AH",
+          "size": "540 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "5.59",
+          "priceNow": "1.68",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
           "productId": 597949,
           "title": "AH Speklapjes a la minute",
           "brand": "AH",
@@ -1253,6 +1277,30 @@
           "stock": 8,
           "priceWas": "5.08",
           "priceNow": "1.52",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 232421,
+          "title": "AH Speklap",
+          "brand": "AH",
+          "size": "ca. 500 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 3,
+          "priceWas": "5.68",
+          "priceNow": "1.70",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 238929,
+          "title": "AH Biologisch Speklap",
+          "brand": "AH Biologisch",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.78",
+          "priceNow": "1.43",
           "markdownExpirationDate": "2026-10-31"
         },
         {
@@ -1350,6 +1398,18 @@
           "priceWas": "3.79",
           "priceNow": "1.14",
           "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 494278,
+          "title": "Paturain Knoflook fijne kruiden",
+          "brand": "Paturain",
+          "size": "250 g",
+          "category": "Kaas",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.39",
+          "priceNow": "1.32",
+          "markdownExpirationDate": "2026-10-31"
         },
         {
           "productId": 606039,
@@ -1496,6 +1556,18 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
+          "productId": 496860,
+          "title": "Dove Acai & waterlily anti-transpirant spray",
+          "brand": "Dove",
+          "size": "150 ml",
+          "category": "Drogisterij",
+          "discountPct": 70,
+          "stock": 7,
+          "priceWas": "6.69",
+          "priceNow": "2.01",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
           "productId": 496766,
           "title": "Dove Acai & waterlily anti-transpirant roller",
           "brand": "Dove",
@@ -1519,6 +1591,30 @@
           "stock": 8,
           "priceWas": "5.08",
           "priceNow": "1.52",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 232421,
+          "title": "AH Speklap",
+          "brand": "AH",
+          "size": "ca. 500 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 3,
+          "priceWas": "5.68",
+          "priceNow": "1.70",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 238929,
+          "title": "AH Biologisch Speklap",
+          "brand": "AH Biologisch",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.78",
+          "priceNow": "1.43",
           "markdownExpirationDate": "2026-10-31"
         },
         {
