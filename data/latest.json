@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-31",
   "weekday": "Saturday",
-  "scheduledSlot": "20:00",
-  "scheduledAt": "2026-10-31T20:00:00+01:00",
-  "rawScheduledSlot": "20:00",
-  "rawScheduledAt": "2026-10-31T20:00:00+01:00",
-  "startedAt": "2026-10-31T20:01:15.489441+01:00",
-  "completedAt": "2026-10-31T20:01:19.455265+01:00",
-  "checkedAt": "2026-10-31T20:01:19.455265+01:00",
+  "scheduledSlot": "20:03",
+  "scheduledAt": "2026-10-31T20:03:00+01:00",
+  "rawScheduledSlot": "20:03",
+  "rawScheduledAt": "2026-10-31T20:03:00+01:00",
+  "startedAt": "2026-10-31T20:04:15.494119+01:00",
+  "completedAt": "2026-10-31T20:04:19.539354+01:00",
+  "checkedAt": "2026-10-31T20:04:19.539354+01:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 141,
+      "totalBargainItems": 143,
       "meatItems": 5,
       "meat70Items": 5,
       "meat70Stock": 9.0,
@@ -616,18 +616,6 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
-          "productId": 182711,
-          "title": "AH Les pains bastille heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 7,
-          "priceWas": "2.39",
-          "priceNow": "1.79",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
           "productId": 466494,
           "title": "AH Meerzaden croissant",
           "brand": "AH",
@@ -637,6 +625,18 @@
           "stock": 7,
           "priceWas": "0.79",
           "priceNow": "0.59",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 182711,
+          "title": "AH Les pains bastille heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 6,
+          "priceWas": "2.39",
+          "priceNow": "1.79",
           "markdownExpirationDate": "2026-10-31"
         },
         {
@@ -3885,15 +3885,15 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 143,
+      "totalBargainItems": 142,
       "meatItems": 4,
       "meat70Items": 1,
       "meat70Stock": 1.0,
       "bakeryItems": 30,
       "bakery70Items": 1,
       "bakery70Stock": 15.0,
-      "all70Items": 38,
-      "all70Stock": 79.0,
+      "all70Items": 37,
+      "all70Stock": 78.0,
       "all70": [
         {
           "productId": 629501,
@@ -3989,18 +3989,6 @@
           "stock": 1,
           "priceWas": "5.99",
           "priceNow": "1.80",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
-          "productId": 129681,
-          "title": "AH Hutspot grootverpakking",
-          "brand": "AH",
-          "size": "1 kg",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.09",
-          "priceNow": "0.63",
           "markdownExpirationDate": "2026-10-31"
         },
         {
@@ -4692,18 +4680,6 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
-          "productId": 230842,
-          "title": "AH Liefde & Passie Spelt",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "3.19",
-          "priceNow": "2.71",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
           "productId": 590096,
           "title": "AH Liefde & Passie Biologisch OerDesem blond",
           "brand": "AH Liefde & Passie",
@@ -4761,6 +4737,18 @@
           "stock": 1,
           "priceWas": "1.19",
           "priceNow": "1.01",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 230842,
+          "title": "AH Liefde & Passie Spelt",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "3.19",
+          "priceNow": "2.71",
           "markdownExpirationDate": "2026-10-31"
         }
       ]
