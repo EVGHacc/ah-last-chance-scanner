@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-31",
   "weekday": "Saturday",
-  "scheduledSlot": "21:27",
-  "scheduledAt": "2026-10-31T21:27:00+01:00",
-  "rawScheduledSlot": "21:27",
-  "rawScheduledAt": "2026-10-31T21:27:00+01:00",
-  "startedAt": "2026-10-31T21:27:00.407517+01:00",
-  "completedAt": "2026-10-31T21:27:03.960840+01:00",
-  "checkedAt": "2026-10-31T21:27:03.960840+01:00",
+  "scheduledSlot": "21:30",
+  "scheduledAt": "2026-10-31T21:30:00+01:00",
+  "rawScheduledSlot": "21:30",
+  "rawScheduledAt": "2026-10-31T21:30:00+01:00",
+  "startedAt": "2026-10-31T21:30:00.396641+01:00",
+  "completedAt": "2026-10-31T21:30:04.156828+01:00",
+  "checkedAt": "2026-10-31T21:30:04.156828+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2048,12 +2048,12 @@
       "totalBargainItems": 112,
       "meatItems": 6,
       "meat70Items": 6,
-      "meat70Stock": 13.0,
+      "meat70Stock": 12.0,
       "bakeryItems": 26,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 22,
-      "all70Stock": 35.0,
+      "all70Stock": 34.0,
       "all70": [
         {
           "productId": 624587,
@@ -2188,18 +2188,6 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
-          "productId": 379268,
-          "title": "AH Excellent Lamskotelet",
-          "brand": "AH Excellent",
-          "size": "ca. 210 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "9.49",
-          "priceNow": "2.85",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
           "productId": 589124,
           "title": "AH Scharrel kipdijfiletblokjes",
           "brand": "AH",
@@ -2233,6 +2221,18 @@
           "stock": 1,
           "priceWas": "4.99",
           "priceNow": "1.50",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 379268,
+          "title": "AH Excellent Lamskotelet",
+          "brand": "AH Excellent",
+          "size": "ca. 210 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "9.49",
+          "priceNow": "2.85",
           "markdownExpirationDate": "2026-10-31"
         },
         {
@@ -2346,18 +2346,6 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
-          "productId": 379268,
-          "title": "AH Excellent Lamskotelet",
-          "brand": "AH Excellent",
-          "size": "ca. 210 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "9.49",
-          "priceNow": "2.85",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
           "productId": 589124,
           "title": "AH Scharrel kipdijfiletblokjes",
           "brand": "AH",
@@ -2391,6 +2379,18 @@
           "stock": 1,
           "priceWas": "4.99",
           "priceNow": "1.50",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 379268,
+          "title": "AH Excellent Lamskotelet",
+          "brand": "AH Excellent",
+          "size": "ca. 210 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "9.49",
+          "priceNow": "2.85",
           "markdownExpirationDate": "2026-10-31"
         }
       ],
@@ -4288,7 +4288,7 @@
           "size": "ca. 360 g",
           "category": "Vlees",
           "discountPct": 25,
-          "stock": 2,
+          "stock": 3,
           "priceWas": "3.96",
           "priceNow": "2.22",
           "markdownExpirationDate": "2026-11-01"
