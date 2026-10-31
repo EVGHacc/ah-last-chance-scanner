@@ -2,15 +2,15 @@
   "schemaVersion": 5,
   "date": "2026-10-31",
   "weekday": "Saturday",
-  "scheduledSlot": "19:51",
-  "scheduledAt": "2026-10-31T19:51:00+01:00",
-  "rawScheduledSlot": "19:51",
-  "rawScheduledAt": "2026-10-31T19:51:00+01:00",
-  "startedAt": "2026-10-31T19:52:32.488373+01:00",
-  "completedAt": "2026-10-31T19:52:36.570449+01:00",
-  "checkedAt": "2026-10-31T19:52:36.570449+01:00",
-  "delaySeconds": 92,
-  "rawDelaySeconds": 92,
+  "scheduledSlot": "19:54",
+  "scheduledAt": "2026-10-31T19:54:00+01:00",
+  "rawScheduledSlot": "19:54",
+  "rawScheduledAt": "2026-10-31T19:54:00+01:00",
+  "startedAt": "2026-10-31T19:55:15.432617+01:00",
+  "completedAt": "2026-10-31T19:55:19.074073+01:00",
+  "checkedAt": "2026-10-31T19:55:19.074073+01:00",
+  "delaySeconds": 75,
+  "rawDelaySeconds": 75,
   "status": "OK",
   "valid": true,
   "official1925": false,
@@ -25,7 +25,7 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 133,
+      "totalBargainItems": 135,
       "meatItems": 5,
       "meat70Items": 5,
       "meat70Stock": 9.0,
@@ -586,7 +586,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 25,
-          "stock": 10,
+          "stock": 8,
           "priceWas": "0.99",
           "priceNow": "0.74",
           "markdownExpirationDate": "2026-10-31"
@@ -760,18 +760,6 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
-          "productId": 606047,
-          "title": "AH Pistolet volkoren",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 4,
-          "priceWas": "0.28",
-          "priceNow": "0.24",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
           "productId": 125035,
           "title": "AH Les pains boulogne heel",
           "brand": "AH",
@@ -904,6 +892,18 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
+          "productId": 606047,
+          "title": "AH Pistolet volkoren",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.28",
+          "priceNow": "0.24",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
           "productId": 230724,
           "title": "AH Saucijzenbroodje",
           "brand": "AH",
@@ -993,15 +993,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 148,
-      "meatItems": 4,
-      "meat70Items": 3,
-      "meat70Stock": 12.0,
+      "totalBargainItems": 135,
+      "meatItems": 2,
+      "meat70Items": 1,
+      "meat70Stock": 8.0,
       "bakeryItems": 36,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 48,
-      "all70Stock": 134.0,
+      "all70Items": 42,
+      "all70Stock": 115.0,
       "all70": [
         {
           "productId": 67690,
@@ -1013,18 +1013,6 @@
           "stock": 7,
           "priceWas": "1.99",
           "priceNow": "0.60",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
-          "productId": 494450,
-          "title": "AH Bami groente",
-          "brand": "AH",
-          "size": "450 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 6,
-          "priceWas": "1.89",
-          "priceNow": "0.57",
           "markdownExpirationDate": "2026-10-31"
         },
         {
@@ -1256,18 +1244,6 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
-          "productId": 210755,
-          "title": "AH Uit eigen keuken stamppot witlof",
-          "brand": "AH",
-          "size": "540 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "5.59",
-          "priceNow": "1.68",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
           "productId": 597949,
           "title": "AH Speklapjes a la minute",
           "brand": "AH",
@@ -1277,30 +1253,6 @@
           "stock": 8,
           "priceWas": "5.08",
           "priceNow": "1.52",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
-          "productId": 232421,
-          "title": "AH Speklap",
-          "brand": "AH",
-          "size": "ca. 500 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "5.68",
-          "priceNow": "1.70",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
-          "productId": 238929,
-          "title": "AH Biologisch Speklap",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.78",
-          "priceNow": "1.43",
           "markdownExpirationDate": "2026-10-31"
         },
         {
@@ -1398,18 +1350,6 @@
           "priceWas": "3.79",
           "priceNow": "1.14",
           "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 494278,
-          "title": "Paturain Knoflook fijne kruiden",
-          "brand": "Paturain",
-          "size": "250 g",
-          "category": "Kaas",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.39",
-          "priceNow": "1.32",
-          "markdownExpirationDate": "2026-10-31"
         },
         {
           "productId": 606039,
@@ -1556,18 +1496,6 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 496860,
-          "title": "Dove Acai & waterlily anti-transpirant spray",
-          "brand": "Dove",
-          "size": "150 ml",
-          "category": "Drogisterij",
-          "discountPct": 70,
-          "stock": 7,
-          "priceWas": "6.69",
-          "priceNow": "2.01",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
           "productId": 496766,
           "title": "Dove Acai & waterlily anti-transpirant roller",
           "brand": "Dove",
@@ -1591,30 +1519,6 @@
           "stock": 8,
           "priceWas": "5.08",
           "priceNow": "1.52",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
-          "productId": 232421,
-          "title": "AH Speklap",
-          "brand": "AH",
-          "size": "ca. 500 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "5.68",
-          "priceNow": "1.70",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
-          "productId": 238929,
-          "title": "AH Biologisch Speklap",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.78",
-          "priceNow": "1.43",
           "markdownExpirationDate": "2026-10-31"
         },
         {
@@ -1860,18 +1764,6 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
-          "productId": 515766,
-          "title": "AH Kaasstengel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
           "productId": 277519,
           "title": "AH Vloerbrood volkoren half",
           "brand": "AH",
@@ -1941,6 +1833,18 @@
           "stock": 2,
           "priceWas": "0.59",
           "priceNow": "0.50",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 515766,
+          "title": "AH Kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
           "markdownExpirationDate": "2026-10-31"
         },
         {
@@ -3957,15 +3861,15 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 144,
-      "meatItems": 5,
-      "meat70Items": 2,
-      "meat70Stock": 3.0,
+      "totalBargainItems": 143,
+      "meatItems": 4,
+      "meat70Items": 1,
+      "meat70Stock": 1.0,
       "bakeryItems": 30,
       "bakery70Items": 1,
       "bakery70Stock": 15.0,
-      "all70Items": 39,
-      "all70Stock": 81.0,
+      "all70Items": 38,
+      "all70Stock": 79.0,
       "all70": [
         {
           "productId": 629501,
@@ -4316,18 +4220,6 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
-          "productId": 531858,
-          "title": "AH Scharrel kippensoeppakket met groente",
-          "brand": "AH",
-          "size": "ca. 600 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "4.61",
-          "priceNow": "1.04",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
           "productId": 620800,
           "title": "AH Ovenschotel gehaktballetjes tomatensaus",
           "brand": "AH",
@@ -4437,18 +4329,6 @@
         }
       ],
       "items": [
-        {
-          "productId": 531858,
-          "title": "AH Scharrel kippensoeppakket met groente",
-          "brand": "AH",
-          "size": "ca. 600 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "4.61",
-          "priceNow": "1.04",
-          "markdownExpirationDate": "2026-10-31"
-        },
         {
           "productId": 620800,
           "title": "AH Ovenschotel gehaktballetjes tomatensaus",
