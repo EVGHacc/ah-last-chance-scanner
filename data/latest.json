@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-31",
   "weekday": "Saturday",
-  "scheduledSlot": "20:06",
-  "scheduledAt": "2026-10-31T20:06:00+01:00",
-  "rawScheduledSlot": "20:06",
-  "rawScheduledAt": "2026-10-31T20:06:00+01:00",
-  "startedAt": "2026-10-31T20:07:15.491367+01:00",
-  "completedAt": "2026-10-31T20:07:19.270584+01:00",
-  "checkedAt": "2026-10-31T20:07:19.270584+01:00",
+  "scheduledSlot": "20:09",
+  "scheduledAt": "2026-10-31T20:09:00+01:00",
+  "rawScheduledSlot": "20:09",
+  "rawScheduledAt": "2026-10-31T20:09:00+01:00",
+  "startedAt": "2026-10-31T20:10:15.457582+01:00",
+  "completedAt": "2026-10-31T20:10:19.508243+01:00",
+  "checkedAt": "2026-10-31T20:10:19.508243+01:00",
   "delaySeconds": 75,
   "rawDelaySeconds": 75,
   "status": "OK",
@@ -2009,15 +2009,15 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 116,
+      "totalBargainItems": 114,
       "meatItems": 6,
       "meat70Items": 6,
       "meat70Stock": 13.0,
       "bakeryItems": 26,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 26,
-      "all70Stock": 44.0,
+      "all70Items": 24,
+      "all70Stock": 41.0,
       "all70": [
         {
           "productId": 624587,
@@ -2032,18 +2032,6 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
-          "productId": 187844,
-          "title": "AH Wokgroente Chinees grootverpakking",
-          "brand": "AH",
-          "size": "600 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.19",
-          "priceNow": "0.96",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
           "productId": 441698,
           "title": "AH Oven & airfryer spruitjes pompoen",
           "brand": "AH",
@@ -2053,18 +2041,6 @@
           "stock": 1,
           "priceWas": "2.89",
           "priceNow": "0.87",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
-          "productId": 62661,
-          "title": "AH Rucola slamelange",
-          "brand": "AH",
-          "size": "75 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "1.39",
-          "priceNow": "0.42",
           "markdownExpirationDate": "2026-10-31"
         },
         {
@@ -2540,18 +2516,6 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
-          "productId": 230726,
-          "title": "AH Maple pecan vlechtbrood",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "0.59",
-          "priceNow": "0.50",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
           "productId": 451137,
           "title": "AH Focaccia mozzarella",
           "brand": "AH",
@@ -2609,6 +2573,18 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 230726,
+          "title": "AH Maple pecan vlechtbrood",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 2,
+          "priceWas": "0.59",
+          "priceNow": "0.50",
           "markdownExpirationDate": "2026-10-31"
         },
         {
@@ -2725,15 +2701,15 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 144,
+      "totalBargainItems": 142,
       "meatItems": 6,
       "meat70Items": 1,
       "meat70Stock": 1.0,
       "bakeryItems": 40,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 48,
-      "all70Stock": 89.0,
+      "all70Items": 46,
+      "all70Stock": 87.0,
       "all70": [
         {
           "productId": 550037,
@@ -2832,18 +2808,6 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
-          "productId": 600641,
-          "title": "AH Gesneden verspakket chicken tortilla's",
-          "brand": "AH",
-          "size": "4 pers | 20 min",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "7.59",
-          "priceNow": "2.28",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
           "productId": 107669,
           "title": "AH Biologisch Waterkers",
           "brand": "AH Biologisch",
@@ -2860,18 +2824,6 @@
           "title": "AH Culi's gesneden verspakket soto ajam",
           "brand": "AH",
           "size": "2 pers | 40 min",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "7.49",
-          "priceNow": "2.25",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
-          "productId": 607678,
-          "title": "AH Culi's gesneden verspakket citroenorzo",
-          "brand": "AH",
-          "size": "660 g",
           "category": "Groente, aardappelen",
           "discountPct": 70,
           "stock": 1,
@@ -4548,18 +4500,6 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
-          "productId": 230718,
-          "title": "AH Pistolet wit",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 9,
-          "priceWas": "0.28",
-          "priceNow": "0.24",
-          "markdownExpirationDate": "2026-10-31"
-        },
-        {
           "productId": 230720,
           "title": "AH Frikandelbroodje",
           "brand": "AH",
@@ -4629,6 +4569,18 @@
           "stock": 4,
           "priceWas": "0.99",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 230718,
+          "title": "AH Pistolet wit",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 4,
+          "priceWas": "0.28",
+          "priceNow": "0.24",
           "markdownExpirationDate": "2026-10-31"
         },
         {
