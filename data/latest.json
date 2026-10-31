@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-10-31",
   "weekday": "Saturday",
-  "scheduledSlot": "21:45",
-  "scheduledAt": "2026-10-31T21:45:00+01:00",
-  "rawScheduledSlot": "21:45",
-  "rawScheduledAt": "2026-10-31T21:45:00+01:00",
-  "startedAt": "2026-10-31T21:45:00.420204+01:00",
-  "completedAt": "2026-10-31T21:45:04.348127+01:00",
-  "checkedAt": "2026-10-31T21:45:04.348127+01:00",
+  "scheduledSlot": "21:48",
+  "scheduledAt": "2026-10-31T21:48:00+01:00",
+  "rawScheduledSlot": "21:48",
+  "rawScheduledAt": "2026-10-31T21:48:00+01:00",
+  "startedAt": "2026-10-31T21:48:00.402728+01:00",
+  "completedAt": "2026-10-31T21:48:04.593263+01:00",
+  "checkedAt": "2026-10-31T21:48:04.593263+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2581,15 +2581,15 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 118,
-      "meatItems": 5,
+      "totalBargainItems": 140,
+      "meatItems": 6,
       "meat70Items": 1,
       "meat70Stock": 1.0,
-      "bakeryItems": 35,
+      "bakeryItems": 40,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 42,
-      "all70Stock": 84.0,
+      "all70Items": 46,
+      "all70Stock": 89.0,
       "all70": [
         {
           "productId": 550037,
@@ -2673,6 +2673,18 @@
           "stock": 2,
           "priceWas": "4.49",
           "priceNow": "1.35",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 564214,
+          "title": "AH Gesneden verspakket Koreaanse bowl kip",
+          "brand": "AH",
+          "size": "2-3 pers | 35 m",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.99",
+          "priceNow": "2.10",
           "markdownExpirationDate": "2026-10-31"
         },
         {
@@ -2844,6 +2856,18 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
+          "productId": 586041,
+          "title": "AH Verse galia meloen",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "2.49",
+          "priceNow": "0.75",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
           "productId": 62366,
           "title": "AH Vers geperst sap sinaasappel aardbei",
           "brand": "AH",
@@ -2853,6 +2877,18 @@
           "stock": 2,
           "priceWas": "2.59",
           "priceNow": "0.78",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 586040,
+          "title": "AH Ananas, papaja, mango",
+          "brand": "AH",
+          "size": "130 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "2.49",
+          "priceNow": "0.75",
           "markdownExpirationDate": "2026-10-31"
         },
         {
@@ -3048,6 +3084,18 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
+          "productId": 575472,
+          "title": "Danio Luchtige kwark perzik passievrucht",
+          "brand": "Danio",
+          "size": "250 g",
+          "category": "Zuivel, eieren",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "1.99",
+          "priceNow": "0.60",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
           "productId": 556295,
           "title": "AH Tiramisu",
           "brand": "AH",
@@ -3131,6 +3179,18 @@
           "stock": 2,
           "priceWas": "4.49",
           "priceNow": "3.37",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 589120,
+          "title": "AH Kipgehakt naturel",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "6.49",
+          "priceNow": "4.87",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -3220,6 +3280,18 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
+          "productId": 590096,
+          "title": "AH Liefde & Passie Biologisch OerDesem blond",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 2,
+          "priceWas": "3.29",
+          "priceNow": "1.97",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
           "productId": 231924,
           "title": "AH Chocoladebroodje",
           "brand": "AH",
@@ -3292,6 +3364,18 @@
           "markdownExpirationDate": "2026-10-31"
         },
         {
+          "productId": 571174,
+          "title": "AH Jalapeño kaasstengel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 3,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
           "productId": 230704,
           "title": "AH Kaasbroodje",
           "brand": "AH",
@@ -3349,6 +3433,30 @@
           "stock": 3,
           "priceWas": "3.19",
           "priceNow": "2.39",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 578301,
+          "title": "AH Liefde & Passie OerDesem zonne rogge",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "3.19",
+          "priceNow": "2.39",
+          "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 584031,
+          "title": "AH Rond wit sesam half",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-10-31"
         },
         {
@@ -3578,6 +3686,18 @@
           "priceWas": "0.49",
           "priceNow": "0.42",
           "markdownExpirationDate": "2026-10-31"
+        },
+        {
+          "productId": 583881,
+          "title": "AH Bakfeest glazuur roze",
+          "brand": "AH",
+          "size": "125 g",
+          "category": "Bakkerij",
+          "discountPct": 40,
+          "stock": 6,
+          "priceWas": "1.29",
+          "priceNow": "0.77",
+          "markdownExpirationDate": "2026-11-06"
         }
       ]
     },
