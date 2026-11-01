@@ -20,7 +20,7 @@ class SupervisedSessionWorkflowTests(unittest.TestCase):
     def test_session_workflow_cannot_start_from_push_events(self):
         source = (ROOT / ".github/workflows/session.yml").read_text(encoding="utf-8")
 
-        self.assertNotIn("\\n  push:", source)
+        self.assertNotIn("  push:", source)
         self.assertIn("  schedule:", source)
         self.assertIn("  workflow_dispatch:", source)
 
