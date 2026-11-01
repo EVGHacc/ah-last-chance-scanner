@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - 'scripts/external_start_recovery.py'
+      - 'tests/test_ah_external_recovery.py'
+      - 'tests/test_workflow_external_recovery.py'
       - '.github/workflows/external-recovery-tests.yml'
   workflow_dispatch:
 permissions:
