@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-11-01",
   "weekday": "Sunday",
-  "scheduledSlot": "19:10",
-  "scheduledAt": "2026-11-01T19:10:00+01:00",
-  "rawScheduledSlot": "19:10",
-  "rawScheduledAt": "2026-11-01T19:10:00+01:00",
-  "startedAt": "2026-11-01T19:10:00.298363+01:00",
-  "completedAt": "2026-11-01T19:10:04.574943+01:00",
-  "checkedAt": "2026-11-01T19:10:04.574943+01:00",
+  "scheduledSlot": "19:12",
+  "scheduledAt": "2026-11-01T19:12:00+01:00",
+  "rawScheduledSlot": "19:12",
+  "rawScheduledAt": "2026-11-01T19:12:00+01:00",
+  "startedAt": "2026-11-01T19:12:00.339262+01:00",
+  "completedAt": "2026-11-01T19:12:04.788186+01:00",
+  "checkedAt": "2026-11-01T19:12:04.788186+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -33,7 +33,7 @@
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "all70Items": 13,
-      "all70Stock": 41.0,
+      "all70Stock": 39.0,
       "all70": [
         {
           "productId": 610087,
@@ -138,7 +138,7 @@
           "size": "80 g",
           "category": "Borrel, chips, snacks",
           "discountPct": 70,
-          "stock": 4,
+          "stock": 2,
           "priceWas": "2.69",
           "priceNow": "0.81",
           "markdownExpirationDate": "2026-11-06"
@@ -424,18 +424,6 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 417148,
-          "title": "AH Vloerbrood volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "2.69",
-          "priceNow": "2.02",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
           "productId": 467677,
           "title": "AH Kip loempia börek",
           "brand": "AH",
@@ -457,6 +445,18 @@
           "stock": 2,
           "priceWas": "0.99",
           "priceNow": "0.74",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 417148,
+          "title": "AH Vloerbrood volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -2697,7 +2697,7 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 123,
+      "totalBargainItems": 124,
       "meatItems": 13,
       "meat70Items": 0,
       "meat70Stock": 0,
