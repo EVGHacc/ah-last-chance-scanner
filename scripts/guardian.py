@@ -78,7 +78,10 @@ def main():
         if age > session.RECOVERY_START_DEADLINE:
             continue
         guard_point(target)
-    session.final_reconcile(today)
+    if not session.final_reconcile(today):
+        print("GUARDIAN FAILURE: final reconciliation is incomplete", flush=True)
+        raise SystemExit(1)
+    print("Guardian finished: final reconciliation complete", flush=True)
 
 
 def self_test():

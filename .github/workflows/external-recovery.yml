@@ -1,0 +1,29 @@
+name: AH external recovery entrypoint
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: write
+concurrency:
+  group: ah-external-recovery-check
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate recovery logic
+        run: |
+          python -m py_compile scripts/external_start_recovery.py
+          python scripts/external_start_recovery.py --self-test
+      - name: Check published heartbeat and recover if needed
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python scripts/external_start_recovery.py
