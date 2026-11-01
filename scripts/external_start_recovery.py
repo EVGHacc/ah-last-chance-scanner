@@ -119,6 +119,9 @@ def self_test():
     good = {"date": "2026-10-11", "authMode": "user-refresh", "category": "Vlees",
             "rawExpected": 101, "canonicalExpected": 61,
             "stores": [1463, 1348, 1135],
+            "rawSeen": sorted(expected_slots(3)),
+            "canonicalSeen": sorted(expected_slots(5)),
+            "rawMissing": [], "canonicalMissing": [],
             "latestValid": {"authMode": "user-refresh", "checkedAt": "2026-10-11T17:58:00+02:00"}}
     assert decision(now, good, []) == "healthy"
     assert decision(now, {}, []) == "dispatch"
