@@ -18,14 +18,30 @@ class ExternalRecoveryTests(unittest.TestCase):
             "date": "2026-10-11", "authMode": "user-refresh", "category": "Vlees",
             "rawExpected": 101, "canonicalExpected": 61,
             "stores": [1463, 1348, 1135],
+            "rawSeen": sorted(recovery.expected_slots(3)),
+            "canonicalSeen": sorted(recovery.expected_slots(5)),
+            "rawMissing": [], "canonicalMissing": [],
             "latestValid": {
                 "authMode": "user-refresh",
                 "checkedAt": "2026-10-11T17:58:00+02:00",
             },
         }
 
-    def test_healthy_does_not_dispatch(self):
+    def test_healthy_requires_complete_raw_and_canonical_day(self):
         self.assertEqual(recovery.decision(self.now, self.good, []), "healthy")
+
+    def test_incomplete_raw_slots_are_not_healthy(self):
+        status = {**self.good, "rawSeen": self.good["rawSeen"][:-1]}
+        self.assertEqual(recovery.decision(self.now, status, []), "dispatch")
+
+    def test_incomplete_canonical_slots_are_not_healthy(self):
+        status = {**self.good, "canonicalSeen": self.good["canonicalSeen"][:-1]}
+        self.assertEqual(recovery.decision(self.now, status, []), "dispatch")
+
+    def test_duplicate_slot_cannot_fake_complete_count(self):
+        slots = self.good["rawSeen"][:-1] + [self.good["rawSeen"][0]]
+        status = {**self.good, "rawSeen": slots}
+        self.assertEqual(recovery.decision(self.now, status, []), "dispatch")
 
     def test_missing_heartbeat_dispatches(self):
         self.assertEqual(recovery.decision(self.now, {}, []), "dispatch")
