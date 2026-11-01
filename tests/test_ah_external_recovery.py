@@ -43,6 +43,10 @@ class ExternalRecoveryTests(unittest.TestCase):
         status = {**self.good, "rawSeen": slots}
         self.assertEqual(recovery.decision(self.now, status, []), "dispatch")
 
+    def test_malformed_slot_values_are_not_healthy(self):
+        status = {**self.good, "rawSeen": [None] * 101}
+        self.assertEqual(recovery.decision(self.now, status, []), "dispatch")
+
     def test_missing_heartbeat_dispatches(self):
         self.assertEqual(recovery.decision(self.now, {}, []), "dispatch")
 
