@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-11-01",
   "weekday": "Sunday",
-  "scheduledSlot": "20:48",
-  "scheduledAt": "2026-11-01T20:48:00+01:00",
-  "rawScheduledSlot": "20:48",
-  "rawScheduledAt": "2026-11-01T20:48:00+01:00",
-  "startedAt": "2026-11-01T20:48:00.296768+01:00",
-  "completedAt": "2026-11-01T20:48:05.618790+01:00",
-  "checkedAt": "2026-11-01T20:48:05.618790+01:00",
+  "scheduledSlot": "20:50",
+  "scheduledAt": "2026-11-01T20:50:00+01:00",
+  "rawScheduledSlot": "20:50",
+  "rawScheduledAt": "2026-11-01T20:50:00+01:00",
+  "startedAt": "2026-11-01T20:50:00.307791+01:00",
+  "completedAt": "2026-11-01T20:50:04.883767+01:00",
+  "checkedAt": "2026-11-01T20:50:04.883767+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -3377,7 +3377,7 @@
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "all70Items": 30,
-      "all70Stock": 50.0,
+      "all70Stock": 47.0,
       "all70": [
         {
           "productId": 525237,
@@ -3524,18 +3524,6 @@
           "markdownExpirationDate": "2026-11-02"
         },
         {
-          "productId": 594142,
-          "title": "AH Verse cantaloupe meloen",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 6,
-          "priceWas": "2.49",
-          "priceNow": "0.75",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
           "productId": 133713,
           "title": "AH Verse ananas stukjes",
           "brand": "AH",
@@ -3550,6 +3538,18 @@
         {
           "productId": 594137,
           "title": "AH Verse watermeloen",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 3,
+          "priceWas": "2.49",
+          "priceNow": "0.75",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 594142,
+          "title": "AH Verse cantaloupe meloen",
           "brand": "AH",
           "size": "150 g",
           "category": "Fruit, verse sappen",
