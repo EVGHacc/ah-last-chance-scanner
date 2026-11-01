@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-11-01",
   "weekday": "Sunday",
-  "scheduledSlot": "21:45",
-  "scheduledAt": "2026-11-01T21:45:00+01:00",
-  "rawScheduledSlot": "21:45",
-  "rawScheduledAt": "2026-11-01T21:45:00+01:00",
-  "startedAt": "2026-11-01T21:45:00.302487+01:00",
-  "completedAt": "2026-11-01T21:45:07.753855+01:00",
-  "checkedAt": "2026-11-01T21:45:07.753855+01:00",
+  "scheduledSlot": "21:48",
+  "scheduledAt": "2026-11-01T21:48:00+01:00",
+  "rawScheduledSlot": "21:48",
+  "rawScheduledAt": "2026-11-01T21:48:00+01:00",
+  "startedAt": "2026-11-01T21:48:00.298272+01:00",
+  "completedAt": "2026-11-01T21:48:05.106976+01:00",
+  "checkedAt": "2026-11-01T21:48:05.106976+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2401,11 +2401,11 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 116,
-      "meatItems": 6,
+      "totalBargainItems": 114,
+      "meatItems": 5,
       "meat70Items": 1,
       "meat70Stock": 1.0,
-      "bakeryItems": 28,
+      "bakeryItems": 27,
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 37,
@@ -2916,18 +2916,6 @@
           "priceWas": "4.65",
           "priceNow": "2.92",
           "markdownExpirationDate": "2026-11-02"
-        },
-        {
-          "productId": 67621,
-          "title": "AH Franse scharrelkipfilet",
-          "brand": "AH",
-          "size": "ca. 345 g",
-          "category": "Vlees",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "6.99",
-          "priceNow": "5.24",
-          "markdownExpirationDate": "2026-11-02"
         }
       ],
       "bakery": [
@@ -3109,18 +3097,6 @@
           "stock": 2,
           "priceWas": "1.45",
           "priceNow": "1.09",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 561013,
-          "title": "AH Liefde & Passie Meergranen",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "2.89",
-          "priceNow": "2.17",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -3924,18 +3900,6 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 230859,
-          "title": "AH Kaas croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 3,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
           "productId": 606492,
           "title": "AH Liefde & Passie Biologisch desem pistolet meerzaden",
           "brand": "AH Liefde & Passie",
@@ -3957,6 +3921,18 @@
           "stock": 2,
           "priceWas": "1.19",
           "priceNow": "0.89",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 230859,
+          "title": "AH Kaas croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-11-01"
         },
         {
