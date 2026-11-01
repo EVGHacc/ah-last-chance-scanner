@@ -17,6 +17,13 @@ class SupervisedSessionWorkflowTests(unittest.TestCase):
         self.assertIn("steps.production_tests.outcome", source)
         self.assertIn("steps.supervised_scan.outcome", source)
 
+    def test_session_workflow_cannot_start_from_push_events(self):
+        source = (ROOT / ".github/workflows/session.yml").read_text(encoding="utf-8")
+
+        self.assertNotIn("\\n  push:", source)
+        self.assertIn("  schedule:", source)
+        self.assertIn("  workflow_dispatch:", source)
+
     def test_failed_gate_and_skipped_scan_are_not_reported_as_success(self):
         source = (ROOT / ".github/workflows/session.yml").read_text(encoding="utf-8")
 
