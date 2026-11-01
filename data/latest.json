@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-11-01",
   "weekday": "Sunday",
-  "scheduledSlot": "19:51",
-  "scheduledAt": "2026-11-01T19:51:00+01:00",
-  "rawScheduledSlot": "19:51",
-  "rawScheduledAt": "2026-11-01T19:51:00+01:00",
-  "startedAt": "2026-11-01T19:51:00.322191+01:00",
-  "completedAt": "2026-11-01T19:51:04.918180+01:00",
-  "checkedAt": "2026-11-01T19:51:04.918180+01:00",
+  "scheduledSlot": "19:54",
+  "scheduledAt": "2026-11-01T19:54:00+01:00",
+  "rawScheduledSlot": "19:54",
+  "rawScheduledAt": "2026-11-01T19:54:00+01:00",
+  "startedAt": "2026-11-01T19:54:00.276347+01:00",
+  "completedAt": "2026-11-01T19:54:05.195115+01:00",
+  "checkedAt": "2026-11-01T19:54:05.195115+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1685,15 +1685,15 @@
       "storeId": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "totalBargainItems": 141,
-      "meatItems": 4,
-      "meat70Items": 4,
-      "meat70Stock": 6.0,
+      "totalBargainItems": 140,
+      "meatItems": 3,
+      "meat70Items": 3,
+      "meat70Stock": 5.0,
       "bakeryItems": 40,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 22,
-      "all70Stock": 34.0,
+      "all70Items": 21,
+      "all70Stock": 33.0,
       "all70": [
         {
           "productId": 107686,
@@ -1852,18 +1852,6 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 436754,
-          "title": "AH Biologisch Rundertartaar",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.99",
-          "priceNow": "1.50",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
           "productId": 533085,
           "title": "AH Scharrel kipburger 2 stuks",
           "brand": "AH",
@@ -1945,7 +1933,7 @@
           "stock": 2,
           "priceWas": "2.39",
           "priceNow": "0.72",
-          "markdownExpirationDate": "2026-11-02"
+          "markdownExpirationDate": "2026-11-08"
         },
         {
           "productId": 589312,
@@ -1983,18 +1971,6 @@
           "stock": 1,
           "priceWas": "3.39",
           "priceNow": "1.02",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 436754,
-          "title": "AH Biologisch Rundertartaar",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.99",
-          "priceNow": "1.50",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -2497,15 +2473,15 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 132,
+      "totalBargainItems": 130,
       "meatItems": 11,
       "meat70Items": 6,
       "meat70Stock": 6.0,
-      "bakeryItems": 34,
+      "bakeryItems": 33,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 45,
-      "all70Stock": 82.0,
+      "all70Items": 44,
+      "all70Stock": 81.0,
       "all70": [
         {
           "productId": 67690,
@@ -2928,18 +2904,6 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 51335,
-          "title": "AH Zalmfilet",
-          "brand": "AH",
-          "size": "ca. 310 g",
-          "category": "Vis",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "9.99",
-          "priceNow": "3.00",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
           "productId": 621405,
           "title": "AH Terra Tempeh gochujang",
           "brand": "AH Terra",
@@ -3313,18 +3277,6 @@
           "stock": 1,
           "priceWas": "2.69",
           "priceNow": "2.02",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 230787,
-          "title": "AH Les pains triomphe half",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.29",
-          "priceNow": "0.97",
           "markdownExpirationDate": "2026-11-01"
         },
         {
