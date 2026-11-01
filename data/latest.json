@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-11-01",
   "weekday": "Sunday",
-  "scheduledSlot": "18:51",
-  "scheduledAt": "2026-11-01T18:51:00+01:00",
-  "rawScheduledSlot": "18:51",
-  "rawScheduledAt": "2026-11-01T18:51:00+01:00",
-  "startedAt": "2026-11-01T18:51:00.253507+01:00",
-  "completedAt": "2026-11-01T18:51:04.168191+01:00",
-  "checkedAt": "2026-11-01T18:51:04.168191+01:00",
+  "scheduledSlot": "18:54",
+  "scheduledAt": "2026-11-01T18:54:00+01:00",
+  "rawScheduledSlot": "18:54",
+  "rawScheduledAt": "2026-11-01T18:54:00+01:00",
+  "startedAt": "2026-11-01T18:54:00.301664+01:00",
+  "completedAt": "2026-11-01T18:54:05.648871+01:00",
+  "checkedAt": "2026-11-01T18:54:05.648871+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -1518,18 +1518,6 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 533085,
-          "title": "AH Scharrel kipburger 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 2,
-          "priceWas": "2.99",
-          "priceNow": "1.79",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
           "productId": 3986,
           "title": "AH Speklap",
           "brand": "AH",
@@ -1551,6 +1539,18 @@
           "stock": 1,
           "priceWas": "4.99",
           "priceNow": "2.99",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 533085,
+          "title": "AH Scharrel kipburger 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discountPct": 40,
+          "stock": 1,
+          "priceWas": "2.99",
+          "priceNow": "1.79",
           "markdownExpirationDate": "2026-11-01"
         }
       ],
@@ -2373,8 +2373,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 113,
-      "meatItems": 10,
+      "totalBargainItems": 114,
+      "meatItems": 11,
       "meat70Items": 0,
       "meat70Stock": 0,
       "bakeryItems": 2,
@@ -2587,6 +2587,18 @@
           "stock": 2,
           "priceWas": "4.99",
           "priceNow": "3.74",
+          "markdownExpirationDate": "2026-11-02"
+        },
+        {
+          "productId": 212143,
+          "title": "AH Runderreepjes naturel",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "8.75",
+          "priceNow": "6.56",
           "markdownExpirationDate": "2026-11-02"
         },
         {
