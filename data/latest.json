@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-11-01",
   "weekday": "Sunday",
-  "scheduledSlot": "20:30",
-  "scheduledAt": "2026-11-01T20:30:00+01:00",
-  "rawScheduledSlot": "20:30",
-  "rawScheduledAt": "2026-11-01T20:30:00+01:00",
-  "startedAt": "2026-11-01T20:30:00.273815+01:00",
-  "completedAt": "2026-11-01T20:30:04.915783+01:00",
-  "checkedAt": "2026-11-01T20:30:04.915783+01:00",
+  "scheduledSlot": "20:33",
+  "scheduledAt": "2026-11-01T20:33:00+01:00",
+  "rawScheduledSlot": "20:33",
+  "rawScheduledAt": "2026-11-01T20:33:00+01:00",
+  "startedAt": "2026-11-01T20:33:00.279750+01:00",
+  "completedAt": "2026-11-01T20:33:04.644969+01:00",
+  "checkedAt": "2026-11-01T20:33:04.644969+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -832,8 +832,8 @@
       "bakeryItems": 23,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 38,
-      "all70Stock": 99.0,
+      "all70Items": 39,
+      "all70Stock": 100.0,
       "all70": [
         {
           "productId": 41138,
@@ -1120,6 +1120,18 @@
           "discountPct": 70,
           "stock": 1,
           "priceWas": "6.49",
+          "priceNow": "1.50",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 227239,
+          "title": "AH Stoommaaltijd pasta pesto",
+          "brand": "AH",
+          "size": "450 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "5.99",
           "priceNow": "1.50",
           "markdownExpirationDate": "2026-11-01"
         },
@@ -2389,15 +2401,15 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 124,
+      "totalBargainItems": 123,
       "meatItems": 7,
       "meat70Items": 2,
       "meat70Stock": 2.0,
-      "bakeryItems": 31,
+      "bakeryItems": 30,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 41,
-      "all70Stock": 80.0,
+      "all70Items": 42,
+      "all70Stock": 82.0,
       "all70": [
         {
           "productId": 67690,
@@ -2793,6 +2805,18 @@
           "stock": 1,
           "priceWas": "2.29",
           "priceNow": "0.69",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 543387,
+          "title": "AH Runder rookvlees",
+          "brand": "AH",
+          "size": "100 g",
+          "category": "Vleeswaren",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "2.75",
+          "priceNow": "0.83",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -3232,18 +3256,6 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 365995,
-          "title": "AH Luxe roomboter croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 3,
-          "priceWas": "1.19",
-          "priceNow": "1.01",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
           "productId": 571174,
           "title": "AH Jalapeño kaasstengel",
           "brand": "AH",
@@ -3359,13 +3371,13 @@
       "fetched": true,
       "totalBargainItems": 153,
       "meatItems": 11,
-      "meat70Items": 2,
-      "meat70Stock": 3.0,
+      "meat70Items": 3,
+      "meat70Stock": 4.0,
       "bakeryItems": 36,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
-      "all70Items": 38,
-      "all70Stock": 65.0,
+      "all70Items": 39,
+      "all70Stock": 66.0,
       "all70": [
         {
           "productId": 525237,
@@ -3680,6 +3692,18 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
+          "productId": 477571,
+          "title": "AH Scharrel gebraden kipfilet caesar",
+          "brand": "AH",
+          "size": "ca. 150 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.79",
+          "priceNow": "1.14",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
           "productId": 210608,
           "title": "AH Shoarma",
           "brand": "AH",
@@ -3826,6 +3850,18 @@
       ],
       "items": [
         {
+          "productId": 477571,
+          "title": "AH Scharrel gebraden kipfilet caesar",
+          "brand": "AH",
+          "size": "ca. 150 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.79",
+          "priceNow": "1.14",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
           "productId": 210608,
           "title": "AH Shoarma",
           "brand": "AH",
@@ -3835,18 +3871,6 @@
           "stock": 1,
           "priceWas": "7.05",
           "priceNow": "2.12",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 477571,
-          "title": "AH Scharrel gebraden kipfilet caesar",
-          "brand": "AH",
-          "size": "ca. 150 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "3.79",
-          "priceNow": "2.27",
           "markdownExpirationDate": "2026-11-01"
         },
         {
