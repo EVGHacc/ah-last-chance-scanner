@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-11-01",
   "weekday": "Sunday",
-  "scheduledSlot": "22:00",
-  "scheduledAt": "2026-11-01T22:00:00+01:00",
-  "rawScheduledSlot": "22:00",
-  "rawScheduledAt": "2026-11-01T22:00:00+01:00",
-  "startedAt": "2026-11-01T22:00:00.330650+01:00",
-  "completedAt": "2026-11-01T22:00:05.110316+01:00",
-  "checkedAt": "2026-11-01T22:00:05.110316+01:00",
+  "scheduledSlot": "22:03",
+  "scheduledAt": "2026-11-01T22:03:00+01:00",
+  "rawScheduledSlot": "22:03",
+  "rawScheduledAt": "2026-11-01T22:03:00+01:00",
+  "startedAt": "2026-11-01T22:03:00.471829+01:00",
+  "completedAt": "2026-11-01T22:03:04.875660+01:00",
+  "checkedAt": "2026-11-01T22:03:04.875660+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2401,15 +2401,15 @@
       "storeId": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "totalBargainItems": 114,
-      "meatItems": 5,
-      "meat70Items": 1,
-      "meat70Stock": 1.0,
+      "totalBargainItems": 113,
+      "meatItems": 4,
+      "meat70Items": 0,
+      "meat70Stock": 0,
       "bakeryItems": 27,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 37,
-      "all70Stock": 74.0,
+      "all70Items": 36,
+      "all70Stock": 73.0,
       "all70": [
         {
           "productId": 67690,
@@ -2688,18 +2688,6 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 199330,
-          "title": "AH Runderhart",
-          "brand": "AH",
-          "size": "ca. 240 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.49",
-          "priceNow": "1.35",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
           "productId": 613084,
           "title": "AH Gerookte hele haring",
           "brand": "AH",
@@ -2857,18 +2845,6 @@
         }
       ],
       "items": [
-        {
-          "productId": 199330,
-          "title": "AH Runderhart",
-          "brand": "AH",
-          "size": "ca. 240 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "4.49",
-          "priceNow": "1.35",
-          "markdownExpirationDate": "2026-11-01"
-        },
         {
           "productId": 589124,
           "title": "AH Scharrel kipdijfiletblokjes",
@@ -3249,15 +3225,15 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 136,
+      "totalBargainItems": 135,
       "meatItems": 8,
       "meat70Items": 1,
       "meat70Stock": 1.0,
       "bakeryItems": 32,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
-      "all70Items": 29,
-      "all70Stock": 45.0,
+      "all70Items": 28,
+      "all70Stock": 42.0,
       "all70": [
         {
           "productId": 525237,
@@ -3428,18 +3404,6 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 594142,
-          "title": "AH Verse cantaloupe meloen",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "2.49",
-          "priceNow": "0.75",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
           "productId": 544086,
           "title": "AH Verse mango",
           "brand": "AH",
@@ -3464,10 +3428,10 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 586040,
-          "title": "AH Ananas, papaja, mango",
+          "productId": 594142,
+          "title": "AH Verse cantaloupe meloen",
           "brand": "AH",
-          "size": "130 g",
+          "size": "150 g",
           "category": "Fruit, verse sappen",
           "discountPct": 70,
           "stock": 1,
@@ -3652,7 +3616,7 @@
           "size": "300 g",
           "category": "Vlees",
           "discountPct": 25,
-          "stock": 3,
+          "stock": 2,
           "priceWas": "3.49",
           "priceNow": "2.62",
           "markdownExpirationDate": "2026-11-02"
@@ -3924,18 +3888,6 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 230859,
-          "title": "AH Kaas croissant",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 2,
-          "priceWas": "0.99",
-          "priceNow": "0.74",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
           "productId": 577444,
           "title": "AH Worstenbroodje",
           "brand": "AH",
@@ -4005,6 +3957,18 @@
           "stock": 1,
           "priceWas": "2.39",
           "priceNow": "1.79",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 230859,
+          "title": "AH Kaas croissant",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.74",
           "markdownExpirationDate": "2026-11-01"
         },
         {
