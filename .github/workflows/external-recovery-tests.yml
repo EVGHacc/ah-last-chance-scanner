@@ -20,5 +20,7 @@ jobs:
           python-version: '3.12'
       - name: Compile recovery controller
         run: python -m py_compile scripts/external_start_recovery.py
-      - name: Run recovery unit tests
-        run: python scripts/external_start_recovery.py --self-test
+      - name: Run recovery self-test and regression suite
+        run: |
+          python scripts/external_start_recovery.py --self-test
+          python -m unittest discover -s tests -p 'test_ah_external_recovery.py' -v
