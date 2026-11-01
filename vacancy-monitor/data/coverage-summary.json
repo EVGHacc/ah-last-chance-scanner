@@ -4,8 +4,8 @@
   "target_proven": 23,
   "vacancy_coverage_percent": 22.1,
   "match_audit": {
-    "candidate_count": 406,
-    "matched_count": 406,
+    "candidate_count": 407,
+    "matched_count": 407,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -242,12 +242,6 @@
     {
       "name": "Thunes",
       "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_site_scanned"
-    },
-    {
-      "name": "Triodos Bank",
-      "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
     },
@@ -340,6 +334,12 @@
       "kind": "recruiter",
       "coverage": "partial",
       "status": "official_site_scanned"
+    },
+    {
+      "name": "Cowen Partners",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "no_public_vacancy_board"
     },
     {
       "name": "De Vroed Ten Thierry",
