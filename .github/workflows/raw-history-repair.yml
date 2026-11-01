@@ -2,12 +2,6 @@ name: AH Raw History Repair
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/backfill_raw_history.py'
-      - 'tests/test_ah_backfill_raw_history.py'
-      - '.github/workflows/raw-history-repair.yml'
 
 permissions:
   contents: write
