@@ -18,6 +18,8 @@ class ExternalRecoveryWorkflowContract(unittest.TestCase):
     def test_pr_validation_has_no_write_permission(self):
         source = (ROOT / ".github/workflows/external-recovery-tests.yml").read_text()
         self.assertIn("pull_request:", source)
+        self.assertIn("'tests/test_ah_external_recovery.py'", source)
+        self.assertIn("'tests/test_workflow_external_recovery.py'", source)
         self.assertIn("contents: read", source)
         self.assertNotIn("actions: write", source)
 
