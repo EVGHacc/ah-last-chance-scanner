@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-11-01",
   "weekday": "Sunday",
-  "scheduledSlot": "20:00",
-  "scheduledAt": "2026-11-01T20:00:00+01:00",
-  "rawScheduledSlot": "20:00",
-  "rawScheduledAt": "2026-11-01T20:00:00+01:00",
-  "startedAt": "2026-11-01T20:00:00.344459+01:00",
-  "completedAt": "2026-11-01T20:00:05.561492+01:00",
-  "checkedAt": "2026-11-01T20:00:05.561492+01:00",
+  "scheduledSlot": "20:03",
+  "scheduledAt": "2026-11-01T20:03:00+01:00",
+  "rawScheduledSlot": "20:03",
+  "rawScheduledAt": "2026-11-01T20:03:00+01:00",
+  "startedAt": "2026-11-01T20:03:00.290498+01:00",
+  "completedAt": "2026-11-01T20:03:05.642600+01:00",
+  "checkedAt": "2026-11-01T20:03:05.642600+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2372,8 +2372,8 @@
       "bakeryItems": 33,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 44,
-      "all70Stock": 81.0,
+      "all70Items": 45,
+      "all70Stock": 85.0,
       "all70": [
         {
           "productId": 67690,
@@ -2541,6 +2541,18 @@
           "stock": 6,
           "priceWas": "3.89",
           "priceNow": "1.17",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 80585,
+          "title": "AH Pitloze witte druiven",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 4,
+          "priceWas": "2.49",
+          "priceNow": "0.69",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -3064,6 +3076,18 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
+          "productId": 125035,
+          "title": "AH Les pains boulogne heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 6,
+          "priceWas": "2.39",
+          "priceNow": "1.79",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
           "productId": 578301,
           "title": "AH Liefde & Passie OerDesem zonne rogge",
           "brand": "AH Liefde & Passie",
@@ -3136,6 +3160,18 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
+          "productId": 417148,
+          "title": "AH Vloerbrood volkoren heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "2.69",
+          "priceNow": "2.02",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
           "productId": 252839,
           "title": "AH Vloerbrood meergranen half",
           "brand": "AH",
@@ -3193,18 +3229,6 @@
           "stock": 8,
           "priceWas": "0.99",
           "priceNow": "0.84",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 125035,
-          "title": "AH Les pains boulogne heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 6,
-          "priceWas": "2.39",
-          "priceNow": "2.03",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -3289,18 +3313,6 @@
           "stock": 2,
           "priceWas": "0.89",
           "priceNow": "0.76",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 417148,
-          "title": "AH Vloerbrood volkoren heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "2.69",
-          "priceNow": "2.29",
           "markdownExpirationDate": "2026-11-01"
         },
         {
