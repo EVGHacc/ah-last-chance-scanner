@@ -16,6 +16,25 @@ MAX_HEARTBEAT_AGE = 240
 COOLDOWN_SECONDS = 300
 
 
+def expected_slots(cadence_minutes):
+    start = 17 * 60 + 30
+    end = 22 * 60 + 30
+    return {
+        f"{minute // 60:02d}:{minute % 60:02d}"
+        for minute in range(start, end + 1, cadence_minutes)
+    }
+
+
+def complete_slot_set(status, key, expected_count, expected):
+    slots = status.get(key)
+    return (
+        isinstance(slots, list)
+        and len(slots) == expected_count
+        and len(set(slots)) == expected_count
+        and set(slots) == expected
+    )
+
+
 def decision(now, status, runs):
     minute = now.hour * 60 + now.minute
     if not (17 * 60 + 35 <= minute <= 22 * 60 + 10):
@@ -32,6 +51,10 @@ def decision(now, status, runs):
         and status.get("category") == "Vlees"
         and status.get("rawExpected") == 101
         and status.get("canonicalExpected") == 61
+        and complete_slot_set(status, "rawSeen", 101, expected_slots(3))
+        and complete_slot_set(status, "canonicalSeen", 61, expected_slots(5))
+        and not status.get("rawMissing")
+        and not status.get("canonicalMissing")
         and REQUIRED_STORES.issubset(set(status.get("stores") or []))
         and latest.get("authMode") == "user-refresh"
         and -30 <= age <= MAX_HEARTBEAT_AGE
