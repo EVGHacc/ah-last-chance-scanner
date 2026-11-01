@@ -13,7 +13,6 @@ class ExternalRecoveryWorkflowContract(unittest.TestCase):
         self.assertIn("contents: read", source)
         self.assertIn("actions: write", source)
         self.assertIn("scripts/external_start_recovery.py --self-test", source)
-        self.assertIn("unittest discover -s tests -p 'test_ah_external_recovery.py' -v", source)
         self.assertIn("python scripts/external_start_recovery.py", source)
 
     def test_pr_validation_has_no_write_permission(self):
@@ -21,6 +20,7 @@ class ExternalRecoveryWorkflowContract(unittest.TestCase):
         self.assertIn("pull_request:", source)
         self.assertIn("'tests/test_ah_external_recovery.py'", source)
         self.assertIn("'tests/test_workflow_external_recovery.py'", source)
+        self.assertIn("unittest discover -s tests -p 'test_ah_external_recovery.py' -v", source)
         self.assertIn("contents: read", source)
         self.assertNotIn("actions: write", source)
 
