@@ -17,11 +17,13 @@ class SupervisedSessionWorkflowTests(unittest.TestCase):
         self.assertIn("steps.production_tests.outcome", source)
         self.assertIn("steps.supervised_scan.outcome", source)
 
-    def test_skipped_gate_is_distinguished_from_failed_gate(self):
+    def test_failed_gate_and_skipped_scan_are_not_reported_as_success(self):
         source = (ROOT / ".github/workflows/session.yml").read_text(encoding="utf-8")
 
-        self.assertIn('if [ "\${{ steps.gate.outcome }}" != "success" ]; then', source)
-        self.assertIn('if [ "\${{ steps.gate.outputs.run }}" != "true" ]; then', source)
+        self.assertIn("GATE STEP FAILED", source)
+        self.assertIn("PRODUCTION TESTS DID NOT SUCCEED", source)
+        self.assertIn("SUPERVISED SCAN DID NOT SUCCEED", source)
+        self.assertIn("Gate declined this invocation outside the monitoring window", source)
         self.assertIn("exit 1", source)
 
 
