@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-11-01",
   "weekday": "Sunday",
-  "scheduledSlot": "18:30",
-  "scheduledAt": "2026-11-01T18:30:00+01:00",
-  "rawScheduledSlot": "18:30",
-  "rawScheduledAt": "2026-11-01T18:30:00+01:00",
-  "startedAt": "2026-11-01T18:30:00.288391+01:00",
-  "completedAt": "2026-11-01T18:30:04.711971+01:00",
-  "checkedAt": "2026-11-01T18:30:04.711971+01:00",
+  "scheduledSlot": "18:33",
+  "scheduledAt": "2026-11-01T18:33:00+01:00",
+  "rawScheduledSlot": "18:33",
+  "rawScheduledAt": "2026-11-01T18:33:00+01:00",
+  "startedAt": "2026-11-01T18:33:00.297003+01:00",
+  "completedAt": "2026-11-01T18:33:05.212430+01:00",
+  "checkedAt": "2026-11-01T18:33:05.212430+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,16 +25,40 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 156,
-      "meatItems": 4,
-      "meat70Items": 0,
-      "meat70Stock": 0,
+      "totalBargainItems": 157,
+      "meatItems": 5,
+      "meat70Items": 1,
+      "meat70Stock": 2.0,
       "bakeryItems": 39,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
-      "all70Items": 11,
-      "all70Stock": 39.0,
+      "all70Items": 13,
+      "all70Stock": 42.0,
       "all70": [
+        {
+          "productId": 610087,
+          "title": "AH Vers geperste smoothie mango perzik",
+          "brand": "AH",
+          "size": "0,75 l",
+          "category": "Fruit, verse sappen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 199330,
+          "title": "AH Runderhart",
+          "brand": "AH",
+          "size": "ca. 240 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "4.49",
+          "priceNow": "1.35",
+          "markdownExpirationDate": "2026-11-01"
+        },
         {
           "productId": 563663,
           "title": "Vivera Plantaardige crispy chicken burger",
@@ -175,10 +199,10 @@
           "brand": "AH",
           "size": "ca. 240 g",
           "category": "Vlees",
-          "discountPct": 40,
+          "discountPct": 70,
           "stock": 2,
           "priceWas": "4.49",
-          "priceNow": "2.69",
+          "priceNow": "1.35",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -204,6 +228,18 @@
           "priceWas": "5.49",
           "priceNow": "3.29",
           "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 619343,
+          "title": "AH Scharrel kipborrelhapjes naturel",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "4.29",
+          "priceNow": "3.22",
+          "markdownExpirationDate": "2026-11-02"
         },
         {
           "productId": 454769,
@@ -544,18 +580,6 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 606048,
-          "title": "AH Liefde & Passie Desem pistolet wit",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "0.99",
-          "priceNow": "0.84",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
           "productId": 606050,
           "title": "AH Liefde & Passie Desem pistolet mais pompoen",
           "brand": "AH Liefde & Passie",
@@ -589,6 +613,18 @@
           "stock": 1,
           "priceWas": "3.19",
           "priceNow": "2.71",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 606048,
+          "title": "AH Liefde & Passie Desem pistolet wit",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "0.99",
+          "priceNow": "0.84",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -693,15 +729,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 141,
+      "totalBargainItems": 140,
       "meatItems": 3,
       "meat70Items": 0,
       "meat70Stock": 0,
-      "bakeryItems": 28,
+      "bakeryItems": 27,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 19,
-      "all70Stock": 78.0,
+      "all70Items": 20,
+      "all70Stock": 79.0,
       "all70": [
         {
           "productId": 597730,
@@ -737,6 +773,18 @@
           "stock": 1,
           "priceWas": "4.49",
           "priceNow": "1.35",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 128129,
+          "title": "AH Basis tonijn ei L",
+          "brand": "AH",
+          "size": "450 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.99",
+          "priceNow": "1.20",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -1104,18 +1152,6 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 603533,
-          "title": "AH Kip mango snack",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.49",
-          "priceNow": "1.12",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
           "productId": 606074,
           "title": "AH Pistache croissant",
           "brand": "AH",
@@ -1197,18 +1233,6 @@
           "stock": 2,
           "priceWas": "0.89",
           "priceNow": "0.76",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 230842,
-          "title": "AH Liefde & Passie Spelt",
-          "brand": "AH Liefde & Passie",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 2,
-          "priceWas": "3.19",
-          "priceNow": "2.71",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -1296,6 +1320,18 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
+          "productId": 230842,
+          "title": "AH Liefde & Passie Spelt",
+          "brand": "AH Liefde & Passie",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 1,
+          "priceWas": "3.19",
+          "priceNow": "2.71",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
           "productId": 603332,
           "title": "Canderel Liquid",
           "brand": "Canderel",
@@ -1315,13 +1351,13 @@
       "fetched": true,
       "totalBargainItems": 160,
       "meatItems": 6,
-      "meat70Items": 0,
-      "meat70Stock": 0,
+      "meat70Items": 1,
+      "meat70Stock": 1.0,
       "bakeryItems": 44,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 9,
-      "all70Stock": 17.0,
+      "all70Items": 11,
+      "all70Stock": 20.0,
       "all70": [
         {
           "productId": 612828,
@@ -1345,6 +1381,30 @@
           "stock": 2,
           "priceWas": "2.79",
           "priceNow": "0.84",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 574881,
+          "title": "AH Pasta kip BBQ XL",
+          "brand": "AH",
+          "size": "550 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "5.99",
+          "priceNow": "1.80",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 620856,
+          "title": "AH Biologisch Kipburger gepaneerd",
+          "brand": "AH Biologisch",
+          "size": "200 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.49",
+          "priceNow": "1.35",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -1434,6 +1494,18 @@
       ],
       "items": [
         {
+          "productId": 620856,
+          "title": "AH Biologisch Kipburger gepaneerd",
+          "brand": "AH Biologisch",
+          "size": "200 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "4.49",
+          "priceNow": "1.35",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
           "productId": 187580,
           "title": "AH Gehakt cordon bleu",
           "brand": "AH",
@@ -1491,18 +1563,6 @@
           "stock": 1,
           "priceWas": "3.99",
           "priceNow": "2.39",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 620856,
-          "title": "AH Biologisch Kipburger gepaneerd",
-          "brand": "AH Biologisch",
-          "size": "200 g",
-          "category": "Vlees",
-          "discountPct": 40,
-          "stock": 1,
-          "priceWas": "4.49",
-          "priceNow": "2.69",
           "markdownExpirationDate": "2026-11-01"
         }
       ],
@@ -2043,13 +2103,13 @@
       "fetched": true,
       "totalBargainItems": 104,
       "meatItems": 11,
-      "meat70Items": 0,
-      "meat70Stock": 0,
+      "meat70Items": 1,
+      "meat70Stock": 2.0,
       "bakeryItems": 2,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 8,
-      "all70Stock": 29.0,
+      "all70Items": 10,
+      "all70Stock": 32.0,
       "all70": [
         {
           "productId": 621954,
@@ -2064,6 +2124,18 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
+          "productId": 619325,
+          "title": "AH Rundergehakt Italiaanse stijl",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discountPct": 70,
+          "stock": 2,
+          "priceWas": "4.99",
+          "priceNow": "1.50",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
           "productId": 613084,
           "title": "AH Gerookte hele haring",
           "brand": "AH",
@@ -2073,6 +2145,18 @@
           "stock": 2,
           "priceWas": "3.45",
           "priceNow": "1.04",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 582179,
+          "title": "AH Zalm encroute",
+          "brand": "AH",
+          "size": "220 g",
+          "category": "Vis",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.49",
+          "priceNow": "1.95",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -2155,10 +2239,10 @@
           "brand": "AH",
           "size": "300 g",
           "category": "Vlees",
-          "discountPct": 40,
+          "discountPct": 70,
           "stock": 2,
           "priceWas": "4.99",
-          "priceNow": "2.99",
+          "priceNow": "1.50",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -2313,8 +2397,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 109,
-      "meatItems": 5,
+      "totalBargainItems": 110,
+      "meatItems": 6,
       "meat70Items": 0,
       "meat70Stock": 0,
       "bakeryItems": 2,
@@ -2420,6 +2504,18 @@
           "priceWas": "7.05",
           "priceNow": "4.23",
           "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 441916,
+          "title": "AH Excellent Ultimate beefburger",
+          "brand": "AH Excellent",
+          "size": "150 g",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 1,
+          "priceWas": "3.49",
+          "priceNow": "2.62",
+          "markdownExpirationDate": "2026-11-02"
         }
       ],
       "bakery": [
