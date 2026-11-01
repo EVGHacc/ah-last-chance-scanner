@@ -47,6 +47,7 @@ jobs:
         if: steps.gate.outputs.run == 'true'
         run: python -m pip install --disable-pip-version-check --quiet cryptography
       - name: Test production stack
+        id: production_tests
         if: steps.gate.outputs.run == 'true'
         run: |
           python -m py_compile scanner.py scripts/auth_state.py scripts/persist.py scripts/publish.py scripts/session.py scripts/selftest.py scripts/schedule_gate.py scripts/independent_qa.py
@@ -56,6 +57,7 @@ jobs:
           python scripts/auth_state.py
           python scripts/selftest.py
       - name: Run supervised scan session
+        id: supervised_scan
         if: steps.gate.outputs.run == 'true'
         env:
           AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
@@ -63,3 +65,25 @@ jobs:
           git config user.name 'ah-session-bot'
           git config user.email 'actions@users.noreply.github.com'
           python scripts/session.py
+
+      - name: Enforce supervised session outcome
+        if: always()
+        shell: bash
+        run: |
+          if [ "${{ steps.gate.outcome }}" != "success" ]; then
+            echo "::error::GATE STEP FAILED; scheduled session state is unknown"
+            exit 1
+          fi
+          if [ "${{ steps.gate.outputs.run }}" != "true" ]; then
+            echo "Gate declined this invocation outside the monitoring window"
+            exit 0
+          fi
+          if [ "${{ steps.production_tests.outcome }}" != "success" ]; then
+            echo "::error::PRODUCTION TESTS DID NOT SUCCEED"
+            exit 1
+          fi
+          if [ "${{ steps.supervised_scan.outcome }}" != "success" ]; then
+            echo "::error::SUPERVISED SCAN DID NOT SUCCEED"
+            exit 1
+          fi
+          echo "Supervised session and production tests both succeeded"
