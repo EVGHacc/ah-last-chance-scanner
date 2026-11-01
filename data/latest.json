@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-11-01",
   "weekday": "Sunday",
-  "scheduledSlot": "20:57",
-  "scheduledAt": "2026-11-01T20:57:00+01:00",
-  "rawScheduledSlot": "20:57",
-  "rawScheduledAt": "2026-11-01T20:57:00+01:00",
-  "startedAt": "2026-11-01T20:57:00.308606+01:00",
-  "completedAt": "2026-11-01T20:57:04.470839+01:00",
-  "checkedAt": "2026-11-01T20:57:04.470839+01:00",
+  "scheduledSlot": "21:00",
+  "scheduledAt": "2026-11-01T21:00:00+01:00",
+  "rawScheduledSlot": "21:00",
+  "rawScheduledAt": "2026-11-01T21:00:00+01:00",
+  "startedAt": "2026-11-01T21:00:00.288683+01:00",
+  "completedAt": "2026-11-01T21:00:10.320188+01:00",
+  "checkedAt": "2026-11-01T21:00:10.320188+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -2409,7 +2409,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 42,
-      "all70Stock": 81.0,
+      "all70Stock": 80.0,
       "all70": [
         {
           "productId": 67690,
@@ -2652,18 +2652,6 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 405210,
-          "title": "AH Pesto parelcouscous S",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.49",
-          "priceNow": "1.05",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
           "productId": 610812,
           "title": "AH Noedels kip hoisin",
           "brand": "AH",
@@ -2733,6 +2721,18 @@
           "stock": 1,
           "priceWas": "4.49",
           "priceNow": "1.35",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 405210,
+          "title": "AH Pesto parelcouscous S",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "3.49",
+          "priceNow": "1.05",
           "markdownExpirationDate": "2026-11-01"
         },
         {
