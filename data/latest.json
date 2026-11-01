@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-11-01",
   "weekday": "Sunday",
-  "scheduledSlot": "19:57",
-  "scheduledAt": "2026-11-01T19:57:00+01:00",
-  "rawScheduledSlot": "19:57",
-  "rawScheduledAt": "2026-11-01T19:57:00+01:00",
-  "startedAt": "2026-11-01T19:57:00.294583+01:00",
-  "completedAt": "2026-11-01T19:57:04.815677+01:00",
-  "checkedAt": "2026-11-01T19:57:04.815677+01:00",
+  "scheduledSlot": "20:00",
+  "scheduledAt": "2026-11-01T20:00:00+01:00",
+  "rawScheduledSlot": "20:00",
+  "rawScheduledAt": "2026-11-01T20:00:00+01:00",
+  "startedAt": "2026-11-01T20:00:00.344459+01:00",
+  "completedAt": "2026-11-01T20:00:05.561492+01:00",
+  "checkedAt": "2026-11-01T20:00:05.561492+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,28 +25,16 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 150,
+      "totalBargainItems": 144,
       "meatItems": 6,
       "meat70Items": 1,
       "meat70Stock": 1.0,
       "bakeryItems": 27,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 36,
-      "all70Stock": 75.0,
+      "all70Items": 30,
+      "all70Stock": 62.0,
       "all70": [
-        {
-          "productId": 230848,
-          "title": "AH Sperziebonen kleinverpakking",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 4,
-          "priceWas": "1.99",
-          "priceNow": "0.60",
-          "markdownExpirationDate": "2026-11-01"
-        },
         {
           "productId": 395948,
           "title": "AH Spinazie kleinverpakking",
@@ -60,18 +48,6 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 578948,
-          "title": "AH Snoepgroente paprika",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "1.79",
-          "priceNow": "0.54",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
           "productId": 525261,
           "title": "AH Biologisch Pompoen stukjes",
           "brand": "AH Biologisch",
@@ -81,42 +57,6 @@
           "stock": 2,
           "priceWas": "3.69",
           "priceNow": "1.11",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 196694,
-          "title": "AH Aardappelpartjes kleinverpakking",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "0.85",
-          "priceNow": "0.26",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 435435,
-          "title": "AH Wokgroente Thais grootverpakking",
-          "brand": "AH",
-          "size": "600 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "3.19",
-          "priceNow": "0.96",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 67663,
-          "title": "AH Thaise wokgroente prei rode peper",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Groente, aardappelen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.39",
-          "priceNow": "0.72",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -144,6 +84,18 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
+          "productId": 196694,
+          "title": "AH Aardappelpartjes kleinverpakking",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Groente, aardappelen",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "0.85",
+          "priceNow": "0.26",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
           "productId": 395953,
           "title": "AH Bloemkoolroosjes",
           "brand": "AH",
@@ -168,16 +120,16 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 141489,
-          "title": "AH Vers geperst sap appel peer framboos",
+          "productId": 435435,
+          "title": "AH Wokgroente Thais grootverpakking",
           "brand": "AH",
-          "size": "1 l",
-          "category": "Fruit, verse sappen",
+          "size": "600 g",
+          "category": "Groente, aardappelen",
           "discountPct": 70,
           "stock": 3,
-          "priceWas": "4.19",
-          "priceNow": "1.26",
-          "markdownExpirationDate": "2026-11-01"
+          "priceWas": "3.19",
+          "priceNow": "0.96",
+          "markdownExpirationDate": "2026-11-02"
         },
         {
           "productId": 544086,
@@ -189,18 +141,6 @@
           "stock": 1,
           "priceWas": "2.49",
           "priceNow": "0.75",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 610087,
-          "title": "AH Vers geperste smoothie mango perzik",
-          "brand": "AH",
-          "size": "0,75 l",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "3.99",
-          "priceNow": "1.20",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -246,33 +186,9 @@
           "size": "400 g",
           "category": "Maaltijden, salades",
           "discountPct": 70,
-          "stock": 2,
+          "stock": 1,
           "priceWas": "5.99",
           "priceNow": "1.80",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 484149,
-          "title": "AH Stoomsoep tom kha kai",
-          "brand": "AH",
-          "size": "550 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "6.99",
-          "priceNow": "1.50",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 579426,
-          "title": "AH Oude kaas L",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "5.49",
-          "priceNow": "1.65",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -297,6 +213,18 @@
           "stock": 1,
           "priceWas": "6.49",
           "priceNow": "1.65",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 484149,
+          "title": "AH Stoomsoep tom kha kai",
+          "brand": "AH",
+          "size": "550 g",
+          "category": "Maaltijden, salades",
+          "discountPct": 70,
+          "stock": 1,
+          "priceWas": "6.99",
+          "priceNow": "1.50",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -873,15 +801,15 @@
       "storeId": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "totalBargainItems": 131,
+      "totalBargainItems": 130,
       "meatItems": 2,
       "meat70Items": 1,
       "meat70Stock": 1.0,
       "bakeryItems": 23,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 39,
-      "all70Stock": 100.0,
+      "all70Items": 38,
+      "all70Stock": 99.0,
       "all70": [
         {
           "productId": 41138,
@@ -1169,18 +1097,6 @@
           "stock": 1,
           "priceWas": "6.49",
           "priceNow": "1.50",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 365380,
-          "title": "AH Pasta tonijn XL",
-          "brand": "AH",
-          "size": "550 g",
-          "category": "Maaltijden, salades",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "5.99",
-          "priceNow": "1.80",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -3525,11 +3441,11 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 167,
+      "totalBargainItems": 165,
       "meatItems": 12,
       "meat70Items": 4,
       "meat70Stock": 5.0,
-      "bakeryItems": 36,
+      "bakeryItems": 35,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
       "all70Items": 50,
@@ -4302,7 +4218,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 40,
-          "stock": 6,
+          "stock": 4,
           "priceWas": "0.65",
           "priceNow": "0.39",
           "markdownExpirationDate": "2026-11-01"
@@ -4410,7 +4326,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
-          "stock": 24,
+          "stock": 21,
           "priceWas": "0.28",
           "priceNow": "0.24",
           "markdownExpirationDate": "2026-11-01"
@@ -4422,7 +4338,7 @@
           "size": "per stuk",
           "category": "Bakkerij",
           "discountPct": 15,
-          "stock": 17,
+          "stock": 14,
           "priceWas": "0.35",
           "priceNow": "0.30",
           "markdownExpirationDate": "2026-11-01"
@@ -4690,18 +4606,6 @@
           "priceWas": "2.39",
           "priceNow": "2.03",
           "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 515734,
-          "title": "AH Kokosmakroon",
-          "brand": "AH",
-          "size": "4 stuks",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "3.39",
-          "priceNow": "1.91",
-          "markdownExpirationDate": "2026-11-04"
         },
         {
           "productId": 498196,
