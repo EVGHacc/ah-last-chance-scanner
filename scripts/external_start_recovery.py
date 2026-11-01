@@ -30,6 +30,7 @@ def complete_slot_set(status, key, expected_count, expected):
     return (
         isinstance(slots, list)
         and len(slots) == expected_count
+        and all(isinstance(slot, str) for slot in slots)
         and len(set(slots)) == expected_count
         and set(slots) == expected
     )
