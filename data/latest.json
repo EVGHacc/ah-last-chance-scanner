@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-11-01",
   "weekday": "Sunday",
-  "scheduledSlot": "18:57",
-  "scheduledAt": "2026-11-01T18:57:00+01:00",
-  "rawScheduledSlot": "18:57",
-  "rawScheduledAt": "2026-11-01T18:57:00+01:00",
-  "startedAt": "2026-11-01T18:57:00.353503+01:00",
-  "completedAt": "2026-11-01T18:57:04.759992+01:00",
-  "checkedAt": "2026-11-01T18:57:04.759992+01:00",
+  "scheduledSlot": "19:00",
+  "scheduledAt": "2026-11-01T19:00:00+01:00",
+  "rawScheduledSlot": "19:00",
+  "rawScheduledAt": "2026-11-01T19:00:00+01:00",
+  "startedAt": "2026-11-01T19:00:00.276675+01:00",
+  "completedAt": "2026-11-01T19:00:06.253137+01:00",
+  "checkedAt": "2026-11-01T19:00:06.253137+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -496,18 +496,6 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 417147,
-          "title": "AH Vloerbrood meergranen heel",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 15,
-          "stock": 5,
-          "priceWas": "2.69",
-          "priceNow": "2.29",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
           "productId": 606047,
           "title": "AH Pistolet volkoren",
           "brand": "AH",
@@ -517,6 +505,18 @@
           "stock": 4,
           "priceWas": "0.28",
           "priceNow": "0.24",
+          "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 417147,
+          "title": "AH Vloerbrood meergranen heel",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 15,
+          "stock": 4,
+          "priceWas": "2.69",
+          "priceNow": "2.29",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -2349,8 +2349,8 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 115,
-      "meatItems": 12,
+      "totalBargainItems": 116,
+      "meatItems": 13,
       "meat70Items": 0,
       "meat70Stock": 0,
       "bakeryItems": 2,
@@ -2516,6 +2516,18 @@
           "priceWas": "7.05",
           "priceNow": "4.23",
           "markdownExpirationDate": "2026-11-01"
+        },
+        {
+          "productId": 436758,
+          "title": "AH Biologisch Duitse biefstuk",
+          "brand": "AH Biologisch",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discountPct": 25,
+          "stock": 7,
+          "priceWas": "5.49",
+          "priceNow": "4.12",
+          "markdownExpirationDate": "2026-11-02"
         },
         {
           "productId": 169422,
