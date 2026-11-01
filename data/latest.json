@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-11-01",
   "weekday": "Sunday",
-  "scheduledSlot": "20:40",
-  "scheduledAt": "2026-11-01T20:40:00+01:00",
-  "rawScheduledSlot": "20:40",
-  "rawScheduledAt": "2026-11-01T20:40:00+01:00",
-  "startedAt": "2026-11-01T20:40:00.311247+01:00",
-  "completedAt": "2026-11-01T20:40:05.262913+01:00",
-  "checkedAt": "2026-11-01T20:40:05.262913+01:00",
+  "scheduledSlot": "20:42",
+  "scheduledAt": "2026-11-01T20:42:00+01:00",
+  "rawScheduledSlot": "20:42",
+  "rawScheduledAt": "2026-11-01T20:42:00+01:00",
+  "startedAt": "2026-11-01T20:42:00.312421+01:00",
+  "completedAt": "2026-11-01T20:42:04.800252+01:00",
+  "checkedAt": "2026-11-01T20:42:04.800252+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -3369,15 +3369,15 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 148,
+      "totalBargainItems": 145,
       "meatItems": 10,
       "meat70Items": 2,
       "meat70Stock": 3.0,
-      "bakeryItems": 35,
+      "bakeryItems": 34,
       "bakery70Items": 1,
       "bakery70Stock": 1.0,
-      "all70Items": 35,
-      "all70Stock": 57.0,
+      "all70Items": 33,
+      "all70Stock": 54.0,
       "all70": [
         {
           "productId": 525237,
@@ -3608,18 +3608,6 @@
           "markdownExpirationDate": "2026-11-01"
         },
         {
-          "productId": 520300,
-          "title": "AH Verse meloenmix",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "2.49",
-          "priceNow": "0.75",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
           "productId": 168233,
           "title": "AH Verse ananas grootverpakking",
           "brand": "AH",
@@ -3737,18 +3725,6 @@
           "stock": 2,
           "priceWas": "9.99",
           "priceNow": "3.00",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 486717,
-          "title": "Paturain Kruiden en fijne knoflook",
-          "brand": "Paturain",
-          "size": "150 g",
-          "category": "Kaas",
-          "discountPct": 70,
-          "stock": 2,
-          "priceWas": "3.39",
-          "priceNow": "1.02",
           "markdownExpirationDate": "2026-11-01"
         },
         {
@@ -4101,18 +4077,6 @@
           "stock": 1,
           "priceWas": "0.99",
           "priceNow": "0.74",
-          "markdownExpirationDate": "2026-11-01"
-        },
-        {
-          "productId": 606092,
-          "title": "AH Empanada Samosa",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 1,
-          "priceWas": "1.39",
-          "priceNow": "1.04",
           "markdownExpirationDate": "2026-11-01"
         },
         {
