@@ -56,5 +56,5 @@ if __name__ == "__main__":
         schedule = os.getenv("EVENT_SCHEDULE", "")
         run = allowed(event, schedule, now)
         with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
-            output.write(f"run={str(run).lower()}\\n")
+            output.write(f"run={str(run).lower()}\n")
         print("Amsterdam=", now.isoformat(), "event=", event, "schedule=", schedule, "run=", run)
