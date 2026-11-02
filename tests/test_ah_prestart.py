@@ -60,7 +60,7 @@ class PrestartTests(unittest.TestCase):
         workflow = (ROOT / ".github/workflows/session.yml").read_text(encoding="utf-8")
         self.assertIn("- cron: '25 15 * * *'", workflow)
         self.assertIn("- cron: '25 16 * * *'", workflow)
-        self.assertNotIn("workflow_dispatch:", workflow)
+        self.assertIn("workflow_dispatch:", workflow)
         self.assertIn("python scripts/prestart.py", workflow)
         self.assertIn("scripts/prestart.py", workflow)
         probe = (ROOT / ".github/workflows/probe.yml").read_text(encoding="utf-8")
