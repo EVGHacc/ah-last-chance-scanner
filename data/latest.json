@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-11-02",
   "weekday": "Monday",
-  "scheduledSlot": "22:21",
-  "scheduledAt": "2026-11-02T22:21:00+01:00",
-  "rawScheduledSlot": "22:21",
-  "rawScheduledAt": "2026-11-02T22:21:00+01:00",
-  "startedAt": "2026-11-02T22:21:00.422121+01:00",
-  "completedAt": "2026-11-02T22:21:05.619385+01:00",
-  "checkedAt": "2026-11-02T22:21:05.619385+01:00",
+  "scheduledSlot": "22:24",
+  "scheduledAt": "2026-11-02T22:24:00+01:00",
+  "rawScheduledSlot": "22:24",
+  "rawScheduledAt": "2026-11-02T22:24:00+01:00",
+  "startedAt": "2026-11-02T22:24:00.459627+01:00",
+  "completedAt": "2026-11-02T22:24:07.086507+01:00",
+  "checkedAt": "2026-11-02T22:24:07.086507+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -3296,15 +3296,15 @@
       "storeId": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "totalBargainItems": 165,
-      "meatItems": 24,
-      "meat70Items": 1,
-      "meat70Stock": 3.0,
+      "totalBargainItems": 162,
+      "meatItems": 23,
+      "meat70Items": 0,
+      "meat70Stock": 0,
       "bakeryItems": 31,
       "bakery70Items": 1,
       "bakery70Stock": 3.0,
-      "all70Items": 19,
-      "all70Stock": 43.0,
+      "all70Items": 16,
+      "all70Stock": 38.0,
       "all70": [
         {
           "productId": 497411,
@@ -3415,18 +3415,6 @@
           "markdownExpirationDate": "2026-11-03"
         },
         {
-          "productId": 285947,
-          "title": "AH Vers geperst sap sinaasappel aardbei",
-          "brand": "AH",
-          "size": "250 ml",
-          "category": "Fruit, verse sappen",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "1.99",
-          "priceNow": "0.60",
-          "markdownExpirationDate": "2026-11-02"
-        },
-        {
           "productId": 237426,
           "title": "AH Appel witlof M",
           "brand": "AH",
@@ -3463,18 +3451,6 @@
           "markdownExpirationDate": "2026-11-02"
         },
         {
-          "productId": 436758,
-          "title": "AH Biologisch Duitse biefstuk",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "5.49",
-          "priceNow": "1.65",
-          "markdownExpirationDate": "2026-11-02"
-        },
-        {
           "productId": 587665,
           "title": "AH Krokante visfilet gegratineerd met kaas",
           "brand": "AH",
@@ -3496,19 +3472,7 @@
           "stock": 1,
           "priceWas": "3.99",
           "priceNow": "1.20",
-          "markdownExpirationDate": "2026-11-02"
-        },
-        {
-          "productId": 620824,
-          "title": "AH Visfrietjes",
-          "brand": "AH",
-          "size": "ca. 200 g",
-          "category": "Vis",
-          "discountPct": 70,
-          "stock": 1,
-          "priceWas": "3.99",
-          "priceNow": "1.20",
-          "markdownExpirationDate": "2026-11-02"
+          "markdownExpirationDate": "2026-11-03"
         },
         {
           "productId": 515766,
@@ -3536,18 +3500,6 @@
         }
       ],
       "items": [
-        {
-          "productId": 436758,
-          "title": "AH Biologisch Duitse biefstuk",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "5.49",
-          "priceNow": "1.65",
-          "markdownExpirationDate": "2026-11-02"
-        },
         {
           "productId": 551138,
           "title": "AH Biologisch Ultimate beefburger",
