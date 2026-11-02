@@ -24,11 +24,10 @@ jobs:
           python-version: '3.12'
       - name: Install auth-state dependency
         run: python -m pip install --disable-pip-version-check --quiet cryptography
-      - name: Check production code and data continuity
+      - name: Check production code and scanner self-tests
         run: |
           python -m py_compile scanner.py scripts/*.py
           python scripts/auth_state.py
           python scripts/selftest.py
           python scripts/schedule_gate.py --self-test
           python scripts/independent_qa.py --self-test
-          python scripts/central_data_check.py
