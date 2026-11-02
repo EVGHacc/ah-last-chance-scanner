@@ -5,6 +5,8 @@ on:
     # 17:25 Europe/Amsterdam prestart: UTC 15:25 in summer, 16:25 in winter.
     - cron: '25 15 * * *'
     - cron: '25 16 * * *'
+  # Manual invocation is retained for operator visibility, but the gate rejects it.
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -70,7 +72,7 @@ jobs:
             exit 1
           fi
           if [ "${{ steps.gate.outputs.run }}" != "true" ]; then
-            echo "Gate declined this invocation outside the prestart window"
+            echo "Gate declined this invocation outside the monitoring window"
             exit 0
           fi
           if [ "${{ steps.production_tests.outcome }}" != "success" ]; then
