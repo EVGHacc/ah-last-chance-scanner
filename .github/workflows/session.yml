@@ -2,8 +2,7 @@ name: AH supervised evening session
 
 on:
   schedule:
-    # Local 16:47/53/59, 17:07/13/19, 18:11/17/23; UTC alternatives for DST.
-    # Starting early gives GitHub queue delays headroom; no top-of-hour starts.
+    # DST-aware UTC alternatives; schedule_gate.py admits only intended local starts.
     - cron: '47,53,59 14 * * *'
     - cron: '47,53,59 15 * * *'
     - cron: '7,13,19 15 * * *'
@@ -15,8 +14,9 @@ on:
 permissions:
   contents: write
 
+# This is the sole production scheduler and publisher. Never cancel a running session.
 concurrency:
-  group: ah-last-chance-session
+  group: ah-production-single-writer
   cancel-in-progress: false
 
 jobs:
@@ -60,7 +60,6 @@ jobs:
           git config user.name 'ah-session-bot'
           git config user.email 'actions@users.noreply.github.com'
           python scripts/session.py
-
       - name: Enforce supervised session outcome
         if: always()
         shell: bash
