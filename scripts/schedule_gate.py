@@ -1,48 +1,60 @@
 #!/usr/bin/env python3
-"""Amsterdam/DST-safe gate for redundant GitHub AH evening starters."""
+"""Fail-closed gate for the 17:25 Europe/Amsterdam AH prestart."""
 import os
 import sys
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-TZ=ZoneInfo('Europe/Amsterdam')
-SLOTS=((16,'47,53,59'),(17,'7,13,19'),(18,'11,17,23'))
+TZ = ZoneInfo("Europe/Amsterdam")
+PRESTART_HOUR = 17
+PRESTART_MINUTE = 25
+MAX_START_DELAY_SECONDS = 240
 
 
 def allowed(event, schedule, now):
-    minute=now.hour*60+now.minute
-    if not (16*60+40<=minute<=22*60+20):
+    """Admit only the intended DST-aware cron event within four minutes."""
+    if event != "schedule" or not isinstance(now, datetime) or now.tzinfo is None:
         return False
-    if event!='schedule':
-        return event in ('push','workflow_dispatch')
-    offset=int(now.utcoffset().total_seconds()//3600)
-    expected={f'{minutes} {hour-offset} * * *' for hour,minutes in SLOTS}
-    return schedule in expected
+    local_now = now.astimezone(TZ)
+    target = datetime(
+        local_now.year,
+        local_now.month,
+        local_now.day,
+        PRESTART_HOUR,
+        PRESTART_MINUTE,
+        tzinfo=TZ,
+    )
+    delay = (local_now - target).total_seconds()
+    if not 0 <= delay <= MAX_START_DELAY_SECONDS:
+        return False
+    utc_hour = PRESTART_HOUR - int(target.utcoffset().total_seconds() // 3600)
+    expected_schedule = f"{PRESTART_MINUTE} {utc_hour} * * *"
+    return schedule == expected_schedule
 
 
 def self_test():
-    summer=datetime(2026,7,10,20,56,tzinfo=TZ)
-    winter=datetime(2027,1,10,20,56,tzinfo=TZ)
-    for now in (summer,winter):
-        offset=int(now.utcoffset().total_seconds()//3600)
-        for hour,mins in SLOTS:
-            assert allowed('schedule',f'{mins} {hour-offset} * * *',now)
-        assert not allowed('schedule','0 3 * * *',now)
-        assert allowed('workflow_dispatch','',now)
-        assert not allowed('schedule',f'47,53,59 {14 if offset==1 else 15} * * *',now)
-    assert not allowed('push','',datetime(2026,7,10,16,39,tzinfo=TZ))
-    assert not allowed('schedule','47,53,59 14 * * *',datetime(2026,7,10,22,21,tzinfo=TZ))
-    print('AH scheduler DST and delayed-start tests: PASS')
+    summer = datetime(2026, 7, 10, 17, 25, tzinfo=TZ)
+    winter = datetime(2026, 11, 2, 17, 25, tzinfo=TZ)
+    assert allowed("schedule", "25 15 * * *", summer)
+    assert allowed("schedule", "25 16 * * *", winter)
+    assert allowed("schedule", "25 16 * * *", winter.replace(minute=29))
+    assert not allowed("schedule", "25 16 * * *", winter.replace(minute=29, second=1))
+    assert not allowed("schedule", "30 16 * * *", winter)
+    assert not allowed("workflow_dispatch", "", winter)
+    assert not allowed("push", "", winter)
+    assert not allowed("schedule", "25 16 * * *", winter.replace(minute=24, second=59))
+    assert not allowed("schedule", "25 16 * * *", winter.replace(minute=30))
+    print("AH prestart schedule gate tests: PASS")
 
 
-if __name__=='__main__':
-    if '--self-test' in sys.argv:
+if __name__ == "__main__":
+    if "--self-test" in sys.argv:
         self_test()
     else:
-        now=datetime.now(TZ)
-        event=os.getenv('EVENT_NAME','')
-        schedule=os.getenv('EVENT_SCHEDULE','')
-        run=allowed(event,schedule,now)
-        with open(os.environ['GITHUB_OUTPUT'],'a') as f:
-            f.write(f'run={str(run).lower()}\n')
-        print('Amsterdam=',now.isoformat(),'event=',event,'schedule=',schedule,'run=',run)
+        now = datetime.now(TZ)
+        event = os.getenv("EVENT_NAME", "")
+        schedule = os.getenv("EVENT_SCHEDULE", "")
+        run = allowed(event, schedule, now)
+        with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+            output.write(f"run={str(run).lower()}\\n")
+        print("Amsterdam=", now.isoformat(), "event=", event, "schedule=", schedule, "run=", run)
