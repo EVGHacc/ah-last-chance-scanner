@@ -2,15 +2,23 @@
 
 Publieke authenticated runner voor de AH Laatste Kans-scanner. Gevoelige configuratie staat uitsluitend in GitHub Actions Secrets.
 
-## Productiepad
+## Productiepad en scheduling
 
-1. `.github/workflows/session.yml` start één supervised sessie rond 17:00 Europe/Amsterdam.
-2. `scripts/session.py` plant de volledige union van 3- en 5-minutenpunten tussen 17:30 en 22:30.
-3. `scanner.py` haalt alle drie winkels authenticated op met uitsluitend `user-refresh`.
-4. `scripts/publish.py` is de enige schrijf-/pushroute en gebruikt `scripts/persist.py` voor validatie en opslag.
-5. Cloudflare leest de openbare gevalideerde GitHub-output alleen als stateless relay.
+1. Alleen `.github/workflows/session.yml` bezit de productieplanning en start de supervised sessie.
+2. `scripts/schedule_gate.py` accepteert uitsluitend bedoelde starts binnen het venster 17:30–22:30 Europe/Amsterdam, met CET/CEST-correctie.
+3. `scripts/session.py` plant de volledige union van 3- en 5-minutenpunten tussen 17:30 en 22:30.
+4. `scanner.py` haalt de winkels authenticated op met uitsluitend `user-refresh`.
+5. `scripts/publish.py` is de productie-schrijfroute en gebruikt `scripts/persist.py` voor validatie en opslag.
 
-Er is bewust geen tweede scheduler, watchdog of recovery-workflow meer. De supervised sessie detecteert zelf recente gaten, probeert ze binnen de harde 240-secondenvaliditeitsgrens te herstellen en voert na 22:30 een eindcontrole uit.
+De productieconcurrency is `ah-production-single-writer` met `cancel-in-progress: false`. Een nieuwe scheduler-run mag een lopende sessie niet annuleren.
+
+## Watchdog en guardian
+
+`.github/workflows/fallback-qa.yml` is uitsluitend een read-only watchdog. Deze controleert de actieve primaire sessie en de meest recente gepubliceerde scan. De watchdog mag geen workflow annuleren, dispatchen, token wijzigen of productiegegevens publiceren. Een ontbrekende sessie of ongeldige/verouderde scan resulteert in ALARM.
+
+`.github/workflows/guardian.yml` voert uitsluitend regressietests uit bij relevante codewijzigingen. Het is geen tweede productie-scheduler of publisher.
+
+De watchdog controleert de versheid van de laatst gepubliceerde scan (maximaal 240 seconden). Dit is nadrukkelijk geen onafhankelijke proces-heartbeat; een afzonderlijke heartbeat met een alarmgrens van 60 seconden vereist een aparte, atomische heartbeatbron en valt buiten deze scheduler/watchdog-wijziging.
 
 ## Meetreeks
 
@@ -33,24 +41,10 @@ Een observatie telt alleen bij `user-refresh`, `valid=true`, `OK`/`OK_ZERO_ROWS`
 
 `data/today.json` wordt nooit gevuld met terugberekende of oudere waarnemingen. Ontbrekend blijft ontbrekend.
 
-## Herstel en controles
-
-`session.py` probeert een mislukt scan- of publishpunt opnieuw zolang het oorspronkelijke tijdstip nog geldig kan worden gemeten. Voor en na meetpunten controleert de sessie de gepubliceerde status op recente gaten. Na 22:30 moet de eindstatus exact `101/101 raw` en `61/61 canonical` zijn; anders faalt de workflow met de exacte ontbrekende slots.
-
-`probe.yml` compileert en test de productiecode en doet rond het middaguur een zero-persistence live authenticated probe. `scripts/central_data_check.py` controleert de continuïteit van de huidige dagbestanden en maakt de bekende overgang tussen legacy- en huidige data expliciet.
-
-## Cloudflare
-
-Cloudflare zit niet in het kritieke scanpad. De Worker:
-
-- benadert AH niet;
-- bevat geen AH- of GitHub-token;
-- start geen GitHub Actions;
-- schrijft geen scannerdata;
-- relayeert alleen reeds gepubliceerde GitHub-data.
-
 ## Authenticatie
 
 De productie gebruikt `AH_REFRESH_TOKEN` als GitHub Actions Secret. Een geroteerde refresh-tokenstate wordt versleuteld in `data/auth_state.enc`, zodat opeenvolgende scannerprocessen dezelfde sessie veilig kunnen voortzetten.
 
-<!-- production recovery trigger 2026-10-04 17:34 Europe/Amsterdam -->
+## Cloudflare
+
+Cloudflare zit niet in het kritieke scanpad. De Worker benadert AH niet, bevat geen AH- of GitHub-token, start geen GitHub Actions, schrijft geen scannerdata en relayeert alleen reeds gepubliceerde GitHub-data.
