@@ -20,7 +20,7 @@ permissions:
 
 concurrency:
   group: ah-guardian-regression-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   guardian-tests:
