@@ -2,13 +2,13 @@
   "schemaVersion": 5,
   "date": "2026-11-02",
   "weekday": "Monday",
-  "scheduledSlot": "21:57",
-  "scheduledAt": "2026-11-02T21:57:00+01:00",
-  "rawScheduledSlot": "21:57",
-  "rawScheduledAt": "2026-11-02T21:57:00+01:00",
-  "startedAt": "2026-11-02T21:57:00.401716+01:00",
-  "completedAt": "2026-11-02T21:57:07.545564+01:00",
-  "checkedAt": "2026-11-02T21:57:07.545564+01:00",
+  "scheduledSlot": "22:00",
+  "scheduledAt": "2026-11-02T22:00:00+01:00",
+  "rawScheduledSlot": "22:00",
+  "rawScheduledAt": "2026-11-02T22:00:00+01:00",
+  "startedAt": "2026-11-02T22:00:00.449216+01:00",
+  "completedAt": "2026-11-02T22:00:06.104089+01:00",
+  "checkedAt": "2026-11-02T22:00:06.104089+01:00",
   "delaySeconds": 0,
   "rawDelaySeconds": 0,
   "status": "OK",
@@ -25,15 +25,15 @@
       "storeId": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "totalBargainItems": 157,
-      "meatItems": 17,
-      "meat70Items": 4,
-      "meat70Stock": 8.0,
+      "totalBargainItems": 156,
+      "meatItems": 16,
+      "meat70Items": 3,
+      "meat70Stock": 4.0,
       "bakeryItems": 27,
       "bakery70Items": 0,
       "bakery70Stock": 0,
-      "all70Items": 35,
-      "all70Stock": 62.0,
+      "all70Items": 34,
+      "all70Stock": 58.0,
       "all70": [
         {
           "productId": 497411,
@@ -306,21 +306,9 @@
           "size": "500 g",
           "category": "Vlees",
           "discountPct": 70,
-          "stock": 3,
+          "stock": 2,
           "priceWas": "4.29",
           "priceNow": "1.29",
-          "markdownExpirationDate": "2026-11-03"
-        },
-        {
-          "productId": 197183,
-          "title": "AH Scharrel kipfilet 1 stuk",
-          "brand": "AH",
-          "size": "ca. 200 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "3.79",
-          "priceNow": "1.14",
           "markdownExpirationDate": "2026-11-03"
         },
         {
@@ -488,21 +476,9 @@
           "size": "500 g",
           "category": "Vlees",
           "discountPct": 70,
-          "stock": 3,
+          "stock": 2,
           "priceWas": "4.29",
           "priceNow": "1.29",
-          "markdownExpirationDate": "2026-11-03"
-        },
-        {
-          "productId": 197183,
-          "title": "AH Scharrel kipfilet 1 stuk",
-          "brand": "AH",
-          "size": "ca. 200 g",
-          "category": "Vlees",
-          "discountPct": 70,
-          "stock": 3,
-          "priceWas": "3.79",
-          "priceNow": "1.14",
           "markdownExpirationDate": "2026-11-03"
         },
         {
@@ -1001,7 +977,7 @@
       "bakery70Items": 0,
       "bakery70Stock": 0,
       "all70Items": 37,
-      "all70Stock": 70.0,
+      "all70Stock": 65.0,
       "all70": [
         {
           "productId": 597263,
@@ -1274,7 +1250,7 @@
           "size": "ca. 350 g",
           "category": "Vis",
           "discountPct": 70,
-          "stock": 4,
+          "stock": 2,
           "priceWas": "3.95",
           "priceNow": "1.19",
           "markdownExpirationDate": "2026-11-02"
@@ -1442,7 +1418,7 @@
           "size": "per stuk",
           "category": "Koken, tafelen, vrije tijd",
           "discountPct": 90,
-          "stock": 4,
+          "stock": 1,
           "priceWas": "3.49",
           "priceNow": "0.35",
           "markdownExpirationDate": "2026-11-08"
@@ -4427,18 +4403,6 @@
           "markdownExpirationDate": "2026-11-02"
         },
         {
-          "productId": 230725,
-          "title": "AH Roomboter appelflap",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Bakkerij",
-          "discountPct": 25,
-          "stock": 4,
-          "priceWas": "0.89",
-          "priceNow": "0.67",
-          "markdownExpirationDate": "2026-11-02"
-        },
-        {
           "productId": 606047,
           "title": "AH Pistolet volkoren",
           "brand": "AH",
@@ -4532,6 +4496,18 @@
           "stock": 2,
           "priceWas": "1.29",
           "priceNow": "0.97",
+          "markdownExpirationDate": "2026-11-02"
+        },
+        {
+          "productId": 230725,
+          "title": "AH Roomboter appelflap",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Bakkerij",
+          "discountPct": 25,
+          "stock": 2,
+          "priceWas": "0.89",
+          "priceNow": "0.67",
           "markdownExpirationDate": "2026-11-02"
         },
         {
