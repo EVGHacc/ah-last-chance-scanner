@@ -62,6 +62,7 @@ class WatchdogDecisionTests(unittest.TestCase):
             "rawExpected": 101,
             "canonicalExpected": 61,
             "category": "Vlees",
+            "stores": [1463, 1348, 1135, 4046, 8728],
             "latestValid": {
                 "authMode": "user-refresh",
                 "checkedAt": "2026-11-02T17:59:00+01:00",
