@@ -8,6 +8,8 @@ from zoneinfo import ZoneInfo
 TZ = ZoneInfo("Europe/Amsterdam")
 PRESTART_MINUTES = (17 * 60 + 25, 17 * 60 + 28)
 MAX_START_DELAY_SECONDS = 240
+RECOVERY_DATE = "2026-11-03"
+RECOVERY_CONFIRMATION = "RESTORE-AH-2026-11-03"
 
 
 def _cron_for(target):
@@ -15,12 +17,23 @@ def _cron_for(target):
     return f"{target.minute} {utc_hour} * * *"
 
 
-def allowed(event, schedule, now):
-    """Admit only an exact DST-aware prestart cron, within four minutes of it."""
-    if event != "schedule" or not isinstance(now, datetime) or now.tzinfo is None:
+def allowed(event, schedule, now, recovery_confirmation="", recovery_date="", event_ref=""):
+    """Admit scheduled prestarts or one date/ref/time-bound operator recovery."""
+    if not isinstance(now, datetime) or now.tzinfo is None:
         return False
 
     local_now = now.astimezone(TZ)
+    if event == "workflow_dispatch":
+        return (
+            recovery_confirmation == RECOVERY_CONFIRMATION
+            and recovery_date == RECOVERY_DATE
+            and local_now.date().isoformat() == RECOVERY_DATE
+            and local_now.hour * 60 + local_now.minute >= 17 * 60 + 30
+            and local_now.hour * 60 + local_now.minute <= 22 * 60 + 30
+            and event_ref == "refs/heads/main"
+        )
+    if event != "schedule":
+        return False
     for minute_of_day in PRESTART_MINUTES:
         target = datetime(
             local_now.year,
@@ -64,7 +77,14 @@ if __name__ == "__main__":
         now = datetime.now(TZ)
         event = os.getenv("EVENT_NAME", "")
         schedule = os.getenv("EVENT_SCHEDULE", "")
-        run = allowed(event, schedule, now)
+        run = allowed(
+            event,
+            schedule,
+            now,
+            recovery_confirmation=os.getenv("RECOVERY_CONFIRMATION", ""),
+            recovery_date=os.getenv("RECOVERY_DATE", ""),
+            event_ref=os.getenv("EVENT_REF", ""),
+        )
         with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
             output.write(f"run={str(run).lower()}\n")
         print("Amsterdam=", now.isoformat(), "event=", event, "schedule=", schedule, "run=", run)
