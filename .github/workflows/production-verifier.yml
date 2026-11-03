@@ -24,7 +24,6 @@ jobs:
     if: >-
       (github.event_name == 'workflow_dispatch' && inputs.project == 'ah') ||
       (github.event_name == 'workflow_run' &&
-       github.event.workflow_run.conclusion == 'success' &&
        github.event.workflow_run.name == 'AH supervised evening session')
     runs-on: ubuntu-latest
     timeout-minutes: 6
