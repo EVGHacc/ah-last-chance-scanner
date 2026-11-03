@@ -32,7 +32,7 @@ def heartbeat_age_seconds(status, now):
 
 
 def valid_heartbeat(status, now):
-    """Validate the published authenticated-scan heartbeat (not a process heartbeat).""
+    """Validate the published authenticated-scan heartbeat (not a process heartbeat)."""
     if not isinstance(status, dict) or status.get("date") != now.date().isoformat():
         return False
     if status.get("authMode") != "user-refresh":
