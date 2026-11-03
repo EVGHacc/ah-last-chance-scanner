@@ -16,8 +16,23 @@ MAX_SCAN_AGE = 240
 REQUIRED_STORES = {1463, 1348, 1135, 4046, 8728}
 
 
+def heartbeat_age_seconds(status, now):
+    """Return age of the latest authenticated scan heartbeat, or None if invalid."""
+    if not isinstance(status, dict) or status.get("date") != now.date().isoformat():
+        return None
+    latest = status.get("latestValid") or {}
+    try:
+        checked = datetime.fromisoformat(latest["checkedAt"])
+    except (KeyError, TypeError, ValueError):
+        return None
+    if checked.tzinfo is None:
+        return None
+    age = (now - checked.astimezone(TZ)).total_seconds()
+    return age if 0 <= age <= MAX_SCAN_AGE else None
+
+
 def valid_heartbeat(status, now):
-    """Validate the latest published scan; this is not a process heartbeat."""
+    """Validate the published authenticated-scan heartbeat (not a process heartbeat).""
     if not isinstance(status, dict) or status.get("date") != now.date().isoformat():
         return False
     if status.get("authMode") != "user-refresh":
@@ -32,14 +47,36 @@ def valid_heartbeat(status, now):
     latest = status.get("latestValid") or {}
     if latest.get("authMode") != "user-refresh":
         return False
-    try:
-        checked = datetime.fromisoformat(latest["checkedAt"])
-    except (KeyError, TypeError, ValueError):
-        return False
-    if checked.tzinfo is None:
-        return False
-    age = (now - checked.astimezone(TZ)).total_seconds()
-    return 0 <= age <= MAX_SCAN_AGE
+    return heartbeat_age_seconds(status, now) is not None
+
+
+def circuit_state(runs, now):
+    """Read-only breaker: two consecutive failed scheduled runs open the circuit."""
+    today = []
+    for run in runs:
+        if run.get("event") != "schedule":
+            continue
+        try:
+            created = datetime.fromisoformat(run["created_at"].replace("Z", "+00:00"))
+        except (KeyError, TypeError, ValueError):
+            continue
+        if created.astimezone(TZ).date() == now.date():
+            today.append((created, run))
+    today.sort(key=lambda item: item[0], reverse=True)
+    if not today:
+        return "CLOSED"
+    if today[0][1].get("status") in ACTIVE:
+        return "HALF_OPEN"
+    failures = {"failure", "timed_out", "cancelled", "action_required"}
+    streak = 0
+    for _, run in today:
+        if run.get("status") != "completed":
+            break
+        if run.get("conclusion") in failures:
+            streak += 1
+        else:
+            break
+    return "OPEN" if streak >= 2 else "CLOSED"
 
 
 def active_runs(runs, now):
@@ -61,6 +98,9 @@ def decision(status, runs, now):
     minute = now.hour * 60 + now.minute
     if not (MONITOR_START <= minute <= MONITOR_END):
         return "IDLE"
+    breaker = circuit_state(runs, now)
+    if breaker == "OPEN":
+        return "CIRCUIT_OPEN"
     if not active_runs(runs, now) or not valid_heartbeat(status, now):
         return "ALARM"
     return "HEALTHY"
@@ -100,8 +140,10 @@ def main():
     runs = api("actions/workflows/session.yml/runs?per_page=50").get("workflow_runs", [])
     state = decision(read_status(), runs, now)
     print(f"{state}: read-only session watchdog at {now.isoformat()}")
-    if state == "ALARM":
-        print("::error::AH production session or latest authenticated scan is missing/stale")
+    if state in {"ALARM", "CIRCUIT_OPEN"}:
+        print("::error::AH read-only watchdog alarm; inspect session and heartbeat")
+        if state == "CIRCUIT_OPEN":
+            print("::error::Circuit breaker OPEN after consecutive scheduled-session failures")
         return 1
     return 0
 
@@ -128,6 +170,17 @@ def self_test():
     assert decision(good, active, now) == "HEALTHY"
     assert decision(good, [], now) == "ALARM"
     assert decision({}, active, now) == "ALARM"
+    assert heartbeat_age_seconds(good, now) == 60
+    assert heartbeat_age_seconds({}, now) is None
+    failed = [
+        {"event": "schedule", "status": "completed", "conclusion": "failure",
+         "created_at": "2026-11-02T16:50:00Z"},
+        {"event": "schedule", "status": "completed", "conclusion": "timed_out",
+         "created_at": "2026-11-02T16:45:00Z"},
+    ]
+    assert circuit_state(failed, now) == "OPEN"
+    assert decision(good, failed, now) == "CIRCUIT_OPEN"
+    assert circuit_state([*failed[:1], active[0]], now) == "HALF_OPEN"
     assert decision(good, active, datetime(2026, 11, 2, 23, 0, tzinfo=TZ)) == "IDLE"
     assert not hasattr(api, "post")
     print("Read-only watchdog self-test: PASS")
