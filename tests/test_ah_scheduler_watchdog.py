@@ -99,6 +99,30 @@ class WatchdogDecisionTests(unittest.TestCase):
             "ALARM",
         )
 
+    def test_scan_heartbeat_rejects_future_and_stale_timestamps(self):
+        self.assertEqual(session_watchdog.heartbeat_age_seconds(self.healthy_status, self.now), 60)
+        future = {**self.healthy_status, "latestValid": {
+            **self.healthy_status["latestValid"], "checkedAt": "2026-11-02T18:01:00+01:00"}}
+        stale = {**self.healthy_status, "latestValid": {
+            **self.healthy_status["latestValid"], "checkedAt": "2026-11-02T17:55:00+01:00"}}
+        self.assertIsNone(session_watchdog.heartbeat_age_seconds(future, self.now))
+        self.assertIsNone(session_watchdog.heartbeat_age_seconds(stale, self.now))
+
+    def test_circuit_breaker_opens_after_two_consecutive_scheduled_failures(self):
+        failures = [
+            {"event": "schedule", "status": "completed", "conclusion": "failure",
+             "created_at": "2026-11-02T16:55:00Z"},
+            {"event": "schedule", "status": "completed", "conclusion": "timed_out",
+             "created_at": "2026-11-02T16:50:00Z"},
+        ]
+        self.assertEqual(session_watchdog.circuit_state(failures, self.now), "OPEN")
+        self.assertEqual(session_watchdog.decision(self.healthy_status, failures, self.now), "CIRCUIT_OPEN")
+
+    def test_active_scheduled_run_is_half_open_after_failure(self):
+        failed = {"event": "schedule", "status": "completed", "conclusion": "failure",
+                  "created_at": "2026-11-02T16:50:00Z"}
+        self.assertEqual(session_watchdog.circuit_state([failed, *self.active_run], self.now), "HALF_OPEN")
+
     def test_outside_monitoring_window_is_idle(self):
         outside = datetime(2026, 11, 2, 23, 0, tzinfo=ZoneInfo("Europe/Amsterdam"))
         self.assertEqual(
