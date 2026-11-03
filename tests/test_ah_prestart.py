@@ -1,0 +1,71 @@
+import os
+import tempfile
+import unittest
+from datetime import datetime
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+from scripts import prestart, schedule_gate
+
+TZ = ZoneInfo("Europe/Amsterdam")
+ROOT = Path(__file__).resolve().parents[1]
+
+
+class ScheduleGateTests(unittest.TestCase):
+    def test_summer_prestart_cron_is_admitted(self):
+        now = datetime(2026, 7, 10, 17, 25, tzinfo=TZ)
+        self.assertTrue(schedule_gate.allowed("schedule", "25 15 * * *", now))
+
+    def test_winter_prestart_cron_is_admitted(self):
+        now = datetime(2026, 11, 2, 17, 25, tzinfo=TZ)
+        self.assertTrue(schedule_gate.allowed("schedule", "25 16 * * *", now))
+
+    def test_delayed_schedule_is_admitted_only_within_four_minutes(self):
+        within = datetime(2026, 11, 2, 17, 29, tzinfo=TZ)
+        late = datetime(2026, 11, 2, 17, 29, 1, tzinfo=TZ)
+        self.assertTrue(schedule_gate.allowed("schedule", "25 16 * * *", within))
+        self.assertFalse(schedule_gate.allowed("schedule", "25 16 * * *", late))
+
+    def test_wrong_cron_and_non_schedule_events_are_rejected(self):
+        now = datetime(2026, 11, 2, 17, 25, tzinfo=TZ)
+        self.assertFalse(schedule_gate.allowed("schedule", "30 16 * * *", now))
+        self.assertFalse(schedule_gate.allowed("workflow_dispatch", "", now))
+        self.assertFalse(schedule_gate.allowed("push", "", now))
+
+    def test_schedule_outside_prestart_window_is_rejected(self):
+        early = datetime(2026, 11, 2, 17, 24, 59, tzinfo=TZ)
+        late = datetime(2026, 11, 2, 17, 30, tzinfo=TZ)
+        self.assertFalse(schedule_gate.allowed("schedule", "25 16 * * *", early))
+        self.assertFalse(schedule_gate.allowed("schedule", "25 16 * * *", late))
+
+
+class PrestartTests(unittest.TestCase):
+    def test_prestart_accepts_present_refresh_token_without_network_probe(self):
+        self.assertTrue(prestart.validate_preflight({"AH_REFRESH_TOKEN": "opaque-token"}))
+
+    def test_prestart_rejects_missing_refresh_token(self):
+        with self.assertRaisesRegex(RuntimeError, "AH_REFRESH_TOKEN"):
+            prestart.validate_preflight({})
+
+    def test_prestart_does_not_require_historical_data(self):
+        original = os.getcwd()
+        with tempfile.TemporaryDirectory() as empty_dir:
+            try:
+                os.chdir(empty_dir)
+                self.assertTrue(prestart.validate_preflight({"AH_REFRESH_TOKEN": "opaque-token"}))
+            finally:
+                os.chdir(original)
+
+    def test_production_workflow_has_only_dst_aware_prestart_schedules(self):
+        workflow = (ROOT / ".github/workflows/session.yml").read_text(encoding="utf-8")
+        self.assertIn("- cron: '25 15 * * *'", workflow)
+        self.assertIn("- cron: '25 16 * * *'", workflow)
+        self.assertIn("workflow_dispatch:", workflow)
+        self.assertIn("python scripts/prestart.py", workflow)
+        self.assertIn("scripts/prestart.py", workflow)
+        probe = (ROOT / ".github/workflows/probe.yml").read_text(encoding="utf-8")
+        self.assertIn("test_ah_prestart.py", probe)
+
+
+if __name__ == "__main__":
+    unittest.main()
