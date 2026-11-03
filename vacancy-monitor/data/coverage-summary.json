@@ -4,8 +4,8 @@
   "target_proven": 19,
   "vacancy_coverage_percent": 18.3,
   "match_audit": {
-    "candidate_count": 227,
-    "matched_count": 227,
+    "candidate_count": 266,
+    "matched_count": 266,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -130,6 +130,12 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
+    },
+    {
+      "name": "Lloyds Banking Group",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_ats_scanned"
     },
     {
       "name": "Mambu",
@@ -268,12 +274,6 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
-    },
-    {
-      "name": "Visa",
-      "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_ats_scanned"
     },
     {
       "name": "Wise",
