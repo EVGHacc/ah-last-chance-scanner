@@ -7,8 +7,17 @@ on:
     - cron: '25 16 * * *'
     - cron: '28 15 * * *'
     - cron: '28 16 * * *'
-  # Manual invocation is retained for operator visibility, but the gate rejects it.
+  # One-time, date-bound recovery. The workflow consumes a repository lock before scanning.
   workflow_dispatch:
+    inputs:
+      recovery_date:
+        description: "Must be 2026-11-03"
+        required: true
+        type: string
+      recovery_confirmation:
+        description: "Enter RESTORE-AH-2026-11-03 exactly"
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -32,7 +41,29 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
           EVENT_SCHEDULE: ${{ github.event.schedule }}
+          EVENT_REF: ${{ github.ref }}
+          RECOVERY_DATE: ${{ inputs.recovery_date }}
+          RECOVERY_CONFIRMATION: ${{ inputs.recovery_confirmation }}
         run: python scripts/schedule_gate.py
+      - name: Consume one-time recovery authorization
+        if: steps.gate.outputs.run == 'true' && github.event_name == 'workflow_dispatch'
+        env:
+          RECOVERY_DATE: ${{ inputs.recovery_date }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          lock=".recovery/ah-recovery-${RECOVERY_DATE}.lock"
+          if [[ -e "$lock" ]]; then
+            echo "::error::One-time recovery authorization was already consumed"
+            exit 1
+          fi
+          mkdir -p .recovery
+          printf 'Consumed by run %s at %s\\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" > "$lock"
+          git config user.name 'ah-session-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add "$lock"
+          git commit -m "Consume one-time AH recovery authorization ${RECOVERY_DATE}"
+          git push origin HEAD:main
       - uses: actions/setup-python@v5
         if: steps.gate.outputs.run == 'true'
         with:
