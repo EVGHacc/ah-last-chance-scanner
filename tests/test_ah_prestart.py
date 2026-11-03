@@ -60,6 +60,7 @@ class ScheduleGateTests(unittest.TestCase):
         self.assertFalse(schedule_gate.allowed("workflow_dispatch", "", valid, **{**args, "recovery_date": "2026-11-04"}))
         self.assertFalse(schedule_gate.allowed("workflow_dispatch", "", valid, **{**args, "event_ref": "refs/heads/fix"}))
         self.assertFalse(schedule_gate.allowed("workflow_dispatch", "", datetime(2026, 11, 3, 17, 29, 59, tzinfo=TZ), **args))
+        self.assertTrue(schedule_gate.allowed("workflow_dispatch", "", datetime(2026, 11, 3, 22, 30, 0, tzinfo=TZ), **args))
         self.assertFalse(schedule_gate.allowed("workflow_dispatch", "", datetime(2026, 11, 3, 22, 30, 1, tzinfo=TZ), **args))
         self.assertFalse(schedule_gate.allowed("workflow_dispatch", "", datetime(2026, 11, 4, 20, 0, tzinfo=TZ), **args))
 
