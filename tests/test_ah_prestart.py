@@ -12,15 +12,29 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ScheduleGateTests(unittest.TestCase):
-    def test_summer_prestart_cron_is_admitted(self):
+    def test_summer_primary_prestart_cron_is_admitted(self):
         now = datetime(2026, 7, 10, 17, 25, tzinfo=TZ)
         self.assertTrue(schedule_gate.allowed("schedule", "25 15 * * *", now))
 
-    def test_winter_prestart_cron_is_admitted(self):
+    def test_winter_primary_prestart_cron_is_admitted(self):
         now = datetime(2026, 11, 2, 17, 25, tzinfo=TZ)
         self.assertTrue(schedule_gate.allowed("schedule", "25 16 * * *", now))
 
-    def test_delayed_schedule_is_admitted_only_within_four_minutes(self):
+    def test_summer_redundant_prestart_cron_is_admitted(self):
+        now = datetime(2026, 7, 10, 17, 28, tzinfo=TZ)
+        self.assertTrue(schedule_gate.allowed("schedule", "28 15 * * *", now))
+
+    def test_winter_redundant_prestart_cron_is_admitted(self):
+        now = datetime(2026, 11, 2, 17, 28, tzinfo=TZ)
+        self.assertTrue(schedule_gate.allowed("schedule", "28 16 * * *", now))
+
+    def test_backup_has_its_own_four_minute_admission_window(self):
+        within = datetime(2026, 11, 2, 17, 32, tzinfo=TZ)
+        late = datetime(2026, 11, 2, 17, 32, 1, tzinfo=TZ)
+        self.assertTrue(schedule_gate.allowed("schedule", "28 16 * * *", within))
+        self.assertFalse(schedule_gate.allowed("schedule", "28 16 * * *", late))
+
+    def test_primary_delayed_schedule_is_admitted_only_within_four_minutes(self):
         within = datetime(2026, 11, 2, 17, 29, tzinfo=TZ)
         late = datetime(2026, 11, 2, 17, 29, 1, tzinfo=TZ)
         self.assertTrue(schedule_gate.allowed("schedule", "25 16 * * *", within))
@@ -32,11 +46,22 @@ class ScheduleGateTests(unittest.TestCase):
         self.assertFalse(schedule_gate.allowed("workflow_dispatch", "", now))
         self.assertFalse(schedule_gate.allowed("push", "", now))
 
-    def test_schedule_outside_prestart_window_is_rejected(self):
+    def test_schedule_outside_its_prestart_window_is_rejected(self):
         early = datetime(2026, 11, 2, 17, 24, 59, tzinfo=TZ)
-        late = datetime(2026, 11, 2, 17, 30, tzinfo=TZ)
+        late = datetime(2026, 11, 2, 17, 33, tzinfo=TZ)
         self.assertFalse(schedule_gate.allowed("schedule", "25 16 * * *", early))
-        self.assertFalse(schedule_gate.allowed("schedule", "25 16 * * *", late))
+        self.assertFalse(schedule_gate.allowed("schedule", "28 16 * * *", late))
+
+    def test_production_workflow_has_both_dst_aware_prestart_schedules(self):
+        workflow = (ROOT / ".github/workflows/session.yml").read_text(encoding="utf-8")
+        for cron in ("25 15", "25 16", "28 15", "28 16"):
+            self.assertIn(f"- cron: '{cron} * * *'", workflow)
+        self.assertIn("workflow_dispatch:", workflow)
+        self.assertIn("python scripts/prestart.py", workflow)
+        self.assertIn("scripts/prestart.py", workflow)
+        probe = (ROOT / ".github/workflows/probe.yml").read_text(encoding="utf-8")
+        self.assertIn("  pull_request:", probe)
+        self.assertIn("test_ah_prestart.py", probe)
 
 
 class PrestartTests(unittest.TestCase):
@@ -55,16 +80,6 @@ class PrestartTests(unittest.TestCase):
                 self.assertTrue(prestart.validate_preflight({"AH_REFRESH_TOKEN": "opaque-token"}))
             finally:
                 os.chdir(original)
-
-    def test_production_workflow_has_only_dst_aware_prestart_schedules(self):
-        workflow = (ROOT / ".github/workflows/session.yml").read_text(encoding="utf-8")
-        self.assertIn("- cron: '25 15 * * *'", workflow)
-        self.assertIn("- cron: '25 16 * * *'", workflow)
-        self.assertIn("workflow_dispatch:", workflow)
-        self.assertIn("python scripts/prestart.py", workflow)
-        self.assertIn("scripts/prestart.py", workflow)
-        probe = (ROOT / ".github/workflows/probe.yml").read_text(encoding="utf-8")
-        self.assertIn("test_ah_prestart.py", probe)
 
 
 if __name__ == "__main__":
