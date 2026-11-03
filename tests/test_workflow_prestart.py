@@ -11,6 +11,10 @@ class PrestartWorkflowContractTests(unittest.TestCase):
             self.assertIn(f"- cron: '{cron} * * *'", source)
         self.assertNotIn("  push:", source)
         self.assertIn("  workflow_dispatch:", source)
+        self.assertIn("recovery_confirmation:", source)
+        self.assertIn("Consume one-time recovery authorization", source)
+        self.assertIn("git push origin HEAD:main", source)
+        self.assertLess(source.index("Consume one-time recovery authorization"), source.index("id: supervised_scan"))
         self.assertIn("group: ah-production-single-writer", source)
         self.assertIn("cancel-in-progress: false", source)
 
