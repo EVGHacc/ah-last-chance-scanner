@@ -40,6 +40,30 @@ class ScheduleGateTests(unittest.TestCase):
         self.assertTrue(schedule_gate.allowed("schedule", "25 16 * * *", within))
         self.assertFalse(schedule_gate.allowed("schedule", "25 16 * * *", late))
 
+    def test_one_time_recovery_requires_exact_confirmation_date_ref_and_window(self):
+        valid = datetime(2026, 11, 3, 20, 0, tzinfo=TZ)
+        self.assertTrue(schedule_gate.allowed(
+            "workflow_dispatch", "", valid,
+            recovery_confirmation="RESTORE-AH-2026-11-03",
+            recovery_date="2026-11-03",
+            event_ref="refs/heads/main",
+        ))
+
+    def test_recovery_rejects_wrong_confirmation_date_ref_and_out_of_window(self):
+        valid = datetime(2026, 11, 3, 20, 0, tzinfo=TZ)
+        args = {
+            "recovery_confirmation": "RESTORE-AH-2026-11-03",
+            "recovery_date": "2026-11-03",
+            "event_ref": "refs/heads/main",
+        }
+        self.assertFalse(schedule_gate.allowed("workflow_dispatch", "", valid, **{**args, "recovery_confirmation": "wrong"}))
+        self.assertFalse(schedule_gate.allowed("workflow_dispatch", "", valid, **{**args, "recovery_date": "2026-11-04"}))
+        self.assertFalse(schedule_gate.allowed("workflow_dispatch", "", valid, **{**args, "event_ref": "refs/heads/fix"}))
+        self.assertFalse(schedule_gate.allowed("workflow_dispatch", "", datetime(2026, 11, 3, 17, 29, 59, tzinfo=TZ), **args))
+        self.assertTrue(schedule_gate.allowed("workflow_dispatch", "", datetime(2026, 11, 3, 22, 30, 0, tzinfo=TZ), **args))
+        self.assertFalse(schedule_gate.allowed("workflow_dispatch", "", datetime(2026, 11, 3, 22, 30, 1, tzinfo=TZ), **args))
+        self.assertFalse(schedule_gate.allowed("workflow_dispatch", "", datetime(2026, 11, 4, 20, 0, tzinfo=TZ), **args))
+
     def test_wrong_cron_and_non_schedule_events_are_rejected(self):
         now = datetime(2026, 11, 2, 17, 25, tzinfo=TZ)
         self.assertFalse(schedule_gate.allowed("schedule", "30 16 * * *", now))
@@ -57,6 +81,9 @@ class ScheduleGateTests(unittest.TestCase):
         for cron in ("25 15", "25 16", "28 15", "28 16"):
             self.assertIn(f"- cron: '{cron} * * *'", workflow)
         self.assertIn("workflow_dispatch:", workflow)
+        self.assertIn("recovery_confirmation:", workflow)
+        self.assertIn("Consume one-time recovery authorization", workflow)
+        self.assertIn("git push origin HEAD:main", workflow)
         self.assertIn("python scripts/prestart.py", workflow)
         self.assertIn("scripts/prestart.py", workflow)
         probe = (ROOT / ".github/workflows/probe.yml").read_text(encoding="utf-8")
