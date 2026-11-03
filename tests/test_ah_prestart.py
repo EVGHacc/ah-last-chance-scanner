@@ -60,6 +60,7 @@ class ScheduleGateTests(unittest.TestCase):
         self.assertIn("python scripts/prestart.py", workflow)
         self.assertIn("scripts/prestart.py", workflow)
         probe = (ROOT / ".github/workflows/probe.yml").read_text(encoding="utf-8")
+        self.assertIn("  pull_request:", probe)
         self.assertIn("test_ah_prestart.py", probe)
 
 

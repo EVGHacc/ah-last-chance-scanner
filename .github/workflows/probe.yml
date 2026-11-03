@@ -1,6 +1,14 @@
 name: AH Scanner checks
 
 on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scanner.py'
+      - 'scripts/**'
+      - 'tests/test_ah_prestart.py'
+      - '.github/workflows/probe.yml'
+      - '.github/workflows/session.yml'
   workflow_dispatch:
   push:
     branches: [main]
