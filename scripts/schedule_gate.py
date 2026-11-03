@@ -28,8 +28,8 @@ def allowed(event, schedule, now, recovery_confirmation="", recovery_date="", ev
             recovery_confirmation == RECOVERY_CONFIRMATION
             and recovery_date == RECOVERY_DATE
             and local_now.date().isoformat() == RECOVERY_DATE
-            and local_now.hour * 60 + local_now.minute >= 17 * 60 + 30
-            and local_now.hour * 60 + local_now.minute <= 22 * 60 + 30
+            and (local_now.hour, local_now.minute, local_now.second) >= (17, 30, 0)
+            and (local_now.hour, local_now.minute, local_now.second) <= (22, 30, 0)
             and event_ref == "refs/heads/main"
         )
     if event != "schedule":
