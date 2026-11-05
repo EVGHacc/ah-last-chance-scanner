@@ -1,11 +1,11 @@
 {
   "run_date": "2026-11-05",
   "target_expected": 104,
-  "target_proven": 21,
-  "vacancy_coverage_percent": 20.2,
+  "target_proven": 20,
+  "vacancy_coverage_percent": 19.2,
   "match_audit": {
-    "candidate_count": 335,
-    "matched_count": 335,
+    "candidate_count": 266,
+    "matched_count": 266,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -73,6 +73,12 @@
     },
     {
       "name": "Crédit Agricole CIB",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Deutsche Bank",
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
@@ -267,7 +273,7 @@
       "name": "Wise",
       "kind": "employer",
       "coverage": "partial",
-      "status": "official_ats_scanned"
+      "status": "official_site_scanned"
     },
     {
       "name": "Worldline",
@@ -380,7 +386,7 @@
     {
       "name": "Finatal",
       "kind": "recruiter",
-      "coverage": "unproven",
+      "coverage": "partial",
       "status": "official_site_scanned"
     },
     {
@@ -422,8 +428,8 @@
     {
       "name": "Michael Page",
       "kind": "recruiter",
-      "coverage": "unproven",
-      "status": "technical_failure"
+      "coverage": "partial",
+      "status": "official_site_scanned"
     },
     {
       "name": "Morgan McKinley",
@@ -515,7 +521,6 @@
     "McKinsey",
     "Rabobank",
     "Surepay",
-    "Michael Page",
     "Risk Talent Associates",
     "Robert Walters Interim",
     "Selby Jennings"
