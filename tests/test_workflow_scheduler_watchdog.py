@@ -43,6 +43,12 @@ class AHSchedulerWorkflowContractTests(unittest.TestCase):
             with self.subTest(path=path):
                 self.assertNotIn("cancel-in-progress: true", self.read(path))
 
+    def test_fallback_qa_runs_watchdog_regression_suite(self):
+        fallback = self.read(".github/workflows/fallback-qa.yml")
+        self.assertIn("python -m unittest discover -s tests -p 'test_ah_scheduler_watchdog.py' -v", fallback)
+        self.assertIn("actions: read", fallback)
+        self.assertNotIn("actions: write", fallback)
+
 
 if __name__ == "__main__":
     unittest.main()
