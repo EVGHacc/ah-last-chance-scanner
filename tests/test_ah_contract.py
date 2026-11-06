@@ -43,12 +43,27 @@ class AHContractTests(unittest.TestCase):
         self.assertEqual({x["category"] for x in captured}, {"Vlees", "Vleeswaren"})
 
     def test_compact_obs_preserves_all_70_products(self):
-        observation = {"stores": [{"storeId": 1463, "store": "AH", "fetched": True, "all70Items": 1, "all70Stock": 3,
-                                   "all70": [{"productId": 9, "title": "Test", "category": "Zuivel", "discountPct": 70, "stock": 3}],
-                                   "items": []}]}
+        observation = {"categories": ["Vlees", "Bakkerij"], "stores": [{
+            "storeId": 1463, "store": "AH", "fetched": True,
+            "all70Items": 2, "all70Stock": 4,
+            "bakeryItems": 2, "bakery70Items": 1, "bakery70Stock": 2,
+            "all70": [
+                {"productId": 9, "title": "Test", "category": "Zuivel", "discountPct": 70, "stock": 3},
+                {"productId": 10, "title": "Brood", "category": "Bakkerij", "discountPct": 70, "stock": 1},
+            ],
+            "items": [{"productId": 11, "title": "Kip", "category": "Vlees", "discountPct": 40}],
+            "bakery": [{"productId": 12, "title": "Broodje", "category": "Bakkerij", "discountPct": 50}],
+        }]}
         compact = persist.compact_obs(observation)
-        self.assertEqual(compact["stores"][0]["all70Items"], 1)
-        self.assertEqual(compact["stores"][0]["all70"][0]["category"], "Zuivel")
+        store = compact["stores"][0]
+        self.assertEqual(compact["categories"], ["Vlees", "Bakkerij"])
+        self.assertEqual(store["all70Items"], 2)
+        self.assertEqual(store["all70"][0]["category"], "Zuivel")
+        self.assertEqual(store["bakeryItems"], 2)
+        self.assertEqual(store["bakery70Items"], 1)
+        self.assertEqual(store["bakery70Stock"], 2)
+        self.assertEqual(store["bakery"][0]["productId"], 12)
+        self.assertEqual(store["items"][0]["productId"], 11)
 
     def test_required_store_scope_matches_independent_verifier(self):
         self.assertEqual(persist.REQUIRED_STORE_IDS, independent.STORE_IDS)
