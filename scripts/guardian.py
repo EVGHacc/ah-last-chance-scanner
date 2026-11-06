@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Independent long-running production guardian for the AH evening scanner.
+"""Read-only AH production guardian.
 
-The guardian does not trust GitHub run state. It watches the authoritative
-published slot data and takes over a missing point while it is still honestly
-recoverable inside the <=240 second validity limit.
+The guardian observes published evidence only. It never scans, retries,
+publishes, fetches Git state, or attempts to repair a missing observation.
 """
 import sys
 import time
@@ -12,90 +11,105 @@ from zoneinfo import ZoneInfo
 
 import session
 
-TZ=ZoneInfo("Europe/Amsterdam")
-CHECK_AFTER_SECONDS=55
-SECOND_CHECK_SECONDS=20
-POLL_SECONDS=20
-
-
-def takeover_due(target, now):
-    age=(now-target).total_seconds()
-    return CHECK_AFTER_SECONDS <= age <= session.RECOVERY_START_DEADLINE
+TZ = ZoneInfo("Europe/Amsterdam")
+CHECK_AFTER_SECONDS = 55
+SECOND_CHECK_SECONDS = 20
+POLL_SECONDS = 20
 
 
 def wait_until(when):
     while True:
-        remaining=(when-datetime.now(TZ)).total_seconds()
+        remaining = (when - datetime.now(TZ)).total_seconds()
         if remaining <= 0:
             return
-        time.sleep(min(POLL_SECONDS,remaining))
+        time.sleep(min(POLL_SECONDS, remaining))
 
 
 def guard_point(target):
-    # First check after 55s: enough time for primary publish, but >3 minutes
-    # remain before the hard 240s validity boundary.
-    wait_until(target+timedelta(seconds=CHECK_AFTER_SECONDS))
-    session.refresh_checkout()
+    """Check a scheduled point twice; report missing data without recovery."""
+    wait_until(target + timedelta(seconds=CHECK_AFTER_SECONDS))
     if session.point_complete(target):
-        print(f"Guardian healthy {target:%H:%M}: primary output present",flush=True)
+        print(f"Guardian healthy {target:%H:%M}: primary output present", flush=True)
         return True
 
-    # Avoid racing a primary publication that is merely a few seconds late.
     time.sleep(SECOND_CHECK_SECONDS)
-    session.refresh_checkout()
     if session.point_complete(target):
-        print(f"Guardian healthy after double-check {target:%H:%M}",flush=True)
+        print(f"Guardian healthy after double-check {target:%H:%M}", flush=True)
         return True
 
-    now=datetime.now(TZ)
-    if not takeover_due(target,now):
-        print(f"Guardian cannot honestly recover {target:%H:%M}; age={(now-target).total_seconds():.0f}s",flush=True)
-        return False
-
-    print(f"SELF-HEAL takeover for missing production point {target.isoformat()}",flush=True)
-    return session.run_point(target)
+    print(
+        f"GUARDIAN ALERT: missing production point {target.isoformat()}; "
+        "automatic recovery is disabled",
+        flush=True,
+    )
+    return False
 
 
 def prestart_readiness():
-    """Verify the first official slot can be protected before 17:30."""
-    import os
+    """Validate cadence invariants without credentials or network access."""
     from production_health import validate_preflight
+
     validate_preflight()
-    if not os.getenv('AH_REFRESH_TOKEN'):
-        raise RuntimeError('PRESTART BLOCKER: AH_REFRESH_TOKEN missing; guardian cannot recover first slot')
-    session.refresh_checkout()
-    print('PRESTART READY: auth secret present, cadence validated, checkout synchronized; guardian armed for 17:30',flush=True)
+    print("PRESTART READY: read-only guardian checks configured; no auth/network probe", flush=True)
+
+
+def final_reconcile(today):
+    """Recompute expected slot coverage from the local published status only."""
+    raw_seen, canonical_seen = session.status_seen(today)
+    points = session.points_for(today)
+    expected_raw = {
+        point.strftime("%H:%M")
+        for point in points
+        if session.raw_due(point.hour * 60 + point.minute)
+    }
+    expected_canonical = {
+        point.strftime("%H:%M")
+        for point in points
+        if session.canonical_due(point.hour * 60 + point.minute)
+    }
+    missing_raw = sorted(expected_raw - raw_seen)
+    missing_canonical = sorted(expected_canonical - canonical_seen)
+    print(
+        f"GUARDIAN RECONCILIATION raw={len(raw_seen)}/101 "
+        f"canonical={len(canonical_seen)}/61",
+        flush=True,
+    )
+    if missing_raw:
+        print("Raw missing:", ",".join(missing_raw), flush=True)
+    if missing_canonical:
+        print("Canonical missing:", ",".join(missing_canonical), flush=True)
+    return not missing_raw and not missing_canonical
 
 
 def main():
     prestart_readiness()
-    today=datetime.now(TZ)
-    points=session.points_for(today)
-    print("Independent AH guardian active; monitoring authoritative production slots",flush=True)
+    today = datetime.now(TZ)
+    points = session.points_for(today)
+    print("Read-only AH guardian active; monitoring published production slots", flush=True)
+
+    missing = []
     for target in points:
-        # A delayed guardian can still save only recent points; never backdate.
-        age=(datetime.now(TZ)-target).total_seconds()
-        if age > session.RECOVERY_START_DEADLINE:
-            continue
-        guard_point(target)
-    if not session.final_reconcile(today):
-        print("GUARDIAN FAILURE: final reconciliation is incomplete", flush=True)
+        if not guard_point(target):
+            missing.append(target.strftime("%H:%M"))
+
+    if missing or not final_reconcile(today):
+        print(
+            "GUARDIAN FAILURE: incomplete production evidence; "
+            f"missing observed points={','.join(missing)}",
+            flush=True,
+        )
         raise SystemExit(1)
     print("Guardian finished: final reconciliation complete", flush=True)
 
 
 def self_test():
-    t=datetime(2026,10,2,17,30,tzinfo=TZ)
-    assert not takeover_due(t,t+timedelta(seconds=54))
-    assert takeover_due(t,t+timedelta(seconds=55))
-    assert takeover_due(t,t+timedelta(seconds=session.RECOVERY_START_DEADLINE))
-    assert not takeover_due(t,t+timedelta(seconds=session.RECOVERY_START_DEADLINE+1))
-    # 55s + 20s double-check leaves 130s before recovery-start deadline.
-    assert CHECK_AFTER_SECONDS+SECOND_CHECK_SECONDS < session.RECOVERY_START_DEADLINE
-    assert session.MAX_RECOVERY_AGE==240
+    target = datetime(2026, 10, 2, 17, 30, tzinfo=TZ)
+    assert CHECK_AFTER_SECONDS + SECOND_CHECK_SECONDS < 240
+    assert target + timedelta(seconds=CHECK_AFTER_SECONDS) > target
     assert callable(prestart_readiness)
-    print("Guardian failover timing self-test: PASS")
+    assert callable(final_reconcile)
+    print("Read-only guardian self-test: PASS")
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     self_test() if "--self-test" in sys.argv else main()

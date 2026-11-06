@@ -127,7 +127,7 @@ class VacancyProductionVerifierTests(unittest.TestCase):
 
 
 class AHProductionVerifierTests(unittest.TestCase):
-    def test_partial_but_valid_ah_dataset_passes_as_partial(self):
+    def test_partial_but_usable_ah_dataset_is_rejected(self):
         report = {
             "usable": True,
             "complete": False,
@@ -135,7 +135,8 @@ class AHProductionVerifierTests(unittest.TestCase):
             "missingRaw": ["17:30"],
             "missingCanonical": ["17:30"],
         }
-        self.assertEqual(verify._ah_result(report), "PASS_PARTIAL")
+        with self.assertRaisesRegex(AssertionError, "incomplete"):
+            verify._ah_result(report)
 
     def test_complete_ah_dataset_passes_as_complete(self):
         self.assertEqual(

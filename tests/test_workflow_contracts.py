@@ -24,6 +24,9 @@ class WorkflowContractTests(unittest.TestCase):
         text = self.read(".github/workflows/production-verifier.yml")
         self.assertIn("workflow_run:", text)
         self.assertIn("'AH supervised evening session'", text)
+        ah_job = text.split("  verify-vacancy:", 1)[0]
+        self.assertNotIn("github.event.workflow_run.conclusion", ah_job)
+        self.assertIn("github.event.workflow_run.name == 'AH supervised evening session'", ah_job)
         self.assertIn("'Vacancy Monitor 106'", text)
         self.assertIn("python scripts/production_verify.py --project ah", text)
         self.assertIn("python scripts/production_verify.py --project vacancy", text)
