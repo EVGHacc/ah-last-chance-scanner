@@ -224,8 +224,8 @@
     {
       "name": "Standard Chartered",
       "kind": "employer",
-      "coverage": "partial",
-      "status": "official_site_scanned"
+      "coverage": "unproven",
+      "status": "technical_failure"
     },
     {
       "name": "Stripe",
@@ -434,7 +434,7 @@
     {
       "name": "Oliver James",
       "kind": "recruiter",
-      "coverage": "partial",
+      "coverage": "unproven",
       "status": "official_site_scanned"
     },
     {
@@ -509,6 +509,7 @@
     "DB Contractors UK",
     "McKinsey",
     "Rabobank",
+    "Standard Chartered",
     "Surepay",
     "Risk Talent Associates",
     "Robert Walters Interim",
