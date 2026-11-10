@@ -59,6 +59,17 @@ def refresh_checkout():
     subprocess.run(['git','reset','--hard','origin/main'],check=False)
 
 
+def should_stop_auth_retries(observation):
+    if not isinstance(observation,dict) or observation.get('authMode')!='user-refresh-failed':
+        return False
+    terminal_codes=('AUTH_REAUTH_REQUIRED','AUTH_REFRESH_FAILED')
+    return any(
+        any(code in str(store.get('error','')) for code in terminal_codes)
+        for store in (observation.get('stores') or [])
+        if isinstance(store,dict)
+    )
+
+
 def run_point(target):
     env=dict(os.environ)
     env['SCHEDULED_AT']=target.isoformat()
@@ -75,6 +86,9 @@ def run_point(target):
         except (ValueError,OSError):
             obs={}
         summary=f"slot={target:%H:%M} status={obs.get('status','unknown')} auth={obs.get('authMode','unknown')} fetched={sum(s.get('fetched') is True for s in (obs.get('stores') or []))}/5"
+        if scan.returncode!=0 and should_stop_auth_retries(obs):
+            print('AUTH_REAUTH_REQUIRED: stopping automatic retries; a new AH login is required',flush=True)
+            return False
         if scan.returncode!=0:
             print(f'Scan attempt {attempt} failed: {summary}; stderr={scan.stderr[-350:]}',flush=True)
             # A fallback may have rotated the encrypted refresh token after
