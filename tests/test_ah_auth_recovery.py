@@ -137,6 +137,23 @@ class ScannerAuthIntegrationTests(unittest.TestCase):
         refresh.assert_called_once_with(force_refresh=True)
 
 
+    def test_rejected_refreshed_access_stops_fanout_and_requests_reauthentication(self):
+        context = {"access": "expired-access"}
+        with patch.object(scanner, "post", side_effect=[
+            (401, {"error": "unauthorized"}),
+            (401, {"error": "unauthorized"}),
+        ]) as post, patch.object(scanner, "token", return_value=("fresh-access", "user-refresh")) as refresh:
+            first = scanner.fetch_store(1463, "AH Blekersvaartweg", "expired-access", context)
+            second = scanner.fetch_store(1348, "AH Zandvoortselaan", "expired-access", context)
+
+        self.assertFalse(first["fetched"])
+        self.assertFalse(second["fetched"])
+        self.assertIn("AUTH_REAUTH_REQUIRED", first["error"])
+        self.assertIn("AUTH_REAUTH_REQUIRED", second["error"])
+        refresh.assert_called_once_with(force_refresh=True)
+        post.assert_called_once()
+
+
 class SessionRetryPolicyTests(unittest.TestCase):
     def test_interactive_reauthentication_failure_stops_outer_scan_retries(self):
         obs = {
