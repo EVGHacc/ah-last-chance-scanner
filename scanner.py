@@ -208,6 +208,8 @@ def fetch_store(sid,name,access,auth_context=None,attempts=4):
         status,data=post('/graphql',{'query':QUERY,'variables':{'storeId':str(sid)}},access,attempts=2)
         if status==401:
             if auth_refreshed:
+                if auth_context is not None:
+                    auth_context['error']='AUTH_REFRESHED_ACCESS_REJECTED: AH rejected the newly refreshed access token'
                 break
             auth_refreshed=True
             try:
