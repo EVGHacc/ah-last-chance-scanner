@@ -1,11 +1,11 @@
 {
   "run_date": "2026-11-10",
   "target_expected": 104,
-  "target_proven": 22,
-  "vacancy_coverage_percent": 21.2,
+  "target_proven": 19,
+  "vacancy_coverage_percent": 18.3,
   "match_audit": {
-    "candidate_count": 387,
-    "matched_count": 387,
+    "candidate_count": 217,
+    "matched_count": 217,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -73,6 +73,12 @@
     },
     {
       "name": "Crédit Agricole CIB",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Deutsche Bank",
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
@@ -234,6 +240,12 @@
       "status": "official_site_scanned"
     },
     {
+      "name": "State Street",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_ats_scanned"
+    },
+    {
       "name": "Stripe",
       "kind": "employer",
       "coverage": "partial",
@@ -247,6 +259,12 @@
     },
     {
       "name": "Thunes",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_site_scanned"
+    },
+    {
+      "name": "Triodos Bank",
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
@@ -332,7 +350,7 @@
     {
       "name": "Compliance People",
       "kind": "recruiter",
-      "coverage": "partial",
+      "coverage": "unproven",
       "status": "official_site_scanned"
     },
     {
