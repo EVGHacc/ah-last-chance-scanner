@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 from scripts.auth_state import restore_state, read_sealed_state
+from scripts.auth_recovery import AuthRefreshError, refresh_access_token
 
 TZ=ZoneInfo('Europe/Amsterdam')
 STORES=[(1463,'AH Blekersvaartweg'),(1348,'AH Zandvoortselaan'),(1135,'AH Casablancastraat'),(4046,'AH Clothildestraat'),(8728,'AH Westergracht')]
@@ -102,29 +103,47 @@ def _save_state(access,expires_at,refresh=''):
     os.chmod(path,0o600)
 
 
-def token():
+def token(force_refresh=False):
     global LAST_AUTH_SOURCE
     now=int(time.time())
     state=_load_state()
     cached=str(state.get('accessToken') or '')
     cached_exp=int(state.get('accessExpiresAt') or 0)
-    if cached and cached_exp>now+TOKEN_SAFETY_SECONDS:
+    if not force_refresh and cached and cached_exp>now+TOKEN_SAFETY_SECONDS:
         LAST_AUTH_SOURCE='cache'
         return cached,'user-refresh'
 
     configured=os.getenv('AH_REFRESH_TOKEN','').strip()
     refresh=str(state.get('refreshToken') or '').strip() or configured
     if not refresh:
-        raise RuntimeError('AH_REFRESH_TOKEN ontbreekt; anonymous fallback is uitgeschakeld')
-    s,d=post('/mobile-auth/v1/auth/token/refresh',{'clientId':CLIENT_ID,'refreshToken':refresh},attempts=3)
-    if s==200 and d.get('access_token'):
-        access=d['access_token']
-        exp=_jwt_expiry(access) or now+int(d.get('expires_in') or 600)
-        rotated=str(d.get('refresh_token') or '').strip()
-        _save_state(access,exp,rotated or refresh)
-        LAST_AUTH_SOURCE='refresh'
-        return access,'user-refresh'
-    raise RuntimeError(f'USER_REFRESH_FAILED HTTP {s}: {str(d)[:180]}')
+        raise RuntimeError('AUTH_REAUTH_REQUIRED: AH_REFRESH_TOKEN ontbreekt; interactieve AH-login is nodig')
+
+    def request(candidate):
+        return post(
+            '/mobile-auth/v1/auth/token/refresh',
+            {'clientId':CLIENT_ID,'refreshToken':candidate},
+            attempts=1,
+        )
+
+    def latest_sealed_refresh():
+        sealed=read_sealed_state(configured)
+        return str(sealed.get('refreshToken') or '').strip()
+
+    try:
+        payload,used_refresh=refresh_access_token(
+            refresh,
+            request,
+            latest_sealed_refresh,
+        )
+    except AuthRefreshError as exc:
+        raise RuntimeError(str(exc)) from exc
+
+    access=payload['access_token']
+    exp=_jwt_expiry(access) or now+int(payload.get('expires_in') or 600)
+    rotated=str(payload.get('refresh_token') or '').strip()
+    _save_state(access,exp,rotated or used_refresh)
+    LAST_AUTH_SOURCE='refresh-recovered' if used_refresh!=refresh else 'refresh'
+    return access,'user-refresh'
 
 
 def make_items(rows,category):
@@ -169,17 +188,44 @@ def parse_schedule(started):
     return scheduled
 
 
-def fetch_store(sid,name,access,attempts=4):
+def _failed_store(sid,name,error):
+    return {
+        'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,
+        'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,
+        'bakery70Items':0,'bakery70Stock':0,'all70Items':0,'all70Stock':0,
+        'all70':[],'items':[],'bakery':[],'error':str(error)[:350],
+    }
+
+
+def fetch_store(sid,name,access,auth_context=None,attempts=4):
+    if auth_context is not None:
+        if auth_context.get('error'):
+            return _failed_store(sid,name,auth_context['error'])
+        access=auth_context.get('access') or access
     status=0; data={}
+    auth_refreshed=False
     for attempt in range(1,attempts+1):
         status,data=post('/graphql',{'query':QUERY,'variables':{'storeId':str(sid)}},access,attempts=2)
+        if status==401:
+            if auth_refreshed:
+                break
+            auth_refreshed=True
+            try:
+                access,_=token(force_refresh=True)
+                if auth_context is not None:
+                    auth_context['access']=access
+            except Exception as exc:
+                if auth_context is not None:
+                    auth_context['error']=str(exc)
+                return _failed_store(sid,name,exc)
+            continue
         if status==200 and not data.get('errors'):
             rows=(data.get('data') or {}).get('bargainItems') or []
             meat=make_items(rows,'Vlees'); bakery=make_items(rows,'Bakkerij'); all70=make_all_70(rows)
             m70=[x for x in meat if float(x['discountPct'])>=70]; b70=[x for x in bakery if float(x['discountPct'])>=70]
             return {'storeId':sid,'store':name,'fetched':True,'totalBargainItems':len(rows),'meatItems':len(meat),'meat70Items':len(m70),'meat70Stock':sum(float(x['stock']) for x in m70),'bakeryItems':len(bakery),'bakery70Items':len(b70),'bakery70Stock':sum(float(x['stock']) for x in b70),'all70Items':len(all70),'all70Stock':sum(float(x['stock']) for x in all70),'all70':all70,'items':meat,'bakery':bakery}
         if attempt<attempts: time.sleep(min(4,2**(attempt-1)))
-    return {'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,'bakery70Items':0,'bakery70Stock':0,'all70Items':0,'all70Stock':0,'all70':[],'items':[],'bakery':[],'error':f'HTTP {status}: {data}'[:350]}
+    return _failed_store(sid,name,f'HTTP {status}: {data}')
 
 
 def main():
@@ -194,7 +240,15 @@ def main():
     try:
         access,auth_mode=token()
         auth_source=LAST_AUTH_SOURCE
-        stores=[fetch_store(sid,name,access) for sid,name in STORES]
+        auth_context={'access':access}
+        stores=[]
+        for sid,name in STORES:
+            stores.append(fetch_store(sid,name,auth_context['access'],auth_context))
+        if auth_context.get('error'):
+            auth_mode='user-refresh-failed'
+            auth_source='none'
+        else:
+            auth_source=LAST_AUTH_SOURCE
     except Exception as e:
         stores=[{'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,'bakery70Items':0,'bakery70Stock':0,'all70Items':0,'all70Stock':0,'all70':[],'items':[],'bakery':[],'error':str(e)[:350]} for sid,name in STORES]
     fetched=sum(1 for x in stores if x['fetched'])
