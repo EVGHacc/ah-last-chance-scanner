@@ -209,7 +209,7 @@ def fetch_store(sid,name,access,auth_context=None,attempts=4):
         if status==401:
             if auth_refreshed:
                 if auth_context is not None:
-                    auth_context['error']='AUTH_REFRESHED_ACCESS_REJECTED: AH rejected the newly refreshed access token'
+                    auth_context['error']='AUTH_REAUTH_REQUIRED: AH rejected the newly refreshed access token'
                 break
             auth_refreshed=True
             try:
@@ -227,6 +227,8 @@ def fetch_store(sid,name,access,auth_context=None,attempts=4):
             m70=[x for x in meat if float(x['discountPct'])>=70]; b70=[x for x in bakery if float(x['discountPct'])>=70]
             return {'storeId':sid,'store':name,'fetched':True,'totalBargainItems':len(rows),'meatItems':len(meat),'meat70Items':len(m70),'meat70Stock':sum(float(x['stock']) for x in m70),'bakeryItems':len(bakery),'bakery70Items':len(b70),'bakery70Stock':sum(float(x['stock']) for x in b70),'all70Items':len(all70),'all70Stock':sum(float(x['stock']) for x in all70),'all70':all70,'items':meat,'bakery':bakery}
         if attempt<attempts: time.sleep(min(4,2**(attempt-1)))
+    if auth_context is not None and auth_context.get('error'):
+        return _failed_store(sid,name,auth_context['error'])
     return _failed_store(sid,name,f'HTTP {status}: {data}')
 
 
