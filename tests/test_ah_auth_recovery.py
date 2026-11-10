@@ -116,7 +116,7 @@ class ScannerAuthIntegrationTests(unittest.TestCase):
         with patch.object(scanner, "post", side_effect=[
             (401, {"error": "unauthorized"}),
             (200, {"data": {"bargainItems": []}}),
-        ]), patch.object(scanner, "token", return_value=("refreshed-access", "user-refresh")) as refresh:
+        ]) as post, patch.object(scanner, "token", return_value=("refreshed-access", "user-refresh")) as refresh:
             result = scanner.fetch_store(1463, "AH Blekersvaartweg", "expired-access", context)
 
         self.assertTrue(result["fetched"])
