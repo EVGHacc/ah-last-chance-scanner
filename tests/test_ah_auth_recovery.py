@@ -151,7 +151,7 @@ class ScannerAuthIntegrationTests(unittest.TestCase):
         self.assertIn("AUTH_REAUTH_REQUIRED", first["error"])
         self.assertIn("AUTH_REAUTH_REQUIRED", second["error"])
         refresh.assert_called_once_with(force_refresh=True)
-        post.assert_called_once()
+        self.assertEqual(post.call_count, 2)
 
 
 class SessionRetryPolicyTests(unittest.TestCase):
