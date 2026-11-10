@@ -122,6 +122,8 @@ class ScannerAuthIntegrationTests(unittest.TestCase):
         self.assertTrue(result["fetched"])
         refresh.assert_called_once_with(force_refresh=True)
         self.assertEqual(context["access"], "refreshed-access")
+        self.assertEqual(post.call_args_list[0].args[2], "expired-access")
+        self.assertEqual(post.call_args_list[1].args[2], "refreshed-access")
 
     def test_failed_auth_rebuild_is_shared_and_not_retried_per_store(self):
         context = {"access": "expired-access"}
