@@ -162,14 +162,21 @@ class SessionRetryPolicyTests(unittest.TestCase):
             "authMode": "user-refresh-failed",
             "stores": [{"error": "AUTH_REAUTH_REQUIRED: login needed"}],
         }
-        self.assertTrue(session.requires_interactive_reauth(obs))
+        self.assertTrue(session.should_stop_auth_retries(obs))
 
     def test_transient_auth_failure_keeps_bounded_outer_retry_available(self):
         obs = {
             "authMode": "user-refresh-failed",
             "stores": [{"error": "AUTH_REFRESH_RETRY_EXHAUSTED: temporary failure"}],
         }
-        self.assertFalse(session.requires_interactive_reauth(obs))
+        self.assertFalse(session.should_stop_auth_retries(obs))
+
+    def test_non_retryable_auth_failure_stops_outer_scan_retries(self):
+        obs = {
+            "authMode": "user-refresh-failed",
+            "stores": [{"error": "AUTH_REFRESH_FAILED: forbidden response"}],
+        }
+        self.assertTrue(session.should_stop_auth_retries(obs))
 
 
 if __name__ == "__main__":
