@@ -1,11 +1,11 @@
 {
   "run_date": "2026-11-12",
   "target_expected": 104,
-  "target_proven": 20,
-  "vacancy_coverage_percent": 19.2,
+  "target_proven": 21,
+  "vacancy_coverage_percent": 20.2,
   "match_audit": {
-    "candidate_count": 262,
-    "matched_count": 262,
+    "candidate_count": 424,
+    "matched_count": 424,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -73,12 +73,6 @@
     },
     {
       "name": "Crédit Agricole CIB",
-      "kind": "employer",
-      "coverage": "partial",
-      "status": "official_site_scanned"
-    },
-    {
-      "name": "Deutsche Bank",
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
@@ -204,6 +198,12 @@
       "status": "official_site_scanned"
     },
     {
+      "name": "PayPal",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
+    },
+    {
       "name": "Rabobank",
       "kind": "employer",
       "coverage": "unproven",
@@ -230,14 +230,8 @@
     {
       "name": "Standard Chartered",
       "kind": "employer",
-      "coverage": "unproven",
-      "status": "technical_failure"
-    },
-    {
-      "name": "State Street",
-      "kind": "employer",
-      "coverage": "unproven",
-      "status": "official_ats_scanned"
+      "coverage": "partial",
+      "status": "official_site_scanned"
     },
     {
       "name": "Stripe",
@@ -464,8 +458,8 @@
     {
       "name": "Robert Walters Interim",
       "kind": "recruiter",
-      "coverage": "partial",
-      "status": "official_site_scanned"
+      "coverage": "unproven",
+      "status": "technical_failure"
     },
     {
       "name": "Russell Reynolds Associates",
@@ -520,9 +514,9 @@
     "DB Contractors UK",
     "McKinsey",
     "Rabobank",
-    "Standard Chartered",
     "Surepay",
     "Risk Talent Associates",
+    "Robert Walters Interim",
     "Selby Jennings"
   ]
 }
