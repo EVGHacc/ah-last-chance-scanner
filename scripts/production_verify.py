@@ -134,9 +134,16 @@ def verify_vacancy(
 
 
 def _ah_result(report: dict) -> str:
-    """Classify verified AH evidence without discarding valid partial data."""
+    """Accept only a usable, internally consistent, complete AH evidence set."""
     assert report.get("usable") is True, "AH dataset is not usable"
-    return "PASS" if report.get("complete") is True else "PASS_PARTIAL"
+    assert report.get("complete") is True, "AH dataset is incomplete"
+    assert report.get("quality") == "complete", "AH quality is not complete"
+    assert not report.get("inconsistencies"), "AH evidence contains inconsistencies"
+    assert not report.get("missingRaw"), "AH raw slots are missing"
+    assert not report.get("missingCanonical"), "AH canonical slots are missing"
+    assert not report.get("overdueRaw"), "AH raw slots are overdue"
+    assert not report.get("overdueCanonical"), "AH canonical slots are overdue"
+    return "PASS"
 
 
 def verify_ah(root: Path = Path(".")) -> dict:
@@ -147,7 +154,7 @@ def verify_ah(root: Path = Path(".")) -> dict:
         raise AssertionError(f"cannot load {module_path}")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-    report = module.verify(root / "data", require_complete=False)
+    report = module.verify(root / "data", require_complete=True)
     return {"project": "ah", **report, "result": _ah_result(report)}
 
 
