@@ -34,13 +34,15 @@ def better(candidate,current):
 def compact_obs(o):
     keep=('schemaVersion','date','weekday','scheduledSlot','scheduledAt','rawScheduledSlot','rawScheduledAt',
           'checkedAt','delaySeconds','rawDelaySeconds','status','valid','official1925','authMode')
-    c={k:o.get(k) for k in keep if k in o}; c['categories']=['Vlees']; c['stores']=[]
+    c={k:o.get(k) for k in keep if k in o}; c['categories']=list(dict.fromkeys(o.get('categories') or ['Vlees'])); c['stores']=[]
     for s in o.get('stores') or []:
-        cs={k:s.get(k) for k in ('storeId','store','fetched','meatItems','meat70Items','meat70Stock','all70Items','all70Stock') if k in s}
+        cs={k:s.get(k) for k in ('storeId','store','fetched','meatItems','meat70Items','meat70Stock','bakeryItems','bakery70Items','bakery70Stock','all70Items','all70Stock') if k in s}
         cs['all70']=[{k:i.get(k) for k in ('productId','title','brand','size','category','discountPct','stock','priceWas','priceNow','markdownExpirationDate') if k in i}
                      for i in (s.get('all70') or []) if float(i.get('discountPct',0) or 0)>=70]
         cs['items']=[{k:i.get(k) for k in ('productId','title','brand','size','category','discountPct','stock','priceWas','priceNow','markdownExpirationDate') if k in i}
                      for i in (s.get('items') or []) if i.get('category')=='Vlees']
+        cs['bakery']=[{k:i.get(k) for k in ('productId','title','brand','size','category','discountPct','stock','priceWas','priceNow','markdownExpirationDate') if k in i}
+                      for i in (s.get('bakery') or []) if i.get('category')=='Bakkerij']
         c['stores'].append(cs)
     return c
 
@@ -85,7 +87,7 @@ def main():
     missing=[s for s in SLOTS if s not in canonical]
     today={'date':date,'expectedSlots':61,'presentSlots':len(observations),'missingSlots':missing,'observations':observations,
            '_source':{'scanner':'authenticated GitHub scanner','authRequired':'user-refresh','canonicalCadenceMinutes':5,
-                      'rawCadenceMinutes':3,'scope':'canonical Vlees view; lossless raw observations remain in data/YYYY-MM-DD.jsonl and data/raw/YYYY-MM-DD/HHMM.json',
+                      'rawCadenceMinutes':3,'scope':'canonical Vlees and Bakkerij views; lossless raw observations remain in data/YYYY-MM-DD.jsonl and data/raw/YYYY-MM-DD/HHMM.json',
                       'canonicalSelection':'exact rawScheduledSlot equals scheduledSlot; canonical delaySeconds <=240; lowest delay then earliest checkedAt'}}
     Path('data/today.json').write_text(json.dumps(today,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
 
