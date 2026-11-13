@@ -29,7 +29,9 @@ auth_state=load('auth_state','auth_state.py')
 
 def store(store_id): return {'storeId':store_id,'fetched':True}
 def obs(raw_slot='17:30',canonical_slot='17:30',raw_delay=10,canonical_delay=10,auth='user-refresh',status='OK',valid=True):
+    raw_at=f'2026-09-13T{raw_slot}:00+02:00'
     return {'date':'2026-09-13','scheduledSlot':canonical_slot,'rawScheduledSlot':raw_slot,
+            'scheduledAt':raw_at,'rawScheduledAt':raw_at,'startedAt':'2026-09-13T17:30:10+02:00',
             'rawDelaySeconds':raw_delay,'delaySeconds':canonical_delay,'authMode':auth,
             'status':status,'valid':valid,'categories':['Vlees'],
             'stores':[store(1463),store(1348),store(1135),store(4046),store(8728)],'checkedAt':'2026-09-13T17:30:10+02:00'}
@@ -60,8 +62,9 @@ with tempfile.TemporaryDirectory() as td:
         saved=Path('data/raw/2026-09-13/1730.json')
         assert saved.is_file()
         assert json.loads(saved.read_text(encoding='utf-8'))['rawScheduledSlot']=='17:30'
-        # Same measurement is idempotent.
+        # Same measurement is idempotent and must not duplicate the JSONL slot.
         persist.main()
+        assert len(Path('data/2026-09-13.jsonl').read_text(encoding='utf-8').splitlines())==1
         # A different observation may never overwrite historical evidence.
         sample['checkedAt']='2026-09-13T17:30:11+02:00'
         Path('data/latest.json').write_text(json.dumps(sample),encoding='utf-8')
@@ -70,6 +73,7 @@ with tempfile.TemporaryDirectory() as td:
             raise AssertionError('historical slot overwrite accepted')
         except SystemExit as exc:
             assert 'weigert' in str(exc)
+        assert len(Path('data/2026-09-13.jsonl').read_text(encoding='utf-8').splitlines())==1
     finally:
         os.chdir(cwd)
 
