@@ -119,6 +119,9 @@ class AHContractTests(unittest.TestCase):
             ],
         }
         (root / f"{day}.jsonl").write_text(json.dumps(row) + "\n", encoding="utf-8")
+        raw_dir = root / "raw" / day
+        raw_dir.mkdir(parents=True, exist_ok=True)
+        (raw_dir / f"{slot.replace(':', '')}.json").write_text(json.dumps(row), encoding="utf-8")
         (root / "latest.json").write_text(json.dumps(row), encoding="utf-8")
         (root / "today.json").write_text(json.dumps({
             "date": day,
