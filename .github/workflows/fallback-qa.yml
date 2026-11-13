@@ -29,8 +29,9 @@ jobs:
           python-version: '3.12'
       - name: Test read-only watchdog
         run: |
-          python -m py_compile scripts/session_watchdog.py
+          python -m py_compile scripts/session_watchdog.py scripts/independent_qa.py
           python scripts/session_watchdog.py --self-test
+          python scripts/independent_qa.py --self-test
       - name: Inspect production session without recovery side effects
         env:
           GH_TOKEN: ${{ github.token }}
