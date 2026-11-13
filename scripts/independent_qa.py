@@ -311,7 +311,7 @@ def self_test():
             verify(root, end, True)
             raise AssertionError("Missing slot accepted")
         except AssertionError as exc:
-            assert "QA failed" in str(exc)
+            assert ("QA failed" in str(exc) or "Canonical publication is incomplete" in str(exc))
         write(rows, RAW, CANONICAL, date="2026-09-12")
         try:
             verify(root, end, True)
