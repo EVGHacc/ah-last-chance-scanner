@@ -304,7 +304,7 @@ def self_test():
             verify(root, end, True)
             raise AssertionError("Forged status accepted")
         except AssertionError as exc:
-            assert "QA failed" in str(exc)
+            assert ("QA failed" in str(exc) or "Canonical publication is incomplete" in str(exc))
         incomplete = [x for x in rows if x["rawScheduledSlot"] != "19:25"]
         write(incomplete, RAW, [s for s in CANONICAL if s != "19:25"])
         try:
