@@ -4,7 +4,7 @@ import json
 import os
 import sys
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -147,6 +147,20 @@ def read_status():
         return {}
 
 
+def final_audit_event(schedule, now):
+    """Accept only the cron that maps to 23:00 in the current Amsterdam DST offset."""
+    if now.hour != 23:
+        return False
+    offset = now.utcoffset()
+    if offset == timedelta(hours=2):
+        expected = "0 21 * * *"
+    elif offset == timedelta(hours=1):
+        expected = "0 22 * * *"
+    else:
+        return False
+    return schedule == expected
+
+
 def main():
     now = datetime.now(TZ)
     minute = now.hour * 60 + now.minute
@@ -155,6 +169,9 @@ def main():
         print("IDLE: before Amsterdam monitoring window")
         return 0
     if minute > MONITOR_END:
+        if not final_audit_event(os.getenv("EVENT_SCHEDULE", ""), now):
+            print("IDLE: outside dedicated 23:00 Amsterdam final audit event")
+            return 0
         state = decision(status, [], now)
         print(f"{state}: final publication audit at {now.isoformat()}")
         if state == "ALARM":
@@ -192,7 +209,13 @@ def self_test():
     assert decision(good, active, now) == "HEALTHY"
     assert decision(good, [], now) == "ALARM"
     assert decision({}, active, now) == "ALARM"
-    assert decision({}, [], datetime(2026, 11, 2, 23, 0, tzinfo=TZ)) == "ALARM"
+    winter_close = datetime(2026, 11, 2, 23, 0, tzinfo=TZ)
+    summer_close = datetime(2026, 7, 10, 23, 0, tzinfo=TZ)
+    assert decision({}, [], winter_close) == "ALARM"
+    assert final_audit_event("0 22 * * *", winter_close)
+    assert not final_audit_event("0 21 * * *", datetime(2026, 11, 2, 22, 0, tzinfo=TZ))
+    assert final_audit_event("0 21 * * *", summer_close)
+    assert not final_audit_event("0 22 * * *", datetime(2026, 7, 11, 0, 0, tzinfo=TZ))
     assert not hasattr(api, "post")
     print("Read-only watchdog self-test: PASS")
 
