@@ -170,6 +170,17 @@ class AHContractTests(unittest.TestCase):
         self.assertGreater(len(report["missingRaw"]), 0)
         self.assertGreater(len(report["missingCanonical"]), 0)
 
+    def test_raw_slot_archive_must_match_jsonl_source(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            now = self._write_partial_day(root)
+            raw_file = root / "raw" / "2026-10-01" / "1800.json"
+            raw = json.loads(raw_file.read_text(encoding="utf-8"))
+            raw["status"] = "FAILED"
+            raw_file.write_text(json.dumps(raw), encoding="utf-8")
+            with self.assertRaisesRegex(AssertionError, "Raw slot archive disagrees"):
+                independent.verify(root, now, require_complete=False)
+
     def test_strict_completeness_mode_still_rejects_missing_points(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
