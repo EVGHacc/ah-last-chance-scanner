@@ -41,6 +41,23 @@ class SingleAttemptSessionTests(unittest.TestCase):
             self.assertFalse(session.run_point(target))
         run.assert_not_called()
 
+    def test_checkout_fetch_failure_fails_closed_without_stderr(self):
+        failure = SimpleNamespace(returncode=128, stderr="PRIVATE_REMOTE_DETAIL")
+        output = io.StringIO()
+        with patch.object(session.subprocess, "run", return_value=failure) as run, contextlib.redirect_stdout(output):
+            with self.assertRaisesRegex(RuntimeError, "CHECKOUT_REFRESH_FAILED stage=fetch exit=128"):
+                session.refresh_checkout()
+        run.assert_called_once()
+        self.assertNotIn("PRIVATE_REMOTE_DETAIL", output.getvalue())
+
+    def test_checkout_reset_failure_fails_closed(self):
+        success = SimpleNamespace(returncode=0, stderr="")
+        failure = SimpleNamespace(returncode=1, stderr="PRIVATE_REMOTE_DETAIL")
+        with patch.object(session.subprocess, "run", side_effect=[success, failure]) as run:
+            with self.assertRaisesRegex(RuntimeError, "CHECKOUT_REFRESH_FAILED stage=reset exit=1"):
+                session.refresh_checkout()
+        self.assertEqual(run.call_count, 2)
+
 
 if __name__ == "__main__":
     unittest.main()
