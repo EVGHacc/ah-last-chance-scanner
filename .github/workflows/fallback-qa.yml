@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: '2,7,12,17,22,27,32,37,42,47,52,57 15-21 * * *'
     # Exact 23:00 Europe/Amsterdam winter audit; summer 23:00 is already 21:00 UTC above.
+    - cron: '0 21 * * *'
     - cron: '0 22 * * *'
 
 permissions:
@@ -35,3 +36,20 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: python scripts/session_watchdog.py
+      - name: Independent final publication QA at 23:00 Amsterdam
+        if: always()
+        env:
+          TZ: Europe/Amsterdam
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$EVENT_SCHEDULE" != "0 21 * * *" && "$EVENT_SCHEDULE" != "0 22 * * *" ]]; then
+            echo "Not the dedicated 23:00 Amsterdam audit event; skipping final QA"
+            exit 0
+          fi
+          if [[ "$(date +%H)" != "23" ]]; then
+            echo "Scheduled audit was not executed in the 23:00 Amsterdam hour; refusing to claim a final pass"
+            exit 1
+          fi
+          python scripts/independent_qa.py --complete
