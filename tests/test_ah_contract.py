@@ -53,6 +53,20 @@ class AHContractTests(unittest.TestCase):
     def test_required_store_scope_matches_independent_verifier(self):
         self.assertEqual(persist.REQUIRED_STORE_IDS, independent.STORE_IDS)
 
+    def test_mixed_category_observation_is_not_persistable(self):
+        observation = {
+            "authMode": "user-refresh",
+            "status": "OK",
+            "valid": True,
+            "rawDelaySeconds": 10,
+            "categories": ["Vlees", "Bakkerij"],
+            "stores": [
+                {"storeId": store_id, "fetched": True}
+                for store_id in persist.REQUIRED_STORE_IDS
+            ],
+        }
+        self.assertFalse(persist.valid_obs(observation))
+
     def test_invalid_auth_never_persists(self):
         observation = {
             "authMode": "anonymous",
@@ -84,13 +98,30 @@ class AHContractTests(unittest.TestCase):
             "valid": True,
             "status": "OK",
             "authMode": "user-refresh",
-            "categories": ["Vlees", "Bakkerij"],
+            "categories": ["Vlees"],
             "stores": [
                 {"storeId": store_id, "fetched": True}
                 for store_id in independent.STORE_IDS
             ],
         }
         (root / f"{day}.jsonl").write_text(json.dumps(row) + "\n", encoding="utf-8")
+        (root / "latest.json").write_text(json.dumps(row), encoding="utf-8")
+        (root / "today.json").write_text(json.dumps({
+            "date": day,
+            "expectedSlots": 61,
+            "presentSlots": 1,
+            "missingSlots": [s for s in independent.CANONICAL if s != slot],
+            "observations": [{
+                "date": day,
+                "scheduledSlot": slot,
+                "rawScheduledSlot": slot,
+                "authMode": "user-refresh",
+                "categories": ["Vlees"],
+                "valid": True,
+                "delaySeconds": 10,
+                "stores": row["stores"],
+            }],
+        }), encoding="utf-8")
         (root / "status.json").write_text(
             json.dumps(
                 {
@@ -104,6 +135,7 @@ class AHContractTests(unittest.TestCase):
                     "canonicalSeen": [slot],
                     "rawMissing": [s for s in independent.RAW if s != slot],
                     "canonicalMissing": [s for s in independent.CANONICAL if s != slot],
+                    "latestValid": {"checkedAt": row["checkedAt"], "rawScheduledSlot": slot},
                 }
             ),
             encoding="utf-8",

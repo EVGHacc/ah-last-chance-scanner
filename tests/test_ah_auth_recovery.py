@@ -156,27 +156,12 @@ class ScannerAuthIntegrationTests(unittest.TestCase):
         self.assertEqual(post.call_count, 2)
 
 
-class SessionRetryPolicyTests(unittest.TestCase):
-    def test_interactive_reauthentication_failure_stops_outer_scan_retries(self):
-        obs = {
-            "authMode": "user-refresh-failed",
-            "stores": [{"error": "AUTH_REAUTH_REQUIRED: login needed"}],
-        }
-        self.assertTrue(session.should_stop_auth_retries(obs))
-
-    def test_transient_auth_failure_keeps_bounded_outer_retry_available(self):
-        obs = {
-            "authMode": "user-refresh-failed",
-            "stores": [{"error": "AUTH_REFRESH_RETRY_EXHAUSTED: temporary failure"}],
-        }
-        self.assertFalse(session.should_stop_auth_retries(obs))
-
-    def test_non_retryable_auth_failure_stops_outer_scan_retries(self):
-        obs = {
-            "authMode": "user-refresh-failed",
-            "stores": [{"error": "AUTH_REFRESH_FAILED: forbidden response"}],
-        }
-        self.assertTrue(session.should_stop_auth_retries(obs))
+class SessionNoAutomaticRecoveryTests(unittest.TestCase):
+    def test_session_controller_has_no_outer_retry_or_gap_recovery(self):
+        self.assertFalse(hasattr(session, "RETRY_DELAYS"))
+        self.assertFalse(hasattr(session, "should_stop_auth_retries"))
+        self.assertFalse(hasattr(session, "recover_recent_gaps"))
+        self.assertFalse(hasattr(session, "fallback_once"))
 
 
 if __name__ == "__main__":

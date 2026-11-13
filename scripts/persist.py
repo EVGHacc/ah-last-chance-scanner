@@ -16,7 +16,7 @@ def valid_obs(o):
     if int(o.get('rawDelaySeconds',o.get('delaySeconds',999999)))>240: return False
     stores=o.get('stores') or []
     fetched={int(s.get('storeId')) for s in stores if s.get('fetched') is True and s.get('storeId') is not None}
-    return REQUIRED_STORE_IDS.issubset(fetched) and 'Vlees' in (o.get('categories') or [])
+    return REQUIRED_STORE_IDS.issubset(fetched) and o.get('categories') == ['Vlees']
 
 
 def exact_canonical_obs(o):
@@ -57,7 +57,7 @@ def main():
 
     # Durable per-observation archive.  The monolithic JSONL remains for
     # backwards compatibility, while small immutable slot files keep every
-    # genuine measurement directly readable for future analysis/recovery.
+    # genuine measurement directly readable for future analysis.
     slot=obs.get('rawScheduledSlot') or obs.get('scheduledSlot')
     if not slot: raise SystemExit('latest observatie mist scheduled slot')
     slot_dir=Path('data/raw')/date

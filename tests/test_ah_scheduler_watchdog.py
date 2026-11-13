@@ -23,6 +23,7 @@ class ProductionWorkflowConcurrencyTests(unittest.TestCase):
         fallback = self.read(".github/workflows/fallback-qa.yml")
 
         self.assertIn("  schedule:", session)
+        self.assertIn("- cron: '0 22 * * *'", fallback)
         self.assertIn("group: ah-production-single-writer", session)
         self.assertIn("cancel-in-progress: false", session)
         self.assertNotIn("  schedule:", guardian)
@@ -99,12 +100,43 @@ class WatchdogDecisionTests(unittest.TestCase):
             "ALARM",
         )
 
-    def test_outside_monitoring_window_is_idle(self):
+    def test_after_window_missing_final_publication_is_alarm(self):
         outside = datetime(2026, 11, 2, 23, 0, tzinfo=ZoneInfo("Europe/Amsterdam"))
-        self.assertEqual(
-            session_watchdog.decision({}, [], outside),
-            "IDLE",
-        )
+        self.assertEqual(session_watchdog.decision({}, [], outside), "ALARM")
+
+    def test_after_window_duplicate_raw_slot_is_alarm(self):
+        outside = datetime(2026, 11, 2, 23, 0, tzinfo=ZoneInfo("Europe/Amsterdam"))
+        raw = sorted(session_watchdog.expected_slots(3))
+        raw[-1] = raw[0]
+        status = {
+            **self.healthy_status,
+            "rawSeen": raw,
+            "canonicalSeen": sorted(session_watchdog.expected_slots(5)),
+            "rawMissing": [],
+            "canonicalMissing": [],
+            "latestValid": {
+                "authMode": "user-refresh",
+                "checkedAt": "2026-11-02T22:33:00+01:00",
+            },
+        }
+        self.assertEqual(session_watchdog.decision(status, [], outside), "ALARM")
+
+    def test_after_window_complete_final_publication_is_complete(self):
+        outside = datetime(2026, 11, 2, 23, 0, tzinfo=ZoneInfo("Europe/Amsterdam"))
+        status = {
+            **self.healthy_status,
+            "rawSeen": sorted(session_watchdog.expected_slots(3)),
+            "canonicalSeen": sorted(session_watchdog.expected_slots(5)),
+            "rawMissing": [],
+            "canonicalMissing": [],
+            "latestValid": {
+                "authMode": "user-refresh",
+                "checkedAt": "2026-11-02T22:33:00+01:00",
+                "rawScheduledSlot": "22:30",
+                "status": "OK",
+            },
+        }
+        self.assertEqual(session_watchdog.decision(status, [], outside), "COMPLETE")
 
 
 if __name__ == "__main__":

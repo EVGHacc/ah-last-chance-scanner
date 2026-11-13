@@ -259,7 +259,7 @@ def main():
     status=('OK_ZERO_ROWS' if sum(x['meatItems'] for x in stores)==0 else 'OK') if fetched==len(STORES) else ('FAILED' if fetched==0 else 'INCOMPLETE')
     completed=datetime.now(TZ)
     valid=status in ('OK','OK_ZERO_ROWS') and auth_mode=='user-refresh' and delay<=240
-    obs={'schemaVersion':5,'date':date,'weekday':scheduled.strftime('%A'),'scheduledSlot':slot,'scheduledAt':scheduled.isoformat(),'rawScheduledSlot':slot,'rawScheduledAt':scheduled.isoformat(),'startedAt':started.isoformat(),'completedAt':completed.isoformat(),'checkedAt':completed.isoformat(),'delaySeconds':delay,'rawDelaySeconds':delay,'status':status,'valid':valid,'official1925':slot=='19:25','authMode':auth_mode,'authTokenSource':auth_source,'categories':['Vlees','Bakkerij'],'stores':stores}
+    obs={'schemaVersion':5,'date':date,'weekday':scheduled.strftime('%A'),'scheduledSlot':slot,'scheduledAt':scheduled.isoformat(),'rawScheduledSlot':slot,'rawScheduledAt':scheduled.isoformat(),'startedAt':started.isoformat(),'completedAt':completed.isoformat(),'checkedAt':completed.isoformat(),'delaySeconds':delay,'rawDelaySeconds':delay,'status':status,'valid':valid,'official1925':slot=='19:25','authMode':auth_mode,'authTokenSource':auth_source,'categories':['Vlees'],'stores':stores}
     os.makedirs('data',exist_ok=True)
     with open('data/latest.json','w',encoding='utf-8') as f: json.dump(obs,f,ensure_ascii=False,indent=2)
     print(json.dumps(obs,ensure_ascii=False))

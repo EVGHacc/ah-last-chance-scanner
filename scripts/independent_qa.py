@@ -34,7 +34,47 @@ def verify(root=Path("data"), now=None, require_complete=False):
     if set(status.get("stores") or []) != STORE_IDS:
         raise AssertionError("Incorrect store scope")
 
+    latest_path = root / "latest.json"
+    if not latest_path.is_file():
+        raise AssertionError(f"Missing latest observation {latest_path}")
+    latest = json.loads(latest_path.read_text(encoding="utf-8"))
+    latest_slot = latest.get("rawScheduledSlot")
+    if (latest.get("date") != day or latest_slot not in RAW + CANONICAL
+            or latest.get("authMode") != "user-refresh"
+            or latest.get("categories") != ["Vlees"]
+            or latest.get("valid") is not True
+            or latest.get("status") not in ("OK", "OK_ZERO_ROWS")):
+        raise AssertionError("Latest observation is not a valid Vlees-only scan")
+    if require_complete and latest_slot != "22:30":
+        raise AssertionError("Complete publication does not contain the final 22:30 observation")
+    try:
+        latest_target = datetime.fromisoformat(latest["rawScheduledAt"])
+        latest_started = datetime.fromisoformat(latest["startedAt"])
+        latest_checked = datetime.fromisoformat(latest["checkedAt"])
+        latest_delay = (latest_started - latest_target).total_seconds()
+        latest_stores = latest.get("stores") or []
+        latest_fetched = {
+            int(store["storeId"]) for store in latest_stores
+            if isinstance(store, dict) and store.get("fetched") is True
+        }
+    except (KeyError, TypeError, ValueError, AttributeError):
+        raise AssertionError("Latest observation timing/store evidence is malformed")
+    if (latest_target.tzinfo is None or latest_started.tzinfo is None or latest_checked.tzinfo is None
+            or len(latest_stores) != len(STORE_IDS)
+            or latest_target.strftime("%Y-%m-%d %H:%M") != f"{day} {latest_slot}"
+            or latest_target.utcoffset() != latest_target.astimezone(TZ).utcoffset()
+            or not 0 <= latest_delay <= 240
+            or abs(latest_delay - int(latest.get("rawDelaySeconds", -999))) > 2
+            or latest_started > latest_checked or latest_fetched != STORE_IDS):
+        raise AssertionError("Latest observation timing or fetched-store evidence is invalid")
+    status_latest = status.get("latestValid") or {}
+    if (status_latest.get("checkedAt") != latest.get("checkedAt")
+            or status_latest.get("rawScheduledSlot") != latest_slot):
+        raise AssertionError("latest.json and status.json latestValid evidence disagree")
+
     seen_raw, seen_canonical = set(), set()
+    seen_slots = set()
+    archive_latest = None
     bad = 0
     archive = root / f"{day}.jsonl"
     if not archive.is_file():
@@ -62,10 +102,18 @@ def verify(root=Path("data"), now=None, require_complete=False):
                     and start <= checked and item.get("valid") is True
                     and item.get("status") in ("OK", "OK_ZERO_ROWS")
                     and item.get("authMode") == "user-refresh"
-                    and "Vlees" in item.get("categories", [])
+                    and isinstance(item.get("categories"), list)
+                    and len(item.get("categories")) == 1
+                    and item.get("categories") == ["Vlees"]
                     and fetched == STORE_IDS
                 )
                 if valid:
+                    if archive_latest is None or checked > archive_latest[0]:
+                        archive_latest = (checked, item)
+                    if slot in seen_slots:
+                        bad += 1
+                        continue
+                    seen_slots.add(slot)
                     if slot in RAW:
                         seen_raw.add(slot)
                     if slot in CANONICAL:
@@ -92,6 +140,45 @@ def verify(root=Path("data"), now=None, require_complete=False):
         if durable_raw and not durable_raw.issubset(seen_raw):
             raise AssertionError("Durable per-slot archive disagrees with source JSONL")
 
+    if (archive_latest is None
+            or archive_latest[1].get("checkedAt") != latest.get("checkedAt")
+            or archive_latest[1].get("rawScheduledSlot") != latest_slot):
+        raise AssertionError("latest.json does not match the newest valid JSONL observation")
+
+    today_path = root / "today.json"
+    if not today_path.is_file():
+        raise AssertionError(f"Missing canonical publication {today_path}")
+    today_view = json.loads(today_path.read_text(encoding="utf-8"))
+    if (today_view.get("date") != day or today_view.get("expectedSlots") != 61
+            or not isinstance(today_view.get("observations"), list)):
+        raise AssertionError("Canonical publication date/schema is invalid")
+    canonical_observations = today_view["observations"]
+    canonical_slots = [item.get("scheduledSlot") for item in canonical_observations]
+    if (today_view.get("presentSlots") != len(canonical_observations)
+            or len(canonical_slots) != len(set(canonical_slots))
+            or set(canonical_slots) != seen_canonical
+            or set(today_view.get("missingSlots") or []) != set(CANONICAL) - seen_canonical):
+        raise AssertionError("today.json does not match independently verified canonical slots")
+    for item in canonical_observations:
+        try:
+            item_stores = {
+                int(store["storeId"]) for store in (item.get("stores") or [])
+                if isinstance(store, dict) and store.get("fetched") is True
+            }
+            item_delay = int(item.get("delaySeconds", 999999))
+        except (TypeError, ValueError, KeyError):
+            raise AssertionError("Canonical observation store/delay evidence is malformed")
+        if (item.get("date") != day or item.get("rawScheduledSlot") != item.get("scheduledSlot")
+                or item.get("scheduledSlot") not in CANONICAL
+                or item.get("authMode") != "user-refresh"
+                or item.get("categories") != ["Vlees"]
+                or item.get("valid") is not True
+                or not 0 <= item_delay <= 240
+                or item_stores != STORE_IDS):
+            raise AssertionError("Canonical observation violates Vlees/auth/store/slot contract")
+    if require_complete and len(canonical_observations) != 61:
+        raise AssertionError("Canonical publication is incomplete; expected 61/61")
+
     listed_raw = status.get("rawSeen") or []
     listed_can = status.get("canonicalSeen") or []
     inconsistencies = []
@@ -108,7 +195,7 @@ def verify(root=Path("data"), now=None, require_complete=False):
     overdue_can = [s for s in CANONICAL if 60 * int(s[:2]) + int(s[3:]) <= cutoff and s not in seen_canonical]
     missing_raw = [s for s in RAW if s not in seen_raw]
     missing_can = [s for s in CANONICAL if s not in seen_canonical]
-    complete = len(seen_raw) == 101 and len(seen_canonical) == 61
+    complete = len(seen_raw) == 101 and len(seen_canonical) == 61 and bad == 0
     usable = bool(seen_raw) and not inconsistencies
     report = {
         "date": day, "raw": len(seen_raw), "rawExpected": 101,
@@ -140,7 +227,7 @@ def self_test():
                 startedAt=(at + timedelta(seconds=10)).isoformat(),
                 checkedAt=(at + timedelta(seconds=15)).isoformat(),
                 rawDelaySeconds=10, delaySeconds=10, valid=True, status="OK",
-                authMode="user-refresh", categories=["Vlees", "Bakkerij"],
+                authMode="user-refresh", categories=["Vlees"],
                 stores=[dict(storeId=s, fetched=True) for s in STORE_IDS],
             ))
         def write(rows, raw, canonical, date=day):
@@ -152,10 +239,55 @@ def self_test():
                 rawSeen=raw, canonicalSeen=canonical,
                 rawMissing=[s for s in RAW if s not in raw],
                 canonicalMissing=[s for s in CANONICAL if s not in canonical],
+                latestValid=None if not rows else {
+                    "checkedAt": rows[-1]["checkedAt"],
+                    "rawScheduledSlot": rows[-1]["rawScheduledSlot"],
+                },
             )), encoding="utf-8")
+            if rows:
+                (root / "latest.json").write_text(json.dumps(rows[-1]), encoding="utf-8")
+            canonical_rows = [
+                {
+                    "date": row["date"], "scheduledSlot": row["scheduledSlot"],
+                    "rawScheduledSlot": row["rawScheduledSlot"],
+                    "authMode": row["authMode"], "categories": row["categories"],
+                    "valid": row["valid"], "delaySeconds": row["delaySeconds"],
+                    "stores": row["stores"],
+                }
+                for row in rows if row["scheduledSlot"] in CANONICAL
+            ]
+            canonical_present = {row["scheduledSlot"] for row in canonical_rows}
+            (root / "today.json").write_text(json.dumps({
+                "date": date, "expectedSlots": 61,
+                "presentSlots": len(canonical_rows),
+                "missingSlots": [slot for slot in CANONICAL if slot not in canonical_present],
+                "observations": canonical_rows,
+            }), encoding="utf-8")
         end = datetime.fromisoformat(day + "T22:35:00+02:00")
         write(rows, RAW, CANONICAL)
         assert verify(root, end, True)["complete"]
+        mixed_category = [dict(item) for item in rows]
+        mixed_category[-1]["categories"] = ["Vlees", "Bakkerij"]
+        write(mixed_category, RAW, CANONICAL)
+        try:
+            verify(root, end, True)
+            raise AssertionError("Mixed-category evidence accepted")
+        except AssertionError as exc:
+            if "Vlees-only" not in str(exc):
+                raise
+        else:
+            raise AssertionError("Mixed-category latest observation accepted")
+        write(rows, RAW, CANONICAL)
+        today_payload = json.loads((root / "today.json").read_text(encoding="utf-8"))
+        today_payload["presentSlots"] = 60
+        (root / "today.json").write_text(json.dumps(today_payload), encoding="utf-8")
+        try:
+            verify(root, end, True)
+            raise AssertionError("Mismatched canonical publication accepted")
+        except AssertionError as exc:
+            if "today.json" not in str(exc):
+                raise
+        write(rows, RAW, CANONICAL)
         write([x for x in rows if x["rawScheduledSlot"] != "19:25"],
               RAW, CANONICAL)
         try:

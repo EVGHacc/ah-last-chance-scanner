@@ -5,16 +5,16 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class PrestartWorkflowContractTests(unittest.TestCase):
-    def test_production_session_has_primary_and_backup_dst_aware_schedules(self):
+    def test_production_session_has_one_dst_aware_prestart(self):
         source = (ROOT / ".github/workflows/session.yml").read_text(encoding="utf-8")
-        for cron in ("25 15", "25 16", "28 15", "28 16"):
+        for cron in ("25 15", "25 16"):
             self.assertIn(f"- cron: '{cron} * * *'", source)
         self.assertNotIn("  push:", source)
-        self.assertIn("  workflow_dispatch:", source)
-        self.assertIn("recovery_confirmation:", source)
-        self.assertIn("Consume one-time recovery authorization", source)
-        self.assertIn("git push origin HEAD:main", source)
-        self.assertLess(source.index("Consume one-time recovery authorization"), source.index("id: supervised_scan"))
+        self.assertNotIn("  workflow_dispatch:", source)
+        self.assertNotIn("recovery_confirmation:", source)
+        self.assertNotIn("git push origin HEAD:main", source)
+        self.assertIn("GATE_DECISION", source)
+        self.assertIn("EXPECTED PRESTART MISSED OR INVALID", source)
         self.assertIn("group: ah-production-single-writer", source)
         self.assertIn("cancel-in-progress: false", source)
 
@@ -22,6 +22,7 @@ class PrestartWorkflowContractTests(unittest.TestCase):
         source = (ROOT / ".github/workflows/session.yml").read_text(encoding="utf-8")
         self.assertLess(source.index("id: prestart"), source.index("id: supervised_scan"))
         self.assertIn("python scripts/prestart.py", source)
+        self.assertIn("python scripts/production_health.py --preflight", source)
         self.assertIn("steps.prestart.outcome == 'success'", source)
         self.assertIn("PRESTART CONFIGURATION CHECK DID NOT SUCCEED", source)
         self.assertIn("python -m unittest discover -s tests -p 'test_ah_prestart.py' -v", source)

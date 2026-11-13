@@ -3,6 +3,8 @@ name: AH read-only session watchdog
 on:
   schedule:
     - cron: '2,7,12,17,22,27,32,37,42,47,52,57 15-21 * * *'
+    # Exact 23:00 Europe/Amsterdam winter audit; summer 23:00 is already 21:00 UTC above.
+    - cron: '0 22 * * *'
 
 permissions:
   contents: read

@@ -32,13 +32,15 @@ def state(now=None):
 def validate_preflight():
     # Static production invariants that can be proved before the first slot.
     import session
-    assert session.MAX_RECOVERY_AGE==240
-    assert session.RECOVERY_START_DEADLINE<=205
+    assert session.MAX_SLOT_DELAY_SECONDS==240
+    assert not hasattr(session, 'RETRY_DELAYS')
+    assert not hasattr(session, 'fallback_once')
+    assert not hasattr(session, 'recover_recent_gaps')
     assert len([p for p in session.points_for(datetime(2026,10,3,tzinfo=TZ))
                 if session.raw_due(p.hour*60+p.minute)])==101
     assert len([p for p in session.points_for(datetime(2026,10,3,tzinfo=TZ))
                 if session.canonical_due(p.hour*60+p.minute)])==61
-    print("PRE-FLIGHT PASS: cadence/recovery invariants valid")
+    print("PRE-FLIGHT PASS: cadence and no-recovery invariants valid")
 
 def self_test():
     assert state(datetime(2026,10,3,17,0,tzinfo=TZ)) in {"READY","AMBER"}
