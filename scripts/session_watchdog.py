@@ -91,7 +91,8 @@ def valid_final_publication(status, now):
     checked = checked.astimezone(TZ)
     final_slot = checked.replace(hour=22, minute=30, second=0, microsecond=0)
     age_after_final_slot = (checked - final_slot).total_seconds()
-    return checked.date() == now.date() and 0 <= age_after_final_slot <= MAX_SCAN_AGE
+    return (checked.date() == now.date() and checked <= now
+            and 0 <= age_after_final_slot <= MAX_SCAN_AGE)
 
 
 def active_runs(runs, now):
