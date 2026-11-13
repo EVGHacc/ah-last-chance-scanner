@@ -51,8 +51,18 @@ def point_complete(target):
 
 
 def refresh_checkout():
-    subprocess.run(['git','fetch','origin','main'],check=False)
-    subprocess.run(['git','reset','--hard','origin/main'],check=False)
+    """Refresh the authoritative main checkout or fail closed without logging stderr."""
+    commands = (
+        ("fetch", ["git", "fetch", "origin", "main"]),
+        ("reset", ["git", "reset", "--hard", "origin/main"]),
+    )
+    for stage, command in commands:
+        result = subprocess.run(command, check=False, text=True, capture_output=True)
+        if result.returncode != 0:
+            raise RuntimeError(
+                f"CHECKOUT_REFRESH_FAILED stage={stage} exit={result.returncode}; "
+                "stderr_suppressed=true"
+            )
 
 
 def run_point(target):
@@ -122,7 +132,7 @@ def main():
             if delta<=0:
                 break
             time.sleep(min(delta,30))
-        # Prioritize the current scheduled point; the scheduled point is never retried or backfilled.
+        # Never scan using a stale checkout or continue after a failed refresh.
         refresh_checkout()
         if not point_complete(target):
             age=(datetime.now(TZ)-target).total_seconds()
