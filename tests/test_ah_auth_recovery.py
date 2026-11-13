@@ -143,8 +143,10 @@ class ScannerAuthIntegrationTests(unittest.TestCase):
 
     def test_transient_upstream_failure_opens_shared_circuit_after_two_attempts(self):
         context = {"access": "valid-access"}
-        with patch.object(scanner, "post", return_value=(503, {"error_class": "HTTPError"})) as post, \\
-             patch.object(scanner.time, "sleep"):
+        with (
+            patch.object(scanner, "post", return_value=(503, {"error_class": "HTTPError"})) as post,
+            patch.object(scanner.time, "sleep"),
+        ):
             first = scanner.fetch_store(1463, "AH Blekersvaartweg", "valid-access", context)
             second = scanner.fetch_store(1348, "AH Zandvoortselaan", "valid-access", context)
 
@@ -155,7 +157,6 @@ class ScannerAuthIntegrationTests(unittest.TestCase):
         self.assertTrue(context["circuit_open"])
         self.assertEqual(post.call_count, 2)
         self.assertTrue(all(call.kwargs["attempts"] == 1 for call in post.call_args_list))
-
     def test_http_error_response_body_is_never_returned(self):
         secret_body = b"PRIVATE_UPSTREAM_RESPONSE"
         error = urllib.error.HTTPError(
