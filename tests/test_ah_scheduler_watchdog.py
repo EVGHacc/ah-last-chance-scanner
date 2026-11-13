@@ -103,6 +103,14 @@ class WatchdogDecisionTests(unittest.TestCase):
             "ALARM",
         )
 
+    def test_final_audit_event_is_dst_aware_and_not_the_inactive_cron(self):
+        winter = datetime(2026, 11, 2, 23, 0, tzinfo=ZoneInfo("Europe/Amsterdam"))
+        summer = datetime(2026, 7, 10, 23, 0, tzinfo=ZoneInfo("Europe/Amsterdam"))
+        self.assertTrue(session_watchdog.final_audit_event("0 22 * * *", winter))
+        self.assertFalse(session_watchdog.final_audit_event("0 21 * * *", winter.replace(hour=22)))
+        self.assertTrue(session_watchdog.final_audit_event("0 21 * * *", summer))
+        self.assertFalse(session_watchdog.final_audit_event("0 22 * * *", summer.replace(hour=0, day=11)))
+
     def test_after_window_missing_final_publication_is_alarm(self):
         outside = datetime(2026, 11, 2, 23, 0, tzinfo=ZoneInfo("Europe/Amsterdam"))
         self.assertEqual(session_watchdog.decision({}, [], outside), "ALARM")
