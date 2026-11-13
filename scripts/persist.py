@@ -16,7 +16,7 @@ def valid_obs(o):
     if int(o.get('rawDelaySeconds',o.get('delaySeconds',999999)))>240: return False
     stores=o.get('stores') or []
     fetched={int(s.get('storeId')) for s in stores if s.get('fetched') is True and s.get('storeId') is not None}
-    return REQUIRED_STORE_IDS.issubset(fetched) and o.get('categories') == ['Vlees']
+    return len(stores) == len(REQUIRED_STORE_IDS) and fetched == REQUIRED_STORE_IDS and o.get('categories') == ['Vlees']
 
 
 def exact_canonical_obs(o):
