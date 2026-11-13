@@ -23,7 +23,9 @@ class ProductionWorkflowConcurrencyTests(unittest.TestCase):
         fallback = self.read(".github/workflows/fallback-qa.yml")
 
         self.assertIn("  schedule:", session)
+        self.assertIn("- cron: '0 21 * * *'", fallback)
         self.assertIn("- cron: '0 22 * * *'", fallback)
+        self.assertIn("python scripts/independent_qa.py --complete", fallback)
         self.assertIn("group: ah-production-single-writer", session)
         self.assertIn("cancel-in-progress: false", session)
         self.assertNotIn("  schedule:", guardian)
