@@ -20,12 +20,13 @@ DEFAULT_TOKEN_STATE='/tmp/ah-last-chance-auth-state.json'
 LAST_AUTH_SOURCE='none'
 
 
-def post(path,body,token=None,attempts=2):
+def post(path,body,token=None,attempts=1):
+    """HTTP helper with a strict retry budget and no response-body logging."""
     h=dict(HEADERS)
     if token: h['Authorization']='Bearer '+token
     payload=json.dumps(body).encode()
     last_status=0
-    last_data={'error':'request failed'}
+    last_data={'error_class':'RequestFailed'}
     for attempt in range(1,attempts+1):
         req=urllib.request.Request(BASE+path,data=payload,headers=h,method='POST')
         try:
@@ -33,15 +34,15 @@ def post(path,body,token=None,attempts=2):
                 return r.status,json.loads(r.read())
         except urllib.error.HTTPError as e:
             last_status=e.code
-            last_data={'error':e.read().decode(errors='replace')[:300]}
+            last_data={'error_class':'HTTPError'}
             if e.code not in TRANSIENT_HTTP or attempt==attempts:
                 return last_status,last_data
         except (urllib.error.URLError,TimeoutError,OSError) as e:
             last_status=0
-            last_data={'error':f'{type(e).__name__}: {e}'[:300]}
+            last_data={'error_class':type(e).__name__}
             if attempt==attempts:
                 return last_status,last_data
-        time.sleep(attempt)
+        time.sleep(min(2,attempt))
     return last_status,last_data
 
 
@@ -188,29 +189,50 @@ def parse_schedule(started):
     return scheduled
 
 
+def _safe_error(error):
+    """Return only a stable error class/code; never expose HTTP bodies or secrets."""
+    text=str(error)
+    code=text.split(':',1)[0]
+    if code in {
+        'AUTH_REAUTH_REQUIRED',
+        'AUTH_REFRESH_FAILED',
+        'AUTH_REFRESH_RETRY_EXHAUSTED',
+        'UPSTREAM_CIRCUIT_OPEN',
+    }:
+        return code
+    if text.startswith('HTTP '):
+        return text.split(':',1)[0]
+    if isinstance(error,dict):
+        return str(error.get('error_class') or 'UPSTREAM_REQUEST_FAILED')
+    return type(error).__name__ if not isinstance(error,str) else 'UPSTREAM_REQUEST_FAILED'
+
+
 def _failed_store(sid,name,error):
     return {
         'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,
         'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,
         'bakery70Items':0,'bakery70Stock':0,'all70Items':0,'all70Stock':0,
-        'all70':[],'items':[],'bakery':[],'error':str(error)[:350],
+        'all70':[],'items':[],'bakery':[],'error':_safe_error(error),
     }
 
 
-def fetch_store(sid,name,access,auth_context=None,attempts=4):
+def fetch_store(sid,name,access,auth_context=None,attempts=2):
     if auth_context is not None:
         if auth_context.get('error'):
             return _failed_store(sid,name,auth_context['error'])
+        if auth_context.get('circuit_open'):
+            return _failed_store(sid,name,'UPSTREAM_CIRCUIT_OPEN')
         access=auth_context.get('access') or access
     status=0; data={}
     auth_refreshed=False
     for attempt in range(1,attempts+1):
-        status,data=post('/graphql',{'query':QUERY,'variables':{'storeId':str(sid)}},access,attempts=2)
+        status,data=post('/graphql',{'query':QUERY,'variables':{'storeId':str(sid)}},access,attempts=1)
         if status==401:
             if auth_refreshed:
+                error='AUTH_REAUTH_REQUIRED: AH rejected the refreshed access token'
                 if auth_context is not None:
-                    auth_context['error']='AUTH_REAUTH_REQUIRED: AH rejected the newly refreshed access token'
-                break
+                    auth_context['error']=error
+                return _failed_store(sid,name,error)
             auth_refreshed=True
             try:
                 access,_=token(force_refresh=True)
@@ -218,7 +240,7 @@ def fetch_store(sid,name,access,auth_context=None,attempts=4):
                     auth_context['access']=access
             except Exception as exc:
                 if auth_context is not None:
-                    auth_context['error']=str(exc)
+                    auth_context['error']=_safe_error(exc)
                 return _failed_store(sid,name,exc)
             continue
         if status==200 and not data.get('errors'):
@@ -226,10 +248,20 @@ def fetch_store(sid,name,access,auth_context=None,attempts=4):
             meat=make_items(rows,'Vlees'); bakery=make_items(rows,'Bakkerij'); all70=make_all_70(rows)
             m70=[x for x in meat if float(x['discountPct'])>=70]; b70=[x for x in bakery if float(x['discountPct'])>=70]
             return {'storeId':sid,'store':name,'fetched':True,'totalBargainItems':len(rows),'meatItems':len(meat),'meat70Items':len(m70),'meat70Stock':sum(float(x['stock']) for x in m70),'bakeryItems':len(bakery),'bakery70Items':len(b70),'bakery70Stock':sum(float(x['stock']) for x in b70),'all70Items':len(all70),'all70Stock':sum(float(x['stock']) for x in all70),'all70':all70,'items':meat,'bakery':bakery}
-        if attempt<attempts: time.sleep(min(4,2**(attempt-1)))
-    if auth_context is not None and auth_context.get('error'):
-        return _failed_store(sid,name,auth_context['error'])
-    return _failed_store(sid,name,f'HTTP {status}: {data}')
+        if status in TRANSIENT_HTTP or status==0:
+            if attempt<attempts:
+                time.sleep(min(2 ** (attempt-1),2))
+                continue
+            failure=f'UPSTREAM_CIRCUIT_OPEN: HTTP {status}'
+        else:
+            failure=f'UPSTREAM_CIRCUIT_OPEN: HTTP {status or "GraphQL"}'
+        if auth_context is not None:
+            auth_context['circuit_open']=True
+        return _failed_store(sid,name,failure)
+    failure='UPSTREAM_CIRCUIT_OPEN: retry budget exhausted'
+    if auth_context is not None:
+        auth_context['circuit_open']=True
+    return _failed_store(sid,name,failure)
 
 
 def main():
@@ -254,7 +286,7 @@ def main():
         else:
             auth_source=LAST_AUTH_SOURCE
     except Exception as e:
-        stores=[{'storeId':sid,'store':name,'fetched':False,'totalBargainItems':0,'meatItems':0,'meat70Items':0,'meat70Stock':0,'bakeryItems':0,'bakery70Items':0,'bakery70Stock':0,'all70Items':0,'all70Stock':0,'all70':[],'items':[],'bakery':[],'error':str(e)[:350]} for sid,name in STORES]
+        stores=[_failed_store(sid,name,e) for sid,name in STORES]
     fetched=sum(1 for x in stores if x['fetched'])
     status=('OK_ZERO_ROWS' if sum(x['meatItems'] for x in stores)==0 else 'OK') if fetched==len(STORES) else ('FAILED' if fetched==0 else 'INCOMPLETE')
     completed=datetime.now(TZ)
