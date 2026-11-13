@@ -113,7 +113,7 @@ def main():
         slot_file.write_text(row_text,encoding='utf-8')
     if not existing_rows:
         with day.open('a',encoding='utf-8') as f:
-            f.write(row_text+'\\n')
+            f.write(row_text+'\n')
 
     # Durable per-observation archive remains immutable; identical replays are idempotent.
 
