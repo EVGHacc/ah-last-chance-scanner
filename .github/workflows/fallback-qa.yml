@@ -45,12 +45,21 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if [[ "$EVENT_SCHEDULE" != "0 21 * * *" && "$EVENT_SCHEDULE" != "0 22 * * *" ]]; then
-            echo "Not the dedicated 23:00 Amsterdam audit event; skipping final QA"
+          local_offset="$(date +%z)"
+          if [[ "$local_offset" == "+0200" ]]; then
+            expected_schedule="0 21 * * *"
+          elif [[ "$local_offset" == "+0100" ]]; then
+            expected_schedule="0 22 * * *"
+          else
+            echo "::error::Unexpected Europe/Amsterdam UTC offset: $local_offset"
+            exit 1
+          fi
+          if [[ "$EVENT_SCHEDULE" != "$expected_schedule" ]]; then
+            echo "Inactive DST alternative; no final QA was expected"
             exit 0
           fi
           if [[ "$(date +%H)" != "23" ]]; then
-            echo "Scheduled audit was not executed in the 23:00 Amsterdam hour; refusing to claim a final pass"
+            echo "::error::Dedicated 23:00 audit was delayed outside its local-hour acceptance window"
             exit 1
           fi
           python scripts/independent_qa.py --complete
