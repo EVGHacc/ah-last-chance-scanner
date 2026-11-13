@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 import json
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 START=17*60+30
 END=22*60+30
@@ -8,15 +10,39 @@ SLOTS=[f'{m//60:02d}:{m%60:02d}' for m in range(START,END+1,5)]
 RAW_SLOTS=[f'{m//60:02d}:{m%60:02d}' for m in range(START,END+1,3)]
 VALID_STATUS={'OK','OK_ZERO_ROWS'}
 REQUIRED_STORE_IDS={1463,1348,1135,4046,8728}
+TZ=ZoneInfo('Europe/Amsterdam')
 
 
 def valid_obs(o):
     if not isinstance(o,dict) or o.get('authMode')!='user-refresh': return False
     if o.get('status') not in VALID_STATUS or o.get('valid') is not True: return False
-    if int(o.get('rawDelaySeconds',o.get('delaySeconds',999999)))>240: return False
-    stores=o.get('stores') or []
-    fetched={int(s.get('storeId')) for s in stores if s.get('fetched') is True and s.get('storeId') is not None}
-    return len(stores) == len(REQUIRED_STORE_IDS) and fetched == REQUIRED_STORE_IDS and o.get('categories') == ['Vlees']
+    slot=o.get('rawScheduledSlot')
+    if slot not in RAW_SLOTS + SLOTS or o.get('scheduledSlot') != slot: return False
+    if o.get('scheduledAt') != o.get('rawScheduledAt'): return False
+    try:
+        target=datetime.fromisoformat(o['rawScheduledAt'])
+        started=datetime.fromisoformat(o['startedAt'])
+        checked=datetime.fromisoformat(o['checkedAt'])
+        raw_delay=int(o.get('rawDelaySeconds',999999))
+        delay=int(o.get('delaySeconds',999999))
+        stores=o.get('stores') or []
+        fetched={int(store.get('storeId')) for store in stores
+                 if isinstance(store,dict) and store.get('fetched') is True
+                 and store.get('storeId') is not None}
+    except (KeyError,TypeError,ValueError,AttributeError):
+        return False
+    elapsed=(started-target).total_seconds()
+    if (target.tzinfo is None or started.tzinfo is None or checked.tzinfo is None
+            or target.date().isoformat()!=o.get('date')
+            or target.strftime('%H:%M')!=slot
+            or target.utcoffset()!=target.astimezone(TZ).utcoffset()
+            or started.date()!=target.date() or checked.date()!=target.date()
+            or not 0<=raw_delay<=240 or not 0<=delay<=240
+            or abs(elapsed-raw_delay)>2 or abs(elapsed-delay)>2
+            or started>checked):
+        return False
+    return (len(stores)==len(REQUIRED_STORE_IDS) and fetched==REQUIRED_STORE_IDS
+            and o.get('categories')==['Vlees'])
 
 
 def exact_canonical_obs(o):
@@ -51,24 +77,45 @@ def main():
     obs=json.loads(latest.read_text(encoding='utf-8')); date=obs['date']
     if not valid_obs(obs): raise SystemExit('latest observatie is niet geldig/user-refresh/5 winkels/Vlees')
 
+    slot=obs.get('rawScheduledSlot') or obs.get('scheduledSlot')
+    if slot not in RAW_SLOTS + SLOTS or obs.get('scheduledSlot') != slot:
+        raise SystemExit('latest observatie heeft een ongeldig meetpunt')
     day=Path(f'data/{date}.jsonl'); day.parent.mkdir(exist_ok=True)
     row_text=json.dumps(obs,ensure_ascii=False,separators=(',',':'))
-    with day.open('a',encoding='utf-8') as f: f.write(row_text+'\n')
-
-    # Durable per-observation archive.  The monolithic JSONL remains for
-    # backwards compatibility, while small immutable slot files keep every
-    # genuine measurement directly readable for future analysis.
-    slot=obs.get('rawScheduledSlot') or obs.get('scheduledSlot')
-    if not slot: raise SystemExit('latest observatie mist scheduled slot')
     slot_dir=Path('data/raw')/date
     slot_dir.mkdir(parents=True,exist_ok=True)
     slot_file=slot_dir/f"{slot.replace(':','')}.json"
+
+    existing_raw=None
     if slot_file.exists():
-        existing=json.loads(slot_file.read_text(encoding='utf-8'))
-        if existing.get('checkedAt') != obs.get('checkedAt'):
+        try:
+            existing_raw=json.loads(slot_file.read_text(encoding='utf-8'))
+        except (OSError,ValueError):
+            raise SystemExit(f'onleesbaar immutable raw-slotbestand: {slot}')
+        if existing_raw != obs:
             raise SystemExit(f'weigert bestaande historische slotmeting te overschrijven: {slot}')
-    else:
+
+    existing_rows=[]
+    if day.exists():
+        with day.open(encoding='utf-8') as source:
+            for line in source:
+                if not line.strip(): continue
+                try:
+                    previous=json.loads(line)
+                except ValueError:
+                    raise SystemExit('weigert JSONL met ongeldige historische regel te wijzigen')
+                if previous.get('date')==date and previous.get('rawScheduledSlot')==slot:
+                    existing_rows.append(previous)
+    if existing_rows and (len(existing_rows)!=1 or existing_rows[0] != obs):
+        raise SystemExit(f'weigert dubbele of afwijkende JSONL-slotmeting: {slot}')
+
+    if existing_raw is None:
         slot_file.write_text(row_text,encoding='utf-8')
+    if not existing_rows:
+        with day.open('a',encoding='utf-8') as f:
+            f.write(row_text+'\\n')
+
+    # Durable per-observation archive remains immutable; identical replays are idempotent.
 
     canonical={}; valid_rows=[]; raw_seen=set()
     with day.open(encoding='utf-8') as f:
