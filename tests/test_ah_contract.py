@@ -67,6 +67,20 @@ class AHContractTests(unittest.TestCase):
         }
         self.assertFalse(persist.valid_obs(observation))
 
+    def test_unconfigured_extra_store_is_not_persistable(self):
+        observation = {
+            "authMode": "user-refresh",
+            "status": "OK",
+            "valid": True,
+            "rawDelaySeconds": 10,
+            "categories": ["Vlees"],
+            "stores": [
+                {"storeId": store_id, "fetched": True}
+                for store_id in persist.REQUIRED_STORE_IDS
+            ] + [{"storeId": 9999, "fetched": True}],
+        }
+        self.assertFalse(persist.valid_obs(observation))
+
     def test_invalid_auth_never_persists(self):
         observation = {
             "authMode": "anonymous",
