@@ -92,6 +92,7 @@ def verify(root=Path("data"), now=None, require_complete=False):
                 fetched = {int(s["storeId"]) for s in stores if s.get("fetched") is True}
                 valid = (
                     item.get("date") == day and slot in RAW + CANONICAL
+                    and len(stores) == len(STORE_IDS)
                     and item.get("scheduledSlot") == slot
                     and item.get("scheduledAt") == item.get("rawScheduledAt")
                     and target.strftime("%Y-%m-%d %H:%M") == f"{day} {slot}"
@@ -168,7 +169,8 @@ def verify(root=Path("data"), now=None, require_complete=False):
             item_delay = int(item.get("delaySeconds", 999999))
         except (TypeError, ValueError, KeyError):
             raise AssertionError("Canonical observation store/delay evidence is malformed")
-        if (item.get("date") != day or item.get("rawScheduledSlot") != item.get("scheduledSlot")
+        if (len(item.get("stores") or []) != len(STORE_IDS)
+                or item.get("date") != day or item.get("rawScheduledSlot") != item.get("scheduledSlot")
                 or item.get("scheduledSlot") not in CANONICAL
                 or item.get("authMode") != "user-refresh"
                 or item.get("categories") != ["Vlees"]
