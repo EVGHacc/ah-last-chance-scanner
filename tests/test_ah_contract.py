@@ -53,46 +53,41 @@ class AHContractTests(unittest.TestCase):
     def test_required_store_scope_matches_independent_verifier(self):
         self.assertEqual(persist.REQUIRED_STORE_IDS, independent.STORE_IDS)
 
-    def test_mixed_category_observation_is_not_persistable(self):
-        observation = {
+    def _valid_observation(self):
+        target = "2026-10-01T17:30:00+02:00"
+        return {
+            "date": "2026-10-01",
+            "scheduledSlot": "17:30",
+            "rawScheduledSlot": "17:30",
+            "scheduledAt": target,
+            "rawScheduledAt": target,
+            "startedAt": "2026-10-01T17:30:10+02:00",
+            "checkedAt": "2026-10-01T17:30:15+02:00",
+            "rawDelaySeconds": 10,
+            "delaySeconds": 10,
             "authMode": "user-refresh",
             "status": "OK",
             "valid": True,
-            "rawDelaySeconds": 10,
-            "categories": ["Vlees", "Bakkerij"],
+            "categories": ["Vlees"],
             "stores": [
                 {"storeId": store_id, "fetched": True}
                 for store_id in persist.REQUIRED_STORE_IDS
             ],
         }
+
+    def test_mixed_category_observation_is_not_persistable(self):
+        observation = self._valid_observation()
+        observation["categories"] = ["Vlees", "Bakkerij"]
         self.assertFalse(persist.valid_obs(observation))
 
     def test_unconfigured_extra_store_is_not_persistable(self):
-        observation = {
-            "authMode": "user-refresh",
-            "status": "OK",
-            "valid": True,
-            "rawDelaySeconds": 10,
-            "categories": ["Vlees"],
-            "stores": [
-                {"storeId": store_id, "fetched": True}
-                for store_id in persist.REQUIRED_STORE_IDS
-            ] + [{"storeId": 9999, "fetched": True}],
-        }
+        observation = self._valid_observation()
+        observation["stores"].append({"storeId": 9999, "fetched": True})
         self.assertFalse(persist.valid_obs(observation))
 
     def test_invalid_auth_never_persists(self):
-        observation = {
-            "authMode": "anonymous",
-            "status": "OK",
-            "valid": True,
-            "rawDelaySeconds": 10,
-            "categories": ["Vlees"],
-            "stores": [
-                {"storeId": store_id, "fetched": True}
-                for store_id in persist.REQUIRED_STORE_IDS
-            ],
-        }
+        observation = self._valid_observation()
+        observation["authMode"] = "anonymous"
         self.assertFalse(persist.valid_obs(observation))
 
     def _write_partial_day(self, root):
