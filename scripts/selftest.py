@@ -31,7 +31,7 @@ def store(store_id): return {'storeId':store_id,'fetched':True}
 def obs(raw_slot='17:30',canonical_slot='17:30',raw_delay=10,canonical_delay=10,auth='user-refresh',status='OK',valid=True):
     return {'date':'2026-09-13','scheduledSlot':canonical_slot,'rawScheduledSlot':raw_slot,
             'rawDelaySeconds':raw_delay,'delaySeconds':canonical_delay,'authMode':auth,
-            'status':status,'valid':valid,'categories':['Vlees','Bakkerij'],
+            'status':status,'valid':valid,'categories':['Vlees'],
             'stores':[store(1463),store(1348),store(1135),store(4046),store(8728)],'checkedAt':'2026-09-13T17:30:10+02:00'}
 
 assert len(persist.RAW_SLOTS)==101 and persist.RAW_SLOTS[0]=='17:30' and persist.RAW_SLOTS[-1]=='22:30'
