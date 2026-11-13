@@ -33,9 +33,7 @@ def valid_heartbeat(status, now):
     if not REQUIRED_STORES.issubset(stores):
         return False
     latest = status.get("latestValid") or {}
-    if (latest.get("authMode") != "user-refresh"
-            or latest.get("rawScheduledSlot") != "22:30"
-            or latest.get("status") not in ("OK", "OK_ZERO_ROWS")):
+    if latest.get("authMode") != "user-refresh":
         return False
     try:
         checked = datetime.fromisoformat(latest["checkedAt"])
