@@ -75,6 +75,7 @@ def verify(root=Path("data"), now=None, require_complete=False):
     seen_raw, seen_canonical = set(), set()
     seen_slots = set()
     archive_latest = None
+    records_by_slot = {}
     bad = 0
     archive = root / f"{day}.jsonl"
     if not archive.is_file():
@@ -115,6 +116,7 @@ def verify(root=Path("data"), now=None, require_complete=False):
                         bad += 1
                         continue
                     seen_slots.add(slot)
+                    records_by_slot[slot] = item
                     if slot in RAW:
                         seen_raw.add(slot)
                     if slot in CANONICAL:
@@ -124,23 +126,22 @@ def verify(root=Path("data"), now=None, require_complete=False):
             except (ValueError, TypeError, KeyError, AttributeError, json.JSONDecodeError):
                 bad += 1
 
-    # Cross-check durable per-slot archive when present. It is intentionally
-    # independent from the growing JSONL and makes future historical analysis
-    # resilient to large-file/API retrieval limitations.
+    # Every raw-cadence observation must also have its immutable per-slot file.
     slot_root = root / "raw" / day
-    if slot_root.is_dir():
-        durable_raw=set()
-        for path in slot_root.glob("*.json"):
-            try:
-                item=json.loads(path.read_text(encoding="utf-8"))
-                if item.get("date")==day and item.get("valid") is True and item.get("authMode")=="user-refresh":
-                    slot=item.get("rawScheduledSlot")
-                    if slot in RAW: durable_raw.add(slot)
-            except (ValueError, TypeError, json.JSONDecodeError, OSError):
-                bad += 1
-        if durable_raw and not durable_raw.issubset(seen_raw):
-            raise AssertionError("Durable per-slot archive disagrees with source JSONL")
-
+    durable_raw_slots = {
+        slot for slot in RAW
+        if (slot_root / f"{slot.replace(':', '')}.json").is_file()
+    }
+    if durable_raw_slots != seen_raw:
+        raise AssertionError("Raw slot archive does not match the 101-slot JSONL source set")
+    for slot in sorted(seen_raw):
+        path = slot_root / f"{slot.replace(':', '')}.json"
+        try:
+            durable = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError, json.JSONDecodeError):
+            raise AssertionError(f"Raw slot archive is unreadable: {slot}")
+        if durable != records_by_slot.get(slot):
+            raise AssertionError(f"Raw slot archive disagrees with JSONL: {slot}")
     if (archive_latest is None
             or archive_latest[1].get("checkedAt") != latest.get("checkedAt")
             or archive_latest[1].get("rawScheduledSlot") != latest_slot):
@@ -246,10 +247,17 @@ def self_test():
                     "rawScheduledSlot": rows[-1]["rawScheduledSlot"],
                 },
             )), encoding="utf-8")
+            slot_root = root / "raw" / day
+            slot_root.mkdir(parents=True, exist_ok=True)
+            for old_path in slot_root.glob("*.json"):
+                old_path.unlink()
+            for row in rows:
+                if row["rawScheduledSlot"] in RAW:
+                    raw_name = row["rawScheduledSlot"].replace(":", "") + ".json"
+                    (slot_root / raw_name).write_text(json.dumps(row), encoding="utf-8")
             if rows:
                 (root / "latest.json").write_text(json.dumps(rows[-1]), encoding="utf-8")
-            canonical_rows = [
-                {
+            canonical_rows = [                {
                     "date": row["date"], "scheduledSlot": row["scheduledSlot"],
                     "rawScheduledSlot": row["rawScheduledSlot"],
                     "authMode": row["authMode"], "categories": row["categories"],
