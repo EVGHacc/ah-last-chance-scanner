@@ -103,6 +103,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_ah_*.py' -v
 
   independent-review:
+    needs: [changes, policy, ah-tests]
+    if: ${{ always() && needs.policy.result == 'success' && (needs.ah-tests.result == 'success' || needs.ah-tests.result == 'skipped') }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:

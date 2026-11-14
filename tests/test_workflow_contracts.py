@@ -12,6 +12,7 @@ class WorkflowContractTests(unittest.TestCase):
     def test_quality_gate_is_read_only_and_has_independent_jobs(self):
         text = self.read(".github/workflows/engineering-quality.yml")
         self.assertIn("permissions:\n  contents: read", text)
+        for job in ("policy:", "ah-tests:", "independent-review:"):
             self.assertIn(job, text)
         self.assertIn("changes:", text)
         self.assertIn("needs: [changes, policy, ah-tests]", text)
