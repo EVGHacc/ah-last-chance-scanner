@@ -23,6 +23,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Resolve Amsterdam session date
+        id: local_date
+        shell: bash
+        run: echo "value=$(TZ=Europe/Amsterdam date +%F)" >> "$GITHUB_OUTPUT"
+      - name: Restore daily session claim (primary/backup deduplication)
+        uses: actions/cache/restore@v4
+        with:
+          path: .state/ah-session-claims/${{ steps.local_date.outputs.value }}.lock
+          key: ah-session-claim-${{ steps.local_date.outputs.value }}
       - name: Gate primary and backup DST-adjusted prestarts
         id: gate
         shell: bash
@@ -69,10 +78,14 @@ jobs:
             echo "::error::AH production session already claimed for $date"
             exit 1
           fi
-          printf 'Claimed by run %s attempt %s\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" > "$claim"
-          git add "$claim"
-          git commit -m "Claim AH production session $date"
-          git push origin HEAD:main
+          printf 'Claimed by run %s attempt %s\\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" > "$claim"
+      - name: Persist daily session claim
+        id: claim_cache_save
+        if: steps.claim.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: .state/ah-session-claims/${{ steps.local_date.outputs.value }}.lock
+          key: ah-session-claim-${{ steps.local_date.outputs.value }}
       - name: Run supervised scan session
         id: supervised_scan
         if: steps.gate.outputs.run == 'true' && steps.prestart.outcome == 'success' && steps.claim.outcome == 'success'
@@ -118,8 +131,8 @@ jobs:
             echo "::error::PRESTART CONFIGURATION CHECK DID NOT SUCCEED"
             exit 1
           fi
-          if [[ "$GATE_DECISION" == "run" && "${{ steps.claim.outcome }}" != "success" ]]; then
-            echo "::error::DAILY SESSION CLAIM DID NOT SUCCEED"
+          if [[ "$GATE_DECISION" == "run" && "${{ steps.claim_cache_save.outcome }}" != "success" ]]; then
+            echo "::error::DAILY SESSION CLAIM WAS NOT PERSISTED"
             exit 1
           fi
           if [[ "$SCAN_OUTCOME" != "success" ]]; then
