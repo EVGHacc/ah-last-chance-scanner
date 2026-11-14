@@ -2,16 +2,9 @@
 """Read-only production evidence verifier for the AH scanner."""
 from __future__ import annotations
 
-import argparse
 import importlib.util
 import json
 from pathlib import Path
-
-
-def _load_json(path: Path) -> dict:
-    if not path.is_file():
-        raise AssertionError(f"missing production artifact: {path}")
-    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def _ah_result(report: dict) -> str:
