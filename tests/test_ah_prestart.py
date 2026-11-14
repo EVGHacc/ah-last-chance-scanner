@@ -67,6 +67,7 @@ class ScheduleGateTests(unittest.TestCase):
         self.assertIn("actions/cache/restore@v4", workflow)
         self.assertIn("actions/cache/save@v4", workflow)
         self.assertIn("steps.claim_cache_save.outcome == 'success'", workflow)
+        self.assertIn("steps.prestart.outcome == 'success' && steps.claim_cache_save.outcome == 'success'", workflow)
         self.assertNotIn("git push origin HEAD:main", workflow)
         self.assertIn("scripts/prestart.py", workflow)
         probe = (ROOT / ".github/workflows/probe.yml").read_text(encoding="utf-8")
