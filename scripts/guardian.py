@@ -50,7 +50,7 @@ def main():
     for target in points:
         if not guard_point(target):
             failures.append(target.strftime("%H:%M"))
-    complete = session.final_reconcile(today)
+    complete = session.reconcile_publication(today)
     if failures or not complete:
         print("GUARDIAN_FAILURE: missing published points=" + ",".join(failures), flush=True)
         raise SystemExit(1)
