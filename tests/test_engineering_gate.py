@@ -30,18 +30,6 @@ class ChangePolicyTests(unittest.TestCase):
             [],
         )
 
-    def test_vacancy_code_requires_test(self):
-        errors = gate.evaluate_changes(["vacancy-monitor/scanner.py"])
-        self.assertTrue(any("Vacancy production" in error for error in errors))
-
-    def test_vacancy_code_with_test_passes(self):
-        self.assertEqual(
-            gate.evaluate_changes(
-                ["vacancy-monitor/scanner.py", "vacancy-monitor/test_scanner.py"]
-            ),
-            [],
-        )
-
     def test_workflow_requires_workflow_contract_test(self):
         errors = gate.evaluate_changes([".github/workflows/session.yml"])
         self.assertTrue(any("workflow changed" in error for error in errors))

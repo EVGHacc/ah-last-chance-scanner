@@ -1,20 +1,11 @@
-name: Independent Production Verifier
+name: Independent AH Production Verifier
 
 on:
   workflow_run:
     workflows:
       - 'AH supervised evening session'
-      - 'Vacancy Monitor 106'
     types: [completed]
   workflow_dispatch:
-    inputs:
-      project:
-        description: 'Production artifact to verify'
-        required: true
-        type: choice
-        options:
-          - ah
-          - vacancy
 
 permissions:
   contents: read
@@ -22,7 +13,7 @@ permissions:
 jobs:
   verify-ah:
     if: >-
-      (github.event_name == 'workflow_dispatch' && inputs.project == 'ah') ||
+      github.event_name == 'workflow_dispatch' ||
       (github.event_name == 'workflow_run' &&
        github.event.workflow_run.conclusion == 'success' &&
        github.event.workflow_run.name == 'AH supervised evening session')
@@ -40,24 +31,4 @@ jobs:
       - name: Verify published AH evidence independently
         run: |
           python scripts/independent_qa.py --self-test
-          python scripts/production_verify.py --project ah
-
-  verify-vacancy:
-    if: >-
-      (github.event_name == 'workflow_dispatch' && inputs.project == 'vacancy') ||
-      (github.event_name == 'workflow_run' &&
-       github.event.workflow_run.conclusion == 'success' &&
-       github.event.workflow_run.name == 'Vacancy Monitor 106')
-    runs-on: ubuntu-latest
-    timeout-minutes: 6
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Verify published vacancy evidence independently
-        run: python scripts/production_verify.py --project vacancy
+          python scripts/production_verify.py

@@ -2,7 +2,6 @@
 
 **Project**
 - [ ] AH Laatste Kans scanner
-- [ ] Vacancy Monitor v2
 - [ ] Shared engineering / CI
 
 **Role separation**
