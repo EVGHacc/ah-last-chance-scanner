@@ -1,8 +1,7 @@
-# Development System — AH & Vacancy Monitor
+# Development System — AH Laatste Kans scanner
 
 This repository uses an evidence-first development process for every functional
-change. It applies to the AH Laatste Kans scanner, Vacancy Monitor v2, shared
-scripts and GitHub Actions.
+change. It applies to the AH Laatste Kans scanner, its supporting scripts and GitHub Actions.
 
 ## Roles and responsibilities
 
@@ -14,9 +13,7 @@ pass.
 
 ### Test Author
 Defines the failing reproducer and regression contract before, or together with,
-the implementation. Functional AH changes require a dedicated `tests/test_ah_*.py`
-change. Vacancy changes require `vacancy-monitor/test_*.py` or
-`tests/test_vacancy_*.py`. Test changes must exercise the failure mode, not only
+the implementation. Functional AH changes require a dedicated `tests/test_ah_*.py` change. Test changes must exercise the failure mode, not only
 reachability or a happy path.
 
 ### Independent Reviewer
@@ -67,7 +64,6 @@ failed approach without new evidence or a new hypothesis is prohibited.
 - Generated snapshots are never committed in the same change as functional
   source/workflow code.
 - A code author cannot satisfy a missing test by weakening the verifier.
-- Historical vacancy IDs may not be treated as permanently live fixtures.
 
 ## Project-specific proof
 
@@ -90,27 +86,6 @@ Independent production proof:
 - corrupt scope/auth/archive evidence remains a hard failure;
 - strict completeness mode remains available when a process specifically needs
   proof that all 101 raw and 61 canonical slots are present.
-
-### Vacancy Monitor v2
-
-Developer proof:
-- provider/unit/regression tests;
-- registry integrity;
-- adapter-specific malformed/duplicate/pagination tests;
-- no source may become `verified_complete` from reachability alone.
-
-Independent production proof:
-- registry size is derived dynamically from `registry.tsv`;
-- snapshot identities must exactly equal registry identities;
-- `verified_complete` requires persisted exhaustive inventory evidence;
-- if an official total exists, observed inventory must equal it;
-- live jobs must independently satisfy detail-live + current-board + HTTP 200 +
-  apply-live;
-- technical-failure and coverage aggregates are recomputed from organisations.
-
-For Workday, Recruitee, Greenhouse, Lever, SmartRecruiters and Ashby, existing
-provider-specific strictness remains mandatory. Organisation-specific priority
-work follows the user's selected priorities.
 
 ## Definition of Done
 

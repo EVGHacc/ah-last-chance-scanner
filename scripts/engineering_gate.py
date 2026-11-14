@@ -13,8 +13,7 @@ from pathlib import Path
 
 
 AH_PRODUCTION = ("scanner.py", "scripts/")
-VACANCY_PRODUCTION = ("vacancy-monitor/",)
-GENERATED = ("data/", "vacancy-monitor/data/")
+GENERATED = ("data/",)
 WORKFLOWS = (".github/workflows/",)
 ENGINEERING_PRODUCTION = (
     "scripts/engineering_gate.py",
@@ -26,7 +25,6 @@ AH_EXCLUDED_PREFIXES = (
     "scripts/engineering_gate.py",
     "scripts/production_verify.py",
 )
-VACANCY_TEST_PREFIXES = ("vacancy-monitor/test_", "tests/test_vacancy_")
 AH_TEST_PREFIXES = ("tests/test_ah_",)
 ENGINEERING_TEST_PREFIXES = (
     "tests/test_engineering_",
@@ -54,15 +52,6 @@ def is_ah_production(path: str) -> bool:
     return False
 
 
-def is_vacancy_production(path: str) -> bool:
-    return (
-        path.startswith("vacancy-monitor/")
-        and path.endswith(".py")
-        and not path.startswith(VACANCY_TEST_PREFIXES)
-        and "/probe_" not in path
-    )
-
-
 def is_engineering_production(path: str) -> bool:
     return (
         path in ENGINEERING_PRODUCTION[:2]
@@ -76,20 +65,13 @@ def evaluate_changes(paths: list[str]) -> list[str]:
     errors: list[str] = []
 
     ah_changed = any(is_ah_production(path) for path in changed)
-    vacancy_changed = any(is_vacancy_production(path) for path in changed)
     engineering_changed = any(is_engineering_production(path) for path in changed)
     workflow_changed = any(is_workflow(path) for path in changed)
-    source_changed = ah_changed or vacancy_changed or engineering_changed or workflow_changed
+    source_changed = ah_changed or engineering_changed or workflow_changed
 
     if ah_changed and not any(path.startswith(AH_TEST_PREFIXES) for path in changed):
         errors.append(
             "AH production code changed without a dedicated tests/test_ah_*.py change"
-        )
-
-    if vacancy_changed and not any(path.startswith(VACANCY_TEST_PREFIXES) for path in changed):
-        errors.append(
-            "Vacancy production code changed without vacancy-monitor/test_*.py "
-            "or tests/test_vacancy_*.py"
         )
 
     if engineering_changed and not any(
@@ -145,7 +127,7 @@ def static_review(root: Path) -> list[str]:
     ptext = production.read_text(encoding="utf-8")
     dtext = roles.read_text(encoding="utf-8")
 
-    for job in ("policy:", "ah-tests:", "vacancy-tests:", "independent-review:"):
+    for job in ("policy:", "ah-tests:", "independent-review:"):
         if job not in qtext:
             issues.append(f"engineering-quality workflow missing job {job[:-1]}")
     if "contents: read" not in qtext:
