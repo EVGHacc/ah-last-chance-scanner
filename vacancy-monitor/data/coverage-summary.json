@@ -86,7 +86,7 @@
     {
       "name": "GFT",
       "kind": "employer",
-      "coverage": "unproven",
+      "coverage": "partial",
       "status": "official_site_scanned"
     },
     {
@@ -249,7 +249,7 @@
       "name": "State Street",
       "kind": "employer",
       "coverage": "unproven",
-      "status": "official_site_scanned"
+      "status": "official_ats_scanned"
     },
     {
       "name": "Stripe",
@@ -285,7 +285,7 @@
       "name": "Visa",
       "kind": "employer",
       "coverage": "unproven",
-      "status": "technical_failure"
+      "status": "official_ats_scanned"
     },
     {
       "name": "Wise",
@@ -296,8 +296,8 @@
     {
       "name": "Worldline",
       "kind": "employer",
-      "coverage": "unproven",
-      "status": "technical_failure"
+      "coverage": "partial",
+      "status": "official_site_scanned"
     },
     {
       "name": "Zanders",
@@ -482,8 +482,8 @@
     {
       "name": "Robert Walters Interim",
       "kind": "recruiter",
-      "coverage": "unproven",
-      "status": "technical_failure"
+      "coverage": "partial",
+      "status": "official_site_scanned"
     },
     {
       "name": "Russell Reynolds Associates",
@@ -539,10 +539,7 @@
     "McKinsey",
     "Rabobank",
     "Surepay",
-    "Visa",
-    "Worldline",
     "Risk Talent Associates",
-    "Robert Walters Interim",
     "Selby Jennings"
   ]
 }
