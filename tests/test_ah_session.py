@@ -1,0 +1,63 @@
+import contextlib
+import io
+import sys
+import unittest
+from datetime import datetime, timedelta
+from pathlib import Path
+from types import SimpleNamespace
+from unittest.mock import patch
+from zoneinfo import ZoneInfo
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+import session
+
+
+class SingleAttemptSessionTests(unittest.TestCase):
+    def test_failed_scan_is_not_retried_and_stderr_is_suppressed(self):
+        target = datetime(2026, 11, 2, 17, 30, tzinfo=ZoneInfo("Europe/Amsterdam"))
+        output = io.StringIO()
+        failure = SimpleNamespace(returncode=1, stderr="SECRET_REFRESH_TOKEN", stdout="")
+        with (
+            patch.object(session, "datetime") as clock,
+            patch.object(session.subprocess, "run", return_value=failure) as run,
+            patch.object(Path, "read_text", return_value="{}"),
+            contextlib.redirect_stdout(output),
+        ):
+            clock.now.return_value = target + timedelta(seconds=10)
+            self.assertFalse(session.run_point(target))
+        run.assert_called_once()
+        self.assertNotIn("SECRET_REFRESH_TOKEN", output.getvalue())
+        self.assertIn("stderr_suppressed=true", output.getvalue())
+
+    def test_expired_slot_does_not_start_scanner(self):
+        target = datetime(2026, 11, 2, 17, 30, tzinfo=ZoneInfo("Europe/Amsterdam"))
+        with (
+            patch.object(session, "datetime") as clock,
+            patch.object(session.subprocess, "run") as run,
+        ):
+            clock.now.return_value = target + timedelta(seconds=241)
+            self.assertFalse(session.run_point(target))
+        run.assert_not_called()
+
+    def test_checkout_fetch_failure_fails_closed_without_stderr(self):
+        failure = SimpleNamespace(returncode=128, stderr="PRIVATE_REMOTE_DETAIL")
+        output = io.StringIO()
+        with patch.object(session.subprocess, "run", return_value=failure) as run, contextlib.redirect_stdout(output):
+            with self.assertRaisesRegex(RuntimeError, "CHECKOUT_REFRESH_FAILED stage=fetch exit=128"):
+                session.refresh_checkout()
+        run.assert_called_once()
+        self.assertNotIn("PRIVATE_REMOTE_DETAIL", output.getvalue())
+
+    def test_checkout_reset_failure_fails_closed(self):
+        success = SimpleNamespace(returncode=0, stderr="")
+        failure = SimpleNamespace(returncode=1, stderr="PRIVATE_REMOTE_DETAIL")
+        with patch.object(session.subprocess, "run", side_effect=[success, failure]) as run:
+            with self.assertRaisesRegex(RuntimeError, "CHECKOUT_REFRESH_FAILED stage=reset exit=1"):
+                session.refresh_checkout()
+        self.assertEqual(run.call_count, 2)
+
+
+if __name__ == "__main__":
+    unittest.main()

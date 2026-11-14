@@ -1,5 +1,7 @@
 """Regression tests for bounded AH refresh recovery and scan integration."""
+import io
 import sys
+import urllib.error
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -139,6 +141,34 @@ class ScannerAuthIntegrationTests(unittest.TestCase):
         refresh.assert_called_once_with(force_refresh=True)
 
 
+    def test_transient_upstream_failure_opens_shared_circuit_after_two_attempts(self):
+        context = {"access": "valid-access"}
+        with (
+            patch.object(scanner, "post", return_value=(503, {"error_class": "HTTPError"})) as post,
+            patch.object(scanner.time, "sleep"),
+        ):
+            first = scanner.fetch_store(1463, "AH Blekersvaartweg", "valid-access", context)
+            second = scanner.fetch_store(1348, "AH Zandvoortselaan", "valid-access", context)
+
+        self.assertFalse(first["fetched"])
+        self.assertFalse(second["fetched"])
+        self.assertEqual(first["error"], "UPSTREAM_CIRCUIT_OPEN")
+        self.assertEqual(second["error"], "UPSTREAM_CIRCUIT_OPEN")
+        self.assertTrue(context["circuit_open"])
+        self.assertEqual(post.call_count, 2)
+        self.assertTrue(all(call.kwargs["attempts"] == 1 for call in post.call_args_list))
+    def test_http_error_response_body_is_never_returned(self):
+        secret_body = b"PRIVATE_UPSTREAM_RESPONSE"
+        error = urllib.error.HTTPError(
+            "https://api.ah.nl/graphql", 403, "Forbidden", {}, io.BytesIO(secret_body)
+        )
+        with patch.object(scanner.urllib.request, "urlopen", side_effect=error):
+            status, data = scanner.post("/graphql", {}, "opaque-token", attempts=1)
+
+        self.assertEqual(status, 403)
+        self.assertEqual(data, {"error_class": "HTTPError"})
+        self.assertNotIn(secret_body.decode(), str(data))
+
     def test_rejected_refreshed_access_stops_fanout_and_requests_reauthentication(self):
         context = {"access": "expired-access"}
         with patch.object(scanner, "post", side_effect=[
@@ -156,27 +186,12 @@ class ScannerAuthIntegrationTests(unittest.TestCase):
         self.assertEqual(post.call_count, 2)
 
 
-class SessionRetryPolicyTests(unittest.TestCase):
-    def test_interactive_reauthentication_failure_stops_outer_scan_retries(self):
-        obs = {
-            "authMode": "user-refresh-failed",
-            "stores": [{"error": "AUTH_REAUTH_REQUIRED: login needed"}],
-        }
-        self.assertTrue(session.should_stop_auth_retries(obs))
-
-    def test_transient_auth_failure_keeps_bounded_outer_retry_available(self):
-        obs = {
-            "authMode": "user-refresh-failed",
-            "stores": [{"error": "AUTH_REFRESH_RETRY_EXHAUSTED: temporary failure"}],
-        }
-        self.assertFalse(session.should_stop_auth_retries(obs))
-
-    def test_non_retryable_auth_failure_stops_outer_scan_retries(self):
-        obs = {
-            "authMode": "user-refresh-failed",
-            "stores": [{"error": "AUTH_REFRESH_FAILED: forbidden response"}],
-        }
-        self.assertTrue(session.should_stop_auth_retries(obs))
+class SessionNoAutomaticRecoveryTests(unittest.TestCase):
+    def test_session_controller_has_no_outer_retry_or_gap_recovery(self):
+        self.assertFalse(hasattr(session, "RETRY_DELAYS"))
+        self.assertFalse(hasattr(session, "should_stop_auth_retries"))
+        self.assertFalse(hasattr(session, "recover_recent_gaps"))
+        self.assertFalse(hasattr(session, "fallback_once"))
 
 
 if __name__ == "__main__":

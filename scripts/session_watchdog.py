@@ -4,7 +4,7 @@ import json
 import os
 import sys
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -26,7 +26,10 @@ def valid_heartbeat(status, now):
         return False
     if status.get("category") != "Vlees":
         return False
-    stores = {int(value) for value in status.get("stores", [])}
+    try:
+        stores = {int(value) for value in status.get("stores", [])}
+    except (TypeError, ValueError):
+        return False
     if not REQUIRED_STORES.issubset(stores):
         return False
     latest = status.get("latestValid") or {}
@@ -40,6 +43,56 @@ def valid_heartbeat(status, now):
         return False
     age = (now - checked.astimezone(TZ)).total_seconds()
     return 0 <= age <= MAX_SCAN_AGE
+
+
+def expected_slots(step):
+    return {
+        f"{minute // 60:02d}:{minute % 60:02d}"
+        for minute in range(MONITOR_START, MONITOR_END + 1, step)
+    }
+
+
+def valid_final_publication(status, now):
+    """Require the complete same-day final publication after the live window."""
+    if not isinstance(status, dict) or status.get("date") != now.date().isoformat():
+        return False
+    if (status.get("authMode") != "user-refresh" or status.get("category") != "Vlees"
+            or status.get("rawExpected") != 101 or status.get("canonicalExpected") != 61):
+        return False
+    try:
+        stores = {int(value) for value in status.get("stores", [])}
+    except (TypeError, ValueError):
+        return False
+    if stores != REQUIRED_STORES:
+        return False
+    raw_seen = status.get("rawSeen")
+    canonical_seen = status.get("canonicalSeen")
+    if (not isinstance(raw_seen, list) or len(raw_seen) != 101
+            or any(not isinstance(slot, str) for slot in raw_seen)
+            or len(set(raw_seen)) != 101 or set(raw_seen) != expected_slots(3)):
+        return False
+    if (not isinstance(canonical_seen, list) or len(canonical_seen) != 61
+            or any(not isinstance(slot, str) for slot in canonical_seen)
+            or len(set(canonical_seen)) != 61 or set(canonical_seen) != expected_slots(5)):
+        return False
+    if status.get("rawMissing") or status.get("canonicalMissing"):
+        return False
+    latest = status.get("latestValid") or {}
+    if (latest.get("authMode") != "user-refresh"
+            or latest.get("rawScheduledSlot") != "22:30"
+            or latest.get("status") not in ("OK", "OK_ZERO_ROWS")):
+        return False
+    try:
+        checked = datetime.fromisoformat(latest["checkedAt"])
+    except (KeyError, TypeError, ValueError):
+        return False
+    if checked.tzinfo is None:
+        return False
+    checked = checked.astimezone(TZ)
+    final_slot = checked.replace(hour=22, minute=30, second=0, microsecond=0)
+    age_after_final_slot = (checked - final_slot).total_seconds()
+    return (checked.date() == now.date() and checked <= now
+            and 0 <= age_after_final_slot <= MAX_SCAN_AGE)
 
 
 def active_runs(runs, now):
@@ -59,8 +112,10 @@ def active_runs(runs, now):
 
 def decision(status, runs, now):
     minute = now.hour * 60 + now.minute
-    if not (MONITOR_START <= minute <= MONITOR_END):
+    if minute < MONITOR_START:
         return "IDLE"
+    if minute > MONITOR_END:
+        return "COMPLETE" if valid_final_publication(status, now) else "ALARM"
     if not active_runs(runs, now) or not valid_heartbeat(status, now):
         return "ALARM"
     return "HEALTHY"
@@ -92,13 +147,39 @@ def read_status():
         return {}
 
 
+def final_audit_event(schedule, now):
+    """Accept only the cron that maps to 23:00 in the current Amsterdam DST offset."""
+    if now.hour != 23:
+        return False
+    offset = now.utcoffset()
+    if offset == timedelta(hours=2):
+        expected = "0 21 * * *"
+    elif offset == timedelta(hours=1):
+        expected = "0 22 * * *"
+    else:
+        return False
+    return schedule == expected
+
+
 def main():
     now = datetime.now(TZ)
-    if not (MONITOR_START <= now.hour * 60 + now.minute <= MONITOR_END):
-        print("IDLE: outside Amsterdam monitoring window")
+    minute = now.hour * 60 + now.minute
+    status = read_status()
+    if minute < MONITOR_START:
+        print("IDLE: before Amsterdam monitoring window")
+        return 0
+    if minute > MONITOR_END:
+        if not final_audit_event(os.getenv("EVENT_SCHEDULE", ""), now):
+            print("IDLE: outside dedicated 23:00 Amsterdam final audit event")
+            return 0
+        state = decision(status, [], now)
+        print(f"{state}: final publication audit at {now.isoformat()}")
+        if state == "ALARM":
+            print("::error::AH final publication is missing, stale or incomplete")
+            return 1
         return 0
     runs = api("actions/workflows/session.yml/runs?per_page=50").get("workflow_runs", [])
-    state = decision(read_status(), runs, now)
+    state = decision(status, runs, now)
     print(f"{state}: read-only session watchdog at {now.isoformat()}")
     if state == "ALARM":
         print("::error::AH production session or latest authenticated scan is missing/stale")
@@ -128,7 +209,13 @@ def self_test():
     assert decision(good, active, now) == "HEALTHY"
     assert decision(good, [], now) == "ALARM"
     assert decision({}, active, now) == "ALARM"
-    assert decision(good, active, datetime(2026, 11, 2, 23, 0, tzinfo=TZ)) == "IDLE"
+    winter_close = datetime(2026, 11, 2, 23, 0, tzinfo=TZ)
+    summer_close = datetime(2026, 7, 10, 23, 0, tzinfo=TZ)
+    assert decision({}, [], winter_close) == "ALARM"
+    assert final_audit_event("0 22 * * *", winter_close)
+    assert not final_audit_event("0 21 * * *", datetime(2026, 11, 2, 22, 0, tzinfo=TZ))
+    assert final_audit_event("0 21 * * *", summer_close)
+    assert not final_audit_event("0 22 * * *", datetime(2026, 7, 11, 0, 0, tzinfo=TZ))
     assert not hasattr(api, "post")
     print("Read-only watchdog self-test: PASS")
 

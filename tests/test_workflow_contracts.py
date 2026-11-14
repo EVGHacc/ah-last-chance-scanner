@@ -26,9 +26,26 @@ class WorkflowContractTests(unittest.TestCase):
         self.assertIn("'AH supervised evening session'", text)
         self.assertIn("'Vacancy Monitor 106'", text)
         self.assertIn("python scripts/production_verify.py --project ah", text)
+        self.assertNotIn("continue-on-error: true", text)
         self.assertIn("python scripts/production_verify.py --project vacancy", text)
         self.assertNotIn("contents: write", text)
         self.assertNotIn("secrets.", text)
+
+    def test_ah_production_verifier_requires_complete_dataset(self):
+        verifier = self.read("scripts/production_verify.py")
+        self.assertIn("require_complete=True", verifier)
+        self.assertIn("101/101 raw and 61/61 canonical", verifier)
+        qa = self.read("scripts/independent_qa.py")
+        self.assertIn('item.get("categories") == ["Vlees"]', qa)
+        self.assertIn("and bad == 0", qa)
+
+    def test_automatic_recovery_entrypoints_are_removed(self):
+        self.assertFalse((ROOT / ".github/workflows/external-recovery.yml").exists())
+        self.assertFalse((ROOT / ".github/workflows/external-recovery-tests.yml").exists())
+        self.assertFalse((ROOT / "scripts/external_start_recovery.py").exists())
+        session = self.read(".github/workflows/session.yml")
+        self.assertNotIn("workflow_dispatch:", session)
+        self.assertNotIn("Consume one-time recovery authorization", session)
 
     def test_quality_gate_enforces_project_regression_suites(self):
         text = self.read(".github/workflows/engineering-quality.yml")

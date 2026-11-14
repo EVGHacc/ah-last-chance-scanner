@@ -53,18 +53,41 @@ class AHContractTests(unittest.TestCase):
     def test_required_store_scope_matches_independent_verifier(self):
         self.assertEqual(persist.REQUIRED_STORE_IDS, independent.STORE_IDS)
 
-    def test_invalid_auth_never_persists(self):
-        observation = {
-            "authMode": "anonymous",
+    def _valid_observation(self):
+        target = "2026-10-01T17:30:00+02:00"
+        return {
+            "date": "2026-10-01",
+            "scheduledSlot": "17:30",
+            "rawScheduledSlot": "17:30",
+            "scheduledAt": target,
+            "rawScheduledAt": target,
+            "startedAt": "2026-10-01T17:30:10+02:00",
+            "checkedAt": "2026-10-01T17:30:15+02:00",
+            "rawDelaySeconds": 10,
+            "delaySeconds": 10,
+            "authMode": "user-refresh",
             "status": "OK",
             "valid": True,
-            "rawDelaySeconds": 10,
             "categories": ["Vlees"],
             "stores": [
                 {"storeId": store_id, "fetched": True}
                 for store_id in persist.REQUIRED_STORE_IDS
             ],
         }
+
+    def test_mixed_category_observation_is_not_persistable(self):
+        observation = self._valid_observation()
+        observation["categories"] = ["Vlees", "Bakkerij"]
+        self.assertFalse(persist.valid_obs(observation))
+
+    def test_unconfigured_extra_store_is_not_persistable(self):
+        observation = self._valid_observation()
+        observation["stores"].append({"storeId": 9999, "fetched": True})
+        self.assertFalse(persist.valid_obs(observation))
+
+    def test_invalid_auth_never_persists(self):
+        observation = self._valid_observation()
+        observation["authMode"] = "anonymous"
         self.assertFalse(persist.valid_obs(observation))
 
     def _write_partial_day(self, root):
@@ -84,13 +107,33 @@ class AHContractTests(unittest.TestCase):
             "valid": True,
             "status": "OK",
             "authMode": "user-refresh",
-            "categories": ["Vlees", "Bakkerij"],
+            "categories": ["Vlees"],
             "stores": [
                 {"storeId": store_id, "fetched": True}
                 for store_id in independent.STORE_IDS
             ],
         }
         (root / f"{day}.jsonl").write_text(json.dumps(row) + "\n", encoding="utf-8")
+        raw_dir = root / "raw" / day
+        raw_dir.mkdir(parents=True, exist_ok=True)
+        (raw_dir / f"{slot.replace(':', '')}.json").write_text(json.dumps(row), encoding="utf-8")
+        (root / "latest.json").write_text(json.dumps(row), encoding="utf-8")
+        (root / "today.json").write_text(json.dumps({
+            "date": day,
+            "expectedSlots": 61,
+            "presentSlots": 1,
+            "missingSlots": [s for s in independent.CANONICAL if s != slot],
+            "observations": [{
+                "date": day,
+                "scheduledSlot": slot,
+                "rawScheduledSlot": slot,
+                "authMode": "user-refresh",
+                "categories": ["Vlees"],
+                "valid": True,
+                "delaySeconds": 10,
+                "stores": row["stores"],
+            }],
+        }), encoding="utf-8")
         (root / "status.json").write_text(
             json.dumps(
                 {
@@ -104,6 +147,7 @@ class AHContractTests(unittest.TestCase):
                     "canonicalSeen": [slot],
                     "rawMissing": [s for s in independent.RAW if s != slot],
                     "canonicalMissing": [s for s in independent.CANONICAL if s != slot],
+                    "latestValid": {"checkedAt": row["checkedAt"], "rawScheduledSlot": slot},
                 }
             ),
             encoding="utf-8",
@@ -120,6 +164,17 @@ class AHContractTests(unittest.TestCase):
         self.assertEqual(report["quality"], "partial")
         self.assertGreater(len(report["missingRaw"]), 0)
         self.assertGreater(len(report["missingCanonical"]), 0)
+
+    def test_raw_slot_archive_must_match_jsonl_source(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            now = self._write_partial_day(root)
+            raw_file = root / "raw" / "2026-10-01" / "1800.json"
+            raw = json.loads(raw_file.read_text(encoding="utf-8"))
+            raw["status"] = "FAILED"
+            raw_file.write_text(json.dumps(raw), encoding="utf-8")
+            with self.assertRaisesRegex(AssertionError, "Raw slot archive disagrees"):
+                independent.verify(root, now, require_complete=False)
 
     def test_strict_completeness_mode_still_rejects_missing_points(self):
         with tempfile.TemporaryDirectory() as tmp:

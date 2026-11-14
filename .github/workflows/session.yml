@@ -2,23 +2,11 @@ name: AH supervised evening session
 
 on:
   schedule:
-    # Primary 17:25 and independent 17:28 backup, both DST-aware.
+    # Primary 17:25 plus 17:28 backup; a committed daily claim prevents duplicate scans.
     - cron: '25 15 * * *'
     - cron: '25 16 * * *'
     - cron: '28 15 * * *'
     - cron: '28 16 * * *'
-  # One-time, date-bound recovery. The workflow consumes a repository lock before scanning.
-  workflow_dispatch:
-    inputs:
-      recovery_date:
-        description: "Must be 2026-11-03"
-        required: true
-        type: string
-      recovery_confirmation:
-        description: "Enter RESTORE-AH-2026-11-03 exactly"
-        required: true
-        type: string
-
 permissions:
   contents: write
 
@@ -35,15 +23,21 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Gate primary and redundant DST-adjusted prestart
+      - name: Resolve Amsterdam session date
+        id: local_date
+        shell: bash
+        run: echo "value=$(TZ=Europe/Amsterdam date +%F)" >> "$GITHUB_OUTPUT"
+      - name: Restore daily session claim (primary/backup deduplication)
+        uses: actions/cache/restore@v4
+        with:
+          path: .state/ah-session-claims/${{ steps.local_date.outputs.value }}.lock
+          key: ah-session-claim-${{ steps.local_date.outputs.value }}
+      - name: Gate primary and backup DST-adjusted prestarts
         id: gate
         shell: bash
         env:
           EVENT_NAME: ${{ github.event_name }}
           EVENT_SCHEDULE: ${{ github.event.schedule }}
-          EVENT_REF: ${{ github.ref }}
-          RECOVERY_DATE: ${{ inputs.recovery_date }}
-          RECOVERY_CONFIRMATION: ${{ inputs.recovery_confirmation }}
         run: python scripts/schedule_gate.py
       - uses: actions/setup-python@v5
         if: steps.gate.outputs.run == 'true'
@@ -56,41 +50,45 @@ jobs:
         id: production_tests
         if: steps.gate.outputs.run == 'true'
         run: |
-          python -m py_compile scanner.py scripts/auth_state.py scripts/persist.py scripts/publish.py scripts/session.py scripts/selftest.py scripts/schedule_gate.py scripts/prestart.py scripts/independent_qa.py
+          python -m py_compile scanner.py scripts/auth_state.py scripts/persist.py scripts/publish.py scripts/session.py scripts/selftest.py scripts/schedule_gate.py scripts/prestart.py scripts/independent_qa.py scripts/production_health.py scripts/guardian.py
           python scripts/schedule_gate.py --self-test
           python scripts/session.py --self-test
+          python scripts/production_health.py --preflight
           python scripts/independent_qa.py --self-test
           python -m unittest discover -s tests -p 'test_ah_prestart.py' -v
+          python -m unittest discover -s tests -p 'test_ah_session.py' -v
           python scripts/auth_state.py
           python scripts/selftest.py
-      - name: Consume one-time recovery authorization
-        if: steps.gate.outputs.run == 'true' && github.event_name == 'workflow_dispatch'
-        env:
-          RECOVERY_DATE: ${{ inputs.recovery_date }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          lock=".recovery/ah-recovery-${RECOVERY_DATE}.lock"
-          if [[ -e "$lock" ]]; then
-            echo "::error::One-time recovery authorization was already consumed"
-            exit 1
-          fi
-          mkdir -p .recovery
-          printf 'Consumed by run %s at %s\\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" > "$lock"
-          git config user.name 'ah-session-bot'
-          git config user.email 'actions@users.noreply.github.com'
-          git add "$lock"
-          git commit -m "Consume one-time AH recovery authorization ${RECOVERY_DATE}"
-          git push origin HEAD:main
       - name: Validate prestart configuration without live-auth probe
         id: prestart
         if: steps.gate.outputs.run == 'true'
         env:
           AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
         run: python scripts/prestart.py
+      - name: Claim today's production session (prevents primary/backup duplicates)
+        id: claim
+        if: steps.gate.outputs.run == 'true' && steps.prestart.outcome == 'success' && steps.gate.outputs.decision == 'run'
+        shell: bash
+        run: |
+          set -euo pipefail
+          date="$(TZ=Europe/Amsterdam date +%F)"
+          mkdir -p .state/ah-session-claims
+          claim=".state/ah-session-claims/${date}.lock"
+          if [[ -e "$claim" ]]; then
+            echo "::error::AH production session already claimed for $date"
+            exit 1
+          fi
+          printf 'Claimed by run %s attempt %s\\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" > "$claim"
+      - name: Persist daily session claim
+        id: claim_cache_save
+        if: steps.claim.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: .state/ah-session-claims/${{ steps.local_date.outputs.value }}.lock
+          key: ah-session-claim-${{ steps.local_date.outputs.value }}
       - name: Run supervised scan session
         id: supervised_scan
-        if: steps.gate.outputs.run == 'true' && steps.prestart.outcome == 'success'
+        if: steps.gate.outputs.run == 'true' && steps.prestart.outcome == 'success' && steps.claim_cache_save.outcome == 'success'
         env:
           AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
         run: |
@@ -100,24 +98,44 @@ jobs:
       - name: Enforce supervised session outcome
         if: always()
         shell: bash
+        env:
+          GATE_OUTCOME: ${{ steps.gate.outcome }}
+          GATE_DECISION: ${{ steps.gate.outputs.decision }}
+          GATE_RUN: ${{ steps.gate.outputs.run }}
+          TEST_OUTCOME: ${{ steps.production_tests.outcome }}
+          PRESTART_OUTCOME: ${{ steps.prestart.outcome }}
+          SCAN_OUTCOME: ${{ steps.supervised_scan.outcome }}
         run: |
-          if [ "${{ steps.gate.outcome }}" != "success" ]; then
-            echo "::error::GATE STEP FAILED; scheduled session state is unknown"
+          set -euo pipefail
+          if [[ "$GATE_OUTCOME" != "success" ]]; then
+            echo "::error::SCHEDULE GATE FAILED; invocation state is unknown"
             exit 1
           fi
-          if [ "${{ steps.gate.outputs.run }}" != "true" ]; then
-            echo "Gate declined this invocation outside the monitoring window"
+          if [[ "$GATE_DECISION" == "inactive" ]]; then
+            echo "::notice::DST alternate schedule is intentionally inactive today; no production work was expected"
             exit 0
           fi
-          if [ "${{ steps.production_tests.outcome }}" != "success" ]; then
+          if [[ "$GATE_DECISION" == "claimed" ]]; then
+            echo "::notice::Today's AH session was already claimed by the primary or backup trigger; duplicate scan suppressed"
+            exit 0
+          fi
+          if [[ "$GATE_DECISION" != "run" || "$GATE_RUN" != "true" ]]; then
+            echo "::error::EXPECTED PRESTART MISSED OR INVALID: decision=$GATE_DECISION"
+            exit 1
+          fi
+          if [[ "$TEST_OUTCOME" != "success" ]]; then
             echo "::error::PRODUCTION TESTS DID NOT SUCCEED"
             exit 1
           fi
-          if [ "${{ steps.prestart.outcome }}" != "success" ]; then
+          if [[ "$PRESTART_OUTCOME" != "success" ]]; then
             echo "::error::PRESTART CONFIGURATION CHECK DID NOT SUCCEED"
             exit 1
           fi
-          if [ "${{ steps.supervised_scan.outcome }}" != "success" ]; then
+          if [[ "$GATE_DECISION" == "run" && "${{ steps.claim_cache_save.outcome }}" != "success" ]]; then
+            echo "::error::DAILY SESSION CLAIM WAS NOT PERSISTED"
+            exit 1
+          fi
+          if [[ "$SCAN_OUTCOME" != "success" ]]; then
             echo "::error::SUPERVISED SCAN DID NOT SUCCEED"
             exit 1
           fi

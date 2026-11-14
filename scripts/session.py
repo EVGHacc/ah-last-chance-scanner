@@ -11,12 +11,8 @@ from zoneinfo import ZoneInfo
 TZ=ZoneInfo('Europe/Amsterdam')
 START=17*60+30
 END=22*60+30
-MAX_RECOVERY_AGE=240
-# Gap recovery must start with enough headroom to scan, publish and retry while
-# the resulting observation can still satisfy the hard <=240s validity limit.
-RECOVERY_START_DEADLINE=205
-RETRY_DELAYS=(0,8,20)
-STORES={'1463','1348','1135'}
+MAX_SLOT_DELAY_SECONDS=240
+STORES={'1463','1348','1135','4046','8728'}
 
 
 def raw_due(minute):
@@ -55,70 +51,50 @@ def point_complete(target):
 
 
 def refresh_checkout():
-    subprocess.run(['git','fetch','origin','main'],check=False)
-    subprocess.run(['git','reset','--hard','origin/main'],check=False)
-
-
-def should_stop_auth_retries(observation):
-    if not isinstance(observation,dict) or observation.get('authMode')!='user-refresh-failed':
-        return False
-    terminal_codes=('AUTH_REAUTH_REQUIRED','AUTH_REFRESH_FAILED')
-    return any(
-        any(code in str(store.get('error','')) for code in terminal_codes)
-        for store in (observation.get('stores') or [])
-        if isinstance(store,dict)
+    """Refresh the authoritative main checkout or fail closed without logging stderr."""
+    commands = (
+        ("fetch", ["git", "fetch", "origin", "main"]),
+        ("reset", ["git", "reset", "--hard", "origin/main"]),
     )
+    for stage, command in commands:
+        result = subprocess.run(command, check=False, text=True, capture_output=True)
+        if result.returncode != 0:
+            raise RuntimeError(
+                f"CHECKOUT_REFRESH_FAILED stage={stage} exit={result.returncode}; "
+                "stderr_suppressed=true"
+            )
 
 
 def run_point(target):
+    """Run exactly one on-time observation; never retry or recover a missed slot."""
+    age=(datetime.now(TZ)-target).total_seconds()
+    if age < 0 or age > MAX_SLOT_DELAY_SECONDS:
+        print(f"SKIPPED invalid/late slot={target:%H:%M} age={int(age)}s",flush=True)
+        return False
     env=dict(os.environ)
-    env['SCHEDULED_AT']=target.isoformat()
-    for attempt,delay in enumerate(RETRY_DELAYS,1):
-        if delay:
-            time.sleep(delay)
-        age=(datetime.now(TZ)-target).total_seconds()
-        if age>MAX_RECOVERY_AGE:
-            print(f'Point {target.isoformat()} no longer honestly recoverable after attempt {attempt-1}',flush=True)
-            return False
-        scan=subprocess.run(['python','scanner.py'],env=env,text=True,capture_output=True)
-        try:
-            obs=json.loads(Path('data/latest.json').read_text(encoding='utf-8'))
-        except (ValueError,OSError):
-            obs={}
-        summary=f"slot={target:%H:%M} status={obs.get('status','unknown')} auth={obs.get('authMode','unknown')} fetched={sum(s.get('fetched') is True for s in (obs.get('stores') or []))}/5"
-        if scan.returncode!=0 and should_stop_auth_retries(obs):
-            print('AUTH_REAUTH_REQUIRED: stopping automatic retries; a new AH login is required',flush=True)
-            return False
-        if scan.returncode!=0:
-            print(f'Scan attempt {attempt} failed: {summary}; stderr={scan.stderr[-350:]}',flush=True)
-            # A fallback may have rotated the encrypted refresh token after
-            # our previous checkout. Refresh it before retrying authentication.
-            refresh_checkout()
-            continue
-        print(f'Scan complete: {summary}',flush=True)
-        publish=subprocess.run(['python','scripts/publish.py'])
-        if publish.returncode==0:
-            refresh_checkout()
-            if point_complete(target):
-                return True
-            print(f'Published but point still not visible in status: {target.isoformat()}',flush=True)
-        else:
-            print(f'Publish attempt {attempt} failed for {target.isoformat()}',flush=True)
-    print(f'Point {target.isoformat()} remains missing after automatic recovery',flush=True)
-    return False
-
-
-def recover_recent_gaps(today):
+    env["SCHEDULED_AT"]=target.isoformat()
+    scan=subprocess.run(["python","scanner.py"],env=env,text=True,capture_output=True)
+    try:
+        obs=json.loads(Path("data/latest.json").read_text(encoding="utf-8"))
+    except (ValueError,OSError):
+        obs={}
+    stores=obs.get("stores") or []
+    summary=(f"slot={target:%H:%M} status={obs.get('status','unknown')} "
+             f"auth={obs.get('authMode','unknown')} "
+             f"fetched={sum(s.get('fetched') is True for s in stores)}/5")
+    if scan.returncode != 0:
+        print(f"SCAN_FAILURE {summary} exit={scan.returncode}; stderr_suppressed=true",flush=True)
+        return False
+    publish=subprocess.run(["python","scripts/publish.py"],capture_output=True,text=True)
+    if publish.returncode != 0:
+        print(f"PUBLISH_FAILURE {summary} exit={publish.returncode}; stderr_suppressed=true",flush=True)
+        return False
     refresh_checkout()
-    now=datetime.now(TZ)
-    missing=[]
-    for target in points_for(today):
-        age=(now-target).total_seconds()
-        if 35 <= age <= RECOVERY_START_DEADLINE and not point_complete(target):
-            missing.append(target)
-    for target in missing:
-        print(f'Heartbeat detected missing point {target.isoformat()}; recovering now',flush=True)
-        run_point(target)
+    if not point_complete(target):
+        print(f"PUBLICATION_NOT_VERIFIED slot={target:%H:%M}",flush=True)
+        return False
+    print(f"SCAN_AND_PUBLICATION_VERIFIED {summary}",flush=True)
+    return True
 
 
 def final_reconcile(today):
@@ -134,20 +110,6 @@ def final_reconcile(today):
     return not raw_missing and not canonical_missing and len(raw_seen)==101 and len(canonical_seen)==61
 
 
-def fallback_once():
-    """Independent short-lived recovery; never backdate observations beyond 240 seconds."""
-    now=datetime.now(TZ)
-    refresh_checkout()
-    candidates=[p for p in points_for(now) if 0 <= (now-p).total_seconds() <= RECOVERY_START_DEADLINE]
-    for target in candidates:
-        if not point_complete(target):
-            print(f'Fallback attempting {target.isoformat()}',flush=True)
-            run_point(target)
-    refresh_checkout()
-    raw,canonical=status_seen(now)
-    print(f'Fallback status {now:%Y-%m-%d}: raw={len(raw)}/101 canonical={len(canonical)}/61',flush=True)
-
-
 def self_test():
     d=datetime(2026,10,1,17,30,tzinfo=TZ)
     pts=points_for(d)
@@ -155,9 +117,9 @@ def self_test():
     canonical=[p for p in pts if canonical_due(p.hour*60+p.minute)]
     assert len(raw)==101 and raw[0].strftime('%H:%M')=='17:30' and raw[-1].strftime('%H:%M')=='22:30'
     assert len(canonical)==61 and canonical[0].strftime('%H:%M')=='17:30' and canonical[-1].strftime('%H:%M')=='22:30'
-    assert MAX_RECOVERY_AGE==240 and RECOVERY_START_DEADLINE < MAX_RECOVERY_AGE
-    assert STORES=={'1463','1348','1135'}
-    print('Session cadence/recovery self-test: PASS')
+    assert MAX_SLOT_DELAY_SECONDS==240
+    assert STORES=={'1463','1348','1135','4046','8728'}
+    print('Session cadence self-test: PASS')
 
 
 def main():
@@ -170,24 +132,21 @@ def main():
             if delta<=0:
                 break
             time.sleep(min(delta,30))
-        # Prioritize the current scheduled point; gap recovery must not make it late.
+        # Never scan using a stale checkout or continue after a failed refresh.
         refresh_checkout()
         if not point_complete(target):
             age=(datetime.now(TZ)-target).total_seconds()
-            if age<=MAX_RECOVERY_AGE:
+            if age<=MAX_SLOT_DELAY_SECONDS:
                 run_point(target)
             else:
-                print(f'Skipping irrecoverably late point {target.isoformat()} age={int(age)}s',flush=True)
-        recover_recent_gaps(today)
+                print(f'Skipping expired slot {target.isoformat()} age={int(age)}s',flush=True)
     if not final_reconcile(today):
-        raise SystemExit('Evening sequence incomplete after automatic recovery; see exact missing slots above')
+        raise SystemExit('Evening sequence incomplete; no automatic recovery was attempted')
     print('Supervised AH session finished: 101/101 raw and 61/61 canonical complete',flush=True)
 
 
 if __name__=='__main__':
     if '--self-test' in sys.argv:
         self_test()
-    elif '--fallback-once' in sys.argv:
-        fallback_once()
     else:
         main()

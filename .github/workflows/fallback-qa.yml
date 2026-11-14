@@ -3,6 +3,9 @@ name: AH read-only session watchdog
 on:
   schedule:
     - cron: '2,7,12,17,22,27,32,37,42,47,52,57 15-21 * * *'
+    # Dedicated 23:00 Europe/Amsterdam audit crons for both DST offsets.
+    - cron: '0 21 * * *'
+    - cron: '0 22 * * *'
 
 permissions:
   contents: read
@@ -26,10 +29,39 @@ jobs:
           python-version: '3.12'
       - name: Test read-only watchdog
         run: |
-          python -m py_compile scripts/session_watchdog.py
+          python -m py_compile scripts/session_watchdog.py scripts/independent_qa.py
           python scripts/session_watchdog.py --self-test
+          python scripts/independent_qa.py --self-test
       - name: Inspect production session without recovery side effects
         env:
           GH_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
+          TZ: Europe/Amsterdam
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
         run: python scripts/session_watchdog.py
+      - name: Independent final publication QA at 23:00 Amsterdam
+        if: always()
+        env:
+          TZ: Europe/Amsterdam
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          local_offset="$(date +%z)"
+          if [[ "$local_offset" == "+0200" ]]; then
+            expected_schedule="0 21 * * *"
+          elif [[ "$local_offset" == "+0100" ]]; then
+            expected_schedule="0 22 * * *"
+          else
+            echo "::error::Unexpected Europe/Amsterdam UTC offset: $local_offset"
+            exit 1
+          fi
+          if [[ "$EVENT_SCHEDULE" != "$expected_schedule" ]]; then
+            echo "Inactive DST alternative; no final QA was expected"
+            exit 0
+          fi
+          if [[ "$(date +%H)" != "23" ]]; then
+            echo "::error::Dedicated 23:00 audit was delayed outside its local-hour acceptance window"
+            exit 1
+          fi
+          python scripts/independent_qa.py --complete
