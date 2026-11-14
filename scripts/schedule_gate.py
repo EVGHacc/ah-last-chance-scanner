@@ -3,6 +3,7 @@
 import os
 import sys
 from datetime import datetime
+from pathlib import Path
 from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo("Europe/Amsterdam")
@@ -74,7 +75,7 @@ if __name__ == "__main__":
             os.getenv("EVENT_NAME", ""),
             os.getenv("EVENT_SCHEDULE", ""),
             now,
-            claimed=__import__("pathlib").Path(".state/ah-session-claims", now.strftime("%Y-%m-%d") + ".lock").exists(),
+            claimed=Path(".state/ah-session-claims", now.strftime("%Y-%m-%d") + ".lock").exists(),
         )
         run = decision == "run"
         with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
