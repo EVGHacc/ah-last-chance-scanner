@@ -16,6 +16,18 @@ class ScheduleGateTests(unittest.TestCase):
         now = datetime(2026, 7, 10, 17, 25, tzinfo=TZ)
         self.assertTrue(schedule_gate.allowed("schedule", "25 15 * * *", now))
 
+    def test_summer_backup_prestart_cron_is_admitted(self):
+        now = datetime(2026, 7, 10, 17, 28, tzinfo=TZ)
+        self.assertTrue(schedule_gate.allowed("schedule", "28 15 * * *", now))
+
+    def test_winter_backup_prestart_cron_is_admitted(self):
+        now = datetime(2026, 11, 2, 17, 28, tzinfo=TZ)
+        self.assertTrue(schedule_gate.allowed("schedule", "28 16 * * *", now))
+
+    def test_already_claimed_session_suppresses_backup_trigger(self):
+        now = datetime(2026, 11, 2, 17, 28, tzinfo=TZ)
+        self.assertEqual(schedule_gate.classify("schedule", "28 16 * * *", now, claimed=True), "claimed")
+
     def test_winter_primary_prestart_cron_is_admitted(self):
         now = datetime(2026, 11, 2, 17, 25, tzinfo=TZ)
         self.assertTrue(schedule_gate.allowed("schedule", "25 16 * * *", now))
@@ -33,6 +45,7 @@ class ScheduleGateTests(unittest.TestCase):
     def test_other_dst_cron_is_explicitly_inactive(self):
         winter = datetime(2026, 11, 2, 16, 25, tzinfo=TZ)
         self.assertEqual(schedule_gate.classify("schedule", "25 15 * * *", winter), "inactive")
+        self.assertEqual(schedule_gate.classify("schedule", "28 15 * * *", winter.replace(minute=28)), "inactive")
 
     def test_schedule_outside_its_prestart_window_is_rejected(self):
         early = datetime(2026, 11, 2, 17, 24, 59, tzinfo=TZ)
@@ -42,7 +55,7 @@ class ScheduleGateTests(unittest.TestCase):
 
     def test_production_workflow_has_both_dst_aware_prestart_schedules(self):
         workflow = (ROOT / ".github/workflows/session.yml").read_text(encoding="utf-8")
-        for cron in ("25 15", "25 16"):
+        for cron in ("25 15", "25 16", "28 15", "28 16"):
             self.assertIn(f"- cron: '{cron} * * *'", workflow)
         self.assertNotIn("workflow_dispatch:", workflow)
         self.assertNotIn("recovery_confirmation:", workflow)
@@ -50,6 +63,8 @@ class ScheduleGateTests(unittest.TestCase):
         self.assertIn("GATE_DECISION", workflow)
         self.assertIn("EXPECTED PRESTART MISSED OR INVALID", workflow)
         self.assertIn("python scripts/prestart.py", workflow)
+        self.assertIn("Claim today's production session", workflow)
+        self.assertIn("steps.claim.outcome == 'success'", workflow)
         self.assertIn("scripts/prestart.py", workflow)
         probe = (ROOT / ".github/workflows/probe.yml").read_text(encoding="utf-8")
         self.assertIn("  pull_request:", probe)
