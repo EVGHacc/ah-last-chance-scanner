@@ -1,11 +1,11 @@
 {
-  "run_date": "2026-11-13",
+  "run_date": "2026-11-14",
   "target_expected": 104,
-  "target_proven": 22,
-  "vacancy_coverage_percent": 21.2,
+  "target_proven": 17,
+  "vacancy_coverage_percent": 16.3,
   "match_audit": {
-    "candidate_count": 342,
-    "matched_count": 342,
+    "candidate_count": 110,
+    "matched_count": 110,
     "recall_percent": 100.0,
     "missed_count": 0,
     "missed_examples": []
@@ -80,13 +80,13 @@
     {
       "name": "EU Remote jobs",
       "kind": "employer",
-      "coverage": "unproven",
-      "status": "technical_failure"
+      "coverage": "partial",
+      "status": "official_site_scanned"
     },
     {
       "name": "GFT",
       "kind": "employer",
-      "coverage": "partial",
+      "coverage": "unproven",
       "status": "official_site_scanned"
     },
     {
@@ -132,6 +132,12 @@
       "status": "official_ats_scanned"
     },
     {
+      "name": "Mastercard",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "official_site_scanned"
+    },
+    {
       "name": "McKinsey",
       "kind": "employer",
       "coverage": "unproven",
@@ -160,6 +166,12 @@
       "kind": "employer",
       "coverage": "partial",
       "status": "official_site_scanned"
+    },
+    {
+      "name": "Morgan Stanley",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
     },
     {
       "name": "MUFG",
@@ -198,6 +210,12 @@
       "status": "official_site_scanned"
     },
     {
+      "name": "PayPal",
+      "kind": "employer",
+      "coverage": "partial",
+      "status": "official_ats_scanned"
+    },
+    {
       "name": "Rabobank",
       "kind": "employer",
       "coverage": "unproven",
@@ -231,7 +249,7 @@
       "name": "State Street",
       "kind": "employer",
       "coverage": "unproven",
-      "status": "official_ats_scanned"
+      "status": "official_site_scanned"
     },
     {
       "name": "Stripe",
@@ -248,8 +266,8 @@
     {
       "name": "Thunes",
       "kind": "employer",
-      "coverage": "unproven",
-      "status": "technical_failure"
+      "coverage": "partial",
+      "status": "official_site_scanned"
     },
     {
       "name": "Triodos Bank",
@@ -264,6 +282,12 @@
       "status": "official_site_scanned"
     },
     {
+      "name": "Visa",
+      "kind": "employer",
+      "coverage": "unproven",
+      "status": "technical_failure"
+    },
+    {
       "name": "Wise",
       "kind": "employer",
       "coverage": "partial",
@@ -272,8 +296,8 @@
     {
       "name": "Worldline",
       "kind": "employer",
-      "coverage": "partial",
-      "status": "official_site_scanned"
+      "coverage": "unproven",
+      "status": "technical_failure"
     },
     {
       "name": "Zanders",
@@ -346,6 +370,12 @@
       "kind": "recruiter",
       "coverage": "partial",
       "status": "official_site_scanned"
+    },
+    {
+      "name": "Cowen Partners",
+      "kind": "recruiter",
+      "coverage": "partial",
+      "status": "no_public_vacancy_board"
     },
     {
       "name": "De Vroed Ten Thierry",
@@ -506,11 +536,11 @@
   ],
   "technical_failures": [
     "DB Contractors UK",
-    "EU Remote jobs",
     "McKinsey",
     "Rabobank",
     "Surepay",
-    "Thunes",
+    "Visa",
+    "Worldline",
     "Risk Talent Associates",
     "Robert Walters Interim",
     "Selby Jennings"
