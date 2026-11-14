@@ -97,8 +97,8 @@ def run_point(target):
     return True
 
 
-def final_reconcile(today):
-    refresh_checkout()
+def reconcile_publication(today):
+    """Read-only completeness check against the current checkout's publication."""
     raw_seen,canonical_seen=status_seen(today)
     expected_raw={t.strftime('%H:%M') for t in points_for(today) if raw_due(t.hour*60+t.minute)}
     expected_canonical={t.strftime('%H:%M') for t in points_for(today) if canonical_due(t.hour*60+t.minute)}
@@ -108,6 +108,12 @@ def final_reconcile(today):
     if raw_missing: print('Raw missing:',','.join(raw_missing),flush=True)
     if canonical_missing: print('Canonical missing:',','.join(canonical_missing),flush=True)
     return not raw_missing and not canonical_missing and len(raw_seen)==101 and len(canonical_seen)==61
+
+
+def final_reconcile(today):
+    """Refresh the production writer checkout, then verify the published state."""
+    refresh_checkout()
+    return reconcile_publication(today)
 
 
 def self_test():
