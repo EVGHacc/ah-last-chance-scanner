@@ -88,7 +88,7 @@ jobs:
           key: ah-session-claim-${{ steps.local_date.outputs.value }}
       - name: Run supervised scan session
         id: supervised_scan
-        if: steps.gate.outputs.run == 'true' && steps.prestart.outcome == 'success' && steps.claim.outcome == 'success'
+        if: steps.gate.outputs.run == 'true' && steps.prestart.outcome == 'success' && steps.claim_cache_save.outcome == 'success'
         env:
           AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
         run: |
