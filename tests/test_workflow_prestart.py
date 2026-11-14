@@ -7,13 +7,16 @@ ROOT = Path(__file__).resolve().parents[1]
 class PrestartWorkflowContractTests(unittest.TestCase):
     def test_production_session_has_one_dst_aware_prestart(self):
         source = (ROOT / ".github/workflows/session.yml").read_text(encoding="utf-8")
-        for cron in ("25 15", "25 16"):
+        for cron in ("25 15", "25 16", "28 15", "28 16"):
             self.assertIn(f"- cron: '{cron} * * *'", source)
         self.assertNotIn("  push:", source)
         self.assertNotIn("  workflow_dispatch:", source)
         self.assertNotIn("recovery_confirmation:", source)
         self.assertNotIn("git push origin HEAD:main", source)
         self.assertIn("GATE_DECISION", source)
+        self.assertIn("Claim today's production session", source)
+        self.assertIn("steps.claim.outcome == 'success'", source)
+        self.assertIn("already claimed", source)
         self.assertIn("EXPECTED PRESTART MISSED OR INVALID", source)
         self.assertIn("group: ah-production-single-writer", source)
         self.assertIn("cancel-in-progress: false", source)
