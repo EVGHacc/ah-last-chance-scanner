@@ -48,6 +48,7 @@ def test_scan_ok_slaat_late_scan_op_met_echte_tijd(env):
         good_post,
         lambda s, a: ok_payload(row(pct=90)),
         lambda: started,
+        lambda payload: True,
     )
     assert code == 0
     saved = storage.read_day(storage.day_file(env / "d", SCHED))[0]

@@ -31,6 +31,10 @@ class ScanWorkflowContractTests(unittest.TestCase):
         self.assertIn("${{ secrets.AH_REFRESH_TOKEN }}", self.source)
         self.assertNotIn("echo $AH_REFRESH_TOKEN", self.source)
 
+    def test_mail_settings_only_via_secrets(self):
+        for name in ("RESEND_API_KEY", "AH_MAIL_FROM", "AH_MAIL_TO"):
+            self.assertIn("${{ secrets.%s }}" % name, self.source)
+
 
 if __name__ == "__main__":
     unittest.main()

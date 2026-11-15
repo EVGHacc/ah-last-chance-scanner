@@ -9,9 +9,9 @@ from collections.abc import Callable
 from datetime import datetime
 from pathlib import Path
 
-from ah_scanner import auth, client, slots, storage
+from ah_scanner import auth, client, notify, slots, storage
 
-EXIT_OK, EXIT_REAUTH, EXIT_TRANSIENT, EXIT_SCAN_INVALID = 0, 2, 3, 4
+EXIT_OK, EXIT_REAUTH, EXIT_TRANSIENT, EXIT_SCAN_INVALID, EXIT_NOTIFY_FAILED = 0, 2, 3, 4, 5
 
 
 def auth_check(state: Path, write: bool, post: auth.PostFn = auth.http_post) -> int:
@@ -33,6 +33,7 @@ def scan(
     post: auth.PostFn = auth.http_post,
     graphql: client.GraphqlFn = client.http_graphql,
     now: Callable[[], datetime] = lambda: datetime.now(slots.TZ),
+    send: notify.MailFn | None = None,
 ) -> int:
     """Voer één scan uit en sla het resultaat op. Exitcode != 0 bij elke niet-geldige scan."""
     try:
@@ -54,7 +55,21 @@ def scan(
         f"SCAN status={result.status} late={result.late} delay={result.delay_seconds}s "
         f"stores_ok={sum(s.fetched for s in result.stores)}/{len(result.stores)} written={written}"
     )
-    return EXIT_OK if result.valid else EXIT_SCAN_INVALID
+    mail = _notify(result, scheduled, data_root, send)
+    print(f"NOTIFY {mail}")
+    if not result.valid:
+        return EXIT_SCAN_INVALID
+    return EXIT_NOTIFY_FAILED if mail == "failed" else EXIT_OK
+
+
+def _notify(result, scheduled, data_root: Path, send: notify.MailFn | None) -> str:
+    api_key = os.getenv("RESEND_API_KEY", "")
+    sender, to = os.getenv("AH_MAIL_FROM", ""), os.getenv("AH_MAIL_TO", "")
+    if send is None:
+        if not (api_key and sender and to):
+            return "failed" if result.stores and any(s.meat70 for s in result.stores) else "none"
+        send = notify.resend_send(api_key)
+    return notify.notify(result, scheduled.date(), data_root, send, sender, to)
 
 
 def main(argv: list[str] | None = None) -> int:

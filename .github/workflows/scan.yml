@@ -35,6 +35,9 @@ jobs:
       - name: Scan
         env:
           AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          AH_MAIL_FROM: ${{ secrets.AH_MAIL_FROM }}
+          AH_MAIL_TO: ${{ secrets.AH_MAIL_TO }}
           SCHEDULED_AT: ${{ inputs.scheduled_at }}
         run: python -m ah_scanner.cli scan --scheduled-at "$SCHEDULED_AT" --state ../state/auth_state.enc --data-root ../state
       - name: Persist data
