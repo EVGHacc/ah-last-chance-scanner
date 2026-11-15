@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-15T17:30:00+01:00",
-  "started_at": "2026-11-15T17:30:51.038518+01:00",
-  "completed_at": "2026-11-15T17:30:56.869176+01:00",
-  "delay_seconds": 51,
+  "scheduled_at": "2026-11-15T17:35:00+01:00",
+  "started_at": "2026-11-15T17:35:48.885035+01:00",
+  "completed_at": "2026-11-15T17:35:54.378915+01:00",
+  "delay_seconds": 48,
   "late": false,
   "status": "OK",
   "stores": [
@@ -203,6 +203,18 @@
           "expires": "2026-11-15"
         },
         {
+          "product_id": 531893,
+          "title": "AH Scharrel gerookte kipfiletflakes",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 1.0,
+          "price_was": "3.69",
+          "price_now": "2.21",
+          "expires": "2026-11-15"
+        },
+        {
           "product_id": 533082,
           "title": "AH Scharrel kipschnitzel 2 stuks",
           "brand": "AH",
@@ -212,18 +224,6 @@
           "stock": 1.0,
           "price_was": "3.39",
           "price_now": "2.03",
-          "expires": "2026-11-15"
-        },
-        {
-          "product_id": 531893,
-          "title": "AH Scharrel gerookte kipfiletflakes",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "3.69",
-          "price_now": "2.77",
           "expires": "2026-11-15"
         },
         {
