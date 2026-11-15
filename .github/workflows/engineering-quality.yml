@@ -1,21 +1,17 @@
 name: Engineering Quality Gate
 
+# Slanke v2-gate. De jobnamen (changes, policy, ah-tests, independent-review) blijven gelijk,
+# zodat eventuele verplichte checks in branch protection blijven kloppen.
 on:
   pull_request:
     paths:
-      - 'scanner.py'
-      - 'scripts/**'
+      - 'src/**'
       - 'tests/**'
-      - 'engineering/**'
+      - 'worker/**'
+      - 'pyproject.toml'
       - '.github/workflows/**'
   push:
     branches: [main]
-    paths:
-      - 'scanner.py'
-      - 'scripts/**'
-      - 'tests/**'
-      - 'engineering/**'
-      - '.github/workflows/**'
   workflow_dispatch:
 
 permissions:
@@ -34,7 +30,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Determine affected projects
+      - name: Determine affected code
         id: scope
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
@@ -42,16 +38,14 @@ jobs:
         run: |
           python - <<'PY'
           import os, subprocess
-          base=os.environ.get('BASE_SHA','')
-          head=os.environ['HEAD_SHA']
-          if not base or set(base)=={'0'}:
-              files=[]
-              shared=True
+          base = os.environ.get('BASE_SHA', '')
+          head = os.environ['HEAD_SHA']
+          if not base or set(base) == {'0'}:
+              ah = True
           else:
-              files=subprocess.check_output(['git','diff','--name-only',base+'...'+head],text=True).splitlines()
-              shared=any(p.startswith(('engineering/','.github/workflows/')) or p.startswith('scripts/engineering_') or p.startswith('tests/test_engineering_') or p.startswith('tests/test_workflow_') for p in files)
-          ah=shared or any(p=='scanner.py' or p.startswith('scripts/') or p.startswith('tests/test_ah_') for p in files)
-          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              files = subprocess.check_output(['git', 'diff', '--name-only', base + '...' + head], text=True).splitlines()
+              ah = any(p.startswith(('src/', 'tests/', 'worker/', '.github/workflows/')) or p == 'pyproject.toml' for p in files)
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
               f.write(f"ah={str(ah).lower()}\n")
           PY
 
@@ -65,18 +59,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Test engineering policy and verifier
-        run: python -m unittest discover -s tests -p 'test_engineering_*.py' -v
       - name: Test workflow contracts
         run: python -m unittest discover -s tests -p 'test_workflow_*.py' -v
-      - name: Read-only control-plane review
-        run: python scripts/engineering_gate.py --static-review
+      - name: Static control-plane review
+        run: python -m ah_scanner.policy --static-review
+        env:
+          PYTHONPATH: src
       - name: Enforce code-to-test change policy
         if: github.event_name != 'workflow_dispatch'
         env:
+          PYTHONPATH: src
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
-        run: python scripts/engineering_gate.py --base "$BASE_SHA" --head "$HEAD_SHA"
+        run: python -m ah_scanner.policy --base "$BASE_SHA" --head "$HEAD_SHA"
 
   ah-tests:
     needs: changes
@@ -88,19 +83,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install AH test dependency
-        run: python -m pip install --disable-pip-version-check --quiet cryptography
-      - name: Compile AH production stack
-        run: python -m py_compile scanner.py scripts/*.py
-      - name: Run AH developer and independent self-tests
-        run: |
-          python scripts/auth_state.py
-          python scripts/schedule_gate.py --self-test
-          python scripts/session.py --self-test
-          python scripts/independent_qa.py --self-test
-          python scripts/selftest.py
-      - name: Run dedicated AH regression tests
-        run: python -m unittest discover -s tests -p 'test_ah_*.py' -v
+      - run: python -m pip install --disable-pip-version-check -e '.[dev]'
+      - run: ruff check src tests/unit
+      - run: ruff format --check src tests/unit
+      - run: pytest --cov=ah_scanner --cov-fail-under=85
+      - run: node --test
+        working-directory: worker
 
   independent-review:
     needs: [changes, policy, ah-tests]
@@ -116,9 +104,9 @@ jobs:
           python-version: '3.12'
       - name: Independent read-only review
         run: |
-          python scripts/engineering_gate.py --static-review
-          python -m unittest discover -s tests -p 'test_engineering_*.py' -v
+          python -m ah_scanner.policy --static-review
           python -m unittest discover -s tests -p 'test_workflow_*.py' -v
-      - name: Assert reviewer has no write token scope
-        run: |
-          echo "Independent reviewer intentionally has contents: read and receives no production secrets."
+        env:
+          PYTHONPATH: src
+      - name: Reviewer has no write scope
+        run: echo "Independent reviewer has contents read only and receives no production secrets."
