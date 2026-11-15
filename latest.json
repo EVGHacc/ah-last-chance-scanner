@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-15T18:55:00+01:00",
-  "started_at": "2026-11-15T18:55:48.205658+01:00",
-  "completed_at": "2026-11-15T18:55:52.240729+01:00",
-  "delay_seconds": 48,
+  "scheduled_at": "2026-11-15T19:00:00+01:00",
+  "started_at": "2026-11-15T19:00:49.201356+01:00",
+  "completed_at": "2026-11-15T19:00:54.735623+01:00",
+  "delay_seconds": 49,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 162,
+      "total_items": 167,
       "meat_items": [
         {
           "product_id": 598621,
@@ -215,13 +215,25 @@
           "expires": "2026-11-15"
         },
         {
+          "product_id": 187583,
+          "title": "AH Duitse biefstuk",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 3.0,
+          "price_was": "4.39",
+          "price_now": "3.29",
+          "expires": "2026-11-16"
+        },
+        {
           "product_id": 598620,
           "title": "AH Filetlapjes à la minute naturel",
           "brand": "AH",
           "size": "ca. 350 g",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 1.0,
+          "stock": 2.0,
           "price_was": "4.11",
           "price_now": "2.62",
           "expires": "2026-11-16"
@@ -773,7 +785,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 144,
+      "total_items": 145,
       "meat_items": [
         {
           "product_id": 622558,
