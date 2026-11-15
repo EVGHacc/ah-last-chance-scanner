@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-15T21:55:00+01:00",
-  "started_at": "2026-11-15T21:55:48.102046+01:00",
-  "completed_at": "2026-11-15T21:55:52.547867+01:00",
-  "delay_seconds": 48,
+  "scheduled_at": "2026-11-15T22:00:00+01:00",
+  "started_at": "2026-11-15T22:00:47.241676+01:00",
+  "completed_at": "2026-11-15T22:00:52.042384+01:00",
+  "delay_seconds": 47,
   "late": false,
   "status": "OK",
   "stores": [
@@ -643,20 +643,8 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 178,
+      "total_items": 174,
       "meat_items": [
-        {
-          "product_id": 619325,
-          "title": "AH Rundergehakt Italiaanse stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 5.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
-          "expires": "2026-11-15"
-        },
         {
           "product_id": 626382,
           "title": "AH Scharrel kipdijfilet",
@@ -706,15 +694,15 @@
           "expires": "2026-11-15"
         },
         {
-          "product_id": 556724,
-          "title": "AH Scharrel kipburger jalapeño 2 stuks",
+          "product_id": 619325,
+          "title": "AH Rundergehakt Italiaanse stijl",
           "brand": "AH",
-          "size": "200 g",
+          "size": "300 g",
           "category": "Vlees",
           "discount_pct": 70.0,
           "stock": 1.0,
-          "price_was": "2.85",
-          "price_now": "0.86",
+          "price_was": "4.99",
+          "price_now": "1.50",
           "expires": "2026-11-15"
         },
         {
@@ -799,7 +787,7 @@
           "stock": 1.0,
           "price_was": "2.99",
           "price_now": "0.90",
-          "expires": "2026-11-15"
+          "expires": "2026-11-16"
         },
         {
           "product_id": 379268,
@@ -864,18 +852,6 @@
       ],
       "meat70": [
         {
-          "product_id": 619325,
-          "title": "AH Rundergehakt Italiaanse stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 5.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
-          "expires": "2026-11-15"
-        },
-        {
           "product_id": 626382,
           "title": "AH Scharrel kipdijfilet",
           "brand": "AH",
@@ -924,15 +900,15 @@
           "expires": "2026-11-15"
         },
         {
-          "product_id": 556724,
-          "title": "AH Scharrel kipburger jalapeño 2 stuks",
+          "product_id": 619325,
+          "title": "AH Rundergehakt Italiaanse stijl",
           "brand": "AH",
-          "size": "200 g",
+          "size": "300 g",
           "category": "Vlees",
           "discount_pct": 70.0,
           "stock": 1.0,
-          "price_was": "2.85",
-          "price_now": "0.86",
+          "price_was": "4.99",
+          "price_now": "1.50",
           "expires": "2026-11-15"
         },
         {
@@ -1017,7 +993,7 @@
           "stock": 1.0,
           "price_was": "2.99",
           "price_now": "0.90",
-          "expires": "2026-11-15"
+          "expires": "2026-11-16"
         }
       ],
       "error": ""
