@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-15T18:35:00+01:00",
-  "started_at": "2026-11-15T18:35:48.740785+01:00",
-  "completed_at": "2026-11-15T18:35:53.866044+01:00",
-  "delay_seconds": 48,
+  "scheduled_at": "2026-11-15T18:40:00+01:00",
+  "started_at": "2026-11-15T18:40:54.147346+01:00",
+  "completed_at": "2026-11-15T18:40:58.272932+01:00",
+  "delay_seconds": 54,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 145,
+      "total_items": 152,
       "meat_items": [
         {
           "product_id": 598621,
@@ -737,7 +737,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 128,
+      "total_items": 133,
       "meat_items": [
         {
           "product_id": 622558,
@@ -788,6 +788,42 @@
           "expires": "2026-11-15"
         },
         {
+          "product_id": 436756,
+          "title": "AH Biologisch Hamburger 2 stuks",
+          "brand": "AH Biologisch",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 35.0,
+          "stock": 3.0,
+          "price_was": "4.39",
+          "price_now": "2.85",
+          "expires": "2026-11-16"
+        },
+        {
+          "product_id": 551138,
+          "title": "AH Biologisch Ultimate beefburger",
+          "brand": "AH Biologisch",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 3.0,
+          "price_was": "3.49",
+          "price_now": "2.62",
+          "expires": "2026-11-16"
+        },
+        {
+          "product_id": 619314,
+          "title": "AH Krokante Boomstamburger 2st",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "2.49",
+          "price_now": "1.87",
+          "expires": "2026-11-16"
+        },
+        {
           "product_id": 4011,
           "title": "AH Rundergehakt",
           "brand": "AH",
@@ -797,6 +833,30 @@
           "stock": 1.0,
           "price_was": "5.33",
           "price_now": "4.00",
+          "expires": "2026-11-16"
+        },
+        {
+          "product_id": 551140,
+          "title": "AH Excellent Ultimate wagyu beefburger",
+          "brand": "AH Excellent",
+          "size": "130 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "2.99",
+          "expires": "2026-11-16"
+        },
+        {
+          "product_id": 483912,
+          "title": "AH Greenfields Beefburger bacon 2 stuks",
+          "brand": "AH Greenfields",
+          "size": "250 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "4.99",
+          "price_now": "3.74",
           "expires": "2026-11-16"
         },
         {
