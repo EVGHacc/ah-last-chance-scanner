@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-15T19:30:00+01:00",
-  "started_at": "2026-11-15T19:30:49.115433+01:00",
-  "completed_at": "2026-11-15T19:30:59.413533+01:00",
-  "delay_seconds": 49,
+  "scheduled_at": "2026-11-15T19:35:00+01:00",
+  "started_at": "2026-11-15T19:35:45.617906+01:00",
+  "completed_at": "2026-11-15T19:35:49.723984+01:00",
+  "delay_seconds": 45,
   "late": false,
   "status": "OK",
   "stores": [
@@ -19,7 +19,7 @@
           "size": "530 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 14.0,
+          "stock": 13.0,
           "price_was": "6.59",
           "price_now": "1.65",
           "expires": "2026-11-15"
@@ -105,7 +105,7 @@
           "size": "530 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 14.0,
+          "stock": 13.0,
           "price_was": "6.59",
           "price_now": "1.65",
           "expires": "2026-11-15"
@@ -129,7 +129,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 174,
+      "total_items": 173,
       "meat_items": [
         {
           "product_id": 103377,
@@ -452,7 +452,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 180,
+      "total_items": 179,
       "meat_items": [
         {
           "product_id": 561333,
@@ -512,18 +512,6 @@
           "stock": 1.0,
           "price_was": "4.99",
           "price_now": "1.50",
-          "expires": "2026-11-15"
-        },
-        {
-          "product_id": 619334,
-          "title": "AH Scharrel kipfiletschnitzel Hongaars",
-          "brand": "AH",
-          "size": "ca. 300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.49",
-          "price_now": "1.65",
           "expires": "2026-11-15"
         },
         {
@@ -637,18 +625,6 @@
           "expires": "2026-11-15"
         },
         {
-          "product_id": 619334,
-          "title": "AH Scharrel kipfiletschnitzel Hongaars",
-          "brand": "AH",
-          "size": "ca. 300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.49",
-          "price_now": "1.65",
-          "expires": "2026-11-15"
-        },
-        {
           "product_id": 561331,
           "title": "AH Gemengd gehakt",
           "brand": "AH",
@@ -691,7 +667,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 154,
+      "total_items": 148,
       "meat_items": [
         {
           "product_id": 619325,
@@ -700,7 +676,7 @@
           "size": "300 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 7.0,
+          "stock": 5.0,
           "price_was": "4.99",
           "price_now": "1.50",
           "expires": "2026-11-15"
@@ -918,7 +894,7 @@
           "size": "300 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 7.0,
+          "stock": 5.0,
           "price_was": "4.99",
           "price_now": "1.50",
           "expires": "2026-11-15"
@@ -1062,7 +1038,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 155,
+      "total_items": 157,
       "meat_items": [
         {
           "product_id": 622558,
