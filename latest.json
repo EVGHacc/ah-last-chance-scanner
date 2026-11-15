@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-15T19:05:00+01:00",
-  "started_at": "2026-11-15T19:05:47.487984+01:00",
-  "completed_at": "2026-11-15T19:05:52.122207+01:00",
-  "delay_seconds": 47,
+  "scheduled_at": "2026-11-15T19:10:00+01:00",
+  "started_at": "2026-11-15T19:10:50.877710+01:00",
+  "completed_at": "2026-11-15T19:10:55.975190+01:00",
+  "delay_seconds": 50,
   "late": false,
   "status": "OK",
   "stores": [
@@ -56,7 +56,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 175,
+      "total_items": 174,
       "meat_items": [
         {
           "product_id": 103377,
@@ -116,18 +116,6 @@
           "stock": 1.0,
           "price_was": "5.49",
           "price_now": "1.65",
-          "expires": "2026-11-15"
-        },
-        {
-          "product_id": 619340,
-          "title": "AH Scharrel kip cordon bleu voordeel",
-          "brand": "AH",
-          "size": "750 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "9.69",
-          "price_now": "2.91",
           "expires": "2026-11-15"
         },
         {
@@ -197,7 +185,7 @@
           "size": "500 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 4.0,
+          "stock": 3.0,
           "price_was": "4.59",
           "price_now": "2.09",
           "expires": "2026-11-15"
@@ -322,18 +310,6 @@
           "stock": 1.0,
           "price_was": "5.49",
           "price_now": "1.65",
-          "expires": "2026-11-15"
-        },
-        {
-          "product_id": 619340,
-          "title": "AH Scharrel kip cordon bleu voordeel",
-          "brand": "AH",
-          "size": "750 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "9.69",
-          "price_now": "2.91",
           "expires": "2026-11-15"
         },
         {
@@ -723,7 +699,7 @@
           "size": "ca. 210 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 4.0,
+          "stock": 3.0,
           "price_was": "9.49",
           "price_now": "4.84",
           "expires": "2026-11-16"
@@ -821,7 +797,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 148,
+      "total_items": 150,
       "meat_items": [
         {
           "product_id": 622558,
