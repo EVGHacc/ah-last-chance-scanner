@@ -1,0 +1,32 @@
+// Scanmomenten: elke 5 minuten van 17:30 t/m 22:30 Europe/Amsterdam (61 per dag).
+const START_MIN = 17 * 60 + 30;
+const END_MIN = 22 * 60 + 30;
+const STEP_MIN = 5;
+
+const formatter = new Intl.DateTimeFormat("en-GB", {
+  timeZone: "Europe/Amsterdam",
+  hour: "2-digit",
+  minute: "2-digit",
+  hourCycle: "h23",
+});
+
+/** Rond af naar beneden op de hele minuut (ms). */
+export function floorToMinute(ms) {
+  return Math.floor(ms / 60000) * 60000;
+}
+
+/** Minuten sinds middernacht in Amsterdam (DST-correct). */
+export function amsterdamMinutes(ms) {
+  const parts = Object.fromEntries(formatter.formatToParts(new Date(ms)).map((p) => [p.type, p.value]));
+  return Number(parts.hour) * 60 + Number(parts.minute);
+}
+
+export function isScanSlot(ms) {
+  const minutes = amsterdamMinutes(floorToMinute(ms));
+  return minutes >= START_MIN && minutes <= END_MIN && (minutes - START_MIN) % STEP_MIN === 0;
+}
+
+/** ISO-tijdstempel (UTC) van het bedoelde scanmoment. */
+export function scheduledAt(ms) {
+  return new Date(floorToMinute(ms)).toISOString();
+}

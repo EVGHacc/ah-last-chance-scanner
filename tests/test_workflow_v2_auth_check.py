@@ -38,6 +38,10 @@ class CiWorkflowContractTests(unittest.TestCase):
         self.assertIn("ruff format --check", self.source)
         self.assertIn("pytest --cov=ah_scanner --cov-fail-under=85", self.source)
 
+    def test_ci_runs_worker_tests(self):
+        self.assertIn("node --test", self.source)
+        self.assertIn("working-directory: worker", self.source)
+
 
 if __name__ == "__main__":
     unittest.main()

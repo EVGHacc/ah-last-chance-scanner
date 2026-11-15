@@ -1,0 +1,18 @@
+{
+  "name": "ah-scan-trigger",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-15",
+  "workers_dev": false,
+  "triggers": {
+    // UTC. Dekt 17:30-22:30 Europe/Amsterdam in zomer- en wintertijd; de exacte
+    // Amsterdamse tijd wordt in de code gefilterd (zie src/slots.js).
+    "crons": ["*/5 15-21 * * *"]
+  },
+  "vars": {
+    "GITHUB_REPO": "EVGHacc/ah-last-chance-scanner",
+    "WORKFLOW_FILE": "scan.yml",
+    "GITHUB_REF": "main"
+  },
+  "observability": { "enabled": true, "traces": { "enabled": true } }
+  // Secret (niet hier): GITHUB_TOKEN, via `wrangler secret put GITHUB_TOKEN`
+}

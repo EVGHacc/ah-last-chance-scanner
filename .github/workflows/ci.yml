@@ -20,3 +20,5 @@ jobs:
       - run: ruff check src tests/unit
       - run: ruff format --check src tests/unit
       - run: pytest --cov=ah_scanner --cov-fail-under=85
+      - run: node --test
+        working-directory: worker

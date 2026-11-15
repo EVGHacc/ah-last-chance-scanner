@@ -36,5 +36,27 @@ class ScanWorkflowContractTests(unittest.TestCase):
             self.assertIn("${{ secrets.%s }}" % name, self.source)
 
 
+class WorkerConfigContractTests(unittest.TestCase):
+    def setUp(self):
+        self.config = (ROOT / "worker/wrangler.jsonc").read_text(encoding="utf-8")
+        self.code = (ROOT / "worker/src/index.js").read_text(encoding="utf-8")
+
+    def test_cron_covers_dst_window_in_utc(self):
+        self.assertIn('"*/5 15-21 * * *"', self.config)
+
+    def test_dispatches_scan_workflow_on_main_with_scheduled_at(self):
+        self.assertIn('"WORKFLOW_FILE": "scan.yml"', self.config)
+        self.assertIn('"GITHUB_REF": "main"', self.config)
+        self.assertIn("scheduled_at", self.code)
+
+    def test_token_is_a_secret_never_in_config(self):
+        self.assertNotIn("ghp_", self.config)
+        self.assertNotIn("github_pat_", self.config)
+        self.assertIn("env.GITHUB_TOKEN", self.code)
+
+    def test_observability_with_traces_enabled(self):
+        self.assertIn('"observability": { "enabled": true, "traces": { "enabled": true } }', self.config)
+
+
 if __name__ == "__main__":
     unittest.main()
