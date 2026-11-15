@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-15T19:00:00+01:00",
-  "started_at": "2026-11-15T19:00:49.201356+01:00",
-  "completed_at": "2026-11-15T19:00:54.735623+01:00",
-  "delay_seconds": 49,
+  "scheduled_at": "2026-11-15T19:05:00+01:00",
+  "started_at": "2026-11-15T19:05:47.487984+01:00",
+  "completed_at": "2026-11-15T19:05:52.122207+01:00",
+  "delay_seconds": 47,
   "late": false,
   "status": "OK",
   "stores": [
@@ -56,7 +56,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 176,
+      "total_items": 175,
       "meat_items": [
         {
           "product_id": 103377,
@@ -65,7 +65,7 @@
           "size": "400 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 18.0,
+          "stock": 17.0,
           "price_was": "4.75",
           "price_now": "1.43",
           "expires": "2026-11-15"
@@ -92,6 +92,18 @@
           "stock": 3.0,
           "price_was": "1.99",
           "price_now": "0.60",
+          "expires": "2026-11-15"
+        },
+        {
+          "product_id": 3986,
+          "title": "AH Speklap",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "3.39",
+          "price_now": "1.02",
           "expires": "2026-11-15"
         },
         {
@@ -155,6 +167,30 @@
           "expires": "2026-11-15"
         },
         {
+          "product_id": 187580,
+          "title": "AH Gehakt cordon bleu",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "2.25",
+          "price_now": "0.68",
+          "expires": "2026-11-15"
+        },
+        {
+          "product_id": 531893,
+          "title": "AH Scharrel gerookte kipfiletflakes",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.69",
+          "price_now": "1.11",
+          "expires": "2026-11-15"
+        },
+        {
           "product_id": 561333,
           "title": "AH Gemengd gehakt",
           "brand": "AH",
@@ -167,18 +203,6 @@
           "expires": "2026-11-15"
         },
         {
-          "product_id": 3986,
-          "title": "AH Speklap",
-          "brand": "AH",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "3.39",
-          "price_now": "2.03",
-          "expires": "2026-11-15"
-        },
-        {
           "product_id": 620810,
           "title": "AH Ovenschotel scharrel kipfilet pesto",
           "brand": "AH",
@@ -188,30 +212,6 @@
           "stock": 1.0,
           "price_was": "6.99",
           "price_now": "4.19",
-          "expires": "2026-11-15"
-        },
-        {
-          "product_id": 187580,
-          "title": "AH Gehakt cordon bleu",
-          "brand": "AH",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "2.25",
-          "price_now": "1.35",
-          "expires": "2026-11-15"
-        },
-        {
-          "product_id": 531893,
-          "title": "AH Scharrel gerookte kipfiletflakes",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "3.69",
-          "price_now": "2.21",
           "expires": "2026-11-15"
         },
         {
@@ -271,7 +271,7 @@
           "size": "400 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 18.0,
+          "stock": 17.0,
           "price_was": "4.75",
           "price_now": "1.43",
           "expires": "2026-11-15"
@@ -298,6 +298,18 @@
           "stock": 3.0,
           "price_was": "1.99",
           "price_now": "0.60",
+          "expires": "2026-11-15"
+        },
+        {
+          "product_id": 3986,
+          "title": "AH Speklap",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "3.39",
+          "price_now": "1.02",
           "expires": "2026-11-15"
         },
         {
@@ -358,6 +370,30 @@
           "stock": 1.0,
           "price_was": "3.79",
           "price_now": "1.14",
+          "expires": "2026-11-15"
+        },
+        {
+          "product_id": 187580,
+          "title": "AH Gehakt cordon bleu",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "2.25",
+          "price_now": "0.68",
+          "expires": "2026-11-15"
+        },
+        {
+          "product_id": 531893,
+          "title": "AH Scharrel gerookte kipfiletflakes",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.69",
+          "price_now": "1.11",
           "expires": "2026-11-15"
         }
       ],
@@ -785,7 +821,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 145,
+      "total_items": 148,
       "meat_items": [
         {
           "product_id": 622558,
