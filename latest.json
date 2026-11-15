@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-15T19:25:00+01:00",
-  "started_at": "2026-11-15T19:25:55.753375+01:00",
-  "completed_at": "2026-11-15T19:26:00.567990+01:00",
-  "delay_seconds": 55,
+  "scheduled_at": "2026-11-15T19:30:00+01:00",
+  "started_at": "2026-11-15T19:30:49.115433+01:00",
+  "completed_at": "2026-11-15T19:30:59.413533+01:00",
+  "delay_seconds": 49,
   "late": false,
   "status": "OK",
   "stores": [
@@ -129,7 +129,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 175,
+      "total_items": 174,
       "meat_items": [
         {
           "product_id": 103377,
@@ -168,18 +168,6 @@
           "expires": "2026-11-15"
         },
         {
-          "product_id": 561333,
-          "title": "AH Gemengd gehakt",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 3.0,
-          "price_was": "4.59",
-          "price_now": "1.05",
-          "expires": "2026-11-15"
-        },
-        {
           "product_id": 3986,
           "title": "AH Speklap",
           "brand": "AH",
@@ -189,6 +177,18 @@
           "stock": 2.0,
           "price_was": "3.39",
           "price_now": "1.02",
+          "expires": "2026-11-15"
+        },
+        {
+          "product_id": 561333,
+          "title": "AH Gemengd gehakt",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "4.59",
+          "price_now": "1.05",
           "expires": "2026-11-15"
         },
         {
@@ -249,18 +249,6 @@
           "stock": 1.0,
           "price_was": "3.79",
           "price_now": "1.14",
-          "expires": "2026-11-15"
-        },
-        {
-          "product_id": 187580,
-          "title": "AH Gehakt cordon bleu",
-          "brand": "AH",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "2.25",
-          "price_now": "0.68",
           "expires": "2026-11-15"
         },
         {
@@ -362,18 +350,6 @@
           "expires": "2026-11-15"
         },
         {
-          "product_id": 561333,
-          "title": "AH Gemengd gehakt",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 3.0,
-          "price_was": "4.59",
-          "price_now": "1.05",
-          "expires": "2026-11-15"
-        },
-        {
           "product_id": 3986,
           "title": "AH Speklap",
           "brand": "AH",
@@ -383,6 +359,18 @@
           "stock": 2.0,
           "price_was": "3.39",
           "price_now": "1.02",
+          "expires": "2026-11-15"
+        },
+        {
+          "product_id": 561333,
+          "title": "AH Gemengd gehakt",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "4.59",
+          "price_now": "1.05",
           "expires": "2026-11-15"
         },
         {
@@ -446,18 +434,6 @@
           "expires": "2026-11-15"
         },
         {
-          "product_id": 187580,
-          "title": "AH Gehakt cordon bleu",
-          "brand": "AH",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "2.25",
-          "price_now": "0.68",
-          "expires": "2026-11-15"
-        },
-        {
           "product_id": 531893,
           "title": "AH Scharrel gerookte kipfiletflakes",
           "brand": "AH",
@@ -476,8 +452,20 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 179,
+      "total_items": 180,
       "meat_items": [
+        {
+          "product_id": 561333,
+          "title": "AH Gemengd gehakt",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "4.59",
+          "price_now": "1.05",
+          "expires": "2026-11-15"
+        },
         {
           "product_id": 531832,
           "title": "AH Scharrel kipdijfilet reepjes",
@@ -563,27 +551,15 @@
           "expires": "2026-11-15"
         },
         {
-          "product_id": 561333,
-          "title": "AH Gemengd gehakt",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 3.0,
-          "price_was": "4.59",
-          "price_now": "2.09",
-          "expires": "2026-11-15"
-        },
-        {
           "product_id": 379268,
           "title": "AH Excellent Lamskotelet",
           "brand": "AH Excellent",
           "size": "ca. 210 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "9.49",
-          "price_now": "4.84",
+          "price_now": "2.42",
           "expires": "2026-11-15"
         },
         {
@@ -601,6 +577,18 @@
       ],
       "meat70": [
         {
+          "product_id": 561333,
+          "title": "AH Gemengd gehakt",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "4.59",
+          "price_now": "1.05",
+          "expires": "2026-11-15"
+        },
+        {
           "product_id": 531832,
           "title": "AH Scharrel kipdijfilet reepjes",
           "brand": "AH",
@@ -682,6 +670,18 @@
           "stock": 1.0,
           "price_was": "3.79",
           "price_now": "1.14",
+          "expires": "2026-11-15"
+        },
+        {
+          "product_id": 379268,
+          "title": "AH Excellent Lamskotelet",
+          "brand": "AH Excellent",
+          "size": "ca. 210 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "9.49",
+          "price_now": "2.42",
           "expires": "2026-11-15"
         }
       ],
@@ -1062,7 +1062,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 153,
+      "total_items": 155,
       "meat_items": [
         {
           "product_id": 622558,
