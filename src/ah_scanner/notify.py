@@ -102,3 +102,17 @@ def resend_send(api_key: str) -> MailFn:
             return False
 
     return send
+
+
+def notify(scan: ScanResult, day: date, root: Path, send: MailFn, sender: str, to: str) -> str:
+    """Geeft 'none', 'sent' of 'failed'. Sleutels worden pas na een geslaagde verzending bewaard."""
+    state = load_state(root)
+    seen = set(state.get(day.isoformat(), []))
+    found = new_items(scan, day.isoformat(), seen)
+    if not found:
+        return "none"
+    if not send(build_payload(found, scan, sender, to)):
+        return "failed"
+    state[day.isoformat()] = sorted(seen | {key for _, _, key in found})
+    save_state(root, state, day)
+    return "sent"
