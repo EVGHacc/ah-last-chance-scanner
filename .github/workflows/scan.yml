@@ -1,0 +1,56 @@
+name: AH scan
+
+# Alleen via workflow_dispatch (Cloudflare Worker, elke 5 min, 17:30-22:30 Europe/Amsterdam).
+# `scheduled_at` is het bedoelde scanmoment; de echte starttijd wordt apart opgeslagen.
+on:
+  workflow_dispatch:
+    inputs:
+      scheduled_at:
+        description: 'Bedoeld scanmoment (ISO 8601 met tijdzone)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ah-state
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check -e .
+      - name: Prepare data branch worktree
+        run: |
+          set -euo pipefail
+          git fetch origin data
+          git worktree add -B data ../state origin/data
+      - name: Scan
+        env:
+          AH_REFRESH_TOKEN: ${{ secrets.AH_REFRESH_TOKEN }}
+          SCHEDULED_AT: ${{ inputs.scheduled_at }}
+        run: python -m ah_scanner.cli scan --scheduled-at "$SCHEDULED_AT" --state ../state/auth_state.enc --data-root ../state
+      - name: Persist data
+        if: always()
+        working-directory: ../state
+        env:
+          SCHEDULED_AT: ${{ inputs.scheduled_at }}
+        run: |
+          set -euo pipefail
+          git config user.name 'ah-scanner-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then echo "No data change"; exit 0; fi
+          git commit -m "scan ${SCHEDULED_AT}"
+          for attempt in 1 2 3; do
+            git push origin HEAD:data && exit 0
+            git pull --rebase origin data
+          done
+          exit 1
