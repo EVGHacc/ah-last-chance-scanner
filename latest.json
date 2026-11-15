@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-15T18:20:00+01:00",
-  "started_at": "2026-11-15T18:20:48.194905+01:00",
-  "completed_at": "2026-11-15T18:20:53.948323+01:00",
-  "delay_seconds": 48,
+  "scheduled_at": "2026-11-15T18:25:00+01:00",
+  "started_at": "2026-11-15T18:25:47.866127+01:00",
+  "completed_at": "2026-11-15T18:25:52.416437+01:00",
+  "delay_seconds": 47,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 141,
+      "total_items": 140,
       "meat_items": [
         {
           "product_id": 598621,
@@ -316,7 +316,7 @@
           "size": "500 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 4.0,
+          "stock": 3.0,
           "price_was": "4.59",
           "price_now": "2.09",
           "expires": "2026-11-15"
@@ -438,7 +438,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 157,
+      "total_items": 156,
       "meat_items": [
         {
           "product_id": 619325,
@@ -664,7 +664,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 126,
+      "total_items": 127,
       "meat_items": [
         {
           "product_id": 622558,
@@ -676,18 +676,6 @@
           "stock": 4.0,
           "price_was": "4.49",
           "price_now": "2.69",
-          "expires": "2026-11-15"
-        },
-        {
-          "product_id": 561333,
-          "title": "AH Gemengd gehakt",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "4.59",
-          "price_now": "2.09",
           "expires": "2026-11-15"
         },
         {
@@ -703,15 +691,15 @@
           "expires": "2026-11-15"
         },
         {
-          "product_id": 193020,
-          "title": "AH Runderbraadworst",
+          "product_id": 561333,
+          "title": "AH Gemengd gehakt",
           "brand": "AH",
-          "size": "200 g",
+          "size": "500 g",
           "category": "Vlees",
           "discount_pct": 40.0,
           "stock": 1.0,
-          "price_was": "3.69",
-          "price_now": "2.21",
+          "price_was": "4.59",
+          "price_now": "2.09",
           "expires": "2026-11-15"
         },
         {
