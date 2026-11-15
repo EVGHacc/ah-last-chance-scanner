@@ -112,3 +112,65 @@ def test_cli_zonder_mailconfig_met_treffer_is_failed(env, monkeypatch):  # noqa:
         lambda: SCHED,
     )
     assert code == cli.EXIT_NOTIFY_FAILED
+
+
+class _Resp:
+    status = 200
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+
+def test_resend_stuurt_eigen_user_agent_en_geen_standaard_urllib(monkeypatch):
+    seen = {}
+
+    def fake_urlopen(req, timeout):
+        seen["ua"] = req.get_header("User-agent")
+        seen["auth"] = req.get_header("Authorization")
+        return _Resp()
+
+    monkeypatch.setattr(notify.urllib.request, "urlopen", fake_urlopen)
+    assert notify.resend_send("key")({"to": ["x"]}) is True
+    assert seen["ua"] == notify.USER_AGENT and "urllib" not in seen["ua"]
+    assert seen["auth"] == "Bearer key"
+
+
+def _http_error(code, body):
+    import io
+
+    return notify.urllib.error.HTTPError("u", code, "m", {}, io.BytesIO(body))
+
+
+def test_resend_fout_logt_status_en_naam_zonder_body(monkeypatch, capsys):
+    body = b'{"name":"validation_error","message":"secret@example.com niet toegestaan"}'
+
+    def boom(req, timeout):
+        raise _http_error(403, body)
+
+    monkeypatch.setattr(notify.urllib.request, "urlopen", boom)
+    assert notify.resend_send("key")({}) is False
+    out = capsys.readouterr().out
+    assert "http=403" in out and "name=validation_error" in out
+    assert "secret@example.com" not in out and "key" not in out.replace("http", "")
+
+
+def test_resend_niet_json_body_en_netwerkfout(monkeypatch, capsys):
+    monkeypatch.setattr(
+        notify.urllib.request,
+        "urlopen",
+        lambda r, timeout: (_ for _ in ()).throw(
+            _http_error(403, b"<html>error code: 1010</html>")
+        ),
+    )
+    assert notify.resend_send("k")({}) is False
+    assert "name=non_json" in capsys.readouterr().out
+
+    def down(req, timeout):
+        raise notify.urllib.error.URLError("dns")
+
+    monkeypatch.setattr(notify.urllib.request, "urlopen", down)
+    assert notify.resend_send("k")({}) is False
+    assert "network=URLError" in capsys.readouterr().out

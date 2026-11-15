@@ -67,18 +67,38 @@ def build_payload(
     }
 
 
+USER_AGENT = "ah-scanner/2.0 (+https://github.com/EVGHacc/ah-last-chance-scanner)"
+
+
+def _error_name(exc: urllib.error.HTTPError) -> str:
+    """Resend-foutnaam (bijv. 'validation_error'); nooit de body of adressen loggen."""
+    try:
+        name = json.loads(exc.read(2048)).get("name")
+    except (ValueError, AttributeError, OSError):
+        return "non_json"
+    return name if isinstance(name, str) and name.isidentifier() else "unknown"
+
+
 def resend_send(api_key: str) -> MailFn:
     def send(payload: dict) -> bool:
         req = urllib.request.Request(
             RESEND_URL,
             data=json.dumps(payload).encode(),
-            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+                "User-Agent": USER_AGENT,
+            },
             method="POST",
         )
         try:
             with urllib.request.urlopen(req, timeout=20) as resp:
                 return 200 <= resp.status < 300
-        except (urllib.error.URLError, TimeoutError, OSError):
+        except urllib.error.HTTPError as exc:
+            print(f"NOTIFY_ERROR http={exc.code} name={_error_name(exc)}")
+            return False
+        except (urllib.error.URLError, TimeoutError, OSError) as exc:
+            print(f"NOTIFY_ERROR network={type(exc).__name__}")
             return False
 
     return send
