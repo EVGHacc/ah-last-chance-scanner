@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-15T20:30:00+01:00",
-  "started_at": "2026-11-15T20:30:51.610246+01:00",
-  "completed_at": "2026-11-15T20:30:57.272477+01:00",
-  "delay_seconds": 51,
+  "scheduled_at": "2026-11-15T20:35:00+01:00",
+  "started_at": "2026-11-15T20:35:59.096120+01:00",
+  "completed_at": "2026-11-15T20:36:04.715862+01:00",
+  "delay_seconds": 59,
   "late": false,
   "status": "OK",
   "stores": [
@@ -105,7 +105,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 232,
+      "total_items": 237,
       "meat_items": [
         {
           "product_id": 103377,
@@ -958,6 +958,18 @@
           "expires": "2026-11-15"
         },
         {
+          "product_id": 477571,
+          "title": "AH Scharrel gebraden kipfilet caesar",
+          "brand": "AH",
+          "size": "ca. 150 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.79",
+          "price_now": "1.14",
+          "expires": "2026-11-15"
+        },
+        {
           "product_id": 187583,
           "title": "AH Duitse biefstuk",
           "brand": "AH",
@@ -991,18 +1003,6 @@
           "stock": 1.0,
           "price_was": "2.99",
           "price_now": "0.90",
-          "expires": "2026-11-15"
-        },
-        {
-          "product_id": 477571,
-          "title": "AH Scharrel gebraden kipfilet caesar",
-          "brand": "AH",
-          "size": "ca. 150 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "3.79",
-          "price_now": "2.27",
           "expires": "2026-11-15"
         },
         {
@@ -1176,6 +1176,18 @@
           "expires": "2026-11-15"
         },
         {
+          "product_id": 477571,
+          "title": "AH Scharrel gebraden kipfilet caesar",
+          "brand": "AH",
+          "size": "ca. 150 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.79",
+          "price_now": "1.14",
+          "expires": "2026-11-15"
+        },
+        {
           "product_id": 187583,
           "title": "AH Duitse biefstuk",
           "brand": "AH",
@@ -1218,7 +1230,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 165,
+      "total_items": 163,
       "meat_items": [
         {
           "product_id": 531853,
