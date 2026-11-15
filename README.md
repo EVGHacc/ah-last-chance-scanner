@@ -1,50 +1,64 @@
-# AH Laatste Kans scanner
+# AH Laatste Kans scanner (v2)
 
-Publieke authenticated runner voor de AH Laatste Kans-scanner. Gevoelige configuratie staat uitsluitend in GitHub Actions Secrets.
+Haalt dagelijks de AH Laatste Kans-aanbiedingen op, vooral **Vlees met >= 70% korting**, en mailt
+nieuwe treffers via Resend. `main` bevat alleen code; alle data staat op de branch `data`.
 
-## Productiepad en scheduling
+## Hoe het werkt
 
-1. Alleen `.github/workflows/session.yml` bezit de productieplanning en start de supervised sessie.
-2. `scripts/schedule_gate.py` accepteert uitsluitend bedoelde starts binnen het venster 17:30–22:30 Europe/Amsterdam, met CET/CEST-correctie.
-3. `scripts/session.py` plant de volledige union van 3- en 5-minutenpunten tussen 17:30 en 22:30.
-4. `scanner.py` haalt de winkels authenticated op met uitsluitend `user-refresh`.
-5. `scripts/publish.py` is de productie-schrijfroute en gebruikt `scripts/persist.py` voor validatie en opslag.
+1. **Cloudflare Worker** (`worker/`) draait elke 5 minuten (cron `*/5 15-21 * * *`, UTC) en
+   start alleen op de 61 scanmomenten van 17:30 t/m 22:30 Europe/Amsterdam (DST-correct).
+2. De Worker start `.github/workflows/scan.yml` via `workflow_dispatch` met `scheduled_at`.
+3. `python -m ah_scanner.cli scan` haalt **5 winkels** op, filtert categorie exact `Vlees`
+   (niet `Vleeswaren`) met korting >= 70%, slaat het resultaat op en mailt nieuwe treffers.
 
-De productieconcurrency is `ah-production-single-writer` met `cancel-in-progress: false`. Een nieuwe scheduler-run mag een lopende sessie niet annuleren.
+| Winkel | ID |
+| --- | --- |
+| AH Blekersvaartweg | 1463 |
+| AH Zandvoortselaan | 1348 |
+| AH Casablancastraat | 1135 |
+| AH Clothildestraat | 4046 |
+| AH Westergracht | 8728 |
 
-## Watchdog en guardian
+## Statussen
 
-`.github/workflows/fallback-qa.yml` is uitsluitend een read-only watchdog. Deze controleert de actieve primaire sessie en de meest recente gepubliceerde scan. De watchdog mag geen workflow annuleren, dispatchen, token wijzigen of productiegegevens publiceren. Een ontbrekende sessie of ongeldige/verouderde scan resulteert in ALARM.
+`OK`, `OK_ZERO_ROWS` (geldig), `INCOMPLETE` (een winkel viel uit) en `FAILED` (geen enkele winkel
+of ongeldige auth). Alleen geldige scans tellen mee; een niet-geldige scan laat de workflow falen
+(exitcode 4), een mailfout geeft exitcode 5.
 
-`.github/workflows/guardian.yml` voert uitsluitend regressietests uit bij relevante codewijzigingen. Het is geen tweede productie-scheduler of publisher.
+Een late scan krijgt `late=true` en wordt opgeslagen met de **echte** starttijd naast het bedoelde
+scanmoment; er wordt nooit teruggedateerd.
 
-De watchdog controleert de versheid van de laatst gepubliceerde scan (maximaal 240 seconden). Dit is nadrukkelijk geen onafhankelijke proces-heartbeat; een afzonderlijke heartbeat met een alarmgrens van 60 seconden vereist een aparte, atomische heartbeatbron en valt buiten deze scheduler/watchdog-wijziging.
+## Data (branch `data`)
 
-## Meetreeks
+- `scans/YYYY-MM-DD.jsonl`: een regel per scanmoment (idempotent per `scheduled_at`);
+- `latest.json`: laatste scan; `notified.json`: dedup-state voor mails (laatste 7 dagen);
+- `auth_state.enc`: geroteerde refresh-token, versleuteld met AES-256-GCM;
+- `legacy/`: oude v1-data (jsonl, raw, days, central).
 
-- raw: iedere 3 minuten, 17:30–22:30, exact 101 punten;
-- canonical: iedere 5 minuten, 17:30–22:30, exact 61 punten;
-- union: 141 daadwerkelijke scans doordat beide reeksen iedere 15 minuten samenvallen;
-- winkels: 1463 Blekersvaartweg, 1348 Zandvoortselaan, 1135 Casablancastraat;
-- categorie: exact `Vlees`; `Vleeswaren` telt niet mee.
+## Secrets en configuratie
 
-Een observatie telt alleen bij `user-refresh`, `valid=true`, `OK`/`OK_ZERO_ROWS`, maximaal 240 seconden vertraging en succesvolle fetch van alle drie winkels.
+| Waar | Naam | Doel |
+| --- | --- | --- |
+| GitHub Actions | `AH_REFRESH_TOKEN` | AH-sessie |
+| GitHub Actions | `RESEND_API_KEY`, `AH_MAIL_FROM`, `AH_MAIL_TO` | mail via Resend |
+| Cloudflare Worker | `GITHUB_TOKEN` | fine-grained, alleen *Actions: Read and write* |
 
-## Opslag
+Zie `.env.example`. Zonder eigen Resend-domein kan alleen naar het adres van het Resend-account
+worden gestuurd (`onboarding@resend.dev`).
 
-- `data/YYYY-MM-DD.jsonl`: verliesvrije geldige observaties van die dag;
-- `data/latest.json`: laatste geldige observatie;
-- `data/today.json`: compacte canonical Vlees-reeks, maximaal 61 punten;
-- `data/status.json`: actuele dagcompleetheid;
-- `data/days/YYYY-MM-DD.status.json`: gearchiveerde dagcompleetheid vanaf invoering van deze controle;
-- `data/central/`: bronmanifest, legacy-data en afgeleide analyses.
+## Ontwikkelen
 
-`data/today.json` wordt nooit gevuld met terugberekende of oudere waarnemingen. Ontbrekend blijft ontbrekend.
+```bash
+python -m pip install -e '.[dev]'
+ruff check src tests/unit && ruff format --check src tests/unit
+pytest --cov=ah_scanner --cov-fail-under=85
+python -m unittest discover -s tests -p 'test_workflow_*.py'
+cd worker && node --test
+```
 
-## Authenticatie
+Handmatig testen: workflow **AH auth check** (alleen token) of **AH scan** met een geldig
+`scheduled_at` (5-minutenslot binnen 17:30-22:30 Amsterdam).
 
-De productie gebruikt `AH_REFRESH_TOKEN` als GitHub Actions Secret. Een geroteerde refresh-tokenstate wordt versleuteld in `data/auth_state.enc`, zodat opeenvolgende scannerprocessen dezelfde sessie veilig kunnen voortzetten.
-
-## Cloudflare
-
-Cloudflare zit niet in het kritieke scanpad. De Worker benadert AH niet, bevat geen AH- of GitHub-token, start geen GitHub Actions, schrijft geen scannerdata en relayeert alleen reeds gepubliceerde GitHub-data.
+CI (`ci.yml`, `engineering-quality.yml`) draait ruff, pytest, de workflow-contracttests en de
+Worker-tests. Een wijziging aan `.github/workflows/` vereist een wijziging in
+`tests/test_workflow_*.py`.
