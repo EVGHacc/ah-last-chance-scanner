@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-15T20:25:00+01:00",
-  "started_at": "2026-11-15T20:25:50.473603+01:00",
-  "completed_at": "2026-11-15T20:25:56.606938+01:00",
-  "delay_seconds": 50,
+  "scheduled_at": "2026-11-15T20:30:00+01:00",
+  "started_at": "2026-11-15T20:30:51.610246+01:00",
+  "completed_at": "2026-11-15T20:30:57.272477+01:00",
+  "delay_seconds": 51,
   "late": false,
   "status": "OK",
   "stores": [
@@ -105,7 +105,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 227,
+      "total_items": 232,
       "meat_items": [
         {
           "product_id": 103377,
@@ -1218,44 +1218,8 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 194,
+      "total_items": 165,
       "meat_items": [
-        {
-          "product_id": 622558,
-          "title": "AH Gehaktballetjes Indische stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "4.49",
-          "price_now": "1.35",
-          "expires": "2026-11-15"
-        },
-        {
-          "product_id": 619324,
-          "title": "AH Burger smokey 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "1.20",
-          "expires": "2026-11-15"
-        },
-        {
-          "product_id": 561333,
-          "title": "AH Gemengd gehakt",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.59",
-          "price_now": "1.05",
-          "expires": "2026-11-15"
-        },
         {
           "product_id": 531853,
           "title": "AH Kipgehakt gekruid",
@@ -1266,7 +1230,7 @@
           "stock": 1.0,
           "price_was": "3.95",
           "price_now": "1.19",
-          "expires": "2026-11-15"
+          "expires": "2026-11-16"
         },
         {
           "product_id": 619306,
@@ -1559,42 +1523,6 @@
       ],
       "meat70": [
         {
-          "product_id": 622558,
-          "title": "AH Gehaktballetjes Indische stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "4.49",
-          "price_now": "1.35",
-          "expires": "2026-11-15"
-        },
-        {
-          "product_id": 619324,
-          "title": "AH Burger smokey 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "1.20",
-          "expires": "2026-11-15"
-        },
-        {
-          "product_id": 561333,
-          "title": "AH Gemengd gehakt",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.59",
-          "price_now": "1.05",
-          "expires": "2026-11-15"
-        },
-        {
           "product_id": 531853,
           "title": "AH Kipgehakt gekruid",
           "brand": "AH",
@@ -1604,7 +1532,7 @@
           "stock": 1.0,
           "price_was": "3.95",
           "price_now": "1.19",
-          "expires": "2026-11-15"
+          "expires": "2026-11-16"
         }
       ],
       "error": ""
