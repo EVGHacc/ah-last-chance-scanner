@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-15T18:50:00+01:00",
-  "started_at": "2026-11-15T18:50:52.205728+01:00",
-  "completed_at": "2026-11-15T18:50:57.949320+01:00",
-  "delay_seconds": 52,
+  "scheduled_at": "2026-11-15T18:55:00+01:00",
+  "started_at": "2026-11-15T18:55:48.205658+01:00",
+  "completed_at": "2026-11-15T18:55:52.240729+01:00",
+  "delay_seconds": 48,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 160,
+      "total_items": 162,
       "meat_items": [
         {
           "product_id": 598621,
@@ -56,7 +56,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 171,
+      "total_items": 176,
       "meat_items": [
         {
           "product_id": 103377,
@@ -65,7 +65,7 @@
           "size": "400 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 19.0,
+          "stock": 18.0,
           "price_was": "4.75",
           "price_now": "1.43",
           "expires": "2026-11-15"
@@ -213,6 +213,42 @@
           "price_was": "3.69",
           "price_now": "2.21",
           "expires": "2026-11-15"
+        },
+        {
+          "product_id": 598620,
+          "title": "AH Filetlapjes à la minute naturel",
+          "brand": "AH",
+          "size": "ca. 350 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "4.11",
+          "price_now": "2.62",
+          "expires": "2026-11-16"
+        },
+        {
+          "product_id": 212143,
+          "title": "AH Runderreepjes naturel",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "8.75",
+          "price_now": "6.56",
+          "expires": "2026-11-16"
+        },
+        {
+          "product_id": 160750,
+          "title": "AH Krabbetjes",
+          "brand": "AH",
+          "size": "ca. 360 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 5.0,
+          "price_was": "3.96",
+          "price_now": "2.97",
+          "expires": "2026-11-17"
         }
       ],
       "meat70": [
@@ -223,7 +259,7 @@
           "size": "400 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 19.0,
+          "stock": 18.0,
           "price_was": "4.75",
           "price_now": "1.43",
           "expires": "2026-11-15"
@@ -737,7 +773,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 143,
+      "total_items": 144,
       "meat_items": [
         {
           "product_id": 622558,
@@ -941,6 +977,18 @@
           "stock": 1.0,
           "price_was": "2.99",
           "price_now": "2.24",
+          "expires": "2026-11-16"
+        },
+        {
+          "product_id": 418194,
+          "title": "AH Ovenschotel beenham naturel",
+          "brand": "AH",
+          "size": "ca. 550 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "7.99",
+          "price_now": "5.99",
           "expires": "2026-11-16"
         },
         {
