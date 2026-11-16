@@ -1,0 +1,100 @@
+﻿source,date,scheduled_slot,scheduled_at,canonical_5min,started_at,completed_at,delay_seconds,late,scan_status,scan_valid,store_id,store,fetched,error,total_items,meat_items,meat70_items
+v1,2026-09-12,19:17,,False,2026-09-12T19:17:51.838067+02:00,,,,INCOMPLETE,,1463,AH Blekersvaartweg,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",,0,
+v1,2026-09-12,19:17,,False,2026-09-12T19:17:51.838067+02:00,,,,INCOMPLETE,,1348,AH Zandvoortselaan,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",,0,
+v1,2026-09-12,19:17,,False,2026-09-12T19:17:51.838067+02:00,,,,INCOMPLETE,,1135,AH Casablancastraat,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",,0,
+v1,2026-09-12,19:18,,False,2026-09-12T19:18:10.524957+02:00,,,,INCOMPLETE,,1463,AH Blekersvaartweg,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",,0,
+v1,2026-09-12,19:18,,False,2026-09-12T19:18:10.524957+02:00,,,,INCOMPLETE,,1348,AH Zandvoortselaan,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",,0,
+v1,2026-09-12,19:18,,False,2026-09-12T19:18:10.524957+02:00,,,,INCOMPLETE,,1135,AH Casablancastraat,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",,0,
+v1,2026-09-12,19:19,,False,2026-09-12T19:19:55.444010+02:00,,,,INCOMPLETE,,1463,AH Blekersvaartweg,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",,0,
+v1,2026-09-12,19:19,,False,2026-09-12T19:19:55.444010+02:00,,,,INCOMPLETE,,1348,AH Zandvoortselaan,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",,0,
+v1,2026-09-12,19:19,,False,2026-09-12T19:19:55.444010+02:00,,,,INCOMPLETE,,1135,AH Casablancastraat,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",,0,
+v1,2026-09-12,19:20,,True,2026-09-12T19:20:35.071237+02:00,,,,INCOMPLETE,,1463,AH Blekersvaartweg,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:20,,True,2026-09-12T19:20:35.071237+02:00,,,,INCOMPLETE,,1348,AH Zandvoortselaan,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:20,,True,2026-09-12T19:20:35.071237+02:00,,,,INCOMPLETE,,1135,AH Casablancastraat,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:25,,True,2026-09-12T19:25:26.086359+02:00,,,,INCOMPLETE,,1463,AH Blekersvaartweg,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:25,,True,2026-09-12T19:25:26.086359+02:00,,,,INCOMPLETE,,1348,AH Zandvoortselaan,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:25,,True,2026-09-12T19:25:26.086359+02:00,,,,INCOMPLETE,,1135,AH Casablancastraat,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:26,,False,2026-09-12T19:26:06.130819+02:00,,,,INCOMPLETE,,1463,AH Blekersvaartweg,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:26,,False,2026-09-12T19:26:06.130819+02:00,,,,INCOMPLETE,,1348,AH Zandvoortselaan,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:26,,False,2026-09-12T19:26:06.130819+02:00,,,,INCOMPLETE,,1135,AH Casablancastraat,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:27,,False,2026-09-12T19:27:34.379687+02:00,,,,INCOMPLETE,,1463,AH Blekersvaartweg,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:27,,False,2026-09-12T19:27:34.379687+02:00,,,,INCOMPLETE,,1348,AH Zandvoortselaan,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:27,,False,2026-09-12T19:27:34.379687+02:00,,,,INCOMPLETE,,1135,AH Casablancastraat,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:33,,False,2026-09-12T19:33:16.556359+02:00,,,,INCOMPLETE,,1463,AH Blekersvaartweg,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:33,,False,2026-09-12T19:33:16.556359+02:00,,,,INCOMPLETE,,1348,AH Zandvoortselaan,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:33,,False,2026-09-12T19:33:16.556359+02:00,,,,INCOMPLETE,,1135,AH Casablancastraat,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:36,,False,2026-09-12T19:36:23.888421+02:00,,,,INCOMPLETE,,1463,AH Blekersvaartweg,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:36,,False,2026-09-12T19:36:23.888421+02:00,,,,INCOMPLETE,,1348,AH Zandvoortselaan,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:36,,False,2026-09-12T19:36:23.888421+02:00,,,,INCOMPLETE,,1135,AH Casablancastraat,False,"HTTP 200: {'data': None, 'errors': [{'message': 'Subgraph errors redacted', 'locations': [{'line': 1, 'column': 53}], 'path': ['bargainItems']}], 'extensions': {'valueCompletion': [{'message': 'Cannot return null for non-nullable type BargainItem', 'path': []}]}}",0,0,0
+v1,2026-09-12,19:43,,False,2026-09-12T19:43:27.119025+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,175,16,7
+v1,2026-09-12,19:43,,False,2026-09-12T19:43:27.119025+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,156,7,7
+v1,2026-09-12,19:43,,False,2026-09-12T19:43:27.119025+02:00,,,,OK,,1135,AH Casablancastraat,True,,185,10,9
+v1,2026-09-12,19:45,,True,2026-09-12T19:45:55.246968+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,175,16,7
+v1,2026-09-12,19:45,,True,2026-09-12T19:45:55.246968+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,149,6,6
+v1,2026-09-12,19:45,,True,2026-09-12T19:45:55.246968+02:00,,,,OK,,1135,AH Casablancastraat,True,,228,8,7
+v1,2026-09-12,19:55,,True,2026-09-12T19:55:45.515324+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,203,13,4
+v1,2026-09-12,19:55,,True,2026-09-12T19:55:45.515324+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,194,6,6
+v1,2026-09-12,19:55,,True,2026-09-12T19:55:45.515324+02:00,,,,OK,,1135,AH Casablancastraat,True,,228,8,7
+v1,2026-09-12,19:59,,False,2026-09-12T19:59:03.747386+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,203,13,4
+v1,2026-09-12,19:59,,False,2026-09-12T19:59:03.747386+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,194,6,6
+v1,2026-09-12,19:59,,False,2026-09-12T19:59:03.747386+02:00,,,,OK,,1135,AH Casablancastraat,True,,227,7,6
+v1,2026-09-12,20:08,,False,2026-09-12T20:08:39.549581+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,202,12,4
+v1,2026-09-12,20:08,,False,2026-09-12T20:08:39.549581+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,193,6,6
+v1,2026-09-12,20:08,,False,2026-09-12T20:08:39.549581+02:00,,,,OK,,1135,AH Casablancastraat,True,,227,7,6
+v1,2026-09-12,20:11,,False,2026-09-12T20:11:04.566912+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,202,12,4
+v1,2026-09-12,20:11,,False,2026-09-12T20:11:04.566912+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,193,6,6
+v1,2026-09-12,20:11,,False,2026-09-12T20:11:04.566912+02:00,,,,OK,,1135,AH Casablancastraat,True,,227,7,6
+v1,2026-09-12,20:13,,False,2026-09-12T20:13:23.445320+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,202,12,4
+v1,2026-09-12,20:13,,False,2026-09-12T20:13:23.445320+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,193,6,6
+v1,2026-09-12,20:13,,False,2026-09-12T20:13:23.445320+02:00,,,,OK,,1135,AH Casablancastraat,True,,227,7,6
+v1,2026-09-12,20:28,,False,2026-09-12T20:28:01.037221+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,200,12,4
+v1,2026-09-12,20:28,,False,2026-09-12T20:28:01.037221+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,194,6,6
+v1,2026-09-12,20:28,,False,2026-09-12T20:28:01.037221+02:00,,,,OK,,1135,AH Casablancastraat,True,,229,7,6
+v1,2026-09-12,20:32,,False,2026-09-12T20:32:54.816551+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,200,12,4
+v1,2026-09-12,20:32,,False,2026-09-12T20:32:54.816551+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,194,6,6
+v1,2026-09-12,20:32,,False,2026-09-12T20:32:54.816551+02:00,,,,OK,,1135,AH Casablancastraat,True,,228,7,6
+v1,2026-09-12,20:43,,False,2026-09-12T20:43:04.341896+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,200,12,4
+v1,2026-09-12,20:43,,False,2026-09-12T20:43:04.341896+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,192,6,6
+v1,2026-09-12,20:43,,False,2026-09-12T20:43:04.341896+02:00,,,,OK,,1135,AH Casablancastraat,True,,228,7,6
+v1,2026-09-12,20:46,,False,2026-09-12T20:46:38.453261+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,200,12,4
+v1,2026-09-12,20:46,,False,2026-09-12T20:46:38.453261+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,192,6,6
+v1,2026-09-12,20:46,,False,2026-09-12T20:46:38.453261+02:00,,,,OK,,1135,AH Casablancastraat,True,,228,7,6
+v1,2026-09-12,20:59,,False,2026-09-12T20:59:53.509230+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,198,12,4
+v1,2026-09-12,20:59,,False,2026-09-12T20:59:53.509230+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,192,6,6
+v1,2026-09-12,20:59,,False,2026-09-12T20:59:53.509230+02:00,,,,OK,,1135,AH Casablancastraat,True,,226,7,6
+v1,2026-09-12,21:11,,False,2026-09-12T21:11:07.076970+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,198,12,4
+v1,2026-09-12,21:11,,False,2026-09-12T21:11:07.076970+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,192,6,6
+v1,2026-09-12,21:11,,False,2026-09-12T21:11:07.076970+02:00,,,,OK,,1135,AH Casablancastraat,True,,215,4,3
+v1,2026-09-12,21:16,,False,2026-09-12T21:16:51.285322+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,198,12,4
+v1,2026-09-12,21:16,,False,2026-09-12T21:16:51.285322+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,192,6,6
+v1,2026-09-12,21:16,,False,2026-09-12T21:16:51.285322+02:00,,,,OK,,1135,AH Casablancastraat,True,,216,4,3
+v1,2026-09-12,21:30,,True,2026-09-12T21:30:54.224394+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,198,12,4
+v1,2026-09-12,21:30,,True,2026-09-12T21:30:54.224394+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,191,6,6
+v1,2026-09-12,21:30,,True,2026-09-12T21:30:54.224394+02:00,,,,OK,,1135,AH Casablancastraat,True,,216,4,3
+v1,2026-09-12,21:44,,False,2026-09-12T21:44:56.794229+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,197,12,4
+v1,2026-09-12,21:44,,False,2026-09-12T21:44:56.794229+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,191,6,6
+v1,2026-09-12,21:44,,False,2026-09-12T21:44:56.794229+02:00,,,,OK,,1135,AH Casablancastraat,True,,214,3,2
+v1,2026-09-12,21:58,,False,2026-09-12T21:58:57.856938+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,192,12,4
+v1,2026-09-12,21:58,,False,2026-09-12T21:58:57.856938+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,191,6,6
+v1,2026-09-12,21:58,,False,2026-09-12T21:58:57.856938+02:00,,,,OK,,1135,AH Casablancastraat,True,,212,3,2
+v1,2026-09-12,22:13,,False,2026-09-12T22:13:04.625999+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,192,12,4
+v1,2026-09-12,22:13,,False,2026-09-12T22:13:04.625999+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,175,6,6
+v1,2026-09-12,22:13,,False,2026-09-12T22:13:04.625999+02:00,,,,OK,,1135,AH Casablancastraat,True,,192,3,2
+v1,2026-09-12,22:18,,False,2026-09-12T22:18:34.166013+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,192,12,4
+v1,2026-09-12,22:18,,False,2026-09-12T22:18:34.166013+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,175,6,6
+v1,2026-09-12,22:18,,False,2026-09-12T22:18:34.166013+02:00,,,,OK,,1135,AH Casablancastraat,True,,192,3,2
+v1,2026-09-12,22:30,,True,2026-09-12T22:30:12.075793+02:00,,,,OK,,1463,AH Blekersvaartweg,True,,192,12,4
+v1,2026-09-12,22:30,,True,2026-09-12T22:30:12.075793+02:00,,,,OK,,1348,AH Zandvoortselaan,True,,175,6,6
+v1,2026-09-12,22:30,,True,2026-09-12T22:30:12.075793+02:00,,,,OK,,1135,AH Casablancastraat,True,,192,3,2
+v1,2026-09-12,23:35,2026-09-12T23:35:00+02:00,False,2026-09-12T23:35:25.256205+02:00,2026-09-12T23:35:29.043518+02:00,25,False,OK,True,1463,AH Blekersvaartweg,True,,192,12,4
+v1,2026-09-12,23:35,2026-09-12T23:35:00+02:00,False,2026-09-12T23:35:25.256205+02:00,2026-09-12T23:35:29.043518+02:00,25,False,OK,True,1348,AH Zandvoortselaan,True,,175,6,6
+v1,2026-09-12,23:35,2026-09-12T23:35:00+02:00,False,2026-09-12T23:35:25.256205+02:00,2026-09-12T23:35:29.043518+02:00,25,False,OK,True,1135,AH Casablancastraat,True,,192,3,2
+v1,2026-09-12,23:35,2026-09-12T23:35:00+02:00,False,2026-09-12T23:35:39.748620+02:00,2026-09-12T23:35:43.456787+02:00,39,False,OK,True,1463,AH Blekersvaartweg,True,,192,12,4
+v1,2026-09-12,23:35,2026-09-12T23:35:00+02:00,False,2026-09-12T23:35:39.748620+02:00,2026-09-12T23:35:43.456787+02:00,39,False,OK,True,1348,AH Zandvoortselaan,True,,175,6,6
+v1,2026-09-12,23:35,2026-09-12T23:35:00+02:00,False,2026-09-12T23:35:39.748620+02:00,2026-09-12T23:35:43.456787+02:00,39,False,OK,True,1135,AH Casablancastraat,True,,192,3,2
+v1,2026-09-12,23:40,2026-09-12T23:40:00+02:00,False,2026-09-12T23:42:23.801280+02:00,2026-09-12T23:42:28.195230+02:00,143,False,OK,True,1463,AH Blekersvaartweg,True,,192,12,4
+v1,2026-09-12,23:40,2026-09-12T23:40:00+02:00,False,2026-09-12T23:42:23.801280+02:00,2026-09-12T23:42:28.195230+02:00,143,False,OK,True,1348,AH Zandvoortselaan,True,,175,6,6
+v1,2026-09-12,23:40,2026-09-12T23:40:00+02:00,False,2026-09-12T23:42:23.801280+02:00,2026-09-12T23:42:28.195230+02:00,143,False,OK,True,1135,AH Casablancastraat,True,,192,3,2
+v1,2026-09-12,23:40,2026-09-12T23:40:00+02:00,False,2026-09-12T23:42:23.801280+02:00,2026-09-12T23:42:28.195230+02:00,143,False,OK,True,1463,AH Blekersvaartweg,True,,192,12,4
+v1,2026-09-12,23:40,2026-09-12T23:40:00+02:00,False,2026-09-12T23:42:23.801280+02:00,2026-09-12T23:42:28.195230+02:00,143,False,OK,True,1348,AH Zandvoortselaan,True,,175,6,6
+v1,2026-09-12,23:40,2026-09-12T23:40:00+02:00,False,2026-09-12T23:42:23.801280+02:00,2026-09-12T23:42:28.195230+02:00,143,False,OK,True,1135,AH Casablancastraat,True,,192,3,2
