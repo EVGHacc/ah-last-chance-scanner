@@ -1,9 +1,9 @@
 {
-  "scheduled_at": "2026-11-16T20:15:00+01:00",
-  "started_at": "2026-11-16T20:15:48.476194+01:00",
-  "completed_at": "2026-11-16T20:15:53.236451+01:00",
-  "delay_seconds": 48,
-  "late": false,
+  "scheduled_at": "2026-11-16T19:10:00+01:00",
+  "started_at": "2026-11-16T20:17:53.629448+01:00",
+  "completed_at": "2026-11-16T20:17:57.222194+01:00",
+  "delay_seconds": 4073,
+  "late": true,
   "status": "OK",
   "stores": [
     {
@@ -57,7 +57,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 243,
+      "total_items": 237,
       "meat_items": [
         {
           "product_id": 561331,
@@ -100,18 +100,6 @@
           "title": "AH Greenfields Beefburger bacon 2 stuks",
           "brand": "AH Greenfields",
           "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
-          "expires": "2026-11-16"
-        },
-        {
-          "product_id": 187593,
-          "title": "AH Greenfields Beefburger jalapeno 2 stuks",
-          "brand": "AH Greenfields",
-          "size": "2 stuks",
           "category": "Vlees",
           "discount_pct": 70.0,
           "stock": 1.0,
@@ -230,18 +218,6 @@
           "expires": "2026-11-16"
         },
         {
-          "product_id": 187593,
-          "title": "AH Greenfields Beefburger jalapeno 2 stuks",
-          "brand": "AH Greenfields",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
-          "expires": "2026-11-16"
-        },
-        {
           "product_id": 531832,
           "title": "AH Scharrel kipdijfilet reepjes",
           "brand": "AH",
@@ -272,7 +248,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 232,
+      "total_items": 235,
       "meat_items": [
         {
           "product_id": 517083,
