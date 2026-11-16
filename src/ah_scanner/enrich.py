@@ -17,7 +17,7 @@ from pathlib import Path
 from ah_scanner.models import Item
 
 CACHE_FILE = "product_info.json"
-MAX_PER_RUN = 40
+MAX_PER_RUN = 80
 
 IMAGE_QUERY = (
     "query ProductImage($productId: Int!) { product(id: $productId) { id "

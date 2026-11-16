@@ -4,7 +4,8 @@ import pytest
 
 from ah_scanner import enrich, render
 from ah_scanner.enrich import JA, NEE, ONBEKEND, Enrichment
-from ah_scanner.models import OK, Item, ScanResult
+from ah_scanner.models import OK, Item, ScanResult, StoreResult
+from ah_scanner.offers import Offer
 
 # Let op: dit zijn zelf bedachte voorbeeldzinnen, geen geverifieerde AH-teksten.
 
@@ -93,12 +94,17 @@ def test_cap_en_netwerkfout(tmp_path):
 
 
 def scan(valid=True, late=False):
-    return ScanResult("s", "t", "c", 0, late, OK if valid else "INCOMPLETE")
+    store = StoreResult(1463, "AH Test", valid, 1, (item(1),), (item(1),))
+    return ScanResult("s", "t", "c", 0, late, OK if valid else "INCOMPLETE", (store,))
+
+
+def offer(pid=1, **kw):
+    return Offer(1463, "AH Test", item(pid), f"1463|{pid}|2026-11-16", **kw)
 
 
 def test_html_kaart_heeft_foto_prijs_invriesbaar_en_ontsnapt_html():
     info = {1: Enrichment("https://static.ah.nl/x.jpg", "Invriezen op de dag van aankoop.", "")}
-    html = render.render_html([("AH Test", item(1), "k")], scan(), info)
+    html = render.render_html([offer()], [], [], [], scan(), info)
     assert '<img src="https://static.ah.nl/x.jpg"' in html
     assert "€ 1,50" in html and "€ 5,00" in html and "-70%" in html
     assert "Invriesbaar:" in html and ">Ja<" in html and "16-11-2026" in html
@@ -106,11 +112,19 @@ def test_html_kaart_heeft_foto_prijs_invriesbaar_en_ontsnapt_html():
 
 
 def test_html_zonder_verrijking_toont_onbekend_en_plaatshouder():
-    html = render.render_html([("AH Test", item(1), "k")], scan(valid=False, late=True), {})
-    assert "Onbekend" in html and "<img" not in html and "INCOMPLETE" in html
+    html = render.render_html([offer()], [], [], [], scan(valid=False, late=True), {})
+    assert "Onbekend" in html and "<img" not in html and "Late scan" in html
+
+
+def test_nieuw_label_en_laatst_bekend_in_html_en_tekst():
+    new, old = offer(1, is_new=True), offer(2, stale=True)
+    html = render.render_html([new, old], [new], [], ["AH Test"], scan(), {})
+    assert html.count("NIEUW") == 1 and "Laatst bekende stand" in html
+    text = render.render_text([new, old], [new], [], ["AH Test"], scan(), {})
+    assert "[NIEUW]" in text and "(laatst bekend)" in text and "niet gelezen" in text
 
 
 def test_tekstversie_bevat_invriesbaar_en_bewaren():
     info = {1: Enrichment("", "Niet geschikt om in te vriezen.", "")}
-    text = render.render_text([("AH Test", item(1), "k")], scan(), info)
+    text = render.render_text([offer()], [], [], [], scan(), info)
     assert "invriesbaar: Nee" in text and "Bewaren: Niet geschikt" in text
