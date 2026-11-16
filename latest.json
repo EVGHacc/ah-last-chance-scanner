@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-16T21:15:00+01:00",
-  "started_at": "2026-11-16T21:16:15.096747+01:00",
-  "completed_at": "2026-11-16T21:16:19.876937+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-16T21:20:00+01:00",
+  "started_at": "2026-11-16T21:21:32.698578+01:00",
+  "completed_at": "2026-11-16T21:21:36.850099+01:00",
+  "delay_seconds": 92,
   "late": false,
   "status": "OK",
   "stores": [
@@ -129,7 +129,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 265,
+      "total_items": 274,
       "meat_items": [
         {
           "product_id": 561331,
@@ -192,6 +192,18 @@
           "expires": "2026-11-16"
         },
         {
+          "product_id": 531868,
+          "title": "AH Scharrel kipnugget",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "2.99",
+          "price_now": "0.90",
+          "expires": "2026-11-17"
+        },
+        {
           "product_id": 477571,
           "title": "AH Scharrel gebraden kipfilet caesar",
           "brand": "AH",
@@ -201,6 +213,18 @@
           "stock": 2.0,
           "price_was": "3.79",
           "price_now": "2.27",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 620811,
+          "title": "AH Ovenschotel kipfilet knoflook roomsaus",
+          "brand": "AH",
+          "size": "420 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 1.0,
+          "price_was": "6.99",
+          "price_now": "4.19",
           "expires": "2026-11-17"
         },
         {
@@ -228,6 +252,30 @@
           "expires": "2026-11-17"
         },
         {
+          "product_id": 487396,
+          "title": "AH Diamanthaas",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 3.0,
+          "price_was": "7.49",
+          "price_now": "5.62",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 620797,
+          "title": "AH Ovenschotel kipfilet tomaat mascarpone",
+          "brand": "AH",
+          "size": "420 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "6.99",
+          "price_now": "5.24",
+          "expires": "2026-11-17"
+        },
+        {
           "product_id": 533081,
           "title": "AH Kipfilethaasjes",
           "brand": "AH",
@@ -237,6 +285,30 @@
           "stock": 2.0,
           "price_was": "5.49",
           "price_now": "4.12",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 232421,
+          "title": "AH Speklap",
+          "brand": "AH",
+          "size": "ca. 500 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "5.68",
+          "price_now": "4.26",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 610026,
+          "title": "AH Rundersteak chimichurri",
+          "brand": "AH",
+          "size": "ca. 275 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "8.49",
+          "price_now": "6.37",
           "expires": "2026-11-17"
         },
         {
@@ -360,6 +432,18 @@
           "price_was": "4.99",
           "price_now": "1.27",
           "expires": "2026-11-16"
+        },
+        {
+          "product_id": 531868,
+          "title": "AH Scharrel kipnugget",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "2.99",
+          "price_now": "0.90",
+          "expires": "2026-11-17"
         }
       ],
       "error": ""
@@ -810,7 +894,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 158,
+      "total_items": 159,
       "meat_items": [
         {
           "product_id": 531883,
