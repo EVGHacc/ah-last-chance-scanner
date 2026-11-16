@@ -3,7 +3,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 WORKFLOWS = ROOT / ".github/workflows"
-ALLOWED = {"auth-check.yml", "ci.yml", "engineering-quality.yml", "export.yml", "scan.yml"}
+ALLOWED = {
+    "auth-check.yml",
+    "ci.yml",
+    "engineering-quality.yml",
+    "export.yml",
+    "report.yml",
+    "scan.yml",
+}
 
 
 class RepoWorkflowContractTests(unittest.TestCase):

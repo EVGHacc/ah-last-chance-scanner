@@ -86,6 +86,22 @@ import glob, pandas as pd
 items = pd.concat(map(pd.read_csv, glob.glob("analysis/items/*.csv")))
 ```
 
+## Weekrapport (trends)
+
+`python -m ah_scanner.cli report --data-root <data-branch> --out reports [--mail]` (workflow
+**AH report**) analyseert alle data (v1 en v2) en schrijft `reports/<jaar>-W<week>.md` naar de
+`data`-branch; met `--mail` gaat het rapport ook per mail (zelfde afzender en adres als de scans).
+
+Inhoud: trend (laatste 7 dagen tegenover de 7 dagen ervoor), op welk moment aanbiedingen naar 70%
+gaan, en per filiaal, weekdag en week het aantal aanbiedingen, het aantal stuks en de aanbiedingen
+die **geschikt zijn voor vier personen** (gewicht per pak maal voorraad >= 500 g, 125 g p.p.).
+
+- Een aanbieding is een combinatie van dag, winkel, product en einddatum.
+- Alleen **volledige dagen** (eerste scan uiterlijk 17:45, laatste scan vanaf 22:15) tellen mee voor
+  gemiddelden en tijdstippen; onvolledige dagen vertekenen die cijfers. Groepen met minder dan 4 dagen
+  zijn gemarkeerd. Er is geen verklaring in het rapport, alleen gemeten patronen.
+- Aanbiedingen zonder gewicht in de data (bijvoorbeeld "per stuk") tellen niet mee voor vier personen.
+
 ## Secrets en configuratie
 
 | Waar | Naam | Doel |

@@ -9,7 +9,7 @@ from collections.abc import Callable
 from datetime import datetime
 from pathlib import Path
 
-from ah_scanner import auth, client, enrich, export, notify, slots, storage
+from ah_scanner import analyze, auth, client, enrich, export, notify, slots, storage
 
 EXIT_OK, EXIT_REAUTH, EXIT_TRANSIENT, EXIT_SCAN_INVALID, EXIT_NOTIFY_FAILED = 0, 2, 3, 4, 5
 
@@ -90,6 +90,35 @@ def _notify(
     return notify.notify(result, scheduled.date(), data_root, send, sender, to, enrich_new)
 
 
+def report(data_root: Path, out: Path, mail: bool, send: notify.MailFn | None = None) -> int:
+    """Maak het weekrapport, schrijf ``reports/<week>.md`` en mail het (optioneel)."""
+    data = analyze.report(analyze.build(data_root))
+    label = analyze.week_label(data)
+    markdown = analyze.render_markdown(data)
+    out.mkdir(parents=True, exist_ok=True)
+    (out / f"{label}.md").write_text(markdown, encoding="utf-8")
+    print(f"REPORT week={label} days={data['quality']['days']} offers={data['quality']['offers']}")
+    if not mail:
+        return EXIT_OK
+    sender, to = os.getenv("AH_MAIL_FROM", ""), os.getenv("AH_MAIL_TO", "")
+    api_key = os.getenv("RESEND_API_KEY", "")
+    if send is None:
+        if not (api_key and sender and to):
+            print("REPORT_MAIL failed reason=missing-config")
+            return EXIT_NOTIFY_FAILED
+        send = notify.resend_send(api_key)
+    payload = {
+        "from": sender,
+        "to": [to],
+        "subject": f"AH Laatste Kans weekrapport {label}",
+        "text": markdown,
+        "html": analyze.render_html(data),
+    }
+    ok = send(payload)
+    print(f"REPORT_MAIL {'sent' if ok else 'failed'}")
+    return EXIT_OK if ok else EXIT_NOTIFY_FAILED
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="ah_scanner")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -100,11 +129,17 @@ def main(argv: list[str] | None = None) -> int:
     export_cmd.add_argument("--data-root", type=Path, default=Path("."))
     export_cmd.add_argument("--out", type=Path, required=True)
     export_cmd.add_argument("--combined", action="store_true", help="ook scans_all/items_all.csv")
+    report_cmd = sub.add_parser("report", help="Weekrapport met trends (v1 en v2)")
+    report_cmd.add_argument("--data-root", type=Path, default=Path("."))
+    report_cmd.add_argument("--out", type=Path, required=True)
+    report_cmd.add_argument("--mail", action="store_true", help="mail het rapport via Resend")
     scan_cmd = sub.add_parser("scan", help="Voer één scan uit en schrijf naar --data-root")
     scan_cmd.add_argument("--scheduled-at", required=True)
     scan_cmd.add_argument("--state", type=Path, required=True)
     scan_cmd.add_argument("--data-root", type=Path, required=True)
     args = parser.parse_args(argv)
+    if args.command == "report":
+        return report(args.data_root, args.out, args.mail)
     if args.command == "export":
         stats = export.export_all(args.data_root, args.out, args.combined)
         print(
