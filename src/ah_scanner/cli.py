@@ -14,7 +14,20 @@ from ah_scanner import analyze, auth, client, enrich, export, notify, slots, sto
 EXIT_OK, EXIT_REAUTH, EXIT_TRANSIENT, EXIT_SCAN_INVALID, EXIT_NOTIFY_FAILED = 0, 2, 3, 4, 5
 
 
+def _crypto_unavailable() -> bool:
+    try:
+        auth.require_cryptography()
+    except ImportError as exc:
+        print(f"CRYPTOGRAPHY_UNAVAILABLE type={type(exc).__name__}")
+        return True
+    return False
+
+
 def auth_check(state: Path, write: bool, post: auth.PostFn = auth.http_post) -> int:
+    if (
+        write and _crypto_unavailable()
+    ):  # voor de refresh, anders gaat een geroteerde token verloren
+        return EXIT_TRANSIENT
     secret = os.getenv("AH_REFRESH_TOKEN", "")
     try:
         session = auth.refresh_session(secret, state, post=post)
@@ -37,6 +50,8 @@ def scan(
     query: enrich.QueryFn | None = None,
 ) -> int:
     """Voer één scan uit en sla het resultaat op. Exitcode != 0 bij elke niet-geldige scan."""
+    if _crypto_unavailable():  # voor de refresh, anders gaat een geroteerde token verloren
+        return EXIT_SCAN_INVALID
     try:
         scheduled = slots.validate_slot(slots.parse_scheduled_at(scheduled_raw))
     except ValueError as exc:
