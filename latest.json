@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-16T21:45:00+01:00",
-  "started_at": "2026-11-16T21:46:32.860272+01:00",
-  "completed_at": "2026-11-16T21:46:36.675007+01:00",
-  "delay_seconds": 92,
+  "scheduled_at": "2026-11-16T21:50:00+01:00",
+  "started_at": "2026-11-16T21:51:12.683275+01:00",
+  "completed_at": "2026-11-16T21:51:16.150541+01:00",
+  "delay_seconds": 72,
   "late": false,
   "status": "OK",
   "stores": [
@@ -129,7 +129,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 272,
+      "total_items": 269,
       "meat_items": [
         {
           "product_id": 561331,
@@ -846,20 +846,8 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 141,
+      "total_items": 140,
       "meat_items": [
-        {
-          "product_id": 385506,
-          "title": "AH Biologisch Gerookte kipfilet",
-          "brand": "AH Biologisch",
-          "size": "ca. 125 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.72",
-          "price_now": "1.42",
-          "expires": "2026-11-16"
-        },
         {
           "product_id": 560559,
           "title": "AH Scharrel kipburger smokey 2 stuks",
@@ -993,6 +981,18 @@
           "expires": "2026-11-18"
         },
         {
+          "product_id": 385506,
+          "title": "AH Biologisch Gerookte kipfilet",
+          "brand": "AH Biologisch",
+          "size": "ca. 125 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.72",
+          "price_now": "1.42",
+          "expires": "2026-11-19"
+        },
+        {
           "product_id": 165535,
           "title": "AH Scharrel kipfilet gerookt",
           "brand": "AH",
@@ -1028,7 +1028,7 @@
           "stock": 1.0,
           "price_was": "4.72",
           "price_now": "1.42",
-          "expires": "2026-11-16"
+          "expires": "2026-11-19"
         }
       ],
       "error": ""
