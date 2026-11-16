@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-16T20:35:00+01:00",
-  "started_at": "2026-11-16T20:35:59.586176+01:00",
-  "completed_at": "2026-11-16T20:36:04.610159+01:00",
-  "delay_seconds": 59,
+  "scheduled_at": "2026-11-16T20:40:00+01:00",
+  "started_at": "2026-11-16T20:40:58.787988+01:00",
+  "completed_at": "2026-11-16T20:41:03.204884+01:00",
+  "delay_seconds": 58,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 181,
+      "total_items": 187,
       "meat_items": [
         {
           "product_id": 385506,
@@ -35,6 +35,18 @@
           "price_was": "2.88",
           "price_now": "2.16",
           "expires": "2026-11-17"
+        },
+        {
+          "product_id": 379269,
+          "title": "AH Excellent Lamskotelet gemarineerd",
+          "brand": "AH Excellent",
+          "size": "ca. 225 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "10.46",
+          "price_now": "7.85",
+          "expires": "2026-11-17"
         }
       ],
       "meat70": [
@@ -57,7 +69,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 252,
+      "total_items": 251,
       "meat_items": [
         {
           "product_id": 561331,
@@ -714,7 +726,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 144,
+      "total_items": 146,
       "meat_items": [
         {
           "product_id": 531883,
