@@ -17,8 +17,6 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 
-from cryptography.hazmat.primitives.ciphers.aead import AESGCM
-
 BASE_URL = "https://api.ah.nl"
 REFRESH_PATH = "/mobile-auth/v1/auth/token/refresh"
 CLIENT_ID = "appie-ios"
@@ -57,12 +55,32 @@ def _key(root_secret: str) -> bytes:
     return hashlib.sha256(b"ah-last-chance-root-key-v1\x00" + root_secret.encode()).digest()
 
 
+def _aesgcm():
+    """AESGCM pas bij gebruik importeren: report en export hebben cryptography niet nodig.
+
+    Een kapotte installatie geeft hier een duidelijke ImportError in plaats van een crash bij het
+    opstarten van elk commando.
+    """
+    from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+
+    return AESGCM
+
+
+def require_cryptography() -> None:
+    """Faal vroeg als versleutelen niet kan, vóór een refresh het token laat roteren.
+
+    Zonder dit zou een scan eerst verversen (AH roteert dan de refresh-token) en daarna crashen
+    bij het opslaan, waardoor de geroteerde token verloren gaat.
+    """
+    _aesgcm()
+
+
 def seal(refresh_token: str, root_secret: str) -> str:
     payload = json.dumps(
         {"refreshToken": refresh_token, "issuedAtNs": time.time_ns()}, separators=(",", ":")
     ).encode()
     nonce = os.urandom(12)
-    ciphertext = AESGCM(_key(root_secret)).encrypt(nonce, payload, _AAD)
+    ciphertext = _aesgcm()(_key(root_secret)).encrypt(nonce, payload, _AAD)
     return (
         json.dumps(
             {
@@ -78,16 +96,22 @@ def seal(refresh_token: str, root_secret: str) -> str:
 
 
 def unseal(path: Path, root_secret: str) -> str:
-    """Geef de opgeslagen refresh-token, of '' als die ontbreekt of niet te lezen is."""
+    """Geef de opgeslagen refresh-token, of '' als die ontbreekt of niet te lezen is.
+
+    Een kapotte cryptography-installatie is geen "niet te lezen": die geeft een ImportError, zodat
+    het niet als "opnieuw inloggen" wordt gemeld.
+    """
     try:
         envelope = json.loads(path.read_text(encoding="utf-8"))
         if int(envelope.get("version", 0)) != 1:
             return ""
-        plain = AESGCM(_key(root_secret)).decrypt(
-            base64.urlsafe_b64decode(envelope["nonce"]),
-            base64.urlsafe_b64decode(envelope["ciphertext"]),
-            _AAD,
-        )
+        nonce = base64.urlsafe_b64decode(envelope["nonce"])
+        ciphertext = base64.urlsafe_b64decode(envelope["ciphertext"])
+    except Exception:
+        return ""
+    aesgcm = _aesgcm()
+    try:
+        plain = aesgcm(_key(root_secret)).decrypt(nonce, ciphertext, _AAD)
         return str(json.loads(plain).get("refreshToken") or "").strip()
     except Exception:
         return ""
