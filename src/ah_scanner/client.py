@@ -33,9 +33,10 @@ GraphqlFn = Callable[[str, str], tuple[int, dict]]  # (store_id, access_token) -
 TokenFn = Callable[[bool], str]  # (force_refresh) -> access_token
 
 
-def http_graphql(store_id: str, access: str) -> tuple[int, dict]:
+def http_query(query: str, variables: dict, access: str) -> tuple[int, dict]:
+    """Eén GraphQL-aanroep; geeft (HTTP-status, JSON) terug, (0, {}) bij een netwerkfout."""
     headers = dict(auth.HEADERS, Authorization=f"Bearer {access}")
-    body = json.dumps({"query": QUERY, "variables": {"storeId": store_id}}).encode()
+    body = json.dumps({"query": query, "variables": variables}).encode()
     req = urllib.request.Request(auth.BASE_URL + "/graphql", data=body, headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=20) as resp:
@@ -44,6 +45,10 @@ def http_graphql(store_id: str, access: str) -> tuple[int, dict]:
         return exc.code, {}
     except (urllib.error.URLError, TimeoutError, OSError, ValueError):
         return 0, {}
+
+
+def http_graphql(store_id: str, access: str) -> tuple[int, dict]:
+    return http_query(QUERY, {"storeId": store_id}, access)
 
 
 def _failed(store_id: int, name: str, code: str) -> StoreResult:

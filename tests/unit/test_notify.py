@@ -174,3 +174,39 @@ def test_resend_niet_json_body_en_netwerkfout(monkeypatch, capsys):
     monkeypatch.setattr(notify.urllib.request, "urlopen", down)
     assert notify.resend_send("k")({}) is False
     assert "network=URLError" in capsys.readouterr().out
+
+
+def test_verrijking_in_de_mail_en_fout_blokkeert_niet(tmp_path):
+    m = Mailer()
+
+    def enrich_ok(items):
+        return {1: notify.Enrichment("https://static.ah.nl/a.jpg", "Invriezen.", "")}
+
+    assert notify.notify(scan([item(1)]), DAY, tmp_path, m, "a@x", "b@x", enrich_ok) == "sent"
+    assert "<img" in m.sent[0]["html"] and "invriesbaar: Ja" in m.sent[0]["text"]
+
+    def enrich_boom(items):
+        raise RuntimeError("stuk")
+
+    assert notify.notify(scan([item(2)]), DAY, tmp_path, m, "a@x", "b@x", enrich_boom) == "sent"
+    assert "Onbekend" in m.sent[1]["html"]
+
+
+def test_cli_haalt_het_token_maar_een_keer_op_per_scan(env):  # noqa: F811
+    posts = []
+
+    def counting_post(path, body):
+        posts.append(1)
+        return good_post(path, body)
+
+    code = cli.scan(
+        SCHED.isoformat(),
+        env / "s.enc",
+        env / "d",
+        counting_post,
+        lambda s, a: ok_payload(row(pct=90)),
+        lambda: SCHED,
+        Mailer(),
+        lambda q, v: (200, {"data": {"product": {"imagePack": []}}}),
+    )
+    assert code == 0 and len(posts) == 1
