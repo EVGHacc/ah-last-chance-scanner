@@ -163,3 +163,59 @@ def test_validity_en_scan_day_randgevallen():
     assert render.scan_day(scan()) is None  # onleesbaar scanmoment
     assert render.validity(with_expiry("2026-11-16").item, None) == ("Tot 16-11-2026", False)
     assert render.validity(with_expiry(None).item, "2026-11-16") == ("Tot -", False)
+
+
+# Echte bewaarteksten van AH, 16 november 2026 (alle 9 unieke teksten uit product_info.json).
+JA_TEXT = (
+    "Geschikt om thuis in te vriezen op de dag van aankoop. Binnen 3 maanden gebruiken. "
+    "Voor gebruik ontdooien. Te gebruiken tot en met: zie bovenzijde, mits gekoeld bewaard "
+    "(max. 4°C). Gebruik voor of op de vermelde datum. Niet gebruiken na deze datum."
+)
+NEE_TEXT = (
+    "Niet geschikt om thuis in te vriezen. Te gebruiken tot en met: zie bovenzijde, mits gekoeld "
+    "bewaard (max. 4°C). Gebruik voor of op de vermelde datum. Niet gebruiken na deze datum."
+)
+REAL_TEXTS = [
+    (JA_TEXT, JA),
+    (JA_TEXT.replace("Niet gebruiken na deze datum.", "Niet gebruiken na deze datum"), JA),
+    (
+        "Geschikt om thuis in te vriezen op de dag van aankoop. Binnen 3 maanden gebruiken. "
+        "Voor gebruik ontdooien. Te gebruiken tot en met: zie bovenzijde, mits gekoeld bewaard "
+        "(max. 4°C). Te consumeren binnen 3 dagen na openen, echter nooit later dan de vermelde "
+        "datum.",
+        JA,
+    ),
+    (NEE_TEXT, NEE),
+    (NEE_TEXT.replace("bovenzijde", "voorzijde"), NEE),
+    (
+        "Koel bewaren max. 7°C.\nTenminste houdbaar tot (mits ongeopend en gekoeld): "
+        "zie voorzijde.",
+        ONBEKEND,
+    ),
+    (
+        "Te gebruiken tot;\nzie bovenzijde mits gekoeld bewaard (max 4°C)\n"
+        "Na openen beperkt houdbaar.",
+        ONBEKEND,
+    ),
+    (
+        "Te gebruiken tot en met: zie bovenzijde, mits gekoeld bewaard (max. 4°C). Gebruik voor of "
+        "op de vermelde datum. Niet gebruiken na deze datum.",
+        ONBEKEND,
+    ),
+    (
+        "Te gebruiken tot en met: zie voorzijde, mits gekoeld bewaard (max. 7°C). Gebruik voor of "
+        "op de vermelde datum. Niet gebruiken na deze datum. Na openen beperkt houdbaar.",
+        ONBEKEND,
+    ),
+]
+
+
+@pytest.mark.parametrize(("text", "expected"), REAL_TEXTS)
+def test_classify_freeze_echte_ah_teksten(text, expected):
+    assert enrich.classify_freeze(text) == expected
+
+
+def test_echte_tekst_zonder_invries_zin_blijft_onbekend_ondanks_niet_in_andere_zinnen():
+    # "Niet gebruiken na deze datum." bevat 'niet' maar niets over invriezen.
+    assert "Niet gebruiken" in REAL_TEXTS[7][0]
+    assert enrich.classify_freeze(REAL_TEXTS[7][0]) == ONBEKEND
