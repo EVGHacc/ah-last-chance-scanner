@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-16T18:40:00+01:00",
-  "started_at": "2026-11-16T18:41:07.233871+01:00",
-  "completed_at": "2026-11-16T18:41:10.753943+01:00",
-  "delay_seconds": 67,
+  "scheduled_at": "2026-11-16T18:45:00+01:00",
+  "started_at": "2026-11-16T18:45:57.377523+01:00",
+  "completed_at": "2026-11-16T18:46:00.765130+01:00",
+  "delay_seconds": 57,
   "late": false,
   "status": "OK",
   "stores": [
@@ -378,7 +378,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 131,
+      "total_items": 130,
       "meat_items": [
         {
           "product_id": 379268,
@@ -723,6 +723,18 @@
           "category": "Vlees",
           "discount_pct": 25.0,
           "stock": 6.0,
+          "price_was": "3.79",
+          "price_now": "2.84",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 451141,
+          "title": "AH Scharrel kipfilet blokjes",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
           "price_was": "3.79",
           "price_now": "2.84",
           "expires": "2026-11-17"
