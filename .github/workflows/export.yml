@@ -1,6 +1,6 @@
 name: AH export
 
-# Handmatig: maakt CSV-bestanden voor analyse (v1 en v2) en zet ze op de data-branch onder analysis/.
+# Handmatig of via de Worker (elke avond 22:45 Amsterdam): maakt CSV-bestanden voor analyse (v1 en v2) en zet ze op de data-branch onder analysis/.
 # Raakt alleen analysis/; eigen concurrency-groep, zodat scans nooit op deze job wachten.
 on:
   workflow_dispatch:

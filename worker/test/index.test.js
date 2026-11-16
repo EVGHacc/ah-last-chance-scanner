@@ -80,3 +80,81 @@ test("scheduled: mislukte dispatch gooit een fout en lekt geen token", async () 
   }
   assert.ok(logs.every((l) => !l.includes("secret-token")));
 });
+
+// ---- dagelijkse export (tweede cron) ----
+
+import { EXPORT_CRON } from "../src/slots.js";
+
+const exportEnv = { ...env, EXPORT_WORKFLOW_FILE: "export.yml" };
+
+async function runCron(cron, iso, fetchImpl, environment = exportEnv) {
+  const original = globalThis.fetch;
+  const calls = [];
+  globalThis.fetch = async (url, init) => {
+    calls.push({ url, init });
+    return fetchImpl ? fetchImpl(url, init) : { status: 204 };
+  };
+  const log = console.log;
+  console.log = () => {};
+  try {
+    await worker.scheduled({ cron, scheduledTime: Date.parse(iso) }, environment);
+  } finally {
+    globalThis.fetch = original;
+    console.log = log;
+  }
+  return calls;
+}
+
+test("export-cron: 22:45 Amsterdam in wintertijd (21:45Z) start export.yml zonder inputs", async () => {
+  const calls = await runCron(EXPORT_CRON, "2026-11-16T21:45:00Z");
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0].url, "https://api.github.com/repos/o/r/actions/workflows/export.yml/dispatches");
+  assert.deepEqual(JSON.parse(calls[0].init.body), { ref: "main" });
+});
+
+test("export-cron: 22:45 Amsterdam in zomertijd (20:45Z) start export.yml", async () => {
+  const calls = await runCron(EXPORT_CRON, "2026-07-15T20:45:00Z");
+  assert.equal(calls.length, 1);
+});
+
+test("export-cron: het andere UTC-uur is geen exportmoment", async () => {
+  assert.equal((await runCron(EXPORT_CRON, "2026-11-16T20:45:00Z")).length, 0); // 21:45 lokaal
+  assert.equal((await runCron(EXPORT_CRON, "2026-07-15T21:45:00Z")).length, 0); // 23:45 lokaal
+});
+
+test("export-cron: precies een export per dag, ook rond DST-wissels", async () => {
+  for (const day of ["2026-10-24", "2026-10-25", "2026-10-26", "2027-03-27", "2027-03-28", "2027-03-29"]) {
+    let hits = 0;
+    for (const hour of [20, 21]) {
+      hits += (await runCron(EXPORT_CRON, `${day}T${String(hour).padStart(2, "0")}:45:00Z`)).length;
+    }
+    assert.equal(hits, 1, `${day}: ${hits} exports`);
+  }
+});
+
+test("scan-cron start nooit de export en export-cron nooit een scan", async () => {
+  // 21:45Z is in de winter 22:45 lokaal: geen scanmoment voor de scan-cron
+  assert.equal((await runCron("*/5 15-21 * * *", "2026-11-16T21:45:00Z")).length, 0);
+  const scan = await runCron("*/5 15-21 * * *", "2026-11-16T16:30:00Z");
+  assert.equal(scan.length, 1);
+  assert.match(scan[0].url, /scan\.yml\/dispatches$/);
+  assert.deepEqual(JSON.parse(scan[0].init.body).inputs, { scheduled_at: "2026-11-16T16:30:00.000Z" });
+});
+
+test("export-cron: mislukte dispatch gooit een fout en lekt geen token", async () => {
+  const logs = [];
+  const log = console.log;
+  const original = globalThis.fetch;
+  console.log = (line) => logs.push(line);
+  globalThis.fetch = async () => ({ status: 403 });
+  try {
+    await assert.rejects(
+      worker.scheduled({ cron: EXPORT_CRON, scheduledTime: Date.parse("2026-11-16T21:45:00Z") }, exportEnv),
+      /export dispatch failed \(HTTP 403\)/,
+    );
+  } finally {
+    globalThis.fetch = original;
+    console.log = log;
+  }
+  assert.ok(logs.every((l) => !l.includes("secret-token")));
+});

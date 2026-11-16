@@ -44,6 +44,19 @@ class WorkerConfigContractTests(unittest.TestCase):
     def test_cron_covers_dst_window_in_utc(self):
         self.assertIn('"*/5 15-21 * * *"', self.config)
 
+    def test_export_cron_matches_the_constant_in_the_code(self):
+        import re
+
+        slots = (ROOT / "worker/src/slots.js").read_text(encoding="utf-8")
+        match = re.search(r'EXPORT_CRON = "([^"]+)"', slots)
+        self.assertIsNotNone(match)
+        self.assertIn(f'"{match.group(1)}"', self.config)
+        self.assertEqual(match.group(1), "45 20,21 * * *")  # 22:45 Amsterdam, zomer en winter
+
+    def test_export_workflow_is_dispatched_on_main_without_secrets_in_config(self):
+        self.assertIn('"EXPORT_WORKFLOW_FILE": "export.yml"', self.config)
+        self.assertIn("env.EXPORT_WORKFLOW_FILE", self.code)
+
     def test_dispatches_scan_workflow_on_main_with_scheduled_at(self):
         self.assertIn('"WORKFLOW_FILE": "scan.yml"', self.config)
         self.assertIn('"GITHUB_REF": "main"', self.config)

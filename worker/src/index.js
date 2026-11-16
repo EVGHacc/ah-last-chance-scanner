@@ -1,4 +1,4 @@
-import { isScanSlot, scheduledAt } from "./slots.js";
+import { EXPORT_CRON, isExportMoment, isScanSlot, scheduledAt } from "./slots.js";
 
 const RETRY_DELAYS_MS = [0, 1000, 3000];
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -8,12 +8,14 @@ function log(level, message, fields = {}) {
 }
 
 /**
- * Start de scan-workflow. Herhaalt alleen bij tijdelijke fouten (429, 5xx, netwerk);
- * andere fouten (bijv. 401/403/404/422) stoppen direct. Het token wordt nooit gelogd.
+ * Start een workflow via workflow_dispatch. Herhaalt alleen bij tijdelijke fouten (429, 5xx,
+ * netwerk); andere fouten (bijv. 401/403/404/422) stoppen direct. Het token wordt nooit gelogd.
  */
-export async function dispatch(env, scheduled, fetchFn = fetch, wait = sleep) {
-  const url = `https://api.github.com/repos/${env.GITHUB_REPO}/actions/workflows/${env.WORKFLOW_FILE}/dispatches`;
-  const body = JSON.stringify({ ref: env.GITHUB_REF, inputs: { scheduled_at: scheduled } });
+export async function dispatchWorkflow(env, workflowFile, inputs, fetchFn = fetch, wait = sleep) {
+  const url = `https://api.github.com/repos/${env.GITHUB_REPO}/actions/workflows/${workflowFile}/dispatches`;
+  const payload = { ref: env.GITHUB_REF };
+  if (inputs) payload.inputs = inputs;
+  const body = JSON.stringify(payload);
   let lastStatus = 0;
   for (const delay of RETRY_DELAYS_MS) {
     if (delay) await wait(delay);
@@ -39,18 +41,36 @@ export async function dispatch(env, scheduled, fetchFn = fetch, wait = sleep) {
   return { ok: false, status: lastStatus };
 }
 
+/** Start de scan-workflow voor een scanmoment. */
+export function dispatch(env, scheduled, fetchFn = fetch, wait = sleep) {
+  return dispatchWorkflow(env, env.WORKFLOW_FILE, { scheduled_at: scheduled }, fetchFn, wait);
+}
+
+async function report(result, what, fields) {
+  log(result.ok ? "info" : "error", result.ok ? `${what} dispatched` : `${what} dispatch failed`, {
+    ...fields,
+    status: result.status,
+  });
+  if (!result.ok) throw new Error(`${what} dispatch failed (HTTP ${result.status})`);
+}
+
 export default {
   async scheduled(controller, env) {
+    if (controller.cron === EXPORT_CRON) {
+      // De cron vuurt in twee UTC-uren; alleen 22:45 Amsterdam start de export.
+      if (!isExportMoment(controller.scheduledTime)) {
+        log("info", "skip: geen exportmoment", { scheduledTime: controller.scheduledTime });
+        return;
+      }
+      const result = await dispatchWorkflow(env, env.EXPORT_WORKFLOW_FILE, null);
+      await report(result, "export", { scheduled_at: scheduledAt(controller.scheduledTime) });
+      return;
+    }
     if (!isScanSlot(controller.scheduledTime)) {
       log("info", "skip: geen scanmoment", { scheduledTime: controller.scheduledTime });
       return;
     }
     const scheduled = scheduledAt(controller.scheduledTime);
-    const result = await dispatch(env, scheduled);
-    log(result.ok ? "info" : "error", result.ok ? "dispatched" : "dispatch failed", {
-      scheduled_at: scheduled,
-      status: result.status,
-    });
-    if (!result.ok) throw new Error(`dispatch failed (HTTP ${result.status})`);
+    await report(await dispatch(env, scheduled), "scan", { scheduled_at: scheduled });
   },
 };

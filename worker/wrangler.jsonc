@@ -6,11 +6,13 @@
   "triggers": {
     // UTC. Dekt 17:30-22:30 Europe/Amsterdam in zomer- en wintertijd; de exacte
     // Amsterdamse tijd wordt in de code gefilterd (zie src/slots.js).
-    "crons": ["*/5 15-21 * * *"]
+    // Tweede cron: dagelijkse export om 22:45 Amsterdam (twee UTC-uren, gefilterd in de code).
+    "crons": ["*/5 15-21 * * *", "45 20,21 * * *"]
   },
   "vars": {
     "GITHUB_REPO": "EVGHacc/ah-last-chance-scanner",
     "WORKFLOW_FILE": "scan.yml",
+    "EXPORT_WORKFLOW_FILE": "export.yml",
     "GITHUB_REF": "main"
   },
   "observability": { "enabled": true, "traces": { "enabled": true } }
