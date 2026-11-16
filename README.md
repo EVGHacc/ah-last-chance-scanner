@@ -7,7 +7,8 @@ nieuwe treffers via Resend. `main` bevat alleen code; alle data staat op de bran
 
 1. **Cloudflare Worker** (`worker/`) draait elke 5 minuten (cron `*/5 15-21 * * *`, UTC) en
    start alleen op de 61 scanmomenten van 17:30 t/m 22:30 Europe/Amsterdam (DST-correct). Een
-   tweede cron start om 22:45 Amsterdam de dagelijkse export (`export.yml`).
+   tweede cron start om 22:45 Amsterdam de dagelijkse export (`export.yml`), een derde cron elke
+   zondag om 23:15 Amsterdam het weekrapport (`report.yml`).
 2. De Worker start `.github/workflows/scan.yml` via `workflow_dispatch` met `scheduled_at`.
 3. `python -m ah_scanner.cli scan` haalt **5 winkels** op, filtert categorie exact `Vlees`
    (niet `Vleeswaren`) met korting >= 70%, slaat het resultaat op en mailt nieuwe treffers.
@@ -91,6 +92,8 @@ items = pd.concat(map(pd.read_csv, glob.glob("analysis/items/*.csv")))
 `python -m ah_scanner.cli report --data-root <data-branch> --out reports [--mail]` (workflow
 **AH report**) analyseert alle data (v1 en v2) en schrijft `reports/<jaar>-W<week>.md` naar de
 `data`-branch; met `--mail` gaat het rapport ook per mail (zelfde afzender en adres als de scans).
+De Worker start het elke zondag om 23:15 Amsterdam (cron `15 21,22 * * 0`, DST-correct gefilterd);
+je kunt de workflow ook handmatig draaien.
 
 Inhoud: trend (laatste 7 dagen tegenover de 7 dagen ervoor), op welk moment aanbiedingen naar 70%
 gaan, en per filiaal, weekdag en week het aantal aanbiedingen, het aantal stuks en de aanbiedingen

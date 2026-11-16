@@ -1,4 +1,11 @@
-import { EXPORT_CRON, isExportMoment, isScanSlot, scheduledAt } from "./slots.js";
+import {
+  EXPORT_CRON,
+  REPORT_CRON,
+  isExportMoment,
+  isReportMoment,
+  isScanSlot,
+  scheduledAt,
+} from "./slots.js";
 
 const RETRY_DELAYS_MS = [0, 1000, 3000];
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -64,6 +71,16 @@ export default {
       }
       const result = await dispatchWorkflow(env, env.EXPORT_WORKFLOW_FILE, null);
       await report(result, "export", { scheduled_at: scheduledAt(controller.scheduledTime) });
+      return;
+    }
+    if (controller.cron === REPORT_CRON) {
+      // De cron vuurt in twee UTC-uren; alleen zondag 23:15 Amsterdam start het weekrapport.
+      if (!isReportMoment(controller.scheduledTime)) {
+        log("info", "skip: geen rapportmoment", { scheduledTime: controller.scheduledTime });
+        return;
+      }
+      const result = await dispatchWorkflow(env, env.REPORT_WORKFLOW_FILE, null);
+      await report(result, "report", { scheduled_at: scheduledAt(controller.scheduledTime) });
       return;
     }
     if (!isScanSlot(controller.scheduledTime)) {
