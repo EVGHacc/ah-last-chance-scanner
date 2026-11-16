@@ -128,3 +128,38 @@ def test_tekstversie_bevat_invriesbaar_en_bewaren():
     info = {1: Enrichment("", "Niet geschikt om in te vriezen.", "")}
     text = render.render_text([offer()], [], [], [], scan(), info)
     assert "invriesbaar: Nee" in text and "Bewaren: Niet geschikt" in text
+
+
+def scan_on(day_iso):
+    store = StoreResult(1463, "AH Test", True, 1, (item(1),), (item(1),))
+    stamp = f"{day_iso}T17:30:00+01:00"
+    return ScanResult(stamp, stamp, stamp, 0, False, OK, (store,))
+
+
+def with_expiry(expires):
+    return Offer(
+        1463, "AH Test", Item(1, "Kip", "AH", "300 g", "Vlees", 70.0, 1, "5", "1.5", expires), "k"
+    )
+
+
+def test_alleen_vandaag_label_bij_einddatum_vandaag():
+    sc = scan_on("2026-11-16")
+    html = render.render_html([with_expiry("2026-11-16")], [], [], [], sc, {})
+    assert "ALLEEN VANDAAG" in html and "Tot 16-11-2026" not in html
+    text = render.render_text([with_expiry("2026-11-16")], [], [], [], sc, {})
+    assert "alleen vandaag" in text
+
+
+def test_latere_einddatum_toont_de_datum_zonder_vandaag_label():
+    sc = scan_on("2026-11-16")
+    html = render.render_html([with_expiry("2026-11-19")], [], [], [], sc, {})
+    assert "Tot 19-11-2026" in html and "ALLEEN VANDAAG" not in html
+    assert "tot 19-11-2026" in render.render_text([with_expiry("2026-11-19")], [], [], [], sc, {})
+
+
+def test_validity_en_scan_day_randgevallen():
+    sc = scan_on("2026-11-16")
+    assert render.scan_day(sc) == "2026-11-16"
+    assert render.scan_day(scan()) is None  # onleesbaar scanmoment
+    assert render.validity(with_expiry("2026-11-16").item, None) == ("Tot 16-11-2026", False)
+    assert render.validity(with_expiry(None).item, "2026-11-16") == ("Tot -", False)

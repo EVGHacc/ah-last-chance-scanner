@@ -26,7 +26,8 @@ Een mail bevat **alle op dat moment geldende Vlees-aanbiedingen van 70% of meer,
 een aanbieding erbij of eraf. Een ongewijzigde stand geeft geen mail.
 
 - Bovenaan staat wat er veranderd is (nieuw en verdwenen); nieuwe aanbiedingen hebben een label.
-- Elke aanbieding is een kaart: productfoto, korting, prijs, voorraad, einde van de korting,
+- Elke aanbieding is een kaart: productfoto, korting, prijs, voorraad, geldigheid (label
+  **ALLEEN VANDAAG** bij einddatum vandaag, anders "Tot dd-mm-jjjj"),
   **invriesbaar (Ja/Nee/Onbekend)** en de ruwe bewaartekst ("Bewaren") van AH.
 - Een aanbieding is uniek per winkel, product en einddatum van de korting. Elke dag begint zonder
   vorige stand (gisteren telt niet als "verdwenen").
