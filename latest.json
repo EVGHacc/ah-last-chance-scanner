@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-16T19:00:00+01:00",
-  "started_at": "2026-11-16T19:00:48.849893+01:00",
-  "completed_at": "2026-11-16T19:00:51.998579+01:00",
+  "scheduled_at": "2026-11-16T19:05:00+01:00",
+  "started_at": "2026-11-16T19:05:48.742061+01:00",
+  "completed_at": "2026-11-16T19:05:52.175095+01:00",
   "delay_seconds": 48,
   "late": false,
   "status": "OK",
@@ -18,10 +18,10 @@
           "brand": "AH Biologisch",
           "size": "ca. 125 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "4.72",
-          "price_now": "2.83",
+          "price_now": "1.42",
           "expires": "2026-11-16"
         },
         {
@@ -37,7 +37,20 @@
           "expires": "2026-11-17"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 385506,
+          "title": "AH Biologisch Gerookte kipfilet",
+          "brand": "AH Biologisch",
+          "size": "ca. 125 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.72",
+          "price_now": "1.42",
+          "expires": "2026-11-16"
+        }
+      ],
       "error": ""
     },
     {
@@ -579,8 +592,32 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 90,
+      "total_items": 92,
       "meat_items": [
+        {
+          "product_id": 513753,
+          "title": "Wahid Kipfilet",
+          "brand": "Wahid",
+          "size": "ca. 400 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "5.99",
+          "price_now": "1.80",
+          "expires": "2026-11-16"
+        },
+        {
+          "product_id": 385506,
+          "title": "AH Biologisch Gerookte kipfilet",
+          "brand": "AH Biologisch",
+          "size": "ca. 125 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.72",
+          "price_now": "1.42",
+          "expires": "2026-11-16"
+        },
         {
           "product_id": 531883,
           "title": "AH Scharrel kipkluifjes",
@@ -591,18 +628,6 @@
           "stock": 4.0,
           "price_was": "3.99",
           "price_now": "1.79",
-          "expires": "2026-11-16"
-        },
-        {
-          "product_id": 513753,
-          "title": "Wahid Kipfilet",
-          "brand": "Wahid",
-          "size": "ca. 400 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "5.99",
-          "price_now": "3.59",
           "expires": "2026-11-16"
         },
         {
@@ -639,18 +664,6 @@
           "stock": 1.0,
           "price_was": "3.65",
           "price_now": "1.87",
-          "expires": "2026-11-16"
-        },
-        {
-          "product_id": 385506,
-          "title": "AH Biologisch Gerookte kipfilet",
-          "brand": "AH Biologisch",
-          "size": "ca. 125 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "4.72",
-          "price_now": "2.83",
           "expires": "2026-11-16"
         },
         {
@@ -702,6 +715,18 @@
           "expires": "2026-11-17"
         },
         {
+          "product_id": 379269,
+          "title": "AH Excellent Lamskotelet gemarineerd",
+          "brand": "AH Excellent",
+          "size": "ca. 225 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 6.0,
+          "price_was": "10.46",
+          "price_now": "7.85",
+          "expires": "2026-11-17"
+        },
+        {
           "product_id": 620805,
           "title": "AH Ovenschotel sticky bites sweet garlic",
           "brand": "AH",
@@ -723,6 +748,18 @@
           "stock": 1.0,
           "price_was": "3.29",
           "price_now": "2.47",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 3975,
+          "title": "AH Greenfields Kogelbiefstuk",
+          "brand": "AH Greenfields",
+          "size": "per stuk",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "7.49",
+          "price_now": "5.62",
           "expires": "2026-11-17"
         },
         {
@@ -780,13 +817,38 @@
           "size": "150 g",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 3.0,
+          "stock": 1.0,
           "price_was": "3.69",
           "price_now": "2.77",
           "expires": "2026-11-19"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 513753,
+          "title": "Wahid Kipfilet",
+          "brand": "Wahid",
+          "size": "ca. 400 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "5.99",
+          "price_now": "1.80",
+          "expires": "2026-11-16"
+        },
+        {
+          "product_id": 385506,
+          "title": "AH Biologisch Gerookte kipfilet",
+          "brand": "AH Biologisch",
+          "size": "ca. 125 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.72",
+          "price_now": "1.42",
+          "expires": "2026-11-16"
+        }
+      ],
       "error": ""
     }
   ],
