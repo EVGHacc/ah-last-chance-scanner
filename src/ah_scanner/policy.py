@@ -13,7 +13,9 @@ import subprocess
 import sys
 from pathlib import Path
 
-ALLOWED_WORKFLOWS = frozenset({"auth-check.yml", "ci.yml", "engineering-quality.yml", "scan.yml"})
+ALLOWED_WORKFLOWS = frozenset(
+    {"auth-check.yml", "ci.yml", "engineering-quality.yml", "export.yml", "scan.yml"}
+)
 CODE_PREFIXES = ("src/ah_scanner/", "worker/src/")
 TEST_PREFIXES = ("tests/unit/", "worker/test/", "tests/test_workflow_")
 WORKFLOW_PREFIX = ".github/workflows/"
