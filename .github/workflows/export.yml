@@ -1,0 +1,45 @@
+name: AH export
+
+# Handmatig: maakt CSV-bestanden voor analyse (v1 en v2) en zet ze op de data-branch onder analysis/.
+# Raakt alleen analysis/; eigen concurrency-groep, zodat scans nooit op deze job wachten.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ah-export
+  cancel-in-progress: false
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check -e .
+      - name: Prepare data branch worktree
+        run: |
+          set -euo pipefail
+          git fetch origin data
+          git worktree add -B data ../state origin/data
+      - name: Build analysis files
+        run: python -m ah_scanner.cli export --data-root ../state --out ../state/analysis
+      - name: Persist analysis files
+        working-directory: ../state
+        run: |
+          set -euo pipefail
+          git config user.name 'ah-scanner-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add analysis
+          if git diff --cached --quiet; then echo "No analysis change"; exit 0; fi
+          git commit -m "export analysis files"
+          for attempt in 1 2 3; do
+            git push origin HEAD:data && exit 0
+            git pull --rebase origin data
+          done
+          exit 1

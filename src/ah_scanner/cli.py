@@ -9,7 +9,7 @@ from collections.abc import Callable
 from datetime import datetime
 from pathlib import Path
 
-from ah_scanner import auth, client, enrich, notify, slots, storage
+from ah_scanner import auth, client, enrich, export, notify, slots, storage
 
 EXIT_OK, EXIT_REAUTH, EXIT_TRANSIENT, EXIT_SCAN_INVALID, EXIT_NOTIFY_FAILED = 0, 2, 3, 4, 5
 
@@ -96,11 +96,22 @@ def main(argv: list[str] | None = None) -> int:
     check = sub.add_parser("auth-check", help="Test de refresh-token (geen scan)")
     check.add_argument("--state", type=Path, default=Path("data/auth_state.enc"))
     check.add_argument("--write-state", action="store_true")
+    export_cmd = sub.add_parser("export", help="Maak CSV-bestanden voor analyse (v1 en v2)")
+    export_cmd.add_argument("--data-root", type=Path, default=Path("."))
+    export_cmd.add_argument("--out", type=Path, required=True)
+    export_cmd.add_argument("--combined", action="store_true", help="ook scans_all/items_all.csv")
     scan_cmd = sub.add_parser("scan", help="Voer één scan uit en schrijf naar --data-root")
     scan_cmd.add_argument("--scheduled-at", required=True)
     scan_cmd.add_argument("--state", type=Path, required=True)
     scan_cmd.add_argument("--data-root", type=Path, required=True)
     args = parser.parse_args(argv)
+    if args.command == "export":
+        stats = export.export_all(args.data_root, args.out, args.combined)
+        print(
+            f"EXPORT days={stats['days']} scan_rows={stats['scan_rows']} "
+            f"item_rows={stats['item_rows']} skipped={stats['skipped']}"
+        )
+        return EXIT_OK
     if args.command == "scan":
         return scan(args.scheduled_at, args.state, args.data_root)
     return auth_check(args.state, args.write_state)

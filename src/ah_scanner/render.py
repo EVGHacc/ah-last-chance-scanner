@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from datetime import datetime
 from html import escape
 
 from ah_scanner.enrich import JA, NEE, Enrichment
@@ -22,6 +23,21 @@ def eur(value: object) -> str:
 def nl_date(value: str | None) -> str:
     parts = (value or "").split("-")
     return "-".join(reversed(parts)) if len(parts) == 3 else (value or "-")
+
+
+def scan_day(scan: ScanResult) -> str | None:
+    """Datum (YYYY-MM-DD, Amsterdam) van het scanmoment; None als die niet te lezen is."""
+    try:
+        return datetime.fromisoformat(scan.scheduled_at).date().isoformat()
+    except ValueError:
+        return None
+
+
+def validity(item: Item, today: str | None) -> tuple[str, bool]:
+    """(tekst, alleen_vandaag): 'Alleen vandaag' bij einddatum vandaag, anders 'Tot dd-mm-jjjj'."""
+    if today and item.expires == today:
+        return "Alleen vandaag", True
+    return f"Tot {nl_date(item.expires)}", False
 
 
 def freeze_label(info: Enrichment | None) -> str:
@@ -54,12 +70,13 @@ def _notes_text(scan: ScanResult, unread: list[str]) -> str:
     return note
 
 
-def _offer_line(offer: Offer, info: dict[int, Enrichment]) -> str:
+def _offer_line(offer: Offer, info: dict[int, Enrichment], today: str | None) -> str:
     item, extra = offer.item, _info(info, offer.item)
+    when = validity(item, today)[0].lower()
     line = (
         f"  {'[NIEUW] ' if offer.is_new else ''}{item.title} ({item.size}) "
         f"{item.discount_pct:.0f}% korting, {eur(item.price_now)} (was {eur(item.price_was)}), "
-        f"voorraad {item.stock:g}, korting t/m {nl_date(item.expires)}, "
+        f"voorraad {item.stock:g}, {when}, "
         f"invriesbaar: {freeze_label(extra)}"
     )
     if offer.stale:
@@ -84,11 +101,11 @@ def render_text(
     for store in scan.stores:
         mine = [o for o in offers if o.store_id == store.store_id]
         lines += ["", f"{store.store} ({len(mine)})"]
-        lines += [_offer_line(o, info) for o in mine] or ["  Geen 70%-aanbiedingen"]
+        lines += [_offer_line(o, info, scan_day(scan)) for o in mine] or ["  Geen 70%-aanbiedingen"]
     return "\n".join(lines) + _notes_text(scan, unread)
 
 
-def _card(offer: Offer, info: Enrichment | None) -> str:
+def _card(offer: Offer, info: Enrichment | None, today: str | None) -> str:
     e, item = escape, offer.item
     image = (
         f'<img src="{e(info.image_url, quote=True)}" width="120" alt="{e(item.title)}" '
@@ -111,6 +128,13 @@ def _card(offer: Offer, info: Enrichment | None) -> str:
         if offer.stale
         else ""
     )
+    when, only_today = validity(item, today)
+    when_html = (
+        '<span style="background:#fef0c7;color:#b54708;border-radius:6px;padding:2px 8px;'
+        f'font-size:12px;font-weight:700">{e(when.upper())}</span>'
+        if only_today
+        else f'<span style="font-size:13px">{e(when)}</span>'
+    )
     rows = [
         f'<div style="font-weight:700;font-size:16px">{new_badge}{e(item.title)}</div>',
         f'<div style="color:#667085;font-size:13px">{e(item.brand)} · {e(item.size)}</div>',
@@ -120,8 +144,7 @@ def _card(offer: Offer, info: Enrichment | None) -> str:
         f'<span style="font-size:18px;font-weight:700">{e(eur(item.price_now))}</span> '
         f'<span style="color:#667085;text-decoration:line-through">{e(eur(item.price_was))}</span>'
         "</div>",
-        f'<div style="font-size:13px">voorraad {item.stock:g} · '
-        f"korting t/m {e(nl_date(item.expires))}</div>",
+        f'<div style="font-size:13px">voorraad {item.stock:g} · {when_html}</div>',
         '<div style="font-size:14px;margin-top:6px"><b>Invriesbaar:</b> '
         f'<span style="color:{colour};font-weight:700">{freeze}</span></div>',
         stale,
@@ -164,7 +187,7 @@ def render_html(
     for store in scan.stores:
         mine = [o for o in offers if o.store_id == store.store_id]
         parts.append(f'<h3 style="margin:16px 0 8px">{e(store.store)} ({len(mine)})</h3>')
-        parts += [_card(o, _info(info, o.item)) for o in mine] or [
+        parts += [_card(o, _info(info, o.item), scan_day(scan)) for o in mine] or [
             '<p style="color:#667085;margin:0 0 12px">Geen 70%-aanbiedingen</p>'
         ]
     notes = e(_notes_text(scan, unread).strip()).replace("\n", "<br>")

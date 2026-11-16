@@ -26,7 +26,8 @@ Een mail bevat **alle op dat moment geldende Vlees-aanbiedingen van 70% of meer,
 een aanbieding erbij of eraf. Een ongewijzigde stand geeft geen mail.
 
 - Bovenaan staat wat er veranderd is (nieuw en verdwenen); nieuwe aanbiedingen hebben een label.
-- Elke aanbieding is een kaart: productfoto, korting, prijs, voorraad, einde van de korting,
+- Elke aanbieding is een kaart: productfoto, korting, prijs, voorraad, geldigheid (label
+  **ALLEEN VANDAAG** bij einddatum vandaag, anders "Tot dd-mm-jjjj"),
   **invriesbaar (Ja/Nee/Onbekend)** en de ruwe bewaartekst ("Bewaren") van AH.
 - Een aanbieding is uniek per winkel, product en einddatum van de korting. Elke dag begint zonder
   vorige stand (gisteren telt niet als "verdwenen").
@@ -55,6 +56,32 @@ scanmoment; er wordt nooit teruggedateerd.
 - `latest.json`: laatste scan; `mail_state.json`: laatst gemailde stand;
 - `auth_state.enc`: geroteerde refresh-token, versleuteld met AES-256-GCM;
 - `legacy/`: oude v1-data (jsonl, raw, days, central).
+
+## Analyse
+
+Alle scans staan op de `data`-branch: v2 in `scans/*.jsonl`, de oude v1-data in `legacy/`. Voor
+analyse is er een tabel-export (CSV, UTF-8 met BOM zodat Excel hem goed opent):
+
+- `analysis/scans/<dag>.csv`: een rij per scan en winkel (gelukt, aantallen, status, vertraging).
+- `analysis/items/<dag>.csv`: een rij per scan, winkel en Vlees-aanbieding (alle percentages,
+  `is_70` markeert >= 70%). Dezelfde kolommen voor v1 (`source=v1`) en v2 (`source=v2`).
+- `canonical_5min` markeert scans op het 5-minutenraster (17:30, 17:35, ...). V1-scans liggen
+  1 tot 3 minuten uit elkaar; filter hierop om v1 en v2 te vergelijken.
+- Beperkingen: alleen de categorie Vlees; de vroegste v1-bestanden hebben geen producten
+  (alleen of het ophalen lukte); er zit een gat van 4 t/m 14 november (storing).
+
+Maken: draai de workflow **AH export** (handmatig) of lokaal:
+
+```bash
+python -m ah_scanner.cli export --data-root <map-met-data-branch> --out analysis --combined
+```
+
+Inlezen in Python:
+
+```python
+import glob, pandas as pd
+items = pd.concat(map(pd.read_csv, glob.glob("analysis/items/*.csv")))
+```
 
 ## Secrets en configuratie
 
