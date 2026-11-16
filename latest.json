@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-16T20:40:00+01:00",
-  "started_at": "2026-11-16T20:40:58.787988+01:00",
-  "completed_at": "2026-11-16T20:41:03.204884+01:00",
+  "scheduled_at": "2026-11-16T20:45:00+01:00",
+  "started_at": "2026-11-16T20:45:58.087735+01:00",
+  "completed_at": "2026-11-16T20:46:02.387390+01:00",
   "delay_seconds": 58,
   "late": false,
   "status": "OK",
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 187,
+      "total_items": 184,
       "meat_items": [
         {
           "product_id": 385506,
@@ -25,6 +25,54 @@
           "expires": "2026-11-16"
         },
         {
+          "product_id": 619347,
+          "title": "AH Scharrel kipbraadworsten 2 stuks",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 5.0,
+          "price_was": "1.99",
+          "price_now": "1.49",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 379269,
+          "title": "AH Excellent Lamskotelet gemarineerd",
+          "brand": "AH Excellent",
+          "size": "ca. 225 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "10.46",
+          "price_now": "7.85",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 598619,
+          "title": "AH Speklapjes à la minute smokey bacon",
+          "brand": "AH",
+          "size": "ca. 350 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "4.99",
+          "price_now": "3.74",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 619323,
+          "title": "AH Burger spicy 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "2.99",
+          "expires": "2026-11-17"
+        },
+        {
           "product_id": 165535,
           "title": "AH Scharrel kipfilet gerookt",
           "brand": "AH",
@@ -37,15 +85,27 @@
           "expires": "2026-11-17"
         },
         {
-          "product_id": 379269,
-          "title": "AH Excellent Lamskotelet gemarineerd",
-          "brand": "AH Excellent",
-          "size": "ca. 225 g",
+          "product_id": 531874,
+          "title": "AH Scharrel kipchipolata gekruid",
+          "brand": "AH",
+          "size": "300 g",
           "category": "Vlees",
           "discount_pct": 25.0,
           "stock": 1.0,
-          "price_was": "10.46",
-          "price_now": "7.85",
+          "price_was": "4.50",
+          "price_now": "3.38",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 531834,
+          "title": "AH Scharrel kipfilet à la minute paprika",
+          "brand": "AH",
+          "size": "ca. 330 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "6.08",
+          "price_now": "4.56",
           "expires": "2026-11-17"
         }
       ],
@@ -69,7 +129,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 251,
+      "total_items": 255,
       "meat_items": [
         {
           "product_id": 561331,
@@ -260,7 +320,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 230,
+      "total_items": 229,
       "meat_items": [
         {
           "product_id": 517083,
@@ -451,7 +511,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 145,
+      "total_items": 144,
       "meat_items": [
         {
           "product_id": 626382,
@@ -726,7 +786,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 146,
+      "total_items": 147,
       "meat_items": [
         {
           "product_id": 531883,
