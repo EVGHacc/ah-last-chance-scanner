@@ -21,13 +21,22 @@ nieuwe treffers via Resend. `main` bevat alleen code; alle data staat op de bran
 
 ## Mail
 
-Per scan met nieuwe treffers volgt **één HTML-mail** met een kaart per product: productfoto, korting,
-prijs, winkel, voorraad, einde van de korting, **invriesbaar (Ja/Nee/Onbekend)** en de ruwe
-bewaartekst ("Bewaren") van AH. Een product wordt per dag en winkel één keer gemeld (dedup).
+Een mail bevat **alle op dat moment geldende Vlees-aanbiedingen van 70% of meer, per filiaal**
+(ook filialen zonder aanbod). Een nieuwe mail volgt zodra de stand verschilt van de vorige mail:
+een aanbieding erbij of eraf. Een ongewijzigde stand geeft geen mail.
 
-- Foto en bewaartekst komen uit een aparte, best-effort GraphQL-aanroep per nieuw product
-  (`src/ah_scanner/enrich.py`); een fout daarin laat scan en mail niet falen en wordt gelogd als
-  `ENRICH_ERROR`. Resultaten staan gecachet in `product_info.json` op de `data`-branch.
+- Bovenaan staat wat er veranderd is (nieuw en verdwenen); nieuwe aanbiedingen hebben een label.
+- Elke aanbieding is een kaart: productfoto, korting, prijs, voorraad, einde van de korting,
+  **invriesbaar (Ja/Nee/Onbekend)** en de ruwe bewaartekst ("Bewaren") van AH.
+- Een aanbieding is uniek per winkel, product en einddatum van de korting. Elke dag begint zonder
+  vorige stand (gisteren telt niet als "verdwenen").
+- Valt een winkel uit in een scan, dan blijft de laatst bekende stand van die winkel staan (met een
+  waarschuwing) en telt dat niet als "eraf". Zonder enige gelezen winkel volgt geen mail.
+- De laatst verstuurde stand staat in `mail_state.json` op de `data`-branch; die wordt pas bijgewerkt
+  na een geslaagde verzending, dus een mislukte mail wordt bij de volgende scan opnieuw geprobeerd.
+- Foto en bewaartekst komen uit een aparte, best-effort GraphQL-aanroep per product
+  (`src/ah_scanner/enrich.py`, gecachet in `product_info.json`); een fout daarin laat scan en mail
+  niet falen en wordt gelogd als `ENRICH_ERROR`.
 - Invriesbaar wordt afgeleid met trefwoorden uit de bewaartekst; zinnen over *opnieuw* invriezen
   van ontdooid product tellen niet mee. De ruwe tekst blijft zichtbaar zodat je de regel kunt toetsen.
 
@@ -43,7 +52,7 @@ scanmoment; er wordt nooit teruggedateerd.
 ## Data (branch `data`)
 
 - `scans/YYYY-MM-DD.jsonl`: een regel per scanmoment (idempotent per `scheduled_at`);
-- `latest.json`: laatste scan; `notified.json`: dedup-state voor mails (laatste 7 dagen);
+- `latest.json`: laatste scan; `mail_state.json`: laatst gemailde stand;
 - `auth_state.enc`: geroteerde refresh-token, versleuteld met AES-256-GCM;
 - `legacy/`: oude v1-data (jsonl, raw, days, central).
 

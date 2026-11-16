@@ -9,47 +9,38 @@ from collections.abc import Callable
 from datetime import date
 from pathlib import Path
 
-from ah_scanner import render
+from ah_scanner import offers, render
 from ah_scanner.enrich import Enrichment
 from ah_scanner.models import Item, ScanResult
 
 RESEND_URL = "https://api.resend.com/emails"
-STATE_FILE = "notified.json"
-KEEP_DAYS = 7
+STATE_FILE = "mail_state.json"
 
 MailFn = Callable[[dict], bool]  # payload -> verzonden
 
 
-def dedup_key(day: str, store_id: int, item: Item) -> str:
-    return f"{day}|{store_id}|{item.product_id}|{item.expires}"
-
-
-def load_state(root: Path) -> dict[str, list[str]]:
+def load_state(root: Path) -> dict:
+    """Laatst verstuurde stand: {"day": "YYYY-MM-DD", "items": {sleutel: entry}}."""
     try:
-        return json.loads((root / STATE_FILE).read_text(encoding="utf-8"))
+        data = json.loads((root / STATE_FILE).read_text(encoding="utf-8"))
+        return data if isinstance(data, dict) else {}
     except (OSError, ValueError):
         return {}
 
 
-def save_state(root: Path, state: dict[str, list[str]], today: date) -> None:
-    """Bewaar alleen de laatste KEEP_DAYS dagen."""
-    keep = {d: k for d, k in state.items() if (today - date.fromisoformat(d)).days < KEEP_DAYS}
-    (root / STATE_FILE).write_text(json.dumps(keep, sort_keys=True) + "\n", encoding="utf-8")
-
-
-def new_items(scan: ScanResult, day: str, seen: set[str]) -> list[tuple[str, Item, str]]:
-    """(winkel, item, sleutel) voor Vlees >= 70% dat nog niet gemeld is."""
-    found = []
-    for store in scan.stores:
-        for item in store.meat70:
-            key = dedup_key(day, store.store_id, item)
-            if key not in seen:
-                found.append((store.store, item, key))
-    return found
+def save_state(root: Path, day: date, snapshot: offers.Snapshot) -> None:
+    (root / STATE_FILE).write_text(
+        json.dumps({"day": day.isoformat(), "items": snapshot}, ensure_ascii=False, sort_keys=True)
+        + "\n",
+        encoding="utf-8",
+    )
 
 
 def build_payload(
-    found: list[tuple[str, Item, str]],
+    current: list[offers.Offer],
+    added: list[offers.Offer],
+    removed: list[offers.Offer],
+    unread: list[str],
     scan: ScanResult,
     sender: str,
     to: str,
@@ -59,9 +50,9 @@ def build_payload(
     return {
         "from": sender,
         "to": [to],
-        "subject": f"AH Laatste Kans: {len(found)}x Vlees >= 70%",
-        "text": render.render_text(found, scan, info),
-        "html": render.render_html(found, scan, info),
+        "subject": render.subject(len(current), added, removed),
+        "text": render.render_text(current, added, removed, unread, scan, info),
+        "html": render.render_html(current, added, removed, unread, scan, info),
     }
 
 
@@ -114,23 +105,28 @@ def notify(
     to: str,
     enrich: EnrichFn | None = None,
 ) -> str:
-    """Geeft 'none', 'sent' of 'failed'. Sleutels worden pas na een geslaagde verzending bewaard.
+    """Geeft 'none', 'sent' of 'failed'.
 
-    Verrijking (foto, bewaartekst) is best-effort: een fout daarin laat de mail nooit achterwege.
+    Een mail met alle geldende 70%-aanbiedingen per filiaal volgt zodra de stand verschilt van de
+    vorige mail (aanbieding erbij of eraf). De nieuwe stand wordt pas bewaard na een geslaagde
+    verzending. Verrijking (foto, bewaartekst) is best-effort en blokkeert de mail nooit.
     """
+    if not any(store.fetched for store in scan.stores):
+        return "none"  # niets gelezen: geen basis om te vergelijken
     state = load_state(root)
-    seen = set(state.get(day.isoformat(), []))
-    found = new_items(scan, day.isoformat(), seen)
-    if not found:
+    previous = state.get("items", {}) if state.get("day") == day.isoformat() else {}
+    current, unread = offers.build_current(scan, previous)
+    added, removed = offers.diff(current, previous)
+    if not added and not removed:
         return "none"
+    current = offers.mark_new(current, added)
     info: dict[int, Enrichment] = {}
     if enrich is not None:
         try:
-            info = enrich([item for _, item, _ in found])
+            info = enrich([o.item for o in current])
         except Exception as exc:  # noqa: BLE001 - verrijking mag de mail nooit blokkeren
             print(f"ENRICH_FAILED type={type(exc).__name__}")
-    if not send(build_payload(found, scan, sender, to, info)):
+    if not send(build_payload(current, added, removed, unread, scan, sender, to, info)):
         return "failed"
-    state[day.isoformat()] = sorted(seen | {key for _, _, key in found})
-    save_state(root, state, day)
+    save_state(root, day, offers.snapshot_of(current))
     return "sent"
