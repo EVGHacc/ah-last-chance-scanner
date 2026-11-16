@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-16T19:05:00+01:00",
-  "started_at": "2026-11-16T19:05:48.742061+01:00",
-  "completed_at": "2026-11-16T19:05:52.175095+01:00",
-  "delay_seconds": 48,
+  "scheduled_at": "2026-11-16T19:15:00+01:00",
+  "started_at": "2026-11-16T19:15:51.060648+01:00",
+  "completed_at": "2026-11-16T19:15:55.352274+01:00",
+  "delay_seconds": 51,
   "late": false,
   "status": "OK",
   "stores": [
@@ -703,18 +703,6 @@
           "expires": "2026-11-17"
         },
         {
-          "product_id": 197183,
-          "title": "AH Scharrel kipfilet 1 stuk",
-          "brand": "AH",
-          "size": "ca. 200 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 6.0,
-          "price_was": "3.79",
-          "price_now": "2.84",
-          "expires": "2026-11-17"
-        },
-        {
           "product_id": 379269,
           "title": "AH Excellent Lamskotelet gemarineerd",
           "brand": "AH Excellent",
@@ -727,6 +715,18 @@
           "expires": "2026-11-17"
         },
         {
+          "product_id": 197183,
+          "title": "AH Scharrel kipfilet 1 stuk",
+          "brand": "AH",
+          "size": "ca. 200 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 4.0,
+          "price_was": "3.79",
+          "price_now": "2.84",
+          "expires": "2026-11-17"
+        },
+        {
           "product_id": 620805,
           "title": "AH Ovenschotel sticky bites sweet garlic",
           "brand": "AH",
@@ -736,6 +736,30 @@
           "stock": 2.0,
           "price_was": "6.99",
           "price_now": "5.24",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 169173,
+          "title": "AH Rundertartaar",
+          "brand": "AH",
+          "size": "4 stuks",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "6.49",
+          "price_now": "4.87",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 166839,
+          "title": "AH Mergpijp",
+          "brand": "AH",
+          "size": "ca. 300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "2.99",
+          "price_now": "2.24",
           "expires": "2026-11-17"
         },
         {
