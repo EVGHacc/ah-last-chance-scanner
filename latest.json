@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-16T18:15:00+01:00",
-  "started_at": "2026-11-16T18:15:50.245150+01:00",
-  "completed_at": "2026-11-16T18:15:53.113148+01:00",
-  "delay_seconds": 50,
+  "scheduled_at": "2026-11-16T18:20:00+01:00",
+  "started_at": "2026-11-16T18:20:47.439206+01:00",
+  "completed_at": "2026-11-16T18:20:50.935344+01:00",
+  "delay_seconds": 47,
   "late": false,
   "status": "OK",
   "stores": [
@@ -44,7 +44,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 192,
+      "total_items": 189,
       "meat_items": [
         {
           "product_id": 561331,
@@ -68,18 +68,6 @@
           "stock": 4.0,
           "price_was": "3.79",
           "price_now": "2.27",
-          "expires": "2026-11-16"
-        },
-        {
-          "product_id": 560559,
-          "title": "AH Scharrel kipburger smokey 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "2.99",
-          "price_now": "1.79",
           "expires": "2026-11-16"
         },
         {
@@ -131,15 +119,15 @@
           "expires": "2026-11-16"
         },
         {
-          "product_id": 169238,
-          "title": "AH Runderhamburger 2st",
+          "product_id": 560559,
+          "title": "AH Scharrel kipburger smokey 2 stuks",
           "brand": "AH",
           "size": "200 g",
           "category": "Vlees",
           "discount_pct": 40.0,
           "stock": 1.0,
-          "price_was": "3.45",
-          "price_now": "2.07",
+          "price_was": "2.99",
+          "price_now": "1.79",
           "expires": "2026-11-16"
         },
         {
@@ -237,6 +225,30 @@
       "total_items": 182,
       "meat_items": [
         {
+          "product_id": 517083,
+          "title": "AH Biologisch Scharrel kipgehakt",
+          "brand": "AH Biologisch",
+          "size": "250 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "5.99",
+          "price_now": "1.80",
+          "expires": "2026-11-16"
+        },
+        {
+          "product_id": 619346,
+          "title": "AH Kipchorizo worstjes",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
+          "expires": "2026-11-16"
+        },
+        {
           "product_id": 103377,
           "title": "AH Runder hamburger 4 stuks",
           "brand": "AH",
@@ -249,18 +261,6 @@
           "expires": "2026-11-16"
         },
         {
-          "product_id": 517083,
-          "title": "AH Biologisch Scharrel kipgehakt",
-          "brand": "AH Biologisch",
-          "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "5.99",
-          "price_now": "3.59",
-          "expires": "2026-11-16"
-        },
-        {
           "product_id": 436754,
           "title": "AH Biologisch Rundertartaar",
           "brand": "AH Biologisch",
@@ -270,18 +270,6 @@
           "stock": 1.0,
           "price_was": "4.99",
           "price_now": "2.99",
-          "expires": "2026-11-16"
-        },
-        {
-          "product_id": 619346,
-          "title": "AH Kipchorizo worstjes",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "2.39",
           "expires": "2026-11-16"
         },
         {
@@ -333,14 +321,39 @@
           "expires": "2026-11-19"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 517083,
+          "title": "AH Biologisch Scharrel kipgehakt",
+          "brand": "AH Biologisch",
+          "size": "250 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "5.99",
+          "price_now": "1.80",
+          "expires": "2026-11-16"
+        },
+        {
+          "product_id": 619346,
+          "title": "AH Kipchorizo worstjes",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
+          "expires": "2026-11-16"
+        }
+      ],
       "error": ""
     },
     {
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 135,
+      "total_items": 133,
       "meat_items": [
         {
           "product_id": 626382,
@@ -578,7 +591,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 84,
+      "total_items": 83,
       "meat_items": [
         {
           "product_id": 531883,
