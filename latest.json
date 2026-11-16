@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-16T21:25:00+01:00",
-  "started_at": "2026-11-16T21:26:17.362771+01:00",
-  "completed_at": "2026-11-16T21:26:20.869779+01:00",
-  "delay_seconds": 77,
+  "scheduled_at": "2026-11-16T21:30:00+01:00",
+  "started_at": "2026-11-16T21:31:18.387911+01:00",
+  "completed_at": "2026-11-16T21:31:23.262325+01:00",
+  "delay_seconds": 78,
   "late": false,
   "status": "OK",
   "stores": [
@@ -129,7 +129,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 275,
+      "total_items": 277,
       "meat_items": [
         {
           "product_id": 561331,
@@ -452,7 +452,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 224,
+      "total_items": 223,
       "meat_items": [
         {
           "product_id": 517083,
@@ -894,68 +894,8 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 158,
+      "total_items": 146,
       "meat_items": [
-        {
-          "product_id": 531883,
-          "title": "AH Scharrel kipkluifjes",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "3.99",
-          "price_now": "0.90",
-          "expires": "2026-11-16"
-        },
-        {
-          "product_id": 513753,
-          "title": "Wahid Kipfilet",
-          "brand": "Wahid",
-          "size": "ca. 400 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "5.99",
-          "price_now": "1.80",
-          "expires": "2026-11-16"
-        },
-        {
-          "product_id": 622557,
-          "title": "AH Gehaktballetjes Italiaanse stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.49",
-          "price_now": "1.35",
-          "expires": "2026-11-16"
-        },
-        {
-          "product_id": 418194,
-          "title": "AH Ovenschotel beenham naturel",
-          "brand": "AH",
-          "size": "ca. 550 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "7.99",
-          "price_now": "2.40",
-          "expires": "2026-11-16"
-        },
-        {
-          "product_id": 531859,
-          "title": "AH Scharrel kippenvleugels",
-          "brand": "AH",
-          "size": "ca. 530 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.65",
-          "price_now": "0.94",
-          "expires": "2026-11-16"
-        },
         {
           "product_id": 385506,
           "title": "AH Biologisch Gerookte kipfilet",
@@ -978,18 +918,6 @@
           "stock": 1.0,
           "price_was": "2.99",
           "price_now": "2.24",
-          "expires": "2026-11-16"
-        },
-        {
-          "product_id": 531890,
-          "title": "AH Kalkoenfilet blokjes",
-          "brand": "AH",
-          "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "3.74",
           "expires": "2026-11-16"
         },
         {
@@ -1138,66 +1066,6 @@
         }
       ],
       "meat70": [
-        {
-          "product_id": 531883,
-          "title": "AH Scharrel kipkluifjes",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "3.99",
-          "price_now": "0.90",
-          "expires": "2026-11-16"
-        },
-        {
-          "product_id": 513753,
-          "title": "Wahid Kipfilet",
-          "brand": "Wahid",
-          "size": "ca. 400 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "5.99",
-          "price_now": "1.80",
-          "expires": "2026-11-16"
-        },
-        {
-          "product_id": 622557,
-          "title": "AH Gehaktballetjes Italiaanse stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.49",
-          "price_now": "1.35",
-          "expires": "2026-11-16"
-        },
-        {
-          "product_id": 418194,
-          "title": "AH Ovenschotel beenham naturel",
-          "brand": "AH",
-          "size": "ca. 550 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "7.99",
-          "price_now": "2.40",
-          "expires": "2026-11-16"
-        },
-        {
-          "product_id": 531859,
-          "title": "AH Scharrel kippenvleugels",
-          "brand": "AH",
-          "size": "ca. 530 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.65",
-          "price_now": "0.94",
-          "expires": "2026-11-16"
-        },
         {
           "product_id": 385506,
           "title": "AH Biologisch Gerookte kipfilet",
