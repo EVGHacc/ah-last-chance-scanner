@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-16T18:05:00+01:00",
-  "started_at": "2026-11-16T18:05:48.257340+01:00",
-  "completed_at": "2026-11-16T18:05:52.142662+01:00",
-  "delay_seconds": 48,
+  "scheduled_at": "2026-11-16T18:10:00+01:00",
+  "started_at": "2026-11-16T18:10:56.781076+01:00",
+  "completed_at": "2026-11-16T18:10:59.982814+01:00",
+  "delay_seconds": 56,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 114,
+      "total_items": 122,
       "meat_items": [
         {
           "product_id": 385506,
@@ -246,7 +246,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 183,
+      "total_items": 182,
       "meat_items": [
         {
           "product_id": 103377,
@@ -258,18 +258,6 @@
           "stock": 2.0,
           "price_was": "4.69",
           "price_now": "2.81",
-          "expires": "2026-11-16"
-        },
-        {
-          "product_id": 232235,
-          "title": "AH Excellent Fazantborstfilet",
-          "brand": "AH Excellent",
-          "size": "ca. 200 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "6.60",
-          "price_now": "2.97",
           "expires": "2026-11-16"
         },
         {
@@ -321,18 +309,6 @@
           "expires": "2026-11-16"
         },
         {
-          "product_id": 531854,
-          "title": "AH Scharrel kipfilethaasjes sweet chili",
-          "brand": "AH",
-          "size": "ca. 350 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "6.49",
-          "price_now": "3.89",
-          "expires": "2026-11-16"
-        },
-        {
           "product_id": 531848,
           "title": "AH Scharrel kipdijfilet",
           "brand": "AH",
@@ -345,13 +321,25 @@
           "expires": "2026-11-16"
         },
         {
+          "product_id": 232235,
+          "title": "AH Excellent Fazantborstfilet",
+          "brand": "AH Excellent",
+          "size": "ca. 200 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 1.0,
+          "price_was": "6.60",
+          "price_now": "2.97",
+          "expires": "2026-11-16"
+        },
+        {
           "product_id": 165535,
           "title": "AH Scharrel kipfilet gerookt",
           "brand": "AH",
           "size": "ca. 140 g",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 4.0,
+          "stock": 3.0,
           "price_was": "2.88",
           "price_now": "2.16",
           "expires": "2026-11-19"
@@ -364,7 +352,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 138,
+      "total_items": 136,
       "meat_items": [
         {
           "product_id": 626382,
