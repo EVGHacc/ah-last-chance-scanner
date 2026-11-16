@@ -9,8 +9,9 @@ const REPORT_MIN = 23 * 60 + 15; // wekelijks rapport, zondag, 30 minuten na de 
 export const EXPORT_CRON = "45 20,21 * * *";
 
 // UTC-cron voor het weekrapport: zondag 23:15 Amsterdam is 21:15 UTC (zomer) of 22:15 UTC (winter),
-// beide nog op zondag in UTC; het andere UTC-uur wordt in de code weggefilterd.
-export const REPORT_CRON = "15 21,22 * * 0";
+// beide nog op zondag in UTC; het andere UTC-uur wordt in de code weggefilterd. Cloudflare telt
+// weekdagen anders dan klassieke cron (zondag is 1 of 'sun', niet 0): daarom de naam 'sun'.
+export const REPORT_CRON = "15 21,22 * * sun";
 
 const formatter = new Intl.DateTimeFormat("en-GB", {
   timeZone: "Europe/Amsterdam",

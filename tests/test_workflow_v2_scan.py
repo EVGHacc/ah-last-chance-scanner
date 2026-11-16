@@ -60,11 +60,22 @@ class WorkerConfigContractTests(unittest.TestCase):
         match = re.search(r'REPORT_CRON = "([^"]+)"', slots)
         self.assertIsNotNone(match)
         self.assertIn(f'"{match.group(1)}"', self.config)
-        self.assertEqual(match.group(1), "15 21,22 * * 0")  # zondag 23:15 Amsterdam
+        self.assertEqual(match.group(1), "15 21,22 * * sun")  # zondag 23:15 Amsterdam
 
     def test_report_workflow_is_dispatched_via_config_variable(self):
         self.assertIn('"REPORT_WORKFLOW_FILE": "report.yml"', self.config)
         self.assertIn("env.REPORT_WORKFLOW_FILE", self.code)
+
+    def test_crons_use_cloudflare_weekday_syntax(self):
+        """Cloudflare weigert weekdag 0 ("invalid cron string"); gebruik namen of 1-7 (zondag = 1)."""
+        import re
+
+        crons = re.search(r'"crons": \[([^\]]*)\]', self.config).group(1)
+        for cron in re.findall(r'"([^"]+)"', crons):
+            fields = cron.split()
+            self.assertEqual(len(fields), 5, cron)
+            self.assertNotIn("0", re.split(r"[,\-/]", fields[4]), cron)
+            self.assertRegex(fields[4], r"^(\*|(\*/\d+)|([1-7]|sun|mon|tue|wed|thu|fri|sat)([,\-]([1-7]|sun|mon|tue|wed|thu|fri|sat))*)$", cron)
 
     def test_stays_within_five_cron_triggers_of_the_free_plan(self):
         import re
