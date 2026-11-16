@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-16T18:35:00+01:00",
-  "started_at": "2026-11-16T18:36:03.975719+01:00",
-  "completed_at": "2026-11-16T18:36:07.312551+01:00",
-  "delay_seconds": 63,
+  "scheduled_at": "2026-11-16T18:40:00+01:00",
+  "started_at": "2026-11-16T18:41:07.233871+01:00",
+  "completed_at": "2026-11-16T18:41:10.753943+01:00",
+  "delay_seconds": 67,
   "late": false,
   "status": "OK",
   "stores": [
@@ -617,7 +617,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 87,
+      "total_items": 86,
       "meat_items": [
         {
           "product_id": 531883,
@@ -714,6 +714,18 @@
           "price_was": "4.99",
           "price_now": "3.74",
           "expires": "2026-11-16"
+        },
+        {
+          "product_id": 197183,
+          "title": "AH Scharrel kipfilet 1 stuk",
+          "brand": "AH",
+          "size": "ca. 200 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 6.0,
+          "price_was": "3.79",
+          "price_now": "2.84",
+          "expires": "2026-11-17"
         },
         {
           "product_id": 531865,
