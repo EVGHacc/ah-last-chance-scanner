@@ -22,7 +22,8 @@ nieuwe treffers via Resend. `main` bevat alleen code; alle data staat op de bran
 ## Mail
 
 Een mail bevat **alle op dat moment geldende Vlees-aanbiedingen van 70% of meer, per filiaal**
-(ook filialen zonder aanbod). Een nieuwe mail volgt zodra de stand verschilt van de vorige mail:
+(ook filialen zonder aanbod). Binnen een filiaal staat de aanbieding met de **hoogste voorraad
+eerst** (bij gelijke voorraad op titel). Een nieuwe mail volgt zodra de stand verschilt van de vorige mail:
 een aanbieding erbij of eraf. Een ongewijzigde stand geeft geen mail.
 
 - Bovenaan staat wat er veranderd is (nieuw en verdwenen); nieuwe aanbiedingen hebben een label.
