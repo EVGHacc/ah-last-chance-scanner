@@ -9,6 +9,8 @@ from collections.abc import Callable
 from datetime import date
 from pathlib import Path
 
+from ah_scanner import render
+from ah_scanner.enrich import Enrichment
 from ah_scanner.models import Item, ScanResult
 
 RESEND_URL = "https://api.resend.com/emails"
@@ -47,23 +49,19 @@ def new_items(scan: ScanResult, day: str, seen: set[str]) -> list[tuple[str, Ite
 
 
 def build_payload(
-    found: list[tuple[str, Item, str]], scan: ScanResult, sender: str, to: str
+    found: list[tuple[str, Item, str]],
+    scan: ScanResult,
+    sender: str,
+    to: str,
+    info: dict[int, Enrichment] | None = None,
 ) -> dict:
-    lines = [
-        f"- {store}: {i.title} ({i.size}) {i.discount_pct:.0f}% korting, "
-        f"€{i.price_now} (was €{i.price_was}), voorraad {i.stock:g}"
-        for store, i, _ in found
-    ]
-    note = (
-        "" if scan.valid else f"\n\nLet op: scan-status {scan.status}; niet alle winkels gelezen."
-    )
-    if scan.late:
-        note += f"\nLate scan: gepland {scan.scheduled_at}, gestart {scan.started_at}."
+    info = info or {}
     return {
         "from": sender,
         "to": [to],
         "subject": f"AH Laatste Kans: {len(found)}x Vlees >= 70%",
-        "text": "Nieuwe aanbiedingen:\n" + "\n".join(lines) + note,
+        "text": render.render_text(found, scan, info),
+        "html": render.render_html(found, scan, info),
     }
 
 
@@ -104,14 +102,34 @@ def resend_send(api_key: str) -> MailFn:
     return send
 
 
-def notify(scan: ScanResult, day: date, root: Path, send: MailFn, sender: str, to: str) -> str:
-    """Geeft 'none', 'sent' of 'failed'. Sleutels worden pas na een geslaagde verzending bewaard."""
+EnrichFn = Callable[[list[Item]], dict[int, Enrichment]]
+
+
+def notify(
+    scan: ScanResult,
+    day: date,
+    root: Path,
+    send: MailFn,
+    sender: str,
+    to: str,
+    enrich: EnrichFn | None = None,
+) -> str:
+    """Geeft 'none', 'sent' of 'failed'. Sleutels worden pas na een geslaagde verzending bewaard.
+
+    Verrijking (foto, bewaartekst) is best-effort: een fout daarin laat de mail nooit achterwege.
+    """
     state = load_state(root)
     seen = set(state.get(day.isoformat(), []))
     found = new_items(scan, day.isoformat(), seen)
     if not found:
         return "none"
-    if not send(build_payload(found, scan, sender, to)):
+    info: dict[int, Enrichment] = {}
+    if enrich is not None:
+        try:
+            info = enrich([item for _, item, _ in found])
+        except Exception as exc:  # noqa: BLE001 - verrijking mag de mail nooit blokkeren
+            print(f"ENRICH_FAILED type={type(exc).__name__}")
+    if not send(build_payload(found, scan, sender, to, info)):
         return "failed"
     state[day.isoformat()] = sorted(seen | {key for _, _, key in found})
     save_state(root, state, day)

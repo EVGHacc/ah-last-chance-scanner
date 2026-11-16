@@ -19,6 +19,18 @@ nieuwe treffers via Resend. `main` bevat alleen code; alle data staat op de bran
 | AH Clothildestraat | 4046 |
 | AH Westergracht | 8728 |
 
+## Mail
+
+Per scan met nieuwe treffers volgt **één HTML-mail** met een kaart per product: productfoto, korting,
+prijs, winkel, voorraad, einde van de korting, **invriesbaar (Ja/Nee/Onbekend)** en de ruwe
+bewaartekst ("Bewaren") van AH. Een product wordt per dag en winkel één keer gemeld (dedup).
+
+- Foto en bewaartekst komen uit een aparte, best-effort GraphQL-aanroep per nieuw product
+  (`src/ah_scanner/enrich.py`); een fout daarin laat scan en mail niet falen en wordt gelogd als
+  `ENRICH_ERROR`. Resultaten staan gecachet in `product_info.json` op de `data`-branch.
+- Invriesbaar wordt afgeleid met trefwoorden uit de bewaartekst; zinnen over *opnieuw* invriezen
+  van ontdooid product tellen niet mee. De ruwe tekst blijft zichtbaar zodat je de regel kunt toetsen.
+
 ## Statussen
 
 `OK`, `OK_ZERO_ROWS` (geldig), `INCOMPLETE` (een winkel viel uit) en `FAILED` (geen enkele winkel

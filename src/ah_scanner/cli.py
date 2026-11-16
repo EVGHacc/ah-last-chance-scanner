@@ -9,7 +9,7 @@ from collections.abc import Callable
 from datetime import datetime
 from pathlib import Path
 
-from ah_scanner import auth, client, notify, slots, storage
+from ah_scanner import auth, client, enrich, notify, slots, storage
 
 EXIT_OK, EXIT_REAUTH, EXIT_TRANSIENT, EXIT_SCAN_INVALID, EXIT_NOTIFY_FAILED = 0, 2, 3, 4, 5
 
@@ -34,6 +34,7 @@ def scan(
     graphql: client.GraphqlFn = client.http_graphql,
     now: Callable[[], datetime] = lambda: datetime.now(slots.TZ),
     send: notify.MailFn | None = None,
+    query: enrich.QueryFn | None = None,
 ) -> int:
     """Voer één scan uit en sla het resultaat op. Exitcode != 0 bij elke niet-geldige scan."""
     try:
@@ -43,10 +44,14 @@ def scan(
         return EXIT_SCAN_INVALID
     secret = os.getenv("AH_REFRESH_TOKEN", "")
 
-    def get_token(_force: bool) -> str:
-        session = auth.refresh_session(secret, state, post=post)
-        auth.persist_rotation(session, secret, state)  # rotatie direct bewaren
-        return session.access_token
+    cache: dict[str, str] = {}
+
+    def get_token(force: bool) -> str:
+        if force or "access" not in cache:  # één refresh per scan, tenzij AH een 401 geeft
+            session = auth.refresh_session(secret, state, post=post)
+            auth.persist_rotation(session, secret, state)  # rotatie direct bewaren
+            cache["access"] = session.access_token
+        return cache["access"]
 
     started = now()
     result = client.run_scan(scheduled, started, get_token, now, graphql)
@@ -55,21 +60,34 @@ def scan(
         f"SCAN status={result.status} late={result.late} delay={result.delay_seconds}s "
         f"stores_ok={sum(s.fetched for s in result.stores)}/{len(result.stores)} written={written}"
     )
-    mail = _notify(result, scheduled, data_root, send)
+
+    def run_query(text: str, variables: dict) -> tuple[int, dict]:
+        try:
+            return client.http_query(text, variables, get_token(False))
+        except auth.AuthError:
+            return 0, {}
+
+    mail = _notify(result, scheduled, data_root, send, query or run_query)
     print(f"NOTIFY {mail}")
     if not result.valid:
         return EXIT_SCAN_INVALID
     return EXIT_NOTIFY_FAILED if mail == "failed" else EXIT_OK
 
 
-def _notify(result, scheduled, data_root: Path, send: notify.MailFn | None) -> str:
+def _notify(
+    result, scheduled, data_root: Path, send: notify.MailFn | None, query: enrich.QueryFn
+) -> str:
     api_key = os.getenv("RESEND_API_KEY", "")
     sender, to = os.getenv("AH_MAIL_FROM", ""), os.getenv("AH_MAIL_TO", "")
     if send is None:
         if not (api_key and sender and to):
             return "failed" if result.stores and any(s.meat70 for s in result.stores) else "none"
         send = notify.resend_send(api_key)
-    return notify.notify(result, scheduled.date(), data_root, send, sender, to)
+
+    def enrich_new(items: list) -> dict:
+        return enrich.enrich_items(items, query, data_root)
+
+    return notify.notify(result, scheduled.date(), data_root, send, sender, to, enrich_new)
 
 
 def main(argv: list[str] | None = None) -> int:
