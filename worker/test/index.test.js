@@ -158,3 +158,65 @@ test("export-cron: mislukte dispatch gooit een fout en lekt geen token", async (
   }
   assert.ok(logs.every((l) => !l.includes("secret-token")));
 });
+
+// ---- wekelijks rapport (derde cron) ----
+
+import { REPORT_CRON, isReportMoment } from "../src/slots.js";
+
+const reportEnv = { ...exportEnv, REPORT_WORKFLOW_FILE: "report.yml" };
+
+test("rapport-cron: zondag 23:15 Amsterdam in wintertijd (22:15Z) start report.yml zonder inputs", async () => {
+  const calls = await runCron(REPORT_CRON, "2026-11-15T22:15:00Z", undefined, reportEnv); // zondag
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0].url, "https://api.github.com/repos/o/r/actions/workflows/report.yml/dispatches");
+  assert.deepEqual(JSON.parse(calls[0].init.body), { ref: "main" });
+});
+
+test("rapport-cron: zondag 23:15 Amsterdam in zomertijd (21:15Z) start report.yml", async () => {
+  const calls = await runCron(REPORT_CRON, "2026-07-12T21:15:00Z", undefined, reportEnv); // zondag
+  assert.equal(calls.length, 1);
+});
+
+test("rapport-cron: het andere UTC-uur en andere weekdagen starten niets", async () => {
+  assert.equal((await runCron(REPORT_CRON, "2026-11-15T21:15:00Z", undefined, reportEnv)).length, 0); // 22:15 lokaal
+  assert.equal((await runCron(REPORT_CRON, "2026-07-12T22:15:00Z", undefined, reportEnv)).length, 0); // maandag 00:15
+  assert.equal((await runCron(REPORT_CRON, "2026-11-16T22:15:00Z", undefined, reportEnv)).length, 0); // maandag 23:15
+  assert.equal(isReportMoment(Date.parse("2026-11-14T22:15:00Z")), false); // zaterdag 23:15
+});
+
+test("rapport-cron: precies een rapport per week, ook rond beide DST-wissels", async () => {
+  // zondagen: voor/op/na einde zomertijd (25 okt 2026) en begin zomertijd (28 mrt 2027)
+  for (const day of ["2026-10-18", "2026-10-25", "2026-11-01", "2027-03-21", "2027-03-28", "2027-04-04"]) {
+    let hits = 0;
+    for (const hour of [21, 22]) {
+      hits += (await runCron(REPORT_CRON, `${day}T${hour}:15:00Z`, undefined, reportEnv)).length;
+    }
+    assert.equal(hits, 1, `${day}: ${hits} rapporten`);
+  }
+});
+
+test("crons starten nooit elkaars workflow", async () => {
+  // 22:15Z op zondag in de winter = 23:15 lokaal: alleen de rapport-cron mag iets starten
+  assert.equal((await runCron("*/5 15-21 * * *", "2026-11-15T22:15:00Z", undefined, reportEnv)).length, 0);
+  assert.equal((await runCron(EXPORT_CRON, "2026-11-15T22:15:00Z", undefined, reportEnv)).length, 0);
+  assert.equal((await runCron(REPORT_CRON, "2026-11-16T21:45:00Z", undefined, reportEnv)).length, 0); // exportmoment
+  assert.equal((await runCron(REPORT_CRON, "2026-11-16T16:30:00Z", undefined, reportEnv)).length, 0); // scanmoment
+});
+
+test("rapport-cron: mislukte dispatch gooit een fout en lekt geen token", async () => {
+  const logs = [];
+  const log = console.log;
+  const original = globalThis.fetch;
+  console.log = (line) => logs.push(line);
+  globalThis.fetch = async () => ({ status: 403 });
+  try {
+    await assert.rejects(
+      worker.scheduled({ cron: REPORT_CRON, scheduledTime: Date.parse("2026-11-15T22:15:00Z") }, reportEnv),
+      /report dispatch failed \(HTTP 403\)/,
+    );
+  } finally {
+    globalThis.fetch = original;
+    console.log = log;
+  }
+  assert.ok(logs.every((l) => !l.includes("secret-token")));
+});

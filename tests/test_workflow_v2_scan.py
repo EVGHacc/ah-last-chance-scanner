@@ -53,6 +53,25 @@ class WorkerConfigContractTests(unittest.TestCase):
         self.assertIn(f'"{match.group(1)}"', self.config)
         self.assertEqual(match.group(1), "45 20,21 * * *")  # 22:45 Amsterdam, zomer en winter
 
+    def test_report_cron_matches_the_constant_in_the_code(self):
+        import re
+
+        slots = (ROOT / "worker/src/slots.js").read_text(encoding="utf-8")
+        match = re.search(r'REPORT_CRON = "([^"]+)"', slots)
+        self.assertIsNotNone(match)
+        self.assertIn(f'"{match.group(1)}"', self.config)
+        self.assertEqual(match.group(1), "15 21,22 * * 0")  # zondag 23:15 Amsterdam
+
+    def test_report_workflow_is_dispatched_via_config_variable(self):
+        self.assertIn('"REPORT_WORKFLOW_FILE": "report.yml"', self.config)
+        self.assertIn("env.REPORT_WORKFLOW_FILE", self.code)
+
+    def test_stays_within_five_cron_triggers_of_the_free_plan(self):
+        import re
+
+        crons = re.search(r'"crons": \[([^\]]*)\]', self.config).group(1)
+        self.assertLessEqual(len(re.findall(r'"[^"]+"', crons)), 5)
+
     def test_export_workflow_is_dispatched_on_main_without_secrets_in_config(self):
         self.assertIn('"EXPORT_WORKFLOW_FILE": "export.yml"', self.config)
         self.assertIn("env.EXPORT_WORKFLOW_FILE", self.code)

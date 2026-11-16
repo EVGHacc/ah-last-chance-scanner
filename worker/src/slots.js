@@ -3,9 +3,14 @@ const START_MIN = 17 * 60 + 30;
 const END_MIN = 22 * 60 + 30;
 const STEP_MIN = 5;
 const EXPORT_MIN = 22 * 60 + 45; // dagelijkse export, 15 minuten na de laatste scan
+const REPORT_MIN = 23 * 60 + 15; // wekelijks rapport, zondag, 30 minuten na de export
 
 // UTC-cron voor de export: 22:45 Amsterdam is 20:45 UTC (zomertijd) of 21:45 UTC (wintertijd).
 export const EXPORT_CRON = "45 20,21 * * *";
+
+// UTC-cron voor het weekrapport: zondag 23:15 Amsterdam is 21:15 UTC (zomer) of 22:15 UTC (winter),
+// beide nog op zondag in UTC; het andere UTC-uur wordt in de code weggefilterd.
+export const REPORT_CRON = "15 21,22 * * 0";
 
 const formatter = new Intl.DateTimeFormat("en-GB", {
   timeZone: "Europe/Amsterdam",
@@ -38,4 +43,15 @@ export function scheduledAt(ms) {
 /** True als dit moment 22:45 Europe/Amsterdam is (de cron vuurt in beide UTC-uren). */
 export function isExportMoment(ms) {
   return amsterdamMinutes(floorToMinute(ms)) === EXPORT_MIN;
+}
+
+const weekdayFormatter = new Intl.DateTimeFormat("en-GB", {
+  timeZone: "Europe/Amsterdam",
+  weekday: "short",
+});
+
+/** True als dit moment zondag 23:15 Europe/Amsterdam is. */
+export function isReportMoment(ms) {
+  const floored = floorToMinute(ms);
+  return weekdayFormatter.format(new Date(floored)) === "Sun" && amsterdamMinutes(floored) === REPORT_MIN;
 }
