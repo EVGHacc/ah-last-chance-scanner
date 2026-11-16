@@ -160,8 +160,11 @@ def _write_csv(path: Path, columns: list[str], rows: list[Row]) -> None:
         writer.writerows(rows)
 
 
-def export_all(data_root: Path, out: Path, combined: bool = False) -> dict[str, int]:
-    """Lees ``scans/*.jsonl`` (v2) en ``legacy/????-??-??.jsonl`` (v1); schrijf CSV per dag."""
+def load_rows(data_root: Path) -> tuple[dict[str, list[Row]], dict[str, list[Row]], int]:
+    """Lees v2 (``scans/*.jsonl``) en v1 (``legacy/????-??-??.jsonl``).
+
+    Geeft (scanrijen per dag, itemrijen per dag, aantal overgeslagen regels); sleutel is YYYY-MM-DD.
+    """
     files = sorted((data_root / "scans").glob("*.jsonl"))
     files += sorted((data_root / "legacy").glob("????-??-??.jsonl"))
     scans_by_day: dict[str, list[Row]] = defaultdict(list)
@@ -179,20 +182,20 @@ def export_all(data_root: Path, out: Path, combined: bool = False) -> dict[str, 
                 scans_by_day[str(row["date"])].append(row)
             for row in rows[1]:
                 items_by_day[str(row["date"])].append(row)
+    return scans_by_day, items_by_day, skipped
+
+
+def export_all(data_root: Path, out: Path, combined: bool = False) -> dict[str, int]:
+    """Schrijf CSV per dag (scans en items) voor alle v1- en v2-data."""
+    scans_by_day, items_by_day, skipped = load_rows(data_root)
     for day, rows in scans_by_day.items():
         _write_csv(out / "scans" / f"{day}.csv", SCAN_COLUMNS, rows)
         _write_csv(out / "items" / f"{day}.csv", ITEM_COLUMNS, items_by_day.get(day, []))
     if combined:
-        _write_csv(
-            out / "scans_all.csv",
-            SCAN_COLUMNS,
-            [r for d in sorted(scans_by_day) for r in scans_by_day[d]],
-        )
-        _write_csv(
-            out / "items_all.csv",
-            ITEM_COLUMNS,
-            [r for d in sorted(items_by_day) for r in items_by_day[d]],
-        )
+        all_scans = [r for d in sorted(scans_by_day) for r in scans_by_day[d]]
+        all_items = [r for d in sorted(items_by_day) for r in items_by_day[d]]
+        _write_csv(out / "scans_all.csv", SCAN_COLUMNS, all_scans)
+        _write_csv(out / "items_all.csv", ITEM_COLUMNS, all_items)
     return {
         "days": len(scans_by_day),
         "scan_rows": sum(map(len, scans_by_day.values())),

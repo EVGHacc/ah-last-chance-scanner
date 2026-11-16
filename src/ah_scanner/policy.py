@@ -14,7 +14,14 @@ import sys
 from pathlib import Path
 
 ALLOWED_WORKFLOWS = frozenset(
-    {"auth-check.yml", "ci.yml", "engineering-quality.yml", "export.yml", "scan.yml"}
+    {
+        "auth-check.yml",
+        "ci.yml",
+        "engineering-quality.yml",
+        "export.yml",
+        "report.yml",
+        "scan.yml",
+    }
 )
 CODE_PREFIXES = ("src/ah_scanner/", "worker/src/")
 TEST_PREFIXES = ("tests/unit/", "worker/test/", "tests/test_workflow_")
