@@ -41,7 +41,8 @@ def snapshot_of(offers: list[Offer]) -> Snapshot:
 
 
 def build_current(scan: ScanResult, previous: Snapshot) -> tuple[list[Offer], list[str]]:
-    """(alle geldende aanbiedingen op winkelvolgorde en titel, namen van niet-gelezen winkels)."""
+    """(alle geldende aanbiedingen, per winkel van hoogste naar laagste voorraad; namen van
+    niet-gelezen winkels). Bij gelijke voorraad volgt de titel, zodat de volgorde stabiel is."""
     offers: list[Offer] = []
     unread: list[str] = []
     for store in scan.stores:
@@ -58,7 +59,14 @@ def build_current(scan: ScanResult, previous: Snapshot) -> tuple[list[Offer], li
             if entry["store_id"] == store.store_id
         ]
     order = {s.store_id: n for n, s in enumerate(scan.stores)}
-    offers.sort(key=lambda o: (order.get(o.store_id, 99), o.item.title.casefold(), o.key))
+    offers.sort(
+        key=lambda o: (
+            order.get(o.store_id, 99),
+            -(o.item.stock or 0),
+            o.item.title.casefold(),
+            o.key,
+        )
+    )
     return offers, unread
 
 

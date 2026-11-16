@@ -2,8 +2,8 @@ from ah_scanner import offers
 from ah_scanner.models import OK, STORES, Item, ScanResult, StoreResult
 
 
-def item(pid, title="Gehakt", expires="2026-11-16"):
-    return Item(pid, title, "AH", "500 g", "Vlees", 70.0, 2, "5.00", "1.50", expires)
+def item(pid, title="Gehakt", expires="2026-11-16", stock=2):
+    return Item(pid, title, "AH", "500 g", "Vlees", 70.0, stock, "5.00", "1.50", expires)
 
 
 def store(store_id, items=(), fetched=True):
@@ -19,10 +19,46 @@ def five(**by_store):
     return [store(sid, by_store.get(str(sid), ())) for sid, _ in STORES]
 
 
+def test_build_current_sorteert_per_winkel_op_hoogste_voorraad_dan_titel():
+    s = scan(
+        *five(
+            **{
+                "1348": [
+                    item(2, "Zeta", stock=2),
+                    item(3, "Alfa", stock=2),
+                    item(4, "Mid", stock=9),
+                ],
+                "1463": [item(1, "Beta", stock=1), item(5, "Gamma", stock=30)],
+            }
+        )
+    )
+    current, _ = offers.build_current(s, {})
+    # winkelvolgorde blijft leidend (1463 vóór 1348); daarbinnen hoogste voorraad eerst
+    assert [o.item.title for o in current] == ["Gamma", "Beta", "Mid", "Alfa", "Zeta"]
+
+
+def test_sortering_is_stabiel_bij_gelijke_voorraad_en_met_ontbrekende_voorraad():
+    s = scan(
+        *five(**{"1463": [item(2, "b", stock=None), item(1, "a", stock=0), item(3, "c", stock=0)]})
+    )
+    current, _ = offers.build_current(s, {})
+    assert [o.item.title for o in current] == ["a", "b", "c"]
+
+
+def test_laatst_bekende_winkel_wordt_ook_op_voorraad_gesorteerd():
+    first, _ = offers.build_current(
+        scan(*five(**{"1348": [item(1, "Laag", stock=1), item(2, "Hoog", stock=8)]})), {}
+    )
+    prev = offers.snapshot_of(first)
+    stores = [store(sid, fetched=sid != 1348) for sid, _ in STORES]
+    now, _ = offers.build_current(scan(*stores), prev)
+    assert [o.item.title for o in now] == ["Hoog", "Laag"] and all(o.stale for o in now)
+
+
 def test_build_current_sorteert_op_winkelvolgorde_en_titel():
     s = scan(*five(**{"1348": [item(2, "Zeta"), item(3, "Alfa")], "1463": [item(1, "Beta")]}))
     current, unread = offers.build_current(s, {})
-    assert [o.item.title for o in current] == ["Beta", "Alfa", "Zeta"]
+    assert [o.item.title for o in current] == ["Beta", "Alfa", "Zeta"]  # gelijke voorraad: titel
     assert unread == []
 
 
