@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-16T18:00:00+01:00",
-  "started_at": "2026-11-16T18:01:12.878251+01:00",
-  "completed_at": "2026-11-16T18:01:16.421957+01:00",
-  "delay_seconds": 72,
+  "scheduled_at": "2026-11-16T18:05:00+01:00",
+  "started_at": "2026-11-16T18:05:48.257340+01:00",
+  "completed_at": "2026-11-16T18:05:52.142662+01:00",
+  "delay_seconds": 48,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 110,
+      "total_items": 114,
       "meat_items": [
         {
           "product_id": 385506,
@@ -44,7 +44,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 194,
+      "total_items": 193,
       "meat_items": [
         {
           "product_id": 561331,
