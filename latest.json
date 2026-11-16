@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-16T21:10:00+01:00",
-  "started_at": "2026-11-16T21:11:00.920245+01:00",
-  "completed_at": "2026-11-16T21:11:06.440295+01:00",
-  "delay_seconds": 60,
+  "scheduled_at": "2026-11-16T21:15:00+01:00",
+  "started_at": "2026-11-16T21:16:15.096747+01:00",
+  "completed_at": "2026-11-16T21:16:19.876937+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -129,7 +129,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 260,
+      "total_items": 265,
       "meat_items": [
         {
           "product_id": 561331,
@@ -204,6 +204,18 @@
           "expires": "2026-11-17"
         },
         {
+          "product_id": 533084,
+          "title": "AH Scharrel kip shoarma",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 6.0,
+          "price_was": "5.79",
+          "price_now": "3.78",
+          "expires": "2026-11-17"
+        },
+        {
           "product_id": 160750,
           "title": "AH Krabbetjes",
           "brand": "AH",
@@ -225,6 +237,54 @@
           "stock": 2.0,
           "price_was": "5.49",
           "price_now": "4.12",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 3954,
+          "title": "AH Rundergehakt",
+          "brand": "AH",
+          "size": "1000 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "10.45",
+          "price_now": "7.84",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 531885,
+          "title": "AH Scharrel kipgehaktballetjes",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "2.99",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 531883,
+          "title": "AH Scharrel kipkluifjes",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "2.24",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 531834,
+          "title": "AH Scharrel kipfilet à la minute paprika",
+          "brand": "AH",
+          "size": "ca. 330 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "6.08",
+          "price_now": "4.56",
           "expires": "2026-11-17"
         },
         {
@@ -750,7 +810,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 157,
+      "total_items": 158,
       "meat_items": [
         {
           "product_id": 531883,
