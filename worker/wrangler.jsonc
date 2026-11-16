@@ -8,7 +8,7 @@
     // Amsterdamse tijd wordt in de code gefilterd (zie src/slots.js).
     // Tweede cron: dagelijkse export om 22:45 Amsterdam (twee UTC-uren, gefilterd in de code).
     // Derde cron: weekrapport, zondag 23:15 Amsterdam (twee UTC-uren, gefilterd in de code).
-    "crons": ["*/5 15-21 * * *", "45 20,21 * * *", "15 21,22 * * 0"]
+    "crons": ["*/5 15-21 * * *", "45 20,21 * * *", "15 21,22 * * sun"]
   },
   "vars": {
     "GITHUB_REPO": "EVGHacc/ah-last-chance-scanner",

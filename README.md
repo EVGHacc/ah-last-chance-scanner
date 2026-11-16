@@ -92,7 +92,7 @@ items = pd.concat(map(pd.read_csv, glob.glob("analysis/items/*.csv")))
 `python -m ah_scanner.cli report --data-root <data-branch> --out reports [--mail]` (workflow
 **AH report**) analyseert alle data (v1 en v2) en schrijft `reports/<jaar>-W<week>.md` naar de
 `data`-branch; met `--mail` gaat het rapport ook per mail (zelfde afzender en adres als de scans).
-De Worker start het elke zondag om 23:15 Amsterdam (cron `15 21,22 * * 0`, DST-correct gefilterd);
+De Worker start het elke zondag om 23:15 Amsterdam (cron `15 21,22 * * sun`, DST-correct gefilterd; Cloudflare telt weekdagen anders dan klassieke cron);
 je kunt de workflow ook handmatig draaien.
 
 Inhoud: trend (laatste 7 dagen tegenover de 7 dagen ervoor), op welk moment aanbiedingen naar 70%
