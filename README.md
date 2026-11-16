@@ -6,7 +6,8 @@ nieuwe treffers via Resend. `main` bevat alleen code; alle data staat op de bran
 ## Hoe het werkt
 
 1. **Cloudflare Worker** (`worker/`) draait elke 5 minuten (cron `*/5 15-21 * * *`, UTC) en
-   start alleen op de 61 scanmomenten van 17:30 t/m 22:30 Europe/Amsterdam (DST-correct).
+   start alleen op de 61 scanmomenten van 17:30 t/m 22:30 Europe/Amsterdam (DST-correct). Een
+   tweede cron start om 22:45 Amsterdam de dagelijkse export (`export.yml`).
 2. De Worker start `.github/workflows/scan.yml` via `workflow_dispatch` met `scheduled_at`.
 3. `python -m ah_scanner.cli scan` haalt **5 winkels** op, filtert categorie exact `Vlees`
    (niet `Vleeswaren`) met korting >= 70%, slaat het resultaat op en mailt nieuwe treffers.
@@ -71,7 +72,8 @@ analyse is er een tabel-export (CSV, UTF-8 met BOM zodat Excel hem goed opent):
 - Beperkingen: alleen de categorie Vlees; de vroegste v1-bestanden hebben geen producten
   (alleen of het ophalen lukte); er zit een gat van 4 t/m 14 november (storing).
 
-Maken: draai de workflow **AH export** (handmatig) of lokaal:
+Maken: de Worker start **AH export** elke avond om 22:45 Amsterdam automatisch (tweede cron
+`45 20,21 * * *`, DST-correct gefilterd); je kunt de workflow ook handmatig draaien, of lokaal:
 
 ```bash
 python -m ah_scanner.cli export --data-root <map-met-data-branch> --out analysis --combined

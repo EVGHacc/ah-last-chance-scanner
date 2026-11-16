@@ -2,6 +2,10 @@
 const START_MIN = 17 * 60 + 30;
 const END_MIN = 22 * 60 + 30;
 const STEP_MIN = 5;
+const EXPORT_MIN = 22 * 60 + 45; // dagelijkse export, 15 minuten na de laatste scan
+
+// UTC-cron voor de export: 22:45 Amsterdam is 20:45 UTC (zomertijd) of 21:45 UTC (wintertijd).
+export const EXPORT_CRON = "45 20,21 * * *";
 
 const formatter = new Intl.DateTimeFormat("en-GB", {
   timeZone: "Europe/Amsterdam",
@@ -29,4 +33,9 @@ export function isScanSlot(ms) {
 /** ISO-tijdstempel (UTC) van het bedoelde scanmoment. */
 export function scheduledAt(ms) {
   return new Date(floorToMinute(ms)).toISOString();
+}
+
+/** True als dit moment 22:45 Europe/Amsterdam is (de cron vuurt in beide UTC-uren). */
+export function isExportMoment(ms) {
+  return amsterdamMinutes(floorToMinute(ms)) === EXPORT_MIN;
 }
