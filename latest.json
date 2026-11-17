@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-17T17:50:00+01:00",
-  "started_at": "2026-11-17T17:51:18.684092+01:00",
-  "completed_at": "2026-11-17T17:51:22.724982+01:00",
+  "scheduled_at": "2026-11-17T17:55:00+01:00",
+  "started_at": "2026-11-17T17:56:18.982671+01:00",
+  "completed_at": "2026-11-17T17:56:22.378374+01:00",
   "delay_seconds": 78,
   "late": false,
   "status": "OK",
@@ -400,7 +400,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 130,
+      "total_items": 129,
       "meat_items": [
         {
           "product_id": 622556,
@@ -615,7 +615,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 153,
+      "total_items": 154,
       "meat_items": [
         {
           "product_id": 620805,
@@ -702,6 +702,18 @@
           "expires": "2026-11-18"
         },
         {
+          "product_id": 531879,
+          "title": "AH Scharrel kipdrumsticks gemarineerd",
+          "brand": "AH",
+          "size": "600 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 6.0,
+          "price_was": "4.19",
+          "price_now": "3.14",
+          "expires": "2026-11-18"
+        },
+        {
           "product_id": 119764,
           "title": "AH Varkensschnitzel",
           "brand": "AH",
@@ -726,15 +738,15 @@
           "expires": "2026-11-18"
         },
         {
-          "product_id": 169238,
-          "title": "AH Runderhamburger 2st",
+          "product_id": 619342,
+          "title": "AH Scharrel kipfilet voordeelverpakking",
           "brand": "AH",
-          "size": "200 g",
+          "size": "1 kg",
           "category": "Vlees",
           "discount_pct": 25.0,
           "stock": 1.0,
-          "price_was": "3.45",
-          "price_now": "2.59",
+          "price_was": "11.29",
+          "price_now": "8.47",
           "expires": "2026-11-18"
         },
         {
