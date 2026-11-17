@@ -47,6 +47,7 @@ class Session:
     access_token: str
     refresh_token: str
     rotated: bool
+    expires_at: float | None = None  # epoch-seconden; None als AH de geldigheid niet meldt
 
 
 def _key(root_secret: str) -> bytes:
@@ -75,10 +76,40 @@ def require_cryptography() -> None:
     _aesgcm()
 
 
-def seal(refresh_token: str, root_secret: str) -> str:
-    payload = json.dumps(
-        {"refreshToken": refresh_token, "issuedAtNs": time.time_ns()}, separators=(",", ":")
-    ).encode()
+ACCESS_MARGIN_SECONDS = 300  # een bewaarde access-token moet nog zo lang geldig zijn
+
+
+def expiry_of(payload: dict, access: str, now: float | None = None) -> float | None:
+    """Verlooptijd van de access-token: ``expires_in`` van AH, anders de ``exp`` van een JWT.
+
+    None als geen van beide bekend is; zo'n token wordt dan nooit hergebruikt.
+    """
+    now = time.time() if now is None else now
+    try:
+        seconds = float(payload.get("expires_in"))  # type: ignore[arg-type]
+        if seconds > 0:
+            return now + seconds
+    except (TypeError, ValueError):
+        pass
+    try:
+        part = access.split(".")[1]
+        claims = json.loads(base64.urlsafe_b64decode(part + "=" * (-len(part) % 4)))
+        exp = float(claims["exp"])
+        return exp if exp > 0 else None
+    except Exception:
+        return None
+
+
+def seal(
+    refresh_token: str,
+    root_secret: str,
+    access_token: str = "",
+    expires_at: float | None = None,
+) -> str:
+    body: dict = {"refreshToken": refresh_token, "issuedAtNs": time.time_ns()}
+    if access_token and expires_at is not None:
+        body["accessToken"], body["expiresAt"] = access_token, expires_at
+    payload = json.dumps(body, separators=(",", ":")).encode()
     nonce = os.urandom(12)
     ciphertext = _aesgcm()(_key(root_secret)).encrypt(nonce, payload, _AAD)
     return (
@@ -96,7 +127,12 @@ def seal(refresh_token: str, root_secret: str) -> str:
 
 
 def unseal(path: Path, root_secret: str) -> str:
-    """Geef de opgeslagen refresh-token, of '' als die ontbreekt of niet te lezen is.
+    """Geef de opgeslagen refresh-token, of '' als die ontbreekt of niet te lezen is."""
+    return str(unseal_state(path, root_secret).get("refreshToken") or "").strip()
+
+
+def unseal_state(path: Path, root_secret: str) -> dict:
+    """Geef de hele opgeslagen staat, of {} als die ontbreekt of niet te lezen is.
 
     Een kapotte cryptography-installatie is geen "niet te lezen": die geeft een ImportError, zodat
     het niet als "opnieuw inloggen" wordt gemeld.
@@ -108,13 +144,28 @@ def unseal(path: Path, root_secret: str) -> str:
         nonce = base64.urlsafe_b64decode(envelope["nonce"])
         ciphertext = base64.urlsafe_b64decode(envelope["ciphertext"])
     except Exception:
-        return ""
+        return {}
     aesgcm = _aesgcm()
     try:
         plain = aesgcm(_key(root_secret)).decrypt(nonce, ciphertext, _AAD)
-        return str(json.loads(plain).get("refreshToken") or "").strip()
+        state = json.loads(plain)
+        return state if isinstance(state, dict) else {}
     except Exception:
-        return ""
+        return {}
+
+
+def cached_access(
+    path: Path, root_secret: str, now: float | None = None, margin: float = ACCESS_MARGIN_SECONDS
+) -> str:
+    """Bewaarde access-token die nog minstens ``margin`` seconden geldig is, anders ''."""
+    now = time.time() if now is None else now
+    state = unseal_state(path, root_secret)
+    try:
+        if float(state["expiresAt"]) - now >= margin:
+            return str(state.get("accessToken") or "")
+    except (KeyError, TypeError, ValueError):
+        pass
+    return ""
 
 
 def http_post(path: str, body: dict) -> tuple[int, dict]:
@@ -165,7 +216,9 @@ def refresh_session(
             access = str(payload.get("access_token") or "").strip()
             if status == 200 and access:
                 new_refresh = str(payload.get("refresh_token") or "").strip() or token
-                return Session(access, new_refresh, new_refresh != token)
+                return Session(
+                    access, new_refresh, new_refresh != token, expiry_of(payload, access)
+                )
             if status in (400, 401):
                 break  # afgewezen: volgende kandidaat
             if status not in (0, 408, 425, 429, 500, 502, 503, 504):
@@ -176,11 +229,17 @@ def refresh_session(
 
 
 def persist_rotation(session: Session, secret: str, sealed_path: Path) -> bool:
-    """Sla een geroteerde refresh-token versleuteld op. Geeft True als er is geschreven."""
-    if not session.rotated:
+    """Sla de geroteerde refresh-token (en een bekende access-token) versleuteld op.
+
+    Geeft True als er is geschreven.
+    """
+    if not session.rotated and session.expires_at is None:
         return False
     sealed_path.parent.mkdir(parents=True, exist_ok=True)
     tmp = sealed_path.with_suffix(sealed_path.suffix + ".tmp")
-    tmp.write_text(seal(session.refresh_token, secret), encoding="utf-8")
+    tmp.write_text(
+        seal(session.refresh_token, secret, session.access_token, session.expires_at),
+        encoding="utf-8",
+    )
     tmp.replace(sealed_path)
     return True

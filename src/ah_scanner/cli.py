@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import os
 import sys
+import time
 from collections.abc import Callable
 from datetime import datetime
 from pathlib import Path
@@ -62,10 +63,21 @@ def scan(
     cache: dict[str, str] = {}
 
     def get_token(force: bool) -> str:
-        if force or "access" not in cache:  # één refresh per scan, tenzij AH een 401 geeft
+        if not force and "access" not in cache:
+            reused = auth.cached_access(state, secret)  # minder verversen = minder rotaties
+            if reused:
+                cache["access"] = reused
+                print("AUTH_ACCESS reused=true")
+        if force or "access" not in cache:  # anders één refresh per scan, plus bij een 401
             session = auth.refresh_session(secret, state, post=post)
             auth.persist_rotation(session, secret, state)  # rotatie direct bewaren
             cache["access"] = session.access_token
+            left = (
+                "unknown"
+                if session.expires_at is None
+                else f"{session.expires_at - time.time():.0f}"
+            )
+            print(f"AUTH_ACCESS reused=false expires_in_s={left}")
         return cache["access"]
 
     started = now()
