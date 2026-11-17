@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-17T18:10:00+01:00",
-  "started_at": "2026-11-17T18:11:27.386190+01:00",
-  "completed_at": "2026-11-17T18:11:34.080439+01:00",
-  "delay_seconds": 87,
+  "scheduled_at": "2026-11-17T18:15:00+01:00",
+  "started_at": "2026-11-17T18:16:17.974204+01:00",
+  "completed_at": "2026-11-17T18:16:21.792791+01:00",
+  "delay_seconds": 77,
   "late": false,
   "status": "OK",
   "stores": [
@@ -92,7 +92,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 166,
+      "total_items": 165,
       "meat_items": [
         {
           "product_id": 160750,
@@ -242,10 +242,10 @@
           "brand": "AH",
           "size": "300 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 3.0,
           "price_was": "5.99",
-          "price_now": "3.59",
+          "price_now": "1.80",
           "expires": "2026-11-17"
         },
         {
@@ -254,10 +254,10 @@
           "brand": "AH Excellent",
           "size": "ca. 225 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 2.0,
           "price_was": "10.46",
-          "price_now": "6.28",
+          "price_now": "3.14",
           "expires": "2026-11-17"
         },
         {
@@ -266,10 +266,22 @@
           "brand": "AH Biologisch",
           "size": "ca. 290 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "7.25",
-          "price_now": "4.35",
+          "price_now": "2.18",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 620800,
+          "title": "AH Ovenschotel gehaktballetjes tomatensaus",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "6.99",
+          "price_now": "2.10",
           "expires": "2026-11-17"
         },
         {
@@ -294,18 +306,6 @@
           "stock": 1.0,
           "price_was": "3.59",
           "price_now": "1.55",
-          "expires": "2026-11-17"
-        },
-        {
-          "product_id": 620800,
-          "title": "AH Ovenschotel gehaktballetjes tomatensaus",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "4.19",
           "expires": "2026-11-17"
         },
         {
@@ -381,7 +381,56 @@
           "expires": "2026-11-20"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 531829,
+          "title": "AH Scharrel kipfilet blokjes van de haas",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "5.99",
+          "price_now": "1.80",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 379269,
+          "title": "AH Excellent Lamskotelet gemarineerd",
+          "brand": "AH Excellent",
+          "size": "ca. 225 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "10.46",
+          "price_now": "3.14",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 597944,
+          "title": "AH Biologisch Varkensschnitzel",
+          "brand": "AH Biologisch",
+          "size": "ca. 290 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "7.25",
+          "price_now": "2.18",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 620800,
+          "title": "AH Ovenschotel gehaktballetjes tomatensaus",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "6.99",
+          "price_now": "2.10",
+          "expires": "2026-11-17"
+        }
+      ],
       "error": ""
     },
     {
