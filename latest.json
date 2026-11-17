@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-17T19:30:00+01:00",
-  "started_at": "2026-11-17T19:31:28.822159+01:00",
-  "completed_at": "2026-11-17T19:31:31.755454+01:00",
-  "delay_seconds": 88,
+  "scheduled_at": "2026-11-17T19:35:00+01:00",
+  "started_at": "2026-11-17T19:36:26.932262+01:00",
+  "completed_at": "2026-11-17T19:36:30.264996+01:00",
+  "delay_seconds": 86,
   "late": false,
   "status": "OK",
   "stores": [
@@ -297,7 +297,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 149,
+      "total_items": 143,
       "meat_items": [
         {
           "product_id": 160750,
@@ -306,21 +306,9 @@
           "size": "ca. 360 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 5.0,
+          "stock": 2.0,
           "price_was": "3.96",
           "price_now": "1.19",
-          "expires": "2026-11-17"
-        },
-        {
-          "product_id": 232421,
-          "title": "AH Speklap",
-          "brand": "AH",
-          "size": "ca. 500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "5.68",
-          "price_now": "1.70",
           "expires": "2026-11-17"
         },
         {
@@ -345,30 +333,6 @@
           "stock": 1.0,
           "price_was": "3.79",
           "price_now": "1.14",
-          "expires": "2026-11-17"
-        },
-        {
-          "product_id": 487396,
-          "title": "AH Diamanthaas",
-          "brand": "AH",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "7.49",
-          "price_now": "2.25",
-          "expires": "2026-11-17"
-        },
-        {
-          "product_id": 533084,
-          "title": "AH Scharrel kip shoarma",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.79",
-          "price_now": "1.51",
           "expires": "2026-11-17"
         },
         {
@@ -392,21 +356,9 @@
           "size": "ca. 360 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 5.0,
+          "stock": 2.0,
           "price_was": "3.96",
           "price_now": "1.19",
-          "expires": "2026-11-17"
-        },
-        {
-          "product_id": 232421,
-          "title": "AH Speklap",
-          "brand": "AH",
-          "size": "ca. 500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "5.68",
-          "price_now": "1.70",
           "expires": "2026-11-17"
         },
         {
@@ -431,30 +383,6 @@
           "stock": 1.0,
           "price_was": "3.79",
           "price_now": "1.14",
-          "expires": "2026-11-17"
-        },
-        {
-          "product_id": 487396,
-          "title": "AH Diamanthaas",
-          "brand": "AH",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "7.49",
-          "price_now": "2.25",
-          "expires": "2026-11-17"
-        },
-        {
-          "product_id": 533084,
-          "title": "AH Scharrel kip shoarma",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.79",
-          "price_now": "1.51",
           "expires": "2026-11-17"
         }
       ],
@@ -595,7 +523,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 120,
+      "total_items": 118,
       "meat_items": [
         {
           "product_id": 622556,
