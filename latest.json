@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-17T19:05:00+01:00",
-  "started_at": "2026-11-17T19:06:17.352259+01:00",
-  "completed_at": "2026-11-17T19:06:20.565905+01:00",
-  "delay_seconds": 77,
+  "scheduled_at": "2026-11-17T19:10:00+01:00",
+  "started_at": "2026-11-17T19:11:28.161626+01:00",
+  "completed_at": "2026-11-17T19:11:32.808175+01:00",
+  "delay_seconds": 88,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 156,
+      "total_items": 161,
       "meat_items": [
         {
           "product_id": 531878,
@@ -261,7 +261,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 156,
+      "total_items": 155,
       "meat_items": [
         {
           "product_id": 160750,
@@ -476,7 +476,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 187,
+      "total_items": 186,
       "meat_items": [
         {
           "product_id": 597944,
@@ -894,7 +894,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 142,
+      "total_items": 140,
       "meat_items": [
         {
           "product_id": 620805,
@@ -963,7 +963,7 @@
           "size": "600 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 6.0,
+          "stock": 5.0,
           "price_was": "4.19",
           "price_now": "2.51",
           "expires": "2026-11-18"
