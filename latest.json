@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-17T18:55:00+01:00",
-  "started_at": "2026-11-17T18:56:25.484945+01:00",
-  "completed_at": "2026-11-17T18:56:29.563545+01:00",
-  "delay_seconds": 85,
+  "scheduled_at": "2026-11-17T19:00:00+01:00",
+  "started_at": "2026-11-17T19:01:17.306814+01:00",
+  "completed_at": "2026-11-17T19:01:23.559325+01:00",
+  "delay_seconds": 77,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 145,
+      "total_items": 150,
       "meat_items": [
         {
           "product_id": 531878,
@@ -83,6 +83,66 @@
           "price_was": "2.88",
           "price_now": "2.16",
           "expires": "2026-11-17"
+        },
+        {
+          "product_id": 619304,
+          "title": "AH Swicy beenham",
+          "brand": "AH",
+          "size": "ca. 500 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 2.0,
+          "price_was": "7.99",
+          "price_now": "4.79",
+          "expires": "2026-11-18"
+        },
+        {
+          "product_id": 238946,
+          "title": "AH Rundersoepballetjes",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 6.0,
+          "price_was": "3.45",
+          "price_now": "2.59",
+          "expires": "2026-11-18"
+        },
+        {
+          "product_id": 169422,
+          "title": "AH Varkensbraadworst 2st",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "2.29",
+          "price_now": "1.72",
+          "expires": "2026-11-18"
+        },
+        {
+          "product_id": 425633,
+          "title": "AH Varkensribeye naturel",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "4.49",
+          "price_now": "3.37",
+          "expires": "2026-11-18"
+        },
+        {
+          "product_id": 232338,
+          "title": "AH Shoarma",
+          "brand": "AH",
+          "size": "250 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "2.99",
+          "price_now": "2.24",
+          "expires": "2026-11-18"
         }
       ],
       "meat70": [
@@ -340,10 +400,10 @@
           "brand": "AH Biologisch",
           "size": "200 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "4.39",
-          "price_now": "2.63",
+          "price_now": "1.32",
           "expires": "2026-11-17"
         },
         {
@@ -352,10 +412,10 @@
           "brand": "AH",
           "size": "500 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "3.59",
-          "price_now": "1.55",
+          "price_now": "0.78",
           "expires": "2026-11-17"
         },
         {
@@ -364,10 +424,10 @@
           "brand": "AH",
           "size": "ca. 240 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "4.99",
-          "price_now": "2.99",
+          "price_now": "1.50",
           "expires": "2026-11-17"
         },
         {
@@ -376,10 +436,10 @@
           "brand": "AH",
           "size": "600 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "7.91",
-          "price_now": "4.75",
+          "price_now": "2.37",
           "expires": "2026-11-17"
         },
         {
@@ -388,10 +448,10 @@
           "brand": "AH",
           "size": "300 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "3.99",
-          "price_now": "2.39",
+          "price_now": "1.20",
           "expires": "2026-11-17"
         },
         {
@@ -430,6 +490,66 @@
           "stock": 1.0,
           "price_was": "7.25",
           "price_now": "2.18",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 436756,
+          "title": "AH Biologisch Hamburger 2 stuks",
+          "brand": "AH Biologisch",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.39",
+          "price_now": "1.32",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 619344,
+          "title": "AH Scharrel chickenwings pikant",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.59",
+          "price_now": "0.78",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 531887,
+          "title": "AH Kalkoenfilet schnitzel",
+          "brand": "AH",
+          "size": "ca. 240 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.99",
+          "price_now": "1.50",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 531835,
+          "title": "AH Scharrel kipfilet blokjes",
+          "brand": "AH",
+          "size": "600 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "7.91",
+          "price_now": "2.37",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 531852,
+          "title": "AH Scharrel kipbraadworst 4 stuks",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
           "expires": "2026-11-17"
         }
       ],
@@ -642,7 +762,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 143,
+      "total_items": 142,
       "meat_items": [
         {
           "product_id": 620805,
