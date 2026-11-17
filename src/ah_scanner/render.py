@@ -117,9 +117,10 @@ def _card(offer: Offer, info: Enrichment | None, today: str | None) -> str:
     colour = {"Ja": "#1a7f37", "Nee": "#b42318"}.get(freeze, "#667085")
     storage = _storage(info)
     life = info.lifespan if info and info.lifespan else ""
-    new_badge = (
-        '<span style="background:#1a7f37;color:#fff;border-radius:6px;padding:2px 8px;'
-        'font-size:12px;font-weight:700">NIEUW</span> '
+    banner = (
+        '<tr><td colspan="2" style="background:#1a7f37;color:#fff;font-weight:700;'
+        'font-size:13px;letter-spacing:1px;padding:4px 10px;border-radius:8px">'
+        "NIEUW</td></tr>"
         if offer.is_new
         else ""
     )
@@ -136,7 +137,7 @@ def _card(offer: Offer, info: Enrichment | None, today: str | None) -> str:
         else f'<span style="font-size:13px">{e(when)}</span>'
     )
     rows = [
-        f'<div style="font-weight:700;font-size:16px">{new_badge}{e(item.title)}</div>',
+        f'<div style="font-weight:700;font-size:16px">{e(item.title)}</div>',
         f'<div style="color:#667085;font-size:13px">{e(item.brand)} · {e(item.size)}</div>',
         '<div style="margin:6px 0">'
         '<span style="background:#e6007e;color:#fff;border-radius:6px;padding:2px 8px;'
@@ -157,7 +158,7 @@ def _card(offer: Offer, info: Enrichment | None, today: str | None) -> str:
         )
     return (
         '<table role="presentation" width="100%" style="border:1px solid #e4e7ec;'
-        'border-radius:12px;margin:0 0 12px;padding:10px"><tr>'
+        f'border-radius:12px;margin:0 0 12px;padding:10px">{banner}<tr>'
         f'<td width="130" valign="top">{image}</td>'
         f'<td valign="top">{"".join(rows)}</td></tr></table>'
     )

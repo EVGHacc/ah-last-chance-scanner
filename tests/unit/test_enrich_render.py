@@ -219,3 +219,13 @@ def test_echte_tekst_zonder_invries_zin_blijft_onbekend_ondanks_niet_in_andere_z
     # "Niet gebruiken na deze datum." bevat 'niet' maar niets over invriezen.
     assert "Niet gebruiken" in REAL_TEXTS[7][0]
     assert enrich.classify_freeze(REAL_TEXTS[7][0]) == ONBEKEND
+
+
+def test_nieuw_banner_staat_boven_de_kaart_en_alleen_bij_nieuwe_aanbiedingen():
+    new, old = offer(1, is_new=True), offer(2)
+    html = render.render_html([new, old], [new], [], [], scan(), {})
+    banner = 'colspan="2" style="background:#1a7f37'
+    assert html.count(banner) == 1
+    assert html.index(banner) < html.index("<img") if "<img" in html else True
+    only_old = render.render_html([old], [], [], [], scan(), {})
+    assert "NIEUW" not in only_old
