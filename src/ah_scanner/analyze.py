@@ -222,6 +222,39 @@ def store_weekday(analysis: Analysis, top: int = 5) -> list[dict]:
     return rows[:top]
 
 
+# Volgorde telt: de eerste treffer wint ("Runder hamburger" is gehakt, geen rund).
+MEAT_KINDS = [
+    ("kip", r"\bkip"),
+    ("gehakt", r"\b(?:\w*gehakt|\w*hamburger|\w*burger)"),
+    ("rund", r"\b(?:rund|biefstuk|entrecote|ribeye|bavette)"),
+    ("varken", r"\b(?:varken|spek|schnitzel|braad|bacon|ham\b|karbonade)"),
+    ("worst", r"\b(?:\w*worst)"),
+    ("kalkoen", r"\bkalkoen"),
+    ("lam", r"\blam\b|\blams"),
+]
+OTHER_KIND = "overig"
+
+
+def meat_kind(title: str) -> str:
+    """Grove indeling op titel; een aanbieding zonder herkend woord valt onder 'overig'."""
+    lowered = (title or "").lower()
+    for name, pattern in MEAT_KINDS:
+        if re.search(pattern, lowered):
+            return name
+    return OTHER_KIND
+
+
+def by_kind(analysis: Analysis) -> list[dict]:
+    days = complete_days(analysis)
+    pool = _offers_on(analysis, days)
+    rows = []
+    for name in [k for k, _ in MEAT_KINDS] + [OTHER_KIND]:
+        mine = [o for o in pool if meat_kind(o.title) == name]
+        if mine:
+            rows.append({"name": name, **_per_day(mine, days)})
+    return sorted(rows, key=lambda r: (-r["offers_per_day"], r["name"]))
+
+
 def data_quality(analysis: Analysis) -> dict:
     unknown = [o for o in analysis.offers if o.grams_pack is None]
     days = sorted(analysis.days)
@@ -262,6 +295,7 @@ def report(analysis: Analysis) -> dict:
         "stores": by_store(analysis),
         "weekdays": by_weekday(analysis),
         "weeks": by_week(analysis),
+        "kinds": by_kind(analysis),
         "rolling": rolling(analysis),
         "best": store_weekday(analysis),
     }
@@ -357,6 +391,7 @@ def render_markdown(data: dict) -> str:
         "",
     ]
     lines += _table("Per filiaal (gesorteerd op aanbiedingen voor vier personen)", data["stores"])
+    lines += _table("Per soort vlees (grove indeling op titel)", data["kinds"])
     lines += _table("Per weekdag", data["weekdays"])
     lines += _table("Beste combinaties filiaal en weekdag (minimaal 4 dagen)", data["best"], False)
     lines += _table("Per week", data["weeks"])

@@ -177,6 +177,7 @@ def test_rapport_markdown_en_html_bevatten_alle_onderdelen(tmp_path):
         "## Trend",
         "Op welk moment",
         "Per filiaal",
+        "Per soort vlees",
         "Per weekdag",
         "Per week",
         "## Datakwaliteit",
@@ -243,3 +244,28 @@ def test_cli_main_report_commando(tmp_path, capsys):
     argv = ["report", "--data-root", str(tmp_path / "data"), "--out", str(tmp_path / "out")]
     assert cli.main(argv) == 0
     assert "REPORT week=2026-W47 days=1 offers=1" in capsys.readouterr().out
+
+
+@pytest.mark.parametrize(
+    ("title", "expected"),
+    [
+        ("AH Scharrel kipfilet", "kip"),
+        ("AH Runder hamburger 4 stuks", "gehakt"),
+        ("AH Rundergehakt", "gehakt"),
+        ("AH Biefstuk", "rund"),
+        ("Varkenshaas", "varken"),
+        ("Gelderse rookworst", "worst"),
+        ("Kalkoenfilet", "kalkoen"),
+        ("Salami", "overig"),
+        ("", "overig"),
+    ],
+)
+def test_meat_kind_grove_indeling_op_titel(title, expected):
+    assert analyze.meat_kind(title) == expected
+
+
+def test_per_soort_vlees_telt_per_dag_en_sorteert_op_aantal(tmp_path):
+    hits = [item(1, "Kipfilet"), item(2, "Kipdij"), item(3, "Rundergehakt"), item(4, "Salami")]
+    full_day(tmp_path, "2026-11-16", {"19:00": hits})
+    rows = analyze.by_kind(analyze.build(tmp_path))
+    assert [(r["name"], r["offers"]) for r in rows] == [("kip", 2), ("gehakt", 1), ("overig", 1)]
