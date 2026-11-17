@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-17T21:10:00+01:00",
-  "started_at": "2026-11-17T21:11:27.585932+01:00",
-  "completed_at": "2026-11-17T21:11:32.144971+01:00",
-  "delay_seconds": 87,
+  "scheduled_at": "2026-11-17T21:15:00+01:00",
+  "started_at": "2026-11-17T21:16:13.862153+01:00",
+  "completed_at": "2026-11-17T21:16:17.352423+01:00",
+  "delay_seconds": 73,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 218,
+      "total_items": 220,
       "meat_items": [
         {
           "product_id": 619347,
@@ -66,10 +66,10 @@
           "brand": "AH",
           "size": "ca. 140 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "2.88",
-          "price_now": "1.73",
+          "price_now": "0.86",
           "expires": "2026-11-17"
         },
         {
@@ -265,6 +265,18 @@
           "price_was": "3.99",
           "price_now": "1.20",
           "expires": "2026-11-17"
+        },
+        {
+          "product_id": 165535,
+          "title": "AH Scharrel kipfilet gerookt",
+          "brand": "AH",
+          "size": "ca. 140 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "2.88",
+          "price_now": "0.86",
+          "expires": "2026-11-17"
         }
       ],
       "error": ""
@@ -273,7 +285,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 240,
+      "total_items": 241,
       "meat_items": [
         {
           "product_id": 160750,
@@ -642,7 +654,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 146,
+      "total_items": 145,
       "meat_items": [
         {
           "product_id": 619337,
