@@ -229,3 +229,31 @@ def test_nieuw_banner_staat_boven_de_kaart_en_alleen_bij_nieuwe_aanbiedingen():
     assert html.index(banner) < html.index("<img") if "<img" in html else True
     only_old = render.render_html([old], [], [], [], scan(), {})
     assert "NIEUW" not in only_old
+
+
+def _gezin_item(title, size, stock):
+    return Item(1, title, "AH", size, "Vlees", 70.0, stock, "5.00", "1.50", "2026-11-16")
+
+
+def _gezin_offer(title, size, stock):
+    return Offer(1463, "AH Test", _gezin_item(title, size, stock), "k")
+
+
+def test_mail_toont_topaanbieding_en_totaalgewicht_voor_gezin():
+    top = _gezin_offer("Kipfilet", "250 g", 2)
+    plain = _gezin_offer("Varkenshaas", "250 g", 1)
+    html = render.render_html([top, plain], [], [], [], scan(), {})
+    assert html.count("TOPAANBIEDING VOOR 4") == 1 and "2 × 250 g = 500 g" in html
+    assert "genoeg voor 4 personen" in html and "te weinig voor 4 personen" in html
+    text = render.render_text([top, plain], [], [], [], scan(), {})
+    assert "[TOP] " in text and "Gezin van 4: 500 g" not in text and "2 × 250 g = 500 g" in text
+
+
+def test_mail_populair_zonder_genoeg_en_onbekend_gewicht():
+    small = _gezin_offer("Gehakt", "250 g", 1)
+    unknown = _gezin_offer("Gehakt", "per stuk", 1)
+    html = render.render_html([small, unknown], [], [], [], scan(), {})
+    assert html.count(">POPULAIR<") == 2 and "TOPAANBIEDING" not in html
+    assert html.count("Gezin van 4:") == 1  # onbekend gewicht: geen regel
+    text = render.render_text([small, unknown], [], [], [], scan(), {})
+    assert text.count("[POPULAIR]") == 2

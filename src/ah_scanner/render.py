@@ -8,6 +8,7 @@ from html import escape
 from ah_scanner.enrich import JA, NEE, Enrichment
 from ah_scanner.models import Item, ScanResult
 from ah_scanner.offers import Offer
+from ah_scanner.quality import Quality, assess
 
 FREEZE_LABEL = {JA: "Ja", NEE: "Nee"}
 MAX_STORAGE_CHARS = 300
@@ -61,6 +62,24 @@ def subject(total: int, added: list[Offer], removed: list[Offer]) -> str:
     return f"AH Laatste Kans: {total} aanbiedingen Vlees >= 70% (+{len(added)} / -{len(removed)})"
 
 
+def _gram(value: float) -> str:
+    return f"{value:.0f} g"
+
+
+def quality_of(offer: Offer) -> Quality:
+    return assess(offer.item.title, offer.item.size, offer.item.stock)
+
+
+def family_text(q: Quality) -> str:
+    """Eén regel over het nut voor een gezin van vier; leeg als het gewicht onbekend is."""
+    if q.total_grams is None or q.pack_grams is None:
+        return ""
+    enough = "genoeg voor 4 personen" if q.enough_for_four else "te weinig voor 4 personen"
+    if q.stock >= 2:
+        return f"{q.stock:g} × {_gram(q.pack_grams)} = {_gram(q.total_grams)}, {enough}"
+    return f"{_gram(q.total_grams)}, {enough}"
+
+
 def _notes_text(scan: ScanResult, unread: list[str]) -> str:
     note = ""
     if unread:
@@ -73,14 +92,20 @@ def _notes_text(scan: ScanResult, unread: list[str]) -> str:
 def _offer_line(offer: Offer, info: dict[int, Enrichment], today: str | None) -> str:
     item, extra = offer.item, _info(info, offer.item)
     when = validity(item, today)[0].lower()
+    q = quality_of(offer)
+    tags = ("[TOP] " if q.top else "[POPULAIR] " if q.popular else "") + (
+        "[NIEUW] " if offer.is_new else ""
+    )
     line = (
-        f"  {'[NIEUW] ' if offer.is_new else ''}{item.title} ({item.size}) "
+        f"  {tags}{item.title} ({item.size}) "
         f"{item.discount_pct:.0f}% korting, {eur(item.price_now)} (was {eur(item.price_was)}), "
         f"voorraad {item.stock:g}, {when}, "
         f"invriesbaar: {freeze_label(extra)}"
     )
     if offer.stale:
         line += " (laatst bekend)"
+    if family := family_text(q):
+        line += f"\n    Gezin van 4: {family}"
     if _storage(extra):
         line += f"\n    Bewaren: {_storage(extra)}"
     return line
@@ -124,6 +149,24 @@ def _card(offer: Offer, info: Enrichment | None, today: str | None) -> str:
         if offer.is_new
         else ""
     )
+    q = quality_of(offer)
+    chips = ""
+    if q.top:
+        chips += (
+            '<span style="background:#175cd3;color:#fff;border-radius:6px;padding:2px 8px;'
+            'font-size:12px;font-weight:700">TOPAANBIEDING VOOR 4</span> '
+        )
+    elif q.popular:
+        chips += (
+            '<span style="background:#eff8ff;color:#175cd3;border-radius:6px;padding:2px 8px;'
+            'font-size:12px;font-weight:700">POPULAIR</span> '
+        )
+    family = family_text(q)
+    family_html = (
+        f'<div style="font-size:13px;margin-top:4px"><b>Gezin van 4:</b> {e(family)}</div>'
+        if family
+        else ""
+    )
     stale = (
         '<div style="color:#b42318;font-size:12px">Laatst bekende stand (winkel niet gelezen)</div>'
         if offer.stale
@@ -137,7 +180,7 @@ def _card(offer: Offer, info: Enrichment | None, today: str | None) -> str:
         else f'<span style="font-size:13px">{e(when)}</span>'
     )
     rows = [
-        f'<div style="font-weight:700;font-size:16px">{e(item.title)}</div>',
+        f'<div style="font-weight:700;font-size:16px">{chips}{e(item.title)}</div>',
         f'<div style="color:#667085;font-size:13px">{e(item.brand)} · {e(item.size)}</div>',
         '<div style="margin:6px 0">'
         '<span style="background:#e6007e;color:#fff;border-radius:6px;padding:2px 8px;'
@@ -146,6 +189,7 @@ def _card(offer: Offer, info: Enrichment | None, today: str | None) -> str:
         f'<span style="color:#667085;text-decoration:line-through">{e(eur(item.price_was))}</span>'
         "</div>",
         f'<div style="font-size:13px">voorraad {item.stock:g} · {when_html}</div>',
+        family_html,
         '<div style="font-size:14px;margin-top:6px"><b>Invriesbaar:</b> '
         f'<span style="color:{colour};font-weight:700">{freeze}</span></div>',
         stale,

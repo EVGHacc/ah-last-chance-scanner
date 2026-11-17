@@ -17,6 +17,8 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
+from ah_scanner.quality import assess
+
 START_MIN, END_MIN, STEP_MIN = 17 * 60 + 30, 22 * 60 + 30, 5
 LATE_AFTER_SECONDS = 240
 
@@ -28,7 +30,7 @@ SCAN_COLUMNS = [
 ITEM_COLUMNS = [
     "source", "date", "scheduled_slot", "scheduled_at", "canonical_5min", "store_id", "store",
     "product_id", "title", "brand", "size", "category", "discount_pct", "stock", "price_was",
-    "price_now", "expires", "is_70",
+    "price_now", "expires", "is_70", "popular", "total_grams", "enough_for_four",
 ]  # fmt: skip
 
 Row = dict[str, object]
@@ -37,6 +39,15 @@ Row = dict[str, object]
 def slot_of(scheduled_at: str) -> str:
     """HH:MM uit een ISO-tijdstempel (lokale tijd zoals opgeslagen)."""
     return scheduled_at[11:16] if len(scheduled_at) >= 16 else ""
+
+
+def _quality_cells(title: object, size: object, stock: object) -> Row:
+    q = assess(str(title or ""), str(size or ""), stock)
+    return {
+        "popular": q.popular,
+        "total_grams": "" if q.total_grams is None else round(q.total_grams),
+        "enough_for_four": "" if q.enough_for_four is None else q.enough_for_four,
+    }
 
 
 def canonical_5min(slot: str) -> bool:
@@ -85,6 +96,7 @@ def _rows_v2(record: dict) -> tuple[list[Row], list[Row]]:
                 "stock": item.get("stock"), "price_was": item.get("price_was"),
                 "price_now": item.get("price_now"), "expires": item.get("expires"),
                 "is_70": pct is not None and pct >= 70,
+                **_quality_cells(item.get("title"), item.get("size"), item.get("stock")),
             })  # fmt: skip
     return scans, items
 
@@ -122,6 +134,7 @@ def _rows_v1(record: dict) -> tuple[list[Row], list[Row]]:
                 "stock": item.get("stock"), "price_was": item.get("priceWas"),
                 "price_now": item.get("priceNow"), "expires": item.get("markdownExpirationDate"),
                 "is_70": pct is not None and pct >= 70,
+                **_quality_cells(item.get("title"), item.get("size"), item.get("stock")),
             })  # fmt: skip
     return scans, items
 

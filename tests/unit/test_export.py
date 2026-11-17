@@ -143,3 +143,10 @@ def test_cli_export_commando(tmp_path, capsys):
     assert cli.main(["export", "--data-root", str(root), "--out", str(out), "--combined"]) == 0
     assert "EXPORT days=1 scan_rows=1 item_rows=2 skipped=0" in capsys.readouterr().out
     assert (out / "scans_all.csv").exists()
+
+
+def test_item_rijen_hebben_kwaliteitskolommen():
+    _, items = export.rows_for(v2_record())
+    for row in items:
+        assert {"popular", "total_grams", "enough_for_four"} <= set(row)
+    assert set(export.ITEM_COLUMNS) >= {"popular", "total_grams", "enough_for_four"}
