@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-17T17:45:00+01:00",
-  "started_at": "2026-11-17T17:46:14.676228+01:00",
-  "completed_at": "2026-11-17T17:46:17.978790+01:00",
-  "delay_seconds": 74,
+  "scheduled_at": "2026-11-17T17:50:00+01:00",
+  "started_at": "2026-11-17T17:51:18.684092+01:00",
+  "completed_at": "2026-11-17T17:51:22.724982+01:00",
+  "delay_seconds": 78,
   "late": false,
   "status": "OK",
   "stores": [
@@ -400,7 +400,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 132,
+      "total_items": 130,
       "meat_items": [
         {
           "product_id": 622556,
@@ -732,7 +732,7 @@
           "size": "200 g",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 2.0,
+          "stock": 1.0,
           "price_was": "3.45",
           "price_now": "2.59",
           "expires": "2026-11-18"
@@ -759,18 +759,6 @@
           "stock": 1.0,
           "price_was": "5.49",
           "price_now": "4.12",
-          "expires": "2026-11-18"
-        },
-        {
-          "product_id": 238946,
-          "title": "AH Rundersoepballetjes",
-          "brand": "AH",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "3.45",
-          "price_now": "2.59",
           "expires": "2026-11-18"
         },
         {
