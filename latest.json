@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-17T22:05:00+01:00",
-  "started_at": "2026-11-17T22:06:18.984840+01:00",
-  "completed_at": "2026-11-17T22:06:22.787067+01:00",
-  "delay_seconds": 78,
+  "scheduled_at": "2026-11-17T22:10:00+01:00",
+  "started_at": "2026-11-17T22:11:38.443534+01:00",
+  "completed_at": "2026-11-17T22:11:41.758939+01:00",
+  "delay_seconds": 98,
   "late": false,
   "status": "OK",
   "stores": [
@@ -237,7 +237,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 251,
+      "total_items": 228,
       "meat_items": [
         {
           "product_id": 477571,
@@ -249,7 +249,7 @@
           "stock": 1.0,
           "price_was": "3.79",
           "price_now": "1.14",
-          "expires": "2026-11-17"
+          "expires": "2026-11-18"
         },
         {
           "product_id": 620806,
@@ -371,7 +371,7 @@
           "stock": 1.0,
           "price_was": "3.79",
           "price_now": "1.14",
-          "expires": "2026-11-17"
+          "expires": "2026-11-18"
         }
       ],
       "error": ""
