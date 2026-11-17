@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-17T21:00:00+01:00",
-  "started_at": "2026-11-17T21:01:14.420101+01:00",
-  "completed_at": "2026-11-17T21:01:17.763321+01:00",
-  "delay_seconds": 74,
+  "scheduled_at": "2026-11-17T21:05:00+01:00",
+  "started_at": "2026-11-17T21:06:13.636383+01:00",
+  "completed_at": "2026-11-17T21:06:17.810487+01:00",
+  "delay_seconds": 73,
   "late": false,
   "status": "OK",
   "stores": [
@@ -58,18 +58,6 @@
           "stock": 1.0,
           "price_was": "3.99",
           "price_now": "1.20",
-          "expires": "2026-11-17"
-        },
-        {
-          "product_id": 531834,
-          "title": "AH Scharrel kipfilet à la minute paprika",
-          "brand": "AH",
-          "size": "ca. 330 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.08",
-          "price_now": "1.82",
           "expires": "2026-11-17"
         },
         {
@@ -277,18 +265,6 @@
           "price_was": "3.99",
           "price_now": "1.20",
           "expires": "2026-11-17"
-        },
-        {
-          "product_id": 531834,
-          "title": "AH Scharrel kipfilet à la minute paprika",
-          "brand": "AH",
-          "size": "ca. 330 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.08",
-          "price_now": "1.82",
-          "expires": "2026-11-17"
         }
       ],
       "error": ""
@@ -297,7 +273,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 230,
+      "total_items": 234,
       "meat_items": [
         {
           "product_id": 160750,
@@ -666,32 +642,8 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 162,
+      "total_items": 146,
       "meat_items": [
-        {
-          "product_id": 620805,
-          "title": "AH Ovenschotel sticky bites sweet garlic",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
-          "expires": "2026-11-17"
-        },
-        {
-          "product_id": 166839,
-          "title": "AH Mergpijp",
-          "brand": "AH",
-          "size": "ca. 300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "2.99",
-          "price_now": "0.90",
-          "expires": "2026-11-17"
-        },
         {
           "product_id": 619337,
           "title": "AH Scharrel sticky chicken Korean BBQ stijl",
@@ -702,18 +654,6 @@
           "stock": 1.0,
           "price_was": "3.29",
           "price_now": "0.99",
-          "expires": "2026-11-17"
-        },
-        {
-          "product_id": 620800,
-          "title": "AH Ovenschotel gehaktballetjes tomatensaus",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
           "expires": "2026-11-17"
         },
         {
@@ -863,30 +803,6 @@
       ],
       "meat70": [
         {
-          "product_id": 620805,
-          "title": "AH Ovenschotel sticky bites sweet garlic",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
-          "expires": "2026-11-17"
-        },
-        {
-          "product_id": 166839,
-          "title": "AH Mergpijp",
-          "brand": "AH",
-          "size": "ca. 300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "2.99",
-          "price_now": "0.90",
-          "expires": "2026-11-17"
-        },
-        {
           "product_id": 619337,
           "title": "AH Scharrel sticky chicken Korean BBQ stijl",
           "brand": "AH",
@@ -896,18 +812,6 @@
           "stock": 1.0,
           "price_was": "3.29",
           "price_now": "0.99",
-          "expires": "2026-11-17"
-        },
-        {
-          "product_id": 620800,
-          "title": "AH Ovenschotel gehaktballetjes tomatensaus",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
           "expires": "2026-11-17"
         },
         {
