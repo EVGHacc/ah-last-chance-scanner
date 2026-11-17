@@ -23,27 +23,13 @@ from html import escape
 from pathlib import Path
 
 from ah_scanner import export
+from ah_scanner.quality import FOUR_PERSON_GRAMS, grams_of, popular_kind
 
-FOUR_PERSON_GRAMS = 500.0
 COMPLETE_START_BY = "17:45"  # eerste scan van de dag uiterlijk hier, anders onvolledige start
 COMPLETE_END_FROM = "22:15"  # laatste scan van de dag minimaal hier, anders onvolledig einde
 MIN_DAYS_RELIABLE = 4  # minder dagen per groep: expliciet als weinig data markeren
 BIN_MINUTES = 30
 WEEKDAYS = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"]
-
-_MULTI = re.compile(r"(\d+)\s*[x×]\s*(\d+(?:[.,]\d+)?)\s*(kg|g)\b")
-_SINGLE = re.compile(r"(\d+(?:[.,]\d+)?)\s*(kg|g)\b")
-
-
-def grams_of(size: str | None) -> float | None:
-    """Gewicht per pak in gram uit tekst als '500 g', 'ca. 1,2 kg' of '2 x 125 g'; anders None."""
-    text = (size or "").lower()
-    if multi := _MULTI.search(text):
-        count, amount, unit = int(multi[1]), float(multi[2].replace(",", ".")), multi[3]
-        return count * amount * (1000 if unit == "kg" else 1)
-    if single := _SINGLE.search(text):
-        return float(single[1].replace(",", ".")) * (1000 if single[2] == "kg" else 1)
-    return None
 
 
 def _minutes(slot: str) -> int:
@@ -79,6 +65,14 @@ class Offer:
     def suitable4(self) -> bool | None:
         total = self.total_grams
         return None if total is None else total >= FOUR_PERSON_GRAMS
+
+    @property
+    def popular(self) -> bool:
+        return bool(popular_kind(self.title))
+
+    @property
+    def top(self) -> bool:
+        return self.popular and self.suitable4 is True
 
 
 @dataclass
@@ -135,6 +129,8 @@ def _per_day(offers: list[Offer], days: list[str]) -> dict:
     """Totalen en gemiddelden per dag voor een groep aanbiedingen over ``days``."""
     n = len(days)
     suit = [o for o in offers if o.suitable4]
+    popular = [o for o in offers if o.popular]
+    top = [o for o in offers if o.top]
     return {
         "days": n,
         "offers": len(offers),
@@ -143,6 +139,10 @@ def _per_day(offers: list[Offer], days: list[str]) -> dict:
         "stock_per_day": sum(o.stock for o in offers) / n if n else 0.0,
         "suitable4": len(suit),
         "suitable4_per_day": len(suit) / n if n else 0.0,
+        "popular": len(popular),
+        "popular_per_day": len(popular) / n if n else 0.0,
+        "top": len(top),
+        "top_per_day": len(top) / n if n else 0.0,
         "reliable": n >= MIN_DAYS_RELIABLE,
     }
 
@@ -346,14 +346,15 @@ def _table(title: str, rows: list[dict], note_small: bool = True) -> list[str]:
     out = [
         f"### {title}",
         "",
-        "| | dagen | aanbiedingen/dag | stuks/dag | voor 4 pers./dag |",
-        "|---|---|---|---|---|",
+        "| | dagen | aanbiedingen/dag | stuks/dag | voor 4 pers./dag | populair/dag | top/dag |",
+        "|---|---|---|---|---|---|---|",
     ]
     for r in rows:
         flag = "" if r["reliable"] or not note_small else " (weinig dagen)"
         out.append(
             f"| {r['name']}{flag} | {r['days']} | {_fmt(r['offers_per_day'])} | "
-            f"{_fmt(r['stock_per_day'])} | {_fmt(r['suitable4_per_day'])} |"
+            f"{_fmt(r['stock_per_day'])} | {_fmt(r['suitable4_per_day'])} | "
+            f"{_fmt(r['popular_per_day'])} | {_fmt(r['top_per_day'])} |"
         )
     return out + [""]
 

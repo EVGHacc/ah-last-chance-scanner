@@ -269,3 +269,17 @@ def test_per_soort_vlees_telt_per_dag_en_sorteert_op_aantal(tmp_path):
     full_day(tmp_path, "2026-11-16", {"19:00": hits})
     rows = analyze.by_kind(analyze.build(tmp_path))
     assert [(r["name"], r["offers"]) for r in rows] == [("kip", 2), ("gehakt", 1), ("overig", 1)]
+
+
+def test_populair_en_topaanbiedingen_per_dag(tmp_path):
+    hits = [
+        item(1, "Kipfilet", size="250 g", stock=2.0),  # populair en 500 g in totaal: top
+        item(2, "Gehakt", size="250 g", stock=1.0),  # populair, te weinig
+        item(3, "Varkenshaas", size="1 kg"),  # genoeg, niet populair
+    ]
+    full_day(tmp_path, "2026-11-16", {"19:00": hits})
+    rows = analyze.by_store(analyze.build(tmp_path))
+    assert rows[0]["popular"] == 2 and rows[0]["top"] == 1
+    assert rows[0]["suitable4"] == 2 and rows[0]["top_per_day"] == 1.0
+    md = analyze.render_markdown(analyze.report(analyze.build(tmp_path)))
+    assert "populair/dag" in md and "top/dag" in md
