@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-17T18:30:00+01:00",
-  "started_at": "2026-11-17T18:31:20.051421+01:00",
-  "completed_at": "2026-11-17T18:31:24.883884+01:00",
-  "delay_seconds": 80,
+  "scheduled_at": "2026-11-17T18:35:00+01:00",
+  "started_at": "2026-11-17T18:36:22.325520+01:00",
+  "completed_at": "2026-11-17T18:36:25.584309+01:00",
+  "delay_seconds": 82,
   "late": false,
   "status": "OK",
   "stores": [
@@ -117,7 +117,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 163,
+      "total_items": 161,
       "meat_items": [
         {
           "product_id": 160750,
@@ -523,7 +523,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 126,
+      "total_items": 125,
       "meat_items": [
         {
           "product_id": 622556,
@@ -531,10 +531,10 @@
           "brand": "AH",
           "size": "300 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 6.0,
           "price_was": "4.99",
-          "price_now": "2.99",
+          "price_now": "1.50",
           "expires": "2026-11-17"
         },
         {
@@ -696,6 +696,18 @@
       ],
       "meat70": [
         {
+          "product_id": 622556,
+          "title": "AH Rundergehakt Mexicaanse stijl",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 6.0,
+          "price_was": "4.99",
+          "price_now": "1.50",
+          "expires": "2026-11-17"
+        },
+        {
           "product_id": 620853,
           "title": "AH Kipreepjes Italiaans",
           "brand": "AH",
@@ -722,10 +734,34 @@
           "brand": "AH",
           "size": "300 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 2.0,
           "price_was": "6.99",
-          "price_now": "4.19",
+          "price_now": "2.10",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 619337,
+          "title": "AH Scharrel sticky chicken Korean BBQ stijl",
+          "brand": "AH",
+          "size": "ca. 370 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.29",
+          "price_now": "0.99",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 379269,
+          "title": "AH Excellent Lamskotelet gemarineerd",
+          "brand": "AH Excellent",
+          "size": "ca. 225 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "10.46",
+          "price_now": "3.14",
           "expires": "2026-11-17"
         },
         {
@@ -741,18 +777,6 @@
           "expires": "2026-11-17"
         },
         {
-          "product_id": 619337,
-          "title": "AH Scharrel sticky chicken Korean BBQ stijl",
-          "brand": "AH",
-          "size": "ca. 370 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "3.29",
-          "price_now": "1.97",
-          "expires": "2026-11-17"
-        },
-        {
           "product_id": 620800,
           "title": "AH Ovenschotel gehaktballetjes tomatensaus",
           "brand": "AH",
@@ -765,16 +789,16 @@
           "expires": "2026-11-17"
         },
         {
-          "product_id": 379269,
-          "title": "AH Excellent Lamskotelet gemarineerd",
-          "brand": "AH Excellent",
-          "size": "ca. 225 g",
+          "product_id": 531879,
+          "title": "AH Scharrel kipdrumsticks gemarineerd",
+          "brand": "AH",
+          "size": "600 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "10.46",
-          "price_now": "6.28",
-          "expires": "2026-11-17"
+          "stock": 6.0,
+          "price_was": "4.19",
+          "price_now": "2.51",
+          "expires": "2026-11-18"
         },
         {
           "product_id": 619340,
@@ -798,18 +822,6 @@
           "stock": 4.0,
           "price_was": "4.39",
           "price_now": "2.85",
-          "expires": "2026-11-18"
-        },
-        {
-          "product_id": 531879,
-          "title": "AH Scharrel kipdrumsticks gemarineerd",
-          "brand": "AH",
-          "size": "600 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 6.0,
-          "price_was": "4.19",
-          "price_now": "3.14",
           "expires": "2026-11-18"
         },
         {
@@ -909,7 +921,44 @@
           "expires": "2026-11-19"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 620805,
+          "title": "AH Ovenschotel sticky bites sweet garlic",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "6.99",
+          "price_now": "2.10",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 619337,
+          "title": "AH Scharrel sticky chicken Korean BBQ stijl",
+          "brand": "AH",
+          "size": "ca. 370 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.29",
+          "price_now": "0.99",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 379269,
+          "title": "AH Excellent Lamskotelet gemarineerd",
+          "brand": "AH Excellent",
+          "size": "ca. 225 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "10.46",
+          "price_now": "3.14",
+          "expires": "2026-11-17"
+        }
+      ],
       "error": ""
     }
   ],
