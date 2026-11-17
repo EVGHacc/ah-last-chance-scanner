@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-17T17:35:00+01:00",
-  "started_at": "2026-11-17T17:36:29.795341+01:00",
-  "completed_at": "2026-11-17T17:36:34.262101+01:00",
+  "scheduled_at": "2026-11-17T17:40:00+01:00",
+  "started_at": "2026-11-17T17:41:29.883196+01:00",
+  "completed_at": "2026-11-17T17:41:33.491218+01:00",
   "delay_seconds": 89,
   "late": false,
   "status": "OK",
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 131,
+      "total_items": 130,
       "meat_items": [
         {
           "product_id": 619347,
@@ -630,18 +630,6 @@
           "expires": "2026-11-17"
         },
         {
-          "product_id": 379269,
-          "title": "AH Excellent Lamskotelet gemarineerd",
-          "brand": "AH Excellent",
-          "size": "ca. 225 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "10.46",
-          "price_now": "6.28",
-          "expires": "2026-11-17"
-        },
-        {
           "product_id": 166839,
           "title": "AH Mergpijp",
           "brand": "AH",
@@ -675,6 +663,18 @@
           "stock": 1.0,
           "price_was": "6.99",
           "price_now": "4.19",
+          "expires": "2026-11-17"
+        },
+        {
+          "product_id": 379269,
+          "title": "AH Excellent Lamskotelet gemarineerd",
+          "brand": "AH Excellent",
+          "size": "ca. 225 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 1.0,
+          "price_was": "10.46",
+          "price_now": "6.28",
           "expires": "2026-11-17"
         },
         {
@@ -820,18 +820,6 @@
           "price_was": "4.72",
           "price_now": "3.54",
           "expires": "2026-11-19"
-        },
-        {
-          "product_id": 620853,
-          "title": "AH Kipreepjes Italiaans",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "3.49",
-          "price_now": "2.62",
-          "expires": "2026-11-20"
         }
       ],
       "meat70": [],
