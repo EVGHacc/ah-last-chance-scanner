@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-17T18:20:00+01:00",
-  "started_at": "2026-11-17T18:21:23.477242+01:00",
-  "completed_at": "2026-11-17T18:21:26.452470+01:00",
+  "scheduled_at": "2026-11-17T18:25:00+01:00",
+  "started_at": "2026-11-17T18:26:23.444073+01:00",
+  "completed_at": "2026-11-17T18:26:26.887990+01:00",
   "delay_seconds": 83,
   "late": false,
   "status": "OK",
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 129,
+      "total_items": 128,
       "meat_items": [
         {
           "product_id": 531878,
@@ -105,7 +105,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 164,
+      "total_items": 163,
       "meat_items": [
         {
           "product_id": 160750,
@@ -235,7 +235,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 193,
+      "total_items": 192,
       "meat_items": [
         {
           "product_id": 531829,
@@ -459,7 +459,7 @@
           "size": "370 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 3.0,
+          "stock": 2.0,
           "price_was": "6.99",
           "price_now": "4.19",
           "expires": "2026-11-17"
@@ -567,7 +567,7 @@
           "size": "ca. 150 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 8.0,
+          "stock": 7.0,
           "price_was": "3.79",
           "price_now": "2.27",
           "expires": "2026-11-19"
@@ -641,7 +641,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 151,
+      "total_items": 150,
       "meat_items": [
         {
           "product_id": 620805,
@@ -773,18 +773,6 @@
           "stock": 1.0,
           "price_was": "11.29",
           "price_now": "8.47",
-          "expires": "2026-11-18"
-        },
-        {
-          "product_id": 483907,
-          "title": "AH Varkensslavink 4 stuks",
-          "brand": "AH",
-          "size": "4 stuks",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "3.75",
-          "price_now": "2.39",
           "expires": "2026-11-18"
         },
         {
