@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-17T21:25:00+01:00",
-  "started_at": "2026-11-17T21:26:16.974163+01:00",
-  "completed_at": "2026-11-17T21:26:20.189995+01:00",
-  "delay_seconds": 76,
+  "scheduled_at": "2026-11-17T21:30:00+01:00",
+  "started_at": "2026-11-17T21:31:15.326614+01:00",
+  "completed_at": "2026-11-17T21:31:19.604123+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -285,7 +285,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 242,
+      "total_items": 245,
       "meat_items": [
         {
           "product_id": 160750,
@@ -300,18 +300,6 @@
           "expires": "2026-11-17"
         },
         {
-          "product_id": 620811,
-          "title": "AH Ovenschotel kipfilet knoflook roomsaus",
-          "brand": "AH",
-          "size": "420 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
-          "expires": "2026-11-17"
-        },
-        {
           "product_id": 477571,
           "title": "AH Scharrel gebraden kipfilet caesar",
           "brand": "AH",
@@ -322,6 +310,54 @@
           "price_was": "3.79",
           "price_now": "1.14",
           "expires": "2026-11-17"
+        },
+        {
+          "product_id": 620806,
+          "title": "AH Ovenschotel varkenshaas brie",
+          "brand": "AH",
+          "size": "290 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 1.0,
+          "price_was": "6.99",
+          "price_now": "4.19",
+          "expires": "2026-11-18"
+        },
+        {
+          "product_id": 619333,
+          "title": "AH Scharrel kipfiletschnitzel Wieners stijl",
+          "brand": "AH",
+          "size": "ca. 300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "5.49",
+          "price_now": "4.12",
+          "expires": "2026-11-18"
+        },
+        {
+          "product_id": 619329,
+          "title": "AH Gegrilde halve kip naturel",
+          "brand": "AH",
+          "size": "ca. 650 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "8.70",
+          "price_now": "6.53",
+          "expires": "2026-11-18"
+        },
+        {
+          "product_id": 620796,
+          "title": "AH Ovenschotel kipfilet champignon room",
+          "brand": "AH",
+          "size": "430 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "6.99",
+          "price_now": "5.24",
+          "expires": "2026-11-18"
         },
         {
           "product_id": 454769,
@@ -347,18 +383,6 @@
           "stock": 2.0,
           "price_was": "3.96",
           "price_now": "1.19",
-          "expires": "2026-11-17"
-        },
-        {
-          "product_id": 620811,
-          "title": "AH Ovenschotel kipfilet knoflook roomsaus",
-          "brand": "AH",
-          "size": "420 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
           "expires": "2026-11-17"
         },
         {
@@ -463,7 +487,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 140,
+      "total_items": 139,
       "meat_items": [
         {
           "product_id": 622556,
