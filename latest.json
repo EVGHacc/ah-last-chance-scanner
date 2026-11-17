@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-17T18:15:00+01:00",
-  "started_at": "2026-11-17T18:16:17.974204+01:00",
-  "completed_at": "2026-11-17T18:16:21.792791+01:00",
-  "delay_seconds": 77,
+  "scheduled_at": "2026-11-17T18:20:00+01:00",
+  "started_at": "2026-11-17T18:21:23.477242+01:00",
+  "completed_at": "2026-11-17T18:21:26.452470+01:00",
+  "delay_seconds": 83,
   "late": false,
   "status": "OK",
   "stores": [
@@ -13,6 +13,18 @@
       "total_items": 129,
       "meat_items": [
         {
+          "product_id": 531878,
+          "title": "AH Scharrel kipdrumsticks",
+          "brand": "AH",
+          "size": "1 kg",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "6.37",
+          "price_now": "1.91",
+          "expires": "2026-11-17"
+        },
+        {
           "product_id": 619347,
           "title": "AH Scharrel kipbraadworsten 2 stuks",
           "brand": "AH",
@@ -22,18 +34,6 @@
           "stock": 2.0,
           "price_was": "1.99",
           "price_now": "1.19",
-          "expires": "2026-11-17"
-        },
-        {
-          "product_id": 531878,
-          "title": "AH Scharrel kipdrumsticks",
-          "brand": "AH",
-          "size": "1 kg",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "6.37",
-          "price_now": "3.82",
           "expires": "2026-11-17"
         },
         {
@@ -85,14 +85,27 @@
           "expires": "2026-11-17"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 531878,
+          "title": "AH Scharrel kipdrumsticks",
+          "brand": "AH",
+          "size": "1 kg",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "6.37",
+          "price_now": "1.91",
+          "expires": "2026-11-17"
+        }
+      ],
       "error": ""
     },
     {
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 165,
+      "total_items": 164,
       "meat_items": [
         {
           "product_id": 160750,
@@ -191,18 +204,6 @@
           "expires": "2026-11-17"
         },
         {
-          "product_id": 531868,
-          "title": "AH Scharrel kipnugget",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "2.99",
-          "price_now": "1.79",
-          "expires": "2026-11-17"
-        },
-        {
           "product_id": 531834,
           "title": "AH Scharrel kipfilet à la minute paprika",
           "brand": "AH",
@@ -234,7 +235,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 194,
+      "total_items": 193,
       "meat_items": [
         {
           "product_id": 531829,
@@ -437,7 +438,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 128,
+      "total_items": 127,
       "meat_items": [
         {
           "product_id": 622556,
@@ -470,7 +471,7 @@
           "size": "ca. 140 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 2.0,
+          "stock": 1.0,
           "price_was": "10.99",
           "price_now": "6.59",
           "expires": "2026-11-17"
@@ -560,18 +561,6 @@
           "expires": "2026-11-18"
         },
         {
-          "product_id": 133174,
-          "title": "AH Excellent Ribeye",
-          "brand": "AH Excellent",
-          "size": "ca. 360 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "17.99",
-          "price_now": "13.49",
-          "expires": "2026-11-18"
-        },
-        {
           "product_id": 477571,
           "title": "AH Scharrel gebraden kipfilet caesar",
           "brand": "AH",
@@ -652,7 +641,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 152,
+      "total_items": 151,
       "meat_items": [
         {
           "product_id": 620805,
