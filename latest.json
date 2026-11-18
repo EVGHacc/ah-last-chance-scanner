@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-18T18:55:00+01:00",
-  "started_at": "2026-11-18T18:56:20.500200+01:00",
-  "completed_at": "2026-11-18T18:56:23.693000+01:00",
-  "delay_seconds": 80,
+  "scheduled_at": "2026-11-18T19:00:00+01:00",
+  "started_at": "2026-11-18T19:01:31.312600+01:00",
+  "completed_at": "2026-11-18T19:01:34.375507+01:00",
+  "delay_seconds": 91,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 133,
+      "total_items": 136,
       "meat_items": [
         {
           "product_id": 531884,
@@ -226,6 +226,18 @@
           "expires": "2026-11-18"
         },
         {
+          "product_id": 619333,
+          "title": "AH Scharrel kipfiletschnitzel Wieners stijl",
+          "brand": "AH",
+          "size": "ca. 300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "5.49",
+          "price_now": "1.65",
+          "expires": "2026-11-18"
+        },
+        {
           "product_id": 621981,
           "title": "AH Excellent Wagyu gehakt",
           "brand": "AH Excellent",
@@ -238,27 +250,15 @@
           "expires": "2026-11-18"
         },
         {
-          "product_id": 619333,
-          "title": "AH Scharrel kipfiletschnitzel Wieners stijl",
-          "brand": "AH",
-          "size": "ca. 300 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "5.49",
-          "price_now": "3.29",
-          "expires": "2026-11-18"
-        },
-        {
           "product_id": 487398,
           "title": "AH Lamsfilet",
           "brand": "AH",
           "size": "ca. 250 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "9.99",
-          "price_now": "5.99",
+          "price_now": "3.00",
           "expires": "2026-11-18"
         },
         {
@@ -288,6 +288,18 @@
           "expires": "2026-11-18"
         },
         {
+          "product_id": 619333,
+          "title": "AH Scharrel kipfiletschnitzel Wieners stijl",
+          "brand": "AH",
+          "size": "ca. 300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "5.49",
+          "price_now": "1.65",
+          "expires": "2026-11-18"
+        },
+        {
           "product_id": 621981,
           "title": "AH Excellent Wagyu gehakt",
           "brand": "AH Excellent",
@@ -298,6 +310,18 @@
           "price_was": "6.99",
           "price_now": "2.10",
           "expires": "2026-11-18"
+        },
+        {
+          "product_id": 487398,
+          "title": "AH Lamsfilet",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "9.99",
+          "price_now": "3.00",
+          "expires": "2026-11-18"
         }
       ],
       "error": ""
@@ -306,20 +330,8 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 102,
+      "total_items": 101,
       "meat_items": [
-        {
-          "product_id": 620806,
-          "title": "AH Ovenschotel varkenshaas brie",
-          "brand": "AH",
-          "size": "290 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
-          "expires": "2026-11-18"
-        },
         {
           "product_id": 477571,
           "title": "AH Scharrel gebraden kipfilet caesar",
@@ -393,27 +405,14 @@
           "expires": "2026-11-19"
         }
       ],
-      "meat70": [
-        {
-          "product_id": 620806,
-          "title": "AH Ovenschotel varkenshaas brie",
-          "brand": "AH",
-          "size": "290 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
-          "expires": "2026-11-18"
-        }
-      ],
+      "meat70": [],
       "error": ""
     },
     {
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 137,
+      "total_items": 136,
       "meat_items": [
         {
           "product_id": 619340,
@@ -533,18 +532,6 @@
           "stock": 1.0,
           "price_was": "6.99",
           "price_now": "5.24",
-          "expires": "2026-11-19"
-        },
-        {
-          "product_id": 187586,
-          "title": "AH Chipolata worstjes 8 stuks",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "5.19",
-          "price_now": "3.89",
           "expires": "2026-11-19"
         },
         {
