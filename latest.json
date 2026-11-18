@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-18T17:35:00+01:00",
-  "started_at": "2026-11-18T17:36:19.766362+01:00",
-  "completed_at": "2026-11-18T17:36:22.521083+01:00",
-  "delay_seconds": 79,
+  "scheduled_at": "2026-11-18T17:40:00+01:00",
+  "started_at": "2026-11-18T17:41:23.054130+01:00",
+  "completed_at": "2026-11-18T17:41:25.719265+01:00",
+  "delay_seconds": 83,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 121,
+      "total_items": 120,
       "meat_items": [
         {
           "product_id": 531884,
@@ -56,7 +56,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 186,
+      "total_items": 184,
       "meat_items": [
         {
           "product_id": 238946,
@@ -256,7 +256,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 117,
+      "total_items": 115,
       "meat_items": [
         {
           "product_id": 571286,
@@ -355,18 +355,6 @@
           "expires": "2026-11-19"
         },
         {
-          "product_id": 203274,
-          "title": "Zandvliet Gerookte kipfilet",
-          "brand": "Zandvliet",
-          "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "3.59",
-          "price_now": "2.69",
-          "expires": "2026-11-19"
-        },
-        {
           "product_id": 620853,
           "title": "AH Kipreepjes Italiaans",
           "brand": "AH",
@@ -399,7 +387,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 121,
+      "total_items": 126,
       "meat_items": [
         {
           "product_id": 619340,
@@ -462,6 +450,18 @@
           "expires": "2026-11-19"
         },
         {
+          "product_id": 598619,
+          "title": "AH Speklapjes à la minute smokey bacon",
+          "brand": "AH",
+          "size": "ca. 350 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "4.99",
+          "price_now": "3.74",
+          "expires": "2026-11-19"
+        },
+        {
           "product_id": 187593,
           "title": "AH Greenfields Beefburger jalapeno 2 stuks",
           "brand": "AH Greenfields",
@@ -471,6 +471,18 @@
           "stock": 2.0,
           "price_was": "4.99",
           "price_now": "3.74",
+          "expires": "2026-11-19"
+        },
+        {
+          "product_id": 597950,
+          "title": "AH Biologisch Hamburger 4 stuks",
+          "brand": "AH Biologisch",
+          "size": "400 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "6.99",
+          "price_now": "5.24",
           "expires": "2026-11-19"
         },
         {
