@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-18T19:00:00+01:00",
-  "started_at": "2026-11-18T19:01:31.312600+01:00",
-  "completed_at": "2026-11-18T19:01:34.375507+01:00",
-  "delay_seconds": 91,
+  "scheduled_at": "2026-11-18T19:05:00+01:00",
+  "started_at": "2026-11-18T19:06:20.976503+01:00",
+  "completed_at": "2026-11-18T19:06:24.413436+01:00",
+  "delay_seconds": 80,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 136,
+      "total_items": 138,
       "meat_items": [
         {
           "product_id": 531884,
@@ -23,6 +23,18 @@
           "price_was": "3.89",
           "price_now": "1.73",
           "expires": "2026-11-18"
+        },
+        {
+          "product_id": 379269,
+          "title": "AH Excellent Lamskotelet gemarineerd",
+          "brand": "AH Excellent",
+          "size": "ca. 225 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "10.46",
+          "price_now": "7.85",
+          "expires": "2026-11-19"
         },
         {
           "product_id": 385506,
@@ -56,20 +68,8 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 175,
+      "total_items": 170,
       "meat_items": [
-        {
-          "product_id": 232208,
-          "title": "AH Varkenshaas",
-          "brand": "AH",
-          "size": "ca. 480 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "6.00",
-          "price_now": "1.80",
-          "expires": "2026-11-18"
-        },
         {
           "product_id": 238948,
           "title": "AH Nasi bami vlees",
@@ -80,18 +80,6 @@
           "stock": 2.0,
           "price_was": "3.69",
           "price_now": "0.94",
-          "expires": "2026-11-18"
-        },
-        {
-          "product_id": 620806,
-          "title": "AH Ovenschotel varkenshaas brie",
-          "brand": "AH",
-          "size": "290 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
           "expires": "2026-11-18"
         },
         {
@@ -157,18 +145,6 @@
       ],
       "meat70": [
         {
-          "product_id": 232208,
-          "title": "AH Varkenshaas",
-          "brand": "AH",
-          "size": "ca. 480 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "6.00",
-          "price_now": "1.80",
-          "expires": "2026-11-18"
-        },
-        {
           "product_id": 238948,
           "title": "AH Nasi bami vlees",
           "brand": "AH",
@@ -178,18 +154,6 @@
           "stock": 2.0,
           "price_was": "3.69",
           "price_now": "0.94",
-          "expires": "2026-11-18"
-        },
-        {
-          "product_id": 620806,
-          "title": "AH Ovenschotel varkenshaas brie",
-          "brand": "AH",
-          "size": "290 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
           "expires": "2026-11-18"
         },
         {
@@ -211,7 +175,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 180,
+      "total_items": 182,
       "meat_items": [
         {
           "product_id": 581558,
@@ -330,7 +294,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 101,
+      "total_items": 100,
       "meat_items": [
         {
           "product_id": 477571,
@@ -444,10 +408,10 @@
           "brand": "AH",
           "size": "175 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "2.19",
-          "price_now": "1.31",
+          "price_now": "0.66",
           "expires": "2026-11-18"
         },
         {
@@ -618,6 +582,18 @@
           "stock": 2.0,
           "price_was": "4.19",
           "price_now": "1.26",
+          "expires": "2026-11-18"
+        },
+        {
+          "product_id": 561195,
+          "title": "AH Gemengd gehakt",
+          "brand": "AH",
+          "size": "175 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "2.19",
+          "price_now": "0.66",
           "expires": "2026-11-18"
         }
       ],
