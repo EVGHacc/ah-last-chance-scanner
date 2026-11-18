@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-18T21:05:00+01:00",
-  "started_at": "2026-11-18T21:06:16.239188+01:00",
-  "completed_at": "2026-11-18T21:06:19.448372+01:00",
-  "delay_seconds": 76,
+  "scheduled_at": "2026-11-18T21:10:00+01:00",
+  "started_at": "2026-11-18T21:11:15.320766+01:00",
+  "completed_at": "2026-11-18T21:11:19.496547+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 206,
+      "total_items": 204,
       "meat_items": [
         {
           "product_id": 169172,
@@ -153,7 +153,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 190,
+      "total_items": 187,
       "meat_items": [
         {
           "product_id": 619333,
@@ -284,7 +284,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 204,
+      "total_items": 202,
       "meat_items": [
         {
           "product_id": 619333,
@@ -461,20 +461,8 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 146,
+      "total_items": 144,
       "meat_items": [
-        {
-          "product_id": 619340,
-          "title": "AH Scharrel kip cordon bleu voordeel",
-          "brand": "AH",
-          "size": "750 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "9.69",
-          "price_now": "2.91",
-          "expires": "2026-11-18"
-        },
         {
           "product_id": 531879,
           "title": "AH Scharrel kipdrumsticks gemarineerd",
@@ -645,18 +633,6 @@
         }
       ],
       "meat70": [
-        {
-          "product_id": 619340,
-          "title": "AH Scharrel kip cordon bleu voordeel",
-          "brand": "AH",
-          "size": "750 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "9.69",
-          "price_now": "2.91",
-          "expires": "2026-11-18"
-        },
         {
           "product_id": 531879,
           "title": "AH Scharrel kipdrumsticks gemarineerd",
