@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-18T18:30:00+01:00",
-  "started_at": "2026-11-18T18:31:16.688598+01:00",
-  "completed_at": "2026-11-18T18:31:20.146990+01:00",
-  "delay_seconds": 76,
+  "scheduled_at": "2026-11-18T18:35:00+01:00",
+  "started_at": "2026-11-18T18:36:17.106731+01:00",
+  "completed_at": "2026-11-18T18:36:20.232052+01:00",
+  "delay_seconds": 77,
   "late": false,
   "status": "OK",
   "stores": [
@@ -326,10 +326,10 @@
           "brand": "AH",
           "size": "ca. 700 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "29.99",
-          "price_now": "17.99",
+          "price_now": "9.00",
           "expires": "2026-11-18"
         },
         {
@@ -338,10 +338,10 @@
           "brand": "AH",
           "size": "290 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "6.99",
-          "price_now": "4.19",
+          "price_now": "2.10",
           "expires": "2026-11-18"
         },
         {
@@ -417,7 +417,32 @@
           "expires": "2026-11-19"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 571286,
+          "title": "AH Bavette",
+          "brand": "AH",
+          "size": "ca. 700 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "29.99",
+          "price_now": "9.00",
+          "expires": "2026-11-18"
+        },
+        {
+          "product_id": 620806,
+          "title": "AH Ovenschotel varkenshaas brie",
+          "brand": "AH",
+          "size": "290 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "6.99",
+          "price_now": "2.10",
+          "expires": "2026-11-18"
+        }
+      ],
       "error": ""
     },
     {
@@ -432,10 +457,10 @@
           "brand": "AH",
           "size": "750 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 2.0,
           "price_was": "9.69",
-          "price_now": "5.81",
+          "price_now": "2.91",
           "expires": "2026-11-18"
         },
         {
@@ -444,10 +469,10 @@
           "brand": "AH",
           "size": "600 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 2.0,
           "price_was": "4.19",
-          "price_now": "2.51",
+          "price_now": "1.26",
           "expires": "2026-11-18"
         },
         {
@@ -619,7 +644,32 @@
           "expires": "2026-11-21"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 619340,
+          "title": "AH Scharrel kip cordon bleu voordeel",
+          "brand": "AH",
+          "size": "750 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "9.69",
+          "price_now": "2.91",
+          "expires": "2026-11-18"
+        },
+        {
+          "product_id": 531879,
+          "title": "AH Scharrel kipdrumsticks gemarineerd",
+          "brand": "AH",
+          "size": "600 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "4.19",
+          "price_now": "1.26",
+          "expires": "2026-11-18"
+        }
+      ],
       "error": ""
     }
   ],
