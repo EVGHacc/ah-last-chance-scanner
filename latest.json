@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-18T18:10:00+01:00",
-  "started_at": "2026-11-18T18:11:20.306626+01:00",
-  "completed_at": "2026-11-18T18:11:23.857308+01:00",
-  "delay_seconds": 80,
+  "scheduled_at": "2026-11-18T18:15:00+01:00",
+  "started_at": "2026-11-18T18:16:15.253822+01:00",
+  "completed_at": "2026-11-18T18:16:18.500376+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -56,7 +56,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 179,
+      "total_items": 178,
       "meat_items": [
         {
           "product_id": 232208,
@@ -162,8 +162,32 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 165,
+      "total_items": 167,
       "meat_items": [
+        {
+          "product_id": 581558,
+          "title": "Cucina Spicy chicken wings",
+          "brand": "Cucina",
+          "size": "ca. 400 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "12.48",
+          "price_now": "3.74",
+          "expires": "2026-11-18"
+        },
+        {
+          "product_id": 621981,
+          "title": "AH Excellent Wagyu gehakt",
+          "brand": "AH Excellent",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "6.99",
+          "price_now": "2.10",
+          "expires": "2026-11-18"
+        },
         {
           "product_id": 436756,
           "title": "AH Biologisch Hamburger 2 stuks",
@@ -177,18 +201,6 @@
           "expires": "2026-11-18"
         },
         {
-          "product_id": 581558,
-          "title": "Cucina Spicy chicken wings",
-          "brand": "Cucina",
-          "size": "ca. 400 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "12.48",
-          "price_now": "7.49",
-          "expires": "2026-11-18"
-        },
-        {
           "product_id": 619333,
           "title": "AH Scharrel kipfiletschnitzel Wieners stijl",
           "brand": "AH",
@@ -198,18 +210,6 @@
           "stock": 1.0,
           "price_was": "5.49",
           "price_now": "3.29",
-          "expires": "2026-11-18"
-        },
-        {
-          "product_id": 621981,
-          "title": "AH Excellent Wagyu gehakt",
-          "brand": "AH Excellent",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "4.19",
           "expires": "2026-11-18"
         },
         {
@@ -237,14 +237,39 @@
           "expires": "2026-11-20"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 581558,
+          "title": "Cucina Spicy chicken wings",
+          "brand": "Cucina",
+          "size": "ca. 400 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "12.48",
+          "price_now": "3.74",
+          "expires": "2026-11-18"
+        },
+        {
+          "product_id": 621981,
+          "title": "AH Excellent Wagyu gehakt",
+          "brand": "AH Excellent",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "6.99",
+          "price_now": "2.10",
+          "expires": "2026-11-18"
+        }
+      ],
       "error": ""
     },
     {
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 112,
+      "total_items": 109,
       "meat_items": [
         {
           "product_id": 571286,
