@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-18T21:45:00+01:00",
-  "started_at": "2026-11-18T21:46:26.082016+01:00",
-  "completed_at": "2026-11-18T21:46:29.236257+01:00",
-  "delay_seconds": 86,
+  "scheduled_at": "2026-11-18T21:50:00+01:00",
+  "started_at": "2026-11-18T21:51:15.924612+01:00",
+  "completed_at": "2026-11-18T21:51:20.415115+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,20 +10,8 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 201,
+      "total_items": 186,
       "meat_items": [
-        {
-          "product_id": 169172,
-          "title": "AH Rundertartaar",
-          "brand": "AH",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "1.20",
-          "expires": "2026-11-18"
-        },
         {
           "product_id": 531884,
           "title": "AH Scharrel kipkluifjes gemarineerd",
@@ -122,18 +110,6 @@
         }
       ],
       "meat70": [
-        {
-          "product_id": 169172,
-          "title": "AH Rundertartaar",
-          "brand": "AH",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "1.20",
-          "expires": "2026-11-18"
-        },
         {
           "product_id": 531884,
           "title": "AH Scharrel kipkluifjes gemarineerd",
@@ -284,7 +260,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 193,
+      "total_items": 183,
       "meat_items": [
         {
           "product_id": 619333,
@@ -437,7 +413,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 142,
+      "total_items": 141,
       "meat_items": [
         {
           "product_id": 531879,
