@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-18T22:05:00+01:00",
-  "started_at": "2026-11-18T22:06:17.155554+01:00",
-  "completed_at": "2026-11-18T22:06:21.638803+01:00",
-  "delay_seconds": 77,
+  "scheduled_at": "2026-11-18T22:10:00+01:00",
+  "started_at": "2026-11-18T22:11:16.804978+01:00",
+  "completed_at": "2026-11-18T22:11:20.523728+01:00",
+  "delay_seconds": 76,
   "late": false,
   "status": "OK",
   "stores": [
@@ -365,20 +365,8 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 126,
+      "total_items": 110,
       "meat_items": [
-        {
-          "product_id": 531879,
-          "title": "AH Scharrel kipdrumsticks gemarineerd",
-          "brand": "AH",
-          "size": "600 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "4.19",
-          "price_now": "1.26",
-          "expires": "2026-11-18"
-        },
         {
           "product_id": 165535,
           "title": "AH Scharrel kipfilet gerookt",
@@ -512,20 +500,7 @@
           "expires": "2026-11-21"
         }
       ],
-      "meat70": [
-        {
-          "product_id": 531879,
-          "title": "AH Scharrel kipdrumsticks gemarineerd",
-          "brand": "AH",
-          "size": "600 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "4.19",
-          "price_now": "1.26",
-          "expires": "2026-11-18"
-        }
-      ],
+      "meat70": [],
       "error": ""
     }
   ],
