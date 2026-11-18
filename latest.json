@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-18T21:55:00+01:00",
-  "started_at": "2026-11-18T21:56:15.045117+01:00",
-  "completed_at": "2026-11-18T21:56:18.464455+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-18T22:00:00+01:00",
+  "started_at": "2026-11-18T22:01:21.870193+01:00",
+  "completed_at": "2026-11-18T22:01:26.235684+01:00",
+  "delay_seconds": 81,
   "late": false,
   "status": "OK",
   "stores": [
@@ -129,32 +129,8 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 177,
+      "total_items": 172,
       "meat_items": [
-        {
-          "product_id": 619333,
-          "title": "AH Scharrel kipfiletschnitzel Wieners stijl",
-          "brand": "AH",
-          "size": "ca. 300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.49",
-          "price_now": "1.65",
-          "expires": "2026-11-18"
-        },
-        {
-          "product_id": 620796,
-          "title": "AH Ovenschotel kipfilet champignon room",
-          "brand": "AH",
-          "size": "430 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
-          "expires": "2026-11-18"
-        },
         {
           "product_id": 477571,
           "title": "AH Scharrel gebraden kipfilet caesar",
@@ -193,30 +169,6 @@
         }
       ],
       "meat70": [
-        {
-          "product_id": 619333,
-          "title": "AH Scharrel kipfiletschnitzel Wieners stijl",
-          "brand": "AH",
-          "size": "ca. 300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.49",
-          "price_now": "1.65",
-          "expires": "2026-11-18"
-        },
-        {
-          "product_id": 620796,
-          "title": "AH Ovenschotel kipfilet champignon room",
-          "brand": "AH",
-          "size": "430 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
-          "expires": "2026-11-18"
-        },
         {
           "product_id": 477571,
           "title": "AH Scharrel gebraden kipfilet caesar",
@@ -260,7 +212,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 182,
+      "total_items": 177,
       "meat_items": [
         {
           "product_id": 619333,
@@ -331,7 +283,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 122,
+      "total_items": 118,
       "meat_items": [
         {
           "product_id": 477571,
