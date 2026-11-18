@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-18T18:05:00+01:00",
-  "started_at": "2026-11-18T18:06:16.863172+01:00",
-  "completed_at": "2026-11-18T18:06:20.242309+01:00",
-  "delay_seconds": 76,
+  "scheduled_at": "2026-11-18T18:10:00+01:00",
+  "started_at": "2026-11-18T18:11:20.306626+01:00",
+  "completed_at": "2026-11-18T18:11:23.857308+01:00",
+  "delay_seconds": 80,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 117,
+      "total_items": 115,
       "meat_items": [
         {
           "product_id": 531884,
@@ -56,20 +56,8 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 180,
+      "total_items": 179,
       "meat_items": [
-        {
-          "product_id": 238946,
-          "title": "AH Rundersoepballetjes",
-          "brand": "AH",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 3.0,
-          "price_was": "3.45",
-          "price_now": "2.07",
-          "expires": "2026-11-18"
-        },
         {
           "product_id": 232208,
           "title": "AH Varkenshaas",
@@ -80,6 +68,18 @@
           "stock": 2.0,
           "price_was": "6.00",
           "price_now": "3.60",
+          "expires": "2026-11-18"
+        },
+        {
+          "product_id": 238946,
+          "title": "AH Rundersoepballetjes",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 2.0,
+          "price_was": "3.45",
+          "price_now": "2.07",
           "expires": "2026-11-18"
         },
         {
@@ -162,7 +162,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 164,
+      "total_items": 165,
       "meat_items": [
         {
           "product_id": 436756,
@@ -244,7 +244,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 113,
+      "total_items": 112,
       "meat_items": [
         {
           "product_id": 571286,
@@ -341,34 +341,9 @@
           "price_was": "4.99",
           "price_now": "3.74",
           "expires": "2026-11-19"
-        },
-        {
-          "product_id": 620853,
-          "title": "AH Kipreepjes Italiaans",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.49",
-          "price_now": "1.05",
-          "expires": "2026-11-20"
         }
       ],
-      "meat70": [
-        {
-          "product_id": 620853,
-          "title": "AH Kipreepjes Italiaans",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.49",
-          "price_now": "1.05",
-          "expires": "2026-11-20"
-        }
-      ],
+      "meat70": [],
       "error": ""
     },
     {
@@ -442,18 +417,6 @@
           "title": "AH Speklapjes à la minute smokey bacon",
           "brand": "AH",
           "size": "ca. 350 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 2.0,
-          "price_was": "4.99",
-          "price_now": "3.74",
-          "expires": "2026-11-19"
-        },
-        {
-          "product_id": 187593,
-          "title": "AH Greenfields Beefburger jalapeno 2 stuks",
-          "brand": "AH Greenfields",
-          "size": "2 stuks",
           "category": "Vlees",
           "discount_pct": 25.0,
           "stock": 2.0,
