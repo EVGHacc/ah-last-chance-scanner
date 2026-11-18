@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-18T18:45:00+01:00",
-  "started_at": "2026-11-18T18:46:22.844566+01:00",
-  "completed_at": "2026-11-18T18:46:25.884758+01:00",
-  "delay_seconds": 82,
+  "scheduled_at": "2026-11-18T18:50:00+01:00",
+  "started_at": "2026-11-18T18:51:26.187191+01:00",
+  "completed_at": "2026-11-18T18:51:29.099165+01:00",
+  "delay_seconds": 86,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 121,
+      "total_items": 125,
       "meat_items": [
         {
           "product_id": 531884,
@@ -56,7 +56,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 176,
+      "total_items": 175,
       "meat_items": [
         {
           "product_id": 232208,
@@ -211,7 +211,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 176,
+      "total_items": 177,
       "meat_items": [
         {
           "product_id": 581558,
@@ -235,18 +235,6 @@
           "stock": 1.0,
           "price_was": "6.99",
           "price_now": "2.10",
-          "expires": "2026-11-18"
-        },
-        {
-          "product_id": 436756,
-          "title": "AH Biologisch Hamburger 2 stuks",
-          "brand": "AH Biologisch",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "4.39",
-          "price_now": "2.63",
           "expires": "2026-11-18"
         },
         {
@@ -318,7 +306,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 106,
+      "total_items": 103,
       "meat_items": [
         {
           "product_id": 571286,
@@ -449,7 +437,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 138,
+      "total_items": 137,
       "meat_items": [
         {
           "product_id": 619340,
