@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-18T18:50:00+01:00",
-  "started_at": "2026-11-18T18:51:26.187191+01:00",
-  "completed_at": "2026-11-18T18:51:29.099165+01:00",
-  "delay_seconds": 86,
+  "scheduled_at": "2026-11-18T18:55:00+01:00",
+  "started_at": "2026-11-18T18:56:20.500200+01:00",
+  "completed_at": "2026-11-18T18:56:23.693000+01:00",
+  "delay_seconds": 80,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 125,
+      "total_items": 133,
       "meat_items": [
         {
           "product_id": 531884,
@@ -211,7 +211,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 177,
+      "total_items": 180,
       "meat_items": [
         {
           "product_id": 581558,
@@ -306,20 +306,8 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 103,
+      "total_items": 102,
       "meat_items": [
-        {
-          "product_id": 571286,
-          "title": "AH Bavette",
-          "brand": "AH",
-          "size": "ca. 700 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "29.99",
-          "price_now": "9.00",
-          "expires": "2026-11-18"
-        },
         {
           "product_id": 620806,
           "title": "AH Ovenschotel varkenshaas brie",
@@ -406,18 +394,6 @@
         }
       ],
       "meat70": [
-        {
-          "product_id": 571286,
-          "title": "AH Bavette",
-          "brand": "AH",
-          "size": "ca. 700 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "29.99",
-          "price_now": "9.00",
-          "expires": "2026-11-18"
-        },
         {
           "product_id": 620806,
           "title": "AH Ovenschotel varkenshaas brie",
