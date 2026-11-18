@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-18T18:40:00+01:00",
-  "started_at": "2026-11-18T18:41:27.271608+01:00",
-  "completed_at": "2026-11-18T18:41:30.737764+01:00",
-  "delay_seconds": 87,
+  "scheduled_at": "2026-11-18T18:45:00+01:00",
+  "started_at": "2026-11-18T18:46:22.844566+01:00",
+  "completed_at": "2026-11-18T18:46:25.884758+01:00",
+  "delay_seconds": 82,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 117,
+      "total_items": 121,
       "meat_items": [
         {
           "product_id": 531884,
@@ -363,7 +363,7 @@
           "size": "200 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 3.0,
+          "stock": 1.0,
           "price_was": "3.99",
           "price_now": "2.39",
           "expires": "2026-11-19"
@@ -449,7 +449,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 139,
+      "total_items": 138,
       "meat_items": [
         {
           "product_id": 619340,
