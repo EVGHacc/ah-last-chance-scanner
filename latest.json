@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-18T19:45:00+01:00",
-  "started_at": "2026-11-18T19:46:17.067496+01:00",
-  "completed_at": "2026-11-18T19:46:20.215416+01:00",
-  "delay_seconds": 77,
+  "scheduled_at": "2026-11-18T19:50:00+01:00",
+  "started_at": "2026-11-18T19:51:16.037546+01:00",
+  "completed_at": "2026-11-18T19:51:19.604302+01:00",
+  "delay_seconds": 76,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 153,
+      "total_items": 198,
       "meat_items": [
         {
           "product_id": 169172,
@@ -153,20 +153,8 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 162,
+      "total_items": 197,
       "meat_items": [
-        {
-          "product_id": 238946,
-          "title": "AH Rundersoepballetjes",
-          "brand": "AH",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "3.45",
-          "price_now": "1.04",
-          "expires": "2026-11-18"
-        },
         {
           "product_id": 238948,
           "title": "AH Nasi bami vlees",
@@ -213,23 +201,23 @@
           "stock": 1.0,
           "price_was": "3.79",
           "price_now": "1.14",
+          "expires": "2026-11-18"
+        },
+        {
+          "product_id": 238946,
+          "title": "AH Rundersoepballetjes",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.45",
+          "price_now": "1.04",
           "expires": "2026-11-18"
         }
       ],
       "meat70": [
         {
-          "product_id": 238946,
-          "title": "AH Rundersoepballetjes",
-          "brand": "AH",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "3.45",
-          "price_now": "1.04",
-          "expires": "2026-11-18"
-        },
-        {
           "product_id": 238948,
           "title": "AH Nasi bami vlees",
           "brand": "AH",
@@ -275,6 +263,18 @@
           "stock": 1.0,
           "price_was": "3.79",
           "price_now": "1.14",
+          "expires": "2026-11-18"
+        },
+        {
+          "product_id": 238946,
+          "title": "AH Rundersoepballetjes",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.45",
+          "price_now": "1.04",
           "expires": "2026-11-18"
         }
       ],
@@ -403,7 +403,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 98,
+      "total_items": 123,
       "meat_items": [
         {
           "product_id": 477571,
@@ -485,7 +485,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 135,
+      "total_items": 155,
       "meat_items": [
         {
           "product_id": 619340,
