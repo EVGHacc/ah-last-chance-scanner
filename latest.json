@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-19T20:00:00+01:00",
-  "started_at": "2026-11-19T20:01:18.759371+01:00",
-  "completed_at": "2026-11-19T20:01:21.632973+01:00",
+  "scheduled_at": "2026-11-19T20:05:00+01:00",
+  "started_at": "2026-11-19T20:06:18.067154+01:00",
+  "completed_at": "2026-11-19T20:06:21.324687+01:00",
   "delay_seconds": 78,
   "late": false,
   "status": "OK",
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 224,
+      "total_items": 225,
       "meat_items": [
         {
           "product_id": 622556,
@@ -846,7 +846,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 126,
+      "total_items": 127,
       "meat_items": [
         {
           "product_id": 165535,
@@ -883,6 +883,18 @@
           "price_was": "4.72",
           "price_now": "1.42",
           "expires": "2026-11-19"
+        },
+        {
+          "product_id": 531890,
+          "title": "AH Kalkoenfilet blokjes",
+          "brand": "AH",
+          "size": "250 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "4.99",
+          "price_now": "3.74",
+          "expires": "2026-11-20"
         },
         {
           "product_id": 531893,
