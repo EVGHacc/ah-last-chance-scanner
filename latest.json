@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-19T20:05:00+01:00",
-  "started_at": "2026-11-19T20:06:18.067154+01:00",
-  "completed_at": "2026-11-19T20:06:21.324687+01:00",
-  "delay_seconds": 78,
+  "scheduled_at": "2026-11-19T20:10:00+01:00",
+  "started_at": "2026-11-19T20:11:17.405917+01:00",
+  "completed_at": "2026-11-19T20:11:21.364816+01:00",
+  "delay_seconds": 77,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 225,
+      "total_items": 229,
       "meat_items": [
         {
           "product_id": 622556,
@@ -201,7 +201,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 256,
+      "total_items": 255,
       "meat_items": [
         {
           "product_id": 187604,
@@ -452,7 +452,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 215,
+      "total_items": 218,
       "meat_items": [
         {
           "product_id": 610029,
@@ -846,7 +846,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 127,
+      "total_items": 128,
       "meat_items": [
         {
           "product_id": 165535,
@@ -885,6 +885,18 @@
           "expires": "2026-11-19"
         },
         {
+          "product_id": 619330,
+          "title": "AH Gegrilde halve kip sweet chili",
+          "brand": "AH",
+          "size": "ca. 780 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 3.0,
+          "price_was": "10.44",
+          "price_now": "7.83",
+          "expires": "2026-11-20"
+        },
+        {
           "product_id": 531890,
           "title": "AH Kalkoenfilet blokjes",
           "brand": "AH",
@@ -894,6 +906,18 @@
           "stock": 2.0,
           "price_was": "4.99",
           "price_now": "3.74",
+          "expires": "2026-11-20"
+        },
+        {
+          "product_id": 531881,
+          "title": "AH Scharrel kipborrelhapjes",
+          "brand": "AH",
+          "size": "900 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "7.49",
+          "price_now": "4.87",
           "expires": "2026-11-20"
         },
         {
