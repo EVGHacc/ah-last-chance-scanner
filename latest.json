@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-19T21:50:00+01:00",
-  "started_at": "2026-11-19T21:51:16.770673+01:00",
-  "completed_at": "2026-11-19T21:51:21.460088+01:00",
-  "delay_seconds": 76,
+  "scheduled_at": "2026-11-19T21:55:00+01:00",
+  "started_at": "2026-11-19T21:56:25.866665+01:00",
+  "completed_at": "2026-11-19T21:56:30.206812+01:00",
+  "delay_seconds": 85,
   "late": false,
   "status": "OK",
   "stores": [
@@ -332,7 +332,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 169,
+      "total_items": 167,
       "meat_items": [
         {
           "product_id": 610029,
@@ -702,6 +702,18 @@
           "stock": 5.0,
           "price_was": "2.29",
           "price_now": "1.72",
+          "expires": "2026-11-20"
+        },
+        {
+          "product_id": 379268,
+          "title": "AH Excellent Lamskotelet",
+          "brand": "AH Excellent",
+          "size": "ca. 210 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 4.0,
+          "price_was": "9.49",
+          "price_now": "7.12",
           "expires": "2026-11-20"
         },
         {
