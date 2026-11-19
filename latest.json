@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-19T19:45:00+01:00",
-  "started_at": "2026-11-19T19:46:23.799954+01:00",
-  "completed_at": "2026-11-19T19:46:27.376852+01:00",
-  "delay_seconds": 83,
+  "scheduled_at": "2026-11-19T19:50:00+01:00",
+  "started_at": "2026-11-19T19:51:17.413945+01:00",
+  "completed_at": "2026-11-19T19:51:20.388868+01:00",
+  "delay_seconds": 77,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 168,
+      "total_items": 208,
       "meat_items": [
         {
           "product_id": 622556,
@@ -201,7 +201,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 216,
+      "total_items": 257,
       "meat_items": [
         {
           "product_id": 187604,
@@ -452,7 +452,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 211,
+      "total_items": 212,
       "meat_items": [
         {
           "product_id": 610029,
@@ -655,7 +655,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 112,
+      "total_items": 162,
       "meat_items": [
         {
           "product_id": 477571,
@@ -846,7 +846,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 91,
+      "total_items": 124,
       "meat_items": [
         {
           "product_id": 165535,
@@ -870,18 +870,6 @@
           "stock": 1.0,
           "price_was": "7.25",
           "price_now": "2.18",
-          "expires": "2026-11-19"
-        },
-        {
-          "product_id": 620806,
-          "title": "AH Ovenschotel varkenshaas brie",
-          "brand": "AH",
-          "size": "290 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
           "expires": "2026-11-19"
         },
         {
@@ -944,18 +932,6 @@
           "stock": 1.0,
           "price_was": "7.25",
           "price_now": "2.18",
-          "expires": "2026-11-19"
-        },
-        {
-          "product_id": 620806,
-          "title": "AH Ovenschotel varkenshaas brie",
-          "brand": "AH",
-          "size": "290 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
           "expires": "2026-11-19"
         },
         {
