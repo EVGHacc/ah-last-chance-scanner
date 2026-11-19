@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-19T17:50:00+01:00",
-  "started_at": "2026-11-19T17:51:18.791675+01:00",
-  "completed_at": "2026-11-19T17:51:21.779627+01:00",
-  "delay_seconds": 78,
+  "scheduled_at": "2026-11-19T17:55:00+01:00",
+  "started_at": "2026-11-19T17:56:30.800606+01:00",
+  "completed_at": "2026-11-19T17:56:34.193224+01:00",
+  "delay_seconds": 90,
   "late": false,
   "status": "OK",
   "stores": [
@@ -92,7 +92,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 231,
+      "total_items": 230,
       "meat_items": [
         {
           "product_id": 187604,
@@ -556,7 +556,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 96,
+      "total_items": 95,
       "meat_items": [
         {
           "product_id": 165535,
@@ -568,18 +568,6 @@
           "stock": 4.0,
           "price_was": "2.88",
           "price_now": "1.73",
-          "expires": "2026-11-19"
-        },
-        {
-          "product_id": 597950,
-          "title": "AH Biologisch Hamburger 4 stuks",
-          "brand": "AH Biologisch",
-          "size": "400 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "4.19",
           "expires": "2026-11-19"
         },
         {
