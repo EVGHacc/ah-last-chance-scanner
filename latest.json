@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-19T18:25:00+01:00",
-  "started_at": "2026-11-19T18:26:18.875525+01:00",
-  "completed_at": "2026-11-19T18:26:22.265521+01:00",
-  "delay_seconds": 78,
+  "scheduled_at": "2026-11-19T18:30:00+01:00",
+  "started_at": "2026-11-19T18:31:20.003532+01:00",
+  "completed_at": "2026-11-19T18:31:24.076631+01:00",
+  "delay_seconds": 80,
   "late": false,
   "status": "OK",
   "stores": [
@@ -18,10 +18,10 @@
           "brand": "AH",
           "size": "300 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 7.0,
           "price_was": "4.99",
-          "price_now": "2.99",
+          "price_now": "1.50",
           "expires": "2026-11-19"
         },
         {
@@ -30,10 +30,10 @@
           "brand": "AH Excellent",
           "size": "ca. 225 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 2.0,
           "price_was": "10.46",
-          "price_now": "6.28",
+          "price_now": "3.14",
           "expires": "2026-11-19"
         },
         {
@@ -73,7 +73,32 @@
           "expires": "2026-11-23"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 622556,
+          "title": "AH Rundergehakt Mexicaanse stijl",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 7.0,
+          "price_was": "4.99",
+          "price_now": "1.50",
+          "expires": "2026-11-19"
+        },
+        {
+          "product_id": 379269,
+          "title": "AH Excellent Lamskotelet gemarineerd",
+          "brand": "AH Excellent",
+          "size": "ca. 225 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "10.46",
+          "price_now": "3.14",
+          "expires": "2026-11-19"
+        }
+      ],
       "error": ""
     },
     {
