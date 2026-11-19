@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-19T19:10:00+01:00",
-  "started_at": "2026-11-19T19:11:25.664248+01:00",
-  "completed_at": "2026-11-19T19:11:28.040492+01:00",
-  "delay_seconds": 85,
+  "scheduled_at": "2026-11-19T19:15:00+01:00",
+  "started_at": "2026-11-19T19:16:17.002176+01:00",
+  "completed_at": "2026-11-19T19:16:22.273133+01:00",
+  "delay_seconds": 77,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 137,
+      "total_items": 142,
       "meat_items": [
         {
           "product_id": 622556,
@@ -42,10 +42,10 @@
           "brand": "AH",
           "size": "ca. 500 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "5.49",
-          "price_now": "3.29",
+          "price_now": "1.65",
           "expires": "2026-11-19"
         },
         {
@@ -96,6 +96,18 @@
           "stock": 2.0,
           "price_was": "10.46",
           "price_now": "3.14",
+          "expires": "2026-11-19"
+        },
+        {
+          "product_id": 561365,
+          "title": "AH Magere hamlap",
+          "brand": "AH",
+          "size": "ca. 500 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "5.49",
+          "price_now": "1.65",
           "expires": "2026-11-19"
         }
       ],
@@ -642,7 +654,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 90,
+      "total_items": 86,
       "meat_items": [
         {
           "product_id": 165535,
