@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-19T19:25:00+01:00",
-  "started_at": "2026-11-19T19:26:17.224823+01:00",
-  "completed_at": "2026-11-19T19:26:21.219631+01:00",
-  "delay_seconds": 77,
+  "scheduled_at": "2026-11-19T19:30:00+01:00",
+  "started_at": "2026-11-19T19:31:18.996745+01:00",
+  "completed_at": "2026-11-19T19:31:21.474085+01:00",
+  "delay_seconds": 78,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 151,
+      "total_items": 155,
       "meat_items": [
         {
           "product_id": 622556,
@@ -49,6 +49,18 @@
           "expires": "2026-11-19"
         },
         {
+          "product_id": 232208,
+          "title": "AH Varkenshaas",
+          "brand": "AH",
+          "size": "ca. 480 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 3.0,
+          "price_was": "6.00",
+          "price_now": "4.50",
+          "expires": "2026-11-20"
+        },
+        {
           "product_id": 385506,
           "title": "AH Biologisch Gerookte kipfilet",
           "brand": "AH Biologisch",
@@ -58,6 +70,42 @@
           "stock": 3.0,
           "price_was": "4.72",
           "price_now": "3.54",
+          "expires": "2026-11-20"
+        },
+        {
+          "product_id": 589094,
+          "title": "AH Scharrel kipburger 4 stuks",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "5.49",
+          "price_now": "4.12",
+          "expires": "2026-11-20"
+        },
+        {
+          "product_id": 187605,
+          "title": "AH Schnitzel Hongaarse stijl 2 stuks",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "2.99",
+          "expires": "2026-11-20"
+        },
+        {
+          "product_id": 232141,
+          "title": "AH Schouderkarbonade",
+          "brand": "AH",
+          "size": "ca. 620 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "5.18",
+          "price_now": "3.89",
           "expires": "2026-11-20"
         },
         {
@@ -117,7 +165,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 220,
+      "total_items": 218,
       "meat_items": [
         {
           "product_id": 187604,
@@ -156,6 +204,18 @@
           "expires": "2026-11-19"
         },
         {
+          "product_id": 192045,
+          "title": "AH Varkens chipolataworstjes",
+          "brand": "AH",
+          "size": "8 stuks",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "3.25",
+          "price_now": "0.98",
+          "expires": "2026-11-19"
+        },
+        {
           "product_id": 477571,
           "title": "AH Scharrel gebraden kipfilet caesar",
           "brand": "AH",
@@ -168,6 +228,18 @@
           "expires": "2026-11-19"
         },
         {
+          "product_id": 199712,
+          "title": "AH Rundervink 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
+          "expires": "2026-11-19"
+        },
+        {
           "product_id": 238950,
           "title": "AH Rundersoepvlees",
           "brand": "AH",
@@ -177,30 +249,6 @@
           "stock": 1.0,
           "price_was": "7.99",
           "price_now": "2.40",
-          "expires": "2026-11-19"
-        },
-        {
-          "product_id": 192045,
-          "title": "AH Varkens chipolataworstjes",
-          "brand": "AH",
-          "size": "8 stuks",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "3.25",
-          "price_now": "1.95",
-          "expires": "2026-11-19"
-        },
-        {
-          "product_id": 199712,
-          "title": "AH Rundervink 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "2.39",
           "expires": "2026-11-19"
         },
         {
@@ -314,6 +362,18 @@
           "expires": "2026-11-19"
         },
         {
+          "product_id": 192045,
+          "title": "AH Varkens chipolataworstjes",
+          "brand": "AH",
+          "size": "8 stuks",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "3.25",
+          "price_now": "0.98",
+          "expires": "2026-11-19"
+        },
+        {
           "product_id": 477571,
           "title": "AH Scharrel gebraden kipfilet caesar",
           "brand": "AH",
@@ -323,6 +383,18 @@
           "stock": 1.0,
           "price_was": "3.79",
           "price_now": "1.14",
+          "expires": "2026-11-19"
+        },
+        {
+          "product_id": 199712,
+          "title": "AH Rundervink 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
           "expires": "2026-11-19"
         },
         {
@@ -359,6 +431,42 @@
           "expires": "2026-11-19"
         },
         {
+          "product_id": 123836,
+          "title": "AH Kogelbiefstuk",
+          "brand": "AH",
+          "size": "ca. 270 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "9.86",
+          "price_now": "2.96",
+          "expires": "2026-11-19"
+        },
+        {
+          "product_id": 598621,
+          "title": "AH Filetlapjes à la minute gemarineerd",
+          "brand": "AH",
+          "size": "ca. 350 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
+          "expires": "2026-11-19"
+        },
+        {
+          "product_id": 597949,
+          "title": "AH Speklapjes a la minute",
+          "brand": "AH",
+          "size": "ca. 350 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "5.29",
+          "price_now": "1.59",
+          "expires": "2026-11-19"
+        },
+        {
           "product_id": 620844,
           "title": "AH Greenfields Greenfields diamanthaas",
           "brand": "AH Greenfields",
@@ -371,51 +479,15 @@
           "expires": "2026-11-19"
         },
         {
-          "product_id": 123836,
-          "title": "AH Kogelbiefstuk",
-          "brand": "AH",
-          "size": "ca. 270 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "9.86",
-          "price_now": "5.92",
-          "expires": "2026-11-19"
-        },
-        {
-          "product_id": 598621,
-          "title": "AH Filetlapjes à la minute gemarineerd",
-          "brand": "AH",
-          "size": "ca. 350 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "2.39",
-          "expires": "2026-11-19"
-        },
-        {
-          "product_id": 597949,
-          "title": "AH Speklapjes a la minute",
-          "brand": "AH",
-          "size": "ca. 350 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "5.29",
-          "price_now": "3.17",
-          "expires": "2026-11-19"
-        },
-        {
           "product_id": 441916,
           "title": "AH Excellent Ultimate beefburger",
           "brand": "AH Excellent",
           "size": "150 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "3.49",
-          "price_now": "2.09",
+          "price_now": "1.05",
           "expires": "2026-11-19"
         },
         {
@@ -424,10 +496,10 @@
           "brand": "AH",
           "size": "ca. 720 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "11.99",
-          "price_now": "7.19",
+          "price_now": "3.60",
           "expires": "2026-11-19"
         },
         {
@@ -457,6 +529,42 @@
           "expires": "2026-11-19"
         },
         {
+          "product_id": 123836,
+          "title": "AH Kogelbiefstuk",
+          "brand": "AH",
+          "size": "ca. 270 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "9.86",
+          "price_now": "2.96",
+          "expires": "2026-11-19"
+        },
+        {
+          "product_id": 598621,
+          "title": "AH Filetlapjes à la minute gemarineerd",
+          "brand": "AH",
+          "size": "ca. 350 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
+          "expires": "2026-11-19"
+        },
+        {
+          "product_id": 597949,
+          "title": "AH Speklapjes a la minute",
+          "brand": "AH",
+          "size": "ca. 350 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "5.29",
+          "price_now": "1.59",
+          "expires": "2026-11-19"
+        },
+        {
           "product_id": 620844,
           "title": "AH Greenfields Greenfields diamanthaas",
           "brand": "AH Greenfields",
@@ -466,6 +574,30 @@
           "stock": 1.0,
           "price_was": "9.99",
           "price_now": "3.00",
+          "expires": "2026-11-19"
+        },
+        {
+          "product_id": 441916,
+          "title": "AH Excellent Ultimate beefburger",
+          "brand": "AH Excellent",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.49",
+          "price_now": "1.05",
+          "expires": "2026-11-19"
+        },
+        {
+          "product_id": 187574,
+          "title": "AH Riblap",
+          "brand": "AH",
+          "size": "ca. 720 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "11.99",
+          "price_now": "3.60",
           "expires": "2026-11-19"
         },
         {
@@ -487,7 +619,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 115,
+      "total_items": 114,
       "meat_items": [
         {
           "product_id": 477571,
