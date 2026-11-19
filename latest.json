@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-19T21:35:00+01:00",
-  "started_at": "2026-11-19T21:36:39.164598+01:00",
-  "completed_at": "2026-11-19T21:36:42.357032+01:00",
-  "delay_seconds": 99,
+  "scheduled_at": "2026-11-19T21:40:00+01:00",
+  "started_at": "2026-11-19T21:41:42.680201+01:00",
+  "completed_at": "2026-11-19T21:41:45.715908+01:00",
+  "delay_seconds": 102,
   "late": false,
   "status": "OK",
   "stores": [
@@ -332,7 +332,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 191,
+      "total_items": 179,
       "meat_items": [
         {
           "product_id": 610029,
@@ -630,7 +630,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 176,
+      "total_items": 178,
       "meat_items": [
         {
           "product_id": 165535,
@@ -667,6 +667,18 @@
           "price_was": "4.72",
           "price_now": "1.42",
           "expires": "2026-11-19"
+        },
+        {
+          "product_id": 436756,
+          "title": "AH Biologisch Hamburger 2 stuks",
+          "brand": "AH Biologisch",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 35.0,
+          "stock": 1.0,
+          "price_was": "4.39",
+          "price_now": "2.85",
+          "expires": "2026-11-20"
         },
         {
           "product_id": 619330,
@@ -726,6 +738,18 @@
           "stock": 1.0,
           "price_was": "2.99",
           "price_now": "2.24",
+          "expires": "2026-11-20"
+        },
+        {
+          "product_id": 193020,
+          "title": "AH Runderbraadworst",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.69",
+          "price_now": "2.77",
           "expires": "2026-11-20"
         },
         {
