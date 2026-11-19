@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-19T17:30:00+01:00",
-  "started_at": "2026-11-19T17:31:16.570260+01:00",
-  "completed_at": "2026-11-19T17:31:20.148099+01:00",
-  "delay_seconds": 76,
+  "scheduled_at": "2026-11-19T17:35:00+01:00",
+  "started_at": "2026-11-19T17:36:25.526086+01:00",
+  "completed_at": "2026-11-19T17:36:28.648685+01:00",
+  "delay_seconds": 85,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 143,
+      "total_items": 142,
       "meat_items": [
         {
           "product_id": 622556,
@@ -92,7 +92,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 236,
+      "total_items": 235,
       "meat_items": [
         {
           "product_id": 187604,
@@ -297,18 +297,6 @@
           "expires": "2026-11-19"
         },
         {
-          "product_id": 379269,
-          "title": "AH Excellent Lamskotelet gemarineerd",
-          "brand": "AH Excellent",
-          "size": "ca. 225 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "10.46",
-          "price_now": "6.28",
-          "expires": "2026-11-19"
-        },
-        {
           "product_id": 598621,
           "title": "AH Filetlapjes à la minute gemarineerd",
           "brand": "AH",
@@ -369,6 +357,18 @@
           "expires": "2026-11-19"
         },
         {
+          "product_id": 379269,
+          "title": "AH Excellent Lamskotelet gemarineerd",
+          "brand": "AH Excellent",
+          "size": "ca. 225 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 1.0,
+          "price_was": "10.46",
+          "price_now": "6.28",
+          "expires": "2026-11-19"
+        },
+        {
           "product_id": 620853,
           "title": "AH Kipreepjes Italiaans",
           "brand": "AH",
@@ -401,7 +401,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 122,
+      "total_items": 121,
       "meat_items": [
         {
           "product_id": 477571,
@@ -568,7 +568,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 102,
+      "total_items": 101,
       "meat_items": [
         {
           "product_id": 165535,
