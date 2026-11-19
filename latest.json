@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-19T17:35:00+01:00",
-  "started_at": "2026-11-19T17:36:25.526086+01:00",
-  "completed_at": "2026-11-19T17:36:28.648685+01:00",
-  "delay_seconds": 85,
+  "scheduled_at": "2026-11-19T17:40:00+01:00",
+  "started_at": "2026-11-19T17:41:18.821947+01:00",
+  "completed_at": "2026-11-19T17:41:22.422015+01:00",
+  "delay_seconds": 78,
   "late": false,
   "status": "OK",
   "stores": [
@@ -270,7 +270,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 175,
+      "total_items": 173,
       "meat_items": [
         {
           "product_id": 610029,
@@ -464,18 +464,6 @@
           "expires": "2026-11-20"
         },
         {
-          "product_id": 531852,
-          "title": "AH Scharrel kipbraadworst 4 stuks",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "3.99",
-          "price_now": "2.39",
-          "expires": "2026-11-20"
-        },
-        {
           "product_id": 619330,
           "title": "AH Gegrilde halve kip sweet chili",
           "brand": "AH",
@@ -497,6 +485,18 @@
           "stock": 1.0,
           "price_was": "4.49",
           "price_now": "2.15",
+          "expires": "2026-11-20"
+        },
+        {
+          "product_id": 531852,
+          "title": "AH Scharrel kipbraadworst 4 stuks",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "2.39",
           "expires": "2026-11-20"
         },
         {
@@ -568,7 +568,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 101,
+      "total_items": 99,
       "meat_items": [
         {
           "product_id": 165535,
@@ -580,18 +580,6 @@
           "stock": 4.0,
           "price_was": "2.88",
           "price_now": "1.73",
-          "expires": "2026-11-19"
-        },
-        {
-          "product_id": 598619,
-          "title": "AH Speklapjes à la minute smokey bacon",
-          "brand": "AH",
-          "size": "ca. 350 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "2.99",
           "expires": "2026-11-19"
         },
         {
