@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-19T18:55:00+01:00",
-  "started_at": "2026-11-19T18:56:16.911338+01:00",
-  "completed_at": "2026-11-19T18:56:19.727113+01:00",
-  "delay_seconds": 76,
+  "scheduled_at": "2026-11-19T19:00:00+01:00",
+  "started_at": "2026-11-19T19:01:27.909941+01:00",
+  "completed_at": "2026-11-19T19:01:31.296956+01:00",
+  "delay_seconds": 87,
   "late": false,
   "status": "OK",
   "stores": [
@@ -645,6 +645,18 @@
       "total_items": 91,
       "meat_items": [
         {
+          "product_id": 165535,
+          "title": "AH Scharrel kipfilet gerookt",
+          "brand": "AH",
+          "size": "ca. 140 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 4.0,
+          "price_was": "2.88",
+          "price_now": "0.86",
+          "expires": "2026-11-19"
+        },
+        {
           "product_id": 597944,
           "title": "AH Biologisch Varkensschnitzel",
           "brand": "AH Biologisch",
@@ -669,15 +681,15 @@
           "expires": "2026-11-19"
         },
         {
-          "product_id": 165535,
-          "title": "AH Scharrel kipfilet gerookt",
-          "brand": "AH",
-          "size": "ca. 140 g",
+          "product_id": 385506,
+          "title": "AH Biologisch Gerookte kipfilet",
+          "brand": "AH Biologisch",
+          "size": "ca. 125 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 4.0,
-          "price_was": "2.88",
-          "price_now": "1.73",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.72",
+          "price_now": "1.42",
           "expires": "2026-11-19"
         },
         {
@@ -690,18 +702,6 @@
           "stock": 1.0,
           "price_was": "3.69",
           "price_now": "1.88",
-          "expires": "2026-11-19"
-        },
-        {
-          "product_id": 385506,
-          "title": "AH Biologisch Gerookte kipfilet",
-          "brand": "AH Biologisch",
-          "size": "ca. 125 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "4.72",
-          "price_now": "2.83",
           "expires": "2026-11-19"
         },
         {
@@ -719,6 +719,18 @@
       ],
       "meat70": [
         {
+          "product_id": 165535,
+          "title": "AH Scharrel kipfilet gerookt",
+          "brand": "AH",
+          "size": "ca. 140 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 4.0,
+          "price_was": "2.88",
+          "price_now": "0.86",
+          "expires": "2026-11-19"
+        },
+        {
           "product_id": 597944,
           "title": "AH Biologisch Varkensschnitzel",
           "brand": "AH Biologisch",
@@ -740,6 +752,18 @@
           "stock": 1.0,
           "price_was": "6.99",
           "price_now": "2.10",
+          "expires": "2026-11-19"
+        },
+        {
+          "product_id": 385506,
+          "title": "AH Biologisch Gerookte kipfilet",
+          "brand": "AH Biologisch",
+          "size": "ca. 125 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.72",
+          "price_now": "1.42",
           "expires": "2026-11-19"
         }
       ],
