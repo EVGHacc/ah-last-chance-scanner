@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-19T21:30:00+01:00",
-  "started_at": "2026-11-19T21:31:39.857185+01:00",
-  "completed_at": "2026-11-19T21:31:45.232226+01:00",
+  "scheduled_at": "2026-11-19T21:35:00+01:00",
+  "started_at": "2026-11-19T21:36:39.164598+01:00",
+  "completed_at": "2026-11-19T21:36:42.357032+01:00",
   "delay_seconds": 99,
   "late": false,
   "status": "OK",
@@ -630,7 +630,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 174,
+      "total_items": 176,
       "meat_items": [
         {
           "product_id": 165535,
@@ -681,6 +681,18 @@
           "expires": "2026-11-20"
         },
         {
+          "product_id": 619321,
+          "title": "AH Gemengd gehakt",
+          "brand": "AH",
+          "size": "1 kg",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "7.99",
+          "price_now": "5.99",
+          "expires": "2026-11-20"
+        },
+        {
           "product_id": 531890,
           "title": "AH Kalkoenfilet blokjes",
           "brand": "AH",
@@ -702,6 +714,18 @@
           "stock": 2.0,
           "price_was": "7.49",
           "price_now": "4.87",
+          "expires": "2026-11-20"
+        },
+        {
+          "product_id": 619322,
+          "title": "AH Varkensgehakt",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "2.99",
+          "price_now": "2.24",
           "expires": "2026-11-20"
         },
         {
