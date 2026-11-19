@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-19T22:15:00+01:00",
-  "started_at": "2026-11-19T22:16:18.144506+01:00",
-  "completed_at": "2026-11-19T22:16:20.876305+01:00",
+  "scheduled_at": "2026-11-19T22:20:00+01:00",
+  "started_at": "2026-11-19T22:21:18.274688+01:00",
+  "completed_at": "2026-11-19T22:21:21.814981+01:00",
   "delay_seconds": 78,
   "late": false,
   "status": "OK",
@@ -633,6 +633,18 @@
       "total_items": 147,
       "meat_items": [
         {
+          "product_id": 232208,
+          "title": "AH Varkenshaas",
+          "brand": "AH",
+          "size": "ca. 480 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 15.0,
+          "price_was": "6.00",
+          "price_now": "3.24",
+          "expires": "2026-11-20"
+        },
+        {
           "product_id": 436756,
           "title": "AH Biologisch Hamburger 2 stuks",
           "brand": "AH Biologisch",
@@ -642,18 +654,6 @@
           "stock": 1.0,
           "price_was": "4.39",
           "price_now": "2.85",
-          "expires": "2026-11-20"
-        },
-        {
-          "product_id": 232208,
-          "title": "AH Varkenshaas",
-          "brand": "AH",
-          "size": "ca. 480 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 15.0,
-          "price_was": "6.00",
-          "price_now": "4.05",
           "expires": "2026-11-20"
         },
         {
