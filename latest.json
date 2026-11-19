@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-19T21:40:00+01:00",
-  "started_at": "2026-11-19T21:41:42.680201+01:00",
-  "completed_at": "2026-11-19T21:41:45.715908+01:00",
-  "delay_seconds": 102,
+  "scheduled_at": "2026-11-19T21:45:00+01:00",
+  "started_at": "2026-11-19T21:46:19.125693+01:00",
+  "completed_at": "2026-11-19T21:46:22.778941+01:00",
+  "delay_seconds": 79,
   "late": false,
   "status": "OK",
   "stores": [
@@ -439,7 +439,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 157,
+      "total_items": 156,
       "meat_items": [
         {
           "product_id": 477571,
@@ -451,18 +451,6 @@
           "stock": 6.0,
           "price_was": "3.79",
           "price_now": "1.14",
-          "expires": "2026-11-19"
-        },
-        {
-          "product_id": 199713,
-          "title": "AH Slavink",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "2.39",
-          "price_now": "0.72",
           "expires": "2026-11-19"
         },
         {
@@ -487,6 +475,18 @@
           "stock": 2.0,
           "price_was": "3.69",
           "price_now": "1.11",
+          "expires": "2026-11-19"
+        },
+        {
+          "product_id": 199713,
+          "title": "AH Slavink",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "2.39",
+          "price_now": "0.72",
           "expires": "2026-11-19"
         },
         {
@@ -588,18 +588,6 @@
           "expires": "2026-11-19"
         },
         {
-          "product_id": 199713,
-          "title": "AH Slavink",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "2.39",
-          "price_now": "0.72",
-          "expires": "2026-11-19"
-        },
-        {
           "product_id": 165535,
           "title": "AH Scharrel kipfilet gerookt",
           "brand": "AH",
@@ -622,6 +610,18 @@
           "price_was": "3.69",
           "price_now": "1.11",
           "expires": "2026-11-19"
+        },
+        {
+          "product_id": 199713,
+          "title": "AH Slavink",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "2.39",
+          "price_now": "0.72",
+          "expires": "2026-11-19"
         }
       ],
       "error": ""
@@ -630,7 +630,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 178,
+      "total_items": 180,
       "meat_items": [
         {
           "product_id": 165535,
@@ -678,6 +678,30 @@
           "stock": 1.0,
           "price_was": "4.39",
           "price_now": "2.85",
+          "expires": "2026-11-20"
+        },
+        {
+          "product_id": 232208,
+          "title": "AH Varkenshaas",
+          "brand": "AH",
+          "size": "ca. 480 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 15.0,
+          "price_was": "6.00",
+          "price_now": "4.05",
+          "expires": "2026-11-20"
+        },
+        {
+          "product_id": 169422,
+          "title": "AH Varkensbraadworst",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 5.0,
+          "price_was": "2.29",
+          "price_now": "1.72",
           "expires": "2026-11-20"
         },
         {
