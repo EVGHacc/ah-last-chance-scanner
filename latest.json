@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-19T18:20:00+01:00",
-  "started_at": "2026-11-19T18:21:17.548341+01:00",
-  "completed_at": "2026-11-19T18:21:21.156963+01:00",
-  "delay_seconds": 77,
+  "scheduled_at": "2026-11-19T18:25:00+01:00",
+  "started_at": "2026-11-19T18:26:18.875525+01:00",
+  "completed_at": "2026-11-19T18:26:22.265521+01:00",
+  "delay_seconds": 78,
   "late": false,
   "status": "OK",
   "stores": [
@@ -80,7 +80,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 229,
+      "total_items": 227,
       "meat_items": [
         {
           "product_id": 187604,
@@ -152,18 +152,6 @@
           "stock": 2.0,
           "price_was": "3.25",
           "price_now": "1.95",
-          "expires": "2026-11-19"
-        },
-        {
-          "product_id": 600463,
-          "title": "AH Biologisch Kipfiletreepjes",
-          "brand": "AH Biologisch",
-          "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "7.99",
-          "price_now": "4.79",
           "expires": "2026-11-19"
         },
         {
@@ -519,7 +507,7 @@
           "size": "150 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 4.0,
+          "stock": 2.0,
           "price_was": "1.99",
           "price_now": "1.19",
           "expires": "2026-11-20"
