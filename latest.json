@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-19T19:35:00+01:00",
-  "started_at": "2026-11-19T19:36:20.759964+01:00",
-  "completed_at": "2026-11-19T19:36:23.920063+01:00",
-  "delay_seconds": 80,
+  "scheduled_at": "2026-11-19T19:40:00+01:00",
+  "started_at": "2026-11-19T19:41:23.470953+01:00",
+  "completed_at": "2026-11-19T19:41:27.458013+01:00",
+  "delay_seconds": 83,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 158,
+      "total_items": 161,
       "meat_items": [
         {
           "product_id": 622556,
@@ -121,6 +121,18 @@
           "expires": "2026-11-20"
         },
         {
+          "product_id": 531881,
+          "title": "AH Scharrel kipborrelhapjes",
+          "brand": "AH",
+          "size": "900 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "7.49",
+          "price_now": "4.87",
+          "expires": "2026-11-20"
+        },
+        {
           "product_id": 232141,
           "title": "AH Schouderkarbonade",
           "brand": "AH",
@@ -189,7 +201,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 217,
+      "total_items": 216,
       "meat_items": [
         {
           "product_id": 187604,
@@ -643,7 +655,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 113,
+      "total_items": 112,
       "meat_items": [
         {
           "product_id": 477571,
