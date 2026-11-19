@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-19T19:30:00+01:00",
-  "started_at": "2026-11-19T19:31:18.996745+01:00",
-  "completed_at": "2026-11-19T19:31:21.474085+01:00",
-  "delay_seconds": 78,
+  "scheduled_at": "2026-11-19T19:35:00+01:00",
+  "started_at": "2026-11-19T19:36:20.759964+01:00",
+  "completed_at": "2026-11-19T19:36:23.920063+01:00",
+  "delay_seconds": 80,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 155,
+      "total_items": 158,
       "meat_items": [
         {
           "product_id": 622556,
@@ -49,6 +49,18 @@
           "expires": "2026-11-19"
         },
         {
+          "product_id": 619322,
+          "title": "AH Varkensgehakt",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 4.0,
+          "price_was": "2.99",
+          "price_now": "2.24",
+          "expires": "2026-11-20"
+        },
+        {
           "product_id": 232208,
           "title": "AH Varkenshaas",
           "brand": "AH",
@@ -82,6 +94,18 @@
           "stock": 1.0,
           "price_was": "5.49",
           "price_now": "4.12",
+          "expires": "2026-11-20"
+        },
+        {
+          "product_id": 619343,
+          "title": "AH Scharrel kipborrelhapjes naturel",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "4.29",
+          "price_now": "2.47",
           "expires": "2026-11-20"
         },
         {
@@ -165,7 +189,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 218,
+      "total_items": 217,
       "meat_items": [
         {
           "product_id": 187604,
@@ -416,7 +440,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 166,
+      "total_items": 165,
       "meat_items": [
         {
           "product_id": 610029,
@@ -619,7 +643,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 114,
+      "total_items": 113,
       "meat_items": [
         {
           "product_id": 477571,
@@ -651,10 +675,10 @@
           "brand": "AH",
           "size": "ca. 140 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 3.0,
           "price_was": "2.88",
-          "price_now": "1.73",
+          "price_now": "0.86",
           "expires": "2026-11-19"
         },
         {
@@ -663,10 +687,10 @@
           "brand": "AH",
           "size": "ca. 155 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 2.0,
           "price_was": "3.69",
-          "price_now": "2.21",
+          "price_now": "1.11",
           "expires": "2026-11-19"
         },
         {
@@ -777,6 +801,30 @@
           "stock": 6.0,
           "price_was": "2.39",
           "price_now": "0.72",
+          "expires": "2026-11-19"
+        },
+        {
+          "product_id": 165535,
+          "title": "AH Scharrel kipfilet gerookt",
+          "brand": "AH",
+          "size": "ca. 140 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "2.88",
+          "price_now": "0.86",
+          "expires": "2026-11-19"
+        },
+        {
+          "product_id": 531864,
+          "title": "AH Scharrel kipfilet plakjes gerookt",
+          "brand": "AH",
+          "size": "ca. 155 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "3.69",
+          "price_now": "1.11",
           "expires": "2026-11-19"
         }
       ],
