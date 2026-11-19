@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-19T21:00:00+01:00",
-  "started_at": "2026-11-19T21:01:23.028490+01:00",
-  "completed_at": "2026-11-19T21:01:25.822656+01:00",
-  "delay_seconds": 83,
+  "scheduled_at": "2026-11-19T21:05:00+01:00",
+  "started_at": "2026-11-19T21:06:17.416861+01:00",
+  "completed_at": "2026-11-19T21:06:21.580916+01:00",
+  "delay_seconds": 77,
   "late": false,
   "status": "OK",
   "stores": [
@@ -165,7 +165,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 243,
+      "total_items": 238,
       "meat_items": [
         {
           "product_id": 187604,
@@ -177,18 +177,6 @@
           "stock": 8.0,
           "price_was": "3.69",
           "price_now": "1.11",
-          "expires": "2026-11-19"
-        },
-        {
-          "product_id": 232208,
-          "title": "AH Varkenshaas",
-          "brand": "AH",
-          "size": "ca. 480 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 6.0,
-          "price_was": "6.00",
-          "price_now": "1.80",
           "expires": "2026-11-19"
         },
         {
@@ -299,18 +287,6 @@
           "stock": 8.0,
           "price_was": "3.69",
           "price_now": "1.11",
-          "expires": "2026-11-19"
-        },
-        {
-          "product_id": 232208,
-          "title": "AH Varkenshaas",
-          "brand": "AH",
-          "size": "ca. 480 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 6.0,
-          "price_was": "6.00",
-          "price_now": "1.80",
           "expires": "2026-11-19"
         },
         {
@@ -654,7 +630,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 159,
+      "total_items": 161,
       "meat_items": [
         {
           "product_id": 165535,
