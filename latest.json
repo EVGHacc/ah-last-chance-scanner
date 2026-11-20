@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T18:10:00+01:00",
-  "started_at": "2026-11-20T18:11:22.655955+01:00",
-  "completed_at": "2026-11-20T18:11:25.763147+01:00",
-  "delay_seconds": 82,
+  "scheduled_at": "2026-11-20T18:15:00+01:00",
+  "started_at": "2026-11-20T18:16:14.651141+01:00",
+  "completed_at": "2026-11-20T18:16:17.228154+01:00",
+  "delay_seconds": 74,
   "late": false,
   "status": "OK",
   "stores": [
@@ -101,7 +101,7 @@
           "size": "250 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 4.0,
+          "stock": 3.0,
           "price_was": "1.89",
           "price_now": "1.13",
           "expires": "2026-11-22"
@@ -150,7 +150,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 139,
+      "total_items": 138,
       "meat_items": [
         {
           "product_id": 619322,
@@ -220,7 +220,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 149,
+      "total_items": 148,
       "meat_items": [
         {
           "product_id": 598620,
@@ -641,18 +641,6 @@
           "expires": "2026-11-21"
         },
         {
-          "product_id": 589124,
-          "title": "AH Scharrel kipdijfiletblokjes",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 2.0,
-          "price_was": "3.99",
-          "price_now": "2.99",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 621981,
           "title": "AH Excellent Wagyu gehakt",
           "brand": "AH Excellent",
@@ -686,6 +674,18 @@
           "stock": 2.0,
           "price_was": "3.69",
           "price_now": "2.35",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 589124,
+          "title": "AH Scharrel kipdijfiletblokjes",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "2.99",
           "expires": "2026-11-21"
         },
         {
