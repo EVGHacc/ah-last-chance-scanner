@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T17:55:00+01:00",
-  "started_at": "2026-11-20T17:56:26.807692+01:00",
-  "completed_at": "2026-11-20T17:56:30.299952+01:00",
-  "delay_seconds": 86,
+  "scheduled_at": "2026-11-20T18:00:00+01:00",
+  "started_at": "2026-11-20T18:01:15.481069+01:00",
+  "completed_at": "2026-11-20T18:01:18.198546+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -162,7 +162,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 144,
+      "total_items": 141,
       "meat_items": [
         {
           "product_id": 612613,
@@ -186,18 +186,6 @@
           "stock": 1.0,
           "price_was": "2.99",
           "price_now": "1.79",
-          "expires": "2026-11-20"
-        },
-        {
-          "product_id": 426435,
-          "title": "AH Biefstukspiesjes tuinkruiden",
-          "brand": "AH",
-          "size": "ca. 300 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "9.99",
-          "price_now": "5.99",
           "expires": "2026-11-20"
         },
         {
@@ -256,7 +244,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 152,
+      "total_items": 151,
       "meat_items": [
         {
           "product_id": 598620,
@@ -530,7 +518,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 170,
+      "total_items": 168,
       "meat_items": [
         {
           "product_id": 232208,
@@ -671,7 +659,7 @@
           "size": "12 stuks",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 4.0,
+          "stock": 3.0,
           "price_was": "6.49",
           "price_now": "4.87",
           "expires": "2026-11-21"
@@ -681,18 +669,6 @@
           "title": "AH Scharrel kipdijfiletblokjes",
           "brand": "AH",
           "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 2.0,
-          "price_was": "3.99",
-          "price_now": "2.99",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 454769,
-          "title": "AH Scharrel kipreepjes Italiaans gebraden",
-          "brand": "AH",
-          "size": "150 g",
           "category": "Vlees",
           "discount_pct": 25.0,
           "stock": 2.0,
@@ -758,6 +734,18 @@
           "stock": 1.0,
           "price_was": "3.39",
           "price_now": "2.54",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 454769,
+          "title": "AH Scharrel kipreepjes Italiaans gebraden",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "2.99",
           "expires": "2026-11-21"
         },
         {
