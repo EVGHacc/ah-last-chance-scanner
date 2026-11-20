@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T18:40:00+01:00",
-  "started_at": "2026-11-20T18:41:13.242866+01:00",
-  "completed_at": "2026-11-20T18:41:16.646571+01:00",
-  "delay_seconds": 73,
+  "scheduled_at": "2026-11-20T18:45:00+01:00",
+  "started_at": "2026-11-20T18:46:18.677586+01:00",
+  "completed_at": "2026-11-20T18:46:21.505241+01:00",
+  "delay_seconds": 78,
   "late": false,
   "status": "OK",
   "stores": [
@@ -495,7 +495,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 158,
+      "total_items": 156,
       "meat_items": [
         {
           "product_id": 232208,
@@ -711,18 +711,6 @@
           "stock": 1.0,
           "price_was": "3.99",
           "price_now": "2.99",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 619348,
-          "title": "AH Scharrel kipblokjes paprika",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "3.69",
-          "price_now": "2.77",
           "expires": "2026-11-21"
         },
         {
