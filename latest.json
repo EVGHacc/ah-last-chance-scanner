@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T20:55:00+01:00",
-  "started_at": "2026-11-20T20:56:15.377641+01:00",
-  "completed_at": "2026-11-20T20:56:18.474523+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-20T21:00:00+01:00",
+  "started_at": "2026-11-20T21:01:17.457534+01:00",
+  "completed_at": "2026-11-20T21:01:21.840752+01:00",
+  "delay_seconds": 77,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 200,
+      "total_items": 204,
       "meat_items": [
         {
           "product_id": 385506,
@@ -37,18 +37,6 @@
           "expires": "2026-11-20"
         },
         {
-          "product_id": 531883,
-          "title": "AH Scharrel kipkluifjes",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "0.90",
-          "expires": "2026-11-20"
-        },
-        {
           "product_id": 531881,
           "title": "AH Scharrel kipborrelhapjes",
           "brand": "AH",
@@ -71,6 +59,66 @@
           "price_was": "5.49",
           "price_now": "3.29",
           "expires": "2026-11-20"
+        },
+        {
+          "product_id": 531883,
+          "title": "AH Scharrel kipkluifjes",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "0.90",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 531884,
+          "title": "AH Scharrel kipkluifjes gemarineerd",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 4.0,
+          "price_was": "3.89",
+          "price_now": "2.17",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 531874,
+          "title": "AH Scharrel kipchipolata gekruid",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "4.50",
+          "price_now": "3.38",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 219828,
+          "title": "AH Biologisch Kipfiletblokjes",
+          "brand": "AH Biologisch",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "7.99",
+          "price_now": "5.99",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 531850,
+          "title": "AH Scharrel kipfiletblokjes Thais",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "5.99",
+          "price_now": "4.49",
+          "expires": "2026-11-21"
         }
       ],
       "meat70": [
@@ -99,18 +147,6 @@
           "expires": "2026-11-20"
         },
         {
-          "product_id": 531883,
-          "title": "AH Scharrel kipkluifjes",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "0.90",
-          "expires": "2026-11-20"
-        },
-        {
           "product_id": 531881,
           "title": "AH Scharrel kipborrelhapjes",
           "brand": "AH",
@@ -121,6 +157,18 @@
           "price_was": "7.49",
           "price_now": "1.95",
           "expires": "2026-11-20"
+        },
+        {
+          "product_id": 531883,
+          "title": "AH Scharrel kipkluifjes",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "0.90",
+          "expires": "2026-11-21"
         }
       ],
       "error": ""
