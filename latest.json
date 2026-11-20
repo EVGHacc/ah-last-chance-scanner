@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T20:05:00+01:00",
-  "started_at": "2026-11-20T20:06:15.247089+01:00",
-  "completed_at": "2026-11-20T20:06:19.787264+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-20T20:10:00+01:00",
+  "started_at": "2026-11-20T20:11:17.001057+01:00",
+  "completed_at": "2026-11-20T20:11:21.350985+01:00",
+  "delay_seconds": 77,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 166,
+      "total_items": 168,
       "meat_items": [
         {
           "product_id": 232208,
@@ -129,7 +129,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 204,
+      "total_items": 203,
       "meat_items": [
         {
           "product_id": 197447,
@@ -187,20 +187,8 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 172,
+      "total_items": 174,
       "meat_items": [
-        {
-          "product_id": 551140,
-          "title": "AH Excellent Ultimate wagyu beefburger",
-          "brand": "AH Excellent",
-          "size": "130 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "1.20",
-          "expires": "2026-11-20"
-        },
         {
           "product_id": 531859,
           "title": "AH Scharrel kippenvleugels",
@@ -239,18 +227,6 @@
         }
       ],
       "meat70": [
-        {
-          "product_id": 551140,
-          "title": "AH Excellent Ultimate wagyu beefburger",
-          "brand": "AH Excellent",
-          "size": "130 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "1.20",
-          "expires": "2026-11-20"
-        },
         {
           "product_id": 531859,
           "title": "AH Scharrel kippenvleugels",
@@ -617,7 +593,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 169,
+      "total_items": 163,
       "meat_items": [
         {
           "product_id": 232208,
@@ -776,18 +752,6 @@
           "expires": "2026-11-21"
         },
         {
-          "product_id": 619337,
-          "title": "AH Scharrel sticky chicken Korean BBQ stijl",
-          "brand": "AH",
-          "size": "ca. 370 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "3.29",
-          "price_now": "2.47",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 619346,
           "title": "AH Kipchorizo worstjes",
           "brand": "AH",
@@ -833,18 +797,6 @@
           "stock": 1.0,
           "price_was": "3.59",
           "price_now": "2.69",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 4011,
-          "title": "AH Rundergehakt",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "5.31",
-          "price_now": "3.98",
           "expires": "2026-11-21"
         },
         {
