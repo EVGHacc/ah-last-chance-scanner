@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T18:20:00+01:00",
-  "started_at": "2026-11-20T18:21:33.087671+01:00",
-  "completed_at": "2026-11-20T18:21:35.812982+01:00",
-  "delay_seconds": 93,
+  "scheduled_at": "2026-11-20T18:25:00+01:00",
+  "started_at": "2026-11-20T18:26:17.201930+01:00",
+  "completed_at": "2026-11-20T18:26:21.081908+01:00",
+  "delay_seconds": 77,
   "late": false,
   "status": "OK",
   "stores": [
@@ -80,7 +80,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 172,
+      "total_items": 171,
       "meat_items": [
         {
           "product_id": 598620,
@@ -137,7 +137,7 @@
           "size": "250 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 3.0,
+          "stock": 2.0,
           "price_was": "3.59",
           "price_now": "2.15",
           "expires": "2026-11-26"
@@ -220,7 +220,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 148,
+      "total_items": 146,
       "meat_items": [
         {
           "product_id": 598620,
@@ -494,7 +494,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 167,
+      "total_items": 161,
       "meat_items": [
         {
           "product_id": 232208,
@@ -623,7 +623,7 @@
           "size": "ca. 550 g",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 5.0,
+          "stock": 4.0,
           "price_was": "4.89",
           "price_now": "3.67",
           "expires": "2026-11-21"
@@ -638,18 +638,6 @@
           "stock": 3.0,
           "price_was": "6.49",
           "price_now": "4.87",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 621981,
-          "title": "AH Excellent Wagyu gehakt",
-          "brand": "AH Excellent",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 2.0,
-          "price_was": "6.99",
-          "price_now": "5.24",
           "expires": "2026-11-21"
         },
         {
@@ -785,18 +773,6 @@
           "expires": "2026-11-21"
         },
         {
-          "product_id": 418194,
-          "title": "AH Ovenschotel beenham naturel",
-          "brand": "AH",
-          "size": "ca. 550 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "7.99",
-          "price_now": "5.99",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 187586,
           "title": "AH Chipolata worstjes 8 stuks",
           "brand": "AH",
@@ -830,18 +806,6 @@
           "stock": 1.0,
           "price_was": "3.65",
           "price_now": "2.34",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 219828,
-          "title": "AH Biologisch Kipfiletblokjes",
-          "brand": "AH Biologisch",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "7.99",
-          "price_now": "5.99",
           "expires": "2026-11-21"
         },
         {
