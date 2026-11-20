@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T18:35:00+01:00",
-  "started_at": "2026-11-20T18:36:14.833121+01:00",
-  "completed_at": "2026-11-20T18:36:18.827792+01:00",
-  "delay_seconds": 74,
+  "scheduled_at": "2026-11-20T18:40:00+01:00",
+  "started_at": "2026-11-20T18:41:13.242866+01:00",
+  "completed_at": "2026-11-20T18:41:16.646571+01:00",
+  "delay_seconds": 73,
   "late": false,
   "status": "OK",
   "stores": [
@@ -93,7 +93,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 170,
+      "total_items": 169,
       "meat_items": [
         {
           "product_id": 598620,
@@ -163,7 +163,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 136,
+      "total_items": 135,
       "meat_items": [
         {
           "product_id": 551140,
@@ -834,18 +834,6 @@
           "expires": "2026-11-22"
         },
         {
-          "product_id": 477885,
-          "title": "AH Scharrel kipflakes kebab",
-          "brand": "AH",
-          "size": "225 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 2.0,
-          "price_was": "3.99",
-          "price_now": "2.99",
-          "expires": "2026-11-23"
-        },
-        {
           "product_id": 531864,
           "title": "AH Scharrel kipfilet plakjes gerookt",
           "brand": "AH",
@@ -860,6 +848,18 @@
         {
           "product_id": 620854,
           "title": "AH Scharrel kipflakes BBQ",
+          "brand": "AH",
+          "size": "225 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "2.99",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 477885,
+          "title": "AH Scharrel kipflakes kebab",
           "brand": "AH",
           "size": "225 g",
           "category": "Vlees",
