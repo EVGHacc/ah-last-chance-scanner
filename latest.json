@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T21:35:00+01:00",
-  "started_at": "2026-11-20T21:36:16.743315+01:00",
-  "completed_at": "2026-11-20T21:36:19.191213+01:00",
-  "delay_seconds": 76,
+  "scheduled_at": "2026-11-20T21:40:00+01:00",
+  "started_at": "2026-11-20T21:41:18.235522+01:00",
+  "completed_at": "2026-11-20T21:41:22.266978+01:00",
+  "delay_seconds": 78,
   "late": false,
   "status": "OK",
   "stores": [
@@ -355,20 +355,8 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 170,
+      "total_items": 160,
       "meat_items": [
-        {
-          "product_id": 212143,
-          "title": "AH Runderreepjes naturel",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "8.75",
-          "price_now": "2.63",
-          "expires": "2026-11-20"
-        },
         {
           "product_id": 385506,
           "title": "AH Biologisch Gerookte kipfilet",
@@ -382,20 +370,7 @@
           "expires": "2026-11-23"
         }
       ],
-      "meat70": [
-        {
-          "product_id": 212143,
-          "title": "AH Runderreepjes naturel",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "8.75",
-          "price_now": "2.63",
-          "expires": "2026-11-20"
-        }
-      ],
+      "meat70": [],
       "error": ""
     },
     {
@@ -713,7 +688,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 152,
+      "total_items": 151,
       "meat_items": [
         {
           "product_id": 232208,
