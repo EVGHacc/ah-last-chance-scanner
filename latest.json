@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T20:40:00+01:00",
-  "started_at": "2026-11-20T20:41:18.353705+01:00",
-  "completed_at": "2026-11-20T20:41:21.899253+01:00",
-  "delay_seconds": 78,
+  "scheduled_at": "2026-11-20T20:45:00+01:00",
+  "started_at": "2026-11-20T20:46:20.866965+01:00",
+  "completed_at": "2026-11-20T20:46:25.701843+01:00",
+  "delay_seconds": 80,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 189,
+      "total_items": 191,
       "meat_items": [
         {
           "product_id": 385506,
@@ -297,18 +297,6 @@
           "expires": "2026-11-20"
         },
         {
-          "product_id": 598619,
-          "title": "AH Speklapjes à la minute smokey bacon",
-          "brand": "AH",
-          "size": "ca. 350 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 2.0,
-          "price_was": "4.99",
-          "price_now": "3.74",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 620808,
           "title": "AH Ovenschotel kipfilet tomaat mozzarella",
           "brand": "AH",
@@ -342,6 +330,18 @@
           "stock": 1.0,
           "price_was": "14.98",
           "price_now": "11.24",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 598619,
+          "title": "AH Speklapjes à la minute smokey bacon",
+          "brand": "AH",
+          "size": "ca. 350 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "4.99",
+          "price_now": "3.74",
           "expires": "2026-11-21"
         },
         {
@@ -569,7 +569,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 159,
+      "total_items": 158,
       "meat_items": [
         {
           "product_id": 232208,
@@ -674,7 +674,7 @@
           "size": "ca. 550 g",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 3.0,
+          "stock": 2.0,
           "price_was": "4.89",
           "price_now": "3.67",
           "expires": "2026-11-21"
