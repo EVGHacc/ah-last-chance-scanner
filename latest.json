@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T21:05:00+01:00",
-  "started_at": "2026-11-20T21:06:19.291010+01:00",
-  "completed_at": "2026-11-20T21:06:21.897425+01:00",
-  "delay_seconds": 79,
+  "scheduled_at": "2026-11-20T21:10:00+01:00",
+  "started_at": "2026-11-20T21:11:18.193783+01:00",
+  "completed_at": "2026-11-20T21:11:21.607649+01:00",
+  "delay_seconds": 78,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 213,
+      "total_items": 216,
       "meat_items": [
         {
           "product_id": 385506,
@@ -70,6 +70,18 @@
           "stock": 1.0,
           "price_was": "3.99",
           "price_now": "0.90",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 610029,
+          "title": "AH Partyburger",
+          "brand": "AH",
+          "size": "720 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 4.0,
+          "price_was": "6.99",
+          "price_now": "4.19",
           "expires": "2026-11-21"
         },
         {
@@ -133,6 +145,18 @@
           "expires": "2026-11-21"
         },
         {
+          "product_id": 4041,
+          "title": "AH Schouderkarbonade",
+          "brand": "AH",
+          "size": "ca. 427 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "4.46",
+          "price_now": "2.84",
+          "expires": "2026-11-21"
+        },
+        {
           "product_id": 436877,
           "title": "AH Biologisch Rundergehakt balletjes",
           "brand": "AH Biologisch",
@@ -178,6 +202,18 @@
           "stock": 1.0,
           "price_was": "3.99",
           "price_now": "2.99",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 622557,
+          "title": "AH Gehaktballetjes Italiaanse stijl",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "4.49",
+          "price_now": "3.37",
           "expires": "2026-11-21"
         },
         {
@@ -701,7 +737,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 158,
+      "total_items": 154,
       "meat_items": [
         {
           "product_id": 232208,
