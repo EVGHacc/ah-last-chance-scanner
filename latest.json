@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T20:00:00+01:00",
-  "started_at": "2026-11-20T20:01:25.353327+01:00",
-  "completed_at": "2026-11-20T20:01:29.241624+01:00",
-  "delay_seconds": 85,
+  "scheduled_at": "2026-11-20T20:05:00+01:00",
+  "started_at": "2026-11-20T20:06:15.247089+01:00",
+  "completed_at": "2026-11-20T20:06:19.787264+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 161,
+      "total_items": 166,
       "meat_items": [
         {
           "product_id": 232208,
@@ -187,7 +187,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 171,
+      "total_items": 172,
       "meat_items": [
         {
           "product_id": 551140,
@@ -617,7 +617,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 170,
+      "total_items": 169,
       "meat_items": [
         {
           "product_id": 232208,
