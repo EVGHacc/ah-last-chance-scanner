@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T19:20:00+01:00",
-  "started_at": "2026-11-20T19:21:36.236749+01:00",
-  "completed_at": "2026-11-20T19:21:39.632341+01:00",
-  "delay_seconds": 96,
+  "scheduled_at": "2026-11-20T19:25:00+01:00",
+  "started_at": "2026-11-20T19:26:16.236995+01:00",
+  "completed_at": "2026-11-20T19:26:20.128070+01:00",
+  "delay_seconds": 76,
   "late": false,
   "status": "OK",
   "stores": [
@@ -212,7 +212,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 135,
+      "total_items": 134,
       "meat_items": [
         {
           "product_id": 551140,
@@ -594,7 +594,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 151,
+      "total_items": 150,
       "meat_items": [
         {
           "product_id": 232208,
@@ -693,18 +693,6 @@
           "expires": "2026-11-21"
         },
         {
-          "product_id": 168027,
-          "title": "AH Biologisch Kipdrumsticks",
-          "brand": "AH Biologisch",
-          "size": "ca. 550 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 4.0,
-          "price_was": "4.89",
-          "price_now": "3.67",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 436877,
           "title": "AH Biologisch Rundergehakt balletjes",
           "brand": "AH Biologisch",
@@ -714,6 +702,18 @@
           "stock": 3.0,
           "price_was": "6.49",
           "price_now": "4.87",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 168027,
+          "title": "AH Biologisch Kipdrumsticks",
+          "brand": "AH Biologisch",
+          "size": "ca. 550 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 3.0,
+          "price_was": "4.89",
+          "price_now": "3.67",
           "expires": "2026-11-21"
         },
         {
