@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T20:30:00+01:00",
-  "started_at": "2026-11-20T20:31:22.243675+01:00",
-  "completed_at": "2026-11-20T20:31:26.058375+01:00",
-  "delay_seconds": 82,
+  "scheduled_at": "2026-11-20T20:35:00+01:00",
+  "started_at": "2026-11-20T20:36:14.001738+01:00",
+  "completed_at": "2026-11-20T20:36:17.422447+01:00",
+  "delay_seconds": 74,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 180,
+      "total_items": 182,
       "meat_items": [
         {
           "product_id": 385506,
@@ -234,7 +234,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 165,
+      "total_items": 164,
       "meat_items": [
         {
           "product_id": 598620,
@@ -569,7 +569,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 162,
+      "total_items": 160,
       "meat_items": [
         {
           "product_id": 232208,
@@ -593,18 +593,6 @@
           "stock": 1.0,
           "price_was": "5.45",
           "price_now": "1.64",
-          "expires": "2026-11-20"
-        },
-        {
-          "product_id": 619321,
-          "title": "AH Gemengd gehakt",
-          "brand": "AH",
-          "size": "1 kg",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "7.99",
-          "price_now": "2.40",
           "expires": "2026-11-20"
         },
         {
@@ -907,18 +895,6 @@
           "stock": 1.0,
           "price_was": "5.45",
           "price_now": "1.64",
-          "expires": "2026-11-20"
-        },
-        {
-          "product_id": 619321,
-          "title": "AH Gemengd gehakt",
-          "brand": "AH",
-          "size": "1 kg",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "7.99",
-          "price_now": "2.40",
           "expires": "2026-11-20"
         },
         {
