@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T22:05:00+01:00",
-  "started_at": "2026-11-20T22:06:15.608022+01:00",
-  "completed_at": "2026-11-20T22:06:19.442387+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-20T22:10:00+01:00",
+  "started_at": "2026-11-20T22:11:27.203300+01:00",
+  "completed_at": "2026-11-20T22:11:29.914963+01:00",
+  "delay_seconds": 87,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,20 +10,8 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 199,
+      "total_items": 189,
       "meat_items": [
-        {
-          "product_id": 232208,
-          "title": "AH Varkenshaas",
-          "brand": "AH",
-          "size": "ca. 480 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "6.00",
-          "price_now": "1.80",
-          "expires": "2026-11-20"
-        },
         {
           "product_id": 385506,
           "title": "AH Biologisch Gerookte kipfilet",
@@ -46,6 +34,18 @@
           "stock": 1.0,
           "price_was": "7.49",
           "price_now": "1.95",
+          "expires": "2026-11-20"
+        },
+        {
+          "product_id": 232208,
+          "title": "AH Varkenshaas",
+          "brand": "AH",
+          "size": "ca. 480 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "6.00",
+          "price_now": "1.80",
           "expires": "2026-11-20"
         },
         {
@@ -255,18 +255,6 @@
       ],
       "meat70": [
         {
-          "product_id": 232208,
-          "title": "AH Varkenshaas",
-          "brand": "AH",
-          "size": "ca. 480 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "6.00",
-          "price_now": "1.80",
-          "expires": "2026-11-20"
-        },
-        {
           "product_id": 385506,
           "title": "AH Biologisch Gerookte kipfilet",
           "brand": "AH Biologisch",
@@ -288,6 +276,18 @@
           "stock": 1.0,
           "price_was": "7.49",
           "price_now": "1.95",
+          "expires": "2026-11-20"
+        },
+        {
+          "product_id": 232208,
+          "title": "AH Varkenshaas",
+          "brand": "AH",
+          "size": "ca. 480 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "6.00",
+          "price_now": "1.80",
           "expires": "2026-11-20"
         }
       ],
