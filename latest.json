@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T18:25:00+01:00",
-  "started_at": "2026-11-20T18:26:17.201930+01:00",
-  "completed_at": "2026-11-20T18:26:21.081908+01:00",
-  "delay_seconds": 77,
+  "scheduled_at": "2026-11-20T18:30:00+01:00",
+  "started_at": "2026-11-20T18:31:19.260453+01:00",
+  "completed_at": "2026-11-20T18:31:21.577785+01:00",
+  "delay_seconds": 79,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 112,
+      "total_items": 111,
       "meat_items": [
         {
           "product_id": 232208,
@@ -18,10 +18,10 @@
           "brand": "AH",
           "size": "ca. 480 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 3.0,
           "price_was": "6.00",
-          "price_now": "3.60",
+          "price_now": "1.80",
           "expires": "2026-11-20"
         },
         {
@@ -73,14 +73,27 @@
           "expires": "2026-11-20"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 232208,
+          "title": "AH Varkenshaas",
+          "brand": "AH",
+          "size": "ca. 480 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "6.00",
+          "price_now": "1.80",
+          "expires": "2026-11-20"
+        }
+      ],
       "error": ""
     },
     {
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 171,
+      "total_items": 170,
       "meat_items": [
         {
           "product_id": 598620,
@@ -137,7 +150,7 @@
           "size": "250 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 2.0,
+          "stock": 1.0,
           "price_was": "3.59",
           "price_now": "2.15",
           "expires": "2026-11-26"
@@ -150,20 +163,8 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 138,
+      "total_items": 137,
       "meat_items": [
-        {
-          "product_id": 619322,
-          "title": "AH Varkensgehakt",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "2.99",
-          "price_now": "1.79",
-          "expires": "2026-11-20"
-        },
         {
           "product_id": 551140,
           "title": "AH Excellent Ultimate wagyu beefburger",
