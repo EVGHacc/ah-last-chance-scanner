@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T17:40:00+01:00",
-  "started_at": "2026-11-20T17:41:33.165845+01:00",
-  "completed_at": "2026-11-20T17:41:35.866935+01:00",
-  "delay_seconds": 93,
+  "scheduled_at": "2026-11-20T17:45:00+01:00",
+  "started_at": "2026-11-20T17:46:20.626899+01:00",
+  "completed_at": "2026-11-20T17:46:23.637928+01:00",
+  "delay_seconds": 80,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 116,
+      "total_items": 115,
       "meat_items": [
         {
           "product_id": 232208,
@@ -542,7 +542,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 174,
+      "total_items": 172,
       "meat_items": [
         {
           "product_id": 232208,
@@ -761,18 +761,6 @@
           "expires": "2026-11-21"
         },
         {
-          "product_id": 219828,
-          "title": "AH Biologisch Kipfiletblokjes",
-          "brand": "AH Biologisch",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 2.0,
-          "price_was": "7.99",
-          "price_now": "5.99",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 238948,
           "title": "AH Nasi bami vlees",
           "brand": "AH",
@@ -902,6 +890,18 @@
           "stock": 1.0,
           "price_was": "3.65",
           "price_now": "2.34",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 219828,
+          "title": "AH Biologisch Kipfiletblokjes",
+          "brand": "AH Biologisch",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "7.99",
+          "price_now": "5.99",
           "expires": "2026-11-21"
         },
         {
