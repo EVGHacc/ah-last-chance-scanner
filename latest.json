@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T17:35:00+01:00",
-  "started_at": "2026-11-20T17:36:15.105217+01:00",
-  "completed_at": "2026-11-20T17:36:19.248547+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-20T17:40:00+01:00",
+  "started_at": "2026-11-20T17:41:33.165845+01:00",
+  "completed_at": "2026-11-20T17:41:35.866935+01:00",
+  "delay_seconds": 93,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 117,
+      "total_items": 116,
       "meat_items": [
         {
           "product_id": 232208,
@@ -61,18 +61,6 @@
           "expires": "2026-11-20"
         },
         {
-          "product_id": 531832,
-          "title": "AH Scharrel kipdijfilet reepjes",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "2.54",
-          "expires": "2026-11-20"
-        },
-        {
           "product_id": 589094,
           "title": "AH Scharrel kipburger 4 stuks",
           "brand": "AH",
@@ -92,7 +80,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 177,
+      "total_items": 176,
       "meat_items": [
         {
           "product_id": 571286,
@@ -268,7 +256,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 160,
+      "total_items": 157,
       "meat_items": [
         {
           "product_id": 598620,
@@ -331,30 +319,6 @@
           "expires": "2026-11-20"
         },
         {
-          "product_id": 626382,
-          "title": "AH Scharrel kipdijfilet",
-          "brand": "AH",
-          "size": "530 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 3.0,
-          "price_was": "6.59",
-          "price_now": "4.94",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 219828,
-          "title": "AH Biologisch Kipfiletblokjes",
-          "brand": "AH Biologisch",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 3.0,
-          "price_was": "7.99",
-          "price_now": "5.99",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 232208,
           "title": "AH Varkenshaas",
           "brand": "AH",
@@ -388,6 +352,30 @@
           "stock": 2.0,
           "price_was": "6.99",
           "price_now": "5.24",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 626382,
+          "title": "AH Scharrel kipdijfilet",
+          "brand": "AH",
+          "size": "530 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "6.59",
+          "price_now": "4.94",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 219828,
+          "title": "AH Biologisch Kipfiletblokjes",
+          "brand": "AH Biologisch",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "7.99",
+          "price_now": "5.99",
           "expires": "2026-11-21"
         },
         {
@@ -523,18 +511,6 @@
           "expires": "2026-11-21"
         },
         {
-          "product_id": 379269,
-          "title": "AH Excellent Lamskotelet gemarineerd",
-          "brand": "AH Excellent",
-          "size": "ca. 225 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "10.46",
-          "price_now": "7.85",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 477571,
           "title": "AH Scharrel gebraden kipfilet caesar",
           "brand": "AH",
@@ -566,7 +542,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 178,
+      "total_items": 174,
       "meat_items": [
         {
           "product_id": 232208,
