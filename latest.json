@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-20T21:50:00+01:00",
-  "started_at": "2026-11-20T21:51:15.752227+01:00",
-  "completed_at": "2026-11-20T21:51:19.884509+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-20T21:55:00+01:00",
+  "started_at": "2026-11-20T21:56:17.678654+01:00",
+  "completed_at": "2026-11-20T21:56:22.214795+01:00",
+  "delay_seconds": 77,
   "late": false,
   "status": "OK",
   "stores": [
@@ -297,7 +297,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 197,
+      "total_items": 194,
       "meat_items": [
         {
           "product_id": 197447,
@@ -688,32 +688,8 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 153,
+      "total_items": 142,
       "meat_items": [
-        {
-          "product_id": 232208,
-          "title": "AH Varkenshaas",
-          "brand": "AH",
-          "size": "ca. 480 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 9.0,
-          "price_was": "6.00",
-          "price_now": "1.62",
-          "expires": "2026-11-20"
-        },
-        {
-          "product_id": 40562,
-          "title": "AH Varkensriblap",
-          "brand": "AH",
-          "size": "ca. 500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.45",
-          "price_now": "1.64",
-          "expires": "2026-11-20"
-        },
         {
           "product_id": 193020,
           "title": "AH Runderbraadworst",
@@ -992,30 +968,6 @@
         }
       ],
       "meat70": [
-        {
-          "product_id": 232208,
-          "title": "AH Varkenshaas",
-          "brand": "AH",
-          "size": "ca. 480 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 9.0,
-          "price_was": "6.00",
-          "price_now": "1.62",
-          "expires": "2026-11-20"
-        },
-        {
-          "product_id": 40562,
-          "title": "AH Varkensriblap",
-          "brand": "AH",
-          "size": "ca. 500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.45",
-          "price_now": "1.64",
-          "expires": "2026-11-20"
-        },
         {
           "product_id": 193020,
           "title": "AH Runderbraadworst",
