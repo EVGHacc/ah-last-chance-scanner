@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T21:30:00+01:00",
-  "started_at": "2026-11-21T21:31:24.116400+01:00",
-  "completed_at": "2026-11-21T21:31:26.692104+01:00",
-  "delay_seconds": 84,
+  "scheduled_at": "2026-11-21T21:35:00+01:00",
+  "started_at": "2026-11-21T21:36:14.254892+01:00",
+  "completed_at": "2026-11-21T21:36:17.481440+01:00",
+  "delay_seconds": 74,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,32 +10,8 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 179,
+      "total_items": 169,
       "meat_items": [
-        {
-          "product_id": 531884,
-          "title": "AH Scharrel kipkluifjes gemarineerd",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "3.89",
-          "price_now": "0.87",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 610029,
-          "title": "AH Partyburger",
-          "brand": "AH",
-          "size": "720 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 3.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
-          "expires": "2026-11-21"
-        },
         {
           "product_id": 232208,
           "title": "AH Varkenshaas",
@@ -43,21 +19,9 @@
           "size": "ca. 480 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 3.0,
+          "stock": 1.0,
           "price_was": "6.00",
           "price_now": "1.80",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 560559,
-          "title": "AH Scharrel kipburger smokey 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "2.99",
-          "price_now": "0.90",
           "expires": "2026-11-21"
         },
         {
@@ -183,51 +147,15 @@
       ],
       "meat70": [
         {
-          "product_id": 531884,
-          "title": "AH Scharrel kipkluifjes gemarineerd",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "3.89",
-          "price_now": "0.87",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 610029,
-          "title": "AH Partyburger",
-          "brand": "AH",
-          "size": "720 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 3.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 232208,
           "title": "AH Varkenshaas",
           "brand": "AH",
           "size": "ca. 480 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 3.0,
+          "stock": 1.0,
           "price_was": "6.00",
           "price_now": "1.80",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 560559,
-          "title": "AH Scharrel kipburger smokey 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "2.99",
-          "price_now": "0.90",
           "expires": "2026-11-21"
         }
       ],
@@ -619,7 +547,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 169,
+      "total_items": 168,
       "meat_items": [
         {
           "product_id": 556724,
