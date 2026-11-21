@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T18:20:00+01:00",
-  "started_at": "2026-11-21T18:21:13.414831+01:00",
-  "completed_at": "2026-11-21T18:21:16.379137+01:00",
-  "delay_seconds": 73,
+  "scheduled_at": "2026-11-21T18:25:00+01:00",
+  "started_at": "2026-11-21T18:26:22.120974+01:00",
+  "completed_at": "2026-11-21T18:26:24.219760+01:00",
+  "delay_seconds": 82,
   "late": false,
   "status": "OK",
   "stores": [
@@ -92,7 +92,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 151,
+      "total_items": 150,
       "meat_items": [
         {
           "product_id": 531832,
@@ -308,18 +308,6 @@
           "stock": 3.0,
           "price_was": "3.75",
           "price_now": "2.39",
-          "expires": "2026-11-22"
-        },
-        {
-          "product_id": 620814,
-          "title": "AH Ovenschotel kippendij drumstick piripiri",
-          "brand": "AH",
-          "size": "450 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "6.29",
-          "price_now": "4.72",
           "expires": "2026-11-22"
         },
         {
@@ -883,6 +871,18 @@
           "expires": "2026-11-22"
         },
         {
+          "product_id": 531858,
+          "title": "AH Scharrel kippensoeppakket met groente",
+          "brand": "AH",
+          "size": "ca. 600 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 3.0,
+          "price_was": "4.61",
+          "price_now": "3.46",
+          "expires": "2026-11-22"
+        },
+        {
           "product_id": 436758,
           "title": "AH Biologisch Duitse biefstuk",
           "brand": "AH Biologisch",
@@ -916,18 +916,6 @@
           "stock": 2.0,
           "price_was": "7.49",
           "price_now": "4.87",
-          "expires": "2026-11-22"
-        },
-        {
-          "product_id": 531858,
-          "title": "AH Scharrel kippensoeppakket met groente",
-          "brand": "AH",
-          "size": "ca. 600 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 2.0,
-          "price_was": "4.61",
-          "price_now": "3.46",
           "expires": "2026-11-22"
         },
         {
