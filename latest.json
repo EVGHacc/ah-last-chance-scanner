@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T19:35:00+01:00",
-  "started_at": "2026-11-21T19:36:28.460255+01:00",
-  "completed_at": "2026-11-21T19:36:31.535673+01:00",
-  "delay_seconds": 88,
+  "scheduled_at": "2026-11-21T19:40:00+01:00",
+  "started_at": "2026-11-21T19:41:14.145295+01:00",
+  "completed_at": "2026-11-21T19:41:17.539023+01:00",
+  "delay_seconds": 74,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 128,
+      "total_items": 131,
       "meat_items": [
         {
           "product_id": 531884,
@@ -1026,7 +1026,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 160,
+      "total_items": 161,
       "meat_items": [
         {
           "product_id": 619347,
@@ -1185,6 +1185,18 @@
           "expires": "2026-11-22"
         },
         {
+          "product_id": 619332,
+          "title": "AH Scharrel kipblokjes",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "3.49",
+          "price_now": "2.62",
+          "expires": "2026-11-22"
+        },
+        {
           "product_id": 619314,
           "title": "AH Krokante Boomstamburger 2st",
           "brand": "AH",
@@ -1278,6 +1290,18 @@
           "stock": 1.0,
           "price_was": "4.49",
           "price_now": "3.37",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 165537,
+          "title": "AH Scharrel kippenpoten 2 stuks",
+          "brand": "AH",
+          "size": "ca. 660 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "4.69",
+          "price_now": "3.52",
           "expires": "2026-11-22"
         },
         {
