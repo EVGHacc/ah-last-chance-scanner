@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T18:45:00+01:00",
-  "started_at": "2026-11-21T18:46:15.152917+01:00",
-  "completed_at": "2026-11-21T18:46:18.633666+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-21T18:50:00+01:00",
+  "started_at": "2026-11-21T18:51:16.244525+01:00",
+  "completed_at": "2026-11-21T18:51:19.180397+01:00",
+  "delay_seconds": 76,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,20 +10,8 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 98,
+      "total_items": 105,
       "meat_items": [
-        {
-          "product_id": 232208,
-          "title": "AH Varkenshaas",
-          "brand": "AH",
-          "size": "ca. 480 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "6.00",
-          "price_now": "1.80",
-          "expires": "2026-11-21"
-        },
         {
           "product_id": 610029,
           "title": "AH Partyburger",
@@ -34,6 +22,18 @@
           "stock": 3.0,
           "price_was": "6.99",
           "price_now": "2.10",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 232208,
+          "title": "AH Varkenshaas",
+          "brand": "AH",
+          "size": "ca. 480 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "6.00",
+          "price_now": "1.80",
           "expires": "2026-11-21"
         },
         {
@@ -87,18 +87,6 @@
       ],
       "meat70": [
         {
-          "product_id": 232208,
-          "title": "AH Varkenshaas",
-          "brand": "AH",
-          "size": "ca. 480 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "6.00",
-          "price_now": "1.80",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 610029,
           "title": "AH Partyburger",
           "brand": "AH",
@@ -108,6 +96,18 @@
           "stock": 3.0,
           "price_was": "6.99",
           "price_now": "2.10",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 232208,
+          "title": "AH Varkenshaas",
+          "brand": "AH",
+          "size": "ca. 480 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "6.00",
+          "price_now": "1.80",
           "expires": "2026-11-21"
         },
         {
@@ -324,18 +324,6 @@
           "expires": "2026-11-22"
         },
         {
-          "product_id": 4004,
-          "title": "AH Rundergehakt",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 3.0,
-          "price_was": "4.15",
-          "price_now": "3.11",
-          "expires": "2026-11-22"
-        },
-        {
           "product_id": 483907,
           "title": "AH Varkensslavink 4 stuks",
           "brand": "AH",
@@ -345,6 +333,18 @@
           "stock": 3.0,
           "price_was": "3.75",
           "price_now": "2.39",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 4004,
+          "title": "AH Rundergehakt",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "4.15",
+          "price_now": "3.11",
           "expires": "2026-11-22"
         },
         {
@@ -773,7 +773,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 130,
+      "total_items": 131,
       "meat_items": [
         {
           "product_id": 620806,
@@ -890,7 +890,7 @@
           "size": "300 g",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 31.0,
+          "stock": 29.0,
           "price_was": "4.69",
           "price_now": "2.99",
           "expires": "2026-11-22"
