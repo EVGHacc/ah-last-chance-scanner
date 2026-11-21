@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T17:45:00+01:00",
-  "started_at": "2026-11-21T17:46:23.605678+01:00",
-  "completed_at": "2026-11-21T17:46:25.947244+01:00",
-  "delay_seconds": 83,
+  "scheduled_at": "2026-11-21T17:50:00+01:00",
+  "started_at": "2026-11-21T17:51:14.446278+01:00",
+  "completed_at": "2026-11-21T17:51:17.729947+01:00",
+  "delay_seconds": 74,
   "late": false,
   "status": "OK",
   "stores": [
@@ -61,18 +61,6 @@
           "expires": "2026-11-21"
         },
         {
-          "product_id": 531872,
-          "title": "AH Scharrel kipburger gepaneerd 4 stuks",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "5.49",
-          "price_now": "3.29",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 619320,
           "title": "AH Biologisch Gemengd gehakt",
           "brand": "AH Biologisch",
@@ -97,6 +85,18 @@
           "expires": "2026-11-21"
         },
         {
+          "product_id": 531872,
+          "title": "AH Scharrel kipburger gepaneerd 4 stuks",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 1.0,
+          "price_was": "5.49",
+          "price_now": "3.29",
+          "expires": "2026-11-21"
+        },
+        {
           "product_id": 620854,
           "title": "AH Scharrel kipflakes BBQ",
           "brand": "AH",
@@ -116,7 +116,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 154,
+      "total_items": 152,
       "meat_items": [
         {
           "product_id": 531832,
@@ -335,18 +335,6 @@
           "expires": "2026-11-22"
         },
         {
-          "product_id": 436750,
-          "title": "AH Biologisch Mager rundergehakt",
-          "brand": "AH Biologisch",
-          "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "5.49",
-          "price_now": "4.12",
-          "expires": "2026-11-22"
-        },
-        {
           "product_id": 620814,
           "title": "AH Ovenschotel kippendij drumstick piripiri",
           "brand": "AH",
@@ -390,7 +378,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 125,
+      "total_items": 128,
       "meat_items": [
         {
           "product_id": 531832,
@@ -929,6 +917,18 @@
           "expires": "2026-11-22"
         },
         {
+          "product_id": 436759,
+          "title": "AH Biologisch Runderchipolata",
+          "brand": "AH Biologisch",
+          "size": "5 stuks",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "2.99",
+          "expires": "2026-11-22"
+        },
+        {
           "product_id": 551138,
           "title": "AH Biologisch Ultimate beefburger",
           "brand": "AH Biologisch",
@@ -950,6 +950,18 @@
           "stock": 1.0,
           "price_was": "3.99",
           "price_now": "2.99",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 622558,
+          "title": "AH Gehaktballetjes Indische stijl",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "4.49",
+          "price_now": "3.37",
           "expires": "2026-11-22"
         },
         {
