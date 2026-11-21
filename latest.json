@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T17:50:00+01:00",
-  "started_at": "2026-11-21T17:51:14.446278+01:00",
-  "completed_at": "2026-11-21T17:51:17.729947+01:00",
-  "delay_seconds": 74,
+  "scheduled_at": "2026-11-21T17:55:00+01:00",
+  "started_at": "2026-11-21T17:56:18.214273+01:00",
+  "completed_at": "2026-11-21T17:56:21.017342+01:00",
+  "delay_seconds": 78,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 97,
+      "total_items": 94,
       "meat_items": [
         {
           "product_id": 531884,
@@ -58,18 +58,6 @@
           "stock": 2.0,
           "price_was": "2.99",
           "price_now": "1.79",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 619320,
-          "title": "AH Biologisch Gemengd gehakt",
-          "brand": "AH Biologisch",
-          "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "2.39",
           "expires": "2026-11-21"
         },
         {
@@ -378,7 +366,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 128,
+      "total_items": 130,
       "meat_items": [
         {
           "product_id": 531832,
@@ -387,7 +375,7 @@
           "size": "350 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 10.0,
+          "stock": 8.0,
           "price_was": "4.99",
           "price_now": "2.54",
           "expires": "2026-11-21"
@@ -426,18 +414,6 @@
           "stock": 1.0,
           "price_was": "4.99",
           "price_now": "2.99",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 612920,
-          "title": "Wahid Adana kebab",
-          "brand": "Wahid",
-          "size": "240 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "5.69",
-          "price_now": "3.41",
           "expires": "2026-11-21"
         },
         {
@@ -508,7 +484,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 142,
+      "total_items": 141,
       "meat_items": [
         {
           "product_id": 620808,
@@ -568,18 +544,6 @@
           "stock": 1.0,
           "price_was": "4.99",
           "price_now": "2.99",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 531872,
-          "title": "AH Scharrel kipburger gepaneerd 4 stuks",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "5.49",
-          "price_now": "3.29",
           "expires": "2026-11-21"
         },
         {
@@ -770,7 +734,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 122,
+      "total_items": 123,
       "meat_items": [
         {
           "product_id": 619347,
@@ -974,6 +938,30 @@
           "stock": 1.0,
           "price_was": "4.15",
           "price_now": "3.11",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 193020,
+          "title": "AH Runderbraadworst",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.69",
+          "price_now": "2.77",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 187610,
+          "title": "AH Boomstammetjes ham en kaas",
+          "brand": "AH",
+          "size": "4 stuks",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "4.49",
+          "price_now": "2.87",
           "expires": "2026-11-22"
         },
         {
