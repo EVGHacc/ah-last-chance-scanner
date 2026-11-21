@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T19:20:00+01:00",
-  "started_at": "2026-11-21T19:21:15.440804+01:00",
-  "completed_at": "2026-11-21T19:21:18.340267+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-21T19:25:00+01:00",
+  "started_at": "2026-11-21T19:26:18.138144+01:00",
+  "completed_at": "2026-11-21T19:26:21.193425+01:00",
+  "delay_seconds": 78,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 116,
+      "total_items": 120,
       "meat_items": [
         {
           "product_id": 531884,
@@ -70,6 +70,18 @@
           "stock": 4.0,
           "price_was": "4.49",
           "price_now": "2.69",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 531883,
+          "title": "AH Scharrel kipkluifjes",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 3.0,
+          "price_was": "3.99",
+          "price_now": "2.24",
           "expires": "2026-11-22"
         },
         {
@@ -222,7 +234,7 @@
           "size": "350 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 14.0,
+          "stock": 8.0,
           "price_was": "4.99",
           "price_now": "1.27",
           "expires": "2026-11-21"
@@ -452,7 +464,7 @@
           "size": "350 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 14.0,
+          "stock": 8.0,
           "price_was": "4.99",
           "price_now": "1.27",
           "expires": "2026-11-21"
@@ -954,7 +966,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 150,
+      "total_items": 151,
       "meat_items": [
         {
           "product_id": 619347,
@@ -1165,18 +1177,6 @@
           "title": "AH Biologisch Runderchipolata",
           "brand": "AH Biologisch",
           "size": "5 stuks",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "2.99",
-          "expires": "2026-11-22"
-        },
-        {
-          "product_id": 619324,
-          "title": "AH Burger smokey 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
           "category": "Vlees",
           "discount_pct": 25.0,
           "stock": 1.0,
