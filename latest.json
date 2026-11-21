@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T18:05:00+01:00",
-  "started_at": "2026-11-21T18:06:20.652562+01:00",
-  "completed_at": "2026-11-21T18:06:25.411150+01:00",
-  "delay_seconds": 80,
+  "scheduled_at": "2026-11-21T18:10:00+01:00",
+  "started_at": "2026-11-21T18:11:25.712746+01:00",
+  "completed_at": "2026-11-21T18:11:28.597432+01:00",
+  "delay_seconds": 85,
   "late": false,
   "status": "OK",
   "stores": [
@@ -367,7 +367,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 130,
+      "total_items": 131,
       "meat_items": [
         {
           "product_id": 531832,
@@ -711,7 +711,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 122,
+      "total_items": 125,
       "meat_items": [
         {
           "product_id": 619347,
@@ -870,6 +870,42 @@
           "expires": "2026-11-22"
         },
         {
+          "product_id": 531881,
+          "title": "AH Scharrel kipborrelhapjes",
+          "brand": "AH",
+          "size": "900 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "7.49",
+          "price_now": "4.87",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 40562,
+          "title": "AH Varkensriblap",
+          "brand": "AH",
+          "size": "ca. 500 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "5.45",
+          "price_now": "4.09",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 4044,
+          "title": "AH Varkenshaas",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "2.99",
+          "expires": "2026-11-22"
+        },
+        {
           "product_id": 436759,
           "title": "AH Biologisch Runderchipolata",
           "brand": "AH Biologisch",
@@ -975,6 +1011,18 @@
           "stock": 1.0,
           "price_was": "3.69",
           "price_now": "2.77",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 531882,
+          "title": "AH Scharrel kipborrelhapjes gemarineerd",
+          "brand": "AH",
+          "size": "900 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "7.49",
+          "price_now": "4.87",
           "expires": "2026-11-22"
         },
         {
