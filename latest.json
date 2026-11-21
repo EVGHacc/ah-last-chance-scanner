@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T17:30:00+01:00",
-  "started_at": "2026-11-21T17:31:16.899621+01:00",
-  "completed_at": "2026-11-21T17:31:20.321155+01:00",
-  "delay_seconds": 76,
+  "scheduled_at": "2026-11-21T17:35:00+01:00",
+  "started_at": "2026-11-21T17:36:15.877538+01:00",
+  "completed_at": "2026-11-21T17:36:20.414856+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 105,
+      "total_items": 103,
       "meat_items": [
         {
           "product_id": 531884,
@@ -116,7 +116,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 156,
+      "total_items": 155,
       "meat_items": [
         {
           "product_id": 531832,
@@ -143,18 +143,6 @@
           "expires": "2026-11-21"
         },
         {
-          "product_id": 3986,
-          "title": "AH Speklap",
-          "brand": "AH",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "3.39",
-          "price_now": "2.03",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 436877,
           "title": "AH Biologisch Rundergehakt balletjes",
           "brand": "AH Biologisch",
@@ -176,6 +164,18 @@
           "stock": 2.0,
           "price_was": "2.39",
           "price_now": "1.43",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 3986,
+          "title": "AH Speklap",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 1.0,
+          "price_was": "3.39",
+          "price_now": "2.03",
           "expires": "2026-11-21"
         },
         {
@@ -399,7 +399,7 @@
           "size": "350 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 11.0,
+          "stock": 10.0,
           "price_was": "4.99",
           "price_now": "2.54",
           "expires": "2026-11-21"
@@ -520,7 +520,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 146,
+      "total_items": 144,
       "meat_items": [
         {
           "product_id": 620808,
@@ -782,7 +782,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 117,
+      "total_items": 118,
       "meat_items": [
         {
           "product_id": 619347,
@@ -806,6 +806,18 @@
           "stock": 1.0,
           "price_was": "6.49",
           "price_now": "3.89",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 454769,
+          "title": "AH Scharrel kipreepjes Italiaans gebraden",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "2.39",
           "expires": "2026-11-21"
         },
         {
@@ -857,18 +869,6 @@
           "expires": "2026-11-21"
         },
         {
-          "product_id": 454769,
-          "title": "AH Scharrel kipreepjes Italiaans gebraden",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "2.99",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 531890,
           "title": "AH Kalkoenfilet blokjes",
           "brand": "AH",
@@ -890,6 +890,18 @@
           "stock": 6.0,
           "price_was": "2.99",
           "price_now": "2.24",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 561195,
+          "title": "AH Gemengd gehakt",
+          "brand": "AH",
+          "size": "175 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 6.0,
+          "price_was": "2.19",
+          "price_now": "1.64",
           "expires": "2026-11-22"
         },
         {
