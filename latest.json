@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T20:00:00+01:00",
-  "started_at": "2026-11-21T20:01:25.710169+01:00",
-  "completed_at": "2026-11-21T20:01:28.844615+01:00",
-  "delay_seconds": 85,
+  "scheduled_at": "2026-11-21T20:05:00+01:00",
+  "started_at": "2026-11-21T20:06:16.053207+01:00",
+  "completed_at": "2026-11-21T20:06:19.640025+01:00",
+  "delay_seconds": 76,
   "late": false,
   "status": "OK",
   "stores": [
@@ -536,7 +536,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 143,
+      "total_items": 139,
       "meat_items": [
         {
           "product_id": 531832,
@@ -587,25 +587,13 @@
           "expires": "2026-11-21"
         },
         {
-          "product_id": 168027,
-          "title": "AH Biologisch Kipdrumsticks",
-          "brand": "AH Biologisch",
-          "size": "ca. 550 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.89",
-          "price_now": "1.47",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 619336,
           "title": "AH Scharrel sticky chicken sweet en spicy",
           "brand": "AH",
           "size": "ca. 370 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 2.0,
+          "stock": 1.0,
           "price_was": "3.29",
           "price_now": "1.97",
           "expires": "2026-11-21"
@@ -682,18 +670,6 @@
           "stock": 1.0,
           "price_was": "4.49",
           "price_now": "1.35",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 168027,
-          "title": "AH Biologisch Kipdrumsticks",
-          "brand": "AH Biologisch",
-          "size": "ca. 550 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.89",
-          "price_now": "1.47",
           "expires": "2026-11-21"
         }
       ],
@@ -978,7 +954,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 183,
+      "total_items": 181,
       "meat_items": [
         {
           "product_id": 619347,
@@ -1026,18 +1002,6 @@
           "stock": 1.0,
           "price_was": "6.99",
           "price_now": "2.10",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 561190,
-          "title": "AH Greenfields Beefburger truffelsmaak 2 stuks",
-          "brand": "AH Greenfields",
-          "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
           "expires": "2026-11-21"
         },
         {
@@ -1400,18 +1364,6 @@
           "stock": 1.0,
           "price_was": "6.99",
           "price_now": "2.10",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 561190,
-          "title": "AH Greenfields Beefburger truffelsmaak 2 stuks",
-          "brand": "AH Greenfields",
-          "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
           "expires": "2026-11-21"
         },
         {
