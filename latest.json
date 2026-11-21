@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T19:15:00+01:00",
-  "started_at": "2026-11-21T19:16:18.224073+01:00",
-  "completed_at": "2026-11-21T19:16:20.870788+01:00",
-  "delay_seconds": 78,
+  "scheduled_at": "2026-11-21T19:20:00+01:00",
+  "started_at": "2026-11-21T19:21:15.440804+01:00",
+  "completed_at": "2026-11-21T19:21:18.340267+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -213,7 +213,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 149,
+      "total_items": 148,
       "meat_items": [
         {
           "product_id": 531832,
@@ -512,7 +512,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 127,
+      "total_items": 124,
       "meat_items": [
         {
           "product_id": 531832,
@@ -572,18 +572,6 @@
           "stock": 1.0,
           "price_was": "4.89",
           "price_now": "1.47",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 483920,
-          "title": "Streeckgenoten Stoofvlees",
-          "brand": "Streeckgenoten",
-          "size": "400 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.99",
-          "price_now": "1.80",
           "expires": "2026-11-21"
         },
         {
@@ -683,18 +671,6 @@
           "price_was": "4.89",
           "price_now": "1.47",
           "expires": "2026-11-21"
-        },
-        {
-          "product_id": 483920,
-          "title": "Streeckgenoten Stoofvlees",
-          "brand": "Streeckgenoten",
-          "size": "400 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.99",
-          "price_now": "1.80",
-          "expires": "2026-11-21"
         }
       ],
       "error": ""
@@ -711,10 +687,10 @@
           "brand": "AH",
           "size": "200 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "2.85",
-          "price_now": "1.71",
+          "price_now": "0.86",
           "expires": "2026-11-21"
         },
         {
@@ -723,10 +699,10 @@
           "brand": "AH",
           "size": "4 stuks",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "4.49",
-          "price_now": "2.29",
+          "price_now": "1.15",
           "expires": "2026-11-21"
         },
         {
@@ -735,10 +711,10 @@
           "brand": "AH",
           "size": "ca. 240 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "4.99",
-          "price_now": "2.99",
+          "price_now": "1.50",
           "expires": "2026-11-21"
         },
         {
@@ -747,10 +723,10 @@
           "brand": "AH",
           "size": "ca. 600 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "4.61",
-          "price_now": "2.77",
+          "price_now": "1.38",
           "expires": "2026-11-21"
         },
         {
@@ -759,10 +735,10 @@
           "brand": "AH",
           "size": "450 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "7.49",
-          "price_now": "4.49",
+          "price_now": "2.25",
           "expires": "2026-11-21"
         },
         {
@@ -910,15 +886,100 @@
           "expires": "2026-11-24"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 556724,
+          "title": "AH Scharrel kipburger jalapeño 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "2.85",
+          "price_now": "0.86",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 187610,
+          "title": "AH Boomstammetjes ham en kaas",
+          "brand": "AH",
+          "size": "4 stuks",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.49",
+          "price_now": "1.15",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 531887,
+          "title": "AH Kalkoenfilet schnitzel",
+          "brand": "AH",
+          "size": "ca. 240 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.99",
+          "price_now": "1.50",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 531858,
+          "title": "AH Scharrel kippensoeppakket met groente",
+          "brand": "AH",
+          "size": "ca. 600 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.61",
+          "price_now": "1.38",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 531836,
+          "title": "AH Kipfilethaasjes",
+          "brand": "AH",
+          "size": "450 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "7.49",
+          "price_now": "2.25",
+          "expires": "2026-11-21"
+        }
+      ],
       "error": ""
     },
     {
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 144,
+      "total_items": 150,
       "meat_items": [
+        {
+          "product_id": 619347,
+          "title": "AH Scharrel kipbraadworsten 2 stuks",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "1.99",
+          "price_now": "0.60",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 436877,
+          "title": "AH Biologisch Rundergehakt balletjes",
+          "brand": "AH Biologisch",
+          "size": "12 stuks",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "6.49",
+          "price_now": "1.95",
+          "expires": "2026-11-21"
+        },
         {
           "product_id": 454769,
           "title": "AH Scharrel kipreepjes Italiaans gebraden",
@@ -968,30 +1029,6 @@
           "expires": "2026-11-21"
         },
         {
-          "product_id": 619347,
-          "title": "AH Scharrel kipbraadworsten 2 stuks",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "1.99",
-          "price_now": "1.19",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 436877,
-          "title": "AH Biologisch Rundergehakt balletjes",
-          "brand": "AH Biologisch",
-          "size": "12 stuks",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "6.49",
-          "price_now": "3.89",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 531832,
           "title": "AH Scharrel kipdijfilet reepjes",
           "brand": "AH",
@@ -1034,7 +1071,7 @@
           "size": "300 g",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 28.0,
+          "stock": 27.0,
           "price_was": "4.69",
           "price_now": "2.99",
           "expires": "2026-11-22"
@@ -1269,6 +1306,30 @@
         }
       ],
       "meat70": [
+        {
+          "product_id": 619347,
+          "title": "AH Scharrel kipbraadworsten 2 stuks",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "1.99",
+          "price_now": "0.60",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 436877,
+          "title": "AH Biologisch Rundergehakt balletjes",
+          "brand": "AH Biologisch",
+          "size": "12 stuks",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "6.49",
+          "price_now": "1.95",
+          "expires": "2026-11-21"
+        },
         {
           "product_id": 454769,
           "title": "AH Scharrel kipreepjes Italiaans gebraden",
