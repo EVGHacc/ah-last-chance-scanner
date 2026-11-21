@@ -91,3 +91,27 @@ def test_incomplete_bij_uitgevallen_winkel():
 def test_failed_bij_alle_winkels_uit():
     scan = _scan(lambda s, a: (500, {}))
     assert scan.status == FAILED and not scan.valid
+
+
+def test_graphql_fout_op_http_200_bewaart_een_korte_veilige_reden():
+    payload = (200, {"errors": [{"message": "Rate limit <exceeded>!", "extensions": {}}]})
+    result = client.fetch_store(1, "w", tokens(), lambda s, a: payload)
+    assert result.error == "UPSTREAM_HTTP_200: Rate limit exceeded"
+    coded = (200, {"errors": [{"message": "x", "extensions": {"code": "TOO_MANY_REQUESTS"}}]})
+    assert client.fetch_store(1, "w", tokens(), lambda s, a: coded).error.endswith(
+        "TOO_MANY_REQUESTS"
+    )
+
+
+def test_foutbody_bij_403_wordt_ingekort_en_zonder_speciale_tekens_bewaard():
+    long_body = {client.DETAIL_KEY: client._clean("<html>Access denied " + "x" * 200)}
+    result = client.fetch_store(1, "w", tokens(), lambda s, a: (403, long_body))
+    assert result.error.startswith("UPSTREAM_HTTP_403: html Access denied")
+    assert len(result.error) <= len("UPSTREAM_HTTP_403: ") + 60 and "<" not in result.error
+
+
+def test_zonder_detail_blijft_de_foutcode_zoals_voorheen():
+    assert client.error_detail({}) == "" and client.error_detail({"errors": []}) == ""
+    assert client.error_detail({"errors": ["tekst"]}) == ""
+    result = client.fetch_store(1, "w", tokens(), lambda s, a: (503, {}))
+    assert result.error == "UPSTREAM_HTTP_503"

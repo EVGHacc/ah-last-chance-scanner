@@ -6,6 +6,7 @@ Auth en HTTP zijn injecteerbaar zodat alles zonder netwerk testbaar is.
 from __future__ import annotations
 
 import json
+import re
 import urllib.error
 import urllib.request
 from collections.abc import Callable
@@ -29,6 +30,7 @@ QUERY = (
     "bargainPrice { priceWas priceNow } } }"
 )
 
+DETAIL_KEY = "_detail"
 GraphqlFn = Callable[[str, str], tuple[int, dict]]  # (store_id, access_token) -> (status, data)
 TokenFn = Callable[[bool], str]  # (force_refresh) -> access_token
 
@@ -42,9 +44,34 @@ def http_query(query: str, variables: dict, access: str) -> tuple[int, dict]:
         with urllib.request.urlopen(req, timeout=20) as resp:
             return resp.status, json.loads(resp.read())
     except urllib.error.HTTPError as exc:
-        return exc.code, {}
+        return exc.code, {DETAIL_KEY: _clean(_read_body(exc))}
     except (urllib.error.URLError, TimeoutError, OSError, ValueError):
         return 0, {}
+
+
+def _read_body(exc: urllib.error.HTTPError) -> str:
+    try:
+        return exc.read(200).decode("utf-8", "replace")
+    except Exception:
+        return ""
+
+
+def _clean(text: str) -> str:
+    """Korte, veilige foutdetail: alleen letters, cijfers en een paar tekens, max 60 tekens."""
+    cleaned = re.sub(r"[^A-Za-z0-9 _.:/-]+", " ", text or "")
+    return re.sub(r"\s+", " ", cleaned).strip()[:60]
+
+
+def error_detail(data: dict) -> str:
+    """Reden van een mislukte aanroep: GraphQL-foutcode of -tekst, of het begin van een foutbody."""
+    if detail := data.get(DETAIL_KEY):
+        return str(detail)
+    errors = data.get("errors")
+    if isinstance(errors, list) and errors and isinstance(errors[0], dict):
+        first = errors[0]
+        ext = first.get("extensions") if isinstance(first.get("extensions"), dict) else {}
+        return _clean(str(ext.get("code") or first.get("message") or ""))
+    return ""
 
 
 def http_graphql(store_id: str, access: str) -> tuple[int, dict]:
@@ -92,7 +119,9 @@ def fetch_store(
                 meat_items=tuple(meat),
                 meat70=tuple(filters.meat70(meat)),
             )
-    return _failed(store_id, name, f"UPSTREAM_HTTP_{status or 'ERROR'}")
+    code = f"UPSTREAM_HTTP_{status or 'ERROR'}"
+    detail = error_detail(data)
+    return _failed(store_id, name, f"{code}: {detail}" if detail else code)
 
 
 def overall_status(stores: list[StoreResult]) -> str:
