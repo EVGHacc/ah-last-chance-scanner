@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T17:40:00+01:00",
-  "started_at": "2026-11-21T17:41:17.292372+01:00",
-  "completed_at": "2026-11-21T17:41:21.547561+01:00",
-  "delay_seconds": 77,
+  "scheduled_at": "2026-11-21T17:45:00+01:00",
+  "started_at": "2026-11-21T17:46:23.605678+01:00",
+  "completed_at": "2026-11-21T17:46:25.947244+01:00",
+  "delay_seconds": 83,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 98,
+      "total_items": 97,
       "meat_items": [
         {
           "product_id": 531884,
@@ -390,7 +390,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 127,
+      "total_items": 125,
       "meat_items": [
         {
           "product_id": 531832,
@@ -520,7 +520,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 143,
+      "total_items": 142,
       "meat_items": [
         {
           "product_id": 620808,
@@ -769,7 +769,7 @@
           "size": "225 g",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 2.0,
+          "stock": 1.0,
           "price_was": "3.99",
           "price_now": "2.99",
           "expires": "2026-11-24"
@@ -782,7 +782,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 118,
+      "total_items": 122,
       "meat_items": [
         {
           "product_id": 619347,
@@ -845,6 +845,18 @@
           "expires": "2026-11-21"
         },
         {
+          "product_id": 561190,
+          "title": "AH Greenfields Beefburger truffelsmaak 2 stuks",
+          "brand": "AH Greenfields",
+          "size": "250 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 1.0,
+          "price_was": "4.99",
+          "price_now": "2.99",
+          "expires": "2026-11-21"
+        },
+        {
           "product_id": 379268,
           "title": "AH Excellent Lamskotelet",
           "brand": "AH Excellent",
@@ -902,6 +914,42 @@
           "stock": 6.0,
           "price_was": "2.99",
           "price_now": "2.24",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 619314,
+          "title": "AH Krokante Boomstamburger 2st",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "2.49",
+          "price_now": "1.87",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 551138,
+          "title": "AH Biologisch Ultimate beefburger",
+          "brand": "AH Biologisch",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.49",
+          "price_now": "2.62",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 619324,
+          "title": "AH Burger smokey 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "2.99",
           "expires": "2026-11-22"
         },
         {
