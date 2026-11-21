@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T22:10:00+01:00",
-  "started_at": "2026-11-21T22:11:25.949861+01:00",
-  "completed_at": "2026-11-21T22:11:29.003517+01:00",
-  "delay_seconds": 85,
+  "scheduled_at": "2026-11-21T22:15:00+01:00",
+  "started_at": "2026-11-21T22:16:16.168446+01:00",
+  "completed_at": "2026-11-21T22:16:19.532230+01:00",
+  "delay_seconds": 76,
   "late": false,
   "status": "OK",
   "stores": [
@@ -165,7 +165,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 184,
+      "total_items": 168,
       "meat_items": [
         {
           "product_id": 619347,
@@ -547,7 +547,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 157,
+      "total_items": 153,
       "meat_items": [
         {
           "product_id": 556724,
@@ -798,20 +798,8 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 175,
+      "total_items": 153,
       "meat_items": [
-        {
-          "product_id": 619347,
-          "title": "AH Scharrel kipbraadworsten 2 stuks",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "1.99",
-          "price_now": "0.60",
-          "expires": "2026-11-21"
-        },
         {
           "product_id": 436877,
           "title": "AH Biologisch Rundergehakt balletjes",
@@ -825,51 +813,15 @@
           "expires": "2026-11-21"
         },
         {
-          "product_id": 454769,
-          "title": "AH Scharrel kipreepjes Italiaans gebraden",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "1.20",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 620806,
-          "title": "AH Ovenschotel varkenshaas brie",
-          "brand": "AH",
-          "size": "290 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 531832,
           "title": "AH Scharrel kipdijfilet reepjes",
           "brand": "AH",
           "size": "350 g",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 14.0,
-          "price_was": "4.99",
-          "price_now": "3.18",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 531890,
-          "title": "AH Kalkoenfilet blokjes",
-          "brand": "AH",
-          "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
           "stock": 1.0,
           "price_was": "4.99",
-          "price_now": "3.74",
+          "price_now": "3.18",
           "expires": "2026-11-21"
         },
         {
@@ -1137,6 +1089,18 @@
           "expires": "2026-11-23"
         },
         {
+          "product_id": 454769,
+          "title": "AH Scharrel kipreepjes Italiaans gebraden",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
+          "expires": "2026-11-24"
+        },
+        {
           "product_id": 165535,
           "title": "AH Scharrel kipfilet gerookt",
           "brand": "AH",
@@ -1150,18 +1114,6 @@
         }
       ],
       "meat70": [
-        {
-          "product_id": 619347,
-          "title": "AH Scharrel kipbraadworsten 2 stuks",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "1.99",
-          "price_now": "0.60",
-          "expires": "2026-11-21"
-        },
         {
           "product_id": 436877,
           "title": "AH Biologisch Rundergehakt balletjes",
@@ -1184,19 +1136,7 @@
           "stock": 1.0,
           "price_was": "3.99",
           "price_now": "1.20",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 620806,
-          "title": "AH Ovenschotel varkenshaas brie",
-          "brand": "AH",
-          "size": "290 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
-          "expires": "2026-11-21"
+          "expires": "2026-11-24"
         }
       ],
       "error": ""
