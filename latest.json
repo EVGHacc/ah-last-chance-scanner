@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T19:00:00+01:00",
-  "started_at": "2026-11-21T19:01:12.985475+01:00",
-  "completed_at": "2026-11-21T19:01:15.810436+01:00",
-  "delay_seconds": 72,
+  "scheduled_at": "2026-11-21T19:05:00+01:00",
+  "started_at": "2026-11-21T19:06:13.222556+01:00",
+  "completed_at": "2026-11-21T19:06:16.510123+01:00",
+  "delay_seconds": 73,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 108,
+      "total_items": 110,
       "meat_items": [
         {
           "product_id": 610029,
@@ -59,6 +59,18 @@
           "price_was": "3.89",
           "price_now": "1.73",
           "expires": "2026-11-21"
+        },
+        {
+          "product_id": 364883,
+          "title": "AH Greenfields Hachee",
+          "brand": "AH Greenfields",
+          "size": "ca. 500 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "11.49",
+          "price_now": "8.62",
+          "expires": "2026-11-22"
         },
         {
           "product_id": 620854,
@@ -117,7 +129,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 150,
+      "total_items": 149,
       "meat_items": [
         {
           "product_id": 531832,
@@ -153,18 +165,6 @@
           "stock": 1.0,
           "price_was": "2.99",
           "price_now": "0.90",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 238950,
-          "title": "AH Rundersoepvlees",
-          "brand": "AH",
-          "size": "ca. 315 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "7.99",
-          "price_now": "2.40",
           "expires": "2026-11-21"
         },
         {
@@ -395,18 +395,6 @@
           "stock": 1.0,
           "price_was": "2.99",
           "price_now": "0.90",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 238950,
-          "title": "AH Rundersoepvlees",
-          "brand": "AH",
-          "size": "ca. 315 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "7.99",
-          "price_now": "2.40",
           "expires": "2026-11-21"
         }
       ],
@@ -821,8 +809,20 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 132,
+      "total_items": 138,
       "meat_items": [
+        {
+          "product_id": 454769,
+          "title": "AH Scharrel kipreepjes Italiaans gebraden",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
+          "expires": "2026-11-21"
+        },
         {
           "product_id": 620806,
           "title": "AH Ovenschotel varkenshaas brie",
@@ -833,6 +833,18 @@
           "stock": 1.0,
           "price_was": "6.99",
           "price_now": "2.10",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 561190,
+          "title": "AH Greenfields Beefburger truffelsmaak 2 stuks",
+          "brand": "AH Greenfields",
+          "size": "250 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.99",
+          "price_now": "1.50",
           "expires": "2026-11-21"
         },
         {
@@ -869,30 +881,6 @@
           "stock": 1.0,
           "price_was": "6.49",
           "price_now": "3.89",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 454769,
-          "title": "AH Scharrel kipreepjes Italiaans gebraden",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "2.39",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 561190,
-          "title": "AH Greenfields Beefburger truffelsmaak 2 stuks",
-          "brand": "AH Greenfields",
-          "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "2.99",
           "expires": "2026-11-21"
         },
         {
@@ -938,7 +926,7 @@
           "size": "300 g",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 29.0,
+          "stock": 28.0,
           "price_was": "4.69",
           "price_now": "2.99",
           "expires": "2026-11-22"
@@ -1186,6 +1174,18 @@
       ],
       "meat70": [
         {
+          "product_id": 454769,
+          "title": "AH Scharrel kipreepjes Italiaans gebraden",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
+          "expires": "2026-11-21"
+        },
+        {
           "product_id": 620806,
           "title": "AH Ovenschotel varkenshaas brie",
           "brand": "AH",
@@ -1195,6 +1195,18 @@
           "stock": 1.0,
           "price_was": "6.99",
           "price_now": "2.10",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 561190,
+          "title": "AH Greenfields Beefburger truffelsmaak 2 stuks",
+          "brand": "AH Greenfields",
+          "size": "250 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.99",
+          "price_now": "1.50",
           "expires": "2026-11-21"
         },
         {
