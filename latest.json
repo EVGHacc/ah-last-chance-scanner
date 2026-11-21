@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T21:20:00+01:00",
-  "started_at": "2026-11-21T21:21:13.468974+01:00",
-  "completed_at": "2026-11-21T21:21:17.336474+01:00",
-  "delay_seconds": 73,
+  "scheduled_at": "2026-11-21T21:25:00+01:00",
+  "started_at": "2026-11-21T21:26:21.909652+01:00",
+  "completed_at": "2026-11-21T21:26:24.381363+01:00",
+  "delay_seconds": 81,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 184,
+      "total_items": 179,
       "meat_items": [
         {
           "product_id": 531884,
@@ -237,20 +237,8 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 188,
+      "total_items": 185,
       "meat_items": [
-        {
-          "product_id": 531832,
-          "title": "AH Scharrel kipdijfilet reepjes",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 7.0,
-          "price_was": "4.99",
-          "price_now": "1.27",
-          "expires": "2026-11-21"
-        },
         {
           "product_id": 619347,
           "title": "AH Scharrel kipbraadworsten 2 stuks",
@@ -258,7 +246,7 @@
           "size": "150 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 6.0,
+          "stock": 3.0,
           "price_was": "1.99",
           "price_now": "0.60",
           "expires": "2026-11-21"
@@ -309,6 +297,18 @@
           "stock": 1.0,
           "price_was": "3.89",
           "price_now": "0.87",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 531832,
+          "title": "AH Scharrel kipdijfilet reepjes",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.99",
+          "price_now": "1.27",
           "expires": "2026-11-21"
         },
         {
@@ -446,25 +446,13 @@
       ],
       "meat70": [
         {
-          "product_id": 531832,
-          "title": "AH Scharrel kipdijfilet reepjes",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 7.0,
-          "price_was": "4.99",
-          "price_now": "1.27",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 619347,
           "title": "AH Scharrel kipbraadworsten 2 stuks",
           "brand": "AH",
           "size": "150 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 6.0,
+          "stock": 3.0,
           "price_was": "1.99",
           "price_now": "0.60",
           "expires": "2026-11-21"
@@ -515,6 +503,18 @@
           "stock": 1.0,
           "price_was": "3.89",
           "price_now": "0.87",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 531832,
+          "title": "AH Scharrel kipdijfilet reepjes",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.99",
+          "price_now": "1.27",
           "expires": "2026-11-21"
         },
         {
@@ -954,7 +954,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 178,
+      "total_items": 176,
       "meat_items": [
         {
           "product_id": 619347,
@@ -1002,18 +1002,6 @@
           "stock": 1.0,
           "price_was": "6.99",
           "price_now": "2.10",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 379268,
-          "title": "AH Excellent Lamskotelet",
-          "brand": "AH Excellent",
-          "size": "ca. 210 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "9.49",
-          "price_now": "2.85",
           "expires": "2026-11-21"
         },
         {
@@ -1364,18 +1352,6 @@
           "stock": 1.0,
           "price_was": "6.99",
           "price_now": "2.10",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 379268,
-          "title": "AH Excellent Lamskotelet",
-          "brand": "AH Excellent",
-          "size": "ca. 210 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "9.49",
-          "price_now": "2.85",
           "expires": "2026-11-21"
         }
       ],
