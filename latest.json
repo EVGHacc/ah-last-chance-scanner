@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T19:10:00+01:00",
-  "started_at": "2026-11-21T19:11:21.066296+01:00",
-  "completed_at": "2026-11-21T19:11:24.310915+01:00",
-  "delay_seconds": 81,
+  "scheduled_at": "2026-11-21T19:15:00+01:00",
+  "started_at": "2026-11-21T19:16:18.224073+01:00",
+  "completed_at": "2026-11-21T19:16:20.870788+01:00",
+  "delay_seconds": 78,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,8 +10,20 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 110,
+      "total_items": 116,
       "meat_items": [
+        {
+          "product_id": 531884,
+          "title": "AH Scharrel kipkluifjes gemarineerd",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 4.0,
+          "price_was": "3.89",
+          "price_now": "0.87",
+          "expires": "2026-11-21"
+        },
         {
           "product_id": 610029,
           "title": "AH Partyburger",
@@ -49,16 +61,16 @@
           "expires": "2026-11-21"
         },
         {
-          "product_id": 531884,
-          "title": "AH Scharrel kipkluifjes gemarineerd",
+          "product_id": 622558,
+          "title": "AH Gehaktballetjes Indische stijl",
           "brand": "AH",
-          "size": "500 g",
+          "size": "300 g",
           "category": "Vlees",
           "discount_pct": 40.0,
           "stock": 4.0,
-          "price_was": "3.89",
-          "price_now": "1.73",
-          "expires": "2026-11-21"
+          "price_was": "4.49",
+          "price_now": "2.69",
+          "expires": "2026-11-22"
         },
         {
           "product_id": 619311,
@@ -70,6 +82,54 @@
           "stock": 2.0,
           "price_was": "9.99",
           "price_now": "7.49",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 620806,
+          "title": "AH Ovenschotel varkenshaas brie",
+          "brand": "AH",
+          "size": "290 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "6.99",
+          "price_now": "5.24",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 620808,
+          "title": "AH Ovenschotel kipfilet tomaat mozzarella",
+          "brand": "AH",
+          "size": "470 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "6.99",
+          "price_now": "5.24",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 620812,
+          "title": "AH Ovenschotel scharrel kipfilet Koreaans",
+          "brand": "AH",
+          "size": "440 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "6.49",
+          "price_now": "4.87",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 619323,
+          "title": "AH Burger spicy 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "2.99",
           "expires": "2026-11-22"
         },
         {
@@ -98,6 +158,18 @@
         }
       ],
       "meat70": [
+        {
+          "product_id": 531884,
+          "title": "AH Scharrel kipkluifjes gemarineerd",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 4.0,
+          "price_was": "3.89",
+          "price_now": "0.87",
+          "expires": "2026-11-21"
+        },
         {
           "product_id": 610029,
           "title": "AH Partyburger",
@@ -168,6 +240,30 @@
           "expires": "2026-11-21"
         },
         {
+          "product_id": 436877,
+          "title": "AH Biologisch Rundergehakt balletjes",
+          "brand": "AH Biologisch",
+          "size": "12 stuks",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "6.49",
+          "price_now": "1.95",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 169238,
+          "title": "AH Runderhamburger 2st",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.45",
+          "price_now": "1.04",
+          "expires": "2026-11-21"
+        },
+        {
           "product_id": 560559,
           "title": "AH Scharrel kipburger smokey 2 stuks",
           "brand": "AH",
@@ -177,18 +273,6 @@
           "stock": 1.0,
           "price_was": "2.99",
           "price_now": "0.90",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 436877,
-          "title": "AH Biologisch Rundergehakt balletjes",
-          "brand": "AH Biologisch",
-          "size": "12 stuks",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "6.49",
-          "price_now": "3.89",
           "expires": "2026-11-21"
         },
         {
@@ -213,18 +297,6 @@
           "stock": 1.0,
           "price_was": "3.39",
           "price_now": "2.03",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 169238,
-          "title": "AH Runderhamburger 2st",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "3.45",
-          "price_now": "2.07",
           "expires": "2026-11-21"
         },
         {
@@ -395,6 +467,30 @@
           "stock": 6.0,
           "price_was": "1.99",
           "price_now": "0.60",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 436877,
+          "title": "AH Biologisch Rundergehakt balletjes",
+          "brand": "AH Biologisch",
+          "size": "12 stuks",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "6.49",
+          "price_now": "1.95",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 169238,
+          "title": "AH Runderhamburger 2st",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.45",
+          "price_now": "1.04",
           "expires": "2026-11-21"
         },
         {
@@ -821,7 +917,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 140,
+      "total_items": 144,
       "meat_items": [
         {
           "product_id": 454769,
@@ -1037,18 +1133,6 @@
           "stock": 1.0,
           "price_was": "3.99",
           "price_now": "2.99",
-          "expires": "2026-11-22"
-        },
-        {
-          "product_id": 551138,
-          "title": "AH Biologisch Ultimate beefburger",
-          "brand": "AH Biologisch",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "3.49",
-          "price_now": "2.62",
           "expires": "2026-11-22"
         },
         {
