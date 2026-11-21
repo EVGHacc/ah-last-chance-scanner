@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T18:10:00+01:00",
-  "started_at": "2026-11-21T18:11:25.712746+01:00",
-  "completed_at": "2026-11-21T18:11:28.597432+01:00",
-  "delay_seconds": 85,
+  "scheduled_at": "2026-11-21T18:15:00+01:00",
+  "started_at": "2026-11-21T18:16:16.343206+01:00",
+  "completed_at": "2026-11-21T18:16:19.187909+01:00",
+  "delay_seconds": 76,
   "late": false,
   "status": "OK",
   "stores": [
@@ -92,7 +92,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 152,
+      "total_items": 151,
       "meat_items": [
         {
           "product_id": 238950,
@@ -370,6 +370,18 @@
       "total_items": 131,
       "meat_items": [
         {
+          "product_id": 199330,
+          "title": "AH Runderhart",
+          "brand": "AH",
+          "size": "ca. 240 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "4.49",
+          "price_now": "1.35",
+          "expires": "2026-11-21"
+        },
+        {
           "product_id": 531832,
           "title": "AH Scharrel kipdijfilet reepjes",
           "brand": "AH",
@@ -379,18 +391,6 @@
           "stock": 8.0,
           "price_was": "4.99",
           "price_now": "2.54",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 199330,
-          "title": "AH Runderhart",
-          "brand": "AH",
-          "size": "ca. 240 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "4.49",
-          "price_now": "2.69",
           "expires": "2026-11-21"
         },
         {
@@ -478,7 +478,20 @@
           "expires": "2026-11-24"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 199330,
+          "title": "AH Runderhart",
+          "brand": "AH",
+          "size": "ca. 240 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "4.49",
+          "price_now": "1.35",
+          "expires": "2026-11-21"
+        }
+      ],
       "error": ""
     },
     {
@@ -840,7 +853,7 @@
           "size": "175 g",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 9.0,
+          "stock": 8.0,
           "price_was": "2.19",
           "price_now": "1.64",
           "expires": "2026-11-22"
