@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T21:25:00+01:00",
-  "started_at": "2026-11-21T21:26:21.909652+01:00",
-  "completed_at": "2026-11-21T21:26:24.381363+01:00",
-  "delay_seconds": 81,
+  "scheduled_at": "2026-11-21T21:30:00+01:00",
+  "started_at": "2026-11-21T21:31:24.116400+01:00",
+  "completed_at": "2026-11-21T21:31:26.692104+01:00",
+  "delay_seconds": 84,
   "late": false,
   "status": "OK",
   "stores": [
@@ -536,7 +536,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 138,
+      "total_items": 133,
       "meat_items": [
         {
           "product_id": 531832,
@@ -560,42 +560,6 @@
           "stock": 2.0,
           "price_was": "4.49",
           "price_now": "1.35",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 436755,
-          "title": "AH Biologisch Rundervink",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 622557,
-          "title": "AH Gehaktballetjes Italiaanse stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.49",
-          "price_now": "1.35",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 619336,
-          "title": "AH Scharrel sticky chicken sweet en spicy",
-          "brand": "AH",
-          "size": "ca. 370 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "3.29",
-          "price_now": "1.97",
           "expires": "2026-11-21"
         },
         {
@@ -644,30 +608,6 @@
           "category": "Vlees",
           "discount_pct": 70.0,
           "stock": 2.0,
-          "price_was": "4.49",
-          "price_now": "1.35",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 436755,
-          "title": "AH Biologisch Rundervink",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 622557,
-          "title": "AH Gehaktballetjes Italiaanse stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
           "price_was": "4.49",
           "price_now": "1.35",
           "expires": "2026-11-21"
