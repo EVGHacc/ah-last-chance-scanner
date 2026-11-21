@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-21T19:25:00+01:00",
-  "started_at": "2026-11-21T19:26:18.138144+01:00",
-  "completed_at": "2026-11-21T19:26:21.193425+01:00",
-  "delay_seconds": 78,
+  "scheduled_at": "2026-11-21T19:30:00+01:00",
+  "started_at": "2026-11-21T19:31:15.164533+01:00",
+  "completed_at": "2026-11-21T19:31:18.205473+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 120,
+      "total_items": 127,
       "meat_items": [
         {
           "product_id": 531884,
@@ -225,7 +225,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 148,
+      "total_items": 147,
       "meat_items": [
         {
           "product_id": 531832,
@@ -234,7 +234,7 @@
           "size": "350 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 8.0,
+          "stock": 7.0,
           "price_was": "4.99",
           "price_now": "1.27",
           "expires": "2026-11-21"
@@ -252,13 +252,37 @@
           "expires": "2026-11-21"
         },
         {
+          "product_id": 199713,
+          "title": "AH Slavink",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "2.39",
+          "price_now": "0.72",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 3986,
+          "title": "AH Speklap",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.39",
+          "price_now": "1.02",
+          "expires": "2026-11-21"
+        },
+        {
           "product_id": 436877,
           "title": "AH Biologisch Rundergehakt balletjes",
           "brand": "AH Biologisch",
           "size": "12 stuks",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 2.0,
+          "stock": 1.0,
           "price_was": "6.49",
           "price_now": "1.95",
           "expires": "2026-11-21"
@@ -288,39 +312,15 @@
           "expires": "2026-11-21"
         },
         {
-          "product_id": 199713,
-          "title": "AH Slavink",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "2.39",
-          "price_now": "1.43",
-          "expires": "2026-11-21"
-        },
-        {
-          "product_id": 3986,
-          "title": "AH Speklap",
-          "brand": "AH",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "3.39",
-          "price_now": "2.03",
-          "expires": "2026-11-21"
-        },
-        {
           "product_id": 531884,
           "title": "AH Scharrel kipkluifjes gemarineerd",
           "brand": "AH",
           "size": "500 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "3.89",
-          "price_now": "1.73",
+          "price_now": "0.87",
           "expires": "2026-11-21"
         },
         {
@@ -329,10 +329,10 @@
           "brand": "AH Biologisch",
           "size": "250 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "5.99",
-          "price_now": "3.59",
+          "price_now": "1.80",
           "expires": "2026-11-21"
         },
         {
@@ -464,7 +464,7 @@
           "size": "350 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 8.0,
+          "stock": 7.0,
           "price_was": "4.99",
           "price_now": "1.27",
           "expires": "2026-11-21"
@@ -482,13 +482,37 @@
           "expires": "2026-11-21"
         },
         {
+          "product_id": 199713,
+          "title": "AH Slavink",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "2.39",
+          "price_now": "0.72",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 3986,
+          "title": "AH Speklap",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.39",
+          "price_now": "1.02",
+          "expires": "2026-11-21"
+        },
+        {
           "product_id": 436877,
           "title": "AH Biologisch Rundergehakt balletjes",
           "brand": "AH Biologisch",
           "size": "12 stuks",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 2.0,
+          "stock": 1.0,
           "price_was": "6.49",
           "price_now": "1.95",
           "expires": "2026-11-21"
@@ -515,6 +539,30 @@
           "stock": 1.0,
           "price_was": "2.99",
           "price_now": "0.90",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 531884,
+          "title": "AH Scharrel kipkluifjes gemarineerd",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.89",
+          "price_now": "0.87",
+          "expires": "2026-11-21"
+        },
+        {
+          "product_id": 517083,
+          "title": "AH Biologisch Scharrel kipgehakt",
+          "brand": "AH Biologisch",
+          "size": "250 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "5.99",
+          "price_now": "1.80",
           "expires": "2026-11-21"
         }
       ],
@@ -966,7 +1014,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 151,
+      "total_items": 154,
       "meat_items": [
         {
           "product_id": 619347,
