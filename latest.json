@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-22T20:30:00+01:00",
-  "started_at": "2026-11-22T20:31:19.643983+01:00",
-  "completed_at": "2026-11-22T20:31:22.890494+01:00",
-  "delay_seconds": 79,
+  "scheduled_at": "2026-11-22T20:35:00+01:00",
+  "started_at": "2026-11-22T20:36:13.542721+01:00",
+  "completed_at": "2026-11-22T20:36:17.986262+01:00",
+  "delay_seconds": 73,
   "late": false,
   "status": "OK",
   "stores": [
@@ -318,7 +318,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 177,
+      "total_items": 176,
       "meat_items": [
         {
           "product_id": 477571,
@@ -569,7 +569,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 155,
+      "total_items": 156,
       "meat_items": [
         {
           "product_id": 561195,
@@ -701,6 +701,18 @@
           "stock": 1.0,
           "price_was": "3.29",
           "price_now": "2.47",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 620844,
+          "title": "AH Greenfields Greenfields diamanthaas",
+          "brand": "AH Greenfields",
+          "size": "ca. 275 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "9.99",
+          "price_now": "7.49",
           "expires": "2026-11-23"
         },
         {
