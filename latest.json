@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-22T18:25:00+01:00",
-  "started_at": "2026-11-22T18:26:14.181031+01:00",
-  "completed_at": "2026-11-22T18:26:17.273122+01:00",
-  "delay_seconds": 74,
+  "scheduled_at": "2026-11-22T18:30:00+01:00",
+  "started_at": "2026-11-22T18:31:15.588427+01:00",
+  "completed_at": "2026-11-22T18:31:18.535384+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,8 +10,20 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 117,
+      "total_items": 123,
       "meat_items": [
+        {
+          "product_id": 622558,
+          "title": "AH Gehaktballetjes Indische stijl",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.49",
+          "price_now": "1.35",
+          "expires": "2026-11-22"
+        },
         {
           "product_id": 620806,
           "title": "AH Ovenschotel varkenshaas brie",
@@ -22,18 +34,6 @@
           "stock": 1.0,
           "price_was": "6.99",
           "price_now": "4.19",
-          "expires": "2026-11-22"
-        },
-        {
-          "product_id": 622558,
-          "title": "AH Gehaktballetjes Indische stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "4.49",
-          "price_now": "2.69",
           "expires": "2026-11-22"
         },
         {
@@ -97,7 +97,20 @@
           "expires": "2026-11-26"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 622558,
+          "title": "AH Gehaktballetjes Indische stijl",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.49",
+          "price_now": "1.35",
+          "expires": "2026-11-22"
+        }
+      ],
       "error": ""
     },
     {
@@ -112,10 +125,10 @@
           "brand": "AH",
           "size": "300 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 7.0,
           "price_was": "3.99",
-          "price_now": "2.39",
+          "price_now": "1.20",
           "expires": "2026-11-22"
         },
         {
@@ -124,10 +137,10 @@
           "brand": "AH",
           "size": "per stuk",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 3.0,
           "price_was": "3.99",
-          "price_now": "2.39",
+          "price_now": "1.20",
           "expires": "2026-11-22"
         },
         {
@@ -136,10 +149,10 @@
           "brand": "AH",
           "size": "300 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 2.0,
           "price_was": "3.99",
-          "price_now": "2.39",
+          "price_now": "1.20",
           "expires": "2026-11-22"
         },
         {
@@ -191,7 +204,44 @@
           "expires": "2026-11-26"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 436917,
+          "title": "AH Kipgehakt naturel",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 7.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 4044,
+          "title": "AH Varkenshaas",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 187605,
+          "title": "AH Schnitzel Hongaarse stijl 2 stuks",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
+          "expires": "2026-11-22"
+        }
+      ],
       "error": ""
     },
     {
@@ -374,7 +424,7 @@
           "size": "200 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 2.0,
+          "stock": 1.0,
           "price_was": "4.49",
           "price_now": "2.15",
           "expires": "2026-11-23"
