@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-22T19:50:00+01:00",
-  "started_at": "2026-11-22T19:51:12.380495+01:00",
-  "completed_at": "2026-11-22T19:51:16.277901+01:00",
-  "delay_seconds": 72,
+  "scheduled_at": "2026-11-22T19:55:00+01:00",
+  "started_at": "2026-11-22T19:56:22.594082+01:00",
+  "completed_at": "2026-11-22T19:56:25.365903+01:00",
+  "delay_seconds": 82,
   "late": false,
   "status": "OK",
   "stores": [
@@ -165,7 +165,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 136,
+      "total_items": 135,
       "meat_items": [
         {
           "product_id": 436917,
@@ -284,32 +284,8 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 158,
+      "total_items": 146,
       "meat_items": [
-        {
-          "product_id": 531832,
-          "title": "AH Scharrel kipdijfilet reepjes",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 9.0,
-          "price_was": "4.99",
-          "price_now": "1.27",
-          "expires": "2026-11-22"
-        },
-        {
-          "product_id": 531881,
-          "title": "AH Scharrel kipborrelhapjes",
-          "brand": "AH",
-          "size": "900 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "7.49",
-          "price_now": "1.95",
-          "expires": "2026-11-22"
-        },
         {
           "product_id": 385506,
           "title": "AH Biologisch Gerookte kipfilet",
@@ -347,39 +323,14 @@
           "expires": "2026-11-25"
         }
       ],
-      "meat70": [
-        {
-          "product_id": 531832,
-          "title": "AH Scharrel kipdijfilet reepjes",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 9.0,
-          "price_was": "4.99",
-          "price_now": "1.27",
-          "expires": "2026-11-22"
-        },
-        {
-          "product_id": 531881,
-          "title": "AH Scharrel kipborrelhapjes",
-          "brand": "AH",
-          "size": "900 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "7.49",
-          "price_now": "1.95",
-          "expires": "2026-11-22"
-        }
-      ],
+      "meat70": [],
       "error": ""
     },
     {
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 179,
+      "total_items": 178,
       "meat_items": [
         {
           "product_id": 477571,
@@ -639,7 +590,7 @@
           "size": "175 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 7.0,
+          "stock": 5.0,
           "price_was": "2.19",
           "price_now": "0.66",
           "expires": "2026-11-22"
@@ -666,30 +617,6 @@
           "stock": 1.0,
           "price_was": "4.49",
           "price_now": "1.35",
-          "expires": "2026-11-22"
-        },
-        {
-          "product_id": 619314,
-          "title": "AH Krokante Boomstamburger 2st",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "2.49",
-          "price_now": "0.75",
-          "expires": "2026-11-22"
-        },
-        {
-          "product_id": 199715,
-          "title": "AH Mager rundergehakt 300g",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.69",
-          "price_now": "1.20",
           "expires": "2026-11-22"
         },
         {
@@ -869,7 +796,7 @@
           "size": "175 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 7.0,
+          "stock": 5.0,
           "price_was": "2.19",
           "price_now": "0.66",
           "expires": "2026-11-22"
@@ -896,30 +823,6 @@
           "stock": 1.0,
           "price_was": "4.49",
           "price_now": "1.35",
-          "expires": "2026-11-22"
-        },
-        {
-          "product_id": 619314,
-          "title": "AH Krokante Boomstamburger 2st",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "2.49",
-          "price_now": "0.75",
-          "expires": "2026-11-22"
-        },
-        {
-          "product_id": 199715,
-          "title": "AH Mager rundergehakt 300g",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.69",
-          "price_now": "1.20",
           "expires": "2026-11-22"
         },
         {
