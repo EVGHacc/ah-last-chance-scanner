@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-22T18:40:00+01:00",
-  "started_at": "2026-11-22T18:41:14.310774+01:00",
-  "completed_at": "2026-11-22T18:41:17.393807+01:00",
-  "delay_seconds": 74,
+  "scheduled_at": "2026-11-22T18:45:00+01:00",
+  "started_at": "2026-11-22T18:46:15.057103+01:00",
+  "completed_at": "2026-11-22T18:46:17.569154+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 129,
+      "total_items": 135,
       "meat_items": [
         {
           "product_id": 622558,
@@ -248,7 +248,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 150,
+      "total_items": 149,
       "meat_items": [
         {
           "product_id": 531832,
@@ -534,7 +534,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 100,
+      "total_items": 102,
       "meat_items": [
         {
           "product_id": 561195,
@@ -654,6 +654,18 @@
           "stock": 1.0,
           "price_was": "6.79",
           "price_now": "5.09",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 619335,
+          "title": "AH Scharrel sticky chicken teriyaki",
+          "brand": "AH",
+          "size": "ca. 370 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.29",
+          "price_now": "2.47",
           "expires": "2026-11-23"
         },
         {
