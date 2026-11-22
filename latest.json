@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-22T19:05:00+01:00",
-  "started_at": "2026-11-22T19:06:14.713226+01:00",
-  "completed_at": "2026-11-22T19:06:17.358824+01:00",
-  "delay_seconds": 74,
+  "scheduled_at": "2026-11-22T19:10:00+01:00",
+  "started_at": "2026-11-22T19:11:16.438814+01:00",
+  "completed_at": "2026-11-22T19:11:18.883280+01:00",
+  "delay_seconds": 76,
   "late": false,
   "status": "OK",
   "stores": [
@@ -12,18 +12,6 @@
       "fetched": true,
       "total_items": 143,
       "meat_items": [
-        {
-          "product_id": 622558,
-          "title": "AH Gehaktballetjes Indische stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.49",
-          "price_now": "1.35",
-          "expires": "2026-11-22"
-        },
         {
           "product_id": 620806,
           "title": "AH Ovenschotel varkenshaas brie",
@@ -35,6 +23,30 @@
           "price_was": "6.99",
           "price_now": "4.19",
           "expires": "2026-11-22"
+        },
+        {
+          "product_id": 531832,
+          "title": "AH Scharrel kipdijfilet reepjes",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 1.0,
+          "price_was": "4.99",
+          "price_now": "2.54",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 531829,
+          "title": "AH Scharrel kipfilet blokjes van de haas",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "5.99",
+          "price_now": "4.49",
+          "expires": "2026-11-23"
         },
         {
           "product_id": 620854,
@@ -97,20 +109,7 @@
           "expires": "2026-11-26"
         }
       ],
-      "meat70": [
-        {
-          "product_id": 622558,
-          "title": "AH Gehaktballetjes Indische stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.49",
-          "price_now": "1.35",
-          "expires": "2026-11-22"
-        }
-      ],
+      "meat70": [],
       "error": ""
     },
     {
@@ -248,7 +247,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 148,
+      "total_items": 149,
       "meat_items": [
         {
           "product_id": 531832,
@@ -534,7 +533,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 111,
+      "total_items": 112,
       "meat_items": [
         {
           "product_id": 561195,
@@ -615,7 +614,7 @@
           "size": "400 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 19.0,
+          "stock": 34.0,
           "price_was": "5.79",
           "price_now": "3.02",
           "expires": "2026-11-23"
