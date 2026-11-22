@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-22T17:50:00+01:00",
-  "started_at": "2026-11-22T17:51:15.342332+01:00",
-  "completed_at": "2026-11-22T17:51:18.620869+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-22T17:55:00+01:00",
+  "started_at": "2026-11-22T17:56:14.583441+01:00",
+  "completed_at": "2026-11-22T17:56:17.906482+01:00",
+  "delay_seconds": 74,
   "late": false,
   "status": "OK",
   "stores": [
@@ -104,7 +104,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 152,
+      "total_items": 151,
       "meat_items": [
         {
           "product_id": 436917,
@@ -292,7 +292,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 164,
+      "total_items": 163,
       "meat_items": [
         {
           "product_id": 477571,
@@ -403,18 +403,6 @@
           "expires": "2026-11-23"
         },
         {
-          "product_id": 531881,
-          "title": "AH Scharrel kipborrelhapjes",
-          "brand": "AH",
-          "size": "900 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "7.49",
-          "price_now": "3.89",
-          "expires": "2026-11-23"
-        },
-        {
           "product_id": 556724,
           "title": "AH Scharrel kipburger jalapeño 2 stuks",
           "brand": "AH",
@@ -518,7 +506,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 90,
+      "total_items": 88,
       "meat_items": [
         {
           "product_id": 561195,
