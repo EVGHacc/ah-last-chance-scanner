@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-22T19:10:00+01:00",
-  "started_at": "2026-11-22T19:11:16.438814+01:00",
-  "completed_at": "2026-11-22T19:11:18.883280+01:00",
-  "delay_seconds": 76,
+  "scheduled_at": "2026-11-22T19:15:00+01:00",
+  "started_at": "2026-11-22T19:16:12.232653+01:00",
+  "completed_at": "2026-11-22T19:16:15.807792+01:00",
+  "delay_seconds": 72,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 143,
+      "total_items": 150,
       "meat_items": [
         {
           "product_id": 620806,
@@ -37,6 +37,18 @@
           "expires": "2026-11-23"
         },
         {
+          "product_id": 495638,
+          "title": "AH Italiaans gekruid braadworstje",
+          "brand": "AH",
+          "size": "6 stuks",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.49",
+          "price_now": "2.62",
+          "expires": "2026-11-23"
+        },
+        {
           "product_id": 531829,
           "title": "AH Scharrel kipfilet blokjes van de haas",
           "brand": "AH",
@@ -46,6 +58,18 @@
           "stock": 1.0,
           "price_was": "5.99",
           "price_now": "4.49",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 212143,
+          "title": "AH Runderreepjes naturel",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "8.75",
+          "price_now": "6.56",
           "expires": "2026-11-23"
         },
         {
@@ -160,10 +184,10 @@
           "brand": "AH",
           "size": "4 stuks",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "3.75",
-          "price_now": "1.91",
+          "price_now": "0.96",
           "expires": "2026-11-22"
         },
         {
@@ -239,6 +263,18 @@
           "price_was": "3.99",
           "price_now": "1.20",
           "expires": "2026-11-22"
+        },
+        {
+          "product_id": 483907,
+          "title": "AH Varkensslavink 4 stuks",
+          "brand": "AH",
+          "size": "4 stuks",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.75",
+          "price_now": "0.96",
+          "expires": "2026-11-22"
         }
       ],
       "error": ""
@@ -247,7 +283,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 149,
+      "total_items": 150,
       "meat_items": [
         {
           "product_id": 531832,
@@ -267,10 +303,10 @@
           "brand": "AH",
           "size": "900 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "7.49",
-          "price_now": "3.89",
+          "price_now": "1.95",
           "expires": "2026-11-22"
         },
         {
@@ -321,6 +357,18 @@
           "stock": 9.0,
           "price_was": "4.99",
           "price_now": "1.27",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 531881,
+          "title": "AH Scharrel kipborrelhapjes",
+          "brand": "AH",
+          "size": "900 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "7.49",
+          "price_now": "1.95",
           "expires": "2026-11-22"
         }
       ],
@@ -533,7 +581,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 112,
+      "total_items": 110,
       "meat_items": [
         {
           "product_id": 561195,
@@ -614,7 +662,7 @@
           "size": "400 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 34.0,
+          "stock": 37.0,
           "price_was": "5.79",
           "price_now": "3.02",
           "expires": "2026-11-23"
