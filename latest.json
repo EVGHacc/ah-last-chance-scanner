@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-22T19:15:00+01:00",
-  "started_at": "2026-11-22T19:16:12.232653+01:00",
-  "completed_at": "2026-11-22T19:16:15.807792+01:00",
-  "delay_seconds": 72,
+  "scheduled_at": "2026-11-22T19:20:00+01:00",
+  "started_at": "2026-11-22T19:21:14.253462+01:00",
+  "completed_at": "2026-11-22T19:21:18.018452+01:00",
+  "delay_seconds": 74,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 150,
+      "total_items": 151,
       "meat_items": [
         {
           "product_id": 620806,
@@ -18,10 +18,10 @@
           "brand": "AH",
           "size": "290 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "6.99",
-          "price_now": "4.19",
+          "price_now": "2.10",
           "expires": "2026-11-22"
         },
         {
@@ -34,6 +34,18 @@
           "stock": 1.0,
           "price_was": "4.99",
           "price_now": "2.54",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 169422,
+          "title": "AH Varkensbraadworst",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "2.29",
+          "price_now": "1.72",
           "expires": "2026-11-23"
         },
         {
@@ -133,7 +145,20 @@
           "expires": "2026-11-26"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 620806,
+          "title": "AH Ovenschotel varkenshaas brie",
+          "brand": "AH",
+          "size": "290 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "6.99",
+          "price_now": "2.10",
+          "expires": "2026-11-22"
+        }
+      ],
       "error": ""
     },
     {
@@ -393,6 +418,30 @@
           "expires": "2026-11-22"
         },
         {
+          "product_id": 232421,
+          "title": "AH Speklap",
+          "brand": "AH",
+          "size": "ca. 500 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "5.68",
+          "price_now": "1.70",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 4044,
+          "title": "AH Varkenshaas",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
+          "expires": "2026-11-22"
+        },
+        {
           "product_id": 620806,
           "title": "AH Ovenschotel varkenshaas brie",
           "brand": "AH",
@@ -405,39 +454,15 @@
           "expires": "2026-11-22"
         },
         {
-          "product_id": 232421,
-          "title": "AH Speklap",
-          "brand": "AH",
-          "size": "ca. 500 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "5.68",
-          "price_now": "3.41",
-          "expires": "2026-11-22"
-        },
-        {
-          "product_id": 4044,
-          "title": "AH Varkenshaas",
-          "brand": "AH",
-          "size": "per stuk",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "2.39",
-          "expires": "2026-11-22"
-        },
-        {
           "product_id": 483907,
           "title": "AH Varkensslavink 4 stuks",
           "brand": "AH",
           "size": "4 stuks",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "3.75",
-          "price_now": "1.91",
+          "price_now": "0.96",
           "expires": "2026-11-22"
         },
         {
@@ -446,10 +471,10 @@
           "brand": "AH",
           "size": "ca. 530 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "3.65",
-          "price_now": "1.87",
+          "price_now": "0.94",
           "expires": "2026-11-22"
         },
         {
@@ -563,6 +588,30 @@
           "expires": "2026-11-22"
         },
         {
+          "product_id": 232421,
+          "title": "AH Speklap",
+          "brand": "AH",
+          "size": "ca. 500 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "5.68",
+          "price_now": "1.70",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 4044,
+          "title": "AH Varkenshaas",
+          "brand": "AH",
+          "size": "per stuk",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
+          "expires": "2026-11-22"
+        },
+        {
           "product_id": 620806,
           "title": "AH Ovenschotel varkenshaas brie",
           "brand": "AH",
@@ -573,6 +622,30 @@
           "price_was": "6.99",
           "price_now": "2.10",
           "expires": "2026-11-22"
+        },
+        {
+          "product_id": 483907,
+          "title": "AH Varkensslavink 4 stuks",
+          "brand": "AH",
+          "size": "4 stuks",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.75",
+          "price_now": "0.96",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 531859,
+          "title": "AH Scharrel kippenvleugels",
+          "brand": "AH",
+          "size": "ca. 530 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.65",
+          "price_now": "0.94",
+          "expires": "2026-11-22"
         }
       ],
       "error": ""
@@ -581,7 +654,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 110,
+      "total_items": 109,
       "meat_items": [
         {
           "product_id": 561195,
@@ -601,10 +674,10 @@
           "brand": "AH",
           "size": "300 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 4.0,
           "price_was": "4.69",
-          "price_now": "2.39",
+          "price_now": "1.20",
           "expires": "2026-11-22"
         },
         {
@@ -613,10 +686,10 @@
           "brand": "AH",
           "size": "175 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 3.0,
           "price_was": "2.99",
-          "price_now": "1.79",
+          "price_now": "0.90",
           "expires": "2026-11-22"
         },
         {
@@ -625,10 +698,10 @@
           "brand": "AH",
           "size": "300 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "4.49",
-          "price_now": "2.69",
+          "price_now": "1.35",
           "expires": "2026-11-22"
         },
         {
@@ -637,10 +710,10 @@
           "brand": "AH",
           "size": "200 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "2.49",
-          "price_now": "1.49",
+          "price_now": "0.75",
           "expires": "2026-11-22"
         },
         {
@@ -649,10 +722,10 @@
           "brand": "AH",
           "size": "ca. 600 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "4.61",
-          "price_now": "2.77",
+          "price_now": "1.38",
           "expires": "2026-11-22"
         },
         {
@@ -823,6 +896,66 @@
           "stock": 7.0,
           "price_was": "2.19",
           "price_now": "0.66",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 199715,
+          "title": "AH Mager rundergehakt 300g",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 4.0,
+          "price_was": "4.69",
+          "price_now": "1.20",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 549766,
+          "title": "AH Rundergehakt",
+          "brand": "AH",
+          "size": "175 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "2.99",
+          "price_now": "0.90",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 622558,
+          "title": "AH Gehaktballetjes Indische stijl",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.49",
+          "price_now": "1.35",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 619314,
+          "title": "AH Krokante Boomstamburger 2st",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "2.49",
+          "price_now": "0.75",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 531858,
+          "title": "AH Scharrel kippensoeppakket met groente",
+          "brand": "AH",
+          "size": "ca. 600 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.61",
+          "price_now": "1.38",
           "expires": "2026-11-22"
         }
       ],
