@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-22T17:55:00+01:00",
-  "started_at": "2026-11-22T17:56:14.583441+01:00",
-  "completed_at": "2026-11-22T17:56:17.906482+01:00",
-  "delay_seconds": 74,
+  "scheduled_at": "2026-11-22T18:00:00+01:00",
+  "started_at": "2026-11-22T18:01:16.382924+01:00",
+  "completed_at": "2026-11-22T18:01:18.810460+01:00",
+  "delay_seconds": 76,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 114,
+      "total_items": 113,
       "meat_items": [
         {
           "product_id": 620806,
@@ -210,7 +210,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 153,
+      "total_items": 154,
       "meat_items": [
         {
           "product_id": 531832,
@@ -292,7 +292,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 163,
+      "total_items": 161,
       "meat_items": [
         {
           "product_id": 477571,
@@ -352,18 +352,6 @@
           "stock": 1.0,
           "price_was": "3.75",
           "price_now": "1.91",
-          "expires": "2026-11-22"
-        },
-        {
-          "product_id": 531883,
-          "title": "AH Scharrel kipkluifjes",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "1.79",
           "expires": "2026-11-22"
         },
         {
@@ -460,18 +448,6 @@
           "stock": 1.0,
           "price_was": "7.49",
           "price_now": "5.62",
-          "expires": "2026-11-23"
-        },
-        {
-          "product_id": 531877,
-          "title": "AH Scharrel kipdrumsticks",
-          "brand": "AH",
-          "size": "600 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "4.19",
-          "price_now": "3.14",
           "expires": "2026-11-23"
         },
         {
