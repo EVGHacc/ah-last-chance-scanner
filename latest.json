@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-22T18:10:00+01:00",
-  "started_at": "2026-11-22T18:11:15.749620+01:00",
-  "completed_at": "2026-11-22T18:11:18.598994+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-22T18:15:00+01:00",
+  "started_at": "2026-11-22T18:16:14.797267+01:00",
+  "completed_at": "2026-11-22T18:16:17.489256+01:00",
+  "delay_seconds": 74,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 113,
+      "total_items": 114,
       "meat_items": [
         {
           "product_id": 620806,
@@ -104,7 +104,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 149,
+      "total_items": 148,
       "meat_items": [
         {
           "product_id": 436917,
@@ -210,7 +210,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 152,
+      "total_items": 150,
       "meat_items": [
         {
           "product_id": 531832,
@@ -218,22 +218,10 @@
           "brand": "AH",
           "size": "350 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 9.0,
           "price_was": "4.99",
-          "price_now": "2.54",
-          "expires": "2026-11-22"
-        },
-        {
-          "product_id": 187583,
-          "title": "AH Duitse biefstuk",
-          "brand": "AH",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "4.36",
-          "price_now": "2.62",
+          "price_now": "1.27",
           "expires": "2026-11-22"
         },
         {
@@ -285,14 +273,27 @@
           "expires": "2026-11-25"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 531832,
+          "title": "AH Scharrel kipdijfilet reepjes",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 9.0,
+          "price_was": "4.99",
+          "price_now": "1.27",
+          "expires": "2026-11-22"
+        }
+      ],
       "error": ""
     },
     {
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 159,
+      "total_items": 157,
       "meat_items": [
         {
           "product_id": 477571,
@@ -482,7 +483,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 89,
+      "total_items": 90,
       "meat_items": [
         {
           "product_id": 561195,
