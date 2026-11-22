@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-22T20:25:00+01:00",
-  "started_at": "2026-11-22T20:26:11.159759+01:00",
-  "completed_at": "2026-11-22T20:26:14.181141+01:00",
-  "delay_seconds": 71,
+  "scheduled_at": "2026-11-22T20:30:00+01:00",
+  "started_at": "2026-11-22T20:31:19.643983+01:00",
+  "completed_at": "2026-11-22T20:31:22.890494+01:00",
+  "delay_seconds": 79,
   "late": false,
   "status": "OK",
   "stores": [
@@ -569,7 +569,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 152,
+      "total_items": 155,
       "meat_items": [
         {
           "product_id": 561195,
@@ -704,6 +704,30 @@
           "expires": "2026-11-23"
         },
         {
+          "product_id": 425633,
+          "title": "AH Varkensribeye naturel",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "4.49",
+          "price_now": "3.37",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 507472,
+          "title": "Wahid Hamburgers",
+          "brand": "Wahid",
+          "size": "360 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "6.19",
+          "price_now": "4.64",
+          "expires": "2026-11-23"
+        },
+        {
           "product_id": 531893,
           "title": "AH Scharrel gerookte kipfiletflakes",
           "brand": "AH",
@@ -749,6 +773,18 @@
           "stock": 1.0,
           "price_was": "5.99",
           "price_now": "4.49",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 212142,
+          "title": "AH Gyros",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "5.49",
+          "price_now": "4.12",
           "expires": "2026-11-23"
         },
         {
