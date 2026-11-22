@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-22T20:45:00+01:00",
-  "started_at": "2026-11-22T20:46:12.832683+01:00",
-  "completed_at": "2026-11-22T20:46:16.019102+01:00",
-  "delay_seconds": 72,
+  "scheduled_at": "2026-11-22T20:50:00+01:00",
+  "started_at": "2026-11-22T20:51:16.866645+01:00",
+  "completed_at": "2026-11-22T20:51:19.524527+01:00",
+  "delay_seconds": 76,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,20 +10,8 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 140,
+      "total_items": 130,
       "meat_items": [
-        {
-          "product_id": 620806,
-          "title": "AH Ovenschotel varkenshaas brie",
-          "brand": "AH",
-          "size": "290 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
-          "expires": "2026-11-22"
-        },
         {
           "product_id": 531832,
           "title": "AH Scharrel kipdijfilet reepjes",
@@ -145,20 +133,7 @@
           "expires": "2026-11-26"
         }
       ],
-      "meat70": [
-        {
-          "product_id": 620806,
-          "title": "AH Ovenschotel varkenshaas brie",
-          "brand": "AH",
-          "size": "290 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
-          "expires": "2026-11-22"
-        }
-      ],
+      "meat70": [],
       "error": ""
     },
     {
@@ -318,7 +293,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 176,
+      "total_items": 175,
       "meat_items": [
         {
           "product_id": 477571,
