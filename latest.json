@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-22T18:20:00+01:00",
-  "started_at": "2026-11-22T18:21:14.552155+01:00",
-  "completed_at": "2026-11-22T18:21:17.381922+01:00",
+  "scheduled_at": "2026-11-22T18:25:00+01:00",
+  "started_at": "2026-11-22T18:26:14.181031+01:00",
+  "completed_at": "2026-11-22T18:26:17.273122+01:00",
   "delay_seconds": 74,
   "late": false,
   "status": "OK",
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 114,
+      "total_items": 117,
       "meat_items": [
         {
           "product_id": 620806,
@@ -104,7 +104,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 147,
+      "total_items": 145,
       "meat_items": [
         {
           "product_id": 436917,
@@ -152,18 +152,6 @@
           "stock": 1.0,
           "price_was": "3.75",
           "price_now": "1.91",
-          "expires": "2026-11-22"
-        },
-        {
-          "product_id": 549766,
-          "title": "AH Rundergehakt",
-          "brand": "AH",
-          "size": "175 g",
-          "category": "Vlees",
-          "discount_pct": 35.0,
-          "stock": 1.0,
-          "price_was": "2.99",
-          "price_now": "1.94",
           "expires": "2026-11-22"
         },
         {
@@ -293,7 +281,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 157,
+      "total_items": 156,
       "meat_items": [
         {
           "product_id": 477571,
