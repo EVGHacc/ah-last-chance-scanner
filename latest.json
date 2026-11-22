@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-22T17:35:00+01:00",
-  "started_at": "2026-11-22T17:36:16.035874+01:00",
-  "completed_at": "2026-11-22T17:36:18.671899+01:00",
-  "delay_seconds": 76,
+  "scheduled_at": "2026-11-22T17:40:00+01:00",
+  "started_at": "2026-11-22T17:41:15.314691+01:00",
+  "completed_at": "2026-11-22T17:41:18.384229+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,20 +10,8 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 89,
+      "total_items": 88,
       "meat_items": [
-        {
-          "product_id": 622558,
-          "title": "AH Gehaktballetjes Indische stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "4.49",
-          "price_now": "2.69",
-          "expires": "2026-11-22"
-        },
         {
           "product_id": 620806,
           "title": "AH Ovenschotel varkenshaas brie",
@@ -37,15 +25,15 @@
           "expires": "2026-11-22"
         },
         {
-          "product_id": 619323,
-          "title": "AH Burger spicy 2 stuks",
+          "product_id": 622558,
+          "title": "AH Gehaktballetjes Indische stijl",
           "brand": "AH",
-          "size": "200 g",
+          "size": "300 g",
           "category": "Vlees",
           "discount_pct": 40.0,
           "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "2.39",
+          "price_was": "4.49",
+          "price_now": "2.69",
           "expires": "2026-11-22"
         },
         {
@@ -304,7 +292,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 168,
+      "total_items": 166,
       "meat_items": [
         {
           "product_id": 477571,
@@ -439,18 +427,6 @@
           "expires": "2026-11-23"
         },
         {
-          "product_id": 531832,
-          "title": "AH Scharrel kipdijfilet reepjes",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 2.0,
-          "price_was": "4.99",
-          "price_now": "3.18",
-          "expires": "2026-11-23"
-        },
-        {
           "product_id": 533085,
           "title": "AH Scharrel kipburger 2 stuks",
           "brand": "AH",
@@ -499,18 +475,6 @@
           "expires": "2026-11-23"
         },
         {
-          "product_id": 619335,
-          "title": "AH Scharrel sticky chicken teriyaki",
-          "brand": "AH",
-          "size": "ca. 370 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "3.29",
-          "price_now": "2.47",
-          "expires": "2026-11-23"
-        },
-        {
           "product_id": 531877,
           "title": "AH Scharrel kipdrumsticks",
           "brand": "AH",
@@ -520,6 +484,18 @@
           "stock": 1.0,
           "price_was": "4.19",
           "price_now": "3.14",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 531832,
+          "title": "AH Scharrel kipdijfilet reepjes",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "4.99",
+          "price_now": "3.18",
           "expires": "2026-11-23"
         },
         {
