@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-22T21:30:00+01:00",
-  "started_at": "2026-11-22T21:31:12.951694+01:00",
-  "completed_at": "2026-11-22T21:31:16.519195+01:00",
+  "scheduled_at": "2026-11-22T21:35:00+01:00",
+  "started_at": "2026-11-22T21:36:12.610918+01:00",
+  "completed_at": "2026-11-22T21:36:15.903818+01:00",
   "delay_seconds": 72,
   "late": false,
   "status": "OK",
@@ -544,7 +544,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 156,
+      "total_items": 154,
       "meat_items": [
         {
           "product_id": 561195,
@@ -700,18 +700,6 @@
           "stock": 1.0,
           "price_was": "4.49",
           "price_now": "3.37",
-          "expires": "2026-11-23"
-        },
-        {
-          "product_id": 507472,
-          "title": "Wahid Hamburgers",
-          "brand": "Wahid",
-          "size": "360 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "6.19",
-          "price_now": "4.64",
           "expires": "2026-11-23"
         },
         {
