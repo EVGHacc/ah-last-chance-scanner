@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-22T19:45:00+01:00",
-  "started_at": "2026-11-22T19:46:12.794882+01:00",
-  "completed_at": "2026-11-22T19:46:16.369024+01:00",
+  "scheduled_at": "2026-11-22T19:50:00+01:00",
+  "started_at": "2026-11-22T19:51:12.380495+01:00",
+  "completed_at": "2026-11-22T19:51:16.277901+01:00",
   "delay_seconds": 72,
   "late": false,
   "status": "OK",
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 148,
+      "total_items": 147,
       "meat_items": [
         {
           "product_id": 620806,
@@ -379,7 +379,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 145,
+      "total_items": 179,
       "meat_items": [
         {
           "product_id": 477571,
@@ -630,7 +630,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 108,
+      "total_items": 134,
       "meat_items": [
         {
           "product_id": 561195,
@@ -645,25 +645,13 @@
           "expires": "2026-11-22"
         },
         {
-          "product_id": 199715,
-          "title": "AH Mager rundergehakt 300g",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "4.69",
-          "price_now": "1.20",
-          "expires": "2026-11-22"
-        },
-        {
           "product_id": 549766,
           "title": "AH Rundergehakt",
           "brand": "AH",
           "size": "175 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 3.0,
+          "stock": 2.0,
           "price_was": "2.99",
           "price_now": "0.90",
           "expires": "2026-11-22"
@@ -690,6 +678,18 @@
           "stock": 1.0,
           "price_was": "2.49",
           "price_now": "0.75",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 199715,
+          "title": "AH Mager rundergehakt 300g",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.69",
+          "price_now": "1.20",
           "expires": "2026-11-22"
         },
         {
@@ -875,25 +875,13 @@
           "expires": "2026-11-22"
         },
         {
-          "product_id": 199715,
-          "title": "AH Mager rundergehakt 300g",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "4.69",
-          "price_now": "1.20",
-          "expires": "2026-11-22"
-        },
-        {
           "product_id": 549766,
           "title": "AH Rundergehakt",
           "brand": "AH",
           "size": "175 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 3.0,
+          "stock": 2.0,
           "price_was": "2.99",
           "price_now": "0.90",
           "expires": "2026-11-22"
@@ -920,6 +908,18 @@
           "stock": 1.0,
           "price_was": "2.49",
           "price_now": "0.75",
+          "expires": "2026-11-22"
+        },
+        {
+          "product_id": 199715,
+          "title": "AH Mager rundergehakt 300g",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.69",
+          "price_now": "1.20",
           "expires": "2026-11-22"
         },
         {
