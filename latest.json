@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-22T20:10:00+01:00",
-  "started_at": "2026-11-22T20:11:20.804423+01:00",
-  "completed_at": "2026-11-22T20:11:23.736801+01:00",
-  "delay_seconds": 80,
+  "scheduled_at": "2026-11-22T20:15:00+01:00",
+  "started_at": "2026-11-22T20:16:15.329556+01:00",
+  "completed_at": "2026-11-22T20:16:18.497180+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -569,7 +569,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 146,
+      "total_items": 147,
       "meat_items": [
         {
           "product_id": 561195,
@@ -653,6 +653,18 @@
           "stock": 2.0,
           "price_was": "3.99",
           "price_now": "2.24",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 531853,
+          "title": "AH Kipgehakt gekruid",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "3.95",
+          "price_now": "2.96",
           "expires": "2026-11-23"
         },
         {
@@ -770,7 +782,7 @@
           "size": "250 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 4.0,
+          "stock": 3.0,
           "price_was": "3.59",
           "price_now": "2.15",
           "expires": "2026-11-26"
