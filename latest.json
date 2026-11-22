@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-22T17:30:00+01:00",
-  "started_at": "2026-11-22T17:31:15.126629+01:00",
-  "completed_at": "2026-11-22T17:31:18.588519+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-22T17:35:00+01:00",
+  "started_at": "2026-11-22T17:36:16.035874+01:00",
+  "completed_at": "2026-11-22T17:36:18.671899+01:00",
+  "delay_seconds": 76,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,20 +10,8 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 91,
+      "total_items": 89,
       "meat_items": [
-        {
-          "product_id": 531832,
-          "title": "AH Scharrel kipdijfilet reepjes",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 3.0,
-          "price_was": "4.99",
-          "price_now": "2.54",
-          "expires": "2026-11-22"
-        },
         {
           "product_id": 622558,
           "title": "AH Gehaktballetjes Indische stijl",
