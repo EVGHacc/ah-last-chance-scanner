@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-23T19:00:00+01:00",
-  "started_at": "2026-11-23T19:01:16.231401+01:00",
-  "completed_at": "2026-11-23T19:01:18.741323+01:00",
+  "scheduled_at": "2026-11-23T19:05:00+01:00",
+  "started_at": "2026-11-23T19:06:16.835523+01:00",
+  "completed_at": "2026-11-23T19:06:19.944996+01:00",
   "delay_seconds": 76,
   "late": false,
   "status": "OK",
@@ -92,7 +92,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 161,
+      "total_items": 159,
       "meat_items": [
         {
           "product_id": 531883,
@@ -104,6 +104,18 @@
           "stock": 5.0,
           "price_was": "3.99",
           "price_now": "1.20",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 165535,
+          "title": "AH Scharrel kipfilet gerookt",
+          "brand": "AH",
+          "size": "ca. 140 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "2.88",
+          "price_now": "0.86",
           "expires": "2026-11-23"
         },
         {
@@ -119,15 +131,15 @@
           "expires": "2026-11-23"
         },
         {
-          "product_id": 619346,
-          "title": "AH Kipchorizo worstjes",
+          "product_id": 533080,
+          "title": "AH Scharrel kipfilet blokjes",
           "brand": "AH",
           "size": "300 g",
           "category": "Vlees",
           "discount_pct": 70.0,
           "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "1.20",
+          "price_was": "4.85",
+          "price_now": "1.46",
           "expires": "2026-11-23"
         },
         {
@@ -167,18 +179,6 @@
           "expires": "2026-11-23"
         },
         {
-          "product_id": 165535,
-          "title": "AH Scharrel kipfilet gerookt",
-          "brand": "AH",
-          "size": "ca. 140 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "2.88",
-          "price_now": "1.73",
-          "expires": "2026-11-23"
-        },
-        {
           "product_id": 620810,
           "title": "AH Ovenschotel scharrel kipfilet pesto",
           "brand": "AH",
@@ -188,18 +188,6 @@
           "stock": 1.0,
           "price_was": "6.99",
           "price_now": "4.19",
-          "expires": "2026-11-23"
-        },
-        {
-          "product_id": 533080,
-          "title": "AH Scharrel kipfilet blokjes",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "4.85",
-          "price_now": "2.91",
           "expires": "2026-11-23"
         },
         {
@@ -270,18 +258,6 @@
           "category": "Vlees",
           "discount_pct": 40.0,
           "stock": 2.0,
-          "price_was": "5.49",
-          "price_now": "3.29",
-          "expires": "2026-11-24"
-        },
-        {
-          "product_id": 619334,
-          "title": "AH Scharrel kipfiletschnitzel Hongaars",
-          "brand": "AH",
-          "size": "ca. 300 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
           "price_was": "5.49",
           "price_now": "3.29",
           "expires": "2026-11-24"
@@ -457,6 +433,18 @@
           "expires": "2026-11-23"
         },
         {
+          "product_id": 165535,
+          "title": "AH Scharrel kipfilet gerookt",
+          "brand": "AH",
+          "size": "ca. 140 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "2.88",
+          "price_now": "0.86",
+          "expires": "2026-11-23"
+        },
+        {
           "product_id": 531857,
           "title": "AH Scharrel kippenlevertjes",
           "brand": "AH",
@@ -469,15 +457,15 @@
           "expires": "2026-11-23"
         },
         {
-          "product_id": 619346,
-          "title": "AH Kipchorizo worstjes",
+          "product_id": 533080,
+          "title": "AH Scharrel kipfilet blokjes",
           "brand": "AH",
           "size": "300 g",
           "category": "Vlees",
           "discount_pct": 70.0,
           "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "1.20",
+          "price_was": "4.85",
+          "price_now": "1.46",
           "expires": "2026-11-23"
         },
         {
@@ -535,7 +523,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 133,
+      "total_items": 136,
       "meat_items": [
         {
           "product_id": 3986,
@@ -948,10 +936,10 @@
           "brand": "AH",
           "size": "150 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "3.69",
-          "price_now": "2.21",
+          "price_now": "1.11",
           "expires": "2026-11-23"
         },
         {
@@ -960,10 +948,10 @@
           "brand": "AH",
           "size": "ca. 155 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "3.69",
-          "price_now": "2.21",
+          "price_now": "1.11",
           "expires": "2026-11-23"
         },
         {
@@ -1098,6 +1086,30 @@
           "stock": 17.0,
           "price_was": "5.79",
           "price_now": "1.51",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 531893,
+          "title": "AH Scharrel gerookte kipfiletflakes",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.69",
+          "price_now": "1.11",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 531864,
+          "title": "AH Scharrel kipfilet plakjes gerookt",
+          "brand": "AH",
+          "size": "ca. 155 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.69",
+          "price_now": "1.11",
           "expires": "2026-11-23"
         }
       ],
