@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-23T21:10:00+01:00",
-  "started_at": "2026-11-23T21:11:15.325570+01:00",
-  "completed_at": "2026-11-23T21:11:18.240232+01:00",
+  "scheduled_at": "2026-11-23T21:15:00+01:00",
+  "started_at": "2026-11-23T21:16:15.844941+01:00",
+  "completed_at": "2026-11-23T21:16:18.202887+01:00",
   "delay_seconds": 75,
   "late": false,
   "status": "OK",
@@ -133,18 +133,6 @@
           "expires": "2026-11-24"
         },
         {
-          "product_id": 533085,
-          "title": "AH Scharrel kipburger 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 2.0,
-          "price_was": "2.99",
-          "price_now": "2.24",
-          "expires": "2026-11-24"
-        },
-        {
           "product_id": 620813,
           "title": "AH Ovenschotel kipdrumsticks sweet chili",
           "brand": "AH",
@@ -178,6 +166,18 @@
           "stock": 1.0,
           "price_was": "2.85",
           "price_now": "2.14",
+          "expires": "2026-11-24"
+        },
+        {
+          "product_id": 533085,
+          "title": "AH Scharrel kipburger 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "2.99",
+          "price_now": "2.24",
           "expires": "2026-11-24"
         },
         {
@@ -261,7 +261,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 192,
+      "total_items": 193,
       "meat_items": [
         {
           "product_id": 531883,
@@ -1086,7 +1086,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 167,
+      "total_items": 171,
       "meat_items": [
         {
           "product_id": 533084,
