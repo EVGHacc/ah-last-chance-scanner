@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-23T18:25:00+01:00",
-  "started_at": "2026-11-23T18:26:16.714020+01:00",
-  "completed_at": "2026-11-23T18:26:19.384193+01:00",
-  "delay_seconds": 76,
+  "scheduled_at": "2026-11-23T18:30:00+01:00",
+  "started_at": "2026-11-23T18:31:21.876748+01:00",
+  "completed_at": "2026-11-23T18:31:24.634818+01:00",
+  "delay_seconds": 81,
   "late": false,
   "status": "OK",
   "stores": [
@@ -92,7 +92,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 170,
+      "total_items": 167,
       "meat_items": [
         {
           "product_id": 531883,
@@ -128,18 +128,6 @@
           "stock": 1.0,
           "price_was": "8.70",
           "price_now": "2.61",
-          "expires": "2026-11-23"
-        },
-        {
-          "product_id": 619330,
-          "title": "AH Gegrilde halve kip sweet chili",
-          "brand": "AH",
-          "size": "ca. 780 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "10.44",
-          "price_now": "3.13",
           "expires": "2026-11-23"
         },
         {
@@ -239,18 +227,6 @@
           "expires": "2026-11-23"
         },
         {
-          "product_id": 531850,
-          "title": "AH Scharrel kipfiletblokjes Thais",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "5.99",
-          "price_now": "3.59",
-          "expires": "2026-11-23"
-        },
-        {
           "product_id": 238946,
           "title": "AH Rundersoepballetjes",
           "brand": "AH",
@@ -261,6 +237,18 @@
           "price_was": "3.45",
           "price_now": "2.07",
           "expires": "2026-11-23"
+        },
+        {
+          "product_id": 619330,
+          "title": "AH Gegrilde halve kip sweet chili",
+          "brand": "AH",
+          "size": "ca. 780 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "10.44",
+          "price_now": "3.13",
+          "expires": "2026-11-24"
         },
         {
           "product_id": 187593,
@@ -431,18 +419,6 @@
           "expires": "2026-11-25"
         },
         {
-          "product_id": 477885,
-          "title": "AH Scharrel kipflakes kebab",
-          "brand": "AH",
-          "size": "225 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 2.0,
-          "price_was": "3.99",
-          "price_now": "2.99",
-          "expires": "2026-11-25"
-        },
-        {
           "product_id": 203274,
           "title": "Zandvliet Gerookte kipfilet",
           "brand": "Zandvliet",
@@ -505,18 +481,6 @@
           "expires": "2026-11-23"
         },
         {
-          "product_id": 619330,
-          "title": "AH Gegrilde halve kip sweet chili",
-          "brand": "AH",
-          "size": "ca. 780 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "10.44",
-          "price_now": "3.13",
-          "expires": "2026-11-23"
-        },
-        {
           "product_id": 619346,
           "title": "AH Kipchorizo worstjes",
           "brand": "AH",
@@ -551,6 +515,18 @@
           "price_was": "6.08",
           "price_now": "1.82",
           "expires": "2026-11-23"
+        },
+        {
+          "product_id": 619330,
+          "title": "AH Gegrilde halve kip sweet chili",
+          "brand": "AH",
+          "size": "ca. 780 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "10.44",
+          "price_now": "3.13",
+          "expires": "2026-11-24"
         }
       ],
       "error": ""
@@ -725,7 +701,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 126,
+      "total_items": 125,
       "meat_items": [
         {
           "product_id": 531832,
@@ -852,7 +828,7 @@
           "size": "400 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 20.0,
+          "stock": 19.0,
           "price_was": "5.79",
           "price_now": "3.02",
           "expires": "2026-11-23"
