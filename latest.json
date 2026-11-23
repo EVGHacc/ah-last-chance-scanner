@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-23T22:00:00+01:00",
-  "started_at": "2026-11-23T22:01:14.044274+01:00",
-  "completed_at": "2026-11-23T22:01:17.664701+01:00",
-  "delay_seconds": 74,
+  "scheduled_at": "2026-11-23T22:05:00+01:00",
+  "started_at": "2026-11-23T22:06:33.101464+01:00",
+  "completed_at": "2026-11-23T22:06:36.282407+01:00",
+  "delay_seconds": 93,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 149,
+      "total_items": 138,
       "meat_items": [
         {
           "product_id": 169422,
@@ -22,18 +22,6 @@
           "stock": 1.0,
           "price_was": "2.29",
           "price_now": "0.69",
-          "expires": "2026-11-23"
-        },
-        {
-          "product_id": 531832,
-          "title": "AH Scharrel kipdijfilet reepjes",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
           "expires": "2026-11-23"
         },
         {
@@ -216,18 +204,6 @@
           "stock": 1.0,
           "price_was": "2.29",
           "price_now": "0.69",
-          "expires": "2026-11-23"
-        },
-        {
-          "product_id": 531832,
-          "title": "AH Scharrel kipdijfilet reepjes",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
           "expires": "2026-11-23"
         }
       ],
@@ -919,7 +895,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 148,
+      "total_items": 147,
       "meat_items": [
         {
           "product_id": 531832,
@@ -1062,7 +1038,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 164,
+      "total_items": 160,
       "meat_items": [
         {
           "product_id": 533084,
