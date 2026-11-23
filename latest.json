@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-23T18:30:00+01:00",
-  "started_at": "2026-11-23T18:31:21.876748+01:00",
-  "completed_at": "2026-11-23T18:31:24.634818+01:00",
-  "delay_seconds": 81,
+  "scheduled_at": "2026-11-23T18:35:00+01:00",
+  "started_at": "2026-11-23T18:36:15.173695+01:00",
+  "completed_at": "2026-11-23T18:36:17.383284+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -819,7 +819,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 97,
+      "total_items": 102,
       "meat_items": [
         {
           "product_id": 533084,
@@ -827,10 +827,10 @@
           "brand": "AH",
           "size": "400 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 19.0,
           "price_was": "5.79",
-          "price_now": "3.02",
+          "price_now": "1.51",
           "expires": "2026-11-23"
         },
         {
@@ -930,7 +930,20 @@
           "expires": "2026-11-26"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 533084,
+          "title": "AH Scharrel kip shoarma",
+          "brand": "AH",
+          "size": "400 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 19.0,
+          "price_was": "5.79",
+          "price_now": "1.51",
+          "expires": "2026-11-23"
+        }
+      ],
       "error": ""
     }
   ],
