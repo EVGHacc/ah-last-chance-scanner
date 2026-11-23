@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-23T19:40:00+01:00",
-  "started_at": "2026-11-23T19:41:15.100958+01:00",
-  "completed_at": "2026-11-23T19:41:19.547675+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-23T19:45:00+01:00",
+  "started_at": "2026-11-23T19:46:18.644712+01:00",
+  "completed_at": "2026-11-23T19:46:22.942911+01:00",
+  "delay_seconds": 78,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,8 +10,20 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 92,
+      "total_items": 99,
       "meat_items": [
+        {
+          "product_id": 610026,
+          "title": "AH Rundersteak chimichurri",
+          "brand": "AH",
+          "size": "ca. 275 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "8.49",
+          "price_now": "2.55",
+          "expires": "2026-11-23"
+        },
         {
           "product_id": 169422,
           "title": "AH Varkensbraadworst",
@@ -37,6 +49,18 @@
           "expires": "2026-11-23"
         },
         {
+          "product_id": 620799,
+          "title": "AH Ovenschotel gehaktballetjes satesaus",
+          "brand": "AH",
+          "size": "375 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 1.0,
+          "price_was": "6.99",
+          "price_now": "4.19",
+          "expires": "2026-11-24"
+        },
+        {
           "product_id": 620854,
           "title": "AH Scharrel kipflakes BBQ",
           "brand": "AH",
@@ -46,6 +70,54 @@
           "stock": 1.0,
           "price_was": "3.99",
           "price_now": "2.39",
+          "expires": "2026-11-24"
+        },
+        {
+          "product_id": 533085,
+          "title": "AH Scharrel kipburger 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "2.99",
+          "price_now": "2.24",
+          "expires": "2026-11-24"
+        },
+        {
+          "product_id": 620813,
+          "title": "AH Ovenschotel kipdrumsticks sweet chili",
+          "brand": "AH",
+          "size": "600 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "6.29",
+          "price_now": "4.72",
+          "expires": "2026-11-24"
+        },
+        {
+          "product_id": 619324,
+          "title": "AH Burger smokey 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "2.99",
+          "expires": "2026-11-24"
+        },
+        {
+          "product_id": 556724,
+          "title": "AH Scharrel kipburger jalapeño 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "2.85",
+          "price_now": "2.14",
           "expires": "2026-11-24"
         },
         {
@@ -87,6 +159,18 @@
       ],
       "meat70": [
         {
+          "product_id": 610026,
+          "title": "AH Rundersteak chimichurri",
+          "brand": "AH",
+          "size": "ca. 275 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "8.49",
+          "price_now": "2.55",
+          "expires": "2026-11-23"
+        },
+        {
           "product_id": 169422,
           "title": "AH Varkensbraadworst",
           "brand": "AH",
@@ -117,7 +201,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 157,
+      "total_items": 158,
       "meat_items": [
         {
           "product_id": 531883,
@@ -189,18 +273,6 @@
           "stock": 1.0,
           "price_was": "4.85",
           "price_now": "1.46",
-          "expires": "2026-11-23"
-        },
-        {
-          "product_id": 187586,
-          "title": "AH Chipolata worstjes 8 stuks",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.19",
-          "price_now": "1.56",
           "expires": "2026-11-23"
         },
         {
@@ -506,18 +578,6 @@
           "expires": "2026-11-23"
         },
         {
-          "product_id": 187586,
-          "title": "AH Chipolata worstjes 8 stuks",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.19",
-          "price_now": "1.56",
-          "expires": "2026-11-23"
-        },
-        {
           "product_id": 531877,
           "title": "AH Scharrel kipdrumsticks",
           "brand": "AH",
@@ -572,7 +632,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 137,
+      "total_items": 165,
       "meat_items": [
         {
           "product_id": 3986,
@@ -990,7 +1050,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 116,
+      "total_items": 117,
       "meat_items": [
         {
           "product_id": 533084,
@@ -999,7 +1059,7 @@
           "size": "400 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 15.0,
+          "stock": 13.0,
           "price_was": "5.79",
           "price_now": "1.51",
           "expires": "2026-11-23"
@@ -1086,6 +1146,18 @@
           "stock": 2.0,
           "price_was": "4.99",
           "price_now": "3.74",
+          "expires": "2026-11-24"
+        },
+        {
+          "product_id": 551138,
+          "title": "AH Biologisch Ultimate beefburger",
+          "brand": "AH Biologisch",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "3.49",
+          "price_now": "2.62",
           "expires": "2026-11-24"
         },
         {
@@ -1277,7 +1349,7 @@
           "size": "400 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 15.0,
+          "stock": 13.0,
           "price_was": "5.79",
           "price_now": "1.51",
           "expires": "2026-11-23"
