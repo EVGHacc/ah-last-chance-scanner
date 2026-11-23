@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-23T18:50:00+01:00",
-  "started_at": "2026-11-23T18:51:24.257141+01:00",
-  "completed_at": "2026-11-23T18:51:26.966143+01:00",
-  "delay_seconds": 84,
+  "scheduled_at": "2026-11-23T18:55:00+01:00",
+  "started_at": "2026-11-23T18:56:13.602373+01:00",
+  "completed_at": "2026-11-23T18:56:15.968875+01:00",
+  "delay_seconds": 73,
   "late": false,
   "status": "OK",
   "stores": [
@@ -92,7 +92,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 163,
+      "total_items": 161,
       "meat_items": [
         {
           "product_id": 531883,
@@ -227,18 +227,6 @@
           "expires": "2026-11-23"
         },
         {
-          "product_id": 619330,
-          "title": "AH Gegrilde halve kip sweet chili",
-          "brand": "AH",
-          "size": "ca. 780 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 3.0,
-          "price_was": "10.44",
-          "price_now": "3.13",
-          "expires": "2026-11-24"
-        },
-        {
           "product_id": 619329,
           "title": "AH Gegrilde halve kip naturel",
           "brand": "AH",
@@ -248,6 +236,18 @@
           "stock": 2.0,
           "price_was": "8.70",
           "price_now": "2.61",
+          "expires": "2026-11-24"
+        },
+        {
+          "product_id": 619330,
+          "title": "AH Gegrilde halve kip sweet chili",
+          "brand": "AH",
+          "size": "ca. 780 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "10.44",
+          "price_now": "3.13",
           "expires": "2026-11-24"
         },
         {
@@ -505,18 +505,6 @@
           "expires": "2026-11-23"
         },
         {
-          "product_id": 619330,
-          "title": "AH Gegrilde halve kip sweet chili",
-          "brand": "AH",
-          "size": "ca. 780 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 3.0,
-          "price_was": "10.44",
-          "price_now": "3.13",
-          "expires": "2026-11-24"
-        },
-        {
           "product_id": 619329,
           "title": "AH Gegrilde halve kip naturel",
           "brand": "AH",
@@ -526,6 +514,18 @@
           "stock": 2.0,
           "price_was": "8.70",
           "price_now": "2.61",
+          "expires": "2026-11-24"
+        },
+        {
+          "product_id": 619330,
+          "title": "AH Gegrilde halve kip sweet chili",
+          "brand": "AH",
+          "size": "ca. 780 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "10.44",
+          "price_now": "3.13",
           "expires": "2026-11-24"
         }
       ],
@@ -701,7 +701,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 125,
+      "total_items": 124,
       "meat_items": [
         {
           "product_id": 531832,
@@ -828,7 +828,7 @@
           "size": "400 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 19.0,
+          "stock": 17.0,
           "price_was": "5.79",
           "price_now": "1.51",
           "expires": "2026-11-23"
@@ -938,7 +938,7 @@
           "size": "400 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 19.0,
+          "stock": 17.0,
           "price_was": "5.79",
           "price_now": "1.51",
           "expires": "2026-11-23"
