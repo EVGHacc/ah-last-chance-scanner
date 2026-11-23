@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-23T19:30:00+01:00",
-  "started_at": "2026-11-23T19:31:13.347936+01:00",
-  "completed_at": "2026-11-23T19:31:15.940786+01:00",
-  "delay_seconds": 73,
+  "scheduled_at": "2026-11-23T19:35:00+01:00",
+  "started_at": "2026-11-23T19:36:28.543565+01:00",
+  "completed_at": "2026-11-23T19:36:31.466951+01:00",
+  "delay_seconds": 88,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 81,
+      "total_items": 90,
       "meat_items": [
         {
           "product_id": 169422,
@@ -596,7 +596,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 138,
+      "total_items": 137,
       "meat_items": [
         {
           "product_id": 3986,
@@ -1014,7 +1014,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 112,
+      "total_items": 114,
       "meat_items": [
         {
           "product_id": 533084,
@@ -1063,6 +1063,18 @@
           "price_was": "5.49",
           "price_now": "1.65",
           "expires": "2026-11-23"
+        },
+        {
+          "product_id": 622558,
+          "title": "AH Gehaktballetjes Indische stijl",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 6.0,
+          "price_was": "4.49",
+          "price_now": "2.62",
+          "expires": "2026-11-24"
         },
         {
           "product_id": 426435,
@@ -1158,6 +1170,18 @@
           "stock": 1.0,
           "price_was": "5.79",
           "price_now": "3.78",
+          "expires": "2026-11-24"
+        },
+        {
+          "product_id": 619334,
+          "title": "AH Scharrel kipfiletschnitzel Hongaars",
+          "brand": "AH",
+          "size": "ca. 300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "5.49",
+          "price_now": "4.12",
           "expires": "2026-11-24"
         },
         {
