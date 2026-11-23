@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-23T20:45:00+01:00",
-  "started_at": "2026-11-23T20:46:15.035022+01:00",
-  "completed_at": "2026-11-23T20:46:17.778679+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-23T20:50:00+01:00",
+  "started_at": "2026-11-23T20:51:13.321652+01:00",
+  "completed_at": "2026-11-23T20:51:16.483220+01:00",
+  "delay_seconds": 73,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,20 +10,8 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 163,
+      "total_items": 161,
       "meat_items": [
-        {
-          "product_id": 436754,
-          "title": "AH Biologisch Rundertartaar",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
-          "expires": "2026-11-23"
-        },
         {
           "product_id": 610026,
           "title": "AH Rundersteak chimichurri",
@@ -231,18 +219,6 @@
       ],
       "meat70": [
         {
-          "product_id": 436754,
-          "title": "AH Biologisch Rundertartaar",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
-          "expires": "2026-11-23"
-        },
-        {
           "product_id": 610026,
           "title": "AH Rundersteak chimichurri",
           "brand": "AH",
@@ -285,7 +261,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 192,
+      "total_items": 193,
       "meat_items": [
         {
           "product_id": 531883,
@@ -1110,7 +1086,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 159,
+      "total_items": 161,
       "meat_items": [
         {
           "product_id": 533084,
