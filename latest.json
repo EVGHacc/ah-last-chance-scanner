@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-23T19:45:00+01:00",
-  "started_at": "2026-11-23T19:46:18.644712+01:00",
-  "completed_at": "2026-11-23T19:46:22.942911+01:00",
-  "delay_seconds": 78,
+  "scheduled_at": "2026-11-23T19:50:00+01:00",
+  "started_at": "2026-11-23T19:51:14.867488+01:00",
+  "completed_at": "2026-11-23T19:51:18.077100+01:00",
+  "delay_seconds": 74,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,8 +10,20 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 99,
+      "total_items": 141,
       "meat_items": [
+        {
+          "product_id": 436754,
+          "title": "AH Biologisch Rundertartaar",
+          "brand": "AH Biologisch",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.99",
+          "price_now": "1.50",
+          "expires": "2026-11-23"
+        },
         {
           "product_id": 610026,
           "title": "AH Rundersteak chimichurri",
@@ -49,6 +61,30 @@
           "expires": "2026-11-23"
         },
         {
+          "product_id": 619325,
+          "title": "AH Rundergehakt Italiaanse stijl",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 7.0,
+          "price_was": "4.99",
+          "price_now": "2.99",
+          "expires": "2026-11-24"
+        },
+        {
+          "product_id": 619343,
+          "title": "AH Scharrel kipborrelhapjes naturel",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 2.0,
+          "price_was": "4.29",
+          "price_now": "2.57",
+          "expires": "2026-11-24"
+        },
+        {
           "product_id": 620799,
           "title": "AH Ovenschotel gehaktballetjes satesaus",
           "brand": "AH",
@@ -70,6 +106,42 @@
           "stock": 1.0,
           "price_was": "3.99",
           "price_now": "2.39",
+          "expires": "2026-11-24"
+        },
+        {
+          "product_id": 531858,
+          "title": "AH Scharrel kippensoeppakket met groente",
+          "brand": "AH",
+          "size": "ca. 600 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 3.0,
+          "price_was": "4.61",
+          "price_now": "3.46",
+          "expires": "2026-11-24"
+        },
+        {
+          "product_id": 619330,
+          "title": "AH Gegrilde halve kip sweet chili",
+          "brand": "AH",
+          "size": "ca. 780 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "10.44",
+          "price_now": "7.83",
+          "expires": "2026-11-24"
+        },
+        {
+          "product_id": 531859,
+          "title": "AH Scharrel kippenvleugels",
+          "brand": "AH",
+          "size": "ca. 530 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "3.65",
+          "price_now": "2.74",
           "expires": "2026-11-24"
         },
         {
@@ -159,6 +231,18 @@
       ],
       "meat70": [
         {
+          "product_id": 436754,
+          "title": "AH Biologisch Rundertartaar",
+          "brand": "AH Biologisch",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.99",
+          "price_now": "1.50",
+          "expires": "2026-11-23"
+        },
+        {
           "product_id": 610026,
           "title": "AH Rundersteak chimichurri",
           "brand": "AH",
@@ -201,7 +285,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 158,
+      "total_items": 186,
       "meat_items": [
         {
           "product_id": 531883,
@@ -632,7 +716,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 165,
+      "total_items": 162,
       "meat_items": [
         {
           "product_id": 3986,
@@ -907,7 +991,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 120,
+      "total_items": 157,
       "meat_items": [
         {
           "product_id": 531832,
@@ -1050,7 +1134,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 117,
+      "total_items": 146,
       "meat_items": [
         {
           "product_id": 533084,
@@ -1101,6 +1185,18 @@
           "expires": "2026-11-23"
         },
         {
+          "product_id": 426435,
+          "title": "AH Biefstukspiesjes tuinkruiden",
+          "brand": "AH",
+          "size": "ca. 300 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 3.0,
+          "price_was": "9.99",
+          "price_now": "5.99",
+          "expires": "2026-11-24"
+        },
+        {
           "product_id": 622558,
           "title": "AH Gehaktballetjes Indische stijl",
           "brand": "AH",
@@ -1110,18 +1206,6 @@
           "stock": 6.0,
           "price_was": "4.49",
           "price_now": "2.62",
-          "expires": "2026-11-24"
-        },
-        {
-          "product_id": 426435,
-          "title": "AH Biefstukspiesjes tuinkruiden",
-          "brand": "AH",
-          "size": "ca. 300 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 3.0,
-          "price_was": "9.99",
-          "price_now": "7.49",
           "expires": "2026-11-24"
         },
         {
