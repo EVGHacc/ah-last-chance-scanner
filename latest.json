@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-23T18:10:00+01:00",
-  "started_at": "2026-11-23T18:11:18.006258+01:00",
-  "completed_at": "2026-11-23T18:11:20.728731+01:00",
-  "delay_seconds": 78,
+  "scheduled_at": "2026-11-23T18:15:00+01:00",
+  "started_at": "2026-11-23T18:16:15.345666+01:00",
+  "completed_at": "2026-11-23T18:16:19.167655+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 82,
+      "total_items": 80,
       "meat_items": [
         {
           "product_id": 169422,
@@ -95,6 +95,30 @@
       "total_items": 171,
       "meat_items": [
         {
+          "product_id": 531883,
+          "title": "AH Scharrel kipkluifjes",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 5.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 531857,
+          "title": "AH Scharrel kippenlevertjes",
+          "brand": "AH",
+          "size": "ca. 400 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "2.69",
+          "price_now": "0.81",
+          "expires": "2026-11-23"
+        },
+        {
           "product_id": 619329,
           "title": "AH Gegrilde halve kip naturel",
           "brand": "AH",
@@ -119,15 +143,39 @@
           "expires": "2026-11-23"
         },
         {
-          "product_id": 531883,
-          "title": "AH Scharrel kipkluifjes",
+          "product_id": 619346,
+          "title": "AH Kipchorizo worstjes",
           "brand": "AH",
-          "size": "500 g",
+          "size": "300 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 5.0,
+          "discount_pct": 70.0,
+          "stock": 1.0,
           "price_was": "3.99",
-          "price_now": "2.39",
+          "price_now": "1.20",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 531877,
+          "title": "AH Scharrel kipdrumsticks",
+          "brand": "AH",
+          "size": "600 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.19",
+          "price_now": "1.26",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 531834,
+          "title": "AH Scharrel kipfilet à la minute paprika",
+          "brand": "AH",
+          "size": "ca. 330 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "6.08",
+          "price_now": "1.82",
           "expires": "2026-11-23"
         },
         {
@@ -152,30 +200,6 @@
           "stock": 2.0,
           "price_was": "2.88",
           "price_now": "1.73",
-          "expires": "2026-11-23"
-        },
-        {
-          "product_id": 531857,
-          "title": "AH Scharrel kippenlevertjes",
-          "brand": "AH",
-          "size": "ca. 400 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "2.69",
-          "price_now": "1.61",
-          "expires": "2026-11-23"
-        },
-        {
-          "product_id": 619346,
-          "title": "AH Kipchorizo worstjes",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "2.39",
           "expires": "2026-11-23"
         },
         {
@@ -212,30 +236,6 @@
           "stock": 1.0,
           "price_was": "5.19",
           "price_now": "3.11",
-          "expires": "2026-11-23"
-        },
-        {
-          "product_id": 531877,
-          "title": "AH Scharrel kipdrumsticks",
-          "brand": "AH",
-          "size": "600 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "4.19",
-          "price_now": "2.51",
-          "expires": "2026-11-23"
-        },
-        {
-          "product_id": 531834,
-          "title": "AH Scharrel kipfilet à la minute paprika",
-          "brand": "AH",
-          "size": "ca. 330 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "6.08",
-          "price_now": "3.65",
           "expires": "2026-11-23"
         },
         {
@@ -469,6 +469,30 @@
       ],
       "meat70": [
         {
+          "product_id": 531883,
+          "title": "AH Scharrel kipkluifjes",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 5.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 531857,
+          "title": "AH Scharrel kippenlevertjes",
+          "brand": "AH",
+          "size": "ca. 400 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "2.69",
+          "price_now": "0.81",
+          "expires": "2026-11-23"
+        },
+        {
           "product_id": 619329,
           "title": "AH Gegrilde halve kip naturel",
           "brand": "AH",
@@ -491,6 +515,42 @@
           "price_was": "10.44",
           "price_now": "3.13",
           "expires": "2026-11-23"
+        },
+        {
+          "product_id": 619346,
+          "title": "AH Kipchorizo worstjes",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 531877,
+          "title": "AH Scharrel kipdrumsticks",
+          "brand": "AH",
+          "size": "600 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "4.19",
+          "price_now": "1.26",
+          "expires": "2026-11-23"
+        },
+        {
+          "product_id": 531834,
+          "title": "AH Scharrel kipfilet à la minute paprika",
+          "brand": "AH",
+          "size": "ca. 330 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "6.08",
+          "price_now": "1.82",
+          "expires": "2026-11-23"
         }
       ],
       "error": ""
@@ -499,7 +559,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 139,
+      "total_items": 136,
       "meat_items": [
         {
           "product_id": 3986,
@@ -574,18 +634,6 @@
           "expires": "2026-11-23"
         },
         {
-          "product_id": 436917,
-          "title": "AH Kipgehakt naturel",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "2.39",
-          "expires": "2026-11-23"
-        },
-        {
           "product_id": 531881,
           "title": "AH Scharrel kipborrelhapjes",
           "brand": "AH",
@@ -595,18 +643,6 @@
           "stock": 1.0,
           "price_was": "6.20",
           "price_now": "3.72",
-          "expires": "2026-11-23"
-        },
-        {
-          "product_id": 531851,
-          "title": "AH Scharrel kip shoarma",
-          "brand": "AH",
-          "size": "650 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "7.79",
-          "price_now": "4.67",
           "expires": "2026-11-23"
         },
         {
@@ -689,7 +725,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 128,
+      "total_items": 126,
       "meat_items": [
         {
           "product_id": 531832,
