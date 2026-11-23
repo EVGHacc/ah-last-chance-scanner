@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-23T21:55:00+01:00",
-  "started_at": "2026-11-23T21:56:14.366047+01:00",
-  "completed_at": "2026-11-23T21:56:16.828353+01:00",
+  "scheduled_at": "2026-11-23T22:00:00+01:00",
+  "started_at": "2026-11-23T22:01:14.044274+01:00",
+  "completed_at": "2026-11-23T22:01:17.664701+01:00",
   "delay_seconds": 74,
   "late": false,
   "status": "OK",
@@ -10,20 +10,8 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 150,
+      "total_items": 149,
       "meat_items": [
-        {
-          "product_id": 610026,
-          "title": "AH Rundersteak chimichurri",
-          "brand": "AH",
-          "size": "ca. 275 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "8.49",
-          "price_now": "2.55",
-          "expires": "2026-11-23"
-        },
         {
           "product_id": 169422,
           "title": "AH Varkensbraadworst",
@@ -219,18 +207,6 @@
       ],
       "meat70": [
         {
-          "product_id": 610026,
-          "title": "AH Rundersteak chimichurri",
-          "brand": "AH",
-          "size": "ca. 275 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "8.49",
-          "price_now": "2.55",
-          "expires": "2026-11-23"
-        },
-        {
           "product_id": 169422,
           "title": "AH Varkensbraadworst",
           "brand": "AH",
@@ -261,7 +237,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 192,
+      "total_items": 184,
       "meat_items": [
         {
           "product_id": 531883,
@@ -1086,7 +1062,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 166,
+      "total_items": 164,
       "meat_items": [
         {
           "product_id": 533084,
