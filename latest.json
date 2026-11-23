@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-23T21:35:00+01:00",
-  "started_at": "2026-11-23T21:36:13.063823+01:00",
-  "completed_at": "2026-11-23T21:36:16.276889+01:00",
-  "delay_seconds": 73,
+  "scheduled_at": "2026-11-23T21:40:00+01:00",
+  "started_at": "2026-11-23T21:41:15.137619+01:00",
+  "completed_at": "2026-11-23T21:41:18.236004+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -1086,7 +1086,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 175,
+      "total_items": 166,
       "meat_items": [
         {
           "product_id": 533084,
@@ -1095,7 +1095,7 @@
           "size": "400 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 13.0,
+          "stock": 3.0,
           "price_was": "5.79",
           "price_now": "1.51",
           "expires": "2026-11-23"
@@ -1122,18 +1122,6 @@
           "stock": 1.0,
           "price_was": "3.69",
           "price_now": "1.11",
-          "expires": "2026-11-23"
-        },
-        {
-          "product_id": 212142,
-          "title": "AH Gyros",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.49",
-          "price_now": "1.65",
           "expires": "2026-11-23"
         },
         {
@@ -1373,7 +1361,7 @@
           "size": "400 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 13.0,
+          "stock": 3.0,
           "price_was": "5.79",
           "price_now": "1.51",
           "expires": "2026-11-23"
@@ -1400,18 +1388,6 @@
           "stock": 1.0,
           "price_was": "3.69",
           "price_now": "1.11",
-          "expires": "2026-11-23"
-        },
-        {
-          "product_id": 212142,
-          "title": "AH Gyros",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.49",
-          "price_now": "1.65",
           "expires": "2026-11-23"
         }
       ],
