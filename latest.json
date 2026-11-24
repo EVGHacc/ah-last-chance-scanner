@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-24T19:00:00+01:00",
-  "started_at": "2026-11-24T19:01:35.331137+01:00",
-  "completed_at": "2026-11-24T19:01:38.834875+01:00",
-  "delay_seconds": 95,
+  "scheduled_at": "2026-11-24T19:05:00+01:00",
+  "started_at": "2026-11-24T19:06:16.887454+01:00",
+  "completed_at": "2026-11-24T19:06:19.777830+01:00",
+  "delay_seconds": 76,
   "late": false,
   "status": "OK",
   "stores": [
@@ -288,18 +288,6 @@
       "total_items": 190,
       "meat_items": [
         {
-          "product_id": 187593,
-          "title": "AH Greenfields Beefburger jalapeno 2 stuks",
-          "brand": "AH Greenfields",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
-          "expires": "2026-11-24"
-        },
-        {
           "product_id": 451171,
           "title": "AH Kipfiletreepjes",
           "brand": "AH",
@@ -309,6 +297,18 @@
           "stock": 3.0,
           "price_was": "5.49",
           "price_now": "1.65",
+          "expires": "2026-11-24"
+        },
+        {
+          "product_id": 187593,
+          "title": "AH Greenfields Beefburger jalapeno 2 stuks",
+          "brand": "AH Greenfields",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "4.99",
+          "price_now": "1.50",
           "expires": "2026-11-24"
         },
         {
@@ -530,18 +530,6 @@
       ],
       "meat70": [
         {
-          "product_id": 187593,
-          "title": "AH Greenfields Beefburger jalapeno 2 stuks",
-          "brand": "AH Greenfields",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
-          "expires": "2026-11-24"
-        },
-        {
           "product_id": 451171,
           "title": "AH Kipfiletreepjes",
           "brand": "AH",
@@ -551,6 +539,18 @@
           "stock": 3.0,
           "price_was": "5.49",
           "price_now": "1.65",
+          "expires": "2026-11-24"
+        },
+        {
+          "product_id": 187593,
+          "title": "AH Greenfields Beefburger jalapeno 2 stuks",
+          "brand": "AH Greenfields",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "4.99",
+          "price_now": "1.50",
           "expires": "2026-11-24"
         },
         {
@@ -967,7 +967,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 133,
+      "total_items": 132,
       "meat_items": [
         {
           "product_id": 531880,
@@ -975,10 +975,10 @@
           "brand": "AH",
           "size": "1 kg",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "6.37",
-          "price_now": "3.22",
+          "price_now": "1.61",
           "expires": "2026-11-24"
         },
         {
@@ -1042,14 +1042,27 @@
           "expires": "2026-11-27"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 531880,
+          "title": "AH Scharrel kipdrumsticks gemarineerd",
+          "brand": "AH",
+          "size": "1 kg",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "6.37",
+          "price_now": "1.61",
+          "expires": "2026-11-24"
+        }
+      ],
       "error": ""
     },
     {
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 140,
+      "total_items": 141,
       "meat_items": [
         {
           "product_id": 619334,
@@ -1057,10 +1070,22 @@
           "brand": "AH",
           "size": "ca. 300 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "5.49",
-          "price_now": "3.29",
+          "price_now": "1.65",
+          "expires": "2026-11-24"
+        },
+        {
+          "product_id": 212143,
+          "title": "AH Runderreepjes naturel",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "8.75",
+          "price_now": "2.63",
           "expires": "2026-11-24"
         },
         {
@@ -1073,18 +1098,6 @@
           "stock": 1.0,
           "price_was": "2.88",
           "price_now": "1.73",
-          "expires": "2026-11-24"
-        },
-        {
-          "product_id": 212143,
-          "title": "AH Runderreepjes naturel",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "8.75",
-          "price_now": "5.25",
           "expires": "2026-11-24"
         },
         {
@@ -1196,7 +1209,32 @@
           "expires": "2026-11-26"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 619334,
+          "title": "AH Scharrel kipfiletschnitzel Hongaars",
+          "brand": "AH",
+          "size": "ca. 300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "5.49",
+          "price_now": "1.65",
+          "expires": "2026-11-24"
+        },
+        {
+          "product_id": 212143,
+          "title": "AH Runderreepjes naturel",
+          "brand": "AH",
+          "size": "350 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "8.75",
+          "price_now": "2.63",
+          "expires": "2026-11-24"
+        }
+      ],
       "error": ""
     }
   ],
