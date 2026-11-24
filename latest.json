@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-24T22:15:00+01:00",
-  "started_at": "2026-11-24T22:16:19.519484+01:00",
-  "completed_at": "2026-11-24T22:16:23.349435+01:00",
-  "delay_seconds": 79,
+  "scheduled_at": "2026-11-24T22:20:00+01:00",
+  "started_at": "2026-11-24T22:21:29.193686+01:00",
+  "completed_at": "2026-11-24T22:21:32.254882+01:00",
+  "delay_seconds": 89,
   "late": false,
   "status": "OK",
   "stores": [
@@ -748,20 +748,8 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 129,
+      "total_items": 124,
       "meat_items": [
-        {
-          "product_id": 165535,
-          "title": "AH Scharrel kipfilet gerookt",
-          "brand": "AH",
-          "size": "ca. 140 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "2.88",
-          "price_now": "0.86",
-          "expires": "2026-11-24"
-        },
         {
           "product_id": 212143,
           "title": "AH Runderreepjes naturel",
@@ -884,18 +872,6 @@
         }
       ],
       "meat70": [
-        {
-          "product_id": 165535,
-          "title": "AH Scharrel kipfilet gerookt",
-          "brand": "AH",
-          "size": "ca. 140 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "2.88",
-          "price_now": "0.86",
-          "expires": "2026-11-24"
-        },
         {
           "product_id": 212143,
           "title": "AH Runderreepjes naturel",
