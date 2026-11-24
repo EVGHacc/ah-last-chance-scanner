@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-24T19:50:00+01:00",
-  "started_at": "2026-11-24T19:51:14.522819+01:00",
-  "completed_at": "2026-11-24T19:51:21.459140+01:00",
-  "delay_seconds": 74,
+  "scheduled_at": "2026-11-24T19:55:00+01:00",
+  "started_at": "2026-11-24T19:56:12.145890+01:00",
+  "completed_at": "2026-11-24T19:56:15.306728+01:00",
+  "delay_seconds": 72,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 173,
+      "total_items": 171,
       "meat_items": [
         {
           "product_id": 619325,
@@ -109,18 +109,6 @@
           "expires": "2026-11-25"
         },
         {
-          "product_id": 531884,
-          "title": "AH Scharrel kipkluifjes gemarineerd",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 3.0,
-          "price_was": "3.89",
-          "price_now": "2.92",
-          "expires": "2026-11-25"
-        },
-        {
           "product_id": 531845,
           "title": "AH Scharrel kipfiletblokjes saté",
           "brand": "AH",
@@ -130,6 +118,18 @@
           "stock": 3.0,
           "price_was": "5.99",
           "price_now": "4.49",
+          "expires": "2026-11-25"
+        },
+        {
+          "product_id": 531884,
+          "title": "AH Scharrel kipkluifjes gemarineerd",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "3.89",
+          "price_now": "2.92",
           "expires": "2026-11-25"
         },
         {
@@ -285,7 +285,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 224,
+      "total_items": 223,
       "meat_items": [
         {
           "product_id": 451171,
