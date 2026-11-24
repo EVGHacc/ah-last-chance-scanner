@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-24T20:45:00+01:00",
-  "started_at": "2026-11-24T20:46:15.576434+01:00",
-  "completed_at": "2026-11-24T20:46:18.762880+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-24T20:50:00+01:00",
+  "started_at": "2026-11-24T20:51:21.822857+01:00",
+  "completed_at": "2026-11-24T20:51:24.800821+01:00",
+  "delay_seconds": 81,
   "late": false,
   "status": "OK",
   "stores": [
@@ -632,7 +632,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 184,
+      "total_items": 180,
       "meat_items": [
         {
           "product_id": 619325,
@@ -728,18 +728,6 @@
           "stock": 1.0,
           "price_was": "2.99",
           "price_now": "0.90",
-          "expires": "2026-11-24"
-        },
-        {
-          "product_id": 212143,
-          "title": "AH Runderreepjes naturel",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "8.75",
-          "price_now": "2.63",
           "expires": "2026-11-24"
         },
         {
@@ -862,18 +850,6 @@
           "stock": 1.0,
           "price_was": "2.99",
           "price_now": "0.90",
-          "expires": "2026-11-24"
-        },
-        {
-          "product_id": 212143,
-          "title": "AH Runderreepjes naturel",
-          "brand": "AH",
-          "size": "350 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "8.75",
-          "price_now": "2.63",
           "expires": "2026-11-24"
         },
         {
