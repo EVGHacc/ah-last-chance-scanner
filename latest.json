@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-24T21:05:00+01:00",
-  "started_at": "2026-11-24T21:06:14.388170+01:00",
-  "completed_at": "2026-11-24T21:06:18.292461+01:00",
-  "delay_seconds": 74,
+  "scheduled_at": "2026-11-24T21:10:00+01:00",
+  "started_at": "2026-11-24T21:11:13.935231+01:00",
+  "completed_at": "2026-11-24T21:11:17.411268+01:00",
+  "delay_seconds": 73,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 167,
+      "total_items": 166,
       "meat_items": [
         {
           "product_id": 619325,
@@ -632,7 +632,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 180,
+      "total_items": 177,
       "meat_items": [
         {
           "product_id": 619325,
@@ -716,18 +716,6 @@
           "stock": 1.0,
           "price_was": "3.79",
           "price_now": "1.14",
-          "expires": "2026-11-24"
-        },
-        {
-          "product_id": 533085,
-          "title": "AH Scharrel kipburger 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "2.99",
-          "price_now": "0.90",
           "expires": "2026-11-24"
         },
         {
@@ -841,18 +829,6 @@
           "expires": "2026-11-24"
         },
         {
-          "product_id": 533085,
-          "title": "AH Scharrel kipburger 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "2.99",
-          "price_now": "0.90",
-          "expires": "2026-11-24"
-        },
-        {
           "product_id": 238928,
           "title": "AH Biologisch Schouderkarbonade",
           "brand": "AH Biologisch",
@@ -871,7 +847,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 180,
+      "total_items": 179,
       "meat_items": [
         {
           "product_id": 531880,
