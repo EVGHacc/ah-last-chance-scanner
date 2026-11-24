@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-24T19:05:00+01:00",
-  "started_at": "2026-11-24T19:06:16.887454+01:00",
-  "completed_at": "2026-11-24T19:06:19.777830+01:00",
-  "delay_seconds": 76,
+  "scheduled_at": "2026-11-24T19:10:00+01:00",
+  "started_at": "2026-11-24T19:11:14.540657+01:00",
+  "completed_at": "2026-11-24T19:11:16.545942+01:00",
+  "delay_seconds": 74,
   "late": false,
   "status": "OK",
   "stores": [
@@ -285,7 +285,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 190,
+      "total_items": 189,
       "meat_items": [
         {
           "product_id": 451171,
@@ -393,18 +393,6 @@
           "stock": 1.0,
           "price_was": "5.49",
           "price_now": "1.65",
-          "expires": "2026-11-24"
-        },
-        {
-          "product_id": 531835,
-          "title": "AH Scharrel kipfilet blokjes",
-          "brand": "AH",
-          "size": "600 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "7.91",
-          "price_now": "2.37",
           "expires": "2026-11-24"
         },
         {
@@ -635,18 +623,6 @@
           "stock": 1.0,
           "price_was": "5.49",
           "price_now": "1.65",
-          "expires": "2026-11-24"
-        },
-        {
-          "product_id": 531835,
-          "title": "AH Scharrel kipfilet blokjes",
-          "brand": "AH",
-          "size": "600 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "7.91",
-          "price_now": "2.37",
           "expires": "2026-11-24"
         },
         {
@@ -1131,7 +1107,7 @@
           "size": "2 stuks",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 3.0,
+          "stock": 2.0,
           "price_was": "3.49",
           "price_now": "2.62",
           "expires": "2026-11-25"
