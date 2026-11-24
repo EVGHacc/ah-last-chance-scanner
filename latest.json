@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-24T19:45:00+01:00",
-  "started_at": "2026-11-24T19:46:17.934948+01:00",
-  "completed_at": "2026-11-24T19:46:22.282187+01:00",
-  "delay_seconds": 77,
+  "scheduled_at": "2026-11-24T19:50:00+01:00",
+  "started_at": "2026-11-24T19:51:14.522819+01:00",
+  "completed_at": "2026-11-24T19:51:21.459140+01:00",
+  "delay_seconds": 74,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 130,
+      "total_items": 173,
       "meat_items": [
         {
           "product_id": 619325,
@@ -285,7 +285,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 227,
+      "total_items": 224,
       "meat_items": [
         {
           "product_id": 451171,
@@ -381,18 +381,6 @@
           "stock": 1.0,
           "price_was": "6.37",
           "price_now": "1.61",
-          "expires": "2026-11-24"
-        },
-        {
-          "product_id": 531872,
-          "title": "AH Scharrel kipburger gepaneerd 4 stuks",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.49",
-          "price_now": "1.65",
           "expires": "2026-11-24"
         },
         {
@@ -599,18 +587,6 @@
           "stock": 1.0,
           "price_was": "6.37",
           "price_now": "1.61",
-          "expires": "2026-11-24"
-        },
-        {
-          "product_id": 531872,
-          "title": "AH Scharrel kipburger gepaneerd 4 stuks",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.49",
-          "price_now": "1.65",
           "expires": "2026-11-24"
         },
         {
@@ -943,7 +919,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 131,
+      "total_items": 179,
       "meat_items": [
         {
           "product_id": 531880,
@@ -1038,7 +1014,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 136,
+      "total_items": 163,
       "meat_items": [
         {
           "product_id": 212143,
