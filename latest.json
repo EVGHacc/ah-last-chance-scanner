@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-24T18:05:00+01:00",
-  "started_at": "2026-11-24T18:06:19.768274+01:00",
-  "completed_at": "2026-11-24T18:06:22.453017+01:00",
-  "delay_seconds": 79,
+  "scheduled_at": "2026-11-24T18:10:00+01:00",
+  "started_at": "2026-11-24T18:11:17.026823+01:00",
+  "completed_at": "2026-11-24T18:11:20.516354+01:00",
+  "delay_seconds": 77,
   "late": false,
   "status": "OK",
   "stores": [
@@ -104,7 +104,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 200,
+      "total_items": 197,
       "meat_items": [
         {
           "product_id": 187593,
@@ -188,18 +188,6 @@
           "stock": 1.0,
           "price_was": "10.44",
           "price_now": "6.26",
-          "expires": "2026-11-24"
-        },
-        {
-          "product_id": 425633,
-          "title": "AH Varkensribeye naturel",
-          "brand": "AH",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "4.49",
-          "price_now": "2.29",
           "expires": "2026-11-24"
         },
         {
@@ -378,7 +366,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 142,
+      "total_items": 141,
       "meat_items": [
         {
           "product_id": 477571,
@@ -627,20 +615,8 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 130,
+      "total_items": 127,
       "meat_items": [
-        {
-          "product_id": 551138,
-          "title": "AH Biologisch Ultimate beefburger",
-          "brand": "AH Biologisch",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "3.49",
-          "price_now": "2.09",
-          "expires": "2026-11-24"
-        },
         {
           "product_id": 619334,
           "title": "AH Scharrel kipfiletschnitzel Hongaars",
@@ -663,18 +639,6 @@
           "stock": 1.0,
           "price_was": "7.49",
           "price_now": "4.49",
-          "expires": "2026-11-24"
-        },
-        {
-          "product_id": 199713,
-          "title": "AH Slavink",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "2.39",
-          "price_now": "1.43",
           "expires": "2026-11-24"
         },
         {
@@ -759,18 +723,6 @@
           "stock": 1.0,
           "price_was": "4.11",
           "price_now": "2.62",
-          "expires": "2026-11-25"
-        },
-        {
-          "product_id": 436877,
-          "title": "AH Biologisch Rundergehakt balletjes",
-          "brand": "AH Biologisch",
-          "size": "12 stuks",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "6.49",
-          "price_now": "4.87",
           "expires": "2026-11-25"
         },
         {
