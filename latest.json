@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-24T20:00:00+01:00",
-  "started_at": "2026-11-24T20:01:13.938837+01:00",
-  "completed_at": "2026-11-24T20:01:16.750258+01:00",
-  "delay_seconds": 73,
+  "scheduled_at": "2026-11-24T20:05:00+01:00",
+  "started_at": "2026-11-24T20:06:28.960441+01:00",
+  "completed_at": "2026-11-24T20:06:32.183522+01:00",
+  "delay_seconds": 88,
   "late": false,
   "status": "OK",
   "stores": [
@@ -632,7 +632,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 175,
+      "total_items": 174,
       "meat_items": [
         {
           "product_id": 619325,
@@ -753,18 +753,6 @@
           "price_was": "7.07",
           "price_now": "2.12",
           "expires": "2026-11-24"
-        },
-        {
-          "product_id": 203274,
-          "title": "Zandvliet Gerookte kipfilet",
-          "brand": "Zandvliet",
-          "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "3.59",
-          "price_now": "1.08",
-          "expires": "2026-11-26"
         },
         {
           "product_id": 189610,
@@ -899,18 +887,6 @@
           "price_was": "7.07",
           "price_now": "2.12",
           "expires": "2026-11-24"
-        },
-        {
-          "product_id": 203274,
-          "title": "Zandvliet Gerookte kipfilet",
-          "brand": "Zandvliet",
-          "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "3.59",
-          "price_now": "1.08",
-          "expires": "2026-11-26"
         }
       ],
       "error": ""
