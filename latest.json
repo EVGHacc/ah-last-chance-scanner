@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-24T19:10:00+01:00",
-  "started_at": "2026-11-24T19:11:14.540657+01:00",
-  "completed_at": "2026-11-24T19:11:16.545942+01:00",
-  "delay_seconds": 74,
+  "scheduled_at": "2026-11-24T19:15:00+01:00",
+  "started_at": "2026-11-24T19:16:15.696491+01:00",
+  "completed_at": "2026-11-24T19:16:18.246810+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 104,
+      "total_items": 102,
       "meat_items": [
         {
           "product_id": 619325,
@@ -796,10 +796,10 @@
           "brand": "Zandvliet",
           "size": "250 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 4.0,
           "price_was": "3.59",
-          "price_now": "2.15",
+          "price_now": "1.08",
           "expires": "2026-11-26"
         },
         {
@@ -935,6 +935,18 @@
           "price_was": "7.07",
           "price_now": "2.12",
           "expires": "2026-11-24"
+        },
+        {
+          "product_id": 203274,
+          "title": "Zandvliet Gerookte kipfilet",
+          "brand": "Zandvliet",
+          "size": "250 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 4.0,
+          "price_was": "3.59",
+          "price_now": "1.08",
+          "expires": "2026-11-26"
         }
       ],
       "error": ""
@@ -1038,20 +1050,8 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 141,
+      "total_items": 139,
       "meat_items": [
-        {
-          "product_id": 619334,
-          "title": "AH Scharrel kipfiletschnitzel Hongaars",
-          "brand": "AH",
-          "size": "ca. 300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.49",
-          "price_now": "1.65",
-          "expires": "2026-11-24"
-        },
         {
           "product_id": 212143,
           "title": "AH Runderreepjes naturel",
@@ -1186,18 +1186,6 @@
         }
       ],
       "meat70": [
-        {
-          "product_id": 619334,
-          "title": "AH Scharrel kipfiletschnitzel Hongaars",
-          "brand": "AH",
-          "size": "ca. 300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.49",
-          "price_now": "1.65",
-          "expires": "2026-11-24"
-        },
         {
           "product_id": 212143,
           "title": "AH Runderreepjes naturel",
