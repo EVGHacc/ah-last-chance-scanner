@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-24T17:55:00+01:00",
-  "started_at": "2026-11-24T17:56:16.750035+01:00",
-  "completed_at": "2026-11-24T17:56:20.714480+01:00",
-  "delay_seconds": 76,
+  "scheduled_at": "2026-11-24T18:00:00+01:00",
+  "started_at": "2026-11-24T18:01:22.744026+01:00",
+  "completed_at": "2026-11-24T18:01:25.444583+01:00",
+  "delay_seconds": 82,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 84,
+      "total_items": 86,
       "meat_items": [
         {
           "product_id": 619325,
@@ -627,7 +627,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 124,
+      "total_items": 128,
       "meat_items": [
         {
           "product_id": 551138,
@@ -702,6 +702,54 @@
           "expires": "2026-11-24"
         },
         {
+          "product_id": 3986,
+          "title": "AH Speklap",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 4.0,
+          "price_was": "3.39",
+          "price_now": "2.54",
+          "expires": "2026-11-25"
+        },
+        {
+          "product_id": 4046,
+          "title": "AH Filetlap 2 stuks",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 3.0,
+          "price_was": "3.49",
+          "price_now": "2.62",
+          "expires": "2026-11-25"
+        },
+        {
+          "product_id": 210607,
+          "title": "AH Shoarma",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "4.94",
+          "price_now": "3.71",
+          "expires": "2026-11-25"
+        },
+        {
+          "product_id": 598620,
+          "title": "AH Filetlapjes à la minute naturel",
+          "brand": "AH",
+          "size": "ca. 350 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "4.11",
+          "price_now": "2.62",
+          "expires": "2026-11-25"
+        },
+        {
           "product_id": 620800,
           "title": "AH Ovenschotel gehaktballetjes tomatensaus",
           "brand": "AH",
@@ -723,6 +771,18 @@
           "stock": 1.0,
           "price_was": "3.99",
           "price_now": "2.99",
+          "expires": "2026-11-25"
+        },
+        {
+          "product_id": 212142,
+          "title": "AH Gyros",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "5.49",
+          "price_now": "4.12",
           "expires": "2026-11-25"
         },
         {
