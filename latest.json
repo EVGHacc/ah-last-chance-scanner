@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-24T20:30:00+01:00",
-  "started_at": "2026-11-24T20:31:15.629239+01:00",
-  "completed_at": "2026-11-24T20:31:18.705883+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-24T20:35:00+01:00",
+  "started_at": "2026-11-24T20:36:39.587922+01:00",
+  "completed_at": "2026-11-24T20:36:42.999059+01:00",
+  "delay_seconds": 99,
   "late": false,
   "status": "OK",
   "stores": [
@@ -632,7 +632,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 178,
+      "total_items": 184,
       "meat_items": [
         {
           "product_id": 619325,
@@ -915,10 +915,10 @@
           "brand": "AH",
           "size": "ca. 150 g",
           "category": "Vlees",
-          "discount_pct": 25.0,
+          "discount_pct": 40.0,
           "stock": 2.0,
           "price_was": "3.79",
-          "price_now": "2.84",
+          "price_now": "2.27",
           "expires": "2026-11-25"
         },
         {
@@ -993,6 +993,18 @@
       "total_items": 151,
       "meat_items": [
         {
+          "product_id": 165535,
+          "title": "AH Scharrel kipfilet gerookt",
+          "brand": "AH",
+          "size": "ca. 140 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "2.88",
+          "price_now": "0.86",
+          "expires": "2026-11-24"
+        },
+        {
           "product_id": 212143,
           "title": "AH Runderreepjes naturel",
           "brand": "AH",
@@ -1002,18 +1014,6 @@
           "stock": 1.0,
           "price_was": "8.75",
           "price_now": "2.63",
-          "expires": "2026-11-24"
-        },
-        {
-          "product_id": 165535,
-          "title": "AH Scharrel kipfilet gerookt",
-          "brand": "AH",
-          "size": "ca. 140 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "2.88",
-          "price_now": "1.73",
           "expires": "2026-11-24"
         },
         {
@@ -1126,6 +1126,18 @@
         }
       ],
       "meat70": [
+        {
+          "product_id": 165535,
+          "title": "AH Scharrel kipfilet gerookt",
+          "brand": "AH",
+          "size": "ca. 140 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "2.88",
+          "price_now": "0.86",
+          "expires": "2026-11-24"
+        },
         {
           "product_id": 212143,
           "title": "AH Runderreepjes naturel",
