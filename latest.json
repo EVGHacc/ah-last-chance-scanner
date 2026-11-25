@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-25T20:25:00+01:00",
-  "started_at": "2026-11-25T20:26:11.892515+01:00",
-  "completed_at": "2026-11-25T20:26:15.665714+01:00",
-  "delay_seconds": 71,
+  "scheduled_at": "2026-11-25T20:30:00+01:00",
+  "started_at": "2026-11-25T20:31:24.836682+01:00",
+  "completed_at": "2026-11-25T20:31:28.810368+01:00",
+  "delay_seconds": 84,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 132,
+      "total_items": 131,
       "meat_items": [
         {
           "product_id": 619347,
@@ -450,7 +450,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 153,
+      "total_items": 155,
       "meat_items": [
         {
           "product_id": 4046,
@@ -486,18 +486,6 @@
           "stock": 1.0,
           "price_was": "4.11",
           "price_now": "1.05",
-          "expires": "2026-11-25"
-        },
-        {
-          "product_id": 620800,
-          "title": "AH Ovenschotel gehaktballetjes tomatensaus",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
           "expires": "2026-11-25"
         },
         {
@@ -632,18 +620,6 @@
           "stock": 1.0,
           "price_was": "4.11",
           "price_now": "1.05",
-          "expires": "2026-11-25"
-        },
-        {
-          "product_id": 620800,
-          "title": "AH Ovenschotel gehaktballetjes tomatensaus",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
           "expires": "2026-11-25"
         },
         {
