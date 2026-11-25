@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-25T19:35:00+01:00",
-  "started_at": "2026-11-25T19:36:13.989516+01:00",
-  "completed_at": "2026-11-25T19:36:16.830116+01:00",
+  "scheduled_at": "2026-11-25T19:40:00+01:00",
+  "started_at": "2026-11-25T19:41:13.868684+01:00",
+  "completed_at": "2026-11-25T19:41:16.855382+01:00",
   "delay_seconds": 73,
   "late": false,
   "status": "OK",
@@ -93,7 +93,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 169,
+      "total_items": 168,
       "meat_items": [
         {
           "product_id": 160750,
@@ -166,18 +166,6 @@
           "price_was": "5.49",
           "price_now": "4.12",
           "expires": "2026-11-26"
-        },
-        {
-          "product_id": 197447,
-          "title": "Meester & Zn. Hamblokjes",
-          "brand": "Meester & Zn.",
-          "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "1.89",
-          "price_now": "1.42",
-          "expires": "2026-11-28"
         }
       ],
       "meat70": [
@@ -224,7 +212,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 127,
+      "total_items": 123,
       "meat_items": [
         {
           "product_id": 436751,
