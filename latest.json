@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-25T21:55:00+01:00",
-  "started_at": "2026-11-25T21:56:13.256648+01:00",
-  "completed_at": "2026-11-25T21:56:16.068380+01:00",
-  "delay_seconds": 73,
+  "scheduled_at": "2026-11-25T22:00:00+01:00",
+  "started_at": "2026-11-25T22:01:30.109210+01:00",
+  "completed_at": "2026-11-25T22:01:33.040403+01:00",
+  "delay_seconds": 90,
   "late": false,
   "status": "OK",
   "stores": [
@@ -114,20 +114,8 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 154,
+      "total_items": 133,
       "meat_items": [
-        {
-          "product_id": 436751,
-          "title": "AH Biologisch Runderbraadworst",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 3.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
-          "expires": "2026-11-25"
-        },
         {
           "product_id": 169238,
           "title": "AH Runderhamburger 2st",
@@ -138,18 +126,6 @@
           "stock": 2.0,
           "price_was": "3.45",
           "price_now": "1.04",
-          "expires": "2026-11-25"
-        },
-        {
-          "product_id": 620800,
-          "title": "AH Ovenschotel gehaktballetjes tomatensaus",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
           "expires": "2026-11-25"
         },
         {
@@ -179,18 +155,6 @@
       ],
       "meat70": [
         {
-          "product_id": 436751,
-          "title": "AH Biologisch Runderbraadworst",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 3.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
-          "expires": "2026-11-25"
-        },
-        {
           "product_id": 169238,
           "title": "AH Runderhamburger 2st",
           "brand": "AH",
@@ -200,18 +164,6 @@
           "stock": 2.0,
           "price_was": "3.45",
           "price_now": "1.04",
-          "expires": "2026-11-25"
-        },
-        {
-          "product_id": 620800,
-          "title": "AH Ovenschotel gehaktballetjes tomatensaus",
-          "brand": "AH",
-          "size": "400 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "2.10",
           "expires": "2026-11-25"
         },
         {
@@ -352,7 +304,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 170,
+      "total_items": 167,
       "meat_items": [
         {
           "product_id": 203274,
