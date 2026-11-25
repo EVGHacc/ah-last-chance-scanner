@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-25T21:35:00+01:00",
-  "started_at": "2026-11-25T21:36:18.541042+01:00",
-  "completed_at": "2026-11-25T21:36:22.218791+01:00",
-  "delay_seconds": 78,
+  "scheduled_at": "2026-11-25T21:40:00+01:00",
+  "started_at": "2026-11-25T21:41:19.494921+01:00",
+  "completed_at": "2026-11-25T21:41:22.881059+01:00",
+  "delay_seconds": 79,
   "late": false,
   "status": "OK",
   "stores": [
@@ -376,44 +376,8 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 180,
+      "total_items": 172,
       "meat_items": [
-        {
-          "product_id": 4046,
-          "title": "AH Filetlap 2 stuks",
-          "brand": "AH",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.49",
-          "price_now": "1.05",
-          "expires": "2026-11-25"
-        },
-        {
-          "product_id": 3986,
-          "title": "AH Speklap",
-          "brand": "AH",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.39",
-          "price_now": "1.02",
-          "expires": "2026-11-25"
-        },
-        {
-          "product_id": 598620,
-          "title": "AH Filetlapjes à la minute naturel",
-          "brand": "AH",
-          "size": "ca. 350 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.11",
-          "price_now": "1.05",
-          "expires": "2026-11-25"
-        },
         {
           "product_id": 203274,
           "title": "Zandvliet Gerookte kipfilet",
@@ -524,42 +488,6 @@
         }
       ],
       "meat70": [
-        {
-          "product_id": 4046,
-          "title": "AH Filetlap 2 stuks",
-          "brand": "AH",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.49",
-          "price_now": "1.05",
-          "expires": "2026-11-25"
-        },
-        {
-          "product_id": 3986,
-          "title": "AH Speklap",
-          "brand": "AH",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.39",
-          "price_now": "1.02",
-          "expires": "2026-11-25"
-        },
-        {
-          "product_id": 598620,
-          "title": "AH Filetlapjes à la minute naturel",
-          "brand": "AH",
-          "size": "ca. 350 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.11",
-          "price_now": "1.05",
-          "expires": "2026-11-25"
-        },
         {
           "product_id": 203274,
           "title": "Zandvliet Gerookte kipfilet",
