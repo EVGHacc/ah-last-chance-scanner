@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-25T21:10:00+01:00",
-  "started_at": "2026-11-25T21:11:11.453154+01:00",
-  "completed_at": "2026-11-25T21:11:14.838893+01:00",
-  "delay_seconds": 71,
+  "scheduled_at": "2026-11-25T21:15:00+01:00",
+  "started_at": "2026-11-25T21:16:18.635572+01:00",
+  "completed_at": "2026-11-25T21:16:21.476150+01:00",
+  "delay_seconds": 78,
   "late": false,
   "status": "OK",
   "stores": [
@@ -164,7 +164,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 160,
+      "total_items": 161,
       "meat_items": [
         {
           "product_id": 436751,
@@ -426,7 +426,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 179,
+      "total_items": 180,
       "meat_items": [
         {
           "product_id": 4046,
@@ -534,6 +534,18 @@
           "stock": 1.0,
           "price_was": "2.51",
           "price_now": "1.88",
+          "expires": "2026-11-26"
+        },
+        {
+          "product_id": 619327,
+          "title": "AH Excellent Mais kippenbouten",
+          "brand": "AH Excellent",
+          "size": "ca. 560 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "6.99",
+          "price_now": "5.24",
           "expires": "2026-11-26"
         },
         {
