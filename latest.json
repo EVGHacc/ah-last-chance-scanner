@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-25T18:15:00+01:00",
-  "started_at": "2026-11-25T18:16:17.594625+01:00",
-  "completed_at": "2026-11-25T18:16:20.617969+01:00",
-  "delay_seconds": 77,
+  "scheduled_at": "2026-11-25T18:20:00+01:00",
+  "started_at": "2026-11-25T18:21:24.467754+01:00",
+  "completed_at": "2026-11-25T18:21:26.617831+01:00",
+  "delay_seconds": 84,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 91,
+      "total_items": 92,
       "meat_items": [
         {
           "product_id": 619347,
@@ -362,10 +362,10 @@
           "brand": "AH",
           "size": "ca. 150 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 2.0,
           "price_was": "3.79",
-          "price_now": "2.27",
+          "price_now": "1.14",
           "expires": "2026-11-25"
         },
         {
@@ -465,14 +465,27 @@
           "expires": "2026-11-27"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 477571,
+          "title": "AH Scharrel gebraden kipfilet caesar",
+          "brand": "AH",
+          "size": "ca. 150 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "3.79",
+          "price_now": "1.14",
+          "expires": "2026-11-25"
+        }
+      ],
       "error": ""
     },
     {
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 104,
+      "total_items": 106,
       "meat_items": [
         {
           "product_id": 4046,
