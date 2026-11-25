@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-25T19:05:00+01:00",
-  "started_at": "2026-11-25T19:06:25.104680+01:00",
-  "completed_at": "2026-11-25T19:06:27.733748+01:00",
-  "delay_seconds": 85,
+  "scheduled_at": "2026-11-25T19:10:00+01:00",
+  "started_at": "2026-11-25T19:11:16.687397+01:00",
+  "completed_at": "2026-11-25T19:11:19.764148+01:00",
+  "delay_seconds": 76,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 109,
+      "total_items": 108,
       "meat_items": [
         {
           "product_id": 619347,
@@ -558,7 +558,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 115,
+      "total_items": 116,
       "meat_items": [
         {
           "product_id": 4046,
@@ -630,6 +630,18 @@
           "stock": 2.0,
           "price_was": "3.69",
           "price_now": "2.77",
+          "expires": "2026-11-26"
+        },
+        {
+          "product_id": 533085,
+          "title": "AH Scharrel kipburger 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "2.99",
+          "price_now": "2.24",
           "expires": "2026-11-26"
         },
         {
