@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-25T21:15:00+01:00",
-  "started_at": "2026-11-25T21:16:18.635572+01:00",
-  "completed_at": "2026-11-25T21:16:21.476150+01:00",
-  "delay_seconds": 78,
+  "scheduled_at": "2026-11-25T21:20:00+01:00",
+  "started_at": "2026-11-25T21:21:12.430028+01:00",
+  "completed_at": "2026-11-25T21:21:15.915106+01:00",
+  "delay_seconds": 72,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,59 +10,9 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 153,
-      "meat_items": [
-        {
-          "product_id": 619347,
-          "title": "AH Scharrel kipbraadworsten 2 stuks",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "1.99",
-          "price_now": "0.60",
-          "expires": "2026-11-25"
-        },
-        {
-          "product_id": 598621,
-          "title": "AH Filetlapjes à la minute gemarineerd",
-          "brand": "AH",
-          "size": "ca. 350 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "1.02",
-          "expires": "2026-11-25"
-        }
-      ],
-      "meat70": [
-        {
-          "product_id": 619347,
-          "title": "AH Scharrel kipbraadworsten 2 stuks",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "1.99",
-          "price_now": "0.60",
-          "expires": "2026-11-25"
-        },
-        {
-          "product_id": 598621,
-          "title": "AH Filetlapjes à la minute gemarineerd",
-          "brand": "AH",
-          "size": "ca. 350 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "1.02",
-          "expires": "2026-11-25"
-        }
-      ],
+      "total_items": 141,
+      "meat_items": [],
+      "meat70": [],
       "error": ""
     },
     {
@@ -307,7 +257,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 168,
+      "total_items": 169,
       "meat_items": [
         {
           "product_id": 477571,
