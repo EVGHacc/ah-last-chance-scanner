@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-25T19:20:00+01:00",
-  "started_at": "2026-11-25T19:21:14.548093+01:00",
-  "completed_at": "2026-11-25T19:21:17.451679+01:00",
-  "delay_seconds": 74,
+  "scheduled_at": "2026-11-25T19:25:00+01:00",
+  "started_at": "2026-11-25T19:26:13.499018+01:00",
+  "completed_at": "2026-11-25T19:26:16.188772+01:00",
+  "delay_seconds": 73,
   "late": false,
   "status": "OK",
   "stores": [
@@ -534,7 +534,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 115,
+      "total_items": 118,
       "meat_items": [
         {
           "product_id": 4046,
@@ -597,6 +597,18 @@
           "expires": "2026-11-26"
         },
         {
+          "product_id": 212142,
+          "title": "AH Gyros",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 1.0,
+          "price_was": "5.49",
+          "price_now": "3.29",
+          "expires": "2026-11-26"
+        },
+        {
           "product_id": 531893,
           "title": "AH Scharrel gerookte kipfiletflakes",
           "brand": "AH",
@@ -618,6 +630,30 @@
           "stock": 2.0,
           "price_was": "2.99",
           "price_now": "2.24",
+          "expires": "2026-11-26"
+        },
+        {
+          "product_id": 40562,
+          "title": "AH Varkensriblap",
+          "brand": "AH",
+          "size": "ca. 500 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "5.45",
+          "price_now": "4.09",
+          "expires": "2026-11-26"
+        },
+        {
+          "product_id": 4033,
+          "title": "AH Ribkarbonade",
+          "brand": "AH",
+          "size": "2 stuks",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "2.51",
+          "price_now": "1.88",
           "expires": "2026-11-26"
         },
         {
