@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-25T18:25:00+01:00",
-  "started_at": "2026-11-25T18:26:15.743516+01:00",
-  "completed_at": "2026-11-25T18:26:18.723447+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-25T18:30:00+01:00",
+  "started_at": "2026-11-25T18:31:14.804592+01:00",
+  "completed_at": "2026-11-25T18:31:18.512927+01:00",
+  "delay_seconds": 74,
   "late": false,
   "status": "OK",
   "stores": [
@@ -18,10 +18,10 @@
           "brand": "AH",
           "size": "150 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 3.0,
           "price_was": "1.99",
-          "price_now": "1.19",
+          "price_now": "0.60",
           "expires": "2026-11-25"
         },
         {
@@ -30,10 +30,10 @@
           "brand": "AH",
           "size": "ca. 250 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 3.0,
           "price_was": "9.99",
-          "price_now": "5.99",
+          "price_now": "3.00",
           "expires": "2026-11-25"
         },
         {
@@ -97,15 +97,52 @@
           "expires": "2026-11-25"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 619347,
+          "title": "AH Scharrel kipbraadworsten 2 stuks",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "1.99",
+          "price_now": "0.60",
+          "expires": "2026-11-25"
+        },
+        {
+          "product_id": 487398,
+          "title": "AH Lamsfilet",
+          "brand": "AH",
+          "size": "ca. 250 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "9.99",
+          "price_now": "3.00",
+          "expires": "2026-11-25"
+        }
+      ],
       "error": ""
     },
     {
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 174,
+      "total_items": 173,
       "meat_items": [
+        {
+          "product_id": 160750,
+          "title": "AH Krabbetjes",
+          "brand": "AH",
+          "size": "ca. 360 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 7.0,
+          "price_was": "3.96",
+          "price_now": "1.19",
+          "expires": "2026-11-25"
+        },
         {
           "product_id": 477571,
           "title": "AH Scharrel gebraden kipfilet caesar",
@@ -116,18 +153,6 @@
           "stock": 2.0,
           "price_was": "3.79",
           "price_now": "1.14",
-          "expires": "2026-11-25"
-        },
-        {
-          "product_id": 160750,
-          "title": "AH Krabbetjes",
-          "brand": "AH",
-          "size": "ca. 360 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 7.0,
-          "price_was": "3.96",
-          "price_now": "2.38",
           "expires": "2026-11-25"
         },
         {
@@ -205,6 +230,18 @@
       ],
       "meat70": [
         {
+          "product_id": 160750,
+          "title": "AH Krabbetjes",
+          "brand": "AH",
+          "size": "ca. 360 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 7.0,
+          "price_was": "3.96",
+          "price_now": "1.19",
+          "expires": "2026-11-25"
+        },
+        {
           "product_id": 477571,
           "title": "AH Scharrel gebraden kipfilet caesar",
           "brand": "AH",
@@ -235,7 +272,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 134,
+      "total_items": 133,
       "meat_items": [
         {
           "product_id": 436751,
@@ -485,7 +522,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 106,
+      "total_items": 107,
       "meat_items": [
         {
           "product_id": 4046,
