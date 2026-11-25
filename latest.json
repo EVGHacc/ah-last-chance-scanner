@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-25T19:30:00+01:00",
-  "started_at": "2026-11-25T19:31:12.908743+01:00",
-  "completed_at": "2026-11-25T19:31:16.073520+01:00",
-  "delay_seconds": 72,
+  "scheduled_at": "2026-11-25T19:35:00+01:00",
+  "started_at": "2026-11-25T19:36:13.989516+01:00",
+  "completed_at": "2026-11-25T19:36:16.830116+01:00",
+  "delay_seconds": 73,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 103,
+      "total_items": 101,
       "meat_items": [
         {
           "product_id": 619347,
@@ -19,7 +19,7 @@
           "size": "150 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 3.0,
+          "stock": 2.0,
           "price_was": "1.99",
           "price_now": "0.60",
           "expires": "2026-11-25"
@@ -34,18 +34,6 @@
           "stock": 1.0,
           "price_was": "3.99",
           "price_now": "1.02",
-          "expires": "2026-11-25"
-        },
-        {
-          "product_id": 531864,
-          "title": "AH Scharrel kipfilet plakjes gerookt",
-          "brand": "AH",
-          "size": "ca. 155 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.69",
-          "price_now": "1.11",
           "expires": "2026-11-25"
         },
         {
@@ -69,7 +57,7 @@
           "size": "150 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 3.0,
+          "stock": 2.0,
           "price_was": "1.99",
           "price_now": "0.60",
           "expires": "2026-11-25"
@@ -84,18 +72,6 @@
           "stock": 1.0,
           "price_was": "3.99",
           "price_now": "1.02",
-          "expires": "2026-11-25"
-        },
-        {
-          "product_id": 531864,
-          "title": "AH Scharrel kipfilet plakjes gerookt",
-          "brand": "AH",
-          "size": "ca. 155 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.69",
-          "price_now": "1.11",
           "expires": "2026-11-25"
         },
         {
