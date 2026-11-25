@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-25T21:45:00+01:00",
-  "started_at": "2026-11-25T21:46:23.156928+01:00",
-  "completed_at": "2026-11-25T21:46:26.170108+01:00",
-  "delay_seconds": 83,
+  "scheduled_at": "2026-11-25T21:50:00+01:00",
+  "started_at": "2026-11-25T21:51:13.127800+01:00",
+  "completed_at": "2026-11-25T21:51:16.824972+01:00",
+  "delay_seconds": 73,
   "late": false,
   "status": "OK",
   "stores": [
@@ -114,7 +114,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 161,
+      "total_items": 155,
       "meat_items": [
         {
           "product_id": 436751,
@@ -162,18 +162,6 @@
           "stock": 1.0,
           "price_was": "3.79",
           "price_now": "1.14",
-          "expires": "2026-11-25"
-        },
-        {
-          "product_id": 118764,
-          "title": "AH Biologisch Rundersoepballetjes",
-          "brand": "AH Biologisch",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.49",
-          "price_now": "1.35",
           "expires": "2026-11-25"
         },
         {
@@ -237,18 +225,6 @@
           "price_was": "3.79",
           "price_now": "1.14",
           "expires": "2026-11-25"
-        },
-        {
-          "product_id": 118764,
-          "title": "AH Biologisch Rundersoepballetjes",
-          "brand": "AH Biologisch",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.49",
-          "price_now": "1.35",
-          "expires": "2026-11-25"
         }
       ],
       "error": ""
@@ -257,7 +233,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 166,
+      "total_items": 155,
       "meat_items": [
         {
           "product_id": 477571,
