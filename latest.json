@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-25T18:05:00+01:00",
-  "started_at": "2026-11-25T18:06:16.184677+01:00",
-  "completed_at": "2026-11-25T18:06:18.677943+01:00",
-  "delay_seconds": 76,
+  "scheduled_at": "2026-11-25T18:10:00+01:00",
+  "started_at": "2026-11-25T18:11:18.487578+01:00",
+  "completed_at": "2026-11-25T18:11:20.530256+01:00",
+  "delay_seconds": 78,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 95,
+      "total_items": 94,
       "meat_items": [
         {
           "product_id": 619347,
@@ -342,7 +342,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 135,
+      "total_items": 134,
       "meat_items": [
         {
           "product_id": 477571,
@@ -429,18 +429,6 @@
           "expires": "2026-11-26"
         },
         {
-          "product_id": 67621,
-          "title": "AH Franse scharrelkipfilet",
-          "brand": "AH",
-          "size": "ca. 345 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "5.24",
-          "expires": "2026-11-26"
-        },
-        {
           "product_id": 370827,
           "title": "AH Gehaktballen",
           "brand": "AH",
@@ -472,7 +460,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 100,
+      "total_items": 102,
       "meat_items": [
         {
           "product_id": 4046,
