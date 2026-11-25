@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-25T18:35:00+01:00",
-  "started_at": "2026-11-25T18:36:15.965261+01:00",
-  "completed_at": "2026-11-25T18:36:18.980762+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-25T18:40:00+01:00",
+  "started_at": "2026-11-25T18:41:28.267665+01:00",
+  "completed_at": "2026-11-25T18:41:30.870614+01:00",
+  "delay_seconds": 88,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 92,
+      "total_items": 91,
       "meat_items": [
         {
           "product_id": 619347,
@@ -22,18 +22,6 @@
           "stock": 3.0,
           "price_was": "1.99",
           "price_now": "0.60",
-          "expires": "2026-11-25"
-        },
-        {
-          "product_id": 487398,
-          "title": "AH Lamsfilet",
-          "brand": "AH",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 3.0,
-          "price_was": "9.99",
-          "price_now": "3.00",
           "expires": "2026-11-25"
         },
         {
@@ -109,18 +97,6 @@
           "price_was": "1.99",
           "price_now": "0.60",
           "expires": "2026-11-25"
-        },
-        {
-          "product_id": 487398,
-          "title": "AH Lamsfilet",
-          "brand": "AH",
-          "size": "ca. 250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 3.0,
-          "price_was": "9.99",
-          "price_now": "3.00",
-          "expires": "2026-11-25"
         }
       ],
       "error": ""
@@ -129,7 +105,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 173,
+      "total_items": 172,
       "meat_items": [
         {
           "product_id": 160750,
@@ -391,7 +367,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 134,
+      "total_items": 133,
       "meat_items": [
         {
           "product_id": 477571,
@@ -436,7 +412,7 @@
           "size": "200 g",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 8.0,
+          "stock": 6.0,
           "price_was": "2.99",
           "price_now": "2.24",
           "expires": "2026-11-26"
@@ -522,7 +498,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 109,
+      "total_items": 113,
       "meat_items": [
         {
           "product_id": 4046,
