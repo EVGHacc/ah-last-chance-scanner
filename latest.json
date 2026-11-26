@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-26T18:25:00+01:00",
-  "started_at": "2026-11-26T18:26:13.147984+01:00",
-  "completed_at": "2026-11-26T18:26:15.822828+01:00",
+  "scheduled_at": "2026-11-26T18:30:00+01:00",
+  "started_at": "2026-11-26T18:31:13.032476+01:00",
+  "completed_at": "2026-11-26T18:31:15.812596+01:00",
   "delay_seconds": 73,
   "late": false,
   "status": "OK",
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 92,
+      "total_items": 96,
       "meat_items": [
         {
           "product_id": 620853,
@@ -232,7 +232,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 143,
+      "total_items": 141,
       "meat_items": [
         {
           "product_id": 477571,
@@ -391,18 +391,6 @@
           "expires": "2026-11-27"
         },
         {
-          "product_id": 620854,
-          "title": "AH Scharrel kipflakes BBQ",
-          "brand": "AH",
-          "size": "225 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "2.99",
-          "expires": "2026-11-29"
-        },
-        {
           "product_id": 385506,
           "title": "AH Biologisch Gerookte kipfilet",
           "brand": "AH Biologisch",
@@ -435,7 +423,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 181,
+      "total_items": 180,
       "meat_items": [
         {
           "product_id": 531893,
