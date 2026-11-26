@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-26T19:10:00+01:00",
-  "started_at": "2026-11-26T19:11:15.542773+01:00",
-  "completed_at": "2026-11-26T19:11:17.892106+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-26T19:15:00+01:00",
+  "started_at": "2026-11-26T19:16:19.532966+01:00",
+  "completed_at": "2026-11-26T19:16:22.471424+01:00",
+  "delay_seconds": 79,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 123,
+      "total_items": 124,
       "meat_items": [
         {
           "product_id": 602112,
@@ -31,9 +31,21 @@
           "size": "ca. 120 g",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 1.0,
+          "stock": 6.0,
           "price_was": "4.49",
           "price_now": "3.37",
+          "expires": "2026-11-27"
+        },
+        {
+          "product_id": 187574,
+          "title": "AH Riblap",
+          "brand": "AH",
+          "size": "ca. 720 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "11.28",
+          "price_now": "8.46",
           "expires": "2026-11-27"
         },
         {
@@ -68,7 +80,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 143,
+      "total_items": 140,
       "meat_items": [
         {
           "product_id": 531864,
@@ -569,7 +581,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 176,
+      "total_items": 175,
       "meat_items": [
         {
           "product_id": 531893,
@@ -605,18 +617,6 @@
           "stock": 1.0,
           "price_was": "6.99",
           "price_now": "4.19",
-          "expires": "2026-11-26"
-        },
-        {
-          "product_id": 507472,
-          "title": "Wahid Hamburgers",
-          "brand": "Wahid",
-          "size": "360 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "6.19",
-          "price_now": "3.71",
           "expires": "2026-11-26"
         },
         {
