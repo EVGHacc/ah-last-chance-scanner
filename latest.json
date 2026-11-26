@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-26T18:10:00+01:00",
-  "started_at": "2026-11-26T18:11:10.941170+01:00",
-  "completed_at": "2026-11-26T18:11:15.605684+01:00",
-  "delay_seconds": 70,
+  "scheduled_at": "2026-11-26T18:15:00+01:00",
+  "started_at": "2026-11-26T18:16:13.905500+01:00",
+  "completed_at": "2026-11-26T18:16:16.802470+01:00",
+  "delay_seconds": 73,
   "late": false,
   "status": "OK",
   "stores": [
@@ -129,18 +129,6 @@
           "expires": "2026-11-26"
         },
         {
-          "product_id": 187574,
-          "title": "AH Riblap",
-          "brand": "AH",
-          "size": "ca. 720 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "11.28",
-          "price_now": "6.77",
-          "expires": "2026-11-26"
-        },
-        {
           "product_id": 533085,
           "title": "AH Scharrel kipburger 2 stuks",
           "brand": "AH",
@@ -162,6 +150,18 @@
           "stock": 1.0,
           "price_was": "3.99",
           "price_now": "2.39",
+          "expires": "2026-11-26"
+        },
+        {
+          "product_id": 187574,
+          "title": "AH Riblap",
+          "brand": "AH",
+          "size": "ca. 720 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 1.0,
+          "price_was": "11.28",
+          "price_now": "6.77",
           "expires": "2026-11-26"
         },
         {
@@ -458,7 +458,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 183,
+      "total_items": 182,
       "meat_items": [
         {
           "product_id": 531893,
