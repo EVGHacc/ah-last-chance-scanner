@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-26T21:35:00+01:00",
-  "started_at": "2026-11-26T21:36:13.518226+01:00",
-  "completed_at": "2026-11-26T21:36:15.764453+01:00",
-  "delay_seconds": 73,
+  "scheduled_at": "2026-11-26T21:40:00+01:00",
+  "started_at": "2026-11-26T21:41:12.435286+01:00",
+  "completed_at": "2026-11-26T21:41:14.928606+01:00",
+  "delay_seconds": 72,
   "late": false,
   "status": "OK",
   "stores": [
@@ -80,7 +80,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 172,
+      "total_items": 171,
       "meat_items": [
         {
           "product_id": 531864,
@@ -139,7 +139,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 162,
+      "total_items": 154,
       "meat_items": [
         {
           "product_id": 533085,
@@ -163,18 +163,6 @@
           "stock": 1.0,
           "price_was": "3.99",
           "price_now": "1.20",
-          "expires": "2026-11-26"
-        },
-        {
-          "product_id": 483912,
-          "title": "AH Greenfields Beefburger bacon 2 stuks",
-          "brand": "AH Greenfields",
-          "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
           "expires": "2026-11-26"
         },
         {
@@ -249,18 +237,6 @@
           "stock": 1.0,
           "price_was": "3.99",
           "price_now": "1.20",
-          "expires": "2026-11-26"
-        },
-        {
-          "product_id": 483912,
-          "title": "AH Greenfields Beefburger bacon 2 stuks",
-          "brand": "AH Greenfields",
-          "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
           "expires": "2026-11-26"
         },
         {
