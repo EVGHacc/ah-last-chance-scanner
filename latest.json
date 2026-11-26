@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-26T19:00:00+01:00",
-  "started_at": "2026-11-26T19:01:14.282859+01:00",
-  "completed_at": "2026-11-26T19:01:17.241968+01:00",
-  "delay_seconds": 74,
+  "scheduled_at": "2026-11-26T19:05:00+01:00",
+  "started_at": "2026-11-26T19:06:15.662259+01:00",
+  "completed_at": "2026-11-26T19:06:18.968873+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 114,
+      "total_items": 120,
       "meat_items": [
         {
           "product_id": 620853,
@@ -318,7 +318,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 136,
+      "total_items": 135,
       "meat_items": [
         {
           "product_id": 622556,
@@ -357,6 +357,18 @@
           "expires": "2026-11-26"
         },
         {
+          "product_id": 531864,
+          "title": "AH Scharrel kipfilet plakjes gerookt",
+          "brand": "AH",
+          "size": "ca. 155 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.69",
+          "price_now": "1.11",
+          "expires": "2026-11-26"
+        },
+        {
           "product_id": 370827,
           "title": "AH Gehaktballen",
           "brand": "AH",
@@ -378,18 +390,6 @@
           "stock": 1.0,
           "price_was": "4.49",
           "price_now": "2.69",
-          "expires": "2026-11-26"
-        },
-        {
-          "product_id": 531864,
-          "title": "AH Scharrel kipfilet plakjes gerookt",
-          "brand": "AH",
-          "size": "ca. 155 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "3.69",
-          "price_now": "2.21",
           "expires": "2026-11-26"
         },
         {
@@ -503,6 +503,18 @@
           "expires": "2026-11-26"
         },
         {
+          "product_id": 531864,
+          "title": "AH Scharrel kipfilet plakjes gerookt",
+          "brand": "AH",
+          "size": "ca. 155 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.69",
+          "price_now": "1.11",
+          "expires": "2026-11-26"
+        },
+        {
           "product_id": 370827,
           "title": "AH Gehaktballen",
           "brand": "AH",
@@ -529,10 +541,10 @@
           "brand": "AH",
           "size": "150 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 2.0,
           "price_was": "3.69",
-          "price_now": "2.21",
+          "price_now": "1.11",
           "expires": "2026-11-26"
         },
         {
@@ -740,7 +752,20 @@
           "expires": "2026-11-29"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 531893,
+          "title": "AH Scharrel gerookte kipfiletflakes",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "3.69",
+          "price_now": "1.11",
+          "expires": "2026-11-26"
+        }
+      ],
       "error": ""
     }
   ],
