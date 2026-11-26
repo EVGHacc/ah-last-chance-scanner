@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-26T21:20:00+01:00",
-  "started_at": "2026-11-26T21:21:12.508840+01:00",
-  "completed_at": "2026-11-26T21:21:15.527379+01:00",
-  "delay_seconds": 72,
+  "scheduled_at": "2026-11-26T21:25:00+01:00",
+  "started_at": "2026-11-26T21:26:14.039659+01:00",
+  "completed_at": "2026-11-26T21:26:17.468305+01:00",
+  "delay_seconds": 74,
   "late": false,
   "status": "OK",
   "stores": [
@@ -282,7 +282,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 170,
+      "total_items": 169,
       "meat_items": [
         {
           "product_id": 477571,
@@ -294,18 +294,6 @@
           "stock": 2.0,
           "price_was": "3.79",
           "price_now": "1.14",
-          "expires": "2026-11-26"
-        },
-        {
-          "product_id": 619304,
-          "title": "AH Swicy beenham",
-          "brand": "AH",
-          "size": "ca. 500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "7.99",
-          "price_now": "2.40",
           "expires": "2026-11-26"
         },
         {
@@ -428,18 +416,6 @@
           "stock": 2.0,
           "price_was": "3.79",
           "price_now": "1.14",
-          "expires": "2026-11-26"
-        },
-        {
-          "product_id": 619304,
-          "title": "AH Swicy beenham",
-          "brand": "AH",
-          "size": "ca. 500 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "7.99",
-          "price_now": "2.40",
           "expires": "2026-11-26"
         },
         {
