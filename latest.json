@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-26T19:30:00+01:00",
-  "started_at": "2026-11-26T19:31:15.388636+01:00",
-  "completed_at": "2026-11-26T19:31:18.394802+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-26T19:35:00+01:00",
+  "started_at": "2026-11-26T19:36:17.756149+01:00",
+  "completed_at": "2026-11-26T19:36:20.958162+01:00",
+  "delay_seconds": 77,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 124,
+      "total_items": 123,
       "meat_items": [
         {
           "product_id": 602112,
@@ -593,7 +593,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 170,
+      "total_items": 169,
       "meat_items": [
         {
           "product_id": 531893,
@@ -613,10 +613,10 @@
           "brand": "AH",
           "size": "ca. 500 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "5.45",
-          "price_now": "3.27",
+          "price_now": "1.64",
           "expires": "2026-11-26"
         },
         {
@@ -625,10 +625,10 @@
           "brand": "AH Excellent",
           "size": "ca. 560 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "6.99",
-          "price_now": "4.19",
+          "price_now": "2.10",
           "expires": "2026-11-26"
         },
         {
@@ -811,6 +811,30 @@
           "stock": 2.0,
           "price_was": "3.69",
           "price_now": "1.11",
+          "expires": "2026-11-26"
+        },
+        {
+          "product_id": 40562,
+          "title": "AH Varkensriblap",
+          "brand": "AH",
+          "size": "ca. 500 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "5.45",
+          "price_now": "1.64",
+          "expires": "2026-11-26"
+        },
+        {
+          "product_id": 619327,
+          "title": "AH Excellent Mais kippenbouten",
+          "brand": "AH Excellent",
+          "size": "ca. 560 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "6.99",
+          "price_now": "2.10",
           "expires": "2026-11-26"
         }
       ],
