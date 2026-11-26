@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-26T17:50:00+01:00",
-  "started_at": "2026-11-26T17:51:13.066120+01:00",
-  "completed_at": "2026-11-26T17:51:15.580700+01:00",
-  "delay_seconds": 73,
+  "scheduled_at": "2026-11-26T17:55:00+01:00",
+  "started_at": "2026-11-26T17:56:11.858407+01:00",
+  "completed_at": "2026-11-26T17:56:16.083027+01:00",
+  "delay_seconds": 71,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 93,
+      "total_items": 90,
       "meat_items": [
         {
           "product_id": 620853,
@@ -59,18 +59,6 @@
           "expires": "2026-11-27"
         },
         {
-          "product_id": 589120,
-          "title": "AH Kipgehakt naturel",
-          "brand": "AH",
-          "size": "500 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 2.0,
-          "price_was": "6.49",
-          "price_now": "4.87",
-          "expires": "2026-11-27"
-        },
-        {
           "product_id": 531853,
           "title": "AH Kipgehakt gekruid",
           "brand": "AH",
@@ -80,6 +68,18 @@
           "stock": 2.0,
           "price_was": "3.95",
           "price_now": "2.96",
+          "expires": "2026-11-27"
+        },
+        {
+          "product_id": 589120,
+          "title": "AH Kipgehakt naturel",
+          "brand": "AH",
+          "size": "500 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "6.49",
+          "price_now": "4.87",
           "expires": "2026-11-27"
         },
         {
@@ -244,7 +244,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 147,
+      "total_items": 146,
       "meat_items": [
         {
           "product_id": 622556,
@@ -325,7 +325,7 @@
           "size": "150 g",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 4.0,
+          "stock": 3.0,
           "price_was": "1.99",
           "price_now": "1.49",
           "expires": "2026-11-27"
@@ -458,7 +458,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 193,
+      "total_items": 189,
       "meat_items": [
         {
           "product_id": 531893,
