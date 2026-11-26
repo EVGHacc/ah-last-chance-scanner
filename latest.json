@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-26T18:50:00+01:00",
-  "started_at": "2026-11-26T18:51:12.908606+01:00",
-  "completed_at": "2026-11-26T18:51:15.958796+01:00",
-  "delay_seconds": 72,
+  "scheduled_at": "2026-11-26T18:55:00+01:00",
+  "started_at": "2026-11-26T18:56:14.100679+01:00",
+  "completed_at": "2026-11-26T18:56:16.424181+01:00",
+  "delay_seconds": 74,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 109,
+      "total_items": 110,
       "meat_items": [
         {
           "product_id": 620853,
@@ -232,7 +232,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 139,
+      "total_items": 137,
       "meat_items": [
         {
           "product_id": 622556,
@@ -364,18 +364,6 @@
           "stock": 1.0,
           "price_was": "2.88",
           "price_now": "2.16",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 199778,
-          "title": "AH Gehaktballetjes Hollands 12 stuks",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "2.24",
           "expires": "2026-11-27"
         },
         {
