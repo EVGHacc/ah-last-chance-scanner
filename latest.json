@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-26T18:30:00+01:00",
-  "started_at": "2026-11-26T18:31:13.032476+01:00",
-  "completed_at": "2026-11-26T18:31:15.812596+01:00",
-  "delay_seconds": 73,
+  "scheduled_at": "2026-11-26T18:35:00+01:00",
+  "started_at": "2026-11-26T18:36:17.163190+01:00",
+  "completed_at": "2026-11-26T18:36:21.096946+01:00",
+  "delay_seconds": 77,
   "late": false,
   "status": "OK",
   "stores": [
@@ -32,7 +32,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 154,
+      "total_items": 148,
       "meat_items": [
         {
           "product_id": 531864,
@@ -232,8 +232,20 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 141,
+      "total_items": 140,
       "meat_items": [
+        {
+          "product_id": 622556,
+          "title": "AH Rundergehakt Mexicaanse stijl",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "4.99",
+          "price_now": "1.50",
+          "expires": "2026-11-26"
+        },
         {
           "product_id": 477571,
           "title": "AH Scharrel gebraden kipfilet caesar",
@@ -247,27 +259,27 @@
           "expires": "2026-11-26"
         },
         {
-          "product_id": 622556,
-          "title": "AH Rundergehakt Mexicaanse stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 3.0,
-          "price_was": "4.99",
-          "price_now": "2.99",
-          "expires": "2026-11-26"
-        },
-        {
           "product_id": 619304,
           "title": "AH Swicy beenham",
           "brand": "AH",
           "size": "ca. 500 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 1.0,
           "price_was": "7.99",
-          "price_now": "4.79",
+          "price_now": "2.40",
+          "expires": "2026-11-26"
+        },
+        {
+          "product_id": 370827,
+          "title": "AH Gehaktballen",
+          "brand": "AH",
+          "size": "8 stuks",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "8.49",
+          "price_now": "2.55",
           "expires": "2026-11-26"
         },
         {
@@ -292,18 +304,6 @@
           "stock": 1.0,
           "price_was": "3.69",
           "price_now": "2.21",
-          "expires": "2026-11-26"
-        },
-        {
-          "product_id": 370827,
-          "title": "AH Gehaktballen",
-          "brand": "AH",
-          "size": "8 stuks",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "8.49",
-          "price_now": "5.09",
           "expires": "2026-11-26"
         },
         {
@@ -355,18 +355,6 @@
           "expires": "2026-11-27"
         },
         {
-          "product_id": 143094,
-          "title": "AH Excellent Entrecôte",
-          "brand": "AH Excellent",
-          "size": "ca. 320 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "14.49",
-          "price_now": "10.87",
-          "expires": "2026-11-27"
-        },
-        {
           "product_id": 165535,
           "title": "AH Scharrel kipfilet gerookt",
           "brand": "AH",
@@ -405,6 +393,18 @@
       ],
       "meat70": [
         {
+          "product_id": 622556,
+          "title": "AH Rundergehakt Mexicaanse stijl",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "4.99",
+          "price_now": "1.50",
+          "expires": "2026-11-26"
+        },
+        {
           "product_id": 477571,
           "title": "AH Scharrel gebraden kipfilet caesar",
           "brand": "AH",
@@ -415,6 +415,30 @@
           "price_was": "3.79",
           "price_now": "1.14",
           "expires": "2026-11-26"
+        },
+        {
+          "product_id": 619304,
+          "title": "AH Swicy beenham",
+          "brand": "AH",
+          "size": "ca. 500 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "7.99",
+          "price_now": "2.40",
+          "expires": "2026-11-26"
+        },
+        {
+          "product_id": 370827,
+          "title": "AH Gehaktballen",
+          "brand": "AH",
+          "size": "8 stuks",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "8.49",
+          "price_now": "2.55",
+          "expires": "2026-11-26"
         }
       ],
       "error": ""
@@ -423,7 +447,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 180,
+      "total_items": 179,
       "meat_items": [
         {
           "product_id": 531893,
@@ -603,6 +627,18 @@
           "stock": 1.0,
           "price_was": "3.69",
           "price_now": "2.77",
+          "expires": "2026-11-27"
+        },
+        {
+          "product_id": 379269,
+          "title": "AH Excellent Lamskotelet gemarineerd",
+          "brand": "AH Excellent",
+          "size": "ca. 225 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "10.46",
+          "price_now": "7.85",
           "expires": "2026-11-27"
         },
         {
