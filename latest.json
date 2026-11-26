@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-26T20:20:00+01:00",
-  "started_at": "2026-11-26T20:21:19.292791+01:00",
-  "completed_at": "2026-11-26T20:21:24.088094+01:00",
-  "delay_seconds": 79,
+  "scheduled_at": "2026-11-26T20:25:00+01:00",
+  "started_at": "2026-11-26T20:26:12.480121+01:00",
+  "completed_at": "2026-11-26T20:26:16.560121+01:00",
+  "delay_seconds": 72,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 156,
+      "total_items": 150,
       "meat_items": [
         {
           "product_id": 602112,
@@ -139,20 +139,8 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 171,
+      "total_items": 165,
       "meat_items": [
-        {
-          "product_id": 232338,
-          "title": "AH Shoarma",
-          "brand": "AH",
-          "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "2.99",
-          "price_now": "0.90",
-          "expires": "2026-11-26"
-        },
         {
           "product_id": 533085,
           "title": "AH Scharrel kipburger 2 stuks",
@@ -178,18 +166,6 @@
           "expires": "2026-11-26"
         },
         {
-          "product_id": 187574,
-          "title": "AH Riblap",
-          "brand": "AH",
-          "size": "ca. 720 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "11.28",
-          "price_now": "3.38",
-          "expires": "2026-11-26"
-        },
-        {
           "product_id": 483912,
           "title": "AH Greenfields Beefburger bacon 2 stuks",
           "brand": "AH Greenfields",
@@ -202,27 +178,15 @@
           "expires": "2026-11-26"
         },
         {
-          "product_id": 531879,
-          "title": "AH Scharrel kipdrumsticks gemarineerd",
+          "product_id": 232338,
+          "title": "AH Shoarma",
           "brand": "AH",
-          "size": "600 g",
+          "size": "250 g",
           "category": "Vlees",
           "discount_pct": 70.0,
           "stock": 1.0,
-          "price_was": "4.19",
-          "price_now": "1.26",
-          "expires": "2026-11-26"
-        },
-        {
-          "product_id": 238948,
-          "title": "AH Nasi bami vlees",
-          "brand": "AH",
-          "size": "ca. 300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.69",
-          "price_now": "1.11",
+          "price_was": "2.99",
+          "price_now": "0.90",
           "expires": "2026-11-26"
         },
         {
@@ -264,18 +228,6 @@
       ],
       "meat70": [
         {
-          "product_id": 232338,
-          "title": "AH Shoarma",
-          "brand": "AH",
-          "size": "250 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "2.99",
-          "price_now": "0.90",
-          "expires": "2026-11-26"
-        },
-        {
           "product_id": 533085,
           "title": "AH Scharrel kipburger 2 stuks",
           "brand": "AH",
@@ -300,18 +252,6 @@
           "expires": "2026-11-26"
         },
         {
-          "product_id": 187574,
-          "title": "AH Riblap",
-          "brand": "AH",
-          "size": "ca. 720 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "11.28",
-          "price_now": "3.38",
-          "expires": "2026-11-26"
-        },
-        {
           "product_id": 483912,
           "title": "AH Greenfields Beefburger bacon 2 stuks",
           "brand": "AH Greenfields",
@@ -324,27 +264,15 @@
           "expires": "2026-11-26"
         },
         {
-          "product_id": 531879,
-          "title": "AH Scharrel kipdrumsticks gemarineerd",
+          "product_id": 232338,
+          "title": "AH Shoarma",
           "brand": "AH",
-          "size": "600 g",
+          "size": "250 g",
           "category": "Vlees",
           "discount_pct": 70.0,
           "stock": 1.0,
-          "price_was": "4.19",
-          "price_now": "1.26",
-          "expires": "2026-11-26"
-        },
-        {
-          "product_id": 238948,
-          "title": "AH Nasi bami vlees",
-          "brand": "AH",
-          "size": "ca. 300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.69",
-          "price_now": "1.11",
+          "price_was": "2.99",
+          "price_now": "0.90",
           "expires": "2026-11-26"
         }
       ],
