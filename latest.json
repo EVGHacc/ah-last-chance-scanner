@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-26T18:20:00+01:00",
-  "started_at": "2026-11-26T18:21:14.292083+01:00",
-  "completed_at": "2026-11-26T18:21:17.011034+01:00",
-  "delay_seconds": 74,
+  "scheduled_at": "2026-11-26T18:25:00+01:00",
+  "started_at": "2026-11-26T18:26:13.147984+01:00",
+  "completed_at": "2026-11-26T18:26:15.822828+01:00",
+  "delay_seconds": 73,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 88,
+      "total_items": 92,
       "meat_items": [
         {
           "product_id": 620853,
@@ -102,7 +102,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 129,
+      "total_items": 128,
       "meat_items": [
         {
           "product_id": 232338,
@@ -232,7 +232,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 144,
+      "total_items": 143,
       "meat_items": [
         {
           "product_id": 477571,
@@ -367,18 +367,6 @@
           "expires": "2026-11-27"
         },
         {
-          "product_id": 187574,
-          "title": "AH Riblap",
-          "brand": "AH",
-          "size": "ca. 720 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "11.28",
-          "price_now": "8.46",
-          "expires": "2026-11-27"
-        },
-        {
           "product_id": 165535,
           "title": "AH Scharrel kipfilet gerookt",
           "brand": "AH",
@@ -447,7 +435,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 182,
+      "total_items": 181,
       "meat_items": [
         {
           "product_id": 531893,
