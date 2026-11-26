@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-26T21:15:00+01:00",
-  "started_at": "2026-11-26T21:16:19.913541+01:00",
-  "completed_at": "2026-11-26T21:16:22.712309+01:00",
-  "delay_seconds": 79,
+  "scheduled_at": "2026-11-26T21:20:00+01:00",
+  "started_at": "2026-11-26T21:21:12.508840+01:00",
+  "completed_at": "2026-11-26T21:21:15.527379+01:00",
+  "delay_seconds": 72,
   "late": false,
   "status": "OK",
   "stores": [
@@ -282,7 +282,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 168,
+      "total_items": 170,
       "meat_items": [
         {
           "product_id": 477571,
@@ -485,7 +485,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 180,
+      "total_items": 177,
       "meat_items": [
         {
           "product_id": 531893,
@@ -654,18 +654,6 @@
           "price_was": "5.69",
           "price_now": "4.27",
           "expires": "2026-11-27"
-        },
-        {
-          "product_id": 454769,
-          "title": "AH Scharrel kipreepjes Italiaans gebraden",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "2.99",
-          "expires": "2026-11-28"
         },
         {
           "product_id": 620853,
