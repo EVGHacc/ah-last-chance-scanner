@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-26T17:55:00+01:00",
-  "started_at": "2026-11-26T17:56:11.858407+01:00",
-  "completed_at": "2026-11-26T17:56:16.083027+01:00",
-  "delay_seconds": 71,
+  "scheduled_at": "2026-11-26T18:00:00+01:00",
+  "started_at": "2026-11-26T18:01:22.183727+01:00",
+  "completed_at": "2026-11-26T18:01:24.919711+01:00",
+  "delay_seconds": 82,
   "late": false,
   "status": "OK",
   "stores": [
@@ -32,7 +32,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 157,
+      "total_items": 156,
       "meat_items": [
         {
           "product_id": 531864,
@@ -458,7 +458,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 189,
+      "total_items": 187,
       "meat_items": [
         {
           "product_id": 531893,
@@ -518,18 +518,6 @@
           "stock": 3.0,
           "price_was": "4.39",
           "price_now": "3.29",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 59698,
-          "title": "AH Excellent Ossenhaas",
-          "brand": "AH Excellent",
-          "size": "ca. 140 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 2.0,
-          "price_was": "10.99",
-          "price_now": "8.24",
           "expires": "2026-11-27"
         },
         {
@@ -602,6 +590,18 @@
           "stock": 1.0,
           "price_was": "2.29",
           "price_now": "1.72",
+          "expires": "2026-11-27"
+        },
+        {
+          "product_id": 59698,
+          "title": "AH Excellent Ossenhaas",
+          "brand": "AH Excellent",
+          "size": "ca. 140 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "10.99",
+          "price_now": "8.24",
           "expires": "2026-11-27"
         },
         {
