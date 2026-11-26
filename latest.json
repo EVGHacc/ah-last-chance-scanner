@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-26T19:05:00+01:00",
-  "started_at": "2026-11-26T19:06:15.662259+01:00",
-  "completed_at": "2026-11-26T19:06:18.968873+01:00",
+  "scheduled_at": "2026-11-26T19:10:00+01:00",
+  "started_at": "2026-11-26T19:11:15.542773+01:00",
+  "completed_at": "2026-11-26T19:11:17.892106+01:00",
   "delay_seconds": 75,
   "late": false,
   "status": "OK",
@@ -10,8 +10,44 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 120,
+      "total_items": 123,
       "meat_items": [
+        {
+          "product_id": 602112,
+          "title": "AH Excellent Mini kogelbiefstuk",
+          "brand": "AH Excellent",
+          "size": "ca. 150 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 7.0,
+          "price_was": "4.99",
+          "price_now": "3.75",
+          "expires": "2026-11-27"
+        },
+        {
+          "product_id": 607369,
+          "title": "AH Excellent Mini biefstuk black angus gemarineerd",
+          "brand": "AH Excellent",
+          "size": "ca. 120 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "4.49",
+          "price_now": "3.37",
+          "expires": "2026-11-27"
+        },
+        {
+          "product_id": 418194,
+          "title": "AH Ovenschotel beenham naturel",
+          "brand": "AH",
+          "size": "ca. 550 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "7.99",
+          "price_now": "5.99",
+          "expires": "2026-11-27"
+        },
         {
           "product_id": 620853,
           "title": "AH Kipreepjes Italiaans",
@@ -103,7 +139,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 125,
+      "total_items": 124,
       "meat_items": [
         {
           "product_id": 232338,
@@ -533,7 +569,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 175,
+      "total_items": 176,
       "meat_items": [
         {
           "product_id": 531893,
@@ -593,18 +629,6 @@
           "stock": 3.0,
           "price_was": "4.39",
           "price_now": "3.29",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 519410,
-          "title": "Wahid Halal kipdijfilet",
-          "brand": "Wahid",
-          "size": "ca. 400 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 2.0,
-          "price_was": "5.69",
-          "price_now": "4.27",
           "expires": "2026-11-27"
         },
         {
@@ -713,6 +737,18 @@
           "stock": 1.0,
           "price_was": "10.46",
           "price_now": "7.85",
+          "expires": "2026-11-27"
+        },
+        {
+          "product_id": 519410,
+          "title": "Wahid Halal kipdijfilet",
+          "brand": "Wahid",
+          "size": "ca. 400 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "5.69",
+          "price_now": "4.27",
           "expires": "2026-11-27"
         },
         {
