@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-27T17:50:00+01:00",
-  "started_at": "2026-11-27T17:51:13.998326+01:00",
-  "completed_at": "2026-11-27T17:51:17.230051+01:00",
-  "delay_seconds": 73,
+  "scheduled_at": "2026-11-27T17:55:00+01:00",
+  "started_at": "2026-11-27T17:56:15.846031+01:00",
+  "completed_at": "2026-11-27T17:56:17.933398+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -249,18 +249,6 @@
           "expires": "2026-11-27"
         },
         {
-          "product_id": 206969,
-          "title": "AH Excellent Mini hamburger",
-          "brand": "AH Excellent",
-          "size": "8 stuks",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "3.99",
-          "price_now": "2.39",
-          "expires": "2026-11-27"
-        },
-        {
           "product_id": 531852,
           "title": "AH Scharrel kipbraadworst 4 stuks",
           "brand": "AH",
@@ -313,6 +301,18 @@
           "title": "Wahid Kipkrokantschnitzel",
           "brand": "Wahid",
           "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "2.39",
+          "expires": "2026-11-27"
+        },
+        {
+          "product_id": 206969,
+          "title": "AH Excellent Mini hamburger",
+          "brand": "AH Excellent",
+          "size": "8 stuks",
           "category": "Vlees",
           "discount_pct": 40.0,
           "stock": 1.0,
@@ -376,7 +376,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 146,
+      "total_items": 145,
       "meat_items": [
         {
           "product_id": 560559,
