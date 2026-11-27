@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-27T20:00:00+01:00",
-  "started_at": "2026-11-27T20:01:12.481587+01:00",
-  "completed_at": "2026-11-27T20:01:15.406239+01:00",
-  "delay_seconds": 72,
+  "scheduled_at": "2026-11-27T20:05:00+01:00",
+  "started_at": "2026-11-27T20:06:15.742821+01:00",
+  "completed_at": "2026-11-27T20:06:18.651026+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -177,7 +177,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 172,
+      "total_items": 166,
       "meat_items": [
         {
           "product_id": 531864,
@@ -487,7 +487,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 164,
+      "total_items": 163,
       "meat_items": [
         {
           "product_id": 560559,
@@ -583,18 +583,6 @@
           "stock": 2.0,
           "price_was": "5.99",
           "price_now": "4.49",
-          "expires": "2026-11-28"
-        },
-        {
-          "product_id": 620797,
-          "title": "AH Ovenschotel kipfilet tomaat mascarpone",
-          "brand": "AH",
-          "size": "420 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "5.24",
           "expires": "2026-11-28"
         },
         {
