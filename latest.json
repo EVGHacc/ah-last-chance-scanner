@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-27T19:35:00+01:00",
-  "started_at": "2026-11-27T19:36:15.342566+01:00",
-  "completed_at": "2026-11-27T19:36:29.577190+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-27T19:40:00+01:00",
+  "started_at": "2026-11-27T19:41:13.752183+01:00",
+  "completed_at": "2026-11-27T19:41:17.234841+01:00",
+  "delay_seconds": 73,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 140,
+      "total_items": 143,
       "meat_items": [
         {
           "product_id": 602112,
@@ -177,7 +177,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 128,
+      "total_items": 127,
       "meat_items": [
         {
           "product_id": 531864,
@@ -308,20 +308,8 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 142,
+      "total_items": 139,
       "meat_items": [
-        {
-          "product_id": 560559,
-          "title": "AH Scharrel kipburger smokey 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "2.99",
-          "price_now": "0.90",
-          "expires": "2026-11-27"
-        },
         {
           "product_id": 602112,
           "title": "AH Excellent Mini kogelbiefstuk",
@@ -335,15 +323,15 @@
           "expires": "2026-11-27"
         },
         {
-          "product_id": 619347,
-          "title": "AH Scharrel kipbraadworsten 2 stuks",
+          "product_id": 560559,
+          "title": "AH Scharrel kipburger smokey 2 stuks",
           "brand": "AH",
-          "size": "150 g",
+          "size": "200 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "1.99",
-          "price_now": "0.60",
+          "stock": 3.0,
+          "price_was": "2.99",
+          "price_now": "0.90",
           "expires": "2026-11-27"
         },
         {
@@ -359,15 +347,15 @@
           "expires": "2026-11-27"
         },
         {
-          "product_id": 119767,
-          "title": "AH Biologisch Biefstuk",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
+          "product_id": 619347,
+          "title": "AH Scharrel kipbraadworsten 2 stuks",
+          "brand": "AH",
+          "size": "150 g",
           "category": "Vlees",
           "discount_pct": 70.0,
           "stock": 1.0,
-          "price_was": "10.99",
-          "price_now": "3.30",
+          "price_was": "1.99",
+          "price_now": "0.60",
           "expires": "2026-11-27"
         },
         {
@@ -433,18 +421,6 @@
       ],
       "meat70": [
         {
-          "product_id": 560559,
-          "title": "AH Scharrel kipburger smokey 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 4.0,
-          "price_was": "2.99",
-          "price_now": "0.90",
-          "expires": "2026-11-27"
-        },
-        {
           "product_id": 602112,
           "title": "AH Excellent Mini kogelbiefstuk",
           "brand": "AH Excellent",
@@ -457,15 +433,15 @@
           "expires": "2026-11-27"
         },
         {
-          "product_id": 619347,
-          "title": "AH Scharrel kipbraadworsten 2 stuks",
+          "product_id": 560559,
+          "title": "AH Scharrel kipburger smokey 2 stuks",
           "brand": "AH",
-          "size": "150 g",
+          "size": "200 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 2.0,
-          "price_was": "1.99",
-          "price_now": "0.60",
+          "stock": 3.0,
+          "price_was": "2.99",
+          "price_now": "0.90",
           "expires": "2026-11-27"
         },
         {
@@ -481,15 +457,15 @@
           "expires": "2026-11-27"
         },
         {
-          "product_id": 119767,
-          "title": "AH Biologisch Biefstuk",
-          "brand": "AH Biologisch",
-          "size": "2 stuks",
+          "product_id": 619347,
+          "title": "AH Scharrel kipbraadworsten 2 stuks",
+          "brand": "AH",
+          "size": "150 g",
           "category": "Vlees",
           "discount_pct": 70.0,
           "stock": 1.0,
-          "price_was": "10.99",
-          "price_now": "3.30",
+          "price_was": "1.99",
+          "price_now": "0.60",
           "expires": "2026-11-27"
         },
         {
@@ -762,7 +738,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 95,
+      "total_items": 94,
       "meat_items": [
         {
           "product_id": 619323,
@@ -774,18 +750,6 @@
           "stock": 1.0,
           "price_was": "3.99",
           "price_now": "1.20",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 622557,
-          "title": "AH Gehaktballetjes Italiaanse stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.49",
-          "price_now": "1.05",
           "expires": "2026-11-27"
         },
         {
@@ -884,18 +848,6 @@
           "stock": 1.0,
           "price_was": "3.99",
           "price_now": "1.20",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 622557,
-          "title": "AH Gehaktballetjes Italiaanse stijl",
-          "brand": "AH",
-          "size": "300 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.49",
-          "price_now": "1.05",
           "expires": "2026-11-27"
         },
         {
