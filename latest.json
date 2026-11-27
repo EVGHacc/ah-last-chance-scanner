@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-27T20:45:00+01:00",
-  "started_at": "2026-11-27T20:46:25.016616+01:00",
-  "completed_at": "2026-11-27T20:46:28.686351+01:00",
-  "delay_seconds": 85,
+  "scheduled_at": "2026-11-27T20:50:00+01:00",
+  "started_at": "2026-11-27T20:51:14.579106+01:00",
+  "completed_at": "2026-11-27T20:51:17.873510+01:00",
+  "delay_seconds": 74,
   "late": false,
   "status": "OK",
   "stores": [
@@ -654,7 +654,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 144,
+      "total_items": 143,
       "meat_items": [
         {
           "product_id": 619323,
@@ -681,18 +681,6 @@
           "expires": "2026-11-27"
         },
         {
-          "product_id": 519410,
-          "title": "Wahid Halal kipdijfilet",
-          "brand": "Wahid",
-          "size": "ca. 400 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.69",
-          "price_now": "1.71",
-          "expires": "2026-11-27"
-        },
-        {
           "product_id": 379269,
           "title": "AH Excellent Lamskotelet gemarineerd",
           "brand": "AH Excellent",
@@ -702,6 +690,18 @@
           "stock": 1.0,
           "price_was": "10.49",
           "price_now": "3.15",
+          "expires": "2026-11-28"
+        },
+        {
+          "product_id": 519410,
+          "title": "Wahid Halal kipdijfilet",
+          "brand": "Wahid",
+          "size": "ca. 400 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "5.69",
+          "price_now": "1.71",
           "expires": "2026-11-28"
         },
         {
@@ -863,18 +863,6 @@
           "expires": "2026-11-27"
         },
         {
-          "product_id": 519410,
-          "title": "Wahid Halal kipdijfilet",
-          "brand": "Wahid",
-          "size": "ca. 400 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "5.69",
-          "price_now": "1.71",
-          "expires": "2026-11-27"
-        },
-        {
           "product_id": 379269,
           "title": "AH Excellent Lamskotelet gemarineerd",
           "brand": "AH Excellent",
@@ -884,6 +872,18 @@
           "stock": 1.0,
           "price_was": "10.49",
           "price_now": "3.15",
+          "expires": "2026-11-28"
+        },
+        {
+          "product_id": 519410,
+          "title": "Wahid Halal kipdijfilet",
+          "brand": "Wahid",
+          "size": "ca. 400 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "5.69",
+          "price_now": "1.71",
           "expires": "2026-11-28"
         }
       ],
