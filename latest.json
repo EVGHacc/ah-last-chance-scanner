@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-27T18:30:00+01:00",
-  "started_at": "2026-11-27T18:31:11.973098+01:00",
-  "completed_at": "2026-11-27T18:31:14.736898+01:00",
-  "delay_seconds": 71,
+  "scheduled_at": "2026-11-27T18:35:00+01:00",
+  "started_at": "2026-11-27T18:36:10.119362+01:00",
+  "completed_at": "2026-11-27T18:36:13.076969+01:00",
+  "delay_seconds": 70,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 97,
+      "total_items": 105,
       "meat_items": [
         {
           "product_id": 602112,
@@ -438,8 +438,20 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 142,
+      "total_items": 140,
       "meat_items": [
+        {
+          "product_id": 620806,
+          "title": "AH Ovenschotel varkenshaas brie",
+          "brand": "AH",
+          "size": "290 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "6.99",
+          "price_now": "2.10",
+          "expires": "2026-11-27"
+        },
         {
           "product_id": 560559,
           "title": "AH Scharrel kipburger smokey 2 stuks",
@@ -447,7 +459,7 @@
           "size": "200 g",
           "category": "Vlees",
           "discount_pct": 40.0,
-          "stock": 3.0,
+          "stock": 2.0,
           "price_was": "2.99",
           "price_now": "1.79",
           "expires": "2026-11-27"
@@ -462,18 +474,6 @@
           "stock": 1.0,
           "price_was": "1.99",
           "price_now": "1.19",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 620806,
-          "title": "AH Ovenschotel varkenshaas brie",
-          "brand": "AH",
-          "size": "290 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "6.99",
-          "price_now": "4.19",
           "expires": "2026-11-27"
         },
         {
@@ -621,18 +621,6 @@
           "expires": "2026-11-28"
         },
         {
-          "product_id": 533085,
-          "title": "AH Scharrel kipburger 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 25.0,
-          "stock": 1.0,
-          "price_was": "2.99",
-          "price_now": "2.24",
-          "expires": "2026-11-28"
-        },
-        {
           "product_id": 238947,
           "title": "AH Biefstukpuntjes",
           "brand": "AH",
@@ -669,7 +657,20 @@
           "expires": "2026-11-29"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 620806,
+          "title": "AH Ovenschotel varkenshaas brie",
+          "brand": "AH",
+          "size": "290 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "6.99",
+          "price_now": "2.10",
+          "expires": "2026-11-27"
+        }
+      ],
       "error": ""
     },
     {
