@@ -1,7 +1,7 @@
 {
-  "scheduled_at": "2026-11-27T18:10:00+01:00",
-  "started_at": "2026-11-27T18:11:22.052034+01:00",
-  "completed_at": "2026-11-27T18:11:25.680227+01:00",
+  "scheduled_at": "2026-11-27T18:15:00+01:00",
+  "started_at": "2026-11-27T18:16:22.768244+01:00",
+  "completed_at": "2026-11-27T18:16:25.428196+01:00",
   "delay_seconds": 82,
   "late": false,
   "status": "OK",
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 95,
+      "total_items": 94,
       "meat_items": [
         {
           "product_id": 602112,
@@ -68,7 +68,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 140,
+      "total_items": 139,
       "meat_items": [
         {
           "product_id": 531864,
@@ -186,7 +186,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 148,
+      "total_items": 152,
       "meat_items": [
         {
           "product_id": 602112,
@@ -194,10 +194,46 @@
           "brand": "AH Excellent",
           "size": "ca. 150 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 7.0,
           "price_was": "4.99",
-          "price_now": "3.00",
+          "price_now": "1.50",
+          "expires": "2026-11-27"
+        },
+        {
+          "product_id": 607369,
+          "title": "AH Excellent Mini biefstuk black angus gemarineerd",
+          "brand": "AH Excellent",
+          "size": "ca. 120 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "4.49",
+          "price_now": "1.35",
+          "expires": "2026-11-27"
+        },
+        {
+          "product_id": 619347,
+          "title": "AH Scharrel kipbraadworsten 2 stuks",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "1.99",
+          "price_now": "0.60",
+          "expires": "2026-11-27"
+        },
+        {
+          "product_id": 597944,
+          "title": "AH Biologisch Varkensschnitzel",
+          "brand": "AH Biologisch",
+          "size": "ca. 290 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "7.25",
+          "price_now": "2.18",
           "expires": "2026-11-27"
         },
         {
@@ -210,30 +246,6 @@
           "stock": 4.0,
           "price_was": "2.99",
           "price_now": "1.79",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 607369,
-          "title": "AH Excellent Mini biefstuk black angus gemarineerd",
-          "brand": "AH Excellent",
-          "size": "ca. 120 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 3.0,
-          "price_was": "4.49",
-          "price_now": "2.69",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 619347,
-          "title": "AH Scharrel kipbraadworsten 2 stuks",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "1.99",
-          "price_now": "1.19",
           "expires": "2026-11-27"
         },
         {
@@ -270,18 +282,6 @@
           "stock": 1.0,
           "price_was": "5.49",
           "price_now": "3.29",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 597944,
-          "title": "AH Biologisch Varkensschnitzel",
-          "brand": "AH Biologisch",
-          "size": "ca. 290 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "7.25",
-          "price_now": "4.35",
           "expires": "2026-11-27"
         },
         {
@@ -369,7 +369,56 @@
           "expires": "2026-11-30"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 602112,
+          "title": "AH Excellent Mini kogelbiefstuk",
+          "brand": "AH Excellent",
+          "size": "ca. 150 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 7.0,
+          "price_was": "4.99",
+          "price_now": "1.50",
+          "expires": "2026-11-27"
+        },
+        {
+          "product_id": 607369,
+          "title": "AH Excellent Mini biefstuk black angus gemarineerd",
+          "brand": "AH Excellent",
+          "size": "ca. 120 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 3.0,
+          "price_was": "4.49",
+          "price_now": "1.35",
+          "expires": "2026-11-27"
+        },
+        {
+          "product_id": 619347,
+          "title": "AH Scharrel kipbraadworsten 2 stuks",
+          "brand": "AH",
+          "size": "150 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 2.0,
+          "price_was": "1.99",
+          "price_now": "0.60",
+          "expires": "2026-11-27"
+        },
+        {
+          "product_id": 597944,
+          "title": "AH Biologisch Varkensschnitzel",
+          "brand": "AH Biologisch",
+          "size": "ca. 290 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "7.25",
+          "price_now": "2.18",
+          "expires": "2026-11-27"
+        }
+      ],
       "error": ""
     },
     {
@@ -614,7 +663,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 104,
+      "total_items": 103,
       "meat_items": [
         {
           "product_id": 619323,
