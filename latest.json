@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-27T21:25:00+01:00",
-  "started_at": "2026-11-27T21:26:17.848225+01:00",
-  "completed_at": "2026-11-27T21:26:20.752082+01:00",
-  "delay_seconds": 77,
+  "scheduled_at": "2026-11-27T21:30:00+01:00",
+  "started_at": "2026-11-27T21:31:19.182678+01:00",
+  "completed_at": "2026-11-27T21:31:22.452860+01:00",
+  "delay_seconds": 79,
   "late": false,
   "status": "OK",
   "stores": [
@@ -260,20 +260,8 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 168,
+      "total_items": 167,
       "meat_items": [
-        {
-          "product_id": 602112,
-          "title": "AH Excellent Mini kogelbiefstuk",
-          "brand": "AH Excellent",
-          "size": "ca. 150 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 3.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
-          "expires": "2026-11-27"
-        },
         {
           "product_id": 560559,
           "title": "AH Scharrel kipburger smokey 2 stuks",
@@ -372,18 +360,6 @@
         }
       ],
       "meat70": [
-        {
-          "product_id": 602112,
-          "title": "AH Excellent Mini kogelbiefstuk",
-          "brand": "AH Excellent",
-          "size": "ca. 150 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 3.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
-          "expires": "2026-11-27"
-        },
         {
           "product_id": 560559,
           "title": "AH Scharrel kipburger smokey 2 stuks",
@@ -666,7 +642,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 163,
+      "total_items": 167,
       "meat_items": [
         {
           "product_id": 619323,
