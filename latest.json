@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-27T21:35:00+01:00",
-  "started_at": "2026-11-27T21:36:11.814929+01:00",
-  "completed_at": "2026-11-27T21:36:15.248737+01:00",
-  "delay_seconds": 71,
+  "scheduled_at": "2026-11-27T21:40:00+01:00",
+  "started_at": "2026-11-27T21:41:17.231265+01:00",
+  "completed_at": "2026-11-27T21:41:20.476573+01:00",
+  "delay_seconds": 77,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 145,
+      "total_items": 144,
       "meat_items": [
         {
           "product_id": 187574,
@@ -642,7 +642,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 175,
+      "total_items": 176,
       "meat_items": [
         {
           "product_id": 619323,
@@ -678,6 +678,18 @@
           "stock": 1.0,
           "price_was": "5.69",
           "price_now": "1.71",
+          "expires": "2026-11-28"
+        },
+        {
+          "product_id": 533083,
+          "title": "AH Scharrel kipfilet 2 stuks",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 4.0,
+          "price_was": "4.49",
+          "price_now": "2.62",
           "expires": "2026-11-28"
         },
         {
