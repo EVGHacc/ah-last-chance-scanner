@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-27T19:25:00+01:00",
-  "started_at": "2026-11-27T19:26:16.599893+01:00",
-  "completed_at": "2026-11-27T19:26:19.360966+01:00",
-  "delay_seconds": 76,
+  "scheduled_at": "2026-11-27T19:30:00+01:00",
+  "started_at": "2026-11-27T19:31:14.488327+01:00",
+  "completed_at": "2026-11-27T19:31:17.569581+01:00",
+  "delay_seconds": 74,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 125,
+      "total_items": 131,
       "meat_items": [
         {
           "product_id": 602112,
@@ -511,7 +511,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 137,
+      "total_items": 136,
       "meat_items": [
         {
           "product_id": 560559,
@@ -523,18 +523,6 @@
           "stock": 2.0,
           "price_was": "2.99",
           "price_now": "0.90",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 619347,
-          "title": "AH Scharrel kipbraadworsten 2 stuks",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "1.99",
-          "price_now": "0.60",
           "expires": "2026-11-27"
         },
         {
@@ -732,18 +720,6 @@
           "expires": "2026-11-27"
         },
         {
-          "product_id": 619347,
-          "title": "AH Scharrel kipbraadworsten 2 stuks",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "1.99",
-          "price_now": "0.60",
-          "expires": "2026-11-27"
-        },
-        {
           "product_id": 620806,
           "title": "AH Ovenschotel varkenshaas brie",
           "brand": "AH",
@@ -786,7 +762,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 96,
+      "total_items": 95,
       "meat_items": [
         {
           "product_id": 619323,
@@ -879,7 +855,7 @@
           "size": "225 g",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 3.0,
+          "stock": 2.0,
           "price_was": "3.99",
           "price_now": "2.99",
           "expires": "2026-11-30"
