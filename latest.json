@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-27T22:25:00+01:00",
-  "started_at": "2026-11-27T22:26:11.210700+01:00",
-  "completed_at": "2026-11-27T22:26:14.395624+01:00",
-  "delay_seconds": 71,
+  "scheduled_at": "2026-11-27T22:30:00+01:00",
+  "started_at": "2026-11-27T22:31:24.666134+01:00",
+  "completed_at": "2026-11-27T22:31:27.453600+01:00",
+  "delay_seconds": 84,
   "late": false,
   "status": "OK",
   "stores": [
@@ -545,32 +545,8 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 165,
+      "total_items": 156,
       "meat_items": [
-        {
-          "product_id": 619323,
-          "title": "AH Burger spicy 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "1.20",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 187593,
-          "title": "AH Greenfields Beefburger jalapeno 2 stuks",
-          "brand": "AH Greenfields",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
-          "expires": "2026-11-27"
-        },
         {
           "product_id": 619337,
           "title": "AH Scharrel sticky chicken Korean BBQ stijl",
@@ -581,6 +557,18 @@
           "stock": 1.0,
           "price_was": "3.29",
           "price_now": "0.84",
+          "expires": "2026-11-28"
+        },
+        {
+          "product_id": 619323,
+          "title": "AH Burger spicy 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
           "expires": "2026-11-28"
         },
         {
@@ -778,30 +766,6 @@
       ],
       "meat70": [
         {
-          "product_id": 619323,
-          "title": "AH Burger spicy 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "1.20",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 187593,
-          "title": "AH Greenfields Beefburger jalapeno 2 stuks",
-          "brand": "AH Greenfields",
-          "size": "2 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "4.99",
-          "price_now": "1.50",
-          "expires": "2026-11-27"
-        },
-        {
           "product_id": 619337,
           "title": "AH Scharrel sticky chicken Korean BBQ stijl",
           "brand": "AH",
@@ -811,6 +775,18 @@
           "stock": 1.0,
           "price_was": "3.29",
           "price_now": "0.84",
+          "expires": "2026-11-28"
+        },
+        {
+          "product_id": 619323,
+          "title": "AH Burger spicy 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "1.20",
           "expires": "2026-11-28"
         },
         {
