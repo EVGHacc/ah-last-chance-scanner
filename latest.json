@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-27T22:00:00+01:00",
-  "started_at": "2026-11-27T22:01:12.766570+01:00",
-  "completed_at": "2026-11-27T22:01:22.447217+01:00",
-  "delay_seconds": 72,
+  "scheduled_at": "2026-11-27T22:05:00+01:00",
+  "started_at": "2026-11-27T22:06:13.132270+01:00",
+  "completed_at": "2026-11-27T22:06:16.337744+01:00",
+  "delay_seconds": 73,
   "late": false,
   "status": "OK",
   "stores": [
@@ -260,56 +260,8 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 151,
+      "total_items": 138,
       "meat_items": [
-        {
-          "product_id": 560559,
-          "title": "AH Scharrel kipburger smokey 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 3.0,
-          "price_was": "2.99",
-          "price_now": "0.90",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 597944,
-          "title": "AH Biologisch Varkensschnitzel",
-          "brand": "AH Biologisch",
-          "size": "ca. 290 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "7.25",
-          "price_now": "2.18",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 619347,
-          "title": "AH Scharrel kipbraadworsten 2 stuks",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "1.99",
-          "price_now": "0.60",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 206969,
-          "title": "AH Excellent Mini hamburger",
-          "brand": "AH Excellent",
-          "size": "8 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "1.20",
-          "expires": "2026-11-27"
-        },
         {
           "product_id": 165535,
           "title": "AH Scharrel kipfilet gerookt",
@@ -359,56 +311,7 @@
           "expires": "2026-11-30"
         }
       ],
-      "meat70": [
-        {
-          "product_id": 560559,
-          "title": "AH Scharrel kipburger smokey 2 stuks",
-          "brand": "AH",
-          "size": "200 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 3.0,
-          "price_was": "2.99",
-          "price_now": "0.90",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 597944,
-          "title": "AH Biologisch Varkensschnitzel",
-          "brand": "AH Biologisch",
-          "size": "ca. 290 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "7.25",
-          "price_now": "2.18",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 619347,
-          "title": "AH Scharrel kipbraadworsten 2 stuks",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "1.99",
-          "price_now": "0.60",
-          "expires": "2026-11-27"
-        },
-        {
-          "product_id": 206969,
-          "title": "AH Excellent Mini hamburger",
-          "brand": "AH Excellent",
-          "size": "8 stuks",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.99",
-          "price_now": "1.20",
-          "expires": "2026-11-27"
-        }
-      ],
+      "meat70": [],
       "error": ""
     },
     {
@@ -642,7 +545,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 173,
+      "total_items": 172,
       "meat_items": [
         {
           "product_id": 619323,
