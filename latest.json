@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-28T18:40:00+01:00",
-  "started_at": "2026-11-28T18:41:12.625212+01:00",
-  "completed_at": "2026-11-28T18:41:14.909586+01:00",
-  "delay_seconds": 72,
+  "scheduled_at": "2026-11-28T18:45:00+01:00",
+  "started_at": "2026-11-28T18:46:19.493007+01:00",
+  "completed_at": "2026-11-28T18:46:21.910899+01:00",
+  "delay_seconds": 79,
   "late": false,
   "status": "OK",
   "stores": [
@@ -344,7 +344,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 138,
+      "total_items": 139,
       "meat_items": [
         {
           "product_id": 610029,
@@ -353,7 +353,7 @@
           "size": "720 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 4.0,
+          "stock": 2.0,
           "price_was": "6.99",
           "price_now": "2.10",
           "expires": "2026-11-28"
@@ -463,7 +463,7 @@
           "size": "720 g",
           "category": "Vlees",
           "discount_pct": 70.0,
-          "stock": 4.0,
+          "stock": 2.0,
           "price_was": "6.99",
           "price_now": "2.10",
           "expires": "2026-11-28"
@@ -605,7 +605,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 119,
+      "total_items": 121,
       "meat_items": [
         {
           "product_id": 556724,
@@ -665,6 +665,30 @@
           "stock": 4.0,
           "price_was": "5.99",
           "price_now": "4.49",
+          "expires": "2026-11-29"
+        },
+        {
+          "product_id": 622557,
+          "title": "AH Gehaktballetjes Italiaanse stijl",
+          "brand": "AH",
+          "size": "300 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 2.0,
+          "price_was": "4.49",
+          "price_now": "2.62",
+          "expires": "2026-11-29"
+        },
+        {
+          "product_id": 619323,
+          "title": "AH Burger spicy 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.99",
+          "price_now": "2.99",
           "expires": "2026-11-29"
         },
         {
