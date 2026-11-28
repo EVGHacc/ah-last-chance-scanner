@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-28T17:50:00+01:00",
-  "started_at": "2026-11-28T17:51:10.888960+01:00",
-  "completed_at": "2026-11-28T17:51:12.911014+01:00",
-  "delay_seconds": 70,
+  "scheduled_at": "2026-11-28T17:55:00+01:00",
+  "started_at": "2026-11-28T17:56:14.571509+01:00",
+  "completed_at": "2026-11-28T17:56:17.807976+01:00",
+  "delay_seconds": 74,
   "late": false,
   "status": "OK",
   "stores": [
@@ -168,18 +168,6 @@
           "expires": "2026-11-28"
         },
         {
-          "product_id": 531851,
-          "title": "AH Scharrel kip shoarma",
-          "brand": "AH",
-          "size": "650 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 2.0,
-          "price_was": "7.79",
-          "price_now": "4.67",
-          "expires": "2026-11-28"
-        },
-        {
           "product_id": 4033,
           "title": "AH Ribkarbonade",
           "brand": "AH",
@@ -201,6 +189,18 @@
           "stock": 1.0,
           "price_was": "6.99",
           "price_now": "4.19",
+          "expires": "2026-11-28"
+        },
+        {
+          "product_id": 531851,
+          "title": "AH Scharrel kip shoarma",
+          "brand": "AH",
+          "size": "650 g",
+          "category": "Vlees",
+          "discount_pct": 40.0,
+          "stock": 1.0,
+          "price_was": "7.79",
+          "price_now": "4.67",
           "expires": "2026-11-28"
         },
         {
@@ -320,7 +320,7 @@
       "store_id": 1135,
       "store": "AH Casablancastraat",
       "fetched": true,
-      "total_items": 133,
+      "total_items": 132,
       "meat_items": [
         {
           "product_id": 610029,
@@ -344,18 +344,6 @@
           "stock": 4.0,
           "price_was": "5.79",
           "price_now": "3.47",
-          "expires": "2026-11-28"
-        },
-        {
-          "product_id": 598621,
-          "title": "AH Filetlapjes à la minute gemarineerd",
-          "brand": "AH",
-          "size": "ca. 350 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 3.0,
-          "price_was": "3.99",
-          "price_now": "2.03",
           "expires": "2026-11-28"
         },
         {
@@ -450,7 +438,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 131,
+      "total_items": 130,
       "meat_items": [
         {
           "product_id": 597949,
@@ -592,7 +580,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 110,
+      "total_items": 111,
       "meat_items": [
         {
           "product_id": 556724,
