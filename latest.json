@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-28T18:15:00+01:00",
-  "started_at": "2026-11-28T18:16:15.979520+01:00",
-  "completed_at": "2026-11-28T18:16:19.500196+01:00",
-  "delay_seconds": 75,
+  "scheduled_at": "2026-11-28T18:20:00+01:00",
+  "started_at": "2026-11-28T18:21:13.474340+01:00",
+  "completed_at": "2026-11-28T18:21:16.423874+01:00",
+  "delay_seconds": 73,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 85,
+      "total_items": 80,
       "meat_items": [
         {
           "product_id": 622556,
@@ -568,7 +568,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 120,
+      "total_items": 119,
       "meat_items": [
         {
           "product_id": 556724,
@@ -616,18 +616,6 @@
           "stock": 1.0,
           "price_was": "9.49",
           "price_now": "5.69",
-          "expires": "2026-11-28"
-        },
-        {
-          "product_id": 519410,
-          "title": "Wahid Halal kipdijfilet",
-          "brand": "Wahid",
-          "size": "ca. 400 g",
-          "category": "Vlees",
-          "discount_pct": 40.0,
-          "stock": 1.0,
-          "price_was": "5.69",
-          "price_now": "3.41",
           "expires": "2026-11-28"
         },
         {
