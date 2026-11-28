@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-28T18:45:00+01:00",
-  "started_at": "2026-11-28T18:46:19.493007+01:00",
-  "completed_at": "2026-11-28T18:46:21.910899+01:00",
-  "delay_seconds": 79,
+  "scheduled_at": "2026-11-28T18:50:00+01:00",
+  "started_at": "2026-11-28T18:51:13.088423+01:00",
+  "completed_at": "2026-11-28T18:51:16.477128+01:00",
+  "delay_seconds": 73,
   "late": false,
   "status": "OK",
   "stores": [
@@ -57,7 +57,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 131,
+      "total_items": 128,
       "meat_items": [
         {
           "product_id": 533084,
@@ -475,7 +475,7 @@
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 127,
+      "total_items": 126,
       "meat_items": [
         {
           "product_id": 597949,
@@ -605,7 +605,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 121,
+      "total_items": 123,
       "meat_items": [
         {
           "product_id": 556724,
@@ -680,6 +680,18 @@
           "expires": "2026-11-29"
         },
         {
+          "product_id": 571289,
+          "title": "AH Chorizo braadworstjes",
+          "brand": "AH",
+          "size": "6 stuks",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "3.49",
+          "price_now": "2.62",
+          "expires": "2026-11-29"
+        },
+        {
           "product_id": 619323,
           "title": "AH Burger spicy 2 stuks",
           "brand": "AH",
@@ -701,6 +713,18 @@
           "stock": 1.0,
           "price_was": "2.88",
           "price_now": "2.16",
+          "expires": "2026-11-29"
+        },
+        {
+          "product_id": 560559,
+          "title": "AH Scharrel kipburger smokey 2 stuks",
+          "brand": "AH",
+          "size": "200 g",
+          "category": "Vlees",
+          "discount_pct": 25.0,
+          "stock": 1.0,
+          "price_was": "2.99",
+          "price_now": "2.24",
           "expires": "2026-11-29"
         },
         {
