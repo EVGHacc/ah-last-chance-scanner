@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-28T18:05:00+01:00",
-  "started_at": "2026-11-28T18:06:11.910292+01:00",
-  "completed_at": "2026-11-28T18:06:14.786548+01:00",
-  "delay_seconds": 71,
+  "scheduled_at": "2026-11-28T18:10:00+01:00",
+  "started_at": "2026-11-28T18:11:21.187063+01:00",
+  "completed_at": "2026-11-28T18:11:23.675334+01:00",
+  "delay_seconds": 81,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 89,
+      "total_items": 86,
       "meat_items": [
         {
           "product_id": 622556,
@@ -47,34 +47,9 @@
           "price_was": "3.29",
           "price_now": "1.68",
           "expires": "2026-11-28"
-        },
-        {
-          "product_id": 620853,
-          "title": "AH Kipreepjes Italiaans",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.49",
-          "price_now": "1.05",
-          "expires": "2026-11-29"
         }
       ],
-      "meat70": [
-        {
-          "product_id": 620853,
-          "title": "AH Kipreepjes Italiaans",
-          "brand": "AH",
-          "size": "150 g",
-          "category": "Vlees",
-          "discount_pct": 70.0,
-          "stock": 1.0,
-          "price_was": "3.49",
-          "price_now": "1.05",
-          "expires": "2026-11-29"
-        }
-      ],
+      "meat70": [],
       "error": ""
     },
     {
@@ -580,7 +555,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 117,
+      "total_items": 119,
       "meat_items": [
         {
           "product_id": 556724,
