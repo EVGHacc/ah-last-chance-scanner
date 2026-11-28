@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-28T17:45:00+01:00",
-  "started_at": "2026-11-28T17:46:11.769338+01:00",
-  "completed_at": "2026-11-28T17:46:16.204488+01:00",
-  "delay_seconds": 71,
+  "scheduled_at": "2026-11-28T17:50:00+01:00",
+  "started_at": "2026-11-28T17:51:10.888960+01:00",
+  "completed_at": "2026-11-28T17:51:12.911014+01:00",
+  "delay_seconds": 70,
   "late": false,
   "status": "OK",
   "stores": [
@@ -270,7 +270,7 @@
           "size": "ca. 140 g",
           "category": "Vlees",
           "discount_pct": 25.0,
-          "stock": 5.0,
+          "stock": 4.0,
           "price_was": "2.88",
           "price_now": "2.16",
           "expires": "2026-11-30"
@@ -592,7 +592,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 109,
+      "total_items": 110,
       "meat_items": [
         {
           "product_id": 556724,
