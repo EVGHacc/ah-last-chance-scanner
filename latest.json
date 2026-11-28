@@ -1,8 +1,8 @@
 {
-  "scheduled_at": "2026-11-28T18:10:00+01:00",
-  "started_at": "2026-11-28T18:11:21.187063+01:00",
-  "completed_at": "2026-11-28T18:11:23.675334+01:00",
-  "delay_seconds": 81,
+  "scheduled_at": "2026-11-28T18:15:00+01:00",
+  "started_at": "2026-11-28T18:16:15.979520+01:00",
+  "completed_at": "2026-11-28T18:16:19.500196+01:00",
+  "delay_seconds": 75,
   "late": false,
   "status": "OK",
   "stores": [
@@ -10,7 +10,7 @@
       "store_id": 1463,
       "store": "AH Blekersvaartweg",
       "fetched": true,
-      "total_items": 86,
+      "total_items": 85,
       "meat_items": [
         {
           "product_id": 622556,
@@ -56,7 +56,7 @@
       "store_id": 1348,
       "store": "AH Zandvoortselaan",
       "fetched": true,
-      "total_items": 137,
+      "total_items": 136,
       "meat_items": [
         {
           "product_id": 533084,
@@ -315,10 +315,10 @@
           "brand": "AH",
           "size": "720 g",
           "category": "Vlees",
-          "discount_pct": 40.0,
+          "discount_pct": 70.0,
           "stock": 4.0,
           "price_was": "6.99",
-          "price_now": "4.19",
+          "price_now": "2.10",
           "expires": "2026-11-28"
         },
         {
@@ -418,14 +418,27 @@
           "expires": "2026-12-05"
         }
       ],
-      "meat70": [],
+      "meat70": [
+        {
+          "product_id": 610029,
+          "title": "AH Partyburger",
+          "brand": "AH",
+          "size": "720 g",
+          "category": "Vlees",
+          "discount_pct": 70.0,
+          "stock": 4.0,
+          "price_was": "6.99",
+          "price_now": "2.10",
+          "expires": "2026-11-28"
+        }
+      ],
       "error": ""
     },
     {
       "store_id": 4046,
       "store": "AH Clothildestraat",
       "fetched": true,
-      "total_items": 129,
+      "total_items": 128,
       "meat_items": [
         {
           "product_id": 597949,
@@ -555,7 +568,7 @@
       "store_id": 8728,
       "store": "AH Westergracht",
       "fetched": true,
-      "total_items": 119,
+      "total_items": 120,
       "meat_items": [
         {
           "product_id": 556724,
